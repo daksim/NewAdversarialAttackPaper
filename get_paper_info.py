@@ -84,7 +84,7 @@ for result in tqdm(search.results()):
     papers.append(paper)
     # print(paper)
 
-fo = open("NewAdversarialAttackPaper/README.md", "w", encoding= 'utf-8')
+fo = open("README.md", "w", encoding= 'utf-8')
 
 fo.write("# NewAdversarialAttackPaper\n")
 for p in papers:

@@ -1,5 +1,7 @@
 # New Adversarial Attack Papers
-**update daily**
+**update at 2021-11-14**
+
+翻译来自 https://cloud.tencent.com/document/product/551/15619
 
 ## **1. Poisoning Knowledge Graph Embeddings via Relation Inference Patterns**
 

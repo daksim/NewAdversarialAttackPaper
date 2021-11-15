@@ -1,7 +1,7 @@
 # New Adversarial Attack Papers
 **update at 2021-11-15**
 
-[中文版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_cn.md)
+[中文版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
 ## **1. Resilient Consensus-based Multi-agent Reinforcement Learning**
 

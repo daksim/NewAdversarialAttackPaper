@@ -1,9 +1,53 @@
 # Latest Adversarial Attack Papers
-**update at 2021-12-23 23:31:41**
+**update at 2021-12-24 23:31:43**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. Detect & Reject for Transferability of Black-box Adversarial Attacks Against Network Intrusion Detection Systems**
+## **1. Adaptive Modeling Against Adversarial Attacks**
+
+抗敌意攻击的自适应建模 cs.LG
+
+10 pages, 3 figures
+
+**SubmitDate**: 2021-12-23    [paper-pdf](http://arxiv.org/pdf/2112.12431v1)
+
+**Authors**: Zhiwen Yan, Teck Khim Ng
+
+**Abstracts**: Adversarial training, the process of training a deep learning model with adversarial data, is one of the most successful adversarial defense methods for deep learning models. We have found that the robustness to white-box attack of an adversarially trained model can be further improved if we fine tune this model in inference stage to adapt to the adversarial input, with the extra information in it. We introduce an algorithm that "post trains" the model at inference stage between the original output class and a "neighbor" class, with existing training data. The accuracy of pre-trained Fast-FGSM CIFAR10 classifier base model against white-box projected gradient attack (PGD) can be significantly improved from 46.8% to 64.5% with our algorithm.
+
+摘要: 对抗性训练是利用对抗性数据训练深度学习模型的过程，是深度学习模型中最成功的对抗性防御方法之一。我们发现，如果在推理阶段对一个对抗性训练模型进行微调，使其适应对抗性输入，并加入额外的信息，可以进一步提高该模型对白盒攻击的鲁棒性。我们介绍了一种算法，该算法利用现有的训练数据，在推理阶段在原始输出类和“相邻”类之间对模型进行“后训练”。该算法可以将预先训练的Fast-FGSM CIFAR10分类器基模型对抗白盒投影梯度攻击(PGD)的准确率从46.8%提高到64.5%。
+
+
+
+## **2. Revisiting and Advancing Fast Adversarial Training Through The Lens of Bi-Level Optimization**
+
+用双层优化镜头重温和推进快速对抗性训练 cs.LG
+
+**SubmitDate**: 2021-12-23    [paper-pdf](http://arxiv.org/pdf/2112.12376v1)
+
+**Authors**: Yihua Zhang, Guanhuan Zhang, Prashant Khanduri, Mingyi Hong, Shiyu Chang, Sijia Liu
+
+**Abstracts**: Adversarial training (AT) has become a widely recognized defense mechanism to improve the robustness of deep neural networks against adversarial attacks. It solves a min-max optimization problem, where the minimizer (i.e., defender) seeks a robust model to minimize the worst-case training loss in the presence of adversarial examples crafted by the maximizer (i.e., attacker). However, the min-max nature makes AT computationally intensive and thus difficult to scale. Meanwhile, the FAST-AT algorithm, and in fact many recent algorithms that improve AT, simplify the min-max based AT by replacing its maximization step with the simple one-shot gradient sign based attack generation step. Although easy to implement, FAST-AT lacks theoretical guarantees, and its practical performance can be unsatisfactory, suffering from the robustness catastrophic overfitting when training with strong adversaries.   In this paper, we propose to design FAST-AT from the perspective of bi-level optimization (BLO). We first make the key observation that the most commonly-used algorithmic specification of FAST-AT is equivalent to using some gradient descent-type algorithm to solve a bi-level problem involving a sign operation. However, the discrete nature of the sign operation makes it difficult to understand the algorithm performance. Based on the above observation, we propose a new tractable bi-level optimization problem, design and analyze a new set of algorithms termed Fast Bi-level AT (FAST-BAT). FAST-BAT is capable of defending sign-based projected gradient descent (PGD) attacks without calling any gradient sign method and explicit robust regularization. Furthermore, we empirically show that our method outperforms state-of-the-art FAST-AT baselines, by achieving superior model robustness without inducing robustness catastrophic overfitting, or suffering from any loss of standard accuracy.
+
+摘要: 对抗训练(AT)已成为一种被广泛认可的防御机制，以提高深层神经网络对抗对手攻击的鲁棒性。它解决了一个最小-最大优化问题，其中最小化器(即防御者)在存在最大化者(即攻击者)制作的对抗性示例的情况下寻求一个鲁棒模型来最小化最坏情况下的训练损失。然而，最小-最大特性使得AT计算密集，因此很难扩展。同时，FAST-AT算法，以及最近许多改进AT的算法，通过用简单的基于一次梯度符号的攻击生成步骤代替其最大化步骤，简化了基于最小-最大的AT。FAST-AT虽然易于实现，但缺乏理论保证，实际应用效果不理想，在与强对手进行训练时存在健壮性和灾难性过拟合问题。本文提出从双层优化(BLO)的角度设计FAST-AT。我们首先观察到FAST-AT最常用的算法规范等价于使用某种梯度下降型算法来解决涉及符号运算的双层问题。然而，符号运算的离散性使得很难理解算法的性能。基于上述观察，我们提出了一个新的易于处理的双层优化问题，设计并分析了一套新的算法，称为快速双层AT(FAST-BAT)。FAST-BAT能够抵抗基于符号的投影梯度下降(PGD)攻击，无需调用任何梯度符号方法和显式鲁棒正则化。此外，我们的经验表明，我们的方法优于最先进的FAST-AT基线，因为它实现了卓越的模型稳健性，而不会导致稳健性灾难性过拟合，也不会损失任何标准精度。
+
+
+
+## **3. Adversarial Attacks against Windows PE Malware Detection: A Survey of the State-of-the-Art**
+
+针对Windows PE恶意软件检测的对抗性攻击：现状综述 cs.CR
+
+**SubmitDate**: 2021-12-23    [paper-pdf](http://arxiv.org/pdf/2112.12310v1)
+
+**Authors**: Xiang Ling, Lingfei Wu, Jiangyu Zhang, Zhenqing Qu, Wei Deng, Xiang Chen, Chunming Wu, Shouling Ji, Tianyue Luo, Jingzheng Wu, Yanjun Wu
+
+**Abstracts**: The malware has been being one of the most damaging threats to computers that span across multiple operating systems and various file formats. To defend against the ever-increasing and ever-evolving threats of malware, tremendous efforts have been made to propose a variety of malware detection methods that attempt to effectively and efficiently detect malware. Recent studies have shown that, on the one hand, existing ML and DL enable the superior detection of newly emerging and previously unseen malware. However, on the other hand, ML and DL models are inherently vulnerable to adversarial attacks in the form of adversarial examples, which are maliciously generated by slightly and carefully perturbing the legitimate inputs to confuse the targeted models. Basically, adversarial attacks are initially extensively studied in the domain of computer vision, and some quickly expanded to other domains, including NLP, speech recognition and even malware detection. In this paper, we focus on malware with the file format of portable executable (PE) in the family of Windows operating systems, namely Windows PE malware, as a representative case to study the adversarial attack methods in such adversarial settings. To be specific, we start by first outlining the general learning framework of Windows PE malware detection based on ML/DL and subsequently highlighting three unique challenges of performing adversarial attacks in the context of PE malware. We then conduct a comprehensive and systematic review to categorize the state-of-the-art adversarial attacks against PE malware detection, as well as corresponding defenses to increase the robustness of PE malware detection. We conclude the paper by first presenting other related attacks against Windows PE malware detection beyond the adversarial attacks and then shedding light on future research directions and opportunities.
+
+摘要: 该恶意软件一直是对跨越多个操作系统和各种文件格式的计算机的最具破坏性的威胁之一。为了防御不断增加和不断演变的恶意软件威胁，人们做出了巨大的努力来提出各种恶意软件检测方法，这些方法试图有效和高效地检测恶意软件。最近的研究表明，一方面，现有的ML和DL能够更好地检测新出现的和以前未见过的恶意软件。然而，另一方面，ML和DL模型天生就容易受到对抗性示例形式的对抗性攻击，这些攻击是通过稍微和仔细地扰动合法输入来混淆目标模型而恶意生成的。基本上，敌意攻击最初在计算机视觉领域得到了广泛的研究，一些攻击很快扩展到其他领域，包括NLP、语音识别甚至恶意软件检测。本文以Windows操作系统家族中具有可移植可执行文件(PE)文件格式的恶意软件，即Windows PE恶意软件为典型案例，研究这种敌意环境下的敌意攻击方法。具体地说，我们首先概述了基于ML/DL的Windows PE恶意软件检测的一般学习框架，然后重点介绍了在PE恶意软件环境中执行敌意攻击的三个独特挑战。然后对针对PE恶意软件检测的对抗性攻击进行了全面系统的分类，并提出了相应的防御措施，以提高PE恶意软件检测的健壮性。最后，我们首先介绍了Windows PE恶意软件检测除了对抗性攻击之外的其他相关攻击，并阐明了未来的研究方向和机遇。
+
+
+
+## **4. Detect & Reject for Transferability of Black-box Adversarial Attacks Against Network Intrusion Detection Systems**
 
 网络入侵检测系统黑盒敌意攻击的可传递性检测与拒绝 cs.CR
 
@@ -17,7 +61,7 @@
 
 
 
-## **2. Evaluating the Robustness of Deep Reinforcement Learning for Autonomous and Adversarial Policies in a Multi-agent Urban Driving Environment**
+## **5. Evaluating the Robustness of Deep Reinforcement Learning for Autonomous and Adversarial Policies in a Multi-agent Urban Driving Environment**
 
 多智能体城市驾驶环境下自主对抗性策略的深度强化学习鲁棒性评估 cs.AI
 
@@ -31,7 +75,7 @@
 
 
 
-## **3. Adversarial Deep Reinforcement Learning for Trustworthy Autonomous Driving Policies**
+## **6. Adversarial Deep Reinforcement Learning for Trustworthy Autonomous Driving Policies**
 
 基于对抗性深度强化学习的可信自主驾驶策略 cs.AI
 
@@ -45,7 +89,7 @@
 
 
 
-## **4. Consistency Regularization for Adversarial Robustness**
+## **7. Consistency Regularization for Adversarial Robustness**
 
 用于对抗鲁棒性的一致性正则化 cs.LG
 
@@ -61,7 +105,7 @@ Published as a conference proceeding for AAAI 2022
 
 
 
-## **5. How Should Pre-Trained Language Models Be Fine-Tuned Towards Adversarial Robustness?**
+## **8. How Should Pre-Trained Language Models Be Fine-Tuned Towards Adversarial Robustness?**
 
 预先训练的语言模型应该如何针对对手的健壮性进行微调？ cs.CL
 
@@ -77,7 +121,7 @@ Accepted by NeurIPS-2021
 
 
 
-## **6. An Attention Score Based Attacker for Black-box NLP Classifier**
+## **9. An Attention Score Based Attacker for Black-box NLP Classifier**
 
 一种基于注意力得分的黑盒NLP分类器攻击者 cs.LG
 
@@ -91,7 +135,21 @@ Accepted by NeurIPS-2021
 
 
 
-## **7. Reevaluating Adversarial Examples in Natural Language**
+## **10. Collaborative adversary nodes learning on the logs of IoT devices in an IoT network**
+
+协作敌方节点学习物联网网络中物联网设备的日志 cs.CR
+
+**SubmitDate**: 2021-12-22    [paper-pdf](http://arxiv.org/pdf/2112.12546v1)
+
+**Authors**: Sandhya Aneja, Melanie Ang Xuan En, Nagender Aneja
+
+**Abstracts**: Artificial Intelligence (AI) development has encouraged many new research areas, including AI-enabled Internet of Things (IoT) network. AI analytics and intelligent paradigms greatly improve learning efficiency and accuracy. Applying these learning paradigms to network scenarios provide technical advantages of new networking solutions. In this paper, we propose an improved approach for IoT security from data perspective. The network traffic of IoT devices can be analyzed using AI techniques. The Adversary Learning (AdLIoTLog) model is proposed using Recurrent Neural Network (RNN) with attention mechanism on sequences of network events in the network traffic. We define network events as a sequence of the time series packets of protocols captured in the log. We have considered different packets TCP packets, UDP packets, and HTTP packets in the network log to make the algorithm robust. The distributed IoT devices can collaborate to cripple our world which is extending to Internet of Intelligence. The time series packets are converted into structured data by removing noise and adding timestamps. The resulting data set is trained by RNN and can detect the node pairs collaborating with each other. We used the BLEU score to evaluate the model performance. Our results show that the predicting performance of the AdLIoTLog model trained by our method degrades by 3-4% in the presence of attack in comparison to the scenario when the network is not under attack. AdLIoTLog can detect adversaries because when adversaries are present the model gets duped by the collaborative events and therefore predicts the next event with a biased event rather than a benign event. We conclude that AI can provision ubiquitous learning for the new generation of Internet of Things.
+
+摘要: 人工智能(AI)的发展鼓励了许多新的研究领域，包括支持AI的物联网(IoT)网络。人工智能分析和智能范例极大地提高了学习效率和准确性。将这些学习范例应用于网络场景可提供新网络解决方案的技术优势。本文从数据的角度提出了一种改进的物联网安全方法。物联网设备的网络流量可以使用人工智能技术进行分析。利用具有注意机制的递归神经网络(RNN)对网络流量中的网络事件序列进行学习，提出了AdLIoTLog(AdLIoTLog)模型。我们将网络事件定义为日志中捕获的协议的时间序列数据包的序列。我们在网络日志中考虑了不同的数据包TCP数据包、UDP数据包和HTTP数据包，以增强算法的健壮性。分布式物联网设备可以相互协作，使我们的世界陷入瘫痪，这个世界正在向智能互联网延伸。通过去除噪声和添加时间戳将时间序列分组转换为结构化数据。生成的数据集由RNN进行训练，可以检测出相互协作的节点对。我们使用BLEU评分来评价模型的性能。实验结果表明，该方法训练的AdLIoTLog模型在存在攻击的情况下，预测性能比网络未受到攻击时的预测性能下降了3%~4%。AdLIoTLog可以检测到对手，因为当对手存在时，模型会被协作事件所欺骗，因此会用有偏差的事件而不是良性事件来预测下一个事件。我们的结论是，人工智能可以为新一代物联网提供泛在学习。
+
+
+
+## **11. Reevaluating Adversarial Examples in Natural Language**
 
 重新评价自然语言中的对抗性实例 cs.CL
 
@@ -107,7 +165,7 @@ Accepted by NeurIPS-2021
 
 
 
-## **8. MIA-Former: Efficient and Robust Vision Transformers via Multi-grained Input-Adaptation**
+## **12. MIA-Former: Efficient and Robust Vision Transformers via Multi-grained Input-Adaptation**
 
 基于多粒度输入自适应的高效鲁棒视觉转换器 cs.CV
 
@@ -121,7 +179,7 @@ Accepted by NeurIPS-2021
 
 
 
-## **9. Improving Robustness with Image Filtering**
+## **13. Improving Robustness with Image Filtering**
 
 利用图像滤波提高鲁棒性 cs.CV
 
@@ -135,7 +193,7 @@ Accepted by NeurIPS-2021
 
 
 
-## **10. Adversarial images for the primate brain**
+## **14. Adversarial images for the primate brain**
 
 灵长类动物大脑的对抗性图像 q-bio.NC
 
@@ -151,7 +209,7 @@ These results reveal limits of CNN-based models of primate vision  through their
 
 
 
-## **11. Denoised Internal Models: a Brain-Inspired Autoencoder against Adversarial Attacks**
+## **15. Denoised Internal Models: a Brain-Inspired Autoencoder against Adversarial Attacks**
 
 去噪内部模型：一种抗敌意攻击的脑启发自动编码器 cs.CV
 
@@ -167,7 +225,7 @@ These results reveal limits of CNN-based models of primate vision  through their
 
 
 
-## **12. A Theoretical View of Linear Backpropagation and Its Convergence**
+## **16. A Theoretical View of Linear Backpropagation and Its Convergence**
 
 线性反向传播及其收敛性的理论观点 cs.LG
 
@@ -181,7 +239,7 @@ These results reveal limits of CNN-based models of primate vision  through their
 
 
 
-## **13. What are Attackers after on IoT Devices? An approach based on a multi-phased multi-faceted IoT honeypot ecosystem and data clustering**
+## **17. What are Attackers after on IoT Devices? An approach based on a multi-phased multi-faceted IoT honeypot ecosystem and data clustering**
 
 攻击者在物联网设备上的目标是什么？一种基于多阶段多层面物联网蜜罐生态系统和数据聚类的方法 cs.CR
 
@@ -197,7 +255,7 @@ arXiv admin note: text overlap with arXiv:2003.01218
 
 
 
-## **14. Channel-Aware Adversarial Attacks Against Deep Learning-Based Wireless Signal Classifiers**
+## **18. Channel-Aware Adversarial Attacks Against Deep Learning-Based Wireless Signal Classifiers**
 
 针对基于深度学习的无线信号分类器的信道感知敌意攻击 eess.SP
 
@@ -213,7 +271,7 @@ Submitted for publication. arXiv admin note: substantial text overlap  with arXi
 
 
 
-## **15. An Evasion Attack against Stacked Capsule Autoencoder**
+## **19. An Evasion Attack against Stacked Capsule Autoencoder**
 
 一种针对堆叠式胶囊自动编码器的逃避攻击 cs.LG
 
@@ -227,7 +285,7 @@ Submitted for publication. arXiv admin note: substantial text overlap  with arXi
 
 
 
-## **16. Adversarial Attacks on Spiking Convolutional Networks for Event-based Vision**
+## **20. Adversarial Attacks on Spiking Convolutional Networks for Event-based Vision**
 
 基于事件视觉的尖峰卷积网络对抗性攻击 cs.CV
 
@@ -243,7 +301,7 @@ Submitted for publication. arXiv admin note: substantial text overlap  with arXi
 
 
 
-## **17. Certified Federated Adversarial Training**
+## **21. Certified Federated Adversarial Training**
 
 认证的联合对抗赛训练 cs.LG
 
@@ -259,7 +317,7 @@ First presented at the 1st NeurIPS Workshop on New Frontiers in  Federated Learn
 
 
 
-## **18. Unifying Model Explainability and Robustness for Joint Text Classification and Rationale Extraction**
+## **22. Unifying Model Explainability and Robustness for Joint Text Classification and Rationale Extraction**
 
 联合文本分类和理论抽取的统一模型可解释性和鲁棒性 cs.CL
 
@@ -275,7 +333,7 @@ AAAI 2022
 
 
 
-## **19. Energy-bounded Learning for Robust Models of Code**
+## **23. Energy-bounded Learning for Robust Models of Code**
 
 代码健壮模型的能量受限学习 cs.LG
 
@@ -291,7 +349,7 @@ arXiv admin note: text overlap with arXiv:2010.03759 by other authors
 
 
 
-## **20. Knowledge Cross-Distillation for Membership Privacy**
+## **24. Knowledge Cross-Distillation for Membership Privacy**
 
 面向会员隐私的知识交叉蒸馏 cs.CR
 
@@ -307,7 +365,7 @@ Under Review
 
 
 
-## **21. Toward Evaluating Re-identification Risks in the Local Privacy Model**
+## **25. Toward Evaluating Re-identification Risks in the Local Privacy Model**
 
 关于评估本地隐私模型中重新识别风险的方法 cs.CR
 
@@ -323,7 +381,7 @@ Accepted at Transactions on Data Privacy
 
 
 
-## **22. Jamming Pattern Recognition over Multi-Channel Networks: A Deep Learning Approach**
+## **26. Jamming Pattern Recognition over Multi-Channel Networks: A Deep Learning Approach**
 
 多通道网络干扰模式识别：一种深度学习方法 cs.CR
 
@@ -337,7 +395,7 @@ Accepted at Transactions on Data Privacy
 
 
 
-## **23. Attacking Point Cloud Segmentation with Color-only Perturbation**
+## **27. Attacking Point Cloud Segmentation with Color-only Perturbation**
 
 基于纯颜色摄动的攻击点云分割 cs.CV
 
@@ -351,7 +409,7 @@ Accepted at Transactions on Data Privacy
 
 
 
-## **24. Adversarial Attack for Uncertainty Estimation: Identifying Critical Regions in Neural Networks**
+## **28. Adversarial Attack for Uncertainty Estimation: Identifying Critical Regions in Neural Networks**
 
 不确定性估计的对抗性攻击：识别神经网络中的关键区域 cs.LG
 
@@ -367,7 +425,7 @@ Accepted at Transactions on Data Privacy
 
 
 
-## **25. Dynamic Defender-Attacker Blotto Game**
+## **29. Dynamic Defender-Attacker Blotto Game**
 
 动态防御者-攻击者Blotto博弈 eess.SY
 
@@ -381,7 +439,7 @@ Accepted at Transactions on Data Privacy
 
 
 
-## **26. Formalizing Generalization and Robustness of Neural Networks to Weight Perturbations**
+## **30. Formalizing Generalization and Robustness of Neural Networks to Weight Perturbations**
 
 神经网络对权重摄动的泛化和鲁棒性的形式化 cs.LG
 
@@ -397,7 +455,7 @@ This version has been accepted for poster presentation at NeurIPS  2021
 
 
 
-## **27. Reasoning Chain Based Adversarial Attack for Multi-hop Question Answering**
+## **31. Reasoning Chain Based Adversarial Attack for Multi-hop Question Answering**
 
 基于推理链的多跳问答对抗性攻击 cs.CL
 
@@ -413,7 +471,7 @@ This version has been accepted for poster presentation at NeurIPS  2021
 
 
 
-## **28. Who Is the Strongest Enemy? Towards Optimal and Efficient Evasion Attacks in Deep RL**
+## **32. Who Is the Strongest Enemy? Towards Optimal and Efficient Evasion Attacks in Deep RL**
 
 谁是最强大的敌人？基于Deep RL的最优高效规避攻击研究 cs.LG
 
@@ -427,7 +485,7 @@ This version has been accepted for poster presentation at NeurIPS  2021
 
 
 
-## **29. Dynamics-aware Adversarial Attack of 3D Sparse Convolution Network**
+## **33. Dynamics-aware Adversarial Attack of 3D Sparse Convolution Network**
 
 三维稀疏卷积网络的动态感知敌意攻击 cs.CV
 
@@ -441,7 +499,7 @@ This version has been accepted for poster presentation at NeurIPS  2021
 
 
 
-## **30. APTSHIELD: A Stable, Efficient and Real-time APT Detection System for Linux Hosts**
+## **34. APTSHIELD: A Stable, Efficient and Real-time APT Detection System for Linux Hosts**
 
 APTSHIELD：一种稳定、高效、实时的Linux主机APT检测系统 cs.CR
 
@@ -455,7 +513,7 @@ APTSHIELD：一种稳定、高效、实时的Linux主机APT检测系统 cs.CR
 
 
 
-## **31. Deep Bayesian Learning for Car Hacking Detection**
+## **35. Deep Bayesian Learning for Car Hacking Detection**
 
 深度贝叶斯学习在汽车黑客检测中的应用 cs.CR
 
@@ -469,7 +527,7 @@ APTSHIELD：一种稳定、高效、实时的Linux主机APT检测系统 cs.CR
 
 
 
-## **32. Generation of Wheel Lockup Attacks on Nonlinear Dynamics of Vehicle Traction**
+## **36. Generation of Wheel Lockup Attacks on Nonlinear Dynamics of Vehicle Traction**
 
 车辆牵引非线性动力学中车轮闭锁攻击的产生 eess.SY
 
@@ -485,7 +543,7 @@ Submitted to American Control Conference 2022 (ACC 2022), 6 pages
 
 
 
-## **33. All You Need is RAW: Defending Against Adversarial Attacks with Camera Image Pipelines**
+## **37. All You Need is RAW: Defending Against Adversarial Attacks with Camera Image Pipelines**
 
 您所需要的只是RAW：使用摄像机图像管道防御敌意攻击 cs.CV
 
@@ -499,7 +557,7 @@ Submitted to American Control Conference 2022 (ACC 2022), 6 pages
 
 
 
-## **34. Direction-Aggregated Attack for Transferable Adversarial Examples**
+## **38. Direction-Aggregated Attack for Transferable Adversarial Examples**
 
 可转移对抗性实例的方向聚集攻击 cs.LG
 
@@ -515,7 +573,7 @@ ACM JETC JOURNAL Accepted
 
 
 
-## **35. TAFIM: Targeted Adversarial Attacks against Facial Image Manipulations**
+## **39. TAFIM: Targeted Adversarial Attacks against Facial Image Manipulations**
 
 TAFIM：针对面部图像处理的有针对性的敌意攻击 cs.CV
 
@@ -531,7 +589,7 @@ Paper Video: https://youtu.be/btHCrVMKbzw Project Page:  https://shivangi-aneja.
 
 
 
-## **36. Combating Adversaries with Anti-Adversaries**
+## **40. Combating Adversaries with Anti-Adversaries**
 
 以反制敌，以反制敌 cs.LG
 
@@ -547,7 +605,7 @@ Accepted to AAAI Conference on Artificial Intelligence (AAAI'22)
 
 
 
-## **37. Anti-Tamper Radio: System-Level Tamper Detection for Computing Systems**
+## **41. Anti-Tamper Radio: System-Level Tamper Detection for Computing Systems**
 
 防篡改无线电：面向计算系统的系统级篡改检测 cs.CR
 
@@ -561,7 +619,7 @@ Accepted to AAAI Conference on Artificial Intelligence (AAAI'22)
 
 
 
-## **38. A Heterogeneous Graph Learning Model for Cyber-Attack Detection**
+## **42. A Heterogeneous Graph Learning Model for Cyber-Attack Detection**
 
 一种用于网络攻击检测的异构图学习模型 cs.CR
 
@@ -577,7 +635,7 @@ Accepted to AAAI Conference on Artificial Intelligence (AAAI'22)
 
 
 
-## **39. Finding Optimal Tangent Points for Reducing Distortions of Hard-label Attacks**
+## **43. Finding Optimal Tangent Points for Reducing Distortions of Hard-label Attacks**
 
 寻找最优切点以减少硬标签攻击的失真 cs.CV
 
@@ -593,7 +651,7 @@ Accepted at NeurIPS 2021, including the appendix. In the previous  versions (v1 
 
 
 
-## **40. Addressing Adversarial Machine Learning Attacks in Smart Healthcare Perspectives**
+## **44. Addressing Adversarial Machine Learning Attacks in Smart Healthcare Perspectives**
 
 从智能医疗的角度解决对抗性机器学习攻击 cs.DC
 
@@ -607,7 +665,7 @@ Accepted at NeurIPS 2021, including the appendix. In the previous  versions (v1 
 
 
 
-## **41. Towards Robust Neural Image Compression: Adversarial Attack and Model Finetuning**
+## **45. Towards Robust Neural Image Compression: Adversarial Attack and Model Finetuning**
 
 面向鲁棒神经图像压缩：对抗性攻击与模型优化 cs.CV
 
@@ -621,7 +679,7 @@ Accepted at NeurIPS 2021, including the appendix. In the previous  versions (v1 
 
 
 
-## **42. Model Stealing Attacks Against Inductive Graph Neural Networks**
+## **46. Model Stealing Attacks Against Inductive Graph Neural Networks**
 
 针对归纳图神经网络的模型窃取攻击 cs.CR
 
@@ -637,7 +695,7 @@ To Appear in the 43rd IEEE Symposium on Security and Privacy, May  22-26, 2022
 
 
 
-## **43. Meta Adversarial Perturbations**
+## **47. Meta Adversarial Perturbations**
 
 元对抗扰动 cs.LG
 
@@ -653,7 +711,7 @@ Published in AAAI 2022 Workshop
 
 
 
-## **44. Temporal Shuffling for Defending Deep Action Recognition Models against Adversarial Attacks**
+## **48. Temporal Shuffling for Defending Deep Action Recognition Models against Adversarial Attacks**
 
 用于防御敌方攻击的深层动作识别模型的时间洗牌 cs.CV
 
@@ -667,7 +725,7 @@ Published in AAAI 2022 Workshop
 
 
 
-## **45. Adversarial Examples for Extreme Multilabel Text Classification**
+## **49. Adversarial Examples for Extreme Multilabel Text Classification**
 
 极端多标签文本分类的对抗性实例 cs.LG
 
@@ -681,7 +739,7 @@ Published in AAAI 2022 Workshop
 
 
 
-## **46. Multi-Leader Congestion Games with an Adversary**
+## **50. Multi-Leader Congestion Games with an Adversary**
 
 有对手的多队长拥堵对策 cs.GT
 
@@ -692,66 +750,6 @@ Published in AAAI 2022 Workshop
 **Abstracts**: We study a multi-leader single-follower congestion game where multiple users (leaders) choose one resource out of a set of resources and, after observing the realized loads, an adversary (single-follower) attacks the resources with maximum loads, causing additional costs for the leaders. For the resulting strategic game among the leaders, we show that pure Nash equilibria may fail to exist and therefore, we consider approximate equilibria instead. As our first main result, we show that the existence of a $K$-approximate equilibrium can always be guaranteed, where $K \approx 1.1974$ is the unique solution of a cubic polynomial equation. To this end, we give a polynomial time combinatorial algorithm which computes a $K$-approximate equilibrium. The factor $K$ is tight, meaning that there is an instance that does not admit an $\alpha$-approximate equilibrium for any $\alpha<K$. Thus $\alpha=K$ is the smallest possible value of $\alpha$ such that the existence of an $\alpha$-approximate equilibrium can be guaranteed for any instance of the considered game. Secondly, we focus on approximate equilibria of a given fixed instance. We show how to compute efficiently a best approximate equilibrium, that is, with smallest possible $\alpha$ among all $\alpha$-approximate equilibria of the given instance.
 
 摘要: 研究了一个多领导者单跟随者拥塞博弈，其中多个用户(领导者)从一组资源中选择一个资源，在观察到实现的负载后，一个对手(单一跟随者)攻击具有最大负载的资源，从而给领导者带来额外的成本。对于由此产生的领导者之间的战略博弈，我们表明纯纳什均衡可能不存在，因此，我们考虑近似均衡。作为我们的第一个主要结果，我们证明了$K$-近似均衡的存在性总是可以保证的，其中$K\约1.1974$是一个三次多项式方程的唯一解。为此，我们给出了一个计算$K$-近似均衡的多项式时间组合算法。因子$K$是紧的，这意味着对于任何$\α<K$，都存在一个不允许$\α$-近似均衡的实例。因此，$\α=K$是$\α$的最小可能值，使得对于所考虑的博弈的任何实例，都可以保证存在$\α$-近似均衡。其次，我们重点研究了给定固定实例的近似均衡。我们展示了如何有效地计算最佳近似均衡，即在给定实例的所有$\α$-近似均衡中，具有最小可能的$\α$。
-
-
-
-## **47. Robustifying automatic speech recognition by extracting slowly varying features**
-
-通过提取缓慢变化的特征来实现自动语音识别的ROBUST化 eess.AS
-
-**SubmitDate**: 2021-12-14    [paper-pdf](http://arxiv.org/pdf/2112.07400v1)
-
-**Authors**: Matias Pizarro, Dorothea Kolossa, Asja Fischer
-
-**Abstracts**: In the past few years, it has been shown that deep learning systems are highly vulnerable under attacks with adversarial examples. Neural-network-based automatic speech recognition (ASR) systems are no exception. Targeted and untargeted attacks can modify an audio input signal in such a way that humans still recognise the same words, while ASR systems are steered to predict a different transcription. In this paper, we propose a defense mechanism against targeted adversarial attacks consisting in removing fast-changing features from the audio signals, either by applying slow feature analysis, a low-pass filter, or both, before feeding the input to the ASR system. We perform an empirical analysis of hybrid ASR models trained on data pre-processed in such a way. While the resulting models perform quite well on benign data, they are significantly more robust against targeted adversarial attacks: Our final, proposed model shows a performance on clean data similar to the baseline model, while being more than four times more robust.
-
-摘要: 在过去的几年里，通过对抗性的例子表明，深度学习系统在受到攻击时是非常脆弱的。基于神经网络的自动语音识别(ASR)系统也不例外。有针对性和无针对性的攻击可以修改音频输入信号，使人类仍能识别相同的单词，而ASR系统则被引导预测不同的转录。本文提出了一种针对目标攻击的防御机制，即在将输入输入到自动语音识别系统之前，通过慢速特征分析、低通过滤或两者结合的方法，从音频信号中去除快速变化的特征。我们对以这种方式预处理的数据训练的混合ASR模型进行了实证分析。虽然最终得到的模型在良性数据上表现得相当好，但它们对目标攻击的鲁棒性要强得多：我们最终提出的模型在干净数据上的性能与基准模型相似，但健壮性要高出四倍多。
-
-
-
-## **48. On the Impact of Hard Adversarial Instances on Overfitting in Adversarial Training**
-
-论对抗性训练中硬性对抗性实例对过度适应的影响 cs.LG
-
-**SubmitDate**: 2021-12-14    [paper-pdf](http://arxiv.org/pdf/2112.07324v1)
-
-**Authors**: Chen Liu, Zhichao Huang, Mathieu Salzmann, Tong Zhang, Sabine Süsstrunk
-
-**Abstracts**: Adversarial training is a popular method to robustify models against adversarial attacks. However, it exhibits much more severe overfitting than training on clean inputs. In this work, we investigate this phenomenon from the perspective of training instances, i.e., training input-target pairs. Based on a quantitative metric measuring instances' difficulty, we analyze the model's behavior on training instances of different difficulty levels. This lets us show that the decay in generalization performance of adversarial training is a result of the model's attempt to fit hard adversarial instances. We theoretically verify our observations for both linear and general nonlinear models, proving that models trained on hard instances have worse generalization performance than ones trained on easy instances. Furthermore, we prove that the difference in the generalization gap between models trained by instances of different difficulty levels increases with the size of the adversarial budget. Finally, we conduct case studies on methods mitigating adversarial overfitting in several scenarios. Our analysis shows that methods successfully mitigating adversarial overfitting all avoid fitting hard adversarial instances, while ones fitting hard adversarial instances do not achieve true robustness.
-
-摘要: 对抗性训练是一种流行的增强模型抵御对抗性攻击的方法。然而，它表现出比清洁投入培训更严重的过度适应。在本工作中，我们从训练实例(即训练输入-目标对)的角度来研究这一现象。基于一种度量实例难度的量化度量，分析了该模型在不同难度级别的训练实例上的行为。这让我们看到，对抗性训练泛化性能的下降是模型试图拟合硬对抗性实例的结果。我们从理论上验证了我们对线性和一般非线性模型的观察结果，证明了在硬实例上训练的模型比在简单实例上训练的模型具有更差的泛化性能。此外，我们还证明了由不同难度水平的实例训练的模型之间的泛化差距的差异随着对抗预算的大小而增大。最后，我们对几种场景下缓解对抗性过拟合的方法进行了案例研究。我们的分析表明，成功缓解对抗性过拟合的方法都避免了拟合硬对抗性实例，而适合硬对抗性实例的方法并不能达到真正的鲁棒性。
-
-
-
-## **49. Improving Calibration through the Relationship with Adversarial Robustness**
-
-通过与对抗性稳健性的关系改进校准 cs.LG
-
-Published at NeurIPS-2021
-
-**SubmitDate**: 2021-12-14    [paper-pdf](http://arxiv.org/pdf/2006.16375v2)
-
-**Authors**: Yao Qin, Xuezhi Wang, Alex Beutel, Ed H. Chi
-
-**Abstracts**: Neural networks lack adversarial robustness, i.e., they are vulnerable to adversarial examples that through small perturbations to inputs cause incorrect predictions. Further, trust is undermined when models give miscalibrated predictions, i.e., the predicted probability is not a good indicator of how much we should trust our model. In this paper, we study the connection between adversarial robustness and calibration and find that the inputs for which the model is sensitive to small perturbations (are easily attacked) are more likely to have poorly calibrated predictions. Based on this insight, we examine if calibration can be improved by addressing those adversarially unrobust inputs. To this end, we propose Adversarial Robustness based Adaptive Label Smoothing (AR-AdaLS) that integrates the correlations of adversarial robustness and calibration into training by adaptively softening labels for an example based on how easily it can be attacked by an adversary. We find that our method, taking the adversarial robustness of the in-distribution data into consideration, leads to better calibration over the model even under distributional shifts. In addition, AR-AdaLS can also be applied to an ensemble model to further improve model calibration.
-
-摘要: 神经网络缺乏对抗性，也就是说，它们很容易受到对抗性示例的影响，这些示例通过对输入的微小扰动而导致不正确的预测。此外，当模型给出错误校准的预测时，信任被破坏，即，预测的概率不是我们应该信任我们的模型的良好指示器。在本文中，我们研究了敌方鲁棒性和校准之间的关系，发现模型对小扰动敏感(容易受到攻击)的输入更有可能具有较差的校准预测。基于这一见解，我们检查是否可以通过解决这些相反的不健壮的输入来改善校准。为此，我们提出了基于对手健壮性的自适应标签平滑(AR-ADALS)，它将对手健壮性和校准的相关性整合到训练中，根据对手攻击的容易程度对标签进行自适应软化。我们发现，我们的方法考虑了分布内数据的对抗性鲁棒性，即使在分布偏移的情况下也能对模型进行更好的校准。此外，AR-ADALS还可以应用于系综模型，以进一步改进模型校准。
-
-
-
-## **50. Defending Against Multiple and Unforeseen Adversarial Videos**
-
-防御多个不可预见的对抗性视频 cs.LG
-
-Accepted in IEEE Transactions on Image Processing (TIP)
-
-**SubmitDate**: 2021-12-14    [paper-pdf](http://arxiv.org/pdf/2009.05244v3)
-
-**Authors**: Shao-Yuan Lo, Vishal M. Patel
-
-**Abstracts**: Adversarial robustness of deep neural networks has been actively investigated. However, most existing defense approaches are limited to a specific type of adversarial perturbations. Specifically, they often fail to offer resistance to multiple attack types simultaneously, i.e., they lack multi-perturbation robustness. Furthermore, compared to image recognition problems, the adversarial robustness of video recognition models is relatively unexplored. While several studies have proposed how to generate adversarial videos, only a handful of approaches about defense strategies have been published in the literature. In this paper, we propose one of the first defense strategies against multiple types of adversarial videos for video recognition. The proposed method, referred to as MultiBN, performs adversarial training on multiple adversarial video types using multiple independent batch normalization (BN) layers with a learning-based BN selection module. With a multiple BN structure, each BN brach is responsible for learning the distribution of a single perturbation type and thus provides more precise distribution estimations. This mechanism benefits dealing with multiple perturbation types. The BN selection module detects the attack type of an input video and sends it to the corresponding BN branch, making MultiBN fully automatic and allowing end-to-end training. Compared to present adversarial training approaches, the proposed MultiBN exhibits stronger multi-perturbation robustness against different and even unforeseen adversarial video types, ranging from Lp-bounded attacks and physically realizable attacks. This holds true on different datasets and target models. Moreover, we conduct an extensive analysis to study the properties of the multiple BN structure.
-
-摘要: 深度神经网络的对抗性鲁棒性已经得到了积极的研究。然而，大多数现有的防御方法仅限于特定类型的对抗性扰动。具体地说，它们往往不能同时抵抗多种攻击类型，即缺乏多扰动鲁棒性。此外，与图像识别问题相比，视频识别模型的对抗性鲁棒性相对较少。虽然已经有几项研究提出了如何生成对抗性视频，但文献中只发表了几种关于防御策略的方法。在本文中，我们提出了针对多种类型的对抗性视频的视频识别的首批防御策略之一。该方法称为MultiBN，使用多个独立的批归一化(BN)层和基于学习的BN选择模块对多种对抗性视频类型进行对抗性训练。对于多BN结构，每个BN分支负责学习单个扰动类型的分布，从而提供更精确的分布估计。这种机制有利于处理多种扰动类型。BN选择模块检测输入视频的攻击类型，并将其发送到相应的BN分支，使MultiBN完全自动化，并允许端到端的训练。与现有的对抗性训练方法相比，所提出的多重BN对不同甚至不可预见的对抗性视频类型具有更强的多扰动鲁棒性，包括Lp有界攻击和物理可实现攻击。这适用于不同的数据集和目标模型。此外，我们还对多重BN结构的性质进行了广泛的分析。
 
 
 

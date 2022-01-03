@@ -1,9 +1,51 @@
 # Latest Adversarial Attack Papers
-**update at 2021-12-31 17:32:55**
+**update at 2022-01-03 13:42:00**
 
 [中文版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. Improved Gradient based Adversarial Attacks for Quantized Networks**
+## **1. QueryNet: Attack by Multi-Identity Surrogates**
+
+cs.LG
+
+QueryNet reduces queries by about an order of magnitude against SOTA  black-box attacks
+
+**SubmitDate**: 2021-12-31    [paper-pdf](http://arxiv.org/pdf/2105.15010v3)
+
+**Authors**: Sizhe Chen, Zhehao Huang, Qinghua Tao, Xiaolin Huang
+
+**Abstracts**: Deep Neural Networks (DNNs) are acknowledged as vulnerable to adversarial attacks, while the existing black-box attacks require extensive queries on the victim DNN to achieve high success rates. For query-efficiency, surrogate models of the victim are used to generate transferable Adversarial Examples (AEs) because of their Gradient Similarity (GS), i.e., surrogates' attack gradients are similar to the victim's ones. However, it is generally neglected to exploit their similarity on outputs, namely the Prediction Similarity (PS), to filter out inefficient queries by surrogates without querying the victim. To jointly utilize and also optimize surrogates' GS and PS, we develop QueryNet, a unified attack framework that can significantly reduce queries. QueryNet creatively attacks by multi-identity surrogates, i.e., crafts several AEs for one sample by different surrogates, and also uses surrogates to decide on the most promising AE for the query. After that, the victim's query feedback is accumulated to optimize not only surrogates' parameters but also their architectures, enhancing both the GS and the PS. Although QueryNet has no access to pre-trained surrogates' prior, it reduces queries by averagely about an order of magnitude compared to alternatives within an acceptable time, according to our comprehensive experiments: 11 victims (including two commercial models) on MNIST/CIFAR10/ImageNet, allowing only 8-bit image queries, and no access to the victim's training data. The code is available at https://github.com/AllenChen1998/QueryNet.
+
+
+
+## **2. NCIS: Neural Contextual Iterative Smoothing for Purifying Adversarial Perturbations**
+
+cs.CV
+
+Preprint version
+
+**SubmitDate**: 2021-12-30    [paper-pdf](http://arxiv.org/pdf/2106.11644v2)
+
+**Authors**: Sungmin Cha, Naeun Ko, Youngjoon Yoo, Taesup Moon
+
+**Abstracts**: We propose a novel and effective purification based adversarial defense method against pre-processor blind white- and black-box attacks. Our method is computationally efficient and trained only with self-supervised learning on general images, without requiring any adversarial training or retraining of the classification model. We first show an empirical analysis on the adversarial noise, defined to be the residual between an original image and its adversarial example, has almost zero mean, symmetric distribution. Based on this observation, we propose a very simple iterative Gaussian Smoothing (GS) which can effectively smooth out adversarial noise and achieve substantially high robust accuracy. To further improve it, we propose Neural Contextual Iterative Smoothing (NCIS), which trains a blind-spot network (BSN) in a self-supervised manner to reconstruct the discriminative features of the original image that is also smoothed out by GS. From our extensive experiments on the large-scale ImageNet using four classification models, we show that our method achieves both competitive standard accuracy and state-of-the-art robust accuracy against most strong purifier-blind white- and black-box attacks. Also, we propose a new benchmark for evaluating a purification method based on commercial image classification APIs, such as AWS, Azure, Clarifai and Google. We generate adversarial examples by ensemble transfer-based black-box attack, which can induce complete misclassification of APIs, and demonstrate that our method can be used to increase adversarial robustness of APIs.
+
+
+
+## **3. Efficient Robust Training via Backward Smoothing**
+
+cs.LG
+
+12 pages, 15 tables, 6 figures. In AAAI 2022
+
+**SubmitDate**: 2021-12-30    [paper-pdf](http://arxiv.org/pdf/2010.01278v2)
+
+**Authors**: Jinghui Chen, Yu Cheng, Zhe Gan, Quanquan Gu, Jingjing Liu
+
+**Abstracts**: Adversarial training is so far the most effective strategy in defending against adversarial examples. However, it suffers from high computational costs due to the iterative adversarial attacks in each training step. Recent studies show that it is possible to achieve fast Adversarial Training by performing a single-step attack with random initialization. However, such an approach still lags behind state-of-the-art adversarial training algorithms on both stability and model robustness. In this work, we develop a new understanding towards Fast Adversarial Training, by viewing random initialization as performing randomized smoothing for better optimization of the inner maximization problem. Following this new perspective, we also propose a new initialization strategy, backward smoothing, to further improve the stability and model robustness over single-step robust training methods. Experiments on multiple benchmarks demonstrate that our method achieves similar model robustness as the original TRADES method while using much less training time ($\sim$3x improvement with the same training schedule).
+
+
+
+## **4. Improved Gradient based Adversarial Attacks for Quantized Networks**
 
 cs.CV
 
@@ -17,7 +59,7 @@ AAAI 2022
 
 
 
-## **2. Perfectly Secure Message Transmission against Rational Adversaries**
+## **5. Perfectly Secure Message Transmission against Rational Adversaries**
 
 cs.CR
 
@@ -29,7 +71,7 @@ cs.CR
 
 
 
-## **3. Domain Knowledge Alleviates Adversarial Attacks in Multi-Label Classifiers**
+## **6. Domain Knowledge Alleviates Adversarial Attacks in Multi-Label Classifiers**
 
 cs.LG
 
@@ -43,7 +85,7 @@ Accepted for publications in IEEE TPAMI journal
 
 
 
-## **4. Invertible Image Dataset Protection**
+## **7. Invertible Image Dataset Protection**
 
 cs.CV
 
@@ -57,7 +99,7 @@ Submitted to ICME 2022. Authors are from University of Science and  Technology o
 
 
 
-## **5. Super-Efficient Super Resolution for Fast Adversarial Defense at the Edge**
+## **8. Super-Efficient Super Resolution for Fast Adversarial Defense at the Edge**
 
 eess.IV
 
@@ -71,7 +113,7 @@ This preprint is for personal use only. The official article will  appear in pro
 
 
 
-## **6. DeepAdversaries: Examining the Robustness of Deep Learning Models for Galaxy Morphology Classification**
+## **9. DeepAdversaries: Examining the Robustness of Deep Learning Models for Galaxy Morphology Classification**
 
 cs.LG
 
@@ -85,7 +127,7 @@ cs.LG
 
 
 
-## **7. Constrained Gradient Descent: A Powerful and Principled Evasion Attack Against Neural Networks**
+## **10. Constrained Gradient Descent: A Powerful and Principled Evasion Attack Against Neural Networks**
 
 cs.LG
 
@@ -97,7 +139,7 @@ cs.LG
 
 
 
-## **8. Understanding and Measuring Robustness of Multimodal Learning**
+## **11. Understanding and Measuring Robustness of Multimodal Learning**
 
 cs.LG
 
@@ -109,7 +151,7 @@ cs.LG
 
 
 
-## **9. Boosting the Transferability of Video Adversarial Examples via Temporal Translation**
+## **12. Boosting the Transferability of Video Adversarial Examples via Temporal Translation**
 
 cs.CV
 
@@ -121,7 +163,7 @@ cs.CV
 
 
 
-## **10. On anti-stochastic properties of unlabeled graphs**
+## **13. On anti-stochastic properties of unlabeled graphs**
 
 cs.DM
 
@@ -133,7 +175,7 @@ cs.DM
 
 
 
-## **11. Associative Adversarial Learning Based on Selective Attack**
+## **14. Associative Adversarial Learning Based on Selective Attack**
 
 cs.CV
 
@@ -145,7 +187,7 @@ cs.CV
 
 
 
-## **12. PORTFILER: Port-Level Network Profiling for Self-Propagating Malware Detection**
+## **15. PORTFILER: Port-Level Network Profiling for Self-Propagating Malware Detection**
 
 cs.CR
 
@@ -159,7 +201,7 @@ An earlier version is accepted to be published in IEEE Conference on  Communicat
 
 
 
-## **13. Adversarial Attack for Asynchronous Event-based Data**
+## **16. Adversarial Attack for Asynchronous Event-based Data**
 
 cs.CV
 
@@ -173,7 +215,7 @@ cs.CV
 
 
 
-## **14. Killing One Bird with Two Stones: Model Extraction and Attribute Inference Attacks against BERT-based APIs**
+## **17. Killing One Bird with Two Stones: Model Extraction and Attribute Inference Attacks against BERT-based APIs**
 
 cs.CR
 
@@ -185,7 +227,7 @@ cs.CR
 
 
 
-## **15. Task and Model Agnostic Adversarial Attack on Graph Neural Networks**
+## **18. Task and Model Agnostic Adversarial Attack on Graph Neural Networks**
 
 cs.LG
 
@@ -197,7 +239,7 @@ cs.LG
 
 
 
-## **16. Denoised Internal Models: a Brain-Inspired Autoencoder against Adversarial Attacks**
+## **19. Denoised Internal Models: a Brain-Inspired Autoencoder against Adversarial Attacks**
 
 cs.CV
 
@@ -211,7 +253,7 @@ cs.CV
 
 
 
-## **17. Stealthy Attack on Algorithmic-Protected DNNs via Smart Bit Flipping**
+## **20. Stealthy Attack on Algorithmic-Protected DNNs via Smart Bit Flipping**
 
 cs.CR
 
@@ -225,7 +267,7 @@ Accepted for the 23rd International Symposium on Quality Electronic  Design (ISQ
 
 
 
-## **18. SoK: A Study of the Security on Voice Processing Systems**
+## **21. SoK: A Study of the Security on Voice Processing Systems**
 
 cs.CR
 
@@ -237,7 +279,7 @@ cs.CR
 
 
 
-## **19. CatchBackdoor: Backdoor Testing by Critical Trojan Neural Path Identification via Differential Fuzzing**
+## **22. CatchBackdoor: Backdoor Testing by Critical Trojan Neural Path Identification via Differential Fuzzing**
 
 cs.CR
 
@@ -251,7 +293,7 @@ cs.CR
 
 
 
-## **20. NIP: Neuron-level Inverse Perturbation Against Adversarial Attacks**
+## **23. NIP: Neuron-level Inverse Perturbation Against Adversarial Attacks**
 
 cs.CV
 
@@ -265,7 +307,7 @@ cs.CV
 
 
 
-## **21. One Bad Apple Spoils the Bunch: Transaction DoS in MimbleWimble Blockchains**
+## **24. One Bad Apple Spoils the Bunch: Transaction DoS in MimbleWimble Blockchains**
 
 cs.CR
 
@@ -279,7 +321,7 @@ cs.CR
 
 
 
-## **22. Parameter identifiability of a deep feedforward ReLU neural network**
+## **25. Parameter identifiability of a deep feedforward ReLU neural network**
 
 math.ST
 
@@ -291,7 +333,7 @@ math.ST
 
 
 
-## **23. Revisiting and Advancing Fast Adversarial Training Through The Lens of Bi-Level Optimization**
+## **26. Revisiting and Advancing Fast Adversarial Training Through The Lens of Bi-Level Optimization**
 
 cs.LG
 
@@ -303,7 +345,7 @@ cs.LG
 
 
 
-## **24. Robust Secretary and Prophet Algorithms for Packing Integer Programs**
+## **27. Robust Secretary and Prophet Algorithms for Packing Integer Programs**
 
 cs.DS
 
@@ -317,7 +359,7 @@ Appears in SODA 2022
 
 
 
-## **25. Adaptive Modeling Against Adversarial Attacks**
+## **28. Adaptive Modeling Against Adversarial Attacks**
 
 cs.LG
 
@@ -331,7 +373,7 @@ cs.LG
 
 
 
-## **26. Adversarial Attacks against Windows PE Malware Detection: A Survey of the State-of-the-Art**
+## **29. Adversarial Attacks against Windows PE Malware Detection: A Survey of the State-of-the-Art**
 
 cs.CR
 
@@ -343,7 +385,7 @@ cs.CR
 
 
 
-## **27. Detect & Reject for Transferability of Black-box Adversarial Attacks Against Network Intrusion Detection Systems**
+## **30. Detect & Reject for Transferability of Black-box Adversarial Attacks Against Network Intrusion Detection Systems**
 
 cs.CR
 
@@ -355,7 +397,7 @@ cs.CR
 
 
 
-## **28. Evaluating the Robustness of Deep Reinforcement Learning for Autonomous and Adversarial Policies in a Multi-agent Urban Driving Environment**
+## **31. Evaluating the Robustness of Deep Reinforcement Learning for Autonomous and Adversarial Policies in a Multi-agent Urban Driving Environment**
 
 cs.AI
 
@@ -367,7 +409,7 @@ cs.AI
 
 
 
-## **29. Adversarial Deep Reinforcement Learning for Trustworthy Autonomous Driving Policies**
+## **32. Adversarial Deep Reinforcement Learning for Trustworthy Autonomous Driving Policies**
 
 cs.AI
 
@@ -379,7 +421,7 @@ cs.AI
 
 
 
-## **30. Consistency Regularization for Adversarial Robustness**
+## **33. Consistency Regularization for Adversarial Robustness**
 
 cs.LG
 
@@ -393,7 +435,7 @@ Published as a conference proceeding for AAAI 2022
 
 
 
-## **31. How Should Pre-Trained Language Models Be Fine-Tuned Towards Adversarial Robustness?**
+## **34. How Should Pre-Trained Language Models Be Fine-Tuned Towards Adversarial Robustness?**
 
 cs.CL
 
@@ -407,7 +449,7 @@ Accepted by NeurIPS-2021
 
 
 
-## **32. An Attention Score Based Attacker for Black-box NLP Classifier**
+## **35. An Attention Score Based Attacker for Black-box NLP Classifier**
 
 cs.LG
 
@@ -419,7 +461,7 @@ cs.LG
 
 
 
-## **33. Collaborative adversary nodes learning on the logs of IoT devices in an IoT network**
+## **36. Collaborative adversary nodes learning on the logs of IoT devices in an IoT network**
 
 cs.CR
 
@@ -431,7 +473,7 @@ cs.CR
 
 
 
-## **34. Reevaluating Adversarial Examples in Natural Language**
+## **37. Reevaluating Adversarial Examples in Natural Language**
 
 cs.CL
 
@@ -445,7 +487,7 @@ cs.CL
 
 
 
-## **35. MIA-Former: Efficient and Robust Vision Transformers via Multi-grained Input-Adaptation**
+## **38. MIA-Former: Efficient and Robust Vision Transformers via Multi-grained Input-Adaptation**
 
 cs.CV
 
@@ -457,7 +499,7 @@ cs.CV
 
 
 
-## **36. Improving Robustness with Image Filtering**
+## **39. Improving Robustness with Image Filtering**
 
 cs.CV
 
@@ -469,7 +511,7 @@ cs.CV
 
 
 
-## **37. Adversarial images for the primate brain**
+## **40. Adversarial images for the primate brain**
 
 q-bio.NC
 
@@ -483,7 +525,7 @@ These results reveal limits of CNN-based models of primate vision  through their
 
 
 
-## **38. A Theoretical View of Linear Backpropagation and Its Convergence**
+## **41. A Theoretical View of Linear Backpropagation and Its Convergence**
 
 cs.LG
 
@@ -495,7 +537,7 @@ cs.LG
 
 
 
-## **39. What are Attackers after on IoT Devices? An approach based on a multi-phased multi-faceted IoT honeypot ecosystem and data clustering**
+## **42. What are Attackers after on IoT Devices? An approach based on a multi-phased multi-faceted IoT honeypot ecosystem and data clustering**
 
 cs.CR
 
@@ -509,7 +551,7 @@ arXiv admin note: text overlap with arXiv:2003.01218
 
 
 
-## **40. Channel-Aware Adversarial Attacks Against Deep Learning-Based Wireless Signal Classifiers**
+## **43. Channel-Aware Adversarial Attacks Against Deep Learning-Based Wireless Signal Classifiers**
 
 eess.SP
 
@@ -523,7 +565,7 @@ Submitted for publication. arXiv admin note: substantial text overlap  with arXi
 
 
 
-## **41. An Evasion Attack against Stacked Capsule Autoencoder**
+## **44. An Evasion Attack against Stacked Capsule Autoencoder**
 
 cs.LG
 
@@ -535,7 +577,7 @@ cs.LG
 
 
 
-## **42. Adversarial Attacks on Spiking Convolutional Networks for Event-based Vision**
+## **45. Adversarial Attacks on Spiking Convolutional Networks for Event-based Vision**
 
 cs.CV
 
@@ -549,7 +591,7 @@ cs.CV
 
 
 
-## **43. Certified Federated Adversarial Training**
+## **46. Certified Federated Adversarial Training**
 
 cs.LG
 
@@ -563,7 +605,7 @@ First presented at the 1st NeurIPS Workshop on New Frontiers in  Federated Learn
 
 
 
-## **44. Unifying Model Explainability and Robustness for Joint Text Classification and Rationale Extraction**
+## **47. Unifying Model Explainability and Robustness for Joint Text Classification and Rationale Extraction**
 
 cs.CL
 
@@ -577,7 +619,7 @@ AAAI 2022
 
 
 
-## **45. Energy-bounded Learning for Robust Models of Code**
+## **48. Energy-bounded Learning for Robust Models of Code**
 
 cs.LG
 
@@ -591,7 +633,7 @@ arXiv admin note: text overlap with arXiv:2010.03759 by other authors
 
 
 
-## **46. Knowledge Cross-Distillation for Membership Privacy**
+## **49. Knowledge Cross-Distillation for Membership Privacy**
 
 cs.CR
 
@@ -605,7 +647,7 @@ Under Review
 
 
 
-## **47. Toward Evaluating Re-identification Risks in the Local Privacy Model**
+## **50. Toward Evaluating Re-identification Risks in the Local Privacy Model**
 
 cs.CR
 
@@ -616,44 +658,6 @@ Accepted at Transactions on Data Privacy
 **Authors**: Takao Murakami, Kenta Takahashi
 
 **Abstracts**: LDP (Local Differential Privacy) has recently attracted much attention as a metric of data privacy that prevents the inference of personal data from obfuscated data in the local model. However, there are scenarios in which the adversary wants to perform re-identification attacks to link the obfuscated data to users in this model. LDP can cause excessive obfuscation and destroy the utility in these scenarios because it is not designed to directly prevent re-identification. In this paper, we propose a measure of re-identification risks, which we call PIE (Personal Information Entropy). The PIE is designed so that it directly prevents re-identification attacks in the local model. It lower-bounds the lowest possible re-identification error probability (i.e., Bayes error probability) of the adversary. We analyze the relation between LDP and the PIE, and analyze the PIE and utility in distribution estimation for two obfuscation mechanisms providing LDP. Through experiments, we show that when we consider re-identification as a privacy risk, LDP can cause excessive obfuscation and destroy the utility. Then we show that the PIE can be used to guarantee low re-identification risks for the local obfuscation mechanisms while keeping high utility.
-
-
-
-## **48. Jamming Pattern Recognition over Multi-Channel Networks: A Deep Learning Approach**
-
-cs.CR
-
-**SubmitDate**: 2021-12-19    [paper-pdf](http://arxiv.org/pdf/2112.11222v1)
-
-**Authors**: Ali Pourranjbar, Georges Kaddoum, Walid Saad
-
-**Abstracts**: With the advent of intelligent jammers, jamming attacks have become a more severe threat to the performance of wireless systems. An intelligent jammer is able to change its policy to minimize the probability of being traced by legitimate nodes. Thus, an anti-jamming mechanism capable of constantly adjusting to the jamming policy is required to combat such a jammer. Remarkably, existing anti-jamming methods are not applicable here because they mainly focus on mitigating jamming attacks with an invariant jamming policy, and they rarely consider an intelligent jammer as an adversary. Therefore, in this paper, to employ a jamming type recognition technique working alongside an anti-jamming technique is proposed. The proposed recognition method employs a recurrent neural network that takes the jammer's occupied channels as inputs and outputs the jammer type. Under this scheme, the real-time jammer policy is first identified, and, then, the most appropriate countermeasure is chosen. Consequently, any changes to the jammer policy can be instantly detected with the proposed recognition technique allowing for a rapid switch to a new anti-jamming method fitted to the new jamming policy. To evaluate the performance of the proposed recognition method, the accuracy of the detection is derived as a function of the jammer policy switching time. Simulation results show the detection accuracy for all the considered users numbers is greater than 70% when the jammer switches its policy every 5 time slots and the accuracy raises to 90% when the jammer policy switching time is 45.
-
-
-
-## **49. Attacking Point Cloud Segmentation with Color-only Perturbation**
-
-cs.CV
-
-**SubmitDate**: 2021-12-18    [paper-pdf](http://arxiv.org/pdf/2112.05871v2)
-
-**Authors**: Jiacen Xu, Zhe Zhou, Boyuan Feng, Yufei Ding, Zhou Li
-
-**Abstracts**: Recent research efforts on 3D point-cloud semantic segmentation have achieved outstanding performance by adopting deep CNN (convolutional neural networks) and GCN (graph convolutional networks). However, the robustness of these complex models has not been systematically analyzed. Given that semantic segmentation has been applied in many safety-critical applications (e.g., autonomous driving, geological sensing), it is important to fill this knowledge gap, in particular, how these models are affected under adversarial samples. While adversarial attacks against point cloud have been studied, we found all of them were targeting single-object recognition, and the perturbation is done on the point coordinates. We argue that the coordinate-based perturbation is unlikely to realize under the physical-world constraints. Hence, we propose a new color-only perturbation method named COLPER, and tailor it to semantic segmentation. By evaluating COLPER on an indoor dataset (S3DIS) and an outdoor dataset (Semantic3D) against three point cloud segmentation models (PointNet++, DeepGCNs, and RandLA-Net), we found color-only perturbation is sufficient to significantly drop the segmentation accuracy and aIoU, under both targeted and non-targeted attack settings.
-
-
-
-## **50. Adversarial Attack for Uncertainty Estimation: Identifying Critical Regions in Neural Networks**
-
-cs.LG
-
-15 pages, 6 figures, Neural Process Lett (2021)
-
-**SubmitDate**: 2021-12-18    [paper-pdf](http://arxiv.org/pdf/2107.07618v2)
-
-**Authors**: Ismail Alarab, Simant Prakoonwit
-
-**Abstracts**: We propose a novel method to capture data points near decision boundary in neural network that are often referred to a specific type of uncertainty. In our approach, we sought to perform uncertainty estimation based on the idea of adversarial attack method. In this paper, uncertainty estimates are derived from the input perturbations, unlike previous studies that provide perturbations on the model's parameters as in Bayesian approach. We are able to produce uncertainty with couple of perturbations on the inputs. Interestingly, we apply the proposed method to datasets derived from blockchain. We compare the performance of model uncertainty with the most recent uncertainty methods. We show that the proposed method has revealed a significant outperformance over other methods and provided less risk to capture model uncertainty in machine learning.
 
 
 

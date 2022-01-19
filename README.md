@@ -1,9 +1,21 @@
 # Latest Adversarial Attack Papers
-**update at 2022-01-17 09:50:01**
+**update at 2022-01-19 09:11:45**
 
 [中文版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. Unlabeled Data Improves Adversarial Robustness**
+## **1. Jamming Attacks on Federated Learning in Wireless Networks**
+
+cs.LG
+
+**SubmitDate**: 2022-01-13    [paper-pdf](http://arxiv.org/pdf/2201.05172v1)
+
+**Authors**: Yi Shi, Yalin E. Sagduyu
+
+**Abstracts**: Federated learning (FL) offers a decentralized learning environment so that a group of clients can collaborate to train a global model at the server, while keeping their training data confidential. This paper studies how to launch over-the-air jamming attacks to disrupt the FL process when it is executed over a wireless network. As a wireless example, FL is applied to learn how to classify wireless signals collected by clients (spectrum sensors) at different locations (such as in cooperative sensing). An adversary can jam the transmissions for the local model updates from clients to the server (uplink attack), or the transmissions for the global model updates the server to clients (downlink attack), or both. Given a budget imposed on the number of clients that can be attacked per FL round, clients for the (uplink/downlink) attack are selected according to their local model accuracies that would be expected without an attack or ranked via spectrum observations. This novel attack is extended to general settings by accounting different processing speeds and attack success probabilities for clients. Compared to benchmark attack schemes, this attack approach degrades the FL performance significantly, thereby revealing new vulnerabilities of FL to jamming attacks in wireless networks.
+
+
+
+## **2. Unlabeled Data Improves Adversarial Robustness**
 
 stat.ML
 
@@ -17,7 +29,7 @@ Corrected some math typos in the proof of Lemma 1
 
 
 
-## **2. Attention-Guided Black-box Adversarial Attacks with Large-Scale Multiobjective Evolutionary Optimization**
+## **3. Attention-Guided Black-box Adversarial Attacks with Large-Scale Multiobjective Evolutionary Optimization**
 
 cs.CV
 
@@ -29,7 +41,7 @@ cs.CV
 
 
 
-## **3. On Adversarial Robustness of Trajectory Prediction for Autonomous Vehicles**
+## **4. On Adversarial Robustness of Trajectory Prediction for Autonomous Vehicles**
 
 cs.CV
 
@@ -43,7 +55,7 @@ cs.CV
 
 
 
-## **4. Learning to Break Deep Perceptual Hashing: The Use Case NeuralHash**
+## **5. Learning to Break Deep Perceptual Hashing: The Use Case NeuralHash**
 
 cs.LG
 
@@ -57,7 +69,7 @@ cs.LG
 
 
 
-## **5. Evaluation of Four Black-box Adversarial Attacks and Some Query-efficient Improvement Analysis**
+## **6. Evaluation of Four Black-box Adversarial Attacks and Some Query-efficient Improvement Analysis**
 
 cs.CR
 
@@ -69,7 +81,7 @@ cs.CR
 
 
 
-## **6. Captcha Attack: Turning Captchas Against Humanity**
+## **7. Captcha Attack: Turning Captchas Against Humanity**
 
 cs.CR
 
@@ -83,7 +95,7 @@ Currently under submission
 
 
 
-## **7. Reconstructing Training Data with Informed Adversaries**
+## **8. Reconstructing Training Data with Informed Adversaries**
 
 cs.CR
 
@@ -95,7 +107,7 @@ cs.CR
 
 
 
-## **8. Towards Adversarially Robust Deep Image Denoising**
+## **9. Towards Adversarially Robust Deep Image Denoising**
 
 eess.IV
 
@@ -107,7 +119,7 @@ eess.IV
 
 
 
-## **9. Security for Machine Learning-based Software Systems: a survey of threats, practices and challenges**
+## **10. Security for Machine Learning-based Software Systems: a survey of threats, practices and challenges**
 
 cs.CR
 
@@ -119,7 +131,7 @@ cs.CR
 
 
 
-## **10. Adversarially Robust Classification by Conditional Generative Model Inversion**
+## **11. Adversarially Robust Classification by Conditional Generative Model Inversion**
 
 cs.LG
 
@@ -131,7 +143,7 @@ cs.LG
 
 
 
-## **11. Get your Foes Fooled: Proximal Gradient Split Learning for Defense against Model Inversion Attacks on IoMT data**
+## **12. Get your Foes Fooled: Proximal Gradient Split Learning for Defense against Model Inversion Attacks on IoMT data**
 
 cs.CR
 
@@ -145,7 +157,7 @@ cs.CR
 
 
 
-## **12. Who Is the Strongest Enemy? Towards Optimal and Efficient Evasion Attacks in Deep RL**
+## **13. Who Is the Strongest Enemy? Towards Optimal and Efficient Evasion Attacks in Deep RL**
 
 cs.LG
 
@@ -157,7 +169,7 @@ cs.LG
 
 
 
-## **13. Complete Traceability Multimedia Fingerprinting Codes Resistant to Averaging Attack and Adversarial Noise with Optimal Rate**
+## **14. Complete Traceability Multimedia Fingerprinting Codes Resistant to Averaging Attack and Adversarial Noise with Optimal Rate**
 
 cs.IT
 
@@ -169,7 +181,7 @@ cs.IT
 
 
 
-## **14. Game Theory for Adversarial Attacks and Defenses**
+## **15. Game Theory for Adversarial Attacks and Defenses**
 
 cs.LG
 
@@ -183,7 +195,7 @@ With the agreement of my coauthors, I would like to withdraw the  manuscript "Ga
 
 
 
-## **15. Similarity-based Gray-box Adversarial Attack Against Deep Face Recognition**
+## **16. Similarity-based Gray-box Adversarial Attack Against Deep Face Recognition**
 
 cs.CV
 
@@ -197,7 +209,7 @@ ACCEPTED in IEEE International Conference on Automatic Face and  Gesture Recogni
 
 
 
-## **16. Tor circuit fingerprinting defenses using adaptive padding**
+## **17. Tor circuit fingerprinting defenses using adaptive padding**
 
 cs.CR
 
@@ -211,7 +223,7 @@ cs.CR
 
 
 
-## **17. An Empirical Assessment of Endpoint Security Systems Against Advanced Persistent Threats Attack Vectors**
+## **18. An Empirical Assessment of Endpoint Security Systems Against Advanced Persistent Threats Attack Vectors**
 
 cs.CR
 
@@ -225,7 +237,7 @@ This is the revised (and final) version of  https://doi.org/10.3390/jcp1030021 w
 
 
 
-## **18. Quantifying Robustness to Adversarial Word Substitutions**
+## **19. Quantifying Robustness to Adversarial Word Substitutions**
 
 cs.CL
 
@@ -237,7 +249,7 @@ cs.CL
 
 
 
-## **19. Attacking Video Recognition Models with Bullet-Screen Comments**
+## **20. Attacking Video Recognition Models with Bullet-Screen Comments**
 
 cs.CV
 
@@ -249,7 +261,7 @@ cs.CV
 
 
 
-## **20. Sequential Randomized Smoothing for Adversarially Robust Speech Recognition**
+## **21. Sequential Randomized Smoothing for Adversarially Robust Speech Recognition**
 
 cs.CL
 
@@ -263,7 +275,7 @@ This update adds some relevant references to past and concurrent work
 
 
 
-## **21. GMFIM: A Generative Mask-guided Facial Image Manipulation Model for Privacy Preservation**
+## **22. GMFIM: A Generative Mask-guided Facial Image Manipulation Model for Privacy Preservation**
 
 cs.CV
 
@@ -275,7 +287,7 @@ cs.CV
 
 
 
-## **22. Evaluation of Neural Networks Defenses and Attacks using NDCG and Reciprocal Rank Metrics**
+## **23. Evaluation of Neural Networks Defenses and Attacks using NDCG and Reciprocal Rank Metrics**
 
 cs.CR
 
@@ -289,7 +301,7 @@ cs.CR
 
 
 
-## **23. IoTGAN: GAN Powered Camouflage Against Machine Learning Based IoT Device Identification**
+## **24. IoTGAN: GAN Powered Camouflage Against Machine Learning Based IoT Device Identification**
 
 cs.CR
 
@@ -301,7 +313,7 @@ cs.CR
 
 
 
-## **24. Adversarial GLUE: A Multi-Task Benchmark for Robustness Evaluation of Language Models**
+## **25. Adversarial GLUE: A Multi-Task Benchmark for Robustness Evaluation of Language Models**
 
 cs.CL
 
@@ -315,7 +327,7 @@ Oral Presentation in NeurIPS 2021 (Datasets and Benchmarks Track). 24  pages, 4 
 
 
 
-## **25. FLAME: Taming Backdoors in Federated Learning**
+## **26. FLAME: Taming Backdoors in Federated Learning**
 
 cs.CR
 
@@ -329,7 +341,7 @@ To appear in the 31st USENIX Security Symposium, August 2022, Boston,  MA, USA
 
 
 
-## **26. Privacy-aware Early Detection of COVID-19 through Adversarial Training**
+## **27. Privacy-aware Early Detection of COVID-19 through Adversarial Training**
 
 cs.LG
 
@@ -341,7 +353,7 @@ cs.LG
 
 
 
-## **27. Tiny Adversarial Mulit-Objective Oneshot Neural Architecture Search**
+## **28. Tiny Adversarial Mulit-Objective Oneshot Neural Architecture Search**
 
 cs.LG
 
@@ -353,7 +365,7 @@ cs.LG
 
 
 
-## **28. Attacking Vertical Collaborative Learning System Using Adversarial Dominating Inputs**
+## **29. Attacking Vertical Collaborative Learning System Using Adversarial Dominating Inputs**
 
 cs.CR
 
@@ -365,7 +377,7 @@ cs.CR
 
 
 
-## **29. Trade-offs between membership privacy & adversarially robust learning**
+## **30. Trade-offs between membership privacy & adversarially robust learning**
 
 cs.LG
 
@@ -377,7 +389,7 @@ cs.LG
 
 
 
-## **30. Detecting CAN Masquerade Attacks with Signal Clustering Similarity**
+## **31. Detecting CAN Masquerade Attacks with Signal Clustering Similarity**
 
 cs.CR
 
@@ -391,7 +403,7 @@ cs.CR
 
 
 
-## **31. Exploring Adversarial Robustness of Multi-Sensor Perception Systems in Self Driving**
+## **32. Exploring Adversarial Robustness of Multi-Sensor Perception Systems in Self Driving**
 
 cs.CV
 
@@ -403,7 +415,7 @@ cs.CV
 
 
 
-## **32. Adversarial Example Detection for DNN Models: A Review and Experimental Comparison**
+## **33. Adversarial Example Detection for DNN Models: A Review and Experimental Comparison**
 
 cs.CV
 
@@ -417,7 +429,7 @@ Accepted and published in Artificial Intelligence Review journal
 
 
 
-## **33. Semantically Stealthy Adversarial Attacks against Segmentation Models**
+## **34. Semantically Stealthy Adversarial Attacks against Segmentation Models**
 
 cs.CV
 
@@ -429,7 +441,7 @@ cs.CV
 
 
 
-## **34. Towards Understanding and Harnessing the Effect of Image Transformation in Adversarial Detection**
+## **35. Towards Understanding and Harnessing the Effect of Image Transformation in Adversarial Detection**
 
 cs.CV
 
@@ -441,7 +453,7 @@ cs.CV
 
 
 
-## **35. BDFA: A Blind Data Adversarial Bit-flip Attack on Deep Neural Networks**
+## **36. BDFA: A Blind Data Adversarial Bit-flip Attack on Deep Neural Networks**
 
 cs.CR
 
@@ -453,7 +465,7 @@ cs.CR
 
 
 
-## **36. Accelerated Zeroth-Order and First-Order Momentum Methods from Mini to Minimax Optimization**
+## **37. Accelerated Zeroth-Order and First-Order Momentum Methods from Mini to Minimax Optimization**
 
 math.OC
 
@@ -467,7 +479,7 @@ Published in Journal of Machine Learning Research (JMLR)
 
 
 
-## **37. Increased-confidence adversarial examples for deep learning counter-forensics**
+## **38. Increased-confidence adversarial examples for deep learning counter-forensics**
 
 cs.CV
 
@@ -479,7 +491,7 @@ cs.CV
 
 
 
-## **38. HydraText: Multi-objective Optimization for Adversarial Textual Attack**
+## **39. HydraText: Multi-objective Optimization for Adversarial Textual Attack**
 
 cs.CL
 
@@ -491,7 +503,7 @@ cs.CL
 
 
 
-## **39. Increasing the Confidence of Deep Neural Networks by Coverage Analysis**
+## **40. Increasing the Confidence of Deep Neural Networks by Coverage Analysis**
 
 cs.LG
 
@@ -503,7 +515,7 @@ cs.LG
 
 
 
-## **40. On the Real-World Adversarial Robustness of Real-Time Semantic Segmentation Models for Autonomous Driving**
+## **41. On the Real-World Adversarial Robustness of Real-Time Semantic Segmentation Models for Autonomous Driving**
 
 cs.CV
 
@@ -515,7 +527,7 @@ cs.CV
 
 
 
-## **41. Secure Remote Attestation with Strong Key Insulation Guarantees**
+## **42. Secure Remote Attestation with Strong Key Insulation Guarantees**
 
 cs.CR
 
@@ -527,7 +539,7 @@ cs.CR
 
 
 
-## **42. Generation of Wheel Lockup Attacks on Nonlinear Dynamics of Vehicle Traction**
+## **43. Generation of Wheel Lockup Attacks on Nonlinear Dynamics of Vehicle Traction**
 
 eess.SY
 
@@ -541,7 +553,7 @@ Submitted to AutoSec'22@NDSS
 
 
 
-## **43. GRNN: Generative Regression Neural Network -- A Data Leakage Attack for Federated Learning**
+## **44. GRNN: Generative Regression Neural Network -- A Data Leakage Attack for Federated Learning**
 
 cs.LG
 
@@ -555,7 +567,7 @@ The source code can be found at: https://github.com/Rand2AI/GRNN
 
 
 
-## **44. Aspis: A Robust Detection System for Distributed Learning**
+## **45. Aspis: A Robust Detection System for Distributed Learning**
 
 cs.LG
 
@@ -569,7 +581,7 @@ cs.LG
 
 
 
-## **45. ROOM: Adversarial Machine Learning Attacks Under Real-Time Constraints**
+## **46. ROOM: Adversarial Machine Learning Attacks Under Real-Time Constraints**
 
 cs.CR
 
@@ -583,7 +595,7 @@ cs.CR
 
 
 
-## **46. A Survey on Adversarial Attacks for Malware Analysis**
+## **47. A Survey on Adversarial Attacks for Malware Analysis**
 
 cs.CR
 
@@ -597,7 +609,7 @@ cs.CR
 
 
 
-## **47. Fast Gradient Non-sign Methods**
+## **48. Fast Gradient Non-sign Methods**
 
 cs.CV
 
@@ -609,7 +621,7 @@ cs.CV
 
 
 
-## **48. Adversarial Feature Desensitization**
+## **49. Adversarial Feature Desensitization**
 
 cs.LG
 
@@ -623,7 +635,7 @@ Accepted at Neurips 2021
 
 
 
-## **49. On the Minimal Adversarial Perturbation for Deep Neural Networks with Provable Estimation Error**
+## **50. On the Minimal Adversarial Perturbation for Deep Neural Networks with Provable Estimation Error**
 
 cs.LG
 
@@ -634,18 +646,6 @@ Under review on IEEE journal Transactions on Pattern Analysis and  Machine Intel
 **Authors**: Fabio Brau, Giulio Rossolini, Alessandro Biondi, Giorgio Buttazzo
 
 **Abstracts**: Although Deep Neural Networks (DNNs) have shown incredible performance in perceptive and control tasks, several trustworthy issues are still open. One of the most discussed topics is the existence of adversarial perturbations, which has opened an interesting research line on provable techniques capable of quantifying the robustness of a given input. In this regard, the Euclidean distance of the input from the classification boundary denotes a well-proved robustness assessment as the minimal affordable adversarial perturbation. Unfortunately, computing such a distance is highly complex due the non-convex nature of NNs. Despite several methods have been proposed to address this issue, to the best of our knowledge, no provable results have been presented to estimate and bound the error committed. This paper addresses this issue by proposing two lightweight strategies to find the minimal adversarial perturbation. Differently from the state-of-the-art, the proposed approach allows formulating an error estimation theory of the approximate distance with respect to the theoretical one. Finally, a substantial set of experiments is reported to evaluate the performance of the algorithms and support the theoretical findings. The obtained results show that the proposed strategies approximate the theoretical distance for samples close to the classification boundary, leading to provable robustness guarantees against any adversarial attacks.
-
-
-
-## **50. Adversarial Transformation of Spoofing Attacks for Voice Biometrics**
-
-eess.AS
-
-**SubmitDate**: 2022-01-04    [paper-pdf](http://arxiv.org/pdf/2201.01226v1)
-
-**Authors**: Alejandro Gomez-Alanis, Jose A. Gonzalez-Lopez, Antonio M. Peinado
-
-**Abstracts**: Voice biometric systems based on automatic speaker verification (ASV) are exposed to \textit{spoofing} attacks which may compromise their security. To increase the robustness against such attacks, anti-spoofing or presentation attack detection (PAD) systems have been proposed for the detection of replay, synthesis and voice conversion based attacks. Recently, the scientific community has shown that PAD systems are also vulnerable to adversarial attacks. However, to the best of our knowledge, no previous work have studied the robustness of full voice biometrics systems (ASV + PAD) to these new types of adversarial \textit{spoofing} attacks. In this work, we develop a new adversarial biometrics transformation network (ABTN) which jointly processes the loss of the PAD and ASV systems in order to generate white-box and black-box adversarial \textit{spoofing} attacks. The core idea of this system is to generate adversarial \textit{spoofing} attacks which are able to fool the PAD system without being detected by the ASV system. The experiments were carried out on the ASVspoof 2019 corpus, including both logical access (LA) and physical access (PA) scenarios. The experimental results show that the proposed ABTN clearly outperforms some well-known adversarial techniques in both white-box and black-box attack scenarios.
 
 
 

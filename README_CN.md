@@ -1,9 +1,23 @@
 # Latest Adversarial Attack Papers
-**update at 2022-01-17 09:50:01**
+**update at 2022-01-19 09:11:45**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. Unlabeled Data Improves Adversarial Robustness**
+## **1. Jamming Attacks on Federated Learning in Wireless Networks**
+
+无线网络中对联合学习的干扰攻击 cs.LG
+
+**SubmitDate**: 2022-01-13    [paper-pdf](http://arxiv.org/pdf/2201.05172v1)
+
+**Authors**: Yi Shi, Yalin E. Sagduyu
+
+**Abstracts**: Federated learning (FL) offers a decentralized learning environment so that a group of clients can collaborate to train a global model at the server, while keeping their training data confidential. This paper studies how to launch over-the-air jamming attacks to disrupt the FL process when it is executed over a wireless network. As a wireless example, FL is applied to learn how to classify wireless signals collected by clients (spectrum sensors) at different locations (such as in cooperative sensing). An adversary can jam the transmissions for the local model updates from clients to the server (uplink attack), or the transmissions for the global model updates the server to clients (downlink attack), or both. Given a budget imposed on the number of clients that can be attacked per FL round, clients for the (uplink/downlink) attack are selected according to their local model accuracies that would be expected without an attack or ranked via spectrum observations. This novel attack is extended to general settings by accounting different processing speeds and attack success probabilities for clients. Compared to benchmark attack schemes, this attack approach degrades the FL performance significantly, thereby revealing new vulnerabilities of FL to jamming attacks in wireless networks.
+
+摘要: 联合学习(FL)提供了一个分散的学习环境，以便一组客户可以协作在服务器上训练全局模型，同时保护他们的训练数据的机密性。本文研究了在无线网络上执行FL过程时，如何发起空中干扰攻击来中断FL过程。作为无线示例，FL被应用于学习如何对由不同位置的客户端(频谱传感器)收集的无线信号进行分类(例如在协作侦听中)。敌手可以将本地模型更新的传输从客户端阻塞到服务器(上行链路攻击)，或者将全局模型的传输更新到客户端(下行链路攻击)，或者两者兼而有之。给定对每FL轮可被攻击的客户端数量强加的预算，根据其本地模型精度来选择(上行链路/下行链路)攻击的客户端，所述本地模型精度是在没有攻击的情况下预期的，或者通过频谱观察来排序。通过计算客户端的不同处理速度和攻击成功概率，将这种新型攻击扩展到一般设置。与基准攻击方案相比，该攻击方案显著降低了FL的性能，从而揭示了FL在无线网络中对干扰攻击的新脆弱性。
+
+
+
+## **2. Unlabeled Data Improves Adversarial Robustness**
 
 未标记的数据提高了对手的健壮性 stat.ML
 
@@ -19,7 +33,7 @@ Corrected some math typos in the proof of Lemma 1
 
 
 
-## **2. Attention-Guided Black-box Adversarial Attacks with Large-Scale Multiobjective Evolutionary Optimization**
+## **3. Attention-Guided Black-box Adversarial Attacks with Large-Scale Multiobjective Evolutionary Optimization**
 
 基于大规模多目标进化优化的注意力引导黑盒对抗攻击 cs.CV
 
@@ -33,7 +47,7 @@ Corrected some math typos in the proof of Lemma 1
 
 
 
-## **3. On Adversarial Robustness of Trajectory Prediction for Autonomous Vehicles**
+## **4. On Adversarial Robustness of Trajectory Prediction for Autonomous Vehicles**
 
 自主车辆轨迹预测的对抗鲁棒性研究 cs.CV
 
@@ -49,7 +63,7 @@ Corrected some math typos in the proof of Lemma 1
 
 
 
-## **4. Learning to Break Deep Perceptual Hashing: The Use Case NeuralHash**
+## **5. Learning to Break Deep Perceptual Hashing: The Use Case NeuralHash**
 
 学习打破深度感知散列：用例NeuralHash cs.LG
 
@@ -65,7 +79,7 @@ Corrected some math typos in the proof of Lemma 1
 
 
 
-## **5. Evaluation of Four Black-box Adversarial Attacks and Some Query-efficient Improvement Analysis**
+## **6. Evaluation of Four Black-box Adversarial Attacks and Some Query-efficient Improvement Analysis**
 
 四种黑盒对抗性攻击的评测及查询效率改进分析 cs.CR
 
@@ -79,7 +93,7 @@ Corrected some math typos in the proof of Lemma 1
 
 
 
-## **6. Captcha Attack: Turning Captchas Against Humanity**
+## **7. Captcha Attack: Turning Captchas Against Humanity**
 
 验证码攻击：将验证码变成反人类的 cs.CR
 
@@ -95,7 +109,7 @@ Currently under submission
 
 
 
-## **7. Reconstructing Training Data with Informed Adversaries**
+## **8. Reconstructing Training Data with Informed Adversaries**
 
 利用知情对手重建训练数据 cs.CR
 
@@ -109,7 +123,7 @@ Currently under submission
 
 
 
-## **8. Towards Adversarially Robust Deep Image Denoising**
+## **9. Towards Adversarially Robust Deep Image Denoising**
 
 面向对抗性鲁棒的深部图像去噪研究 eess.IV
 
@@ -123,7 +137,7 @@ Currently under submission
 
 
 
-## **9. Security for Machine Learning-based Software Systems: a survey of threats, practices and challenges**
+## **10. Security for Machine Learning-based Software Systems: a survey of threats, practices and challenges**
 
 基于机器学习的软件系统安全：威胁、实践和挑战综述 cs.CR
 
@@ -137,7 +151,7 @@ Currently under submission
 
 
 
-## **10. Adversarially Robust Classification by Conditional Generative Model Inversion**
+## **11. Adversarially Robust Classification by Conditional Generative Model Inversion**
 
 基于条件生成模型反演的对抗性鲁棒分类 cs.LG
 
@@ -151,7 +165,7 @@ Currently under submission
 
 
 
-## **11. Get your Foes Fooled: Proximal Gradient Split Learning for Defense against Model Inversion Attacks on IoMT data**
+## **12. Get your Foes Fooled: Proximal Gradient Split Learning for Defense against Model Inversion Attacks on IoMT data**
 
 愚弄你的敌人：用于防御IoMT数据模型反转攻击的近梯度分裂学习 cs.CR
 
@@ -167,7 +181,7 @@ Currently under submission
 
 
 
-## **12. Who Is the Strongest Enemy? Towards Optimal and Efficient Evasion Attacks in Deep RL**
+## **13. Who Is the Strongest Enemy? Towards Optimal and Efficient Evasion Attacks in Deep RL**
 
 谁是最强大的敌人？基于Deep RL的最优高效规避攻击研究 cs.LG
 
@@ -181,7 +195,7 @@ Currently under submission
 
 
 
-## **13. Complete Traceability Multimedia Fingerprinting Codes Resistant to Averaging Attack and Adversarial Noise with Optimal Rate**
+## **14. Complete Traceability Multimedia Fingerprinting Codes Resistant to Averaging Attack and Adversarial Noise with Optimal Rate**
 
 具有最佳速率的抗平均攻击和对抗噪声的完全可追溯性多媒体指纹码 cs.IT
 
@@ -195,7 +209,7 @@ Currently under submission
 
 
 
-## **14. Game Theory for Adversarial Attacks and Defenses**
+## **15. Game Theory for Adversarial Attacks and Defenses**
 
 对抗性攻防的博弈论 cs.LG
 
@@ -211,7 +225,7 @@ With the agreement of my coauthors, I would like to withdraw the  manuscript "Ga
 
 
 
-## **15. Similarity-based Gray-box Adversarial Attack Against Deep Face Recognition**
+## **16. Similarity-based Gray-box Adversarial Attack Against Deep Face Recognition**
 
 基于相似度的灰度盒对抗深度人脸识别攻击 cs.CV
 
@@ -227,7 +241,7 @@ ACCEPTED in IEEE International Conference on Automatic Face and  Gesture Recogni
 
 
 
-## **16. Tor circuit fingerprinting defenses using adaptive padding**
+## **17. Tor circuit fingerprinting defenses using adaptive padding**
 
 使用自适应填充的ToR电路指纹防御 cs.CR
 
@@ -243,7 +257,7 @@ ACCEPTED in IEEE International Conference on Automatic Face and  Gesture Recogni
 
 
 
-## **17. An Empirical Assessment of Endpoint Security Systems Against Advanced Persistent Threats Attack Vectors**
+## **18. An Empirical Assessment of Endpoint Security Systems Against Advanced Persistent Threats Attack Vectors**
 
 终端安全系统抵御高级持续威胁攻击矢量的经验评估 cs.CR
 
@@ -259,7 +273,7 @@ This is the revised (and final) version of  https://doi.org/10.3390/jcp1030021 w
 
 
 
-## **18. Quantifying Robustness to Adversarial Word Substitutions**
+## **19. Quantifying Robustness to Adversarial Word Substitutions**
 
 量化对敌意单词替换的健壮性 cs.CL
 
@@ -273,7 +287,7 @@ This is the revised (and final) version of  https://doi.org/10.3390/jcp1030021 w
 
 
 
-## **19. Attacking Video Recognition Models with Bullet-Screen Comments**
+## **20. Attacking Video Recognition Models with Bullet-Screen Comments**
 
 用弹幕评论攻击视频识别模型 cs.CV
 
@@ -287,7 +301,7 @@ This is the revised (and final) version of  https://doi.org/10.3390/jcp1030021 w
 
 
 
-## **20. Sequential Randomized Smoothing for Adversarially Robust Speech Recognition**
+## **21. Sequential Randomized Smoothing for Adversarially Robust Speech Recognition**
 
 对抗性语音识别的序贯随机平滑算法 cs.CL
 
@@ -303,7 +317,7 @@ This update adds some relevant references to past and concurrent work
 
 
 
-## **21. GMFIM: A Generative Mask-guided Facial Image Manipulation Model for Privacy Preservation**
+## **22. GMFIM: A Generative Mask-guided Facial Image Manipulation Model for Privacy Preservation**
 
 GMFIM：一种产生式面具引导的隐私保护人脸图像处理模型 cs.CV
 
@@ -317,7 +331,7 @@ GMFIM：一种产生式面具引导的隐私保护人脸图像处理模型 cs.CV
 
 
 
-## **22. Evaluation of Neural Networks Defenses and Attacks using NDCG and Reciprocal Rank Metrics**
+## **23. Evaluation of Neural Networks Defenses and Attacks using NDCG and Reciprocal Rank Metrics**
 
 基于NDCG和倒数秩度量的神经网络防御与攻击评估 cs.CR
 
@@ -333,7 +347,7 @@ GMFIM：一种产生式面具引导的隐私保护人脸图像处理模型 cs.CV
 
 
 
-## **23. IoTGAN: GAN Powered Camouflage Against Machine Learning Based IoT Device Identification**
+## **24. IoTGAN: GAN Powered Camouflage Against Machine Learning Based IoT Device Identification**
 
 IoTGAN：基于机器学习的GAN伪装技术对抗物联网设备识别 cs.CR
 
@@ -347,7 +361,7 @@ IoTGAN：基于机器学习的GAN伪装技术对抗物联网设备识别 cs.CR
 
 
 
-## **24. Adversarial GLUE: A Multi-Task Benchmark for Robustness Evaluation of Language Models**
+## **25. Adversarial GLUE: A Multi-Task Benchmark for Robustness Evaluation of Language Models**
 
 对抗性胶水：语言模型健壮性评估的多任务基准 cs.CL
 
@@ -363,7 +377,7 @@ Oral Presentation in NeurIPS 2021 (Datasets and Benchmarks Track). 24  pages, 4 
 
 
 
-## **25. FLAME: Taming Backdoors in Federated Learning**
+## **26. FLAME: Taming Backdoors in Federated Learning**
 
 火焰：联合学习中的后门驯服 cs.CR
 
@@ -379,7 +393,7 @@ To appear in the 31st USENIX Security Symposium, August 2022, Boston,  MA, USA
 
 
 
-## **26. Privacy-aware Early Detection of COVID-19 through Adversarial Training**
+## **27. Privacy-aware Early Detection of COVID-19 through Adversarial Training**
 
 通过对抗性训练实现具有隐私意识的冠状病毒早期检测 cs.LG
 
@@ -393,7 +407,7 @@ To appear in the 31st USENIX Security Symposium, August 2022, Boston,  MA, USA
 
 
 
-## **27. Tiny Adversarial Mulit-Objective Oneshot Neural Architecture Search**
+## **28. Tiny Adversarial Mulit-Objective Oneshot Neural Architecture Search**
 
 微小对抗性多目标单目标神经结构搜索 cs.LG
 
@@ -407,7 +421,7 @@ To appear in the 31st USENIX Security Symposium, August 2022, Boston,  MA, USA
 
 
 
-## **28. Attacking Vertical Collaborative Learning System Using Adversarial Dominating Inputs**
+## **29. Attacking Vertical Collaborative Learning System Using Adversarial Dominating Inputs**
 
 利用对抗性主导输入攻击垂直协作学习系统 cs.CR
 
@@ -421,7 +435,7 @@ To appear in the 31st USENIX Security Symposium, August 2022, Boston,  MA, USA
 
 
 
-## **29. Trade-offs between membership privacy & adversarially robust learning**
+## **30. Trade-offs between membership privacy & adversarially robust learning**
 
 会员隐私和对抗性稳健学习之间的权衡 cs.LG
 
@@ -435,7 +449,7 @@ To appear in the 31st USENIX Security Symposium, August 2022, Boston,  MA, USA
 
 
 
-## **30. Detecting CAN Masquerade Attacks with Signal Clustering Similarity**
+## **31. Detecting CAN Masquerade Attacks with Signal Clustering Similarity**
 
 利用信号聚类相似度检测CAN伪装攻击 cs.CR
 
@@ -451,7 +465,7 @@ To appear in the 31st USENIX Security Symposium, August 2022, Boston,  MA, USA
 
 
 
-## **31. Exploring Adversarial Robustness of Multi-Sensor Perception Systems in Self Driving**
+## **32. Exploring Adversarial Robustness of Multi-Sensor Perception Systems in Self Driving**
 
 自动驾驶中多传感器感知系统的对抗鲁棒性研究 cs.CV
 
@@ -465,7 +479,7 @@ To appear in the 31st USENIX Security Symposium, August 2022, Boston,  MA, USA
 
 
 
-## **32. Adversarial Example Detection for DNN Models: A Review and Experimental Comparison**
+## **33. Adversarial Example Detection for DNN Models: A Review and Experimental Comparison**
 
 DNN模型的对抗性范例检测：综述与实验比较 cs.CV
 
@@ -481,7 +495,7 @@ Accepted and published in Artificial Intelligence Review journal
 
 
 
-## **33. Semantically Stealthy Adversarial Attacks against Segmentation Models**
+## **34. Semantically Stealthy Adversarial Attacks against Segmentation Models**
 
 针对分割模型的语义隐蔽敌意攻击 cs.CV
 
@@ -495,7 +509,7 @@ Accepted and published in Artificial Intelligence Review journal
 
 
 
-## **34. Towards Understanding and Harnessing the Effect of Image Transformation in Adversarial Detection**
+## **35. Towards Understanding and Harnessing the Effect of Image Transformation in Adversarial Detection**
 
 认识和利用图像变换在对抗性检测中的作用 cs.CV
 
@@ -509,7 +523,7 @@ Accepted and published in Artificial Intelligence Review journal
 
 
 
-## **35. BDFA: A Blind Data Adversarial Bit-flip Attack on Deep Neural Networks**
+## **36. BDFA: A Blind Data Adversarial Bit-flip Attack on Deep Neural Networks**
 
 BDFA：一种基于深度神经网络的盲数据对抗性比特翻转攻击 cs.CR
 
@@ -523,7 +537,7 @@ BDFA：一种基于深度神经网络的盲数据对抗性比特翻转攻击 cs.
 
 
 
-## **36. Accelerated Zeroth-Order and First-Order Momentum Methods from Mini to Minimax Optimization**
+## **37. Accelerated Zeroth-Order and First-Order Momentum Methods from Mini to Minimax Optimization**
 
 从Mini到Minimax优化的加速零阶和一阶动量方法 math.OC
 
@@ -539,7 +553,7 @@ Published in Journal of Machine Learning Research (JMLR)
 
 
 
-## **37. Increased-confidence adversarial examples for deep learning counter-forensics**
+## **38. Increased-confidence adversarial examples for deep learning counter-forensics**
 
 深度学习反取证的增信度对抗性实例 cs.CV
 
@@ -553,7 +567,7 @@ Published in Journal of Machine Learning Research (JMLR)
 
 
 
-## **38. HydraText: Multi-objective Optimization for Adversarial Textual Attack**
+## **39. HydraText: Multi-objective Optimization for Adversarial Textual Attack**
 
 HydraText：对抗性文本攻击的多目标优化 cs.CL
 
@@ -567,7 +581,7 @@ HydraText：对抗性文本攻击的多目标优化 cs.CL
 
 
 
-## **39. Increasing the Confidence of Deep Neural Networks by Coverage Analysis**
+## **40. Increasing the Confidence of Deep Neural Networks by Coverage Analysis**
 
 利用覆盖分析提高深度神经网络的可信度 cs.LG
 
@@ -581,7 +595,7 @@ HydraText：对抗性文本攻击的多目标优化 cs.CL
 
 
 
-## **40. On the Real-World Adversarial Robustness of Real-Time Semantic Segmentation Models for Autonomous Driving**
+## **41. On the Real-World Adversarial Robustness of Real-Time Semantic Segmentation Models for Autonomous Driving**
 
 自动驾驶实时语义分割模型的真实对抗性研究 cs.CV
 
@@ -595,7 +609,7 @@ HydraText：对抗性文本攻击的多目标优化 cs.CL
 
 
 
-## **41. Secure Remote Attestation with Strong Key Insulation Guarantees**
+## **42. Secure Remote Attestation with Strong Key Insulation Guarantees**
 
 具有强密钥绝缘性保证的安全远程证明 cs.CR
 
@@ -609,7 +623,7 @@ HydraText：对抗性文本攻击的多目标优化 cs.CL
 
 
 
-## **42. Generation of Wheel Lockup Attacks on Nonlinear Dynamics of Vehicle Traction**
+## **43. Generation of Wheel Lockup Attacks on Nonlinear Dynamics of Vehicle Traction**
 
 车辆牵引非线性动力学中车轮闭锁攻击的产生 eess.SY
 
@@ -625,7 +639,7 @@ Submitted to AutoSec'22@NDSS
 
 
 
-## **43. GRNN: Generative Regression Neural Network -- A Data Leakage Attack for Federated Learning**
+## **44. GRNN: Generative Regression Neural Network -- A Data Leakage Attack for Federated Learning**
 
 GRNN：产生式回归神经网络--一种面向联邦学习的数据泄漏攻击 cs.LG
 
@@ -641,7 +655,7 @@ The source code can be found at: https://github.com/Rand2AI/GRNN
 
 
 
-## **44. Aspis: A Robust Detection System for Distributed Learning**
+## **45. Aspis: A Robust Detection System for Distributed Learning**
 
 ASPIS：一种健壮的分布式学习检测系统 cs.LG
 
@@ -657,7 +671,7 @@ ASPIS：一种健壮的分布式学习检测系统 cs.LG
 
 
 
-## **45. ROOM: Adversarial Machine Learning Attacks Under Real-Time Constraints**
+## **46. ROOM: Adversarial Machine Learning Attacks Under Real-Time Constraints**
 
 房间：实时约束下的对抗性机器学习攻击 cs.CR
 
@@ -673,7 +687,7 @@ ASPIS：一种健壮的分布式学习检测系统 cs.LG
 
 
 
-## **46. A Survey on Adversarial Attacks for Malware Analysis**
+## **47. A Survey on Adversarial Attacks for Malware Analysis**
 
 面向恶意软件分析的敌意攻击研究综述 cs.CR
 
@@ -689,7 +703,7 @@ ASPIS：一种健壮的分布式学习检测系统 cs.LG
 
 
 
-## **47. Fast Gradient Non-sign Methods**
+## **48. Fast Gradient Non-sign Methods**
 
 快速梯度无符号方法 cs.CV
 
@@ -703,7 +717,7 @@ ASPIS：一种健壮的分布式学习检测系统 cs.LG
 
 
 
-## **48. Adversarial Feature Desensitization**
+## **49. Adversarial Feature Desensitization**
 
 对抗性特征脱敏 cs.LG
 
@@ -719,7 +733,7 @@ Accepted at Neurips 2021
 
 
 
-## **49. On the Minimal Adversarial Perturbation for Deep Neural Networks with Provable Estimation Error**
+## **50. On the Minimal Adversarial Perturbation for Deep Neural Networks with Provable Estimation Error**
 
 具有可证明估计误差的深度神经网络的最小对抗性摄动 cs.LG
 
@@ -732,20 +746,6 @@ Under review on IEEE journal Transactions on Pattern Analysis and  Machine Intel
 **Abstracts**: Although Deep Neural Networks (DNNs) have shown incredible performance in perceptive and control tasks, several trustworthy issues are still open. One of the most discussed topics is the existence of adversarial perturbations, which has opened an interesting research line on provable techniques capable of quantifying the robustness of a given input. In this regard, the Euclidean distance of the input from the classification boundary denotes a well-proved robustness assessment as the minimal affordable adversarial perturbation. Unfortunately, computing such a distance is highly complex due the non-convex nature of NNs. Despite several methods have been proposed to address this issue, to the best of our knowledge, no provable results have been presented to estimate and bound the error committed. This paper addresses this issue by proposing two lightweight strategies to find the minimal adversarial perturbation. Differently from the state-of-the-art, the proposed approach allows formulating an error estimation theory of the approximate distance with respect to the theoretical one. Finally, a substantial set of experiments is reported to evaluate the performance of the algorithms and support the theoretical findings. The obtained results show that the proposed strategies approximate the theoretical distance for samples close to the classification boundary, leading to provable robustness guarantees against any adversarial attacks.
 
 摘要: 尽管深度神经网络(DNNs)在感知和控制任务中表现出了令人难以置信的性能，但一些值得信赖的问题仍然悬而未决。讨论最多的话题之一是对抗性扰动的存在，这为能够量化给定输入的稳健性的可证明技术开辟了一条有趣的研究路线。在这一点上，输入到分类边界的欧几里德距离表示作为最小负担得起的对抗性扰动的健壮性评估。不幸的是，由于神经网络的非凸性，计算这样的距离非常复杂。尽管已经提出了几种方法来解决这个问题，但据我们所知，还没有提出可证明的结果来估计和限制所犯的错误。本文通过提出两种轻量级策略来解决这一问题，以求最小对抗性扰动。与最新的方法不同，该方法允许建立相对于理论距离的近似距离的误差估计理论。最后，通过大量的实验对算法的性能进行了评估，并支持了理论研究结果。结果表明，对于接近分类边界的样本，所提出的策略近似于理论距离，对任何敌意攻击都具有可证明的鲁棒性保证。
-
-
-
-## **50. Adversarial Transformation of Spoofing Attacks for Voice Biometrics**
-
-语音生物特征欺骗攻击的对抗性变换 eess.AS
-
-**SubmitDate**: 2022-01-04    [paper-pdf](http://arxiv.org/pdf/2201.01226v1)
-
-**Authors**: Alejandro Gomez-Alanis, Jose A. Gonzalez-Lopez, Antonio M. Peinado
-
-**Abstracts**: Voice biometric systems based on automatic speaker verification (ASV) are exposed to \textit{spoofing} attacks which may compromise their security. To increase the robustness against such attacks, anti-spoofing or presentation attack detection (PAD) systems have been proposed for the detection of replay, synthesis and voice conversion based attacks. Recently, the scientific community has shown that PAD systems are also vulnerable to adversarial attacks. However, to the best of our knowledge, no previous work have studied the robustness of full voice biometrics systems (ASV + PAD) to these new types of adversarial \textit{spoofing} attacks. In this work, we develop a new adversarial biometrics transformation network (ABTN) which jointly processes the loss of the PAD and ASV systems in order to generate white-box and black-box adversarial \textit{spoofing} attacks. The core idea of this system is to generate adversarial \textit{spoofing} attacks which are able to fool the PAD system without being detected by the ASV system. The experiments were carried out on the ASVspoof 2019 corpus, including both logical access (LA) and physical access (PA) scenarios. The experimental results show that the proposed ABTN clearly outperforms some well-known adversarial techniques in both white-box and black-box attack scenarios.
-
-摘要: 基于自动说话人验证(ASV)的语音生物识别系统容易受到威胁其安全性的攻击。为了提高对此类攻击的鲁棒性，已经提出了用于检测基于重放、合成和语音转换的攻击的反欺骗或呈现攻击检测(PAD)系统。最近，科学界表明，PAD系统也容易受到敌意攻击。然而，据我们所知，还没有研究全语音生物特征识别系统(ASV+PAD)对这些新型的敌意\文本{欺骗}攻击的鲁棒性。在这项工作中，我们开发了一个新的对抗性生物特征转换网络(ABTN)，它联合处理PAD和ASV系统的丢失，以产生白盒和黑盒对抗性文本{欺骗}攻击。该系统的核心思想是生成敌意\文本{欺骗}攻击，这些攻击能够欺骗PAD系统而不被ASV系统检测到。这些实验是在ASVspoof 2019年语料库上进行的，包括逻辑访问(LA)和物理访问(PA)场景。实验结果表明，提出的ABTN在白盒和黑盒攻击场景中的性能都明显优于一些著名的对抗性技术。
 
 
 

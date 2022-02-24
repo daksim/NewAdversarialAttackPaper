@@ -1,53 +1,9 @@
 # Latest Adversarial Attack Papers
-**update at 2022-02-24 09:40:01**
+**update at 2022-02-25 06:31:35**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. Sound Adversarial Audio-Visual Navigation**
-
-声音对抗性视听导航 cs.SD
-
-This work aims to do an adversarial sound intervention for robust  audio-visual navigation
-
-**SubmitDate**: 2022-02-22    [paper-pdf](http://arxiv.org/pdf/2202.10910v1)
-
-**Authors**: Yinfeng Yu, Wenbing Huang, Fuchun Sun, Changan Chen, Yikai Wang, Xiaohong Liu
-
-**Abstracts**: Audio-visual navigation task requires an agent to find a sound source in a realistic, unmapped 3D environment by utilizing egocentric audio-visual observations. Existing audio-visual navigation works assume a clean environment that solely contains the target sound, which, however, would not be suitable in most real-world applications due to the unexpected sound noise or intentional interference. In this work, we design an acoustically complex environment in which, besides the target sound, there exists a sound attacker playing a zero-sum game with the agent. More specifically, the attacker can move and change the volume and category of the sound to make the agent suffer from finding the sounding object while the agent tries to dodge the attack and navigate to the goal under the intervention. Under certain constraints to the attacker, we can improve the robustness of the agent towards unexpected sound attacks in audio-visual navigation. For better convergence, we develop a joint training mechanism by employing the property of a centralized critic with decentralized actors. Experiments on two real-world 3D scan datasets, Replica, and Matterport3D, verify the effectiveness and the robustness of the agent trained under our designed environment when transferred to the clean environment or the one containing sound attackers with random policy. Project: \url{https://yyf17.github.io/SAAVN}.
-
-摘要: 视听导航任务要求代理通过利用以自我为中心的视听观察，在真实的、未映射的3D环境中找到声源。现有的视听导航作品假设一个干净的环境，只包含目标声音，然而，由于意外的声音噪声或故意的干扰，这在大多数现实世界的应用中是不合适的。在本工作中，我们设计了一个复杂的声学环境，在这个环境中，除了目标声音外，还有一个声音攻击者与Agent进行零和游戏。更具体地说，攻击者可以移动和改变声音的音量和类别，使代理在试图躲避攻击并导航到干预下的目标时，难以找到探测对象。在对攻击者有一定约束的情况下，可以提高Agent对视听导航中意外声音攻击的鲁棒性。为了更好地收敛，我们利用集中批评家和分散参与者的性质开发了一种联合训练机制。在两个真实的三维扫描数据集Replica和Matterport3D上进行了实验，验证了在我们设计的环境下训练的代理在迁移到干净的环境和包含随机策略的声音攻击者的环境下的有效性和健壮性。项目：\url{https://yyf17.github.io/SAAVN}.
-
-
-
-## **2. DEMO: Relay/Replay Attacks on GNSS signals**
-
-演示：对GNSS信号的中继/重放攻击 cs.CR
-
-**SubmitDate**: 2022-02-22    [paper-pdf](http://arxiv.org/pdf/2202.10897v1)
-
-**Authors**: M. Lenhart, M. Spanghero, P. Papadimitratos
-
-**Abstracts**: Global Navigation Satellite Systems (GNSS) are ubiquitously relied upon for positioning and timing. Detection and prevention of attacks against GNSS have been researched over the last decades, but many of these attacks and countermeasures were evaluated based on simulation. This work contributes to the experimental investigation of GNSS vulnerabilities, implementing a relay/replay attack with off-the-shelf hardware. Operating at the signal level, this attack type is not hindered by cryptographically protected transmissions, such as Galileo's Open Signals Navigation Message Authentication (OS-NMA). The attack we investigate involves two colluding adversaries, relaying signals over large distances, to effectively spoof a GNSS receiver. We demonstrate the attack using off-the-shelf hardware, we investigate the requirements for such successful colluding attacks, and how they can be enhanced, e.g., allowing for finer adversarial control over the victim receiver.
-
-摘要: 全球导航卫星系统(GNSS)的定位和授时无处不在地依赖于全球导航卫星系统(GNSS)。近几十年来，对GNSS攻击的检测和预防一直在研究之中，但许多攻击和对策都是基于仿真进行评估的。这项工作有助于对GNSS漏洞的实验研究，使用现成的硬件实现中继/重放攻击。在信号级运行，这种攻击类型不会受到密码保护传输的阻碍，例如伽利略的开放信号导航消息验证(OS-NMA)。我们调查的攻击涉及两个串通的对手，他们远距离中继信号，以有效地欺骗GNSS接收器。我们使用现成的硬件演示了攻击，我们调查了这种成功的合谋攻击的要求，以及如何增强这些要求，例如，允许对受害者接收器进行更精细的敌意控制。
-
-
-
-## **3. Protecting GNSS-based Services using Time Offset Validation**
-
-使用时间偏移验证保护基于GNSS的服务 cs.CR
-
-**SubmitDate**: 2022-02-22    [paper-pdf](http://arxiv.org/pdf/2202.10891v1)
-
-**Authors**: K. Zhang, M. Spanghero, P. Papadimitratos
-
-**Abstracts**: Global navigation satellite systems (GNSS) provide pervasive accurate positioning and timing services for a large gamut of applications, from Time based One-Time Passwords (TOPT), to power grid and cellular systems. However, there can be security concerns for the applications due to the vulnerability of GNSS. It is important to observe that GNSS receivers are components of platforms, in principle having rich connectivity to different network infrastructures. Of particular interest is the access to a variety of timing sources, as those can be used to validate GNSS-provided location and time. Therefore, we consider off-the-shelf platforms and how to detect if the GNSS receiver is attacked or not, by cross-checking the GNSS time and time from other available sources. First, we survey different technologies to analyze their availability, accuracy, and trustworthiness for time synchronization. Then, we propose a validation approach for absolute and relative time. Moreover, we design a framework and experimental setup for the evaluation of the results. Attacks can be detected based on WiFi supplied time when the adversary shifts the GNSS provided time, more than 23.942us; with Network Time Protocol (NTP) supplied time when the adversary-induced shift is more than 2.046ms. Consequently, the proposal significantly limits the capability of an adversary to manipulate the victim GNSS receiver.
-
-摘要: 全球导航卫星系统(GNSS)为从基于时间的一次性密码(TOPT)到电网和蜂窝系统的大量应用提供无处不在的精确定位和授时服务。然而，由于GNSS的脆弱性，应用程序可能存在安全问题。重要的是要注意到，全球导航卫星系统接收器是平台的组成部分，原则上与不同的网络基础设施有丰富的连接。特别令人感兴趣的是对各种计时源的访问，因为这些时间源可用于验证全球导航卫星系统提供的位置和时间。因此，我们考虑了现成的平台，以及如何通过交叉检查GNSS时间和其他可用来源的时间来检测GNSS接收机是否受到攻击。首先，我们综述了不同的时间同步技术，以分析它们在时间同步方面的可用性、准确性和可信性。然后，我们提出了一种绝对时间和相对时间的验证方法。此外，我们还设计了评价结果的框架和实验装置。当对手移动GNSS提供的时间大于23.942us时，可以基于WiFi提供的时间检测攻击；当对手引起的移动超过2.046ms时，基于网络时间协议(NTP)提供的时间可以检测到攻击。因此，该提案极大地限制了对手操纵受害者GNSS接收器的能力。
-
-
-
-## **4. FastZIP: Faster and More Secure Zero-Interaction Pairing**
+## **1. FastZIP: Faster and More Secure Zero-Interaction Pairing**
 
 FastZip：更快、更安全的零交互配对 cs.CR
 
@@ -63,7 +19,81 @@ ACM MobiSys '21; Fixed ambiguity in flow diagram (Figure 2). Code and  data are 
 
 
 
-## **5. Adversarial Defense by Latent Style Transformations**
+## **2. Distributed and Mobile Message Level Relaying/Replaying of GNSS Signals**
+
+GNSS信号的分布式和移动消息级别中继/重放 cs.CR
+
+**SubmitDate**: 2022-02-23    [paper-pdf](http://arxiv.org/pdf/2202.11341v1)
+
+**Authors**: M. Lenhart, M. Spanghero, P. Papadimitratos
+
+**Abstracts**: With the introduction of Navigation Message Authentication (NMA), future Global Navigation Satellite Systems (GNSSs) prevent spoofing by simulation, i.e., the generation of forged satellite signals based on public information. However, authentication does not prevent record-and-replay attacks, commonly termed as meaconing. These attacks are less powerful in terms of adversarial control over the victim receiver location and time, but by acting at the signal level, they are not thwarted by NMA. This makes replaying/relaying attacks a significant threat for GNSS. While there are numerous investigations on meaconing, the majority does not rely on actual implementation and experimental evaluation in real-world settings. In this work, we contribute to the improvement of the experimental understanding of meaconing attacks. We design and implement a system capable of real-time, distributed, and mobile meaconing, built with off-the-shelf hardware. We extend from basic distributed attacks, with signals from different locations relayed over the Internet and replayed within range of the victim receiver(s): this has high bandwidth requirements and thus depends on the quality of service of the available network to work. To overcome this limitation, we propose to replay on message level, including the authentication part of the payload. The resultant reduced bandwidth enables the attacker to operate in mobile scenarios, as well as to replay signals from multiple GNSS constellations and/or bands simultaneously. Additionally, the attacker can delay individually selected satellite signals to potentially influence the victim position and time solution in a more fine-grained manner. Our versatile test-bench, enabling different types of replaying/relaying attacks, facilitates testing realistic scenarios towards new and improved replaying/relaying-focused countermeasures in GNSS receivers.
+
+摘要: 随着导航信息认证(NMA)的引入，未来的全球导航卫星系统(GNSS)将通过仿真来防止欺骗，即基于公开信息产生伪造的卫星信号。但是，身份验证并不能防止记录和重放攻击，通常称为手段攻击。这些攻击在对受害者接收器位置和时间的敌意控制方面不那么强大，但通过在信号级别采取行动，它们不会被NMA挫败。这使得重放/中继攻击成为GNSS的重大威胁。虽然关于测量的研究很多，但大多数研究并不依赖于在现实世界中的实际实施和实验评估。在这项工作中，我们为提高对手段攻击的实验理解做出了贡献。我们设计并实现了一个具有实时、分布式和移动测量功能的系统，该系统采用现成的硬件构建。我们从基本的分布式攻击扩展，通过Internet中继来自不同位置的信号，并在受害者接收器的范围内重放：这具有很高的带宽要求，因此取决于可用网络的服务质量才能工作。为了克服这一限制，我们建议在消息级别重放，包括有效负载的身份验证部分。由此减少的带宽使攻击者能够在移动场景中操作，以及同时重放来自多个GNSS星座和/或频带的信号。此外，攻击者可以延迟单独选择的卫星信号，以更细粒度的方式潜在地影响受害者的位置和时间解决方案。我们的多功能测试台支持不同类型的重放/中继攻击，便于测试GNSS接收器中新的和改进的重放/中继重点对策的现实场景。
+
+
+
+## **3. LPF-Defense: 3D Adversarial Defense based on Frequency Analysis**
+
+LPF-Defense：基于频率分析的三维对抗性防御 cs.CV
+
+15 pages, 7 figures
+
+**SubmitDate**: 2022-02-23    [paper-pdf](http://arxiv.org/pdf/2202.11287v1)
+
+**Authors**: Hanieh Naderi, Arian Etemadi, Kimia Noorbakhsh, Shohreh Kasaei
+
+**Abstracts**: Although 3D point cloud classification has recently been widely deployed in different application scenarios, it is still very vulnerable to adversarial attacks. This increases the importance of robust training of 3D models in the face of adversarial attacks. Based on our analysis on the performance of existing adversarial attacks, more adversarial perturbations are found in the mid and high-frequency components of input data. Therefore, by suppressing the high-frequency content in the training phase, the models robustness against adversarial examples is improved. Experiments showed that the proposed defense method decreases the success rate of six attacks on PointNet, PointNet++ ,, and DGCNN models. In particular, improvements are achieved with an average increase of classification accuracy by 3.8 % on drop100 attack and 4.26 % on drop200 attack compared to the state-of-the-art methods. The method also improves models accuracy on the original dataset compared to other available methods.
+
+摘要: 虽然三维点云分类近年来在不同的应用场景中得到了广泛的应用，但它仍然非常容易受到敌意攻击。这增加了3D模型在面对敌方攻击时稳健训练的重要性。基于对现有对抗性攻击性能的分析，在输入数据的中高频成分中发现了更多的对抗性扰动。因此，通过抑制训练阶段的高频内容，提高了模型对敌意样本的鲁棒性。实验表明，该防御方法降低了对PointNet、PointNet++、DGCNN模型的6次攻击成功率。特别是，与现有方法相比，Drop100攻击的分类准确率平均提高了3.8%，Drop200攻击的分类准确率平均提高了4.26%。与其他可用的方法相比，该方法还提高了原始数据集上的模型精度。
+
+
+
+## **4. Sound Adversarial Audio-Visual Navigation**
+
+声音对抗性视听导航 cs.SD
+
+This work aims to do an adversarial sound intervention for robust  audio-visual navigation
+
+**SubmitDate**: 2022-02-22    [paper-pdf](http://arxiv.org/pdf/2202.10910v1)
+
+**Authors**: Yinfeng Yu, Wenbing Huang, Fuchun Sun, Changan Chen, Yikai Wang, Xiaohong Liu
+
+**Abstracts**: Audio-visual navigation task requires an agent to find a sound source in a realistic, unmapped 3D environment by utilizing egocentric audio-visual observations. Existing audio-visual navigation works assume a clean environment that solely contains the target sound, which, however, would not be suitable in most real-world applications due to the unexpected sound noise or intentional interference. In this work, we design an acoustically complex environment in which, besides the target sound, there exists a sound attacker playing a zero-sum game with the agent. More specifically, the attacker can move and change the volume and category of the sound to make the agent suffer from finding the sounding object while the agent tries to dodge the attack and navigate to the goal under the intervention. Under certain constraints to the attacker, we can improve the robustness of the agent towards unexpected sound attacks in audio-visual navigation. For better convergence, we develop a joint training mechanism by employing the property of a centralized critic with decentralized actors. Experiments on two real-world 3D scan datasets, Replica, and Matterport3D, verify the effectiveness and the robustness of the agent trained under our designed environment when transferred to the clean environment or the one containing sound attackers with random policy. Project: \url{https://yyf17.github.io/SAAVN}.
+
+摘要: 视听导航任务要求代理通过利用以自我为中心的视听观察，在真实的、未映射的3D环境中找到声源。现有的视听导航作品假设一个干净的环境，只包含目标声音，然而，由于意外的声音噪声或故意的干扰，这在大多数现实世界的应用中是不合适的。在本工作中，我们设计了一个复杂的声学环境，在这个环境中，除了目标声音外，还有一个声音攻击者与Agent进行零和游戏。更具体地说，攻击者可以移动和改变声音的音量和类别，使代理在试图躲避攻击并导航到干预下的目标时，难以找到探测对象。在对攻击者有一定约束的情况下，可以提高Agent对视听导航中意外声音攻击的鲁棒性。为了更好地收敛，我们利用集中批评家和分散参与者的性质开发了一种联合训练机制。在两个真实的三维扫描数据集Replica和Matterport3D上进行了实验，验证了在我们设计的环境下训练的代理在迁移到干净的环境和包含随机策略的声音攻击者的环境下的有效性和健壮性。项目：\url{https://yyf17.github.io/SAAVN}.
+
+
+
+## **5. DEMO: Relay/Replay Attacks on GNSS signals**
+
+演示：对GNSS信号的中继/重放攻击 cs.CR
+
+**SubmitDate**: 2022-02-22    [paper-pdf](http://arxiv.org/pdf/2202.10897v1)
+
+**Authors**: M. Lenhart, M. Spanghero, P. Papadimitratos
+
+**Abstracts**: Global Navigation Satellite Systems (GNSS) are ubiquitously relied upon for positioning and timing. Detection and prevention of attacks against GNSS have been researched over the last decades, but many of these attacks and countermeasures were evaluated based on simulation. This work contributes to the experimental investigation of GNSS vulnerabilities, implementing a relay/replay attack with off-the-shelf hardware. Operating at the signal level, this attack type is not hindered by cryptographically protected transmissions, such as Galileo's Open Signals Navigation Message Authentication (OS-NMA). The attack we investigate involves two colluding adversaries, relaying signals over large distances, to effectively spoof a GNSS receiver. We demonstrate the attack using off-the-shelf hardware, we investigate the requirements for such successful colluding attacks, and how they can be enhanced, e.g., allowing for finer adversarial control over the victim receiver.
+
+摘要: 全球导航卫星系统(GNSS)的定位和授时无处不在地依赖于全球导航卫星系统(GNSS)。近几十年来，对GNSS攻击的检测和预防一直在研究之中，但许多攻击和对策都是基于仿真进行评估的。这项工作有助于对GNSS漏洞的实验研究，使用现成的硬件实现中继/重放攻击。在信号级运行，这种攻击类型不会受到密码保护传输的阻碍，例如伽利略的开放信号导航消息验证(OS-NMA)。我们调查的攻击涉及两个串通的对手，他们远距离中继信号，以有效地欺骗GNSS接收器。我们使用现成的硬件演示了攻击，我们调查了这种成功的合谋攻击的要求，以及如何增强这些要求，例如，允许对受害者接收器进行更精细的敌意控制。
+
+
+
+## **6. Protecting GNSS-based Services using Time Offset Validation**
+
+使用时间偏移验证保护基于GNSS的服务 cs.CR
+
+**SubmitDate**: 2022-02-22    [paper-pdf](http://arxiv.org/pdf/2202.10891v1)
+
+**Authors**: K. Zhang, M. Spanghero, P. Papadimitratos
+
+**Abstracts**: Global navigation satellite systems (GNSS) provide pervasive accurate positioning and timing services for a large gamut of applications, from Time based One-Time Passwords (TOPT), to power grid and cellular systems. However, there can be security concerns for the applications due to the vulnerability of GNSS. It is important to observe that GNSS receivers are components of platforms, in principle having rich connectivity to different network infrastructures. Of particular interest is the access to a variety of timing sources, as those can be used to validate GNSS-provided location and time. Therefore, we consider off-the-shelf platforms and how to detect if the GNSS receiver is attacked or not, by cross-checking the GNSS time and time from other available sources. First, we survey different technologies to analyze their availability, accuracy, and trustworthiness for time synchronization. Then, we propose a validation approach for absolute and relative time. Moreover, we design a framework and experimental setup for the evaluation of the results. Attacks can be detected based on WiFi supplied time when the adversary shifts the GNSS provided time, more than 23.942us; with Network Time Protocol (NTP) supplied time when the adversary-induced shift is more than 2.046ms. Consequently, the proposal significantly limits the capability of an adversary to manipulate the victim GNSS receiver.
+
+摘要: 全球导航卫星系统(GNSS)为从基于时间的一次性密码(TOPT)到电网和蜂窝系统的大量应用提供无处不在的精确定位和授时服务。然而，由于GNSS的脆弱性，应用程序可能存在安全问题。重要的是要注意到，全球导航卫星系统接收器是平台的组成部分，原则上与不同的网络基础设施有丰富的连接。特别令人感兴趣的是对各种计时源的访问，因为这些时间源可用于验证全球导航卫星系统提供的位置和时间。因此，我们考虑了现成的平台，以及如何通过交叉检查GNSS时间和其他可用来源的时间来检测GNSS接收机是否受到攻击。首先，我们综述了不同的时间同步技术，以分析它们在时间同步方面的可用性、准确性和可信性。然后，我们提出了一种绝对时间和相对时间的验证方法。此外，我们还设计了评价结果的框架和实验装置。当对手移动GNSS提供的时间大于23.942us时，可以基于WiFi提供的时间检测攻击；当对手引起的移动超过2.046ms时，基于网络时间协议(NTP)提供的时间可以检测到攻击。因此，该提案极大地限制了对手操纵受害者GNSS接收器的能力。
+
+
+
+## **7. Adversarial Defense by Latent Style Transformations**
 
 潜在风格转换的对抗性防御 cs.CV
 
@@ -77,7 +107,7 @@ ACM MobiSys '21; Fixed ambiguity in flow diagram (Figure 2). Code and  data are 
 
 
 
-## **6. Surrogate Representation Learning with Isometric Mapping for Gray-box Graph Adversarial Attacks**
+## **8. Surrogate Representation Learning with Isometric Mapping for Gray-box Graph Adversarial Attacks**
 
 基于等距映射的灰盒图对抗攻击代理表示学习 cs.AI
 
@@ -91,7 +121,7 @@ ACM MobiSys '21; Fixed ambiguity in flow diagram (Figure 2). Code and  data are 
 
 
 
-## **7. Universal adversarial perturbation for remote sensing images**
+## **9. Universal adversarial perturbation for remote sensing images**
 
 遥感图像的普遍对抗性摄动 cs.CV
 
@@ -105,7 +135,7 @@ ACM MobiSys '21; Fixed ambiguity in flow diagram (Figure 2). Code and  data are 
 
 
 
-## **8. Seeing is Living? Rethinking the Security of Facial Liveness Verification in the Deepfake Era**
+## **10. Seeing is Living? Rethinking the Security of Facial Liveness Verification in the Deepfake Era**
 
 看就是活？深伪时代下人脸活体验证安全性的再思考 cs.CR
 
@@ -121,7 +151,7 @@ Accepted as a full paper at USENIX Security '22
 
 
 
-## **9. Fingerprinting Deep Neural Networks Globally via Universal Adversarial Perturbations**
+## **11. Fingerprinting Deep Neural Networks Globally via Universal Adversarial Perturbations**
 
 基于普遍对抗性扰动的深度神经网络全局指纹识别 cs.CR
 
@@ -135,7 +165,7 @@ Accepted as a full paper at USENIX Security '22
 
 
 
-## **10. Robust Stochastic Linear Contextual Bandits Under Adversarial Attacks**
+## **12. Robust Stochastic Linear Contextual Bandits Under Adversarial Attacks**
 
 对抗性攻击下的鲁棒随机线性上下文带 stat.ML
 
@@ -149,7 +179,7 @@ Accepted as a full paper at USENIX Security '22
 
 
 
-## **11. Behaviour-Diverse Automatic Penetration Testing: A Curiosity-Driven Multi-Objective Deep Reinforcement Learning Approach**
+## **13. Behaviour-Diverse Automatic Penetration Testing: A Curiosity-Driven Multi-Objective Deep Reinforcement Learning Approach**
 
 行为多样化的自动渗透测试：一种好奇心驱动的多目标深度强化学习方法 cs.LG
 
@@ -165,7 +195,7 @@ Accepted as a full paper at USENIX Security '22
 
 
 
-## **12. On the Effectiveness of Adversarial Training against Backdoor Attacks**
+## **14. On the Effectiveness of Adversarial Training against Backdoor Attacks**
 
 论对抗性训练对抗后门攻击的有效性 cs.LG
 
@@ -179,7 +209,7 @@ Accepted as a full paper at USENIX Security '22
 
 
 
-## **13. Adversarial Attacks on Speech Recognition Systems for Mission-Critical Applications: A Survey**
+## **15. Adversarial Attacks on Speech Recognition Systems for Mission-Critical Applications: A Survey**
 
 针对任务关键型应用的语音识别系统的敌意攻击：综述 cs.SD
 
@@ -193,7 +223,7 @@ Accepted as a full paper at USENIX Security '22
 
 
 
-## **14. Privacy Leakage of Adversarial Training Models in Federated Learning Systems**
+## **16. Privacy Leakage of Adversarial Training Models in Federated Learning Systems**
 
 联合学习系统中对抗性训练模型的隐私泄露 cs.LG
 
@@ -209,7 +239,7 @@ Accepted as a full paper at USENIX Security '22
 
 
 
-## **15. Analysing Security and Privacy Threats in the Lockdown Periods of COVID-19 Pandemic: Twitter Dataset Case Study**
+## **17. Analysing Security and Privacy Threats in the Lockdown Periods of COVID-19 Pandemic: Twitter Dataset Case Study**
 
 分析冠状病毒大流行封锁期的安全和隐私威胁：Twitter数据集案例研究 cs.CR
 
@@ -223,7 +253,7 @@ Accepted as a full paper at USENIX Security '22
 
 
 
-## **16. RAILS: A Robust Adversarial Immune-inspired Learning System**
+## **18. RAILS: A Robust Adversarial Immune-inspired Learning System**
 
 Rails：一种健壮的对抗性免疫启发学习系统 cs.NE
 
@@ -239,7 +269,7 @@ arXiv admin note: text overlap with arXiv:2012.10485
 
 
 
-## **17. Adversarial Examples in Constrained Domains**
+## **19. Adversarial Examples in Constrained Domains**
 
 受限领域中的对抗性例子 cs.CR
 
@@ -255,7 +285,7 @@ Accepted to IOS Press Journal of Computer Security
 
 
 
-## **18. A Tutorial on Adversarial Learning Attacks and Countermeasures**
+## **20. A Tutorial on Adversarial Learning Attacks and Countermeasures**
 
 对抗性学习攻击与对策教程 cs.CR
 
@@ -269,7 +299,7 @@ Accepted to IOS Press Journal of Computer Security
 
 
 
-## **19. Cyber-Physical Defense in the Quantum Era**
+## **21. Cyber-Physical Defense in the Quantum Era**
 
 量子时代的网络物理防御 cs.CR
 
@@ -285,7 +315,7 @@ Accepted to IOS Press Journal of Computer Security
 
 
 
-## **20. Measurement-Device-Independent Quantum Secure Direct Communication with User Authentication**
+## **22. Measurement-Device-Independent Quantum Secure Direct Communication with User Authentication**
 
 具有用户认证的独立于测量设备的量子安全直接通信 quant-ph
 
@@ -299,7 +329,7 @@ Accepted to IOS Press Journal of Computer Security
 
 
 
-## **21. HoneyModels: Machine Learning Honeypots**
+## **23. HoneyModels: Machine Learning Honeypots**
 
 HoneyModels：机器学习的蜜罐 cs.CR
 
@@ -315,7 +345,7 @@ Published in: MILCOM 2021 - 2021 IEEE Military Communications  Conference (MILCO
 
 
 
-## **22. Hardware Obfuscation of Digital FIR Filters**
+## **24. Hardware Obfuscation of Digital FIR Filters**
 
 数字FIR滤波器的硬件混淆 cs.CR
 
@@ -329,7 +359,7 @@ Published in: MILCOM 2021 - 2021 IEEE Military Communications  Conference (MILCO
 
 
 
-## **23. Learning to Attack with Fewer Pixels: A Probabilistic Post-hoc Framework for Refining Arbitrary Dense Adversarial Attacks**
+## **25. Learning to Attack with Fewer Pixels: A Probabilistic Post-hoc Framework for Refining Arbitrary Dense Adversarial Attacks**
 
 学习用更少的像素进行攻击：一种精化任意密集对手攻击的概率后自组织框架 cs.CV
 
@@ -343,7 +373,7 @@ Published in: MILCOM 2021 - 2021 IEEE Military Communications  Conference (MILCO
 
 
 
-## **24. Transferring Adversarial Robustness Through Robust Representation Matching**
+## **26. Transferring Adversarial Robustness Through Robust Representation Matching**
 
 通过鲁棒表示匹配传递对抗鲁棒性 cs.LG
 
@@ -359,7 +389,23 @@ To appear at USENIX'22
 
 
 
-## **25. Overparametrization improves robustness against adversarial attacks: A replication study**
+## **27. Real-time Over-the-air Adversarial Perturbations for Digital Communications using Deep Neural Networks**
+
+基于深度神经网络的数字通信实时空中对抗性扰动 cs.CR
+
+9 pages; 11 figures
+
+**SubmitDate**: 2022-02-20    [paper-pdf](http://arxiv.org/pdf/2202.11197v1)
+
+**Authors**: Roman A. Sandler, Peter K. Relich, Cloud Cho, Sean Holloway
+
+**Abstracts**: Deep neural networks (DNNs) are increasingly being used in a variety of traditional radiofrequency (RF) problems. Previous work has shown that while DNN classifiers are typically more accurate than traditional signal processing algorithms, they are vulnerable to intentionally crafted adversarial perturbations which can deceive the DNN classifiers and significantly reduce their accuracy. Such intentional adversarial perturbations can be used by RF communications systems to avoid reactive-jammers and interception systems which rely on DNN classifiers to identify their target modulation scheme. While previous research on RF adversarial perturbations has established the theoretical feasibility of such attacks using simulation studies, critical questions concerning real-world implementation and viability remain unanswered. This work attempts to bridge this gap by defining class-specific and sample-independent adversarial perturbations which are shown to be effective yet computationally feasible in real-time and time-invariant. We demonstrate the effectiveness of these attacks over-the-air across a physical channel using software-defined radios (SDRs). Finally, we demonstrate that these adversarial perturbations can be emitted from a source other than the communications device, making these attacks practical for devices that cannot manipulate their transmitted signals at the physical layer.
+
+摘要: 深度神经网络(DNNs)越来越多地被用于各种传统的射频(RF)问题。以前的工作表明，虽然DNN分类器通常比传统的信号处理算法更准确，但它们很容易受到故意制造的敌意扰动的影响，这些扰动可能会欺骗DNN分类器，并显著降低它们的精度。RF通信系统可以使用这种故意的对抗性扰动来避免依赖dnn分类器来识别其目标调制方案的反应性干扰和拦截系统。虽然先前关于射频对抗性扰动的研究已经通过仿真研究建立了此类攻击的理论可行性，但有关现实世界的实现和生存能力的关键问题仍然没有得到回答。这项工作试图通过定义特定于类和独立于样本的对抗性扰动来弥合这一差距，这些扰动被证明是有效的，但在实时和时间不变的情况下在计算上是可行的。我们使用软件定义无线电(SDR)通过物理信道演示这些空中攻击的有效性。最后，我们演示了这些敌意干扰可以从通信设备以外的其他来源发出，使得这些攻击对于无法在物理层操作其传输信号的设备是可行的。
+
+
+
+## **28. Overparametrization improves robustness against adversarial attacks: A replication study**
 
 过度参数化提高对抗对手攻击的稳健性：一项重复研究 cs.LG
 
@@ -373,7 +419,7 @@ To appear at USENIX'22
 
 
 
-## **26. Runtime-Assured, Real-Time Neural Control of Microgrids**
+## **29. Runtime-Assured, Real-Time Neural Control of Microgrids**
 
 保证运行时间的微电网实时神经控制 eess.SY
 
@@ -387,7 +433,7 @@ To appear at USENIX'22
 
 
 
-## **27. Detection of Stealthy Adversaries for Networked Unmanned Aerial Vehicles**
+## **30. Detection of Stealthy Adversaries for Networked Unmanned Aerial Vehicles**
 
 网络化无人机隐身对手的检测 eess.SY
 
@@ -401,7 +447,7 @@ To appear at USENIX'22
 
 
 
-## **28. Stochastic sparse adversarial attacks**
+## **31. Stochastic sparse adversarial attacks**
 
 随机稀疏对抗性攻击 cs.LG
 
@@ -417,7 +463,7 @@ Final version published at the ICTAI 2021 conference with a best  student paper 
 
 
 
-## **29. Internal Wasserstein Distance for Adversarial Attack and Defense**
+## **32. Internal Wasserstein Distance for Adversarial Attack and Defense**
 
 对抗性攻防的瓦瑟斯坦内部距离 cs.LG
 
@@ -431,7 +477,7 @@ Final version published at the ICTAI 2021 conference with a best  student paper 
 
 
 
-## **30. Robust Reinforcement Learning as a Stackelberg Game via Adaptively-Regularized Adversarial Training**
+## **33. Robust Reinforcement Learning as a Stackelberg Game via Adaptively-Regularized Adversarial Training**
 
 基于自适应正则化对抗性训练的Stackelberg博弈鲁棒强化学习 cs.LG
 
@@ -445,7 +491,7 @@ Final version published at the ICTAI 2021 conference with a best  student paper 
 
 
 
-## **31. Attacks, Defenses, And Tools: A Framework To Facilitate Robust AI/ML Systems**
+## **34. Attacks, Defenses, And Tools: A Framework To Facilitate Robust AI/ML Systems**
 
 攻击、防御和工具：促进健壮AI/ML系统的框架 cs.CR
 
@@ -459,7 +505,7 @@ Final version published at the ICTAI 2021 conference with a best  student paper 
 
 
 
-## **32. Black-box Node Injection Attack for Graph Neural Networks**
+## **35. Black-box Node Injection Attack for Graph Neural Networks**
 
 图神经网络的黑盒节点注入攻击 cs.LG
 
@@ -473,7 +519,7 @@ Final version published at the ICTAI 2021 conference with a best  student paper 
 
 
 
-## **33. Synthetic Disinformation Attacks on Automated Fact Verification Systems**
+## **36. Synthetic Disinformation Attacks on Automated Fact Verification Systems**
 
 对自动事实验证系统的合成虚假信息攻击 cs.CL
 
@@ -489,7 +535,7 @@ AAAI 2022
 
 
 
-## **34. Exploring Adversarially Robust Training for Unsupervised Domain Adaptation**
+## **37. Exploring Adversarially Robust Training for Unsupervised Domain Adaptation**
 
 无监督领域自适应的对抗性鲁棒训练探索 cs.CV
 
@@ -503,7 +549,7 @@ AAAI 2022
 
 
 
-## **35. Resurrecting Trust in Facial Recognition: Mitigating Backdoor Attacks in Face Recognition to Prevent Potential Privacy Breaches**
+## **38. Resurrecting Trust in Facial Recognition: Mitigating Backdoor Attacks in Face Recognition to Prevent Potential Privacy Breaches**
 
 恢复面部识别中的信任：减轻面部识别中的后门攻击，以防止潜在的隐私泄露 cs.CV
 
@@ -519,7 +565,7 @@ AAAI 2022
 
 
 
-## **36. Critical Checkpoints for Evaluating Defence Models Against Adversarial Attack and Robustness**
+## **39. Critical Checkpoints for Evaluating Defence Models Against Adversarial Attack and Robustness**
 
 评估防御模型对抗攻击和健壮性的关键检查点 cs.CR
 
@@ -535,7 +581,7 @@ AAAI 2022
 
 
 
-## **37. Debiasing Backdoor Attack: A Benign Application of Backdoor Attack in Eliminating Data Bias**
+## **40. Debiasing Backdoor Attack: A Benign Application of Backdoor Attack in Eliminating Data Bias**
 
 去偏向后门攻击：后门攻击在消除数据偏差中的良性应用 cs.CR
 
@@ -549,7 +595,7 @@ AAAI 2022
 
 
 
-## **38. Explaining Adversarial Vulnerability with a Data Sparsity Hypothesis**
+## **41. Explaining Adversarial Vulnerability with a Data Sparsity Hypothesis**
 
 用数据稀疏性假说解释对抗性脆弱性 cs.AI
 
@@ -563,7 +609,7 @@ AAAI 2022
 
 
 
-## **39. Amicable examples for informed source separation**
+## **42. Amicable examples for informed source separation**
 
 知情信源分离的友好示例 cs.SD
 
@@ -579,7 +625,7 @@ Accepted to ICASSP 2022
 
 
 
-## **40. Morphence: Moving Target Defense Against Adversarial Examples**
+## **43. Morphence: Moving Target Defense Against Adversarial Examples**
 
 Morphence：针对敌方的移动目标防御示例 cs.LG
 
@@ -593,7 +639,7 @@ Morphence：针对敌方的移动目标防御示例 cs.LG
 
 
 
-## **41. What Doesn't Kill You Makes You Robust(er): How to Adversarially Train against Data Poisoning**
+## **44. What Doesn't Kill You Makes You Robust(er): How to Adversarially Train against Data Poisoning**
 
 什么不会杀死你，让你变得健壮(呃)：如何对抗数据中毒 cs.LG
 
@@ -609,7 +655,7 @@ Morphence：针对敌方的移动目标防御示例 cs.LG
 
 
 
-## **42. Developing Imperceptible Adversarial Patches to Camouflage Military Assets From Computer Vision Enabled Technologies**
+## **45. Developing Imperceptible Adversarial Patches to Camouflage Military Assets From Computer Vision Enabled Technologies**
 
 利用计算机视觉技术开发隐形对抗性补丁来伪装军事资产 cs.CV
 
@@ -625,7 +671,7 @@ Morphence：针对敌方的移动目标防御示例 cs.LG
 
 
 
-## **43. Alexa versus Alexa: Controlling Smart Speakers by Self-Issuing Voice Commands**
+## **46. Alexa versus Alexa: Controlling Smart Speakers by Self-Issuing Voice Commands**
 
 Alexa与Alexa：通过自行发出语音命令控制智能扬声器 cs.CR
 
@@ -641,7 +687,7 @@ Alexa与Alexa：通过自行发出语音命令控制智能扬声器 cs.CR
 
 
 
-## **44. Improving Robustness of Deep Reinforcement Learning Agents: Environment Attack based on the Critic Network**
+## **47. Improving Robustness of Deep Reinforcement Learning Agents: Environment Attack based on the Critic Network**
 
 提高深度强化学习代理的健壮性：基于批判网络的环境攻击 cs.LG
 
@@ -655,7 +701,7 @@ Alexa与Alexa：通过自行发出语音命令控制智能扬声器 cs.CR
 
 
 
-## **45. GasHis-Transformer: A Multi-scale Visual Transformer Approach for Gastric Histopathology Image Classification**
+## **48. GasHis-Transformer: A Multi-scale Visual Transformer Approach for Gastric Histopathology Image Classification**
 
 GasHis-Transformer：一种用于胃组织病理图像分类的多尺度视觉变换方法 cs.CV
 
@@ -669,7 +715,7 @@ GasHis-Transformer：一种用于胃组织病理图像分类的多尺度视觉�
 
 
 
-## **46. Measuring the Transferability of $\ell_\infty$ Attacks by the $\ell_2$ Norm**
+## **49. Measuring the Transferability of $\ell_\infty$ Attacks by the $\ell_2$ Norm**
 
 用$\ELL_2$范数度量$\ELL_\INFTY$攻击的可转移性 cs.LG
 
@@ -683,7 +729,7 @@ GasHis-Transformer：一种用于胃组织病理图像分类的多尺度视觉�
 
 
 
-## **47. Towards Evaluating the Robustness of Neural Networks Learned by Transduction**
+## **50. Towards Evaluating the Robustness of Neural Networks Learned by Transduction**
 
 基于转导学习的神经网络鲁棒性评价方法研究 cs.LG
 
@@ -696,52 +742,6 @@ Paper published at ICLR 2022. arXiv admin note: text overlap with  arXiv:2106.08
 **Abstracts**: There has been emerging interest in using transductive learning for adversarial robustness (Goldwasser et al., NeurIPS 2020; Wu et al., ICML 2020; Wang et al., ArXiv 2021). Compared to traditional defenses, these defense mechanisms "dynamically learn" the model based on test-time input; and theoretically, attacking these defenses reduces to solving a bilevel optimization problem, which poses difficulty in crafting adaptive attacks. In this paper, we examine these defense mechanisms from a principled threat analysis perspective. We formulate and analyze threat models for transductive-learning based defenses, and point out important subtleties. We propose the principle of attacking model space for solving bilevel attack objectives, and present Greedy Model Space Attack (GMSA), an attack framework that can serve as a new baseline for evaluating transductive-learning based defenses. Through systematic evaluation, we show that GMSA, even with weak instantiations, can break previous transductive-learning based defenses, which were resilient to previous attacks, such as AutoAttack. On the positive side, we report a somewhat surprising empirical result of "transductive adversarial training": Adversarially retraining the model using fresh randomness at the test time gives a significant increase in robustness against attacks we consider.
 
 摘要: 人们对使用转导学习来实现对抗鲁棒性产生了新的兴趣(Goldwasser等人，NeurIPS 2020；Wu等人，ICML 2020；Wang等人，Arxiv 2021)。与传统防御相比，这些防御机制“动态学习”基于测试时间输入的模型；从理论上讲，攻击这些防御归结为求解一个双层优化问题，这给自适应攻击的设计带来了困难。在本文中，我们从原则性威胁分析的角度来检查这些防御机制。建立并分析了基于传导式学习防御的威胁模型，指出了重要的细微之处。我们提出了攻击模型空间求解双层攻击目标的原理，并提出了贪婪模型空间攻击(GMSA)这一攻击框架，可作为评估基于转导学习的防御的新基线。通过系统的评估，我们证明了GMSA即使在弱实例化的情况下，也可以打破以往基于传导式学习的防御机制，这些防御机制对AutoAttack等先前的攻击是有弹性的。从积极的一面来看，我们报告了一个有点令人惊讶的“转导对抗训练”的经验结果：在测试时使用新的随机性对模型进行对抗性重新训练，可以显著提高对我们所考虑的攻击的鲁棒性。
-
-
-
-## **48. Generalizable Information Theoretic Causal Representation**
-
-广义信息论因果表示 cs.LG
-
-**SubmitDate**: 2022-02-17    [paper-pdf](http://arxiv.org/pdf/2202.08388v1)
-
-**Authors**: Mengyue Yang, Xinyu Cai, Furui Liu, Xu Chen, Zhitang Chen, Jianye Hao, Jun Wang
-
-**Abstracts**: It is evidence that representation learning can improve model's performance over multiple downstream tasks in many real-world scenarios, such as image classification and recommender systems. Existing learning approaches rely on establishing the correlation (or its proxy) between features and the downstream task (labels), which typically results in a representation containing cause, effect and spurious correlated variables of the label. Its generalizability may deteriorate because of the unstability of the non-causal parts. In this paper, we propose to learn causal representation from observational data by regularizing the learning procedure with mutual information measures according to our hypothetical causal graph. The optimization involves a counterfactual loss, based on which we deduce a theoretical guarantee that the causality-inspired learning is with reduced sample complexity and better generalization ability. Extensive experiments show that the models trained on causal representations learned by our approach is robust under adversarial attacks and distribution shift.
-
-摘要: 事实证明，在图像分类和推荐系统等实际场景中，表征学习可以提高模型在多个下游任务上的性能。现有的学习方法依赖于在特征和下游任务(标签)之间建立相关性(或其代理)，这通常导致包含标签的原因、结果和虚假相关变量的表示。由于非因果部分的不稳定性，其泛化能力可能会恶化。在本文中，我们建议根据假设的因果图，通过互信息度量来规范学习过程，从而从观测数据中学习因果表示。这种优化涉及到反事实的损失，在此基础上，我们推导出因果启发学习具有更低的样本复杂度和更好的泛化能力的理论保证。大量实验表明，该方法训练的因果表示模型在对抗攻击和分布偏移情况下具有较好的鲁棒性。
-
-
-
-## **49. Characterizing Attacks on Deep Reinforcement Learning**
-
-深度强化学习攻击的特征描述 cs.LG
-
-AAMAS 2022, 13 pages, 6 figures
-
-**SubmitDate**: 2022-02-16    [paper-pdf](http://arxiv.org/pdf/1907.09470v3)
-
-**Authors**: Xinlei Pan, Chaowei Xiao, Warren He, Shuang Yang, Jian Peng, Mingjie Sun, Jinfeng Yi, Zijiang Yang, Mingyan Liu, Bo Li, Dawn Song
-
-**Abstracts**: Recent studies show that Deep Reinforcement Learning (DRL) models are vulnerable to adversarial attacks, which attack DRL models by adding small perturbations to the observations. However, some attacks assume full availability of the victim model, and some require a huge amount of computation, making them less feasible for real world applications. In this work, we make further explorations of the vulnerabilities of DRL by studying other aspects of attacks on DRL using realistic and efficient attacks. First, we adapt and propose efficient black-box attacks when we do not have access to DRL model parameters. Second, to address the high computational demands of existing attacks, we introduce efficient online sequential attacks that exploit temporal consistency across consecutive steps. Third, we explore the possibility of an attacker perturbing other aspects in the DRL setting, such as the environment dynamics. Finally, to account for imperfections in how an attacker would inject perturbations in the physical world, we devise a method for generating a robust physical perturbations to be printed. The attack is evaluated on a real-world robot under various conditions. We conduct extensive experiments both in simulation such as Atari games, robotics and autonomous driving, and on real-world robotics, to compare the effectiveness of the proposed attacks with baseline approaches. To the best of our knowledge, we are the first to apply adversarial attacks on DRL systems to physical robots.
-
-摘要: 最近的研究表明，深度强化学习(DRL)模型容易受到敌意攻击，这种攻击是通过在观测值中添加小扰动来攻击DRL模型的。然而，一些攻击假设受害者模型完全可用，而另一些攻击需要大量的计算，这使得它们在现实世界的应用程序中不太可行。在这项工作中，我们通过研究对DRL的其他方面的攻击，使用真实而有效的攻击，进一步探讨了DRL的漏洞。首先，当我们无法获得DRL模型参数时，我们采用并提出了有效的黑盒攻击。其次，为了解决现有攻击对计算的高要求，我们引入了高效的在线顺序攻击，该攻击利用了连续步骤之间的时间一致性。第三，我们探讨攻击者干扰DRL设置中其他方面的可能性，例如环境动态。最后，为了说明攻击者如何在物理世界中注入扰动的不完善之处，我们设计了一种生成要打印的健壮物理扰动的方法。在不同条件下对真实机器人进行了攻击评估。我们在Atari游戏、机器人和自动驾驶等模拟游戏中，以及在真实机器人上进行了广泛的实验，以比较所提出的攻击和基线方法的有效性。据我们所知，我们是第一个将针对DRL系统的对抗性攻击应用于物理机器人的公司。
-
-
-
-## **50. Real-Time Neural Voice Camouflage**
-
-实时神经语音伪装 cs.SD
-
-14 pages
-
-**SubmitDate**: 2022-02-16    [paper-pdf](http://arxiv.org/pdf/2112.07076v2)
-
-**Authors**: Mia Chiquier, Chengzhi Mao, Carl Vondrick
-
-**Abstracts**: Automatic speech recognition systems have created exciting possibilities for applications, however they also enable opportunities for systematic eavesdropping. We propose a method to camouflage a person's voice over-the-air from these systems without inconveniencing the conversation between people in the room. Standard adversarial attacks are not effective in real-time streaming situations because the characteristics of the signal will have changed by the time the attack is executed. We introduce predictive attacks, which achieve real-time performance by forecasting the attack that will be the most effective in the future. Under real-time constraints, our method jams the established speech recognition system DeepSpeech 3.9x more than baselines as measured through word error rate, and 6.6x more as measured through character error rate. We furthermore demonstrate our approach is practically effective in realistic environments over physical distances.
-
-摘要: 自动语音识别系统为应用创造了令人兴奋的可能性，然而它们也为系统窃听提供了机会。我们提出了一种方法，从这些系统中伪装出人的空中语音，而不会给房间里的人之间的对话带来不便。标准对抗性攻击在实时流情况下无效，因为在执行攻击时信号的特性将发生变化。我们引入预测性攻击，通过预测未来最有效的攻击来实现实时性能。在实时约束条件下，我们的方法对已建立的语音识别系统DeepSpeech的拥塞程度是基线的3.9倍，通过字符错误率的衡量是基线的6.6倍。我们进一步证明了我们的方法在物理距离上的现实环境中是实际有效的。
 
 
 

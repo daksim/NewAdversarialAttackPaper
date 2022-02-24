@@ -1,47 +1,9 @@
 # Latest Adversarial Attack Papers
-**update at 2022-02-24 09:40:01**
+**update at 2022-02-25 06:31:35**
 
 [中文版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. Sound Adversarial Audio-Visual Navigation**
-
-cs.SD
-
-This work aims to do an adversarial sound intervention for robust  audio-visual navigation
-
-**SubmitDate**: 2022-02-22    [paper-pdf](http://arxiv.org/pdf/2202.10910v1)
-
-**Authors**: Yinfeng Yu, Wenbing Huang, Fuchun Sun, Changan Chen, Yikai Wang, Xiaohong Liu
-
-**Abstracts**: Audio-visual navigation task requires an agent to find a sound source in a realistic, unmapped 3D environment by utilizing egocentric audio-visual observations. Existing audio-visual navigation works assume a clean environment that solely contains the target sound, which, however, would not be suitable in most real-world applications due to the unexpected sound noise or intentional interference. In this work, we design an acoustically complex environment in which, besides the target sound, there exists a sound attacker playing a zero-sum game with the agent. More specifically, the attacker can move and change the volume and category of the sound to make the agent suffer from finding the sounding object while the agent tries to dodge the attack and navigate to the goal under the intervention. Under certain constraints to the attacker, we can improve the robustness of the agent towards unexpected sound attacks in audio-visual navigation. For better convergence, we develop a joint training mechanism by employing the property of a centralized critic with decentralized actors. Experiments on two real-world 3D scan datasets, Replica, and Matterport3D, verify the effectiveness and the robustness of the agent trained under our designed environment when transferred to the clean environment or the one containing sound attackers with random policy. Project: \url{https://yyf17.github.io/SAAVN}.
-
-
-
-## **2. DEMO: Relay/Replay Attacks on GNSS signals**
-
-cs.CR
-
-**SubmitDate**: 2022-02-22    [paper-pdf](http://arxiv.org/pdf/2202.10897v1)
-
-**Authors**: M. Lenhart, M. Spanghero, P. Papadimitratos
-
-**Abstracts**: Global Navigation Satellite Systems (GNSS) are ubiquitously relied upon for positioning and timing. Detection and prevention of attacks against GNSS have been researched over the last decades, but many of these attacks and countermeasures were evaluated based on simulation. This work contributes to the experimental investigation of GNSS vulnerabilities, implementing a relay/replay attack with off-the-shelf hardware. Operating at the signal level, this attack type is not hindered by cryptographically protected transmissions, such as Galileo's Open Signals Navigation Message Authentication (OS-NMA). The attack we investigate involves two colluding adversaries, relaying signals over large distances, to effectively spoof a GNSS receiver. We demonstrate the attack using off-the-shelf hardware, we investigate the requirements for such successful colluding attacks, and how they can be enhanced, e.g., allowing for finer adversarial control over the victim receiver.
-
-
-
-## **3. Protecting GNSS-based Services using Time Offset Validation**
-
-cs.CR
-
-**SubmitDate**: 2022-02-22    [paper-pdf](http://arxiv.org/pdf/2202.10891v1)
-
-**Authors**: K. Zhang, M. Spanghero, P. Papadimitratos
-
-**Abstracts**: Global navigation satellite systems (GNSS) provide pervasive accurate positioning and timing services for a large gamut of applications, from Time based One-Time Passwords (TOPT), to power grid and cellular systems. However, there can be security concerns for the applications due to the vulnerability of GNSS. It is important to observe that GNSS receivers are components of platforms, in principle having rich connectivity to different network infrastructures. Of particular interest is the access to a variety of timing sources, as those can be used to validate GNSS-provided location and time. Therefore, we consider off-the-shelf platforms and how to detect if the GNSS receiver is attacked or not, by cross-checking the GNSS time and time from other available sources. First, we survey different technologies to analyze their availability, accuracy, and trustworthiness for time synchronization. Then, we propose a validation approach for absolute and relative time. Moreover, we design a framework and experimental setup for the evaluation of the results. Attacks can be detected based on WiFi supplied time when the adversary shifts the GNSS provided time, more than 23.942us; with Network Time Protocol (NTP) supplied time when the adversary-induced shift is more than 2.046ms. Consequently, the proposal significantly limits the capability of an adversary to manipulate the victim GNSS receiver.
-
-
-
-## **4. FastZIP: Faster and More Secure Zero-Interaction Pairing**
+## **1. FastZIP: Faster and More Secure Zero-Interaction Pairing**
 
 cs.CR
 
@@ -55,7 +17,71 @@ ACM MobiSys '21; Fixed ambiguity in flow diagram (Figure 2). Code and  data are 
 
 
 
-## **5. Adversarial Defense by Latent Style Transformations**
+## **2. Distributed and Mobile Message Level Relaying/Replaying of GNSS Signals**
+
+cs.CR
+
+**SubmitDate**: 2022-02-23    [paper-pdf](http://arxiv.org/pdf/2202.11341v1)
+
+**Authors**: M. Lenhart, M. Spanghero, P. Papadimitratos
+
+**Abstracts**: With the introduction of Navigation Message Authentication (NMA), future Global Navigation Satellite Systems (GNSSs) prevent spoofing by simulation, i.e., the generation of forged satellite signals based on public information. However, authentication does not prevent record-and-replay attacks, commonly termed as meaconing. These attacks are less powerful in terms of adversarial control over the victim receiver location and time, but by acting at the signal level, they are not thwarted by NMA. This makes replaying/relaying attacks a significant threat for GNSS. While there are numerous investigations on meaconing, the majority does not rely on actual implementation and experimental evaluation in real-world settings. In this work, we contribute to the improvement of the experimental understanding of meaconing attacks. We design and implement a system capable of real-time, distributed, and mobile meaconing, built with off-the-shelf hardware. We extend from basic distributed attacks, with signals from different locations relayed over the Internet and replayed within range of the victim receiver(s): this has high bandwidth requirements and thus depends on the quality of service of the available network to work. To overcome this limitation, we propose to replay on message level, including the authentication part of the payload. The resultant reduced bandwidth enables the attacker to operate in mobile scenarios, as well as to replay signals from multiple GNSS constellations and/or bands simultaneously. Additionally, the attacker can delay individually selected satellite signals to potentially influence the victim position and time solution in a more fine-grained manner. Our versatile test-bench, enabling different types of replaying/relaying attacks, facilitates testing realistic scenarios towards new and improved replaying/relaying-focused countermeasures in GNSS receivers.
+
+
+
+## **3. LPF-Defense: 3D Adversarial Defense based on Frequency Analysis**
+
+cs.CV
+
+15 pages, 7 figures
+
+**SubmitDate**: 2022-02-23    [paper-pdf](http://arxiv.org/pdf/2202.11287v1)
+
+**Authors**: Hanieh Naderi, Arian Etemadi, Kimia Noorbakhsh, Shohreh Kasaei
+
+**Abstracts**: Although 3D point cloud classification has recently been widely deployed in different application scenarios, it is still very vulnerable to adversarial attacks. This increases the importance of robust training of 3D models in the face of adversarial attacks. Based on our analysis on the performance of existing adversarial attacks, more adversarial perturbations are found in the mid and high-frequency components of input data. Therefore, by suppressing the high-frequency content in the training phase, the models robustness against adversarial examples is improved. Experiments showed that the proposed defense method decreases the success rate of six attacks on PointNet, PointNet++ ,, and DGCNN models. In particular, improvements are achieved with an average increase of classification accuracy by 3.8 % on drop100 attack and 4.26 % on drop200 attack compared to the state-of-the-art methods. The method also improves models accuracy on the original dataset compared to other available methods.
+
+
+
+## **4. Sound Adversarial Audio-Visual Navigation**
+
+cs.SD
+
+This work aims to do an adversarial sound intervention for robust  audio-visual navigation
+
+**SubmitDate**: 2022-02-22    [paper-pdf](http://arxiv.org/pdf/2202.10910v1)
+
+**Authors**: Yinfeng Yu, Wenbing Huang, Fuchun Sun, Changan Chen, Yikai Wang, Xiaohong Liu
+
+**Abstracts**: Audio-visual navigation task requires an agent to find a sound source in a realistic, unmapped 3D environment by utilizing egocentric audio-visual observations. Existing audio-visual navigation works assume a clean environment that solely contains the target sound, which, however, would not be suitable in most real-world applications due to the unexpected sound noise or intentional interference. In this work, we design an acoustically complex environment in which, besides the target sound, there exists a sound attacker playing a zero-sum game with the agent. More specifically, the attacker can move and change the volume and category of the sound to make the agent suffer from finding the sounding object while the agent tries to dodge the attack and navigate to the goal under the intervention. Under certain constraints to the attacker, we can improve the robustness of the agent towards unexpected sound attacks in audio-visual navigation. For better convergence, we develop a joint training mechanism by employing the property of a centralized critic with decentralized actors. Experiments on two real-world 3D scan datasets, Replica, and Matterport3D, verify the effectiveness and the robustness of the agent trained under our designed environment when transferred to the clean environment or the one containing sound attackers with random policy. Project: \url{https://yyf17.github.io/SAAVN}.
+
+
+
+## **5. DEMO: Relay/Replay Attacks on GNSS signals**
+
+cs.CR
+
+**SubmitDate**: 2022-02-22    [paper-pdf](http://arxiv.org/pdf/2202.10897v1)
+
+**Authors**: M. Lenhart, M. Spanghero, P. Papadimitratos
+
+**Abstracts**: Global Navigation Satellite Systems (GNSS) are ubiquitously relied upon for positioning and timing. Detection and prevention of attacks against GNSS have been researched over the last decades, but many of these attacks and countermeasures were evaluated based on simulation. This work contributes to the experimental investigation of GNSS vulnerabilities, implementing a relay/replay attack with off-the-shelf hardware. Operating at the signal level, this attack type is not hindered by cryptographically protected transmissions, such as Galileo's Open Signals Navigation Message Authentication (OS-NMA). The attack we investigate involves two colluding adversaries, relaying signals over large distances, to effectively spoof a GNSS receiver. We demonstrate the attack using off-the-shelf hardware, we investigate the requirements for such successful colluding attacks, and how they can be enhanced, e.g., allowing for finer adversarial control over the victim receiver.
+
+
+
+## **6. Protecting GNSS-based Services using Time Offset Validation**
+
+cs.CR
+
+**SubmitDate**: 2022-02-22    [paper-pdf](http://arxiv.org/pdf/2202.10891v1)
+
+**Authors**: K. Zhang, M. Spanghero, P. Papadimitratos
+
+**Abstracts**: Global navigation satellite systems (GNSS) provide pervasive accurate positioning and timing services for a large gamut of applications, from Time based One-Time Passwords (TOPT), to power grid and cellular systems. However, there can be security concerns for the applications due to the vulnerability of GNSS. It is important to observe that GNSS receivers are components of platforms, in principle having rich connectivity to different network infrastructures. Of particular interest is the access to a variety of timing sources, as those can be used to validate GNSS-provided location and time. Therefore, we consider off-the-shelf platforms and how to detect if the GNSS receiver is attacked or not, by cross-checking the GNSS time and time from other available sources. First, we survey different technologies to analyze their availability, accuracy, and trustworthiness for time synchronization. Then, we propose a validation approach for absolute and relative time. Moreover, we design a framework and experimental setup for the evaluation of the results. Attacks can be detected based on WiFi supplied time when the adversary shifts the GNSS provided time, more than 23.942us; with Network Time Protocol (NTP) supplied time when the adversary-induced shift is more than 2.046ms. Consequently, the proposal significantly limits the capability of an adversary to manipulate the victim GNSS receiver.
+
+
+
+## **7. Adversarial Defense by Latent Style Transformations**
 
 cs.CV
 
@@ -67,7 +93,7 @@ cs.CV
 
 
 
-## **6. Surrogate Representation Learning with Isometric Mapping for Gray-box Graph Adversarial Attacks**
+## **8. Surrogate Representation Learning with Isometric Mapping for Gray-box Graph Adversarial Attacks**
 
 cs.AI
 
@@ -79,7 +105,7 @@ cs.AI
 
 
 
-## **7. Universal adversarial perturbation for remote sensing images**
+## **9. Universal adversarial perturbation for remote sensing images**
 
 cs.CV
 
@@ -91,7 +117,7 @@ cs.CV
 
 
 
-## **8. Seeing is Living? Rethinking the Security of Facial Liveness Verification in the Deepfake Era**
+## **10. Seeing is Living? Rethinking the Security of Facial Liveness Verification in the Deepfake Era**
 
 cs.CR
 
@@ -105,7 +131,7 @@ Accepted as a full paper at USENIX Security '22
 
 
 
-## **9. Fingerprinting Deep Neural Networks Globally via Universal Adversarial Perturbations**
+## **11. Fingerprinting Deep Neural Networks Globally via Universal Adversarial Perturbations**
 
 cs.CR
 
@@ -117,7 +143,7 @@ cs.CR
 
 
 
-## **10. Robust Stochastic Linear Contextual Bandits Under Adversarial Attacks**
+## **12. Robust Stochastic Linear Contextual Bandits Under Adversarial Attacks**
 
 stat.ML
 
@@ -129,7 +155,7 @@ stat.ML
 
 
 
-## **11. Behaviour-Diverse Automatic Penetration Testing: A Curiosity-Driven Multi-Objective Deep Reinforcement Learning Approach**
+## **13. Behaviour-Diverse Automatic Penetration Testing: A Curiosity-Driven Multi-Objective Deep Reinforcement Learning Approach**
 
 cs.LG
 
@@ -143,7 +169,7 @@ cs.LG
 
 
 
-## **12. On the Effectiveness of Adversarial Training against Backdoor Attacks**
+## **14. On the Effectiveness of Adversarial Training against Backdoor Attacks**
 
 cs.LG
 
@@ -155,7 +181,7 @@ cs.LG
 
 
 
-## **13. Adversarial Attacks on Speech Recognition Systems for Mission-Critical Applications: A Survey**
+## **15. Adversarial Attacks on Speech Recognition Systems for Mission-Critical Applications: A Survey**
 
 cs.SD
 
@@ -167,7 +193,7 @@ cs.SD
 
 
 
-## **14. Privacy Leakage of Adversarial Training Models in Federated Learning Systems**
+## **16. Privacy Leakage of Adversarial Training Models in Federated Learning Systems**
 
 cs.LG
 
@@ -181,7 +207,7 @@ cs.LG
 
 
 
-## **15. Analysing Security and Privacy Threats in the Lockdown Periods of COVID-19 Pandemic: Twitter Dataset Case Study**
+## **17. Analysing Security and Privacy Threats in the Lockdown Periods of COVID-19 Pandemic: Twitter Dataset Case Study**
 
 cs.CR
 
@@ -193,7 +219,7 @@ cs.CR
 
 
 
-## **16. RAILS: A Robust Adversarial Immune-inspired Learning System**
+## **18. RAILS: A Robust Adversarial Immune-inspired Learning System**
 
 cs.NE
 
@@ -207,7 +233,7 @@ arXiv admin note: text overlap with arXiv:2012.10485
 
 
 
-## **17. Adversarial Examples in Constrained Domains**
+## **19. Adversarial Examples in Constrained Domains**
 
 cs.CR
 
@@ -221,7 +247,7 @@ Accepted to IOS Press Journal of Computer Security
 
 
 
-## **18. A Tutorial on Adversarial Learning Attacks and Countermeasures**
+## **20. A Tutorial on Adversarial Learning Attacks and Countermeasures**
 
 cs.CR
 
@@ -233,7 +259,7 @@ cs.CR
 
 
 
-## **19. Cyber-Physical Defense in the Quantum Era**
+## **21. Cyber-Physical Defense in the Quantum Era**
 
 cs.CR
 
@@ -247,7 +273,7 @@ cs.CR
 
 
 
-## **20. Measurement-Device-Independent Quantum Secure Direct Communication with User Authentication**
+## **22. Measurement-Device-Independent Quantum Secure Direct Communication with User Authentication**
 
 quant-ph
 
@@ -259,7 +285,7 @@ quant-ph
 
 
 
-## **21. HoneyModels: Machine Learning Honeypots**
+## **23. HoneyModels: Machine Learning Honeypots**
 
 cs.CR
 
@@ -273,7 +299,7 @@ Published in: MILCOM 2021 - 2021 IEEE Military Communications  Conference (MILCO
 
 
 
-## **22. Hardware Obfuscation of Digital FIR Filters**
+## **24. Hardware Obfuscation of Digital FIR Filters**
 
 cs.CR
 
@@ -285,7 +311,7 @@ cs.CR
 
 
 
-## **23. Learning to Attack with Fewer Pixels: A Probabilistic Post-hoc Framework for Refining Arbitrary Dense Adversarial Attacks**
+## **25. Learning to Attack with Fewer Pixels: A Probabilistic Post-hoc Framework for Refining Arbitrary Dense Adversarial Attacks**
 
 cs.CV
 
@@ -297,7 +323,7 @@ cs.CV
 
 
 
-## **24. Transferring Adversarial Robustness Through Robust Representation Matching**
+## **26. Transferring Adversarial Robustness Through Robust Representation Matching**
 
 cs.LG
 
@@ -311,7 +337,21 @@ To appear at USENIX'22
 
 
 
-## **25. Overparametrization improves robustness against adversarial attacks: A replication study**
+## **27. Real-time Over-the-air Adversarial Perturbations for Digital Communications using Deep Neural Networks**
+
+cs.CR
+
+9 pages; 11 figures
+
+**SubmitDate**: 2022-02-20    [paper-pdf](http://arxiv.org/pdf/2202.11197v1)
+
+**Authors**: Roman A. Sandler, Peter K. Relich, Cloud Cho, Sean Holloway
+
+**Abstracts**: Deep neural networks (DNNs) are increasingly being used in a variety of traditional radiofrequency (RF) problems. Previous work has shown that while DNN classifiers are typically more accurate than traditional signal processing algorithms, they are vulnerable to intentionally crafted adversarial perturbations which can deceive the DNN classifiers and significantly reduce their accuracy. Such intentional adversarial perturbations can be used by RF communications systems to avoid reactive-jammers and interception systems which rely on DNN classifiers to identify their target modulation scheme. While previous research on RF adversarial perturbations has established the theoretical feasibility of such attacks using simulation studies, critical questions concerning real-world implementation and viability remain unanswered. This work attempts to bridge this gap by defining class-specific and sample-independent adversarial perturbations which are shown to be effective yet computationally feasible in real-time and time-invariant. We demonstrate the effectiveness of these attacks over-the-air across a physical channel using software-defined radios (SDRs). Finally, we demonstrate that these adversarial perturbations can be emitted from a source other than the communications device, making these attacks practical for devices that cannot manipulate their transmitted signals at the physical layer.
+
+
+
+## **28. Overparametrization improves robustness against adversarial attacks: A replication study**
 
 cs.LG
 
@@ -323,7 +363,7 @@ cs.LG
 
 
 
-## **26. Runtime-Assured, Real-Time Neural Control of Microgrids**
+## **29. Runtime-Assured, Real-Time Neural Control of Microgrids**
 
 eess.SY
 
@@ -335,7 +375,7 @@ eess.SY
 
 
 
-## **27. Detection of Stealthy Adversaries for Networked Unmanned Aerial Vehicles**
+## **30. Detection of Stealthy Adversaries for Networked Unmanned Aerial Vehicles**
 
 eess.SY
 
@@ -347,7 +387,7 @@ eess.SY
 
 
 
-## **28. Stochastic sparse adversarial attacks**
+## **31. Stochastic sparse adversarial attacks**
 
 cs.LG
 
@@ -361,7 +401,7 @@ Final version published at the ICTAI 2021 conference with a best  student paper 
 
 
 
-## **29. Internal Wasserstein Distance for Adversarial Attack and Defense**
+## **32. Internal Wasserstein Distance for Adversarial Attack and Defense**
 
 cs.LG
 
@@ -373,7 +413,7 @@ cs.LG
 
 
 
-## **30. Robust Reinforcement Learning as a Stackelberg Game via Adaptively-Regularized Adversarial Training**
+## **33. Robust Reinforcement Learning as a Stackelberg Game via Adaptively-Regularized Adversarial Training**
 
 cs.LG
 
@@ -385,7 +425,7 @@ cs.LG
 
 
 
-## **31. Attacks, Defenses, And Tools: A Framework To Facilitate Robust AI/ML Systems**
+## **34. Attacks, Defenses, And Tools: A Framework To Facilitate Robust AI/ML Systems**
 
 cs.CR
 
@@ -397,7 +437,7 @@ cs.CR
 
 
 
-## **32. Black-box Node Injection Attack for Graph Neural Networks**
+## **35. Black-box Node Injection Attack for Graph Neural Networks**
 
 cs.LG
 
@@ -409,7 +449,7 @@ cs.LG
 
 
 
-## **33. Synthetic Disinformation Attacks on Automated Fact Verification Systems**
+## **36. Synthetic Disinformation Attacks on Automated Fact Verification Systems**
 
 cs.CL
 
@@ -423,7 +463,7 @@ AAAI 2022
 
 
 
-## **34. Exploring Adversarially Robust Training for Unsupervised Domain Adaptation**
+## **37. Exploring Adversarially Robust Training for Unsupervised Domain Adaptation**
 
 cs.CV
 
@@ -435,7 +475,7 @@ cs.CV
 
 
 
-## **35. Resurrecting Trust in Facial Recognition: Mitigating Backdoor Attacks in Face Recognition to Prevent Potential Privacy Breaches**
+## **38. Resurrecting Trust in Facial Recognition: Mitigating Backdoor Attacks in Face Recognition to Prevent Potential Privacy Breaches**
 
 cs.CV
 
@@ -449,7 +489,7 @@ cs.CV
 
 
 
-## **36. Critical Checkpoints for Evaluating Defence Models Against Adversarial Attack and Robustness**
+## **39. Critical Checkpoints for Evaluating Defence Models Against Adversarial Attack and Robustness**
 
 cs.CR
 
@@ -463,7 +503,7 @@ cs.CR
 
 
 
-## **37. Debiasing Backdoor Attack: A Benign Application of Backdoor Attack in Eliminating Data Bias**
+## **40. Debiasing Backdoor Attack: A Benign Application of Backdoor Attack in Eliminating Data Bias**
 
 cs.CR
 
@@ -475,7 +515,7 @@ cs.CR
 
 
 
-## **38. Explaining Adversarial Vulnerability with a Data Sparsity Hypothesis**
+## **41. Explaining Adversarial Vulnerability with a Data Sparsity Hypothesis**
 
 cs.AI
 
@@ -487,7 +527,7 @@ cs.AI
 
 
 
-## **39. Amicable examples for informed source separation**
+## **42. Amicable examples for informed source separation**
 
 cs.SD
 
@@ -501,7 +541,7 @@ Accepted to ICASSP 2022
 
 
 
-## **40. Morphence: Moving Target Defense Against Adversarial Examples**
+## **43. Morphence: Moving Target Defense Against Adversarial Examples**
 
 cs.LG
 
@@ -513,7 +553,7 @@ cs.LG
 
 
 
-## **41. What Doesn't Kill You Makes You Robust(er): How to Adversarially Train against Data Poisoning**
+## **44. What Doesn't Kill You Makes You Robust(er): How to Adversarially Train against Data Poisoning**
 
 cs.LG
 
@@ -527,7 +567,7 @@ cs.LG
 
 
 
-## **42. Developing Imperceptible Adversarial Patches to Camouflage Military Assets From Computer Vision Enabled Technologies**
+## **45. Developing Imperceptible Adversarial Patches to Camouflage Military Assets From Computer Vision Enabled Technologies**
 
 cs.CV
 
@@ -541,7 +581,7 @@ cs.CV
 
 
 
-## **43. Alexa versus Alexa: Controlling Smart Speakers by Self-Issuing Voice Commands**
+## **46. Alexa versus Alexa: Controlling Smart Speakers by Self-Issuing Voice Commands**
 
 cs.CR
 
@@ -555,7 +595,7 @@ cs.CR
 
 
 
-## **44. Improving Robustness of Deep Reinforcement Learning Agents: Environment Attack based on the Critic Network**
+## **47. Improving Robustness of Deep Reinforcement Learning Agents: Environment Attack based on the Critic Network**
 
 cs.LG
 
@@ -567,7 +607,7 @@ cs.LG
 
 
 
-## **45. GasHis-Transformer: A Multi-scale Visual Transformer Approach for Gastric Histopathology Image Classification**
+## **48. GasHis-Transformer: A Multi-scale Visual Transformer Approach for Gastric Histopathology Image Classification**
 
 cs.CV
 
@@ -579,7 +619,7 @@ cs.CV
 
 
 
-## **46. Measuring the Transferability of $\ell_\infty$ Attacks by the $\ell_2$ Norm**
+## **49. Measuring the Transferability of $\ell_\infty$ Attacks by the $\ell_2$ Norm**
 
 cs.LG
 
@@ -591,7 +631,7 @@ cs.LG
 
 
 
-## **47. Towards Evaluating the Robustness of Neural Networks Learned by Transduction**
+## **50. Towards Evaluating the Robustness of Neural Networks Learned by Transduction**
 
 cs.LG
 
@@ -602,46 +642,6 @@ Paper published at ICLR 2022. arXiv admin note: text overlap with  arXiv:2106.08
 **Authors**: Jiefeng Chen, Xi Wu, Yang Guo, Yingyu Liang, Somesh Jha
 
 **Abstracts**: There has been emerging interest in using transductive learning for adversarial robustness (Goldwasser et al., NeurIPS 2020; Wu et al., ICML 2020; Wang et al., ArXiv 2021). Compared to traditional defenses, these defense mechanisms "dynamically learn" the model based on test-time input; and theoretically, attacking these defenses reduces to solving a bilevel optimization problem, which poses difficulty in crafting adaptive attacks. In this paper, we examine these defense mechanisms from a principled threat analysis perspective. We formulate and analyze threat models for transductive-learning based defenses, and point out important subtleties. We propose the principle of attacking model space for solving bilevel attack objectives, and present Greedy Model Space Attack (GMSA), an attack framework that can serve as a new baseline for evaluating transductive-learning based defenses. Through systematic evaluation, we show that GMSA, even with weak instantiations, can break previous transductive-learning based defenses, which were resilient to previous attacks, such as AutoAttack. On the positive side, we report a somewhat surprising empirical result of "transductive adversarial training": Adversarially retraining the model using fresh randomness at the test time gives a significant increase in robustness against attacks we consider.
-
-
-
-## **48. Generalizable Information Theoretic Causal Representation**
-
-cs.LG
-
-**SubmitDate**: 2022-02-17    [paper-pdf](http://arxiv.org/pdf/2202.08388v1)
-
-**Authors**: Mengyue Yang, Xinyu Cai, Furui Liu, Xu Chen, Zhitang Chen, Jianye Hao, Jun Wang
-
-**Abstracts**: It is evidence that representation learning can improve model's performance over multiple downstream tasks in many real-world scenarios, such as image classification and recommender systems. Existing learning approaches rely on establishing the correlation (or its proxy) between features and the downstream task (labels), which typically results in a representation containing cause, effect and spurious correlated variables of the label. Its generalizability may deteriorate because of the unstability of the non-causal parts. In this paper, we propose to learn causal representation from observational data by regularizing the learning procedure with mutual information measures according to our hypothetical causal graph. The optimization involves a counterfactual loss, based on which we deduce a theoretical guarantee that the causality-inspired learning is with reduced sample complexity and better generalization ability. Extensive experiments show that the models trained on causal representations learned by our approach is robust under adversarial attacks and distribution shift.
-
-
-
-## **49. Characterizing Attacks on Deep Reinforcement Learning**
-
-cs.LG
-
-AAMAS 2022, 13 pages, 6 figures
-
-**SubmitDate**: 2022-02-16    [paper-pdf](http://arxiv.org/pdf/1907.09470v3)
-
-**Authors**: Xinlei Pan, Chaowei Xiao, Warren He, Shuang Yang, Jian Peng, Mingjie Sun, Jinfeng Yi, Zijiang Yang, Mingyan Liu, Bo Li, Dawn Song
-
-**Abstracts**: Recent studies show that Deep Reinforcement Learning (DRL) models are vulnerable to adversarial attacks, which attack DRL models by adding small perturbations to the observations. However, some attacks assume full availability of the victim model, and some require a huge amount of computation, making them less feasible for real world applications. In this work, we make further explorations of the vulnerabilities of DRL by studying other aspects of attacks on DRL using realistic and efficient attacks. First, we adapt and propose efficient black-box attacks when we do not have access to DRL model parameters. Second, to address the high computational demands of existing attacks, we introduce efficient online sequential attacks that exploit temporal consistency across consecutive steps. Third, we explore the possibility of an attacker perturbing other aspects in the DRL setting, such as the environment dynamics. Finally, to account for imperfections in how an attacker would inject perturbations in the physical world, we devise a method for generating a robust physical perturbations to be printed. The attack is evaluated on a real-world robot under various conditions. We conduct extensive experiments both in simulation such as Atari games, robotics and autonomous driving, and on real-world robotics, to compare the effectiveness of the proposed attacks with baseline approaches. To the best of our knowledge, we are the first to apply adversarial attacks on DRL systems to physical robots.
-
-
-
-## **50. Real-Time Neural Voice Camouflage**
-
-cs.SD
-
-14 pages
-
-**SubmitDate**: 2022-02-16    [paper-pdf](http://arxiv.org/pdf/2112.07076v2)
-
-**Authors**: Mia Chiquier, Chengzhi Mao, Carl Vondrick
-
-**Abstracts**: Automatic speech recognition systems have created exciting possibilities for applications, however they also enable opportunities for systematic eavesdropping. We propose a method to camouflage a person's voice over-the-air from these systems without inconveniencing the conversation between people in the room. Standard adversarial attacks are not effective in real-time streaming situations because the characteristics of the signal will have changed by the time the attack is executed. We introduce predictive attacks, which achieve real-time performance by forecasting the attack that will be the most effective in the future. Under real-time constraints, our method jams the established speech recognition system DeepSpeech 3.9x more than baselines as measured through word error rate, and 6.6x more as measured through character error rate. We furthermore demonstrate our approach is practically effective in realistic environments over physical distances.
 
 
 

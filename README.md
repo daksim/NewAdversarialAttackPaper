@@ -1,9 +1,105 @@
 # Latest Adversarial Attack Papers
-**update at 2022-03-07 06:31:58**
+**update at 2022-03-07 10:15:41**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. Assessing the Robustness of Visual Question Answering Models**
+## **1. Medical Aegis: Robust adversarial protectors for medical images**
+
+cs.CV
+
+**SubmitDate**: 2022-03-04    [paper-pdf](http://arxiv.org/pdf/2111.10969v4)
+
+**Authors**: Qingsong Yao, Zecheng He, S. Kevin Zhou
+
+**Abstracts**: Deep neural network based medical image systems are vulnerable to adversarial examples. Many defense mechanisms have been proposed in the literature, however, the existing defenses assume a passive attacker who knows little about the defense system and does not change the attack strategy according to the defense. Recent works have shown that a strong adaptive attack, where an attacker is assumed to have full knowledge about the defense system, can easily bypass the existing defenses. In this paper, we propose a novel adversarial example defense system called Medical Aegis. To the best of our knowledge, Medical Aegis is the first defense in the literature that successfully addresses the strong adaptive adversarial example attacks to medical images. Medical Aegis boasts two-tier protectors: The first tier of Cushion weakens the adversarial manipulation capability of an attack by removing its high-frequency components, yet posing a minimal effect on classification performance of the original image; the second tier of Shield learns a set of per-class DNN models to predict the logits of the protected model. Deviation from the Shield's prediction indicates adversarial examples. Shield is inspired by the observations in our stress tests that there exist robust trails in the shallow layers of a DNN model, which the adaptive attacks can hardly destruct. Experimental results show that the proposed defense accurately detects adaptive attacks, with negligible overhead for model inference.
+
+
+
+## **2. Adversarial Patterns: Building Robust Android Malware Classifiers**
+
+cs.CR
+
+**SubmitDate**: 2022-03-04    [paper-pdf](http://arxiv.org/pdf/2203.02121v1)
+
+**Authors**: Dipkamal Bhusal, Nidhi Rastogi
+
+**Abstracts**: Deep learning-based classifiers have substantially improved recognition of malware samples. However, these classifiers can be vulnerable to adversarial input perturbations. Any vulnerability in malware classifiers poses significant threats to the platforms they defend. Therefore, to create stronger defense models against malware, we must understand the patterns in input perturbations caused by an adversary. This survey paper presents a comprehensive study on adversarial machine learning for android malware classifiers. We first present an extensive background in building a machine learning classifier for android malware, covering both image-based and text-based feature extraction approaches. Then, we examine the pattern and advancements in the state-of-the-art research in evasion attacks and defenses. Finally, we present guidelines for designing robust malware classifiers and enlist research directions for the future.
+
+
+
+## **3. Label Leakage and Protection from Forward Embedding in Vertical Federated Learning**
+
+cs.LG
+
+**SubmitDate**: 2022-03-04    [paper-pdf](http://arxiv.org/pdf/2203.01451v2)
+
+**Authors**: Jiankai Sun, Xin Yang, Yuanshun Yao, Chong Wang
+
+**Abstracts**: Vertical federated learning (vFL) has gained much attention and been deployed to solve machine learning problems with data privacy concerns in recent years. However, some recent work demonstrated that vFL is vulnerable to privacy leakage even though only the forward intermediate embedding (rather than raw features) and backpropagated gradients (rather than raw labels) are communicated between the involved participants. As the raw labels often contain highly sensitive information, some recent work has been proposed to prevent the label leakage from the backpropagated gradients effectively in vFL. However, these work only identified and defended the threat of label leakage from the backpropagated gradients. None of these work has paid attention to the problem of label leakage from the intermediate embedding. In this paper, we propose a practical label inference method which can steal private labels effectively from the shared intermediate embedding even though some existing protection methods such as label differential privacy and gradients perturbation are applied. The effectiveness of the label attack is inseparable from the correlation between the intermediate embedding and corresponding private labels. To mitigate the issue of label leakage from the forward embedding, we add an additional optimization goal at the label party to limit the label stealing ability of the adversary by minimizing the distance correlation between the intermediate embedding and corresponding private labels. We conducted massive experiments to demonstrate the effectiveness of our proposed protection methods.
+
+
+
+## **4. Differentially Private Label Protection in Split Learning**
+
+cs.LG
+
+**SubmitDate**: 2022-03-04    [paper-pdf](http://arxiv.org/pdf/2203.02073v1)
+
+**Authors**: Xin Yang, Jiankai Sun, Yuanshun Yao, Junyuan Xie, Chong Wang
+
+**Abstracts**: Split learning is a distributed training framework that allows multiple parties to jointly train a machine learning model over vertically partitioned data (partitioned by attributes). The idea is that only intermediate computation results, rather than private features and labels, are shared between parties so that raw training data remains private. Nevertheless, recent works showed that the plaintext implementation of split learning suffers from severe privacy risks that a semi-honest adversary can easily reconstruct labels. In this work, we propose \textsf{TPSL} (Transcript Private Split Learning), a generic gradient perturbation based split learning framework that provides provable differential privacy guarantee. Differential privacy is enforced on not only the model weights, but also the communicated messages in the distributed computation setting. Our experiments on large-scale real-world datasets demonstrate the robustness and effectiveness of \textsf{TPSL} against label leakage attacks. We also find that \textsf{TPSL} have a better utility-privacy trade-off than baselines.
+
+
+
+## **5. Can Authoritative Governments Abuse the Right to Access?**
+
+cs.CR
+
+**SubmitDate**: 2022-03-03    [paper-pdf](http://arxiv.org/pdf/2203.02068v1)
+
+**Authors**: Cédric Lauradoux
+
+**Abstracts**: The right to access is a great tool provided by the GDPR to empower data subjects with their data. However, it needs to be implemented properly otherwise it could turn subject access requests against the subjects privacy. Indeed, recent works have shown that it is possible to abuse the right to access using impersonation attacks. We propose to extend those impersonation attacks by considering that the adversary has an access to governmental resources. In this case, the adversary can forge official documents or exploit copy of them. Our attack affects more people than one may expect. To defeat the attacks from this kind of adversary, several solutions are available like multi-factors or proof of aliveness. Our attacks highlight the need for strong procedures to authenticate subject access requests.
+
+
+
+## **6. Autonomous and Resilient Control for Optimal LEO Satellite Constellation Coverage Against Space Threats**
+
+eess.SY
+
+**SubmitDate**: 2022-03-03    [paper-pdf](http://arxiv.org/pdf/2203.02050v1)
+
+**Authors**: Yuhan Zhao, Quanyan Zhu
+
+**Abstracts**: LEO satellite constellation coverage has served as the base platform for various space applications. However, the rapidly evolving security environment such as orbit debris and adversarial space threats are greatly endangering the security of satellite constellation and integrity of the satellite constellation coverage. As on-orbit repairs are challenging, a distributed and autonomous protection mechanism is necessary to ensure the adaptation and self-healing of the satellite constellation coverage from different attacks. To this end, we establish an integrative and distributed framework to enable resilient satellite constellation coverage planning and control in a single orbit. Each satellite can make decisions individually to recover from adversarial and non-adversarial attacks and keep providing coverage service. We first provide models and methodologies to measure the coverage performance. Then, we formulate the joint resilient coverage planning-control problem as a two-stage problem. A coverage game is proposed to find the equilibrium constellation deployment for resilient coverage planning and an agent-based algorithm is developed to compute the equilibrium. The multi-waypoint Model Predictive Control (MPC) methodology is adopted to achieve autonomous self-healing control. Finally, we use a typical LEO satellite constellation as a case study to corroborate the results.
+
+
+
+## **7. Why adversarial training can hurt robust accuracy**
+
+cs.LG
+
+**SubmitDate**: 2022-03-03    [paper-pdf](http://arxiv.org/pdf/2203.02006v1)
+
+**Authors**: Jacob Clarysse, Julia Hörmann, Fanny Yang
+
+**Abstracts**: Machine learning classifiers with high test accuracy often perform poorly under adversarial attacks. It is commonly believed that adversarial training alleviates this issue. In this paper, we demonstrate that, surprisingly, the opposite may be true -- Even though adversarial training helps when enough data is available, it may hurt robust generalization in the small sample size regime. We first prove this phenomenon for a high-dimensional linear classification setting with noiseless observations. Our proof provides explanatory insights that may also transfer to feature learning models. Further, we observe in experiments on standard image datasets that the same behavior occurs for perceptible attacks that effectively reduce class information such as mask attacks and object corruptions.
+
+
+
+## **8. Dynamic Backdoor Attacks Against Machine Learning Models**
+
+cs.CR
+
+**SubmitDate**: 2022-03-03    [paper-pdf](http://arxiv.org/pdf/2003.03675v2)
+
+**Authors**: Ahmed Salem, Rui Wen, Michael Backes, Shiqing Ma, Yang Zhang
+
+**Abstracts**: Machine learning (ML) has made tremendous progress during the past decade and is being adopted in various critical real-world applications. However, recent research has shown that ML models are vulnerable to multiple security and privacy attacks. In particular, backdoor attacks against ML models have recently raised a lot of awareness. A successful backdoor attack can cause severe consequences, such as allowing an adversary to bypass critical authentication systems.   Current backdooring techniques rely on adding static triggers (with fixed patterns and locations) on ML model inputs which are prone to detection by the current backdoor detection mechanisms. In this paper, we propose the first class of dynamic backdooring techniques against deep neural networks (DNN), namely Random Backdoor, Backdoor Generating Network (BaN), and conditional Backdoor Generating Network (c-BaN). Triggers generated by our techniques can have random patterns and locations, which reduce the efficacy of the current backdoor detection mechanisms. In particular, BaN and c-BaN based on a novel generative network are the first two schemes that algorithmically generate triggers. Moreover, c-BaN is the first conditional backdooring technique that given a target label, it can generate a target-specific trigger. Both BaN and c-BaN are essentially a general framework which renders the adversary the flexibility for further customizing backdoor attacks.   We extensively evaluate our techniques on three benchmark datasets: MNIST, CelebA, and CIFAR-10. Our techniques achieve almost perfect attack performance on backdoored data with a negligible utility loss. We further show that our techniques can bypass current state-of-the-art defense mechanisms against backdoor attacks, including ABS, Februus, MNTD, Neural Cleanse, and STRIP.
+
+
+
+## **9. Assessing the Robustness of Visual Question Answering Models**
 
 cs.CV
 
@@ -17,7 +113,7 @@ cs.CV
 
 
 
-## **2. Detection of Word Adversarial Examples in Text Classification: Benchmark and Baseline via Robust Density Estimation**
+## **10. Detection of Word Adversarial Examples in Text Classification: Benchmark and Baseline via Robust Density Estimation**
 
 cs.CL
 
@@ -31,7 +127,7 @@ Findings of ACL 2022
 
 
 
-## **3. On Improving Adversarial Transferability of Vision Transformers**
+## **11. On Improving Adversarial Transferability of Vision Transformers**
 
 cs.CV
 
@@ -45,7 +141,7 @@ ICLR'22 (Spotlight), the first two authors contributed equally. Code:  https://t
 
 
 
-## **4. On Robustness of Neural Ordinary Differential Equations**
+## **12. On Robustness of Neural Ordinary Differential Equations**
 
 cs.LG
 
@@ -57,19 +153,7 @@ cs.LG
 
 
 
-## **5. Medical Aegis: Robust adversarial protectors for medical images**
-
-cs.CV
-
-**SubmitDate**: 2022-03-03    [paper-pdf](http://arxiv.org/pdf/2111.10969v3)
-
-**Authors**: Qingsong Yao, Zecheng He, S. Kevin Zhou
-
-**Abstracts**: Deep neural network based medical image systems are vulnerable to adversarial examples. Many defense mechanisms have been proposed in the literature, however, the existing defenses assume a passive attacker who knows little about the defense system and does not change the attack strategy according to the defense. Recent works have shown that a strong adaptive attack, where an attacker is assumed to have full knowledge about the defense system, can easily bypass the existing defenses. In this paper, we propose a novel adversarial example defense system called Medical Aegis. To the best of our knowledge, Medical Aegis is the first defense in the literature that successfully addresses the strong adaptive adversarial example attacks to medical images. Medical Aegis boasts two-tier protectors: The first tier of Cushion weakens the adversarial manipulation capability of an attack by removing its high-frequency components, yet posing a minimal effect on classification performance of the original image; the second tier of Shield learns a set of per-class DNN models to predict the logits of the protected model. Deviation from the Shield's prediction indicates adversarial examples. Shield is inspired by the observations in our stress tests that there exist robust trails in the shallow layers of a DNN model, which the adaptive attacks can hardly destruct. Experimental results show that the proposed defense accurately detects adaptive attacks, with negligible overhead for model inference.
-
-
-
-## **6. Authentication Attacks on Projection-based Cancelable Biometric Schemes**
+## **13. Authentication Attacks on Projection-based Cancelable Biometric Schemes**
 
 cs.CR
 
@@ -83,7 +167,7 @@ arXiv admin note: text overlap with arXiv:1910.01389 by other authors
 
 
 
-## **7. Ad2Attack: Adaptive Adversarial Attack on Real-Time UAV Tracking**
+## **14. Ad2Attack: Adaptive Adversarial Attack on Real-Time UAV Tracking**
 
 cs.CV
 
@@ -97,19 +181,7 @@ cs.CV
 
 
 
-## **8. Label Leakage and Protection from Forward Embedding in Vertical Federated Learning**
-
-cs.LG
-
-**SubmitDate**: 2022-03-02    [paper-pdf](http://arxiv.org/pdf/2203.01451v1)
-
-**Authors**: Jiankai Sun, Xin Yang, Yuanshun Yao, Chong Wang
-
-**Abstracts**: Vertical federated learning (vFL) has gained much attention and been deployed to solve machine learning problems with data privacy concerns in recent years. However, some recent work demonstrated that vFL is vulnerable to privacy leakage even though only the forward intermediate embedding (rather than raw features) and backpropagated gradients (rather than raw labels) are communicated between the involved participants. As the raw labels often contain highly sensitive information, some recent work has been proposed to prevent the label leakage from the backpropagated gradients effectively in vFL. However, these work only identified and defended the threat of label leakage from the backpropagated gradients. None of these work has paid attention to the problem of label leakage from the intermediate embedding. In this paper, we propose a practical label inference method which can steal private labels effectively from the shared intermediate embedding even though some existing protection methods such as label differential privacy and gradients perturbation are applied. The effectiveness of the label attack is inseparable from the correlation between the intermediate embedding and corresponding private labels. To mitigate the issue of label leakage from the forward embedding, we add an additional optimization goal at the label party to limit the label stealing ability of the adversary by minimizing the distance correlation between the intermediate embedding and corresponding private labels. We conducted massive experiments to demonstrate the effectiveness of our proposed protection methods.
-
-
-
-## **9. Two Attacks On Proof-of-Stake GHOST/Ethereum**
+## **15. Two Attacks On Proof-of-Stake GHOST/Ethereum**
 
 cs.CR
 
@@ -121,7 +193,7 @@ cs.CR
 
 
 
-## **10. Detecting Adversarial Perturbations in Multi-Task Perception**
+## **16. Detecting Adversarial Perturbations in Multi-Task Perception**
 
 cs.CV
 
@@ -133,7 +205,7 @@ cs.CV
 
 
 
-## **11. How to Inject Backdoors with Better Consistency: Logit Anchoring on Clean Data**
+## **17. How to Inject Backdoors with Better Consistency: Logit Anchoring on Clean Data**
 
 cs.LG
 
@@ -147,7 +219,7 @@ Accepted by ICLR 2022
 
 
 
-## **12. Video is All You Need: Attacking PPG-based Biometric Authentication**
+## **18. Video is All You Need: Attacking PPG-based Biometric Authentication**
 
 cs.CR
 
@@ -159,7 +231,7 @@ cs.CR
 
 
 
-## **13. Canonical foliations of neural networks: application to robustness**
+## **19. Canonical foliations of neural networks: application to robustness**
 
 stat.ML
 
@@ -171,7 +243,7 @@ stat.ML
 
 
 
-## **14. MIAShield: Defending Membership Inference Attacks via Preemptive Exclusion of Members**
+## **20. MIAShield: Defending Membership Inference Attacks via Preemptive Exclusion of Members**
 
 cs.CR
 
@@ -185,7 +257,21 @@ cs.CR
 
 
 
-## **15. Proceedings of the Artificial Intelligence for Cyber Security (AICS) Workshop at AAAI 2022**
+## **21. ECG-ATK-GAN: Robustness against Adversarial Attacks on ECGs using Conditional Generative Adversarial Networks**
+
+eess.SP
+
+10 pages, 3 figures, 3 tables
+
+**SubmitDate**: 2022-03-02    [paper-pdf](http://arxiv.org/pdf/2110.09983v2)
+
+**Authors**: Khondker Fariha Hossain, Sharif Amit Kamran, Alireza Tavakkoli, Xingjun Ma
+
+**Abstracts**: Automating arrhythmia detection from ECG requires a robust and trusted system that retains high accuracy under electrical disturbances. Many machine learning approaches have reached human-level performance in classifying arrhythmia from ECGs. However, these architectures are vulnerable to adversarial attacks, which can misclassify ECG signals by decreasing the model's accuracy. Adversarial attacks are small crafted perturbations injected in the original data which manifest the out-of-distribution shifts in signal to misclassify the correct class. Thus, security concerns arise for false hospitalization and insurance fraud abusing these perturbations. To mitigate this problem, we introduce a novel Conditional Generative Adversarial Network (GAN), robust against adversarial attacked ECG signals and retaining high accuracy. Our architecture integrates a new class-weighted objective function for adversarial perturbation identification and two novel blocks for discerning and combining out-of-distribution shifts in signals in the learning process for accurately classifying various arrhythmia types. Furthermore, we benchmark our architecture on six different white and black-box attacks and compare with other recently proposed arrhythmia classification models on two publicly available ECG arrhythmia datasets. The experiment confirms that our model is more robust against such adversarial attacks for classifying arrhythmia with high accuracy.
+
+
+
+## **22. Proceedings of the Artificial Intelligence for Cyber Security (AICS) Workshop at AAAI 2022**
 
 cs.CR
 
@@ -197,7 +283,7 @@ cs.CR
 
 
 
-## **16. Beyond Gradients: Exploiting Adversarial Priors in Model Inversion Attacks**
+## **23. Beyond Gradients: Exploiting Adversarial Priors in Model Inversion Attacks**
 
 cs.LG
 
@@ -209,7 +295,7 @@ cs.LG
 
 
 
-## **17. RAB: Provable Robustness Against Backdoor Attacks**
+## **24. RAB: Provable Robustness Against Backdoor Attacks**
 
 cs.LG
 
@@ -221,7 +307,7 @@ cs.LG
 
 
 
-## **18. Adversarial samples for deep monocular 6D object pose estimation**
+## **25. Adversarial samples for deep monocular 6D object pose estimation**
 
 cs.CV
 
@@ -235,7 +321,7 @@ cs.CV
 
 
 
-## **19. Towards Robust Stacked Capsule Autoencoder with Hybrid Adversarial Training**
+## **26. Towards Robust Stacked Capsule Autoencoder with Hybrid Adversarial Training**
 
 cs.CV
 
@@ -247,7 +333,7 @@ cs.CV
 
 
 
-## **20. Towards Effective and Robust Neural Trojan Defenses via Input Filtering**
+## **27. Towards Effective and Robust Neural Trojan Defenses via Input Filtering**
 
 cs.CR
 
@@ -259,7 +345,7 @@ cs.CR
 
 
 
-## **21. Adversarial Attack Framework on Graph Embedding Models with Limited Knowledge**
+## **28. Adversarial Attack Framework on Graph Embedding Models with Limited Knowledge**
 
 cs.LG
 
@@ -273,7 +359,7 @@ Journal extension of GF-Attack, accepted by TKDE
 
 
 
-## **22. Load-Altering Attacks Against Power Grids under COVID-19 Low-Inertia Conditions**
+## **29. Load-Altering Attacks Against Power Grids under COVID-19 Low-Inertia Conditions**
 
 cs.CR
 
@@ -285,7 +371,7 @@ cs.CR
 
 
 
-## **23. MaMaDroid2.0 -- The Holes of Control Flow Graphs**
+## **30. MaMaDroid2.0 -- The Holes of Control Flow Graphs**
 
 cs.CR
 
@@ -297,7 +383,7 @@ cs.CR
 
 
 
-## **24. Formally verified asymptotic consensus in robust networks**
+## **31. Formally verified asymptotic consensus in robust networks**
 
 cs.PL
 
@@ -309,7 +395,7 @@ cs.PL
 
 
 
-## **25. Robust Textual Embedding against Word-level Adversarial Attacks**
+## **32. Robust Textual Embedding against Word-level Adversarial Attacks**
 
 cs.CL
 
@@ -321,7 +407,7 @@ cs.CL
 
 
 
-## **26. On the Robustness of CountSketch to Adaptive Inputs**
+## **33. On the Robustness of CountSketch to Adaptive Inputs**
 
 cs.DS
 
@@ -333,7 +419,7 @@ cs.DS
 
 
 
-## **27. An Empirical Study on the Intrinsic Privacy of SGD**
+## **34. An Empirical Study on the Intrinsic Privacy of SGD**
 
 cs.LG
 
@@ -347,7 +433,7 @@ cs.LG
 
 
 
-## **28. Enhance transferability of adversarial examples with model architecture**
+## **35. Enhance transferability of adversarial examples with model architecture**
 
 cs.LG
 
@@ -359,7 +445,7 @@ cs.LG
 
 
 
-## **29. GRAPHITE: Generating Automatic Physical Examples for Machine-Learning Attacks on Computer Vision Systems**
+## **36. GRAPHITE: Generating Automatic Physical Examples for Machine-Learning Attacks on Computer Vision Systems**
 
 cs.CR
 
@@ -373,7 +459,7 @@ IEEE European Symposium on Security and Privacy 2022 (EuroS&P 2022)
 
 
 
-## **30. Markov Chain Monte Carlo-Based Machine Unlearning: Unlearning What Needs to be Forgotten**
+## **37. Markov Chain Monte Carlo-Based Machine Unlearning: Unlearning What Needs to be Forgotten**
 
 cs.LG
 
@@ -387,7 +473,7 @@ Proceedings of the 2022 ACM Asia Conference on Computer and  Communications Secu
 
 
 
-## **31. A Unified Wasserstein Distributional Robustness Framework for Adversarial Training**
+## **38. A Unified Wasserstein Distributional Robustness Framework for Adversarial Training**
 
 cs.LG
 
@@ -399,7 +485,7 @@ cs.LG
 
 
 
-## **32. Finding Optimal Tangent Points for Reducing Distortions of Hard-label Attacks**
+## **39. Finding Optimal Tangent Points for Reducing Distortions of Hard-label Attacks**
 
 cs.CV
 
@@ -413,7 +499,7 @@ Accepted at NeurIPS 2021. The missing square term in Eqn.(13), as  well as many 
 
 
 
-## **33. CC-Cert: A Probabilistic Approach to Certify General Robustness of Neural Networks**
+## **40. CC-Cert: A Probabilistic Approach to Certify General Robustness of Neural Networks**
 
 cs.LG
 
@@ -427,7 +513,7 @@ In Proceedings of AAAI-22, the Thirty-Sixth AAAI Conference on  Artificial Intel
 
 
 
-## **34. Socialbots on Fire: Modeling Adversarial Behaviors of Socialbots via Multi-Agent Hierarchical Reinforcement Learning**
+## **41. Socialbots on Fire: Modeling Adversarial Behaviors of Socialbots via Multi-Agent Hierarchical Reinforcement Learning**
 
 cs.SI
 
@@ -441,7 +527,7 @@ Accepted to The ACM Web Conference 2022
 
 
 
-## **35. Natural Attack for Pre-trained Models of Code**
+## **42. Natural Attack for Pre-trained Models of Code**
 
 cs.SE
 
@@ -455,7 +541,7 @@ To appear in the Technical Track of ICSE 2022
 
 
 
-## **36. Projective Ranking-based GNN Evasion Attacks**
+## **43. Projective Ranking-based GNN Evasion Attacks**
 
 cs.LG
 
@@ -467,7 +553,7 @@ cs.LG
 
 
 
-## **37. Attacks and Faults Injection in Self-Driving Agents on the Carla Simulator -- Experience Report**
+## **44. Attacks and Faults Injection in Self-Driving Agents on the Carla Simulator -- Experience Report**
 
 cs.AI
 
@@ -481,7 +567,7 @@ submitted version; appeared at: International Conference on Computer  Safety, Re
 
 
 
-## **38. Does Label Differential Privacy Prevent Label Inference Attacks?**
+## **45. Does Label Differential Privacy Prevent Label Inference Attacks?**
 
 cs.LG
 
@@ -493,7 +579,7 @@ cs.LG
 
 
 
-## **39. Robust and Accurate Authorship Attribution via Program Normalization**
+## **46. Robust and Accurate Authorship Attribution via Program Normalization**
 
 cs.LG
 
@@ -505,7 +591,7 @@ cs.LG
 
 
 
-## **40. ARIA: Adversarially Robust Image Attribution for Content Provenance**
+## **47. ARIA: Adversarially Robust Image Attribution for Content Provenance**
 
 cs.CV
 
@@ -517,7 +603,7 @@ cs.CV
 
 
 
-## **41. Short Paper: Device- and Locality-Specific Fingerprinting of Shared NISQ Quantum Computers**
+## **48. Short Paper: Device- and Locality-Specific Fingerprinting of Shared NISQ Quantum Computers**
 
 cs.CR
 
@@ -531,7 +617,7 @@ cs.CR
 
 
 
-## **42. Detection as Regression: Certified Object Detection by Median Smoothing**
+## **49. Detection as Regression: Certified Object Detection by Median Smoothing**
 
 cs.CV
 
@@ -543,7 +629,7 @@ cs.CV
 
 
 
-## **43. On the Effectiveness of Dataset Watermarking in Adversarial Settings**
+## **50. On the Effectiveness of Dataset Watermarking in Adversarial Settings**
 
 cs.CR
 
@@ -554,100 +640,6 @@ cs.CR
 **Authors**: Buse Gul Atli Tekgul, N. Asokan
 
 **Abstracts**: In a data-driven world, datasets constitute a significant economic value. Dataset owners who spend time and money to collect and curate the data are incentivized to ensure that their datasets are not used in ways that they did not authorize. When such misuse occurs, dataset owners need technical mechanisms for demonstrating their ownership of the dataset in question. Dataset watermarking provides one approach for ownership demonstration which can, in turn, deter unauthorized use. In this paper, we investigate a recently proposed data provenance method, radioactive data, to assess if it can be used to demonstrate ownership of (image) datasets used to train machine learning (ML) models. The original paper reported that radioactive data is effective in white-box settings. We show that while this is true for large datasets with many classes, it is not as effective for datasets where the number of classes is low $(\leq 30)$ or the number of samples per class is low $(\leq 500)$. We also show that, counter-intuitively, the black-box verification technique is effective for all datasets used in this paper, even when white-box verification is not. Given this observation, we show that the confidence in white-box verification can be improved by using watermarked samples directly during the verification process. We also highlight the need to assess the robustness of radioactive data if it were to be used for ownership demonstration since it is an adversarial setting unlike provenance identification.   Compared to dataset watermarking, ML model watermarking has been explored more extensively in recent literature. However, most of the model watermarking techniques can be defeated via model extraction. We show that radioactive data can effectively survive model extraction attacks, which raises the possibility that it can be used for ML model ownership verification robust against model extraction.
-
-
-
-## **44. Understanding Adversarial Robustness from Feature Maps of Convolutional Layers**
-
-cs.CV
-
-10pages
-
-**SubmitDate**: 2022-02-25    [paper-pdf](http://arxiv.org/pdf/2202.12435v1)
-
-**Authors**: Cong Xu, Min Yang
-
-**Abstracts**: The adversarial robustness of a neural network mainly relies on two factors, one is the feature representation capacity of the network, and the other is its resistance ability to perturbations. In this paper, we study the anti-perturbation ability of the network from the feature maps of convolutional layers. Our theoretical analysis discovers that larger convolutional features before average pooling can contribute to better resistance to perturbations, but the conclusion is not true for max pooling. Based on the theoretical findings, we present two feasible ways to improve the robustness of existing neural networks. The proposed approaches are very simple and only require upsampling the inputs or modifying the stride configuration of convolution operators. We test our approaches on several benchmark neural network architectures, including AlexNet, VGG16, RestNet18 and PreActResNet18, and achieve non-trivial improvements on both natural accuracy and robustness under various attacks. Our study brings new insights into the design of robust neural networks. The code is available at \url{https://github.com/MTandHJ/rcm}.
-
-
-
-## **45. AEVA: Black-box Backdoor Detection Using Adversarial Extreme Value Analysis**
-
-cs.LG
-
-**SubmitDate**: 2022-02-24    [paper-pdf](http://arxiv.org/pdf/2110.14880v4)
-
-**Authors**: Junfeng Guo, Ang Li, Cong Liu
-
-**Abstracts**: Deep neural networks (DNNs) are proved to be vulnerable against backdoor attacks. A backdoor is often embedded in the target DNNs through injecting a backdoor trigger into training examples, which can cause the target DNNs misclassify an input attached with the backdoor trigger. Existing backdoor detection methods often require the access to the original poisoned training data, the parameters of the target DNNs, or the predictive confidence for each given input, which are impractical in many real-world applications, e.g., on-device deployed DNNs. We address the black-box hard-label backdoor detection problem where the DNN is fully black-box and only its final output label is accessible. We approach this problem from the optimization perspective and show that the objective of backdoor detection is bounded by an adversarial objective. Further theoretical and empirical studies reveal that this adversarial objective leads to a solution with highly skewed distribution; a singularity is often observed in the adversarial map of a backdoor-infected example, which we call the adversarial singularity phenomenon. Based on this observation, we propose the adversarial extreme value analysis(AEVA) to detect backdoors in black-box neural networks. AEVA is based on an extreme value analysis of the adversarial map, computed from the monte-carlo gradient estimation. Evidenced by extensive experiments across multiple popular tasks and backdoor attacks, our approach is shown effective in detecting backdoor attacks under the black-box hard-label scenarios.
-
-
-
-## **46. Bounding Membership Inference**
-
-cs.LG
-
-**SubmitDate**: 2022-02-24    [paper-pdf](http://arxiv.org/pdf/2202.12232v1)
-
-**Authors**: Anvith Thudi, Ilia Shumailov, Franziska Boenisch, Nicolas Papernot
-
-**Abstracts**: Differential Privacy (DP) is the de facto standard for reasoning about the privacy guarantees of a training algorithm. Despite the empirical observation that DP reduces the vulnerability of models to existing membership inference (MI) attacks, a theoretical underpinning as to why this is the case is largely missing in the literature. In practice, this means that models need to be trained with DP guarantees that greatly decrease their accuracy. In this paper, we provide a tighter bound on the accuracy of any MI adversary when a training algorithm provides $\epsilon$-DP. Our bound informs the design of a novel privacy amplification scheme, where an effective training set is sub-sampled from a larger set prior to the beginning of training, to greatly reduce the bound on MI accuracy. As a result, our scheme enables $\epsilon$-DP users to employ looser DP guarantees when training their model to limit the success of any MI adversary; this ensures that the model's accuracy is less impacted by the privacy guarantee. Finally, we discuss implications of our MI bound on the field of machine unlearning.
-
-
-
-## **47. Dynamic Defense Against Byzantine Poisoning Attacks in Federated Learning**
-
-cs.LG
-
-10 pages
-
-**SubmitDate**: 2022-02-24    [paper-pdf](http://arxiv.org/pdf/2007.15030v2)
-
-**Authors**: Nuria Rodríguez-Barroso, Eugenio Martínez-Cámara, M. Victoria Luzón, Francisco Herrera
-
-**Abstracts**: Federated learning, as a distributed learning that conducts the training on the local devices without accessing to the training data, is vulnerable to Byzatine poisoning adversarial attacks. We argue that the federated learning model has to avoid those kind of adversarial attacks through filtering out the adversarial clients by means of the federated aggregation operator. We propose a dynamic federated aggregation operator that dynamically discards those adversarial clients and allows to prevent the corruption of the global learning model. We assess it as a defense against adversarial attacks deploying a deep learning classification model in a federated learning setting on the Fed-EMNIST Digits, Fashion MNIST and CIFAR-10 image datasets. The results show that the dynamic selection of the clients to aggregate enhances the performance of the global learning model and discards the adversarial and poor (with low quality models) clients.
-
-
-
-## **48. HODA: Hardness-Oriented Detection of Model Extraction Attacks**
-
-cs.LG
-
-15 pages, 12 figures, 7 tables, 2 Alg
-
-**SubmitDate**: 2022-02-24    [paper-pdf](http://arxiv.org/pdf/2106.11424v2)
-
-**Authors**: Amir Mahdi Sadeghzadeh, Amir Mohammad Sobhanian, Faezeh Dehghan, Rasool Jalili
-
-**Abstracts**: Model Extraction attacks exploit the target model's prediction API to create a surrogate model in order to steal or reconnoiter the functionality of the target model in the black-box setting. Several recent studies have shown that a data-limited adversary who has no or limited access to the samples from the target model's training data distribution can use synthesis or semantically similar samples to conduct model extraction attacks. In this paper, we define the hardness degree of a sample using the concept of learning difficulty. The hardness degree of a sample depends on the epoch number that the predicted label of that sample converges. We investigate the hardness degree of samples and demonstrate that the hardness degree histogram of a data-limited adversary's sample sequences is distinguishable from the hardness degree histogram of benign users' samples sequences. We propose Hardness-Oriented Detection Approach (HODA) to detect the sample sequences of model extraction attacks. The results demonstrate that HODA can detect the sample sequences of model extraction attacks with a high success rate by only monitoring 100 samples of them, and it outperforms all previous model extraction detection methods.
-
-
-
-## **49. Feature Importance-aware Transferable Adversarial Attacks**
-
-cs.CV
-
-Accepted to ICCV 2021
-
-**SubmitDate**: 2022-02-24    [paper-pdf](http://arxiv.org/pdf/2107.14185v3)
-
-**Authors**: Zhibo Wang, Hengchang Guo, Zhifei Zhang, Wenxin Liu, Zhan Qin, Kui Ren
-
-**Abstracts**: Transferability of adversarial examples is of central importance for attacking an unknown model, which facilitates adversarial attacks in more practical scenarios, e.g., black-box attacks. Existing transferable attacks tend to craft adversarial examples by indiscriminately distorting features to degrade prediction accuracy in a source model without aware of intrinsic features of objects in the images. We argue that such brute-force degradation would introduce model-specific local optimum into adversarial examples, thus limiting the transferability. By contrast, we propose the Feature Importance-aware Attack (FIA), which disrupts important object-aware features that dominate model decisions consistently. More specifically, we obtain feature importance by introducing the aggregate gradient, which averages the gradients with respect to feature maps of the source model, computed on a batch of random transforms of the original clean image. The gradients will be highly correlated to objects of interest, and such correlation presents invariance across different models. Besides, the random transforms will preserve intrinsic features of objects and suppress model-specific information. Finally, the feature importance guides to search for adversarial examples towards disrupting critical features, achieving stronger transferability. Extensive experimental evaluation demonstrates the effectiveness and superior performance of the proposed FIA, i.e., improving the success rate by 9.5% against normally trained models and 12.8% against defense models as compared to the state-of-the-art transferable attacks. Code is available at: https://github.com/hcguoO0/FIA
-
-
-
-## **50. Robust Probabilistic Time Series Forecasting**
-
-cs.LG
-
-AISTATS 2022 camera ready version
-
-**SubmitDate**: 2022-02-24    [paper-pdf](http://arxiv.org/pdf/2202.11910v1)
-
-**Authors**: TaeHo Yoon, Youngsuk Park, Ernest K. Ryu, Yuyang Wang
-
-**Abstracts**: Probabilistic time series forecasting has played critical role in decision-making processes due to its capability to quantify uncertainties. Deep forecasting models, however, could be prone to input perturbations, and the notion of such perturbations, together with that of robustness, has not even been completely established in the regime of probabilistic forecasting. In this work, we propose a framework for robust probabilistic time series forecasting. First, we generalize the concept of adversarial input perturbations, based on which we formulate the concept of robustness in terms of bounded Wasserstein deviation. Then we extend the randomized smoothing technique to attain robust probabilistic forecasters with theoretical robustness certificates against certain classes of adversarial perturbations. Lastly, extensive experiments demonstrate that our methods are empirically effective in enhancing the forecast quality under additive adversarial attacks and forecast consistency under supplement of noisy observations.
 
 
 

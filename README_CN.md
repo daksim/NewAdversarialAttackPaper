@@ -1,5 +1,5 @@
 # Latest Adversarial Attack Papers
-**update at 2022-03-19 06:32:07**
+**update at 2022-03-20 06:31:22**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
@@ -443,7 +443,7 @@ Accepted by ICLR 2022
 
 ## **30. Data Poisoning Won't Save You From Facial Recognition**
 
-数据中毒不会将你从面部识别中解救出来 cs.LG
+数据中毒不会让你免于面部识别 cs.LG
 
 ICLR 2022
 
@@ -653,7 +653,7 @@ Accepted at IJCV 2022
 
 ## **44. Block-Sparse Adversarial Attack to Fool Transformer-Based Text Classifiers**
 
-对基于愚人转换器的文本分类器的块稀疏敌意攻击 cs.CL
+对基于愚人转换器的文本分类器的挡路稀疏敌意攻击 cs.CL
 
 ICASSP 2022, Code available at:  https://github.com/sssadrizadeh/transformer-text-classifier-attack
 
@@ -725,7 +725,7 @@ Update: New version with more theoretical results and a deeper  exploration of r
 
 **Abstracts**: Distribution inference, sometimes called property inference, infers statistical properties about a training set from access to a model trained on that data. Distribution inference attacks can pose serious risks when models are trained on private data, but are difficult to distinguish from the intrinsic purpose of statistical machine learning -- namely, to produce models that capture statistical properties about a distribution. Motivated by Yeom et al.'s membership inference framework, we propose a formal definition of distribution inference attacks that is general enough to describe a broad class of attacks distinguishing between possible training distributions. We show how our definition captures previous ratio-based property inference attacks as well as new kinds of attack including revealing the average node degree or clustering coefficient of a training graph. To understand distribution inference risks, we introduce a metric that quantifies observed leakage by relating it to the leakage that would occur if samples from the training distribution were provided directly to the adversary. We report on a series of experiments across a range of different distributions using both novel black-box attacks and improved versions of the state-of-the-art white-box attacks. Our results show that inexpensive attacks are often as effective as expensive meta-classifier attacks, and that there are surprising asymmetries in the effectiveness of attacks.
 
-摘要: 分布推理，有时被称为属性推理，从对基于该数据训练的模型的访问中推断出关于训练集的统计属性。当模型根据私有数据进行训练时，分布推断攻击可能会带来严重的风险，但很难与统计机器学习的内在目的区分开来--即产生捕获有关分布的统计属性的模型。受Yeom等人的成员关系推理框架的启发，我们提出了分布推理攻击的形式化定义，该定义足够通用，以描述区分可能的训练分布的广泛的攻击类别。我们展示了我们的定义如何捕获以前的基于比率的属性推理攻击，以及新的攻击类型，包括揭示训练图的平均结点度或聚类系数。为了了解分布推断风险，我们引入了一个度量，该度量通过将观察到的泄漏与训练分布的样本直接提供给对手时将发生的泄漏联系起来，来量化观察到的泄漏。我们报告了使用新的黑盒攻击和最先进的白盒攻击的改进版本在一系列不同的发行版上进行的一系列实验。我们的结果表明，廉价的攻击通常与昂贵的元分类器攻击一样有效，并且攻击的有效性存在惊人的不对称性。
+摘要: 分布推理，有时被称为属性推理，从对基于该数据训练的模型的访问中推断出关于训练集的统计属性。当模型基于私有数据进行训练时，分布推断攻击可能会带来严重的风险，但很难与统计机器学习的内在目的区分开来--即，生成捕获有关分布的统计属性的模型。在Yeom等人的成员关系推理框架的启发下，我们提出了分布推理攻击的形式化定义，该定义足够通用，可以描述区分可能的训练分布的广泛的攻击类别。我们展示了我们的定义如何捕获以前的基于比率的属性推理攻击，以及新的攻击类型，包括揭示训练图的平均节点度或聚类系数。为了了解分布推理风险，我们引入了一个度量，通过将观察到的泄漏与训练分布的样本直接提供给对手时将发生的泄漏联系起来，对观察到的泄漏进行量化。我们报告了使用新颖的黑盒攻击和最先进的白盒攻击的改进版本在一系列不同的发行版上进行的一系列实验。我们的结果表明，廉价的攻击通常与昂贵的元分类器攻击一样有效，并且攻击的有效性存在惊人的不对称性。
 
 
 

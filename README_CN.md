@@ -1,5 +1,5 @@
 # Latest Adversarial Attack Papers
-**update at 2022-03-20 06:31:22**
+**update at 2022-03-21 06:31:53**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
@@ -247,7 +247,7 @@ Accepted at ICLR 2022
 
 ## **17. Synthesis of the Supremal Covert Attacker Against Unknown Supervisors by Using Observations**
 
-利用观测值综合上位隐蔽攻击者对抗未知监督者 eess.SY
+利用观测值合成对抗未知监督者的最高隐蔽性攻击者 eess.SY
 
 **SubmitDate**: 2022-03-16    [paper-pdf](http://arxiv.org/pdf/2203.08360v1)
 
@@ -277,7 +277,7 @@ EMNLP 2021
 
 ## **19. Knowledge Enhanced Machine Learning Pipeline against Diverse Adversarial Attacks**
 
-针对不同对手攻击的知识增强型机器学习流水线 cs.LG
+针对不同对手攻击的知识增强型机器学习管道 cs.LG
 
 International Conference on Machine Learning 2021, 37 pages, 8  figures, 9 tables
 
@@ -413,7 +413,7 @@ Published in ICLR 2020. 20 Pages
 
 ## **28. Detection of Electromagnetic Signal Injection Attacks on Actuator Systems**
 
-执行机构系统电磁信号注入攻击的检测 cs.CR
+执行器系统电磁信号注入攻击的检测 cs.CR
 
 **SubmitDate**: 2022-03-14    [paper-pdf](http://arxiv.org/pdf/2203.07102v1)
 
@@ -443,7 +443,7 @@ Accepted by ICLR 2022
 
 ## **30. Data Poisoning Won't Save You From Facial Recognition**
 
-数据中毒不会让你免于面部识别 cs.LG
+数据中毒不会将你从面部识别中解救出来 cs.LG
 
 ICLR 2022
 
@@ -745,7 +745,7 @@ TraSw：针对多目标跟踪的Tracklet-Switch敌意攻击 cs.CV
 
 ## **50. SoK: On the Semantic AI Security in Autonomous Driving**
 
-SOK：关于自动驾驶中的语义人工智能安全 cs.CR
+SOK：自动驾驶中的语义人工智能安全 cs.CR
 
 Project website: https://sites.google.com/view/cav-sec/pass
 

@@ -1,9 +1,151 @@
 # Latest Adversarial Attack Papers
-**update at 2022-03-21 06:31:53**
+**update at 2022-03-22 06:31:49**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. Bayesian Framework for Gradient Leakage**
+## **1. All You Need is RAW: Defending Against Adversarial Attacks with Camera Image Pipelines**
+
+cs.CV
+
+**SubmitDate**: 2022-03-18    [paper-pdf](http://arxiv.org/pdf/2112.09219v2)
+
+**Authors**: Yuxuan Zhang, Bo Dong, Felix Heide
+
+**Abstracts**: Existing neural networks for computer vision tasks are vulnerable to adversarial attacks: adding imperceptible perturbations to the input images can fool these methods to make a false prediction on an image that was correctly predicted without the perturbation. Various defense methods have proposed image-to-image mapping methods, either including these perturbations in the training process or removing them in a preprocessing denoising step. In doing so, existing methods often ignore that the natural RGB images in today's datasets are not captured but, in fact, recovered from RAW color filter array captures that are subject to various degradations in the capture. In this work, we exploit this RAW data distribution as an empirical prior for adversarial defense. Specifically, we proposed a model-agnostic adversarial defensive method, which maps the input RGB images to Bayer RAW space and back to output RGB using a learned camera image signal processing (ISP) pipeline to eliminate potential adversarial patterns. The proposed method acts as an off-the-shelf preprocessing module and, unlike model-specific adversarial training methods, does not require adversarial images to train. As a result, the method generalizes to unseen tasks without additional retraining. Experiments on large-scale datasets (e.g., ImageNet, COCO) for different vision tasks (e.g., classification, semantic segmentation, object detection) validate that the method significantly outperforms existing methods across task domains.
+
+
+
+## **2. Graph-Fraudster: Adversarial Attacks on Graph Neural Network Based Vertical Federated Learning**
+
+cs.LG
+
+**SubmitDate**: 2022-03-18    [paper-pdf](http://arxiv.org/pdf/2110.06468v2)
+
+**Authors**: Jinyin Chen, Guohan Huang, Haibin Zheng, Shanqing Yu, Wenrong Jiang, Chen Cui
+
+**Abstracts**: Graph neural network (GNN) has achieved great success on graph representation learning. Challenged by large scale private data collected from user-side, GNN may not be able to reflect the excellent performance, without rich features and complete adjacent relationships. Addressing the problem, vertical federated learning (VFL) is proposed to implement local data protection through training a global model collaboratively. Consequently, for graph-structured data, it is a natural idea to construct a GNN based VFL framework, denoted as GVFL. However, GNN has been proved vulnerable to adversarial attacks. Whether the vulnerability will be brought into the GVFL has not been studied. This is the first study of adversarial attacks on GVFL. A novel adversarial attack method is proposed, named Graph-Fraudster. It generates adversarial perturbations based on the noise-added global node embeddings via the privacy leakage and the gradient of pairwise node. Specifically, first, Graph-Fraudster steals the global node embeddings and sets up a shadow model of the server for the attack generator. Second, noise is added into node embeddings to confuse the shadow model. At last, the gradient of pairwise node is used to generate attacks with the guidance of noise-added node embeddings. Extensive experiments on five benchmark datasets demonstrate that Graph-Fraudster achieves the state-of-the-art attack performance compared with baselines in different GNN based GVFLs. Furthermore, Graph-Fraudster can remain a threat to GVFL even if two possible defense mechanisms are applied. Additionally, some suggestions are put forward for the future work to improve the robustness of GVFL. The code and datasets can be downloaded at https://github.com/hgh0545/Graph-Fraudster.
+
+
+
+## **3. Defending Variational Autoencoders from Adversarial Attacks with MCMC**
+
+cs.LG
+
+**SubmitDate**: 2022-03-18    [paper-pdf](http://arxiv.org/pdf/2203.09940v1)
+
+**Authors**: Anna Kuzina, Max Welling, Jakub M. Tomczak
+
+**Abstracts**: Variational autoencoders (VAEs) are deep generative models used in various domains. VAEs can generate complex objects and provide meaningful latent representations, which can be further used in downstream tasks such as classification. As previous work has shown, one can easily fool VAEs to produce unexpected latent representations and reconstructions for a visually slightly modified input. Here, we examine several objective functions for adversarial attacks construction, suggest metrics assess the model robustness, and propose a solution to alleviate the effect of an attack. Our method utilizes the Markov Chain Monte Carlo (MCMC) technique in the inference step and is motivated by our theoretical analysis. Thus, we do not incorporate any additional costs during training or we do not decrease the performance on non-attacked inputs. We validate our approach on a variety of datasets (MNIST, Fashion MNIST, Color MNIST, CelebA) and VAE configurations ($\beta$-VAE, NVAE, TC-VAE) and show that it consistently improves the model robustness to adversarial attacks.
+
+
+
+## **4. Neural Predictor for Black-Box Adversarial Attacks on Speech Recognition**
+
+cs.SD
+
+**SubmitDate**: 2022-03-18    [paper-pdf](http://arxiv.org/pdf/2203.09849v1)
+
+**Authors**: Marie Biolková, Bac Nguyen
+
+**Abstracts**: Recent works have revealed the vulnerability of automatic speech recognition (ASR) models to adversarial examples (AEs), i.e., small perturbations that cause an error in the transcription of the audio signal. Studying audio adversarial attacks is therefore the first step towards robust ASR. Despite the significant progress made in attacking audio examples, the black-box attack remains challenging because only the hard-label information of transcriptions is provided. Due to this limited information, existing black-box methods often require an excessive number of queries to attack a single audio example. In this paper, we introduce NP-Attack, a neural predictor-based method, which progressively evolves the search towards a small adversarial perturbation. Given a perturbation direction, our neural predictor directly estimates the smallest perturbation that causes a mistranscription. In particular, it enables NP-Attack to accurately learn promising perturbation directions via gradient-based optimization. Experimental results show that NP-Attack achieves competitive results with other state-of-the-art black-box adversarial attacks while requiring a significantly smaller number of queries. The code of NP-Attack is available online.
+
+
+
+## **5. DTA: Physical Camouflage Attacks using Differentiable Transformation Network**
+
+cs.CV
+
+Accepted for CVPR 2022
+
+**SubmitDate**: 2022-03-18    [paper-pdf](http://arxiv.org/pdf/2203.09831v1)
+
+**Authors**: Naufal Suryanto, Yongsu Kim, Hyoeun Kang, Harashta Tatimma Larasati, Youngyeo Yun, Thi-Thu-Huong Le, Hunmin Yang, Se-Yoon Oh, Howon Kim
+
+**Abstracts**: To perform adversarial attacks in the physical world, many studies have proposed adversarial camouflage, a method to hide a target object by applying camouflage patterns on 3D object surfaces. For obtaining optimal physical adversarial camouflage, previous studies have utilized the so-called neural renderer, as it supports differentiability. However, existing neural renderers cannot fully represent various real-world transformations due to a lack of control of scene parameters compared to the legacy photo-realistic renderers. In this paper, we propose the Differentiable Transformation Attack (DTA), a framework for generating a robust physical adversarial pattern on a target object to camouflage it against object detection models with a wide range of transformations. It utilizes our novel Differentiable Transformation Network (DTN), which learns the expected transformation of a rendered object when the texture is changed while preserving the original properties of the target object. Using our attack framework, an adversary can gain both the advantages of the legacy photo-realistic renderers including various physical-world transformations and the benefit of white-box access by offering differentiability. Our experiments show that our camouflaged 3D vehicles can successfully evade state-of-the-art object detection models in the photo-realistic environment (i.e., CARLA on Unreal Engine). Furthermore, our demonstration on a scaled Tesla Model 3 proves the applicability and transferability of our method to the real world.
+
+
+
+## **6. AdIoTack: Quantifying and Refining Resilience of Decision Tree Ensemble Inference Models against Adversarial Volumetric Attacks on IoT Networks**
+
+cs.LG
+
+15 pages, 16 figures, 4 tables
+
+**SubmitDate**: 2022-03-18    [paper-pdf](http://arxiv.org/pdf/2203.09792v1)
+
+**Authors**: Arman Pashamokhtari, Gustavo Batista, Hassan Habibi Gharakheili
+
+**Abstracts**: Machine Learning-based techniques have shown success in cyber intelligence. However, they are increasingly becoming targets of sophisticated data-driven adversarial attacks resulting in misprediction, eroding their ability to detect threats on network devices. In this paper, we present AdIoTack, a system that highlights vulnerabilities of decision trees against adversarial attacks, helping cybersecurity teams quantify and refine the resilience of their trained models for monitoring IoT networks. To assess the model for the worst-case scenario, AdIoTack performs white-box adversarial learning to launch successful volumetric attacks that decision tree ensemble models cannot flag. Our first contribution is to develop a white-box algorithm that takes a trained decision tree ensemble model and the profile of an intended network-based attack on a victim class as inputs. It then automatically generates recipes that specify certain packets on top of the indented attack packets (less than 15% overhead) that together can bypass the inference model unnoticed. We ensure that the generated attack instances are feasible for launching on IP networks and effective in their volumetric impact. Our second contribution develops a method to monitor the network behavior of connected devices actively, inject adversarial traffic (when feasible) on behalf of a victim IoT device, and successfully launch the intended attack. Our third contribution prototypes AdIoTack and validates its efficacy on a testbed consisting of a handful of real IoT devices monitored by a trained inference model. We demonstrate how the model detects all non-adversarial volumetric attacks on IoT devices while missing many adversarial ones. The fourth contribution develops systematic methods for applying patches to trained decision tree ensemble models, improving their resilience against adversarial volumetric attacks.
+
+
+
+## **7. Adversarial Texture for Fooling Person Detectors in the Physical World**
+
+cs.CV
+
+Accepted by CVPR 2022
+
+**SubmitDate**: 2022-03-18    [paper-pdf](http://arxiv.org/pdf/2203.03373v3)
+
+**Authors**: Zhanhao Hu, Siyuan Huang, Xiaopei Zhu, Xiaolin Hu, Fuchun Sun, Bo Zhang
+
+**Abstracts**: Nowadays, cameras equipped with AI systems can capture and analyze images to detect people automatically. However, the AI system can make mistakes when receiving deliberately designed patterns in the real world, i.e., physical adversarial examples. Prior works have shown that it is possible to print adversarial patches on clothes to evade DNN-based person detectors. However, these adversarial examples could have catastrophic drops in the attack success rate when the viewing angle (i.e., the camera's angle towards the object) changes. To perform a multi-angle attack, we propose Adversarial Texture (AdvTexture). AdvTexture can cover clothes with arbitrary shapes so that people wearing such clothes can hide from person detectors from different viewing angles. We propose a generative method, named Toroidal-Cropping-based Expandable Generative Attack (TC-EGA), to craft AdvTexture with repetitive structures. We printed several pieces of cloth with AdvTexure and then made T-shirts, skirts, and dresses in the physical world. Experiments showed that these clothes could fool person detectors in the physical world.
+
+
+
+## **8. AutoAdversary: A Pixel Pruning Method for Sparse Adversarial Attack**
+
+cs.CV
+
+**SubmitDate**: 2022-03-18    [paper-pdf](http://arxiv.org/pdf/2203.09756v1)
+
+**Authors**: Jinqiao Li, Xiaotao Liu, Jian Zhao, Furao Shen
+
+**Abstracts**: Deep neural networks (DNNs) have been proven to be vulnerable to adversarial examples. A special branch of adversarial examples, namely sparse adversarial examples, can fool the target DNNs by perturbing only a few pixels. However, many existing sparse adversarial attacks use heuristic methods to select the pixels to be perturbed, and regard the pixel selection and the adversarial attack as two separate steps. From the perspective of neural network pruning, we propose a novel end-to-end sparse adversarial attack method, namely AutoAdversary, which can find the most important pixels automatically by integrating the pixel selection into the adversarial attack. Specifically, our method utilizes a trainable neural network to generate a binary mask for the pixel selection. After jointly optimizing the adversarial perturbation and the neural network, only the pixels corresponding to the value 1 in the mask are perturbed. Experiments demonstrate the superiority of our proposed method over several state-of-the-art methods. Furthermore, since AutoAdversary does not require a heuristic pixel selection process, it does not slow down excessively as other methods when the image size increases.
+
+
+
+## **9. HDLock: Exploiting Privileged Encoding to Protect Hyperdimensional Computing Models against IP Stealing**
+
+cs.CR
+
+7 pages, 9 figures, accepted by and to be presented at DAC 2022
+
+**SubmitDate**: 2022-03-18    [paper-pdf](http://arxiv.org/pdf/2203.09681v1)
+
+**Authors**: Shijin Duan, Shaolei Ren, Xiaolin Xu
+
+**Abstracts**: Hyperdimensional Computing (HDC) is facing infringement issues due to straightforward computations. This work, for the first time, raises a critical vulnerability of HDC, an attacker can reverse engineer the entire model, only requiring the unindexed hypervector memory. To mitigate this attack, we propose a defense strategy, namely HDLock, which significantly increases the reasoning cost of encoding. Specifically, HDLock adds extra feature hypervector combination and permutation in the encoding module. Compared to the standard HDC model, a two-layer-key HDLock can increase the adversarial reasoning complexity by 10 order of magnitudes without inference accuracy loss, with only 21% latency overhead.
+
+
+
+## **10. Self-Ensemble Adversarial Training for Improved Robustness**
+
+cs.LG
+
+17 pages, 3 figures, ICLR 2022
+
+**SubmitDate**: 2022-03-18    [paper-pdf](http://arxiv.org/pdf/2203.09678v1)
+
+**Authors**: Hongjun Wang, Yisen Wang
+
+**Abstracts**: Due to numerous breakthroughs in real-world applications brought by machine intelligence, deep neural networks (DNNs) are widely employed in critical applications. However, predictions of DNNs are easily manipulated with imperceptible adversarial perturbations, which impedes the further deployment of DNNs and may result in profound security and privacy implications. By incorporating adversarial samples into the training data pool, adversarial training is the strongest principled strategy against various adversarial attacks among all sorts of defense methods. Recent works mainly focus on developing new loss functions or regularizers, attempting to find the unique optimal point in the weight space. But none of them taps the potentials of classifiers obtained from standard adversarial training, especially states on the searching trajectory of training. In this work, we are dedicated to the weight states of models through the training process and devise a simple but powerful \emph{Self-Ensemble Adversarial Training} (SEAT) method for yielding a robust classifier by averaging weights of history models. This considerably improves the robustness of the target model against several well known adversarial attacks, even merely utilizing the naive cross-entropy loss to supervise. We also discuss the relationship between the ensemble of predictions from different adversarially trained models and the prediction of weight-ensembled models, as well as provide theoretical and empirical evidence that the proposed self-ensemble method provides a smoother loss landscape and better robustness than both individual models and the ensemble of predictions from different classifiers. We further analyze a subtle but fatal issue in the general settings for the self-ensemble model, which causes the deterioration of the weight-ensembled method in the late phases.
+
+
+
+## **11. Provably Robust Adversarial Examples**
+
+cs.LG
+
+**SubmitDate**: 2022-03-17    [paper-pdf](http://arxiv.org/pdf/2007.12133v3)
+
+**Authors**: Dimitar I. Dimitrov, Gagandeep Singh, Timon Gehr, Martin Vechev
+
+**Abstracts**: We introduce the concept of provably robust adversarial examples for deep neural networks - connected input regions constructed from standard adversarial examples which are guaranteed to be robust to a set of real-world perturbations (such as changes in pixel intensity and geometric transformations). We present a novel method called PARADE for generating these regions in a scalable manner which works by iteratively refining the region initially obtained via sampling until a refined region is certified to be adversarial with existing state-of-the-art verifiers. At each step, a novel optimization procedure is applied to maximize the region's volume under the constraint that the convex relaxation of the network behavior with respect to the region implies a chosen bound on the certification objective. Our experimental evaluation shows the effectiveness of PARADE: it successfully finds large provably robust regions including ones containing $\approx 10^{573}$ adversarial examples for pixel intensity and $\approx 10^{599}$ for geometric perturbations. The provability enables our robust examples to be significantly more effective against state-of-the-art defenses based on randomized smoothing than the individual attacks used to construct the regions.
+
+
+
+## **12. Bayesian Framework for Gradient Leakage**
 
 cs.LG
 
@@ -15,7 +157,7 @@ cs.LG
 
 
 
-## **2. SPAA: Stealthy Projector-based Adversarial Attacks on Deep Image Classifiers**
+## **13. SPAA: Stealthy Projector-based Adversarial Attacks on Deep Image Classifiers**
 
 cs.CV
 
@@ -27,7 +169,7 @@ cs.CV
 
 
 
-## **3. PiDAn: A Coherence Optimization Approach for Backdoor Attack Detection and Mitigation in Deep Neural Networks**
+## **14. PiDAn: A Coherence Optimization Approach for Backdoor Attack Detection and Mitigation in Deep Neural Networks**
 
 cs.LG
 
@@ -39,7 +181,7 @@ cs.LG
 
 
 
-## **4. On the Properties of Adversarially-Trained CNNs**
+## **15. On the Properties of Adversarially-Trained CNNs**
 
 cs.CV
 
@@ -51,7 +193,7 @@ cs.CV
 
 
 
-## **5. Improving the Transferability of Targeted Adversarial Examples through Object-Based Diverse Input**
+## **16. Improving the Transferability of Targeted Adversarial Examples through Object-Based Diverse Input**
 
 cs.CV
 
@@ -65,7 +207,7 @@ Accepted at CVPR 2022
 
 
 
-## **6. Probabilistic Margins for Instance Reweighting in Adversarial Training**
+## **17. Probabilistic Margins for Instance Reweighting in Adversarial Training**
 
 cs.LG
 
@@ -79,7 +221,7 @@ cs.LG
 
 
 
-## **7. BLOWN: A Blockchain Protocol for Single-Hop Wireless Networks under Adversarial SINR**
+## **18. BLOWN: A Blockchain Protocol for Single-Hop Wireless Networks under Adversarial SINR**
 
 cs.CR
 
@@ -93,7 +235,7 @@ cs.CR
 
 
 
-## **8. Robustness through Cognitive Dissociation Mitigation in Contrastive Adversarial Training**
+## **19. Robustness through Cognitive Dissociation Mitigation in Contrastive Adversarial Training**
 
 cs.LG
 
@@ -105,7 +247,7 @@ cs.LG
 
 
 
-## **9. Provable Adversarial Robustness for Fractional Lp Threat Models**
+## **20. Provable Adversarial Robustness for Fractional Lp Threat Models**
 
 cs.LG
 
@@ -119,7 +261,7 @@ AISTATS 2022 accepted paper
 
 
 
-## **10. Semantic-preserving Reinforcement Learning Attack Against Graph Neural Networks for Malware Detection**
+## **21. Semantic-preserving Reinforcement Learning Attack Against Graph Neural Networks for Malware Detection**
 
 cs.CR
 
@@ -131,7 +273,7 @@ cs.CR
 
 
 
-## **11. Attacking deep networks with surrogate-based adversarial black-box methods is easy**
+## **22. Attacking deep networks with surrogate-based adversarial black-box methods is easy**
 
 cs.LG
 
@@ -145,7 +287,7 @@ ICLR 2022
 
 
 
-## **12. On the Security & Privacy in Federated Learning**
+## **23. On the Security & Privacy in Federated Learning**
 
 cs.CR
 
@@ -157,7 +299,7 @@ cs.CR
 
 
 
-## **13. Towards Practical Certifiable Patch Defense with Vision Transformer**
+## **24. Towards Practical Certifiable Patch Defense with Vision Transformer**
 
 cs.CV
 
@@ -171,7 +313,7 @@ Accepted by CVPR2022
 
 
 
-## **14. SHIELD: Defending Textual Neural Networks against Multiple Black-Box Adversarial Attacks with Stochastic Multi-Expert Patcher**
+## **25. SHIELD: Defending Textual Neural Networks against Multiple Black-Box Adversarial Attacks with Stochastic Multi-Expert Patcher**
 
 cs.LG
 
@@ -185,7 +327,7 @@ Accepted to the 60th Annual Meeting of the Association for  Computational Lingui
 
 
 
-## **15. CROP: Certifying Robust Policies for Reinforcement Learning through Functional Smoothing**
+## **26. CROP: Certifying Robust Policies for Reinforcement Learning through Functional Smoothing**
 
 cs.LG
 
@@ -199,7 +341,7 @@ Published as a conference paper at ICLR 2022
 
 
 
-## **16. Patch-Fool: Are Vision Transformers Always Robust Against Adversarial Perturbations?**
+## **27. Patch-Fool: Are Vision Transformers Always Robust Against Adversarial Perturbations?**
 
 cs.CV
 
@@ -213,7 +355,7 @@ Accepted at ICLR 2022
 
 
 
-## **17. Synthesis of the Supremal Covert Attacker Against Unknown Supervisors by Using Observations**
+## **28. Synthesis of the Supremal Covert Attacker Against Unknown Supervisors by Using Observations**
 
 eess.SY
 
@@ -225,7 +367,7 @@ eess.SY
 
 
 
-## **18. Improving Question Answering Model Robustness with Synthetic Adversarial Data Generation**
+## **29. Improving Question Answering Model Robustness with Synthetic Adversarial Data Generation**
 
 cs.CL
 
@@ -239,7 +381,7 @@ EMNLP 2021
 
 
 
-## **19. Knowledge Enhanced Machine Learning Pipeline against Diverse Adversarial Attacks**
+## **30. Knowledge Enhanced Machine Learning Pipeline against Diverse Adversarial Attacks**
 
 cs.LG
 
@@ -253,7 +395,7 @@ International Conference on Machine Learning 2021, 37 pages, 8  figures, 9 table
 
 
 
-## **20. Frequency-driven Imperceptible Adversarial Attack on Semantic Similarity**
+## **31. Frequency-driven Imperceptible Adversarial Attack on Semantic Similarity**
 
 cs.CV
 
@@ -267,7 +409,7 @@ cs.CV
 
 
 
-## **21. Towards Adversarial Control Loops in Sensor Attacks: A Case Study to Control the Kinematics and Actuation of Embedded Systems**
+## **32. Towards Adversarial Control Loops in Sensor Attacks: A Case Study to Control the Kinematics and Actuation of Embedded Systems**
 
 cs.CR
 
@@ -279,7 +421,7 @@ cs.CR
 
 
 
-## **22. A Regularization Method to Improve Adversarial Robustness of Neural Networks for ECG Signal Classification**
+## **33. A Regularization Method to Improve Adversarial Robustness of Neural Networks for ECG Signal Classification**
 
 cs.LG
 
@@ -293,7 +435,7 @@ This paper has been published by Computers in Biology and Medicine
 
 
 
-## **23. Semantically Distributed Robust Optimization for Vision-and-Language Inference**
+## **34. Semantically Distributed Robust Optimization for Vision-and-Language Inference**
 
 cs.CV
 
@@ -307,7 +449,7 @@ Findings of ACL 2022; code available at  https://github.com/ASU-APG/VLI_SDRO
 
 
 
-## **24. RES-HD: Resilient Intelligent Fault Diagnosis Against Adversarial Attacks Using Hyper-Dimensional Computing**
+## **35. RES-HD: Resilient Intelligent Fault Diagnosis Against Adversarial Attacks Using Hyper-Dimensional Computing**
 
 cs.CR
 
@@ -319,7 +461,7 @@ cs.CR
 
 
 
-## **25. Defending From Physically-Realizable Adversarial Attacks Through Internal Over-Activation Analysis**
+## **36. Defending From Physically-Realizable Adversarial Attacks Through Internal Over-Activation Analysis**
 
 cs.CV
 
@@ -331,7 +473,7 @@ cs.CV
 
 
 
-## **26. MACER: Attack-free and Scalable Robust Training via Maximizing Certified Radius**
+## **37. MACER: Attack-free and Scalable Robust Training via Maximizing Certified Radius**
 
 cs.LG
 
@@ -345,7 +487,7 @@ Published in ICLR 2020. 20 Pages
 
 
 
-## **27. On the benefits of knowledge distillation for adversarial robustness**
+## **38. On the benefits of knowledge distillation for adversarial robustness**
 
 cs.LG
 
@@ -357,7 +499,7 @@ cs.LG
 
 
 
-## **28. Detection of Electromagnetic Signal Injection Attacks on Actuator Systems**
+## **39. Detection of Electromagnetic Signal Injection Attacks on Actuator Systems**
 
 cs.CR
 
@@ -369,7 +511,7 @@ cs.CR
 
 
 
-## **29. Beyond ImageNet Attack: Towards Crafting Adversarial Examples for Black-box Domains**
+## **40. Beyond ImageNet Attack: Towards Crafting Adversarial Examples for Black-box Domains**
 
 cs.CV
 
@@ -383,7 +525,7 @@ Accepted by ICLR 2022
 
 
 
-## **30. Data Poisoning Won't Save You From Facial Recognition**
+## **41. Data Poisoning Won't Save You From Facial Recognition**
 
 cs.LG
 
@@ -397,7 +539,7 @@ ICLR 2022
 
 
 
-## **31. Efficient universal shuffle attack for visual object tracking**
+## **42. Efficient universal shuffle attack for visual object tracking**
 
 cs.CV
 
@@ -411,7 +553,7 @@ accepted for ICASSP 2022
 
 
 
-## **32. Defending Against Adversarial Attack in ECG Classification with Adversarial Distillation Training**
+## **43. Defending Against Adversarial Attack in ECG Classification with Adversarial Distillation Training**
 
 eess.SP
 
@@ -423,7 +565,7 @@ eess.SP
 
 
 
-## **33. Generating Practical Adversarial Network Traffic Flows Using NIDSGAN**
+## **44. Generating Practical Adversarial Network Traffic Flows Using NIDSGAN**
 
 cs.CR
 
@@ -435,7 +577,7 @@ cs.CR
 
 
 
-## **34. LAS-AT: Adversarial Training with Learnable Attack Strategy**
+## **45. LAS-AT: Adversarial Training with Learnable Attack Strategy**
 
 cs.CV
 
@@ -447,7 +589,7 @@ cs.CV
 
 
 
-## **35. One Parameter Defense -- Defending against Data Inference Attacks via Differential Privacy**
+## **46. One Parameter Defense -- Defending against Data Inference Attacks via Differential Privacy**
 
 cs.CR
 
@@ -459,7 +601,7 @@ cs.CR
 
 
 
-## **36. Model Inversion Attack against Transfer Learning: Inverting a Model without Accessing It**
+## **47. Model Inversion Attack against Transfer Learning: Inverting a Model without Accessing It**
 
 cs.CR
 
@@ -471,7 +613,7 @@ cs.CR
 
 
 
-## **37. Query-Efficient Black-box Adversarial Attacks Guided by a Transfer-based Prior**
+## **48. Query-Efficient Black-box Adversarial Attacks Guided by a Transfer-based Prior**
 
 cs.LG
 
@@ -485,7 +627,7 @@ Accepted by IEEE Transactions on Pattern Recognition and Machine  Intelligence (
 
 
 
-## **38. Label-only Model Inversion Attack: The Attack that Requires the Least Information**
+## **49. Label-only Model Inversion Attack: The Attack that Requires the Least Information**
 
 cs.CR
 
@@ -497,7 +639,7 @@ cs.CR
 
 
 
-## **39. Mal2GCN: A Robust Malware Detection Approach Using Deep Graph Convolutional Networks With Non-Negative Weights**
+## **50. Mal2GCN: A Robust Malware Detection Approach Using Deep Graph Convolutional Networks With Non-Negative Weights**
 
 cs.CR
 
@@ -508,154 +650,6 @@ cs.CR
 **Authors**: Omid Kargarnovin, Amir Mahdi Sadeghzadeh, Rasool Jalili
 
 **Abstracts**: With the growing pace of using Deep Learning (DL) to solve various problems, securing these models against adversaries has become one of the main concerns of researchers. Recent studies have shown that DL-based malware detectors are vulnerable to adversarial examples. An adversary can create carefully crafted adversarial examples to evade DL-based malware detectors. In this paper, we propose Mal2GCN, a robust malware detection model that uses Function Call Graph (FCG) representation of executable files combined with Graph Convolution Network (GCN) to detect Windows malware. Since FCG representation of executable files is more robust than raw byte sequence representation, numerous proposed adversarial example generating methods are ineffective in evading Mal2GCN. Moreover, we use the non-negative training method to transform Mal2GCN to a monotonically non-decreasing function; thereby, it becomes theoretically robust against appending attacks. We then present a black-box source code-based adversarial malware generation approach that can be used to evaluate the robustness of malware detection models against real-world adversaries. The proposed approach injects adversarial codes into the various locations of malware source codes to evade malware detection models. The experiments demonstrate that Mal2GCN with non-negative weights has high accuracy in detecting Windows malware, and it is also robust against adversarial attacks that add benign features to the Malware source code.
-
-
-
-## **40. A Survey in Adversarial Defences and Robustness in NLP**
-
-cs.CL
-
-**SubmitDate**: 2022-03-12    [paper-pdf](http://arxiv.org/pdf/2203.06414v1)
-
-**Authors**: Shreya Goyal, Sumanth Doddapaneni, Mitesh M. Khapra, Balaraman Ravindran
-
-**Abstracts**: In recent years, it has been seen that deep neural networks are lacking robustness and are likely to break in case of adversarial perturbations in input data. Strong adversarial attacks are proposed by various authors for computer vision and Natural Language Processing (NLP). As a counter-effort, several defense mechanisms are also proposed to save these networks from failing. In contrast with image data, generating adversarial attacks and defending these models is not easy in NLP because of the discrete nature of the text data. However, numerous methods for adversarial defense are proposed of late, for different NLP tasks such as text classification, named entity recognition, natural language inferencing, etc. These methods are not just used for defending neural networks from adversarial attacks, but also used as a regularization mechanism during training, saving the model from overfitting. The proposed survey is an attempt to review different methods proposed for adversarial defenses in NLP in the recent past by proposing a novel taxonomy. This survey also highlights the fragility of the advanced deep neural networks in NLP and the challenges in defending them.
-
-
-
-## **41. Detecting CAN Masquerade Attacks with Signal Clustering Similarity**
-
-cs.CR
-
-8 pages, 5 figures, 3 tables
-
-**SubmitDate**: 2022-03-11    [paper-pdf](http://arxiv.org/pdf/2201.02665v2)
-
-**Authors**: Pablo Moriano, Robert A. Bridges, Michael D. Iannacone
-
-**Abstracts**: Vehicular Controller Area Networks (CANs) are susceptible to cyber attacks of different levels of sophistication. Fabrication attacks are the easiest to administer -- an adversary simply sends (extra) frames on a CAN -- but also the easiest to detect because they disrupt frame frequency. To overcome time-based detection methods, adversaries must administer masquerade attacks by sending frames in lieu of (and therefore at the expected time of) benign frames but with malicious payloads. Research efforts have proven that CAN attacks, and masquerade attacks in particular, can affect vehicle functionality. Examples include causing unintended acceleration, deactivation of vehicle's brakes, as well as steering the vehicle. We hypothesize that masquerade attacks modify the nuanced correlations of CAN signal time series and how they cluster together. Therefore, changes in cluster assignments should indicate anomalous behavior. We confirm this hypothesis by leveraging our previously developed capability for reverse engineering CAN signals (i.e., CAN-D [Controller Area Network Decoder]) and focus on advancing the state of the art for detecting masquerade attacks by analyzing time series extracted from raw CAN frames. Specifically, we demonstrate that masquerade attacks can be detected by computing time series clustering similarity using hierarchical clustering on the vehicle's CAN signals (time series) and comparing the clustering similarity across CAN captures with and without attacks. We test our approach in a previously collected CAN dataset with masquerade attacks (i.e., the ROAD dataset) and develop a forensic tool as a proof of concept to demonstrate the potential of the proposed approach for detecting CAN masquerade attacks.
-
-
-
-## **42. On Adversarial Robustness of Trajectory Prediction for Autonomous Vehicles**
-
-cs.CV
-
-13 pages, 13 figures, accepted by CVPR 2022
-
-**SubmitDate**: 2022-03-11    [paper-pdf](http://arxiv.org/pdf/2201.05057v2)
-
-**Authors**: Qingzhao Zhang, Shengtuo Hu, Jiachen Sun, Qi Alfred Chen, Z. Morley Mao
-
-**Abstracts**: Trajectory prediction is a critical component for autonomous vehicles (AVs) to perform safe planning and navigation. However, few studies have analyzed the adversarial robustness of trajectory prediction or investigated whether the worst-case prediction can still lead to safe planning. To bridge this gap, we study the adversarial robustness of trajectory prediction models by proposing a new adversarial attack that perturbs normal vehicle trajectories to maximize the prediction error. Our experiments on three models and three datasets show that the adversarial prediction increases the prediction error by more than 150%. Our case studies show that if an adversary drives a vehicle close to the target AV following the adversarial trajectory, the AV may make an inaccurate prediction and even make unsafe driving decisions. We also explore possible mitigation techniques via data augmentation and trajectory smoothing. The implementation is open source at https://github.com/zqzqz/AdvTrajectoryPrediction.
-
-
-
-## **43. Sparse Black-box Video Attack with Reinforcement Learning**
-
-cs.CV
-
-Accepted at IJCV 2022
-
-**SubmitDate**: 2022-03-11    [paper-pdf](http://arxiv.org/pdf/2001.03754v3)
-
-**Authors**: Xingxing Wei, Huanqian Yan, Bo Li
-
-**Abstracts**: Adversarial attacks on video recognition models have been explored recently. However, most existing works treat each video frame equally and ignore their temporal interactions. To overcome this drawback, a few methods try to select some key frames and then perform attacks based on them. Unfortunately, their selection strategy is independent of the attacking step, therefore the resulting performance is limited. Instead, we argue the frame selection phase is closely relevant with the attacking phase. The key frames should be adjusted according to the attacking results. For that, we formulate the black-box video attacks into a Reinforcement Learning (RL) framework. Specifically, the environment in RL is set as the recognition model, and the agent in RL plays the role of frame selecting. By continuously querying the recognition models and receiving the attacking feedback, the agent gradually adjusts its frame selection strategy and adversarial perturbations become smaller and smaller. We conduct a series of experiments with two mainstream video recognition models: C3D and LRCN on the public UCF-101 and HMDB-51 datasets. The results demonstrate that the proposed method can significantly reduce the adversarial perturbations with efficient query times.
-
-
-
-## **44. Block-Sparse Adversarial Attack to Fool Transformer-Based Text Classifiers**
-
-cs.CL
-
-ICASSP 2022, Code available at:  https://github.com/sssadrizadeh/transformer-text-classifier-attack
-
-**SubmitDate**: 2022-03-11    [paper-pdf](http://arxiv.org/pdf/2203.05948v1)
-
-**Authors**: Sahar Sadrizadeh, Ljiljana Dolamic, Pascal Frossard
-
-**Abstracts**: Recently, it has been shown that, in spite of the significant performance of deep neural networks in different fields, those are vulnerable to adversarial examples. In this paper, we propose a gradient-based adversarial attack against transformer-based text classifiers. The adversarial perturbation in our method is imposed to be block-sparse so that the resultant adversarial example differs from the original sentence in only a few words. Due to the discrete nature of textual data, we perform gradient projection to find the minimizer of our proposed optimization problem. Experimental results demonstrate that, while our adversarial attack maintains the semantics of the sentence, it can reduce the accuracy of GPT-2 to less than 5% on different datasets (AG News, MNLI, and Yelp Reviews). Furthermore, the block-sparsity constraint of the proposed optimization problem results in small perturbations in the adversarial example.
-
-
-
-## **45. Learning from Attacks: Attacking Variational Autoencoder for Improving Image Classification**
-
-cs.LG
-
-**SubmitDate**: 2022-03-11    [paper-pdf](http://arxiv.org/pdf/2203.07027v1)
-
-**Authors**: Jianzhang Zheng, Fan Yang, Hao Shen, Xuan Tang, Mingsong Chen, Liang Song, Xian Wei
-
-**Abstracts**: Adversarial attacks are often considered as threats to the robustness of Deep Neural Networks (DNNs). Various defending techniques have been developed to mitigate the potential negative impact of adversarial attacks against task predictions. This work analyzes adversarial attacks from a different perspective. Namely, adversarial examples contain implicit information that is useful to the predictions i.e., image classification, and treat the adversarial attacks against DNNs for data self-expression as extracted abstract representations that are capable of facilitating specific learning tasks. We propose an algorithmic framework that leverages the advantages of the DNNs for data self-expression and task-specific predictions, to improve image classification. The framework jointly learns a DNN for attacking Variational Autoencoder (VAE) networks and a DNN for classification, coined as Attacking VAE for Improve Classification (AVIC). The experiment results show that AVIC can achieve higher accuracy on standard datasets compared to the training with clean examples and the traditional adversarial training.
-
-
-
-## **46. Reinforcement Learning for Linear Quadratic Control is Vulnerable Under Cost Manipulation**
-
-eess.SY
-
-This paper is yet to be peer-reviewed
-
-**SubmitDate**: 2022-03-11    [paper-pdf](http://arxiv.org/pdf/2203.05774v1)
-
-**Authors**: Yunhan Huang, Quanyan Zhu
-
-**Abstracts**: In this work, we study the deception of a Linear-Quadratic-Gaussian (LQG) agent by manipulating the cost signals. We show that a small falsification on the cost parameters will only lead to a bounded change in the optimal policy and the bound is linear on the amount of falsification the attacker can apply on the cost parameters. We propose an attack model where the goal of the attacker is to mislead the agent into learning a `nefarious' policy with intended falsification on the cost parameters. We formulate the attack's problem as an optimization problem, which is proved to be convex, and developed necessary and sufficient conditions to check the achievability of the attacker's goal.   We showcase the adversarial manipulation on two types of LQG learners: the batch RL learner and the other is the adaptive dynamic programming (ADP) learner. Our results demonstrate that with only 2.296% of falsification on the cost data, the attacker misleads the batch RL into learning the 'nefarious' policy that leads the vehicle to a dangerous position. The attacker can also gradually trick the ADP learner into learning the same `nefarious' policy by consistently feeding the learner a falsified cost signal that stays close to the true cost signal. The aim of the paper is to raise people's awareness of the security threats faced by RL-enabled control systems.
-
-
-
-## **47. Single Loop Gaussian Homotopy Method for Non-convex Optimization**
-
-math.OC
-
-45 pages
-
-**SubmitDate**: 2022-03-11    [paper-pdf](http://arxiv.org/pdf/2203.05717v1)
-
-**Authors**: Hidenori Iwakiri, Yuhang Wang, Shinji Ito, Akiko Takeda
-
-**Abstracts**: The Gaussian homotopy (GH) method is a popular approach to finding better local minima for non-convex optimization problems by gradually changing the problem to be solved from a simple one to the original target one. Existing GH-based methods consisting of a double loop structure incur high computational costs, which may limit their potential for practical application. We propose a novel single loop framework for GH methods (SLGH) for both deterministic and stochastic settings. For those applications in which the convolution calculation required to build a GH function is difficult, we present zeroth-order SLGH algorithms with gradient-free oracles. The convergence rate of (zeroth-order) SLGH depends on the decreasing speed of a smoothing hyperparameter, and when the hyperparameter is chosen appropriately, it becomes consistent with the convergence rate of (zeroth-order) gradient descent. In experiments that included artificial highly non-convex examples and black-box adversarial attacks, we have demonstrated that our algorithms converge much faster than an existing double loop GH method while outperforming gradient descent-based methods in terms of finding a better solution.
-
-
-
-## **48. Formalizing and Estimating Distribution Inference Risks**
-
-cs.LG
-
-Update: New version with more theoretical results and a deeper  exploration of results. We noted some discrepancies in our experiments on the  CelebA dataset and re-ran all of our experiments for this dataset, updating  Table 1 and Figures 2c, 3b, 4, 7a, and 8a in the process. These did not  substantially impact our results, and our conclusions and observations in  trends remain unchanged
-
-**SubmitDate**: 2022-03-10    [paper-pdf](http://arxiv.org/pdf/2109.06024v5)
-
-**Authors**: Anshuman Suri, David Evans
-
-**Abstracts**: Distribution inference, sometimes called property inference, infers statistical properties about a training set from access to a model trained on that data. Distribution inference attacks can pose serious risks when models are trained on private data, but are difficult to distinguish from the intrinsic purpose of statistical machine learning -- namely, to produce models that capture statistical properties about a distribution. Motivated by Yeom et al.'s membership inference framework, we propose a formal definition of distribution inference attacks that is general enough to describe a broad class of attacks distinguishing between possible training distributions. We show how our definition captures previous ratio-based property inference attacks as well as new kinds of attack including revealing the average node degree or clustering coefficient of a training graph. To understand distribution inference risks, we introduce a metric that quantifies observed leakage by relating it to the leakage that would occur if samples from the training distribution were provided directly to the adversary. We report on a series of experiments across a range of different distributions using both novel black-box attacks and improved versions of the state-of-the-art white-box attacks. Our results show that inexpensive attacks are often as effective as expensive meta-classifier attacks, and that there are surprising asymmetries in the effectiveness of attacks.
-
-
-
-## **49. TraSw: Tracklet-Switch Adversarial Attacks against Multi-Object Tracking**
-
-cs.CV
-
-**SubmitDate**: 2022-03-10    [paper-pdf](http://arxiv.org/pdf/2111.08954v2)
-
-**Authors**: Delv Lin, Qi Chen, Chengyu Zhou, Kun He
-
-**Abstracts**: Multi-Object Tracking (MOT) has achieved aggressive progress and derives many excellent deep learning models. However, the robustness of the trackers is rarely studied, and it is challenging to attack the MOT system since its mature association algorithms are designed to be robust against errors during the tracking. In this work, we analyze the vulnerability of popular pedestrian MOT trackers and propose a novel adversarial attack method called Tracklet-Switch (TraSw) against the complete tracking pipeline of MOT. TraSw can fool the advanced deep trackers (i.e., FairMOT and ByteTrack) to fail to track the targets in the subsequent frames by attacking very few frames. Experiments on the MOT-Challenge datasets (i.e., 2DMOT15, MOT17, and MOT20) show that TraSw can achieve an extraordinarily high success rate of over 95% by attacking only four frames on average. To our knowledge, this is the first work on the adversarial attack against pedestrian MOT trackers. The code is available at https://github.com/DerryHub/FairMOT-attack .
-
-
-
-## **50. SoK: On the Semantic AI Security in Autonomous Driving**
-
-cs.CR
-
-Project website: https://sites.google.com/view/cav-sec/pass
-
-**SubmitDate**: 2022-03-10    [paper-pdf](http://arxiv.org/pdf/2203.05314v1)
-
-**Authors**: Junjie Shen, Ningfei Wang, Ziwen Wan, Yunpeng Luo, Takami Sato, Zhisheng Hu, Xinyang Zhang, Shengjian Guo, Zhenyu Zhong, Kang Li, Ziming Zhao, Chunming Qiao, Qi Alfred Chen
-
-**Abstracts**: Autonomous Driving (AD) systems rely on AI components to make safety and correct driving decisions. Unfortunately, today's AI algorithms are known to be generally vulnerable to adversarial attacks. However, for such AI component-level vulnerabilities to be semantically impactful at the system level, it needs to address non-trivial semantic gaps both (1) from the system-level attack input spaces to those at AI component level, and (2) from AI component-level attack impacts to those at the system level. In this paper, we define such research space as semantic AI security as opposed to generic AI security. Over the past 5 years, increasingly more research works are performed to tackle such semantic AI security challenges in AD context, which has started to show an exponential growth trend.   In this paper, we perform the first systematization of knowledge of such growing semantic AD AI security research space. In total, we collect and analyze 53 such papers, and systematically taxonomize them based on research aspects critical for the security field. We summarize 6 most substantial scientific gaps observed based on quantitative comparisons both vertically among existing AD AI security works and horizontally with security works from closely-related domains. With these, we are able to provide insights and potential future directions not only at the design level, but also at the research goal, methodology, and community levels. To address the most critical scientific methodology-level gap, we take the initiative to develop an open-source, uniform, and extensible system-driven evaluation platform, named PASS, for the semantic AD AI security research community. We also use our implemented platform prototype to showcase the capabilities and benefits of such a platform using representative semantic AD AI attacks.
 
 
 

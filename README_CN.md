@@ -1,13 +1,75 @@
 # Latest Adversarial Attack Papers
-**update at 2022-04-01 06:31:28**
+**update at 2022-04-02 10:15:23**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. The Block-based Mobile PDE Systems Are Not Secure -- Experimental Attacks**
+## **1. Training strategy for a lightweight countermeasure model for automatic speaker verification**
+
+一种轻量级说话人自动确认对策模型的训练策略 cs.SD
+
+ASVspoof2021
+
+**SubmitDate**: 2022-03-31    [paper-pdf](http://arxiv.org/pdf/2203.17031v1)
+
+**Authors**: Yen-Lun Liao, Xuanjun Chen, Chung-Che Wang, Jyh-Shing Roger Jang
+
+**Abstracts**: The countermeasure (CM) model is developed to protect Automatic Speaker Verification (ASV) systems from spoof attacks and prevent resulting personal information leakage. Based on practicality and security considerations, the CM model is usually deployed on edge devices, which have more limited computing resources and storage space than cloud- based systems. This work proposes training strategies for a lightweight CM model for ASV, using generalized end- to-end (GE2E) pre-training and adversarial fine-tuning to improve performance, and applying knowledge distillation (KD) to reduce the size of the CM model. In the evalua- tion phase of the ASVspoof 2021 Logical Access task, the lightweight ResNetSE model reaches min t-DCF 0.2695 and EER 3.54%. Compared to the teacher model, the lightweight student model only uses 22.5% of parameters and 21.1% of multiply and accumulate operands of the teacher model.
+
+摘要: 对策(CM)模型是为了保护自动说话人验证(ASV)系统免受欺骗攻击并防止由此导致的个人信息泄露而开发的。基于实用性和安全性考虑，CM模型通常部署在边缘设备上，与基于云的系统相比，边缘设备的计算资源和存储空间更有限。提出了一种面向ASV的轻量级CM模型的训练策略，使用通用端到端(GE2E)预训练和对抗性微调来提高性能，并应用知识蒸馏(KD)来减小CM模型的规模。在ASVspoof2021逻辑访问任务的评估阶段，轻量级ResNetSE模型达到了最小t-DCF值0.2695和EER3.54%.与教师模型相比，轻量级学生模型仅使用了教师模型22.5%的参数和21.1%的乘加操作数。
+
+
+
+## **2. Towards Robust Rain Removal Against Adversarial Attacks: A Comprehensive Benchmark Analysis and Beyond**
+
+对抗对抗性攻击的稳健除雨：综合基准分析及进一步研究 cs.CV
+
+10 pages, 6 figures, to appear in CVPR 2022
+
+**SubmitDate**: 2022-03-31    [paper-pdf](http://arxiv.org/pdf/2203.16931v1)
+
+**Authors**: Yi Yu, Wenhan Yang, Yap-Peng Tan, Alex C. Kot
+
+**Abstracts**: Rain removal aims to remove rain streaks from images/videos and reduce the disruptive effects caused by rain. It not only enhances image/video visibility but also allows many computer vision algorithms to function properly. This paper makes the first attempt to conduct a comprehensive study on the robustness of deep learning-based rain removal methods against adversarial attacks. Our study shows that, when the image/video is highly degraded, rain removal methods are more vulnerable to the adversarial attacks as small distortions/perturbations become less noticeable or detectable. In this paper, we first present a comprehensive empirical evaluation of various methods at different levels of attacks and with various losses/targets to generate the perturbations from the perspective of human perception and machine analysis tasks. A systematic evaluation of key modules in existing methods is performed in terms of their robustness against adversarial attacks. From the insights of our analysis, we construct a more robust deraining method by integrating these effective modules. Finally, we examine various types of adversarial attacks that are specific to deraining problems and their effects on both human and machine vision tasks, including 1) rain region attacks, adding perturbations only in the rain regions to make the perturbations in the attacked rain images less visible; 2) object-sensitive attacks, adding perturbations only in regions near the given objects. Code is available at https://github.com/yuyi-sd/Robust_Rain_Removal.
+
+摘要: 除雨的目的是去除图像/视频中的雨纹，减少降雨造成的干扰。它不仅增强了图像/视频的可见性，还允许许多计算机视觉算法正常工作。本文首次尝试对基于深度学习的降雨方法对敌方攻击的稳健性进行了全面的研究。我们的研究表明，当图像/视频高度退化时，随着微小的失真/扰动变得不那么明显或可检测到，雨滴去除方法更容易受到敌意攻击。在本文中，我们首先从人的感知和机器分析任务的角度，对不同攻击级别和不同损失/目标的各种方法进行了全面的经验评估，以产生扰动。对现有方法中的关键模块进行了系统的评估，评估了它们对对手攻击的健壮性。根据我们的分析，我们通过整合这些有效的模块来构造一个更健壮的去噪方法。最后，我们研究了针对去重问题的各种类型的对抗性攻击及其对人类和机器视觉任务的影响，包括1)雨区域攻击，仅在雨区域添加扰动，以使被攻击的雨图像中的扰动不那么明显；2)对象敏感攻击，仅在给定对象附近的区域添加扰动。代码可在https://github.com/yuyi-sd/Robust_Rain_Removal.上找到
+
+
+
+## **3. Assessing the risk of re-identification arising from an attack on anonymised data**
+
+评估匿名数据遭受攻击后重新识别的风险 cs.LG
+
+**SubmitDate**: 2022-03-31    [paper-pdf](http://arxiv.org/pdf/2203.16921v1)
+
+**Authors**: Anna Antoniou, Giacomo Dossena, Julia MacMillan, Steven Hamblin, David Clifton, Paula Petrone
+
+**Abstracts**: Objective: The use of routinely-acquired medical data for research purposes requires the protection of patient confidentiality via data anonymisation. The objective of this work is to calculate the risk of re-identification arising from a malicious attack to an anonymised dataset, as described below. Methods: We first present an analytical means of estimating the probability of re-identification of a single patient in a k-anonymised dataset of Electronic Health Record (EHR) data. Second, we generalize this solution to obtain the probability of multiple patients being re-identified. We provide synthetic validation via Monte Carlo simulations to illustrate the accuracy of the estimates obtained. Results: The proposed analytical framework for risk estimation provides re-identification probabilities that are in agreement with those provided by simulation in a number of scenarios. Our work is limited by conservative assumptions which inflate the re-identification probability. Discussion: Our estimates show that the re-identification probability increases with the proportion of the dataset maliciously obtained and that it has an inverse relationship with the equivalence class size. Our recursive approach extends the applicability domain to the general case of a multi-patient re-identification attack in an arbitrary k-anonymisation scheme. Conclusion: We prescribe a systematic way to parametrize the k-anonymisation process based on a pre-determined re-identification probability. We observed that the benefits of a reduced re-identification risk that come with increasing k-size may not be worth the reduction in data granularity when one is considering benchmarking the re-identification probability on the size of the portion of the dataset maliciously obtained by the adversary.
+
+摘要: 目的：将常规获取的医疗数据用于研究目的需要通过数据匿名化保护患者的机密性。这项工作的目标是计算恶意攻击引起的对匿名数据集的重新识别风险，如下所述。方法：我们首先提出了一种分析方法来估计电子健康记录(EHR)数据的k匿名数据集中单个患者重新识别的可能性。其次，我们推广这一解决方案，以获得多个患者被重新识别的概率。我们通过蒙特卡罗模拟提供了综合验证，以说明所获得的估计的准确性。结果：建议的风险评估分析框架提供的重新识别概率与模拟在许多情况下提供的概率一致。我们的工作受到保守假设的限制，这些假设夸大了重新识别的概率。讨论：我们的估计表明，重新识别的概率随着恶意获得的数据集的比例而增加，并且与等价类的大小成反比。我们的递归方法将适用范围扩展到任意k-匿名化方案中的多患者重新识别攻击的一般情况。结论：我们规定了一种系统的方法，基于预先确定的重新识别概率来对k-匿名化过程进行参数化。我们观察到，当考虑根据对手恶意获得的部分数据集的大小来对重新识别概率进行基准测试时，随着k大小的增加而来的重新识别风险降低的好处可能不值得减少数据粒度。
+
+
+
+## **4. Attack Impact Evaluation by Exact Convexification through State Space Augmentation**
+
+基于状态空间增强的精确凸化攻击效果评估 eess.SY
+
+8 pages
+
+**SubmitDate**: 2022-03-31    [paper-pdf](http://arxiv.org/pdf/2203.16803v1)
+
+**Authors**: Hampei Sasahara, Takashi Tanaka, Henrik Sandberg
+
+**Abstracts**: We address the attack impact evaluation problem for control system security. We formulate the problem as a Markov decision process with a temporally joint chance constraint that forces the adversary to avoid being detected throughout the considered time period. Owing to the joint constraint, the optimal control policy depends not only on the current state but also on the entire history, which leads to the explosion of the search space and makes the problem generally intractable. It is shown that whether an alarm has been triggered or not, in addition to the current state is sufficient for specifying the optimal decision at each time step. Augmentation of the information to the state space induces an equivalent convex optimization problem, which is tractable using standard solvers.
+
+摘要: 我们解决了控制系统安全的攻击影响评估问题。我们将问题描述为一个具有时间联合机会约束的马尔可夫决策过程，迫使对手在所考虑的时间段内避免被发现。由于联合约束，最优控制策略不仅依赖于当前状态，还依赖于整个历史，这导致搜索空间的爆炸性，使问题普遍难以解决。结果表明，除了当前状态外，警报是否已被触发足以确定每个时间步的最优决策。将信息扩充到状态空间将导致等价的凸优化问题，使用标准求解器可以很容易地处理该问题。
+
+
+
+## **5. The Block-based Mobile PDE Systems Are Not Secure -- Experimental Attacks**
 
 基于分组的移动PDE系统不安全--实验性攻击 cs.CR
 
-**SubmitDate**: 2022-03-30    [paper-pdf](http://arxiv.org/pdf/2203.16349v1)
+**SubmitDate**: 2022-03-31    [paper-pdf](http://arxiv.org/pdf/2203.16349v2)
 
 **Authors**: Niusen Chen, Bo Chen, Weisong Shi
 
@@ -17,13 +79,13 @@
 
 
 
-## **2. Well-classified Examples are Underestimated in Classification with Deep Neural Networks**
+## **6. Well-classified Examples are Underestimated in Classification with Deep Neural Networks**
 
 深度神经网络在分类中低估分类好的样本 cs.LG
 
 Accepted by AAAI 2022; 17 pages, 11 figures, 13 tables
 
-**SubmitDate**: 2022-03-30    [paper-pdf](http://arxiv.org/pdf/2110.06537v4)
+**SubmitDate**: 2022-03-31    [paper-pdf](http://arxiv.org/pdf/2110.06537v5)
 
 **Authors**: Guangxiang Zhao, Wenkai Yang, Xuancheng Ren, Lei Li, Yunfang Wu, Xu Sun
 
@@ -33,7 +95,7 @@ Accepted by AAAI 2022; 17 pages, 11 figures, 13 tables
 
 
 
-## **3. Example-based Explanations with Adversarial Attacks for Respiratory Sound Analysis**
+## **7. Example-based Explanations with Adversarial Attacks for Respiratory Sound Analysis**
 
 呼吸音分析中对抗性攻击的实例解释 cs.SD
 
@@ -49,7 +111,7 @@ Submitted to INTERSPEECH 2022
 
 
 
-## **4. Sensor Data Validation and Driving Safety in Autonomous Driving Systems**
+## **8. Sensor Data Validation and Driving Safety in Autonomous Driving Systems**
 
 自动驾驶系统中的传感器数据验证与驾驶安全 cs.CV
 
@@ -65,7 +127,7 @@ PhD Thesis, City University of Hong Kong
 
 
 
-## **5. Fooling the primate brain with minimal, targeted image manipulation**
+## **9. Fooling the primate brain with minimal, targeted image manipulation**
 
 通过最小的、有针对性的图像处理来愚弄灵长类动物的大脑 q-bio.NC
 
@@ -79,7 +141,7 @@ PhD Thesis, City University of Hong Kong
 
 
 
-## **6. StyleFool: Fooling Video Classification Systems via Style Transfer**
+## **10. StyleFool: Fooling Video Classification Systems via Style Transfer**
 
 StyleFool：通过样式转换愚弄视频分类系统 cs.CV
 
@@ -95,7 +157,23 @@ StyleFool：通过样式转换愚弄视频分类系统 cs.CV
 
 
 
-## **7. NICGSlowDown: Evaluating the Efficiency Robustness of Neural Image Caption Generation Models**
+## **11. Recent improvements of ASR models in the face of adversarial attacks**
+
+面对对抗性攻击的ASR模型的最新改进 cs.CR
+
+Submitted to Interspeech 2022
+
+**SubmitDate**: 2022-03-29    [paper-pdf](http://arxiv.org/pdf/2203.16536v1)
+
+**Authors**: Raphael Olivier, Bhiksha Raj
+
+**Abstracts**: Like many other tasks involving neural networks, Speech Recognition models are vulnerable to adversarial attacks. However recent research has pointed out differences between attacks and defenses on ASR models compared to image models. Improving the robustness of ASR models requires a paradigm shift from evaluating attacks on one or a few models to a systemic approach in evaluation. We lay the ground for such research by evaluating on various architectures a representative set of adversarial attacks: targeted and untargeted, optimization and speech processing-based, white-box, black-box and targeted attacks. Our results show that the relative strengths of different attack algorithms vary considerably when changing the model architecture, and that the results of some attacks are not to be blindly trusted. They also indicate that training choices such as self-supervised pretraining can significantly impact robustness by enabling transferable perturbations. We release our source code as a package that should help future research in evaluating their attacks and defenses.
+
+摘要: 像涉及神经网络的许多其他任务一样，语音识别模型容易受到敌意攻击。然而，最近的研究指出，与图像模型相比，ASR模型在攻击和防御方面存在差异。要提高ASR模型的稳健性，需要从评估针对一个或几个模型的攻击转变为评估的系统性方法。我们通过在不同的体系结构上评估一组具有代表性的对抗性攻击：目标攻击和非目标攻击、基于优化和语音处理的攻击、白盒攻击、黑盒攻击和目标攻击，为这类研究奠定了基础。结果表明，随着模型结构的改变，不同攻击算法的相对强度有很大差异，某些攻击的结果不能盲目信任。它们还表明，自我监督预训练等训练选择可以通过实现可转移的扰动来显著影响稳健性。我们将我们的源代码作为一个包发布，这应该有助于未来的研究评估他们的攻击和防御。
+
+
+
+## **12. NICGSlowDown: Evaluating the Efficiency Robustness of Neural Image Caption Generation Models**
 
 NICGSlowDown：评估神经图像字幕生成模型的效率和稳健性 cs.CV
 
@@ -111,7 +189,7 @@ This paper is accepted at CVPR2022
 
 
 
-## **8. Characterizing the adversarial vulnerability of speech self-supervised learning**
+## **13. Characterizing the adversarial vulnerability of speech self-supervised learning**
 
 表征语音自监督学习的对抗性脆弱性 cs.SD
 
@@ -127,7 +205,7 @@ Accepted by ICASSP 2022
 
 
 
-## **9. Adaptative Perturbation Patterns: Realistic Adversarial Learning for Robust Intrusion Detection**
+## **14. Adaptative Perturbation Patterns: Realistic Adversarial Learning for Robust Intrusion Detection**
 
 自适应扰动模式：用于稳健入侵检测的现实对抗性学习 cs.CR
 
@@ -143,7 +221,7 @@ Accepted by ICASSP 2022
 
 
 
-## **10. Exploring Frequency Adversarial Attacks for Face Forgery Detection**
+## **15. Exploring Frequency Adversarial Attacks for Face Forgery Detection**
 
 基于频率对抗攻击的人脸伪造检测方法研究 cs.CV
 
@@ -159,7 +237,7 @@ Accepted by CVPR2022
 
 
 
-## **11. Adaptive Image Transformations for Transfer-based Adversarial Attack**
+## **16. Adaptive Image Transformations for Transfer-based Adversarial Attack**
 
 基于传输的对抗性攻击中的自适应图像变换 cs.CV
 
@@ -175,7 +253,7 @@ Accepted by CVPR2022
 
 
 
-## **12. Treatment Learning Transformer for Noisy Image Classification**
+## **17. Treatment Learning Transformer for Noisy Image Classification**
 
 用于含噪图像分类的治疗学习转换器 cs.CV
 
@@ -191,7 +269,7 @@ Preprint. The first version was finished in May 2018
 
 
 
-## **13. Spotting adversarial samples for speaker verification by neural vocoders**
+## **18. Spotting adversarial samples for speaker verification by neural vocoders**
 
 利用神经声码器识别用于说话人确认的敌意样本 cs.SD
 
@@ -207,7 +285,7 @@ Accepted by ICASSP 2022
 
 
 
-## **14. Mel Frequency Spectral Domain Defenses against Adversarial Attacks on Speech Recognition Systems**
+## **19. Mel Frequency Spectral Domain Defenses against Adversarial Attacks on Speech Recognition Systems**
 
 针对语音识别系统的敌意攻击的MEL频域防御 eess.AS
 
@@ -223,7 +301,7 @@ This paper is 5 pages long and was submitted to Interspeech 2022
 
 
 
-## **15. Robust Structured Declarative Classifiers for 3D Point Clouds: Defending Adversarial Attacks with Implicit Gradients**
+## **20. Robust Structured Declarative Classifiers for 3D Point Clouds: Defending Adversarial Attacks with Implicit Gradients**
 
 用于3D点云的稳健结构化声明性分类器：用隐式梯度防御对抗性攻击 cs.CV
 
@@ -237,7 +315,7 @@ This paper is 5 pages long and was submitted to Interspeech 2022
 
 
 
-## **16. Zero-Query Transfer Attacks on Context-Aware Object Detectors**
+## **21. Zero-Query Transfer Attacks on Context-Aware Object Detectors**
 
 上下文感知对象检测器的零查询传输攻击 cs.CV
 
@@ -253,7 +331,7 @@ CVPR 2022 Accepted
 
 
 
-## **17. A Robust Phased Elimination Algorithm for Corruption-Tolerant Gaussian Process Bandits**
+## **22. A Robust Phased Elimination Algorithm for Corruption-Tolerant Gaussian Process Bandits**
 
 一种稳健的容忍腐败高斯过程带的阶段性消除算法 stat.ML
 
@@ -269,7 +347,7 @@ Added references
 
 
 
-## **18. Neurosymbolic hybrid approach to driver collision warning**
+## **23. Neurosymbolic hybrid approach to driver collision warning**
 
 驾驶员碰撞预警的神经符号混合方法 cs.CV
 
@@ -285,7 +363,7 @@ SPIE Defense and Commercial Sensing 2022
 
 
 
-## **19. Poisoning and Backdooring Contrastive Learning**
+## **24. Poisoning and Backdooring Contrastive Learning**
 
 中毒与倒退对比学习 cs.LG
 
@@ -299,7 +377,7 @@ SPIE Defense and Commercial Sensing 2022
 
 
 
-## **20. Boosting Black-Box Adversarial Attacks with Meta Learning**
+## **25. Boosting Black-Box Adversarial Attacks with Meta Learning**
 
 利用元学习增强黑箱对抗攻击 cs.LG
 
@@ -313,7 +391,7 @@ SPIE Defense and Commercial Sensing 2022
 
 
 
-## **21. Protecting Facial Privacy: Generating Adversarial Identity Masks via Style-robust Makeup Transfer**
+## **26. Protecting Facial Privacy: Generating Adversarial Identity Masks via Style-robust Makeup Transfer**
 
 保护面部隐私：通过风格稳健的化妆传输生成敌意身份面具 cs.CV
 
@@ -329,7 +407,7 @@ Accepted by CVPR2022. Code is available at  https://github.com/CGCL-codes/AMT-GA
 
 
 
-## **22. Practical Evaluation of Adversarial Robustness via Adaptive Auto Attack**
+## **27. Practical Evaluation of Adversarial Robustness via Adaptive Auto Attack**
 
 自适应自动攻击对敌方健壮性的实用评估 cs.CV
 
@@ -345,7 +423,7 @@ Accepted by CVPR 2022
 
 
 
-## **23. Essential Features: Content-Adaptive Pixel Discretization to Improve Model Robustness to Adaptive Adversarial Attacks**
+## **28. Essential Features: Content-Adaptive Pixel Discretization to Improve Model Robustness to Adaptive Adversarial Attacks**
 
 基本特征：内容自适应像素离散化，以提高模型对自适应攻击的稳健性 cs.CV
 
@@ -359,7 +437,7 @@ Accepted by CVPR 2022
 
 
 
-## **24. Adversarial Representation Sharing: A Quantitative and Secure Collaborative Learning Framework**
+## **29. Adversarial Representation Sharing: A Quantitative and Secure Collaborative Learning Framework**
 
 对抗性表征共享：一种量化、安全的协作学习框架 cs.CR
 
@@ -373,7 +451,7 @@ Accepted by CVPR 2022
 
 
 
-## **25. Rebuild and Ensemble: Exploring Defense Against Text Adversaries**
+## **30. Rebuild and Ensemble: Exploring Defense Against Text Adversaries**
 
 重建与整合：探索对文本对手的防御 cs.CL
 
@@ -389,7 +467,7 @@ work in progress
 
 
 
-## **26. HINT: Hierarchical Neuron Concept Explainer**
+## **31. HINT: Hierarchical Neuron Concept Explainer**
 
 提示：层次化神经元概念解释器 cs.CV
 
@@ -405,7 +483,7 @@ Accepted by CVPR 2022
 
 
 
-## **27. How to Robustify Black-Box ML Models? A Zeroth-Order Optimization Perspective**
+## **32. How to Robustify Black-Box ML Models? A Zeroth-Order Optimization Perspective**
 
 如何将黑箱ML模型规模化？零阶最优化视角 cs.LG
 
@@ -421,7 +499,7 @@ Accepted as ICLR'22 Spotlight Paper
 
 
 
-## **28. Reverse Engineering of Imperceptible Adversarial Image Perturbations**
+## **33. Reverse Engineering of Imperceptible Adversarial Image Perturbations**
 
 不可感知的对抗性图像扰动的逆向工程 cs.CV
 
@@ -435,7 +513,7 @@ Accepted as ICLR'22 Spotlight Paper
 
 
 
-## **29. PiDAn: A Coherence Optimization Approach for Backdoor Attack Detection and Mitigation in Deep Neural Networks**
+## **34. PiDAn: A Coherence Optimization Approach for Backdoor Attack Detection and Mitigation in Deep Neural Networks**
 
 PIDAN：一种深度神经网络后门攻击检测与防御的一致性优化方法 cs.LG
 
@@ -449,7 +527,7 @@ PIDAN：一种深度神经网络后门攻击检测与防御的一致性优化方
 
 
 
-## **30. A Survey of Robust Adversarial Training in Pattern Recognition: Fundamental, Theory, and Methodologies**
+## **35. A Survey of Robust Adversarial Training in Pattern Recognition: Fundamental, Theory, and Methodologies**
 
 模式识别中稳健的对抗性训练：基础、理论和方法综述 cs.CV
 
@@ -463,7 +541,7 @@ PIDAN：一种深度神经网络后门攻击检测与防御的一致性优化方
 
 
 
-## **31. Canary Extraction in Natural Language Understanding Models**
+## **36. Canary Extraction in Natural Language Understanding Models**
 
 自然语言理解模型中的金丝雀提取 cs.CL
 
@@ -479,7 +557,7 @@ Accepted to ACL 2022, Main Conference
 
 
 
-## **32. Improving robustness of jet tagging algorithms with adversarial training**
+## **37. Improving robustness of jet tagging algorithms with adversarial training**
 
 利用对抗性训练提高JET标签算法的稳健性 physics.data-an
 
@@ -495,7 +573,7 @@ Accepted to ACL 2022, Main Conference
 
 
 
-## **33. Origins of Low-dimensional Adversarial Perturbations**
+## **38. Origins of Low-dimensional Adversarial Perturbations**
 
 低维对抗性扰动的起源 stat.ML
 
@@ -509,7 +587,7 @@ Accepted to ACL 2022, Main Conference
 
 
 
-## **34. Understanding and Increasing Efficiency of Frank-Wolfe Adversarial Training**
+## **39. Understanding and Increasing Efficiency of Frank-Wolfe Adversarial Training**
 
 理解和提高弗兰克-沃尔夫对抗性训练的效率 cs.LG
 
@@ -525,7 +603,7 @@ IEEE/CVF Conference on Computer Vision and Pattern Recognition, CVPR  2022. Prel
 
 
 
-## **35. Give Me Your Attention: Dot-Product Attention Considered Harmful for Adversarial Patch Robustness**
+## **40. Give Me Your Attention: Dot-Product Attention Considered Harmful for Adversarial Patch Robustness**
 
 给我注意：点积注意被认为对对手补丁的健壮性有害 cs.CV
 
@@ -541,7 +619,7 @@ to be published in IEEE/CVF Conference on Computer Vision and Pattern  Recogniti
 
 
 
-## **36. Adversarial Bone Length Attack on Action Recognition**
+## **41. Adversarial Bone Length Attack on Action Recognition**
 
 动作识别的对抗性骨长攻击 cs.CV
 
@@ -557,7 +635,7 @@ to be published in IEEE/CVF Conference on Computer Vision and Pattern  Recogniti
 
 
 
-## **37. Improving Adversarial Transferability with Spatial Momentum**
+## **42. Improving Adversarial Transferability with Spatial Momentum**
 
 利用空间动量提高对抗性转移能力 cs.CV
 
@@ -571,7 +649,7 @@ to be published in IEEE/CVF Conference on Computer Vision and Pattern  Recogniti
 
 
 
-## **38. Trojan Horse Training for Breaking Defenses against Backdoor Attacks in Deep Learning**
+## **43. Trojan Horse Training for Breaking Defenses against Backdoor Attacks in Deep Learning**
 
 深度学习中突破后门攻击防御的特洛伊木马训练 cs.CR
 
@@ -587,7 +665,7 @@ Submitted to conference
 
 
 
-## **39. Bounding Training Data Reconstruction in Private (Deep) Learning**
+## **44. Bounding Training Data Reconstruction in Private (Deep) Learning**
 
 私密(深度)学习中的边界训练数据重构 cs.LG
 
@@ -601,7 +679,7 @@ Submitted to conference
 
 
 
-## **40. A Perturbation Constrained Adversarial Attack for Evaluating the Robustness of Optical Flow**
+## **45. A Perturbation Constrained Adversarial Attack for Evaluating the Robustness of Optical Flow**
 
 一种用于评估光流稳健性的扰动约束对抗性攻击 cs.CV
 
@@ -615,7 +693,7 @@ Submitted to conference
 
 
 
-## **41. Frequency-driven Imperceptible Adversarial Attack on Semantic Similarity**
+## **46. Frequency-driven Imperceptible Adversarial Attack on Semantic Similarity**
 
 基于频率驱动的语义相似度潜伏攻击 cs.CV
 
@@ -631,7 +709,7 @@ CVPR 2022 conference (accepted), 18 pages, 17 figure
 
 
 
-## **42. Imperceptible Transfer Attack and Defense on 3D Point Cloud Classification**
+## **47. Imperceptible Transfer Attack and Defense on 3D Point Cloud Classification**
 
 三维点云分类的隐形转移攻防 cs.CV
 
@@ -645,7 +723,7 @@ CVPR 2022 conference (accepted), 18 pages, 17 figure
 
 
 
-## **43. Adversarial Training for Improving Model Robustness? Look at Both Prediction and Interpretation**
+## **48. Adversarial Training for Improving Model Robustness? Look at Both Prediction and Interpretation**
 
 提高模型稳健性的对抗性训练？预测和解释都要看 cs.CL
 
@@ -661,7 +739,7 @@ AAAI 2022
 
 
 
-## **44. Enhancing Classifier Conservativeness and Robustness by Polynomiality**
+## **49. Enhancing Classifier Conservativeness and Robustness by Polynomiality**
 
 利用多项式增强分类器的保守性和稳健性 cs.LG
 
@@ -677,7 +755,7 @@ IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022
 
 
 
-## **45. Powerful Physical Adversarial Examples Against Practical Face Recognition Systems**
+## **50. Powerful Physical Adversarial Examples Against Practical Face Recognition Systems**
 
 针对实用人脸识别系统的强大物理对抗实例 cs.CR
 
@@ -690,80 +768,6 @@ Accepted at IEEE/CVF WACV 2022 MAP
 **Abstracts**: It is well-known that the most existing machine learning (ML)-based safety-critical applications are vulnerable to carefully crafted input instances called adversarial examples (AXs). An adversary can conveniently attack these target systems from digital as well as physical worlds. This paper aims to the generation of robust physical AXs against face recognition systems. We present a novel smoothness loss function and a patch-noise combo attack for realizing powerful physical AXs. The smoothness loss interjects the concept of delayed constraints during the attack generation process, thereby causing better handling of optimization complexity and smoother AXs for the physical domain. The patch-noise combo attack combines patch noise and imperceptibly small noises from different distributions to generate powerful registration-based physical AXs. An extensive experimental analysis found that our smoothness loss results in robust and more transferable digital and physical AXs than the conventional techniques. Notably, our smoothness loss results in a 1.17 and 1.97 times better mean attack success rate (ASR) in physical white-box and black-box attacks, respectively. Our patch-noise combo attack furthers the performance gains and results in 2.39 and 4.74 times higher mean ASR than conventional technique in physical world white-box and black-box attacks, respectively.
 
 摘要: 众所周知，大多数现有的基于机器学习(ML)的安全关键型应用程序容易受到精心设计的称为对抗性示例(AXS)的输入实例的攻击。对手可以方便地从数字世界和物理世界攻击这些目标系统。本文旨在针对人脸识别系统产生健壮的物理AXS。为了实现强大的物理轴，我们提出了一种新的光滑度损失函数和一种补丁噪声组合攻击。平滑损失在攻击生成过程中引入了延迟约束的概念，从而导致更好地处理优化复杂性和物理域的平滑AXS。补丁噪声组合攻击将补丁噪声和来自不同分布的不可察觉的小噪声结合在一起，生成强大的基于配准的物理轴。一项广泛的实验分析发现，我们的光滑度损失导致了比传统技术更健壮和更可传输的数字和物理AXS。值得注意的是，我们的流畅性损失导致物理白盒攻击和黑盒攻击的平均攻击成功率(ASR)分别提高了1.17和1.97倍。我们的补丁噪声组合攻击进一步提高了性能，并在物理世界的白盒和黑盒攻击中分别比传统技术的平均ASR高2.39倍和4.74倍。
-
-
-
-## **46. Explainability-Aware One Point Attack for Point Cloud Neural Networks**
-
-基于可解释性的点云神经网络单点攻击 cs.CV
-
-**SubmitDate**: 2022-03-23    [paper-pdf](http://arxiv.org/pdf/2110.04158v3)
-
-**Authors**: Hanxiao Tan, Helena Kotthaus
-
-**Abstracts**: With the proposition of neural networks for point clouds, deep learning has started to shine in the field of 3D object recognition while researchers have shown an increased interest to investigate the reliability of point cloud networks by adversarial attacks. However, most of the existing studies aim to deceive humans or defense algorithms, while the few that address the operation principles of the models themselves remain flawed in terms of critical point selection. In this work, we propose two adversarial methods: One Point Attack (OPA) and Critical Traversal Attack (CTA), which incorporate the explainability technologies and aim to explore the intrinsic operating principle of point cloud networks and their sensitivity against critical points perturbations. Our results show that popular point cloud networks can be deceived with almost $100\%$ success rate by shifting only one point from the input instance. In addition, we show the interesting impact of different point attribution distributions on the adversarial robustness of point cloud networks. Finally, we discuss how our approaches facilitate the explainability study for point cloud networks. To the best of our knowledge, this is the first point-cloud-based adversarial approach concerning explainability. Our code is available at https://github.com/Explain3D/Exp-One-Point-Atk-PC.
-
-摘要: 随着神经网络在点云领域的提出，深度学习开始在三维物体识别领域闪耀光芒，同时研究人员对利用对抗性攻击来研究点云网络的可靠性也越来越感兴趣。然而，现有的研究大多旨在欺骗人类或防御算法，而少数针对模型本身操作原理的研究在临界点选择方面仍然存在缺陷。在这项工作中，我们提出了两种对抗方法：单点攻击(OPA)和关键遍历攻击(CTA)，它们结合了可解释性技术，旨在探索点云网络的内在工作原理及其对临界点扰动的敏感性。我们的结果表明，只要从输入实例中移动一个点，流行的点云网络就可以被欺骗，成功率接近100美元。此外，我们还展示了不同的点属性分布对点云网络对抗健壮性的影响。最后，我们讨论了我们的方法如何促进点云网络的可解释性研究。据我们所知，这是第一个基于点云的对抗性解释方法。我们的代码可以在https://github.com/Explain3D/Exp-One-Point-Atk-PC.上找到
-
-
-
-## **47. Adversarial Fine-tuning for Backdoor Defense: Connecting Backdoor Attacks to Adversarial Attacks**
-
-对抗性后门防御微调：将后门攻击与对抗性攻击联系起来 cs.CV
-
-**SubmitDate**: 2022-03-23    [paper-pdf](http://arxiv.org/pdf/2202.06312v2)
-
-**Authors**: Bingxu Mu, Zhenxing Niu, Le Wang, Xue Wang, Rong Jin, Gang Hua
-
-**Abstracts**: Deep neural networks (DNNs) are known to be vulnerable to both backdoor attacks as well as adversarial attacks. In the literature, these two types of attacks are commonly treated as distinct problems and solved separately, since they belong to training-time and inference-time attacks respectively. However, in this paper we find an intriguing connection between them: for a model planted with backdoors, we observe that its adversarial examples have similar behaviors as its triggered samples, i.e., both activate the same subset of DNN neurons. It indicates that planting a backdoor into a model will significantly affect the model's adversarial examples. Based on this observations, we design a new Adversarial Fine-Tuning (AFT) algorithm to defend against backdoor attacks. We empirically show that, against 5 state-of-the-art backdoor attacks, our AFT can effectively erase the backdoor triggers without obvious performance degradation on clean samples and significantly outperforms existing defense methods.
-
-摘要: 众所周知，深度神经网络(DNN)既容易受到后门攻击，也容易受到对手攻击。在文献中，这两类攻击通常被视为不同的问题，分别属于训练时间攻击和推理时间攻击。然而，在本文中，我们发现了它们之间的一个有趣的联系：对于一个植入后门的模型，我们观察到其敌对示例与其触发样本具有相似的行为，即两者都激活了相同的DNN神经元子集。它表明，在模型中植入后门将显著影响模型的对抗性示例。基于这些观察结果，我们设计了一种新的对抗精调(AFT)算法来防御后门攻击。我们的实验表明，对于5种最先进的后门攻击，我们的AFT可以有效地清除后门触发，而在干净的样本上没有明显的性能下降，并且显著优于现有的防御方法。
-
-
-
-## **48. Input-specific Attention Subnetworks for Adversarial Detection**
-
-用于敌意检测的输入特定关注子网络 cs.CL
-
-Accepted at Findings of ACL 2022, 14 pages, 6 Tables and 9 Figures
-
-**SubmitDate**: 2022-03-23    [paper-pdf](http://arxiv.org/pdf/2203.12298v1)
-
-**Authors**: Emil Biju, Anirudh Sriram, Pratyush Kumar, Mitesh M Khapra
-
-**Abstracts**: Self-attention heads are characteristic of Transformer models and have been well studied for interpretability and pruning. In this work, we demonstrate an altogether different utility of attention heads, namely for adversarial detection. Specifically, we propose a method to construct input-specific attention subnetworks (IAS) from which we extract three features to discriminate between authentic and adversarial inputs. The resultant detector significantly improves (by over 7.5%) the state-of-the-art adversarial detection accuracy for the BERT encoder on 10 NLU datasets with 11 different adversarial attack types. We also demonstrate that our method (a) is more accurate for larger models which are likely to have more spurious correlations and thus vulnerable to adversarial attack, and (b) performs well even with modest training sets of adversarial examples.
-
-摘要: 自我注意头部是变压器模型的特征，在可解释性和剪枝方面已经得到了很好的研究。在这项工作中，我们展示了注意力头部的一种完全不同的用途，即用于敌意检测。具体地说，我们提出了一种构造输入特定关注子网络(IAS)的方法，从中提取三个特征来区分真实输入和敌意输入。在包含11种不同敌意攻击类型的10个NLU数据集上，所得到的检测器显著地提高了(超过7.5%)BERT编码器的最新敌意检测精度。我们还证明了我们的方法(A)对于更大的模型更准确，这些模型可能具有更多的虚假相关性，因此容易受到对抗性攻击，并且(B)即使在适度的对抗性例子训练集的情况下也表现得很好。
-
-
-
-## **49. Integrity Fingerprinting of DNN with Double Black-box Design and Verification**
-
-基于双黑盒设计和验证的DNN完整性指纹 cs.CR
-
-**SubmitDate**: 2022-03-23    [paper-pdf](http://arxiv.org/pdf/2203.10902v2)
-
-**Authors**: Shuo Wang, Sharif Abuadbba, Sidharth Agarwal, Kristen Moore, Surya Nepal, Salil Kanhere
-
-**Abstracts**: Cloud-enabled Machine Learning as a Service (MLaaS) has shown enormous promise to transform how deep learning models are developed and deployed. Nonetheless, there is a potential risk associated with the use of such services since a malicious party can modify them to achieve an adverse result. Therefore, it is imperative for model owners, service providers, and end-users to verify whether the deployed model has not been tampered with or not. Such verification requires public verifiability (i.e., fingerprinting patterns are available to all parties, including adversaries) and black-box access to the deployed model via APIs. Existing watermarking and fingerprinting approaches, however, require white-box knowledge (such as gradient) to design the fingerprinting and only support private verifiability, i.e., verification by an honest party.   In this paper, we describe a practical watermarking technique that enables black-box knowledge in fingerprint design and black-box queries during verification. The service ensures the integrity of cloud-based services through public verification (i.e. fingerprinting patterns are available to all parties, including adversaries). If an adversary manipulates a model, this will result in a shift in the decision boundary. Thus, the underlying principle of double-black watermarking is that a model's decision boundary could serve as an inherent fingerprint for watermarking. Our approach captures the decision boundary by generating a limited number of encysted sample fingerprints, which are a set of naturally transformed and augmented inputs enclosed around the model's decision boundary in order to capture the inherent fingerprints of the model. We evaluated our watermarking approach against a variety of model integrity attacks and model compression attacks.
-
-摘要: 支持云的机器学习即服务(MLaaS)显示出巨大的潜力，可以改变深度学习模型的开发和部署方式。尽管如此，使用此类服务仍存在潜在风险，因为恶意方可能会对其进行修改以达到不利的结果。因此，模型所有者、服务提供商和最终用户必须验证部署的模型是否未被篡改。这样的验证需要公开的可验证性(即，指纹模式可供各方使用，包括对手)，并需要通过API对部署的模型进行黑盒访问。然而，现有的水印和指纹方法需要白盒知识(如梯度)来设计指纹，并且只支持私密可验证性，即由诚实的一方进行验证。在本文中，我们描述了一种实用的水印技术，该技术能够在指纹设计中提供黑盒知识，并在验证过程中提供黑盒查询。该服务通过公开验证来确保基于云的服务的完整性(即指纹模式可供各方使用，包括对手)。如果对手操纵了一个模型，这将导致决策边界的转变。因此，双黑水印的基本原理是，模型的决策边界可以作为水印的固有指纹。我们的方法通过生成有限数量的包络样本指纹来捕获决策边界，这些样本指纹是围绕模型决策边界的一组自然转换和扩充的输入，以捕获模型的固有指纹。我们针对各种模型完整性攻击和模型压缩攻击对我们的水印方法进行了评估。
-
-
-
-## **50. Shadows can be Dangerous: Stealthy and Effective Physical-world Adversarial Attack by Natural Phenomenon**
-
-阴影可能是危险的：自然现象对物理世界的隐秘而有效的对抗性攻击 cs.CV
-
-This paper has been accepted by CVPR2022. Code:  https://github.com/hncszyq/ShadowAttack
-
-**SubmitDate**: 2022-03-23    [paper-pdf](http://arxiv.org/pdf/2203.03818v3)
-
-**Authors**: Yiqi Zhong, Xianming Liu, Deming Zhai, Junjun Jiang, Xiangyang Ji
-
-**Abstracts**: Estimating the risk level of adversarial examples is essential for safely deploying machine learning models in the real world. One popular approach for physical-world attacks is to adopt the "sticker-pasting" strategy, which however suffers from some limitations, including difficulties in access to the target or printing by valid colors. A new type of non-invasive attacks emerged recently, which attempt to cast perturbation onto the target by optics based tools, such as laser beam and projector. However, the added optical patterns are artificial but not natural. Thus, they are still conspicuous and attention-grabbed, and can be easily noticed by humans. In this paper, we study a new type of optical adversarial examples, in which the perturbations are generated by a very common natural phenomenon, shadow, to achieve naturalistic and stealthy physical-world adversarial attack under the black-box setting. We extensively evaluate the effectiveness of this new attack on both simulated and real-world environments. Experimental results on traffic sign recognition demonstrate that our algorithm can generate adversarial examples effectively, reaching 98.23% and 90.47% success rates on LISA and GTSRB test sets respectively, while continuously misleading a moving camera over 95% of the time in real-world scenarios. We also offer discussions about the limitations and the defense mechanism of this attack.
-
-摘要: 估计对抗性例子的风险水平对于在现实世界中安全地部署机器学习模型是至关重要的。物理世界攻击的一种流行方法是采用“粘贴”策略，但该策略受到一些限制，包括难以访问目标或以有效颜色打印。最近出现了一种新型的非侵入性攻击，它试图通过激光和投影仪等基于光学的工具对目标进行摄动。然而，添加的光学图案是人造的，但不是自然的。因此，它们仍然是引人注目和引人注目的，很容易被人类注意到。本文研究了一种新的光学对抗实例，其中的扰动是由一种非常常见的自然现象阴影产生的，以实现黑箱环境下自然主义的隐身物理世界对抗攻击。我们广泛评估了这种新攻击在模拟和真实环境中的有效性。在交通标志识别上的实验结果表明，该算法能够有效地生成对抗性样本，在LISA和GTSRB测试集上的准确率分别达到98.23%和90.47%，而在真实场景中，95%以上的时间都能连续误导移动的摄像机。我们还讨论了这种攻击的局限性和防御机制。
 
 
 

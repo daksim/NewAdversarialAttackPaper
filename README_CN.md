@@ -1,9 +1,69 @@
 # Latest Adversarial Attack Papers
-**update at 2022-04-08 06:31:49**
+**update at 2022-04-09 06:31:45**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. Sampling-based Fast Gradient Rescaling Method for Highly Transferable Adversarial Attacks**
+## **1. Reinforcement Learning for Linear Quadratic Control is Vulnerable Under Cost Manipulation**
+
+线性二次控制的强化学习在成本操纵下的脆弱性 eess.SY
+
+This paper is yet to be peer-reviewed; Typos are corrected in ver 2
+
+**SubmitDate**: 2022-04-07    [paper-pdf](http://arxiv.org/pdf/2203.05774v2)
+
+**Authors**: Yunhan Huang, Quanyan Zhu
+
+**Abstracts**: In this work, we study the deception of a Linear-Quadratic-Gaussian (LQG) agent by manipulating the cost signals. We show that a small falsification of the cost parameters will only lead to a bounded change in the optimal policy. The bound is linear on the amount of falsification the attacker can apply to the cost parameters. We propose an attack model where the attacker aims to mislead the agent into learning a `nefarious' policy by intentionally falsifying the cost parameters. We formulate the attack's problem as a convex optimization problem and develop necessary and sufficient conditions to check the achievability of the attacker's goal.   We showcase the adversarial manipulation on two types of LQG learners: the batch RL learner and the other is the adaptive dynamic programming (ADP) learner. Our results demonstrate that with only 2.296% of falsification on the cost data, the attacker misleads the batch RL into learning the 'nefarious' policy that leads the vehicle to a dangerous position. The attacker can also gradually trick the ADP learner into learning the same `nefarious' policy by consistently feeding the learner a falsified cost signal that stays close to the actual cost signal. The paper aims to raise people's awareness of the security threats faced by RL-enabled control systems.
+
+摘要: 在这项工作中，我们通过操纵费用信号来研究线性二次高斯(LQG)代理的欺骗。我们表明，对成本参数的微小篡改只会导致最优策略的有限变化。该界限与攻击者可以应用于成本参数的伪造量呈线性关系。我们提出了一个攻击模型，其中攻击者旨在通过故意伪造成本参数来误导代理学习“邪恶的”策略。我们将攻击问题描述为一个凸优化问题，并给出了检验攻击者目标可达性的充要条件。我们展示了在两种类型的LQG学习器上的对抗操作：批处理RL学习器和自适应动态规划(ADP)学习器。我们的结果表明，在只有2.296%的成本数据被篡改的情况下，攻击者误导批次RL学习将车辆引向危险位置的“邪恶”策略。攻击者还可以通过始终如一地向学习者提供接近实际成本信号的伪造成本信号，逐渐诱骗ADP学习者学习相同的“邪恶”策略。本文旨在提高人们对启用RL的控制系统所面临的安全威胁的认识。
+
+
+
+## **2. IRShield: A Countermeasure Against Adversarial Physical-Layer Wireless Sensing**
+
+IRShield：对抗敌意物理层无线侦听的对策 cs.CR
+
+**SubmitDate**: 2022-04-07    [paper-pdf](http://arxiv.org/pdf/2112.01967v2)
+
+**Authors**: Paul Staat, Simon Mulzer, Stefan Roth, Veelasha Moonsamy, Markus Heinrichs, Rainer Kronberger, Aydin Sezgin, Christof Paar
+
+**Abstracts**: Wireless radio channels are known to contain information about the surrounding propagation environment, which can be extracted using established wireless sensing methods. Thus, today's ubiquitous wireless devices are attractive targets for passive eavesdroppers to launch reconnaissance attacks. In particular, by overhearing standard communication signals, eavesdroppers obtain estimations of wireless channels which can give away sensitive information about indoor environments. For instance, by applying simple statistical methods, adversaries can infer human motion from wireless channel observations, allowing to remotely monitor premises of victims. In this work, building on the advent of intelligent reflecting surfaces (IRSs), we propose IRShield as a novel countermeasure against adversarial wireless sensing. IRShield is designed as a plug-and-play privacy-preserving extension to existing wireless networks. At the core of IRShield, we design an IRS configuration algorithm to obfuscate wireless channels. We validate the effectiveness with extensive experimental evaluations. In a state-of-the-art human motion detection attack using off-the-shelf Wi-Fi devices, IRShield lowered detection rates to 5% or less.
+
+摘要: 众所周知，无线无线电信道包含有关周围传播环境的信息，可以使用已建立的无线侦听方法提取这些信息。因此，如今无处不在的无线设备是被动窃听者发动侦察攻击的诱人目标。特别是，通过窃听标准通信信号，窃听者获得对无线信道的估计，这可能会泄露有关室内环境的敏感信息。例如，通过应用简单的统计方法，攻击者可以从无线信道观测中推断人体运动，从而允许远程监控受害者的办公场所。在这项工作中，基于智能反射面(IRS)的出现，我们提出了IRShield作为一种新的对抗敌意无线传感的对策。IRShield被设计为现有无线网络的即插即用隐私保护扩展。在IRShield的核心部分，我们设计了一种IRS配置算法来对无线信道进行混淆。我们通过大量的实验评估验证了该方法的有效性。在一次使用现成Wi-Fi设备的最先进的人体运动检测攻击中，IRShield将检测率降至5%或更低。
+
+
+
+## **3. Adversarial Machine Learning Attacks Against Video Anomaly Detection Systems**
+
+针对视频异常检测系统的对抗性机器学习攻击 cs.CV
+
+**SubmitDate**: 2022-04-07    [paper-pdf](http://arxiv.org/pdf/2204.03141v1)
+
+**Authors**: Furkan Mumcu, Keval Doshi, Yasin Yilmaz
+
+**Abstracts**: Anomaly detection in videos is an important computer vision problem with various applications including automated video surveillance. Although adversarial attacks on image understanding models have been heavily investigated, there is not much work on adversarial machine learning targeting video understanding models and no previous work which focuses on video anomaly detection. To this end, we investigate an adversarial machine learning attack against video anomaly detection systems, that can be implemented via an easy-to-perform cyber-attack. Since surveillance cameras are usually connected to the server running the anomaly detection model through a wireless network, they are prone to cyber-attacks targeting the wireless connection. We demonstrate how Wi-Fi deauthentication attack, a notoriously easy-to-perform and effective denial-of-service (DoS) attack, can be utilized to generate adversarial data for video anomaly detection systems. Specifically, we apply several effects caused by the Wi-Fi deauthentication attack on video quality (e.g., slow down, freeze, fast forward, low resolution) to the popular benchmark datasets for video anomaly detection. Our experiments with several state-of-the-art anomaly detection models show that the attackers can significantly undermine the reliability of video anomaly detection systems by causing frequent false alarms and hiding physical anomalies from the surveillance system.
+
+摘要: 视频中的异常检测是一个重要的计算机视觉问题，在包括自动视频监控在内的各种应用中都有应用。虽然针对图像理解模型的对抗性攻击已经得到了大量的研究，但针对视频理解模型的对抗性机器学习的研究还很少，也没有专门针对视频异常检测的工作。为此，我们研究了一种针对视频异常检测系统的对抗性机器学习攻击，该攻击可以通过易于执行的网络攻击来实现。由于监控摄像头通常通过无线网络连接到运行异常检测模型的服务器，因此它们容易受到针对无线连接的网络攻击。我们演示了如何利用Wi-Fi解除身份验证攻击，这是一种众所周知的易于执行和有效的拒绝服务(DoS)攻击，可以为视频异常检测系统生成敌意数据。具体地说，我们将Wi-Fi解除身份验证攻击对视频质量造成的几种影响(例如，减速、冻结、快进、低分辨率)应用于流行的基准数据集，用于视频异常检测。我们用几种最先进的异常检测模型进行的实验表明，攻击者可以通过频繁的误报警和对监控系统隐藏物理异常来显著破坏视频异常检测系统的可靠性。
+
+
+
+## **4. Control barrier function based attack-recovery with provable guarantees**
+
+具有可证明保证的基于控制屏障函数的攻击恢复 cs.SY
+
+8 pages, 6 figures
+
+**SubmitDate**: 2022-04-06    [paper-pdf](http://arxiv.org/pdf/2204.03077v1)
+
+**Authors**: Kunal Garg, Ricardo G. Sanfelice, Alvaro A. Cardenas
+
+**Abstracts**: This paper studies provable security guarantees for cyber-physical systems (CPS) under actuator attacks. In particular, we consider CPS safety and propose a new attack-detection mechanism based on a zeroing control barrier function (ZCBF) condition. In addition we design an adaptive recovery mechanism based on how close the system is from violating safety. We show that the attack-detection mechanism is sound, i.e., there are no false negatives for adversarial attacks. Finally, we use a Quadratic Programming (QP) approach for online recovery (and nominal) control synthesis. We demonstrate the effectiveness of the proposed method in a simulation case study involving a quadrotor with an attack on its motors.
+
+摘要: 研究了网络物理系统在执行器攻击下的可证明安全保证问题。特别是，我们考虑了CPS的安全性，提出了一种新的基于归零控制屏障函数(ZCBF)条件的攻击检测机制。此外，我们还设计了一种基于系统与违反安全的距离的自适应恢复机制。我们证明了攻击检测机制是健全的，即对于对抗性攻击没有漏报。最后，我们使用二次规划(QP)方法进行在线恢复(和标称)控制综合。在一个四旋翼发动机受到攻击的仿真案例研究中，我们证明了所提方法的有效性。
+
+
+
+## **5. Sampling-based Fast Gradient Rescaling Method for Highly Transferable Adversarial Attacks**
 
 一种基于采样的高可转移对抗性攻击快速梯度重缩放方法 cs.CV
 
@@ -17,7 +77,7 @@
 
 
 
-## **2. Distilling Robust and Non-Robust Features in Adversarial Examples by Information Bottleneck**
+## **6. Distilling Robust and Non-Robust Features in Adversarial Examples by Information Bottleneck**
 
 利用信息瓶颈从对抗性实例中提取稳健和非稳健特征 cs.LG
 
@@ -33,7 +93,7 @@ NeurIPS 2021
 
 
 
-## **3. Rolling Colors: Adversarial Laser Exploits against Traffic Light Recognition**
+## **7. Rolling Colors: Adversarial Laser Exploits against Traffic Light Recognition**
 
 滚动颜色：对抗红绿灯识别的激光攻击 cs.CV
 
@@ -49,7 +109,7 @@ To be published in USENIX Security 2022
 
 
 
-## **4. Adversarial Analysis of the Differentially-Private Federated Learning in Cyber-Physical Critical Infrastructures**
+## **8. Adversarial Analysis of the Differentially-Private Federated Learning in Cyber-Physical Critical Infrastructures**
 
 网络物理关键基础设施中非私有联邦学习的对抗性分析 cs.CR
 
@@ -65,7 +125,7 @@ To be published in USENIX Security 2022
 
 
 
-## **5. Who Is the Strongest Enemy? Towards Optimal and Efficient Evasion Attacks in Deep RL**
+## **9. Who Is the Strongest Enemy? Towards Optimal and Efficient Evasion Attacks in Deep RL**
 
 谁是最强大的敌人？面向最优高效逃避攻击的Deep RL cs.LG
 
@@ -81,7 +141,7 @@ In the 10th International Conference on Learning Representations  (ICLR 2022)
 
 
 
-## **6. Patch-Fool: Are Vision Transformers Always Robust Against Adversarial Perturbations?**
+## **10. Patch-Fool: Are Vision Transformers Always Robust Against Adversarial Perturbations?**
 
 补丁-愚人：视觉变形金刚在对抗敌方干扰时总是健壮吗？ cs.CV
 
@@ -97,7 +157,7 @@ Accepted at ICLR 2022
 
 
 
-## **7. Exploring Robust Architectures for Deep Artificial Neural Networks**
+## **11. Exploring Robust Architectures for Deep Artificial Neural Networks**
 
 探索深度人工神经网络的健壮体系结构 cs.LG
 
@@ -113,7 +173,7 @@ Accepted at ICLR 2022
 
 
 
-## **8. User-Level Differential Privacy against Attribute Inference Attack of Speech Emotion Recognition in Federated Learning**
+## **12. User-Level Differential Privacy against Attribute Inference Attack of Speech Emotion Recognition in Federated Learning**
 
 联合学习中抵抗语音情感识别属性推理攻击的用户级差分隐私 cs.CR
 
@@ -127,7 +187,7 @@ Accepted at ICLR 2022
 
 
 
-## **9. Training-Free Robust Multimodal Learning via Sample-Wise Jacobian Regularization**
+## **13. Training-Free Robust Multimodal Learning via Sample-Wise Jacobian Regularization**
 
 基于样本明智雅可比正则化的免训练鲁棒多模学习 cs.CV
 
@@ -141,7 +201,7 @@ Accepted at ICLR 2022
 
 
 
-## **10. Hear No Evil: Towards Adversarial Robustness of Automatic Speech Recognition via Multi-Task Learning**
+## **14. Hear No Evil: Towards Adversarial Robustness of Automatic Speech Recognition via Multi-Task Learning**
 
 听而不闻：通过多任务学习实现自动语音识别的对抗健壮性 eess.AS
 
@@ -157,7 +217,7 @@ Submitted to Insterspeech 2022
 
 
 
-## **11. A Survey of Adversarial Learning on Graphs**
+## **15. A Survey of Adversarial Learning on Graphs**
 
 图上的对抗性学习研究综述 cs.LG
 
@@ -173,7 +233,7 @@ Preprint; 16 pages, 2 figures
 
 
 
-## **12. Training strategy for a lightweight countermeasure model for automatic speaker verification**
+## **16. Training strategy for a lightweight countermeasure model for automatic speaker verification**
 
 一种轻量级说话人自动确认对策模型的训练策略 cs.SD
 
@@ -189,7 +249,7 @@ ASVspoof2021
 
 
 
-## **13. Understanding and Improving Graph Injection Attack by Promoting Unnoticeability**
+## **17. Understanding and Improving Graph Injection Attack by Promoting Unnoticeability**
 
 通过提高不可察觉来理解和改进图注入攻击 cs.LG
 
@@ -205,7 +265,7 @@ ICLR2022, 42 pages, 22 figures
 
 
 
-## **14. Adversarial Detection without Model Information**
+## **18. Adversarial Detection without Model Information**
 
 无模型信息的对抗性检测 cs.CV
 
@@ -221,7 +281,7 @@ This paper has 14 pages of content and 2 pages of references
 
 
 
-## **15. GAIL-PT: A Generic Intelligent Penetration Testing Framework with Generative Adversarial Imitation Learning**
+## **19. GAIL-PT: A Generic Intelligent Penetration Testing Framework with Generative Adversarial Imitation Learning**
 
 GAIL-PT：一种具有生成性对抗性模仿学习的通用智能渗透测试框架 cs.CR
 
@@ -235,7 +295,7 @@ GAIL-PT：一种具有生成性对抗性模仿学习的通用智能渗透测试�
 
 
 
-## **16. Recent improvements of ASR models in the face of adversarial attacks**
+## **20. Recent improvements of ASR models in the face of adversarial attacks**
 
 面对对抗性攻击的ASR模型的最新改进 cs.CR
 
@@ -251,7 +311,7 @@ Submitted to Interspeech 2022
 
 
 
-## **17. Experimental quantum adversarial learning with programmable superconducting qubits**
+## **21. Experimental quantum adversarial learning with programmable superconducting qubits**
 
 基于可编程超导量子比特的实验量子对抗学习 quant-ph
 
@@ -267,7 +327,7 @@ Submitted to Interspeech 2022
 
 
 
-## **18. DAD: Data-free Adversarial Defense at Test Time**
+## **22. DAD: Data-free Adversarial Defense at Test Time**
 
 DAD：测试时的无数据对抗性防御 cs.LG
 
@@ -283,7 +343,7 @@ WACV 2022. Project page: https://sites.google.com/view/dad-wacv22
 
 
 
-## **19. RobustSense: Defending Adversarial Attack for Secure Device-Free Human Activity Recognition**
+## **23. RobustSense: Defending Adversarial Attack for Secure Device-Free Human Activity Recognition**
 
 RobustSense：防御恶意攻击，实现安全的无设备人类活动识别 cs.CR
 
@@ -297,7 +357,7 @@ RobustSense：防御恶意攻击，实现安全的无设备人类活动识别 cs
 
 
 
-## **20. PRADA: Practical Black-Box Adversarial Attacks against Neural Ranking Models**
+## **24. PRADA: Practical Black-Box Adversarial Attacks against Neural Ranking Models**
 
 Prada：针对神经排序模型的实用黑箱对抗性攻击 cs.IR
 
@@ -311,7 +371,7 @@ Prada：针对神经排序模型的实用黑箱对抗性攻击 cs.IR
 
 
 
-## **21. Captcha Attack: Turning Captchas Against Humanity**
+## **25. Captcha Attack: Turning Captchas Against Humanity**
 
 Captcha攻击：使Captchas反人类 cs.CR
 
@@ -327,7 +387,7 @@ Currently under submission
 
 
 
-## **22. Detecting In-vehicle Intrusion via Semi-supervised Learning-based Convolutional Adversarial Autoencoders**
+## **26. Detecting In-vehicle Intrusion via Semi-supervised Learning-based Convolutional Adversarial Autoencoders**
 
 基于半监督学习的卷积对抗性自动编码器车载入侵检测 cs.CR
 
@@ -341,7 +401,7 @@ Currently under submission
 
 
 
-## **23. DST: Dynamic Substitute Training for Data-free Black-box Attack**
+## **27. DST: Dynamic Substitute Training for Data-free Black-box Attack**
 
 DST：无数据黑盒攻击的动态替补训练 cs.CV
 
@@ -357,7 +417,7 @@ Accepted by CVPR2022
 
 
 
-## **24. Adversarial Neon Beam: Robust Physical-World Adversarial Attack to DNNs**
+## **28. Adversarial Neon Beam: Robust Physical-World Adversarial Attack to DNNs**
 
 对抗性霓虹灯：对DNN的强大物理世界对抗性攻击 cs.CV
 
@@ -371,7 +431,7 @@ Accepted by CVPR2022
 
 
 
-## **25. Precise Statistical Analysis of Classification Accuracies for Adversarial Training**
+## **29. Precise Statistical Analysis of Classification Accuracies for Adversarial Training**
 
 对抗性训练中分类精度的精确统计分析 stat.ML
 
@@ -387,7 +447,7 @@ Accepted by CVPR2022
 
 
 
-## **26. SkeleVision: Towards Adversarial Resiliency of Person Tracking with Multi-Task Learning**
+## **30. SkeleVision: Towards Adversarial Resiliency of Person Tracking with Multi-Task Learning**
 
 SkeleVision：基于多任务学习的人跟踪的对抗性 cs.CV
 
@@ -401,7 +461,7 @@ SkeleVision：基于多任务学习的人跟踪的对抗性 cs.CV
 
 
 
-## **27. FrequencyLowCut Pooling -- Plug & Play against Catastrophic Overfitting**
+## **31. FrequencyLowCut Pooling -- Plug & Play against Catastrophic Overfitting**
 
 FredencyLowCut池--针对灾难性过拟合的即插即用 cs.CV
 
@@ -415,7 +475,7 @@ FredencyLowCut池--针对灾难性过拟合的即插即用 cs.CV
 
 
 
-## **28. Sensor Data Validation and Driving Safety in Autonomous Driving Systems**
+## **32. Sensor Data Validation and Driving Safety in Autonomous Driving Systems**
 
 自动驾驶系统中的传感器数据验证与驾驶安全 cs.CV
 
@@ -431,7 +491,7 @@ PhD Thesis, City University of Hong Kong
 
 
 
-## **29. Multi-Expert Adversarial Attack Detection in Person Re-identification Using Context Inconsistency**
+## **33. Multi-Expert Adversarial Attack Detection in Person Re-identification Using Context Inconsistency**
 
 基于上下文不一致的人重识别中的多专家对抗攻击检测 cs.CV
 
@@ -447,7 +507,7 @@ Accepted at IEEE ICCV 2021
 
 
 
-## **30. Effect of Balancing Data Using Synthetic Data on the Performance of Machine Learning Classifiers for Intrusion Detection in Computer Networks**
+## **34. Effect of Balancing Data Using Synthetic Data on the Performance of Machine Learning Classifiers for Intrusion Detection in Computer Networks**
 
 计算机网络入侵检测中数据均衡对机器学习分类器性能的影响 cs.LG
 
@@ -461,7 +521,7 @@ Accepted at IEEE ICCV 2021
 
 
 
-## **31. Reverse Engineering of Imperceptible Adversarial Image Perturbations**
+## **35. Reverse Engineering of Imperceptible Adversarial Image Perturbations**
 
 不可感知的对抗性图像扰动的逆向工程 cs.CV
 
@@ -475,7 +535,7 @@ Accepted at IEEE ICCV 2021
 
 
 
-## **32. Scalable Whitebox Attacks on Tree-based Models**
+## **36. Scalable Whitebox Attacks on Tree-based Models**
 
 基于树模型的可伸缩白盒攻击 stat.ML
 
@@ -489,7 +549,7 @@ Accepted at IEEE ICCV 2021
 
 
 
-## **33. Parallel Proof-of-Work with Concrete Bounds**
+## **37. Parallel Proof-of-Work with Concrete Bounds**
 
 具有具体界限的并行工作证明 cs.CR
 
@@ -503,7 +563,7 @@ Accepted at IEEE ICCV 2021
 
 
 
-## **34. Truth Serum: Poisoning Machine Learning Models to Reveal Their Secrets**
+## **38. Truth Serum: Poisoning Machine Learning Models to Reveal Their Secrets**
 
 真相血清：毒化机器学习模型以揭示其秘密 cs.CR
 
@@ -517,7 +577,7 @@ Accepted at IEEE ICCV 2021
 
 
 
-## **35. Improving Adversarial Transferability via Neuron Attribution-Based Attacks**
+## **39. Improving Adversarial Transferability via Neuron Attribution-Based Attacks**
 
 通过基于神经元属性的攻击提高对手的可转换性 cs.LG
 
@@ -533,7 +593,7 @@ CVPR 2022
 
 
 
-## **36. Towards Robust Rain Removal Against Adversarial Attacks: A Comprehensive Benchmark Analysis and Beyond**
+## **40. Towards Robust Rain Removal Against Adversarial Attacks: A Comprehensive Benchmark Analysis and Beyond**
 
 对抗对抗性攻击的稳健除雨：综合基准分析及进一步研究 cs.CV
 
@@ -549,7 +609,7 @@ CVPR 2022
 
 
 
-## **37. Assessing the risk of re-identification arising from an attack on anonymised data**
+## **41. Assessing the risk of re-identification arising from an attack on anonymised data**
 
 评估匿名数据遭受攻击后重新识别的风险 cs.LG
 
@@ -563,7 +623,7 @@ CVPR 2022
 
 
 
-## **38. Attack Impact Evaluation by Exact Convexification through State Space Augmentation**
+## **42. Attack Impact Evaluation by Exact Convexification through State Space Augmentation**
 
 基于状态空间增强的精确凸化攻击效果评估 eess.SY
 
@@ -579,7 +639,7 @@ CVPR 2022
 
 
 
-## **39. The Block-based Mobile PDE Systems Are Not Secure -- Experimental Attacks**
+## **43. The Block-based Mobile PDE Systems Are Not Secure -- Experimental Attacks**
 
 基于分组的移动PDE系统不安全--实验性攻击 cs.CR
 
@@ -593,7 +653,7 @@ CVPR 2022
 
 
 
-## **40. Well-classified Examples are Underestimated in Classification with Deep Neural Networks**
+## **44. Well-classified Examples are Underestimated in Classification with Deep Neural Networks**
 
 深度神经网络在分类中低估分类好的样本 cs.LG
 
@@ -609,7 +669,7 @@ Accepted by AAAI 2022; 17 pages, 11 figures, 13 tables
 
 
 
-## **41. Example-based Explanations with Adversarial Attacks for Respiratory Sound Analysis**
+## **45. Example-based Explanations with Adversarial Attacks for Respiratory Sound Analysis**
 
 呼吸音分析中对抗性攻击的实例解释 cs.SD
 
@@ -625,7 +685,7 @@ Submitted to INTERSPEECH 2022
 
 
 
-## **42. Fooling the primate brain with minimal, targeted image manipulation**
+## **46. Fooling the primate brain with minimal, targeted image manipulation**
 
 通过最小的、有针对性的图像处理来愚弄灵长类动物的大脑 q-bio.NC
 
@@ -639,7 +699,7 @@ Submitted to INTERSPEECH 2022
 
 
 
-## **43. StyleFool: Fooling Video Classification Systems via Style Transfer**
+## **47. StyleFool: Fooling Video Classification Systems via Style Transfer**
 
 StyleFool：通过样式转换愚弄视频分类系统 cs.CV
 
@@ -655,7 +715,7 @@ StyleFool：通过样式转换愚弄视频分类系统 cs.CV
 
 
 
-## **44. NICGSlowDown: Evaluating the Efficiency Robustness of Neural Image Caption Generation Models**
+## **48. NICGSlowDown: Evaluating the Efficiency Robustness of Neural Image Caption Generation Models**
 
 NICGSlowDown：评估神经图像字幕生成模型的效率和稳健性 cs.CV
 
@@ -671,7 +731,7 @@ This paper is accepted at CVPR2022
 
 
 
-## **45. Characterizing the adversarial vulnerability of speech self-supervised learning**
+## **49. Characterizing the adversarial vulnerability of speech self-supervised learning**
 
 表征语音自监督学习的对抗性脆弱性 cs.SD
 
@@ -687,7 +747,7 @@ Accepted by ICASSP 2022
 
 
 
-## **46. Adaptative Perturbation Patterns: Realistic Adversarial Learning for Robust Intrusion Detection**
+## **50. Adaptative Perturbation Patterns: Realistic Adversarial Learning for Robust Intrusion Detection**
 
 自适应扰动模式：用于稳健入侵检测的现实对抗性学习 cs.CR
 
@@ -700,70 +760,6 @@ Accepted by ICASSP 2022
 **Abstracts**: Adversarial attacks pose a major threat to machine learning and to the systems that rely on it. In the cybersecurity domain, adversarial cyber-attack examples capable of evading detection are especially concerning. Nonetheless, an example generated for a domain with tabular data must be realistic within that domain. This work establishes the fundamental constraint levels required to achieve realism and introduces the Adaptative Perturbation Pattern Method (A2PM) to fulfill these constraints in a gray-box setting. A2PM relies on pattern sequences that are independently adapted to the characteristics of each class to create valid and coherent data perturbations. The proposed method was evaluated in a cybersecurity case study with two scenarios: Enterprise and Internet of Things (IoT) networks. Multilayer Perceptron (MLP) and Random Forest (RF) classifiers were created with regular and adversarial training, using the CIC-IDS2017 and IoT-23 datasets. In each scenario, targeted and untargeted attacks were performed against the classifiers, and the generated examples were compared with the original network traffic flows to assess their realism. The obtained results demonstrate that A2PM provides a scalable generation of realistic adversarial examples, which can be advantageous for both adversarial training and attacks.
 
 摘要: 对抗性攻击对机器学习和依赖机器学习的系统构成了重大威胁。在网络安全领域，能够逃避检测的敌意网络攻击实例尤其令人担忧。尽管如此，为包含表格数据的域生成的示例在该域中必须是真实的。这项工作建立了实现真实感所需的基本约束水平，并引入了自适应扰动模式方法(A2PM)来满足灰箱设置中的这些约束。A2PM依赖于独立适应每一类的特征的模式序列来创建有效且一致的数据扰动。该方法在一个网络安全案例研究中进行了评估，其中包含两个场景：企业和物联网(IoT)网络。使用CIC-IDS2017和IoT-23数据集，通过定期和对抗性训练创建了多层感知器(MLP)和随机森林(RF)分类器。在每个场景中，对分类器执行目标攻击和非目标攻击，并将生成的示例与原始网络流量进行比较，以评估其真实性。所获得的结果表明，A2PM提供了可扩展的真实对抗性实例生成，这对于对抗性训练和攻击都是有利的。
-
-
-
-## **47. Exploring Frequency Adversarial Attacks for Face Forgery Detection**
-
-基于频率对抗攻击的人脸伪造检测方法研究 cs.CV
-
-Accepted by CVPR2022
-
-**SubmitDate**: 2022-03-29    [paper-pdf](http://arxiv.org/pdf/2203.15674v1)
-
-**Authors**: Shuai Jia, Chao Ma, Taiping Yao, Bangjie Yin, Shouhong Ding, Xiaokang Yang
-
-**Abstracts**: Various facial manipulation techniques have drawn serious public concerns in morality, security, and privacy. Although existing face forgery classifiers achieve promising performance on detecting fake images, these methods are vulnerable to adversarial examples with injected imperceptible perturbations on the pixels. Meanwhile, many face forgery detectors always utilize the frequency diversity between real and fake faces as a crucial clue. In this paper, instead of injecting adversarial perturbations into the spatial domain, we propose a frequency adversarial attack method against face forgery detectors. Concretely, we apply discrete cosine transform (DCT) on the input images and introduce a fusion module to capture the salient region of adversary in the frequency domain. Compared with existing adversarial attacks (e.g. FGSM, PGD) in the spatial domain, our method is more imperceptible to human observers and does not degrade the visual quality of the original images. Moreover, inspired by the idea of meta-learning, we also propose a hybrid adversarial attack that performs attacks in both the spatial and frequency domains. Extensive experiments indicate that the proposed method fools not only the spatial-based detectors but also the state-of-the-art frequency-based detectors effectively. In addition, the proposed frequency attack enhances the transferability across face forgery detectors as black-box attacks.
-
-摘要: 各种面部操纵技术在道德、安全和隐私方面引起了公众的严重关注。虽然现有的人脸伪造分类器在检测虚假图像方面取得了良好的性能，但这些方法很容易受到像素上注入不可察觉扰动的敌对示例的影响。与此同时，许多人脸伪造检测器总是利用真假人脸之间的频率差异作为关键线索。在本文中，我们提出了一种针对人脸伪造检测器的频率对抗攻击方法，而不是在空间域中注入对抗扰动。具体地，对输入图像进行离散余弦变换(DCT)，并引入融合模块在频域中捕捉对手的显著区域。与已有的空域对抗性攻击(如FGSM、PGD)相比，我们的方法对人类观察者来说更不易察觉，并且不会降低原始图像的视觉质量。此外，受元学习思想的启发，我们还提出了一种在空域和频域执行攻击的混合对抗性攻击。大量实验表明，该方法不仅能有效地欺骗基于空间的检测器，而且能有效地欺骗最新的基于频率的检测器。此外，提出的频率攻击增强了黑盒攻击在人脸伪造检测器之间的可传递性。
-
-
-
-## **48. Adaptive Image Transformations for Transfer-based Adversarial Attack**
-
-基于传输的对抗性攻击中的自适应图像变换 cs.CV
-
-33 pages, 7 figures, 10 tables
-
-**SubmitDate**: 2022-03-29    [paper-pdf](http://arxiv.org/pdf/2111.13844v2)
-
-**Authors**: Zheng Yuan, Jie Zhang, Shiguang Shan
-
-**Abstracts**: Adversarial attacks provide a good way to study the robustness of deep learning models. One category of methods in transfer-based black-box attack utilizes several image transformation operations to improve the transferability of adversarial examples, which is effective, but fails to take the specific characteristic of the input image into consideration. In this work, we propose a novel architecture, called Adaptive Image Transformation Learner (AITL), which incorporates different image transformation operations into a unified framework to further improve the transferability of adversarial examples. Unlike the fixed combinational transformations used in existing works, our elaborately designed transformation learner adaptively selects the most effective combination of image transformations specific to the input image. Extensive experiments on ImageNet demonstrate that our method significantly improves the attack success rates on both normally trained models and defense models under various settings.
-
-摘要: 对抗性攻击为研究深度学习模型的稳健性提供了一种很好的方法。一类基于转移的黑盒攻击方法利用多幅图像变换操作来提高对抗性样本的可转移性，这种方法是有效的，但没有考虑到输入图像的具体特征。在这项工作中，我们提出了一种新的体系结构，称为自适应图像变换学习器(AITL)，它将不同的图像变换操作整合到一个统一的框架中，以进一步提高对抗性例子的可转移性。与现有工作中使用的固定组合变换不同，我们精心设计的变换学习器自适应地选择特定于输入图像的最有效的图像变换组合。在ImageNet上的大量实验表明，该方法在正常训练模型和防御模型上的攻击成功率在各种设置下都有显著提高。
-
-
-
-## **49. Treatment Learning Transformer for Noisy Image Classification**
-
-用于含噪图像分类的治疗学习转换器 cs.CV
-
-Preprint. The first version was finished in May 2018
-
-**SubmitDate**: 2022-03-29    [paper-pdf](http://arxiv.org/pdf/2203.15529v1)
-
-**Authors**: Chao-Han Huck Yang, I-Te Danny Hung, Yi-Chieh Liu, Pin-Yu Chen
-
-**Abstracts**: Current top-notch deep learning (DL) based vision models are primarily based on exploring and exploiting the inherent correlations between training data samples and their associated labels. However, a known practical challenge is their degraded performance against "noisy" data, induced by different circumstances such as spurious correlations, irrelevant contexts, domain shift, and adversarial attacks. In this work, we incorporate this binary information of "existence of noise" as treatment into image classification tasks to improve prediction accuracy by jointly estimating their treatment effects. Motivated from causal variational inference, we propose a transformer-based architecture, Treatment Learning Transformer (TLT), that uses a latent generative model to estimate robust feature representations from current observational input for noise image classification. Depending on the estimated noise level (modeled as a binary treatment factor), TLT assigns the corresponding inference network trained by the designed causal loss for prediction. We also create new noisy image datasets incorporating a wide range of noise factors (e.g., object masking, style transfer, and adversarial perturbation) for performance benchmarking. The superior performance of TLT in noisy image classification is further validated by several refutation evaluation metrics. As a by-product, TLT also improves visual salience methods for perceiving noisy images.
-
-摘要: 目前基于深度学习的视觉模型主要是基于探索和利用训练数据样本及其关联标签之间的内在相关性。然而，一个已知的实际挑战是，它们针对不同环境(如伪相关性、无关上下文、域转移和敌意攻击)引起的抗噪声数据的性能下降。在这项工作中，我们将“噪声的存在”这一二值信息作为处理，引入到图像分类任务中，通过联合估计它们的处理效果来提高预测精度。受因果变分推理的启发，我们提出了一种基于变换的结构-处理学习转换器(TLT)，它使用一个潜在的生成模型来估计当前观测输入的稳健特征表示，以用于噪声图像分类。根据估计的噪声水平(建模为二进制处理因子)，TLT分配由设计的因果损失训练的相应的推理网络用于预测。我们还创建了新的噪声图像数据集，其中包含了广泛的噪声因素(例如，对象掩蔽、样式转移和对抗性扰动)，用于性能基准测试。几种反驳评价指标进一步验证了TLT在含噪图像分类中的优越性能。作为一个副产品，TLT还改进了感知噪声图像的视觉显著方法。
-
-
-
-## **50. Spotting adversarial samples for speaker verification by neural vocoders**
-
-利用神经声码器识别用于说话人确认的敌意样本 cs.SD
-
-Accepted by ICASSP 2022
-
-**SubmitDate**: 2022-03-29    [paper-pdf](http://arxiv.org/pdf/2107.00309v3)
-
-**Authors**: Haibin Wu, Po-chun Hsu, Ji Gao, Shanshan Zhang, Shen Huang, Jian Kang, Zhiyong Wu, Helen Meng, Hung-yi Lee
-
-**Abstracts**: Automatic speaker verification (ASV), one of the most important technology for biometric identification, has been widely adopted in security-critical applications. However, ASV is seriously vulnerable to recently emerged adversarial attacks, yet effective countermeasures against them are limited. In this paper, we adopt neural vocoders to spot adversarial samples for ASV. We use the neural vocoder to re-synthesize audio and find that the difference between the ASV scores for the original and re-synthesized audio is a good indicator for discrimination between genuine and adversarial samples. This effort is, to the best of our knowledge, among the first to pursue such a technical direction for detecting time-domain adversarial samples for ASV, and hence there is a lack of established baselines for comparison. Consequently, we implement the Griffin-Lim algorithm as the detection baseline. The proposed approach achieves effective detection performance that outperforms the baselines in all the settings. We also show that the neural vocoder adopted in the detection framework is dataset-independent. Our codes will be made open-source for future works to do fair comparison.
-
-摘要: 自动说话人验证(ASV)是生物特征识别的重要技术之一，在安全关键应用中得到了广泛的应用。然而，ASV在最近出现的对抗性攻击中非常脆弱，但针对它们的有效对策有限。在本文中，我们采用神经声码器来识别ASV的对抗性样本。我们使用神经声码器对音频进行重新合成，发现原始音频和重新合成音频的ASV分数之间的差异是区分真实和敌对样本的一个很好的指标。据我们所知，这项工作是为检测ASV的时间域对手样本而采取的最早的技术方向之一，因此缺乏用于比较的既定基线。因此，我们实现了Griffin-Lim算法作为检测基线。所提出的方法在所有设置下都取得了优于基线的有效检测性能。我们还证明了检测框架中采用的神经声码器是与数据集无关的。我们的代码将是开源的，以供将来的工作做公平的比较。
 
 
 

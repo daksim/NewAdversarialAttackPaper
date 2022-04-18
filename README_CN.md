@@ -1,9 +1,51 @@
 # Latest Adversarial Attack Papers
-**update at 2022-04-18 06:31:26**
+**update at 2022-04-19 06:31:29**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. ExPLoit: Extracting Private Labels in Split Learning**
+## **1. Revisiting the Adversarial Robustness-Accuracy Tradeoff in Robot Learning**
+
+机器人学习中对抗性稳健性与准确性权衡的再认识 cs.RO
+
+**SubmitDate**: 2022-04-15    [paper-pdf](http://arxiv.org/pdf/2204.07373v1)
+
+**Authors**: Mathias Lechner, Alexander Amini, Daniela Rus, Thomas A. Henzinger
+
+**Abstracts**: Adversarial training (i.e., training on adversarially perturbed input data) is a well-studied method for making neural networks robust to potential adversarial attacks during inference. However, the improved robustness does not come for free but rather is accompanied by a decrease in overall model accuracy and performance. Recent work has shown that, in practical robot learning applications, the effects of adversarial training do not pose a fair trade-off but inflict a net loss when measured in holistic robot performance. This work revisits the robustness-accuracy trade-off in robot learning by systematically analyzing if recent advances in robust training methods and theory in conjunction with adversarial robot learning can make adversarial training suitable for real-world robot applications. We evaluate a wide variety of robot learning tasks ranging from autonomous driving in a high-fidelity environment amenable to sim-to-real deployment, to mobile robot gesture recognition. Our results demonstrate that, while these techniques make incremental improvements on the trade-off on a relative scale, the negative side-effects caused by adversarial training still outweigh the improvements by an order of magnitude. We conclude that more substantial advances in robust learning methods are necessary before they can benefit robot learning tasks in practice.
+
+摘要: 对抗性训练(即对对抗性扰动的输入数据进行训练)是一种研究得很好的方法，可以使神经网络在推理过程中对潜在的对抗性攻击具有健壮性。然而，稳健性的提高并不是免费的，而是伴随着总体模型精度和性能的下降。最近的工作表明，在实际的机器人学习应用中，对抗性训练的效果并不构成公平的权衡，而是在衡量整体机器人性能时造成净损失。这项工作通过系统地分析稳健训练方法和理论的最新进展以及对抗性机器人学习是否可以使对抗性训练适用于现实世界的机器人应用，重新审视了机器人学习中的稳健性和精确度之间的权衡。我们评估了各种机器人学习任务，从高保真环境中的自动驾驶到模拟真实的部署，再到移动机器人手势识别。我们的结果表明，虽然这些技术在相对规模上对权衡做出了增量改进，但对抗性训练造成的负面副作用仍然比改进多一个数量级。我们的结论是，在健壮学习方法能够在实践中有益于机器人学习任务之前，需要更多实质性的进步。
+
+
+
+## **2. Can You Spot the Chameleon? Adversarially Camouflaging Images from Co-Salient Object Detection**
+
+你能认出变色龙吗？对抗伪装图像以防止共显著目标检测 cs.CV
+
+**SubmitDate**: 2022-04-15    [paper-pdf](http://arxiv.org/pdf/2009.09258v4)
+
+**Authors**: Ruijun Gao, Qing Guo, Felix Juefei-Xu, Hongkai Yu, Huazhu Fu, Wei Feng, Yang Liu, Song Wang
+
+**Abstracts**: Co-salient object detection (CoSOD) has recently achieved significant progress and played a key role in retrieval-related tasks. However, it inevitably poses an entirely new safety and security issue, i.e., highly personal and sensitive content can potentially be extracting by powerful CoSOD methods. In this paper, we address this problem from the perspective of adversarial attacks and identify a novel task: adversarial co-saliency attack. Specially, given an image selected from a group of images containing some common and salient objects, we aim to generate an adversarial version that can mislead CoSOD methods to predict incorrect co-salient regions. Note that, compared with general white-box adversarial attacks for classification, this new task faces two additional challenges: (1) low success rate due to the diverse appearance of images in the group; (2) low transferability across CoSOD methods due to the considerable difference between CoSOD pipelines. To address these challenges, we propose the very first black-box joint adversarial exposure and noise attack (Jadena), where we jointly and locally tune the exposure and additive perturbations of the image according to a newly designed high-feature-level contrast-sensitive loss function. Our method, without any information on the state-of-the-art CoSOD methods, leads to significant performance degradation on various co-saliency detection datasets and makes the co-salient objects undetectable. This can have strong practical benefits in properly securing the large number of personal photos currently shared on the Internet. Moreover, our method is potential to be utilized as a metric for evaluating the robustness of CoSOD methods.
+
+摘要: 共显著目标检测(CoSOD)近年来取得了重大进展，在检索相关任务中发挥了关键作用。然而，它不可避免地提出了一个全新的安全问题，即高度个人和敏感的内容可能会被强大的CoSOD方法提取出来。在本文中，我们从对抗性攻击的角度来解决这个问题，并提出了一种新的任务：对抗性共显攻击。特别是，给定一幅从一组包含一些常见和显著对象的图像中选择的图像，我们的目标是生成一个对抗性版本，该版本可能会误导CoSOD方法预测错误的共同显著区域。注意到，与一般的白盒对抗性分类攻击相比，这项新任务面临着两个额外的挑战：(1)由于组中图像的多样性，成功率较低；(2)由于CoSOD管道之间的巨大差异，CoSOD方法之间的可传输性较低。为了应对这些挑战，我们提出了第一个黑盒联合对抗性曝光和噪声攻击(Jadena)，其中我们根据新设计的高特征级别对比度敏感损失函数来联合和局部地调整图像的曝光和加性扰动。我们的方法在没有关于最新CoSOD方法的任何信息的情况下，导致在各种共显著检测数据集上的性能显著下降，并且使得共显著对象不可检测。这对妥善保护目前在互联网上共享的大量个人照片具有很大的实际好处。此外，我们的方法有可能被用作评估CoSOD方法的稳健性的一个度量。
+
+
+
+## **3. Robotic and Generative Adversarial Attacks in Offline Writer-independent Signature Verification**
+
+离线作者无关签名验证中的机器人和生成性对抗攻击 cs.RO
+
+**SubmitDate**: 2022-04-14    [paper-pdf](http://arxiv.org/pdf/2204.07246v1)
+
+**Authors**: Jordan J. Bird
+
+**Abstracts**: This study explores how robots and generative approaches can be used to mount successful false-acceptance adversarial attacks on signature verification systems. Initially, a convolutional neural network topology and data augmentation strategy are explored and tuned, producing an 87.12% accurate model for the verification of 2,640 human signatures. Two robots are then tasked with forging 50 signatures, where 25 are used for the verification attack, and the remaining 25 are used for tuning of the model to defend against them. Adversarial attacks on the system show that there exists an information security risk; the Line-us robotic arm can fool the system 24% of the time and the iDraw 2.0 robot 32% of the time. A conditional GAN finds similar success, with around 30% forged signatures misclassified as genuine. Following fine-tune transfer learning of robotic and generative data, adversarial attacks are reduced below the model threshold by both robots and the GAN. It is observed that tuning the model reduces the risk of attack by robots to 8% and 12%, and that conditional generative adversarial attacks can be reduced to 4% when 25 images are presented and 5% when 1000 images are presented.
+
+摘要: 这项研究探索了如何使用机器人和生成性方法来对签名验证系统发起成功的虚假接受对抗性攻击。首先，探索和调整了卷积神经网络的拓扑结构和数据增强策略，产生了一个87.12%的模型，用于验证2640个人的签名。然后，两个机器人的任务是伪造50个签名，其中25个用于验证攻击，其余25个用于调整模型以防御它们。对该系统的对抗性攻击表明，存在信息安全风险；Line-us机械臂可以在24%的时间内欺骗系统，iDraw 2.0机器人可以在32%的时间内欺骗系统。有条件的GAN发现了类似的成功，大约30%的伪造签名被错误归类为真签名。在对机器人和生成性数据进行微调传递学习后，机器人和GAN都将对抗性攻击降低到模型阈值以下。实验结果表明，调整模型后，机器人的攻击风险分别降低到8%和12%，当呈现25幅图像时，条件生成性对抗攻击可以降低到4%，当呈现1000幅图像时，条件生成性对抗攻击可以降低到5%。
+
+
+
+## **4. ExPLoit: Extracting Private Labels in Split Learning**
 
 漏洞：在分裂学习中提取私有标签 cs.CR
 
@@ -17,7 +59,7 @@
 
 
 
-## **2. From Environmental Sound Representation to Robustness of 2D CNN Models Against Adversarial Attacks**
+## **5. From Environmental Sound Representation to Robustness of 2D CNN Models Against Adversarial Attacks**
 
 从环境声音表示到2D CNN模型对敌方攻击的稳健性 cs.SD
 
@@ -33,7 +75,7 @@
 
 
 
-## **3. Finding MNEMON: Reviving Memories of Node Embeddings**
+## **6. Finding MNEMON: Reviving Memories of Node Embeddings**
 
 寻找Mnemon：唤醒节点嵌入的记忆 cs.LG
 
@@ -49,7 +91,7 @@ To Appear in the 29th ACM Conference on Computer and Communications  Security (C
 
 
 
-## **4. Arbitrarily Varying Wiretap Channels with Non-Causal Side Information at the Jammer**
+## **7. Arbitrarily Varying Wiretap Channels with Non-Causal Side Information at the Jammer**
 
 干扰机具有非因果边信息的任意变化的窃听信道 cs.IT
 
@@ -63,7 +105,7 @@ To Appear in the 29th ACM Conference on Computer and Communications  Security (C
 
 
 
-## **5. Improving Adversarial Transferability with Gradient Refining**
+## **8. Improving Adversarial Transferability with Gradient Refining**
 
 利用梯度精化提高对手的可转移性 cs.CV
 
@@ -79,7 +121,7 @@ Accepted at CVPR 2021 Workshop on Adversarial Machine Learning in  Real-World Co
 
 
 
-## **6. Real-time Adversarial Perturbations against Deep Reinforcement Learning Policies: Attacks and Defenses**
+## **9. Real-time Adversarial Perturbations against Deep Reinforcement Learning Policies: Attacks and Defenses**
 
 深度强化学习策略的实时对抗性扰动：攻击与防御 cs.LG
 
@@ -95,7 +137,7 @@ Accepted at CVPR 2021 Workshop on Adversarial Machine Learning in  Real-World Co
 
 
 
-## **7. Overparameterized Linear Regression under Adversarial Attacks**
+## **10. Overparameterized Linear Regression under Adversarial Attacks**
 
 对抗性攻击下的超参数线性回归 stat.ML
 
@@ -109,7 +151,7 @@ Accepted at CVPR 2021 Workshop on Adversarial Machine Learning in  Real-World Co
 
 
 
-## **8. Towards A Critical Evaluation of Robustness for Deep Learning Backdoor Countermeasures**
+## **11. Towards A Critical Evaluation of Robustness for Deep Learning Backdoor Countermeasures**
 
 深度学习后门对策的稳健性评测 cs.CR
 
@@ -123,7 +165,7 @@ Accepted at CVPR 2021 Workshop on Adversarial Machine Learning in  Real-World Co
 
 
 
-## **9. Towards Practical Robustness Analysis for DNNs based on PAC-Model Learning**
+## **12. Towards Practical Robustness Analysis for DNNs based on PAC-Model Learning**
 
 基于PAC模型学习的DNN实用健壮性分析 cs.LG
 
@@ -137,7 +179,7 @@ Accepted at CVPR 2021 Workshop on Adversarial Machine Learning in  Real-World Co
 
 
 
-## **10. Stealing Malware Classifiers and AVs at Low False Positive Conditions**
+## **13. Stealing Malware Classifiers and AVs at Low False Positive Conditions**
 
 在低误报条件下窃取恶意软件分类器和反病毒软件 cs.CR
 
@@ -153,7 +195,7 @@ Accepted at CVPR 2021 Workshop on Adversarial Machine Learning in  Real-World Co
 
 
 
-## **11. Liuer Mihou: A Practical Framework for Generating and Evaluating Grey-box Adversarial Attacks against NIDS**
+## **14. Liuer Mihou: A Practical Framework for Generating and Evaluating Grey-box Adversarial Attacks against NIDS**
 
 六二密侯：一种实用的生成和评估针对NIDS的灰盒攻击的框架 cs.CR
 
@@ -169,7 +211,7 @@ Accepted at CVPR 2021 Workshop on Adversarial Machine Learning in  Real-World Co
 
 
 
-## **12. Optimal Membership Inference Bounds for Adaptive Composition of Sampled Gaussian Mechanisms**
+## **15. Optimal Membership Inference Bounds for Adaptive Composition of Sampled Gaussian Mechanisms**
 
 采样高斯机构自适应组合的最优成员推理界 cs.CR
 
@@ -183,7 +225,7 @@ Accepted at CVPR 2021 Workshop on Adversarial Machine Learning in  Real-World Co
 
 
 
-## **13. Membership Inference Attacks From First Principles**
+## **16. Membership Inference Attacks From First Principles**
 
 从第一性原理出发的成员推理攻击 cs.CR
 
@@ -197,7 +239,7 @@ Accepted at CVPR 2021 Workshop on Adversarial Machine Learning in  Real-World Co
 
 
 
-## **14. Rate Coding or Direct Coding: Which One is Better for Accurate, Robust, and Energy-efficient Spiking Neural Networks?**
+## **17. Rate Coding or Direct Coding: Which One is Better for Accurate, Robust, and Energy-efficient Spiking Neural Networks?**
 
 速率编码和直接编码：哪种编码更适合准确、健壮和节能的尖峰神经网络？ cs.NE
 
@@ -213,7 +255,7 @@ Accepted to ICASSP2022
 
 
 
-## **15. Masked Faces with Faced Masks**
+## **18. Masked Faces with Faced Masks**
 
 戴着面具的蒙面人 cs.CV
 
@@ -229,7 +271,7 @@ Accepted to ICASSP2022
 
 
 
-## **16. Automated Attacker Synthesis for Distributed Protocols**
+## **19. Automated Attacker Synthesis for Distributed Protocols**
 
 分布式协议的自动攻击者综合 cs.CR
 
@@ -245,7 +287,7 @@ Accepted to ICASSP2022
 
 
 
-## **17. Catch Me If You Can: Blackbox Adversarial Attacks on Automatic Speech Recognition using Frequency Masking**
+## **20. Catch Me If You Can: Blackbox Adversarial Attacks on Automatic Speech Recognition using Frequency Masking**
 
 抓住我：使用频率掩蔽对自动语音识别进行黑箱对抗性攻击 cs.SD
 
@@ -261,7 +303,7 @@ Accepted to ICASSP2022
 
 
 
-## **18. Staircase Sign Method for Boosting Adversarial Attacks**
+## **21. Staircase Sign Method for Boosting Adversarial Attacks**
 
 一种加强对抗性攻击的阶梯标记法 cs.CV
 
@@ -275,7 +317,7 @@ Accepted to ICASSP2022
 
 
 
-## **19. A survey in Adversarial Defences and Robustness in NLP**
+## **22. A survey in Adversarial Defences and Robustness in NLP**
 
 自然语言处理中的对抗性防御和稳健性研究综述 cs.CL
 
@@ -289,7 +331,7 @@ Accepted to ICASSP2022
 
 
 
-## **20. Generalizing Adversarial Explanations with Grad-CAM**
+## **23. Generalizing Adversarial Explanations with Grad-CAM**
 
 基于Grad-CAM的对抗性解释泛化 cs.CV
 
@@ -305,7 +347,7 @@ Accepted in CVPRw ArtofRobustness workshop
 
 
 
-## **21. Segmentation-Consistent Probabilistic Lesion Counting**
+## **24. Segmentation-Consistent Probabilistic Lesion Counting**
 
 分割一致的概率病变计数 eess.IV
 
@@ -321,7 +363,7 @@ Accepted at Medical Imaging with Deep Learning (MIDL) 2022
 
 
 
-## **22. Exploring the Universal Vulnerability of Prompt-based Learning Paradigm**
+## **25. Exploring the Universal Vulnerability of Prompt-based Learning Paradigm**
 
 探索基于提示的学习范式的普遍脆弱性 cs.CL
 
@@ -337,7 +379,7 @@ Accepted to Findings of NAACL 2022
 
 
 
-## **23. Analysis of a blockchain protocol based on LDPC codes**
+## **26. Analysis of a blockchain protocol based on LDPC codes**
 
 一种基于LDPC码的区块链协议分析 cs.CR
 
@@ -351,7 +393,7 @@ Accepted to Findings of NAACL 2022
 
 
 
-## **24. Measuring and Mitigating the Risk of IP Reuse on Public Clouds**
+## **27. Measuring and Mitigating the Risk of IP Reuse on Public Clouds**
 
 衡量和降低公共云上IP重用的风险 cs.CR
 
@@ -365,7 +407,7 @@ Accepted to Findings of NAACL 2022
 
 
 
-## **25. Anti-Adversarially Manipulated Attributions for Weakly Supervised Semantic Segmentation and Object Localization**
+## **28. Anti-Adversarially Manipulated Attributions for Weakly Supervised Semantic Segmentation and Object Localization**
 
 用于弱监督语义分割和对象定位的反恶意操纵属性 cs.CV
 
@@ -381,7 +423,7 @@ IEEE TPAMI, 2022
 
 
 
-## **26. Adversarial Robustness of Deep Sensor Fusion Models**
+## **29. Adversarial Robustness of Deep Sensor Fusion Models**
 
 深度传感器融合模型的对抗稳健性 cs.CV
 
@@ -395,7 +437,7 @@ IEEE TPAMI, 2022
 
 
 
-## **27. Measuring the False Sense of Security**
+## **30. Measuring the False Sense of Security**
 
 测量虚假的安全感 cs.LG
 
@@ -409,7 +451,7 @@ IEEE TPAMI, 2022
 
 
 
-## **28. Analysis of Power-Oriented Fault Injection Attacks on Spiking Neural Networks**
+## **31. Analysis of Power-Oriented Fault Injection Attacks on Spiking Neural Networks**
 
 尖峰神经网络面向能量的故障注入攻击分析 cs.AI
 
@@ -425,7 +467,7 @@ Design, Automation and Test in Europe Conference (DATE) 2022
 
 
 
-## **29. "That Is a Suspicious Reaction!": Interpreting Logits Variation to Detect NLP Adversarial Attacks**
+## **32. "That Is a Suspicious Reaction!": Interpreting Logits Variation to Detect NLP Adversarial Attacks**
 
 “这是一个可疑的反应！”：解读Logits变量以检测NLP对手攻击 cs.AI
 
@@ -441,7 +483,7 @@ ACL 2022
 
 
 
-## **30. LTD: Low Temperature Distillation for Robust Adversarial Training**
+## **33. LTD: Low Temperature Distillation for Robust Adversarial Training**
 
 LTD：低温蒸馏用于强大的对抗性训练 cs.CV
 
@@ -455,7 +497,7 @@ LTD：低温蒸馏用于强大的对抗性训练 cs.CV
 
 
 
-## **31. Understanding, Detecting, and Separating Out-of-Distribution Samples and Adversarial Samples in Text Classification**
+## **34. Understanding, Detecting, and Separating Out-of-Distribution Samples and Adversarial Samples in Text Classification**
 
 文本分类中非分布样本和敌意样本的理解、检测和分离 cs.CL
 
@@ -471,7 +513,7 @@ Preprint. Work in progress
 
 
 
-## **32. PatchCleanser: Certifiably Robust Defense against Adversarial Patches for Any Image Classifier**
+## **35. PatchCleanser: Certifiably Robust Defense against Adversarial Patches for Any Image Classifier**
 
 PatchCleanser：针对任何图像分类器的恶意补丁的可靠防御 cs.CV
 
@@ -487,7 +529,7 @@ USENIX Security Symposium 2022; extended technical report
 
 
 
-## **33. Path Defense in Dynamic Defender-Attacker Blotto Games (dDAB) with Limited Information**
+## **36. Path Defense in Dynamic Defender-Attacker Blotto Games (dDAB) with Limited Information**
 
 有限信息动态防御者-攻击者Blotto博弈(DDAB)中的路径防御 cs.GT
 
@@ -501,7 +543,7 @@ USENIX Security Symposium 2022; extended technical report
 
 
 
-## **34. DAD: Data-free Adversarial Defense at Test Time**
+## **37. DAD: Data-free Adversarial Defense at Test Time**
 
 DAD：测试时的无数据对抗性防御 cs.LG
 
@@ -517,7 +559,7 @@ WACV 2022. Project page: https://sites.google.com/view/dad-wacv22
 
 
 
-## **35. Training strategy for a lightweight countermeasure model for automatic speaker verification**
+## **38. Training strategy for a lightweight countermeasure model for automatic speaker verification**
 
 一种轻量级说话人自动确认对策模型的训练策略 cs.SD
 
@@ -533,7 +575,7 @@ ASVspoof2021
 
 
 
-## **36. Spinning Language Models: Risks of Propaganda-As-A-Service and Countermeasures**
+## **39. Spinning Language Models: Risks of Propaganda-As-A-Service and Countermeasures**
 
 旋转的语言模型：宣传即服务的风险和对策 cs.CR
 
@@ -549,7 +591,7 @@ IEEE S&P 2022. arXiv admin note: text overlap with arXiv:2107.10443
 
 
 
-## **37. Backdoor Attack against NLP models with Robustness-Aware Perturbation defense**
+## **40. Backdoor Attack against NLP models with Robustness-Aware Perturbation defense**
 
 对具有鲁棒性感知扰动防御的NLP模型的后门攻击 cs.CR
 
@@ -563,7 +605,7 @@ IEEE S&P 2022. arXiv admin note: text overlap with arXiv:2107.10443
 
 
 
-## **38. Defense against Adversarial Attacks on Hybrid Speech Recognition using Joint Adversarial Fine-tuning with Denoiser**
+## **41. Defense against Adversarial Attacks on Hybrid Speech Recognition using Joint Adversarial Fine-tuning with Denoiser**
 
 基于联合对抗性微调和去噪的混合语音识别抗敌意攻击 eess.AS
 
@@ -579,7 +621,7 @@ Submitted to Interspeech 2022
 
 
 
-## **39. AdvEst: Adversarial Perturbation Estimation to Classify and Detect Adversarial Attacks against Speaker Identification**
+## **42. AdvEst: Adversarial Perturbation Estimation to Classify and Detect Adversarial Attacks against Speaker Identification**
 
 AdvEst：对抗性扰动估计分类检测针对说话人识别的对抗性攻击 eess.AS
 
@@ -595,7 +637,7 @@ Submitted to InterSpeech 2022
 
 
 
-## **40. Using Multiple Self-Supervised Tasks Improves Model Robustness**
+## **43. Using Multiple Self-Supervised Tasks Improves Model Robustness**
 
 使用多个自监督任务可提高模型的稳健性 cs.CV
 
@@ -611,7 +653,7 @@ Accepted to ICLR 2022 Workshop on PAIR^2Struct: Privacy,  Accountability, Interp
 
 
 
-## **41. Adaptive-Gravity: A Defense Against Adversarial Samples**
+## **44. Adaptive-Gravity: A Defense Against Adversarial Samples**
 
 自适应重力：对抗对手样本的一种防御 cs.LG
 
@@ -625,7 +667,7 @@ Accepted to ICLR 2022 Workshop on PAIR^2Struct: Privacy,  Accountability, Interp
 
 
 
-## **42. Reinforcement Learning for Linear Quadratic Control is Vulnerable Under Cost Manipulation**
+## **45. Reinforcement Learning for Linear Quadratic Control is Vulnerable Under Cost Manipulation**
 
 线性二次控制的强化学习在成本操纵下的脆弱性 eess.SY
 
@@ -641,7 +683,7 @@ This paper is yet to be peer-reviewed; Typos are corrected in ver 2
 
 
 
-## **43. IRShield: A Countermeasure Against Adversarial Physical-Layer Wireless Sensing**
+## **46. IRShield: A Countermeasure Against Adversarial Physical-Layer Wireless Sensing**
 
 IRShield：对抗敌意物理层无线侦听的对策 cs.CR
 
@@ -655,7 +697,7 @@ IRShield：对抗敌意物理层无线侦听的对策 cs.CR
 
 
 
-## **44. Transfer Attacks Revisited: A Large-Scale Empirical Study in Real Computer Vision Settings**
+## **47. Transfer Attacks Revisited: A Large-Scale Empirical Study in Real Computer Vision Settings**
 
 传输攻击重现：真实计算机视觉环境下的大规模实证研究 cs.CV
 
@@ -671,7 +713,7 @@ Accepted to IEEE Security & Privacy 2022
 
 
 
-## **45. Adversarial Machine Learning Attacks Against Video Anomaly Detection Systems**
+## **48. Adversarial Machine Learning Attacks Against Video Anomaly Detection Systems**
 
 针对视频异常检测系统的对抗性机器学习攻击 cs.CV
 
@@ -685,7 +727,7 @@ Accepted to IEEE Security & Privacy 2022
 
 
 
-## **46. Control barrier function based attack-recovery with provable guarantees**
+## **49. Control barrier function based attack-recovery with provable guarantees**
 
 具有可证明保证的基于控制屏障函数的攻击恢复 cs.SY
 
@@ -701,7 +743,7 @@ Accepted to IEEE Security & Privacy 2022
 
 
 
-## **47. Sampling-based Fast Gradient Rescaling Method for Highly Transferable Adversarial Attacks**
+## **50. Sampling-based Fast Gradient Rescaling Method for Highly Transferable Adversarial Attacks**
 
 一种基于采样的高可转移对抗性攻击快速梯度重缩放方法 cs.CV
 
@@ -712,54 +754,6 @@ Accepted to IEEE Security & Privacy 2022
 **Abstracts**: Deep neural networks have shown to be very vulnerable to adversarial examples crafted by adding human-imperceptible perturbations to benign inputs. After achieving impressive attack success rates in the white-box setting, more focus is shifted to black-box attacks. In either case, the common gradient-based approaches generally use the $sign$ function to generate perturbations at the end of the process. However, only a few works pay attention to the limitation of the $sign$ function. Deviation between the original gradient and the generated noises may lead to inaccurate gradient update estimation and suboptimal solutions for adversarial transferability, which is crucial for black-box attacks. To address this issue, we propose a Sampling-based Fast Gradient Rescaling Method (S-FGRM) to improve the transferability of the crafted adversarial examples. Specifically, we use data rescaling to substitute the inefficient $sign$ function in gradient-based attacks without extra computational cost. We also propose a Depth First Sampling method to eliminate the fluctuation of rescaling and stabilize the gradient update. Our method can be used in any gradient-based optimizations and is extensible to be integrated with various input transformation or ensemble methods for further improving the adversarial transferability. Extensive experiments on the standard ImageNet dataset show that our S-FGRM could significantly boost the transferability of gradient-based attacks and outperform the state-of-the-art baselines.
 
 摘要: 深度神经网络已被证明非常容易受到敌意例子的攻击，这些例子是通过在良性输入中添加人类无法察觉的扰动来构建的。在白盒攻击中取得了令人印象深刻的攻击成功率之后，更多的注意力转移到了黑盒攻击上。在这两种情况下，常见的基于梯度的方法通常使用$SIGN$函数在过程结束时生成扰动。然而，只有少数著作注意到$SIGN$函数的局限性。原始梯度与产生的噪声之间的偏差可能会导致不准确的梯度更新估计和对抗性转移的次优解，这是黑盒攻击的关键。针对这一问题，我们提出了一种基于采样的快速梯度重缩放方法(S-FGRM)来提高恶意例子的可转移性。具体地说，在基于梯度的攻击中，我们使用数据重缩放来代替低效的$sign$函数，而不需要额外的计算代价。我们还提出了深度优先采样的方法，消除了重缩放的波动，稳定了梯度更新。我们的方法可以用于任何基于梯度的优化，并且可以扩展到与各种输入变换或集成方法相集成，以进一步提高对抗性转移。在标准ImageNet数据集上的大量实验表明，我们的S-FGRM可以显著提高基于梯度的攻击的可转移性，并优于最新的基线。
-
-
-
-## **48. Distilling Robust and Non-Robust Features in Adversarial Examples by Information Bottleneck**
-
-利用信息瓶颈从对抗性实例中提取稳健和非稳健特征 cs.LG
-
-NeurIPS 2021
-
-**SubmitDate**: 2022-04-06    [paper-pdf](http://arxiv.org/pdf/2204.02735v1)
-
-**Authors**: Junho Kim, Byung-Kwan Lee, Yong Man Ro
-
-**Abstracts**: Adversarial examples, generated by carefully crafted perturbation, have attracted considerable attention in research fields. Recent works have argued that the existence of the robust and non-robust features is a primary cause of the adversarial examples, and investigated their internal interactions in the feature space. In this paper, we propose a way of explicitly distilling feature representation into the robust and non-robust features, using Information Bottleneck. Specifically, we inject noise variation to each feature unit and evaluate the information flow in the feature representation to dichotomize feature units either robust or non-robust, based on the noise variation magnitude. Through comprehensive experiments, we demonstrate that the distilled features are highly correlated with adversarial prediction, and they have human-perceptible semantic information by themselves. Furthermore, we present an attack mechanism intensifying the gradient of non-robust features that is directly related to the model prediction, and validate its effectiveness of breaking model robustness.
-
-摘要: 由精心设计的扰动产生的对抗性例子在研究领域引起了相当大的关注。最近的工作认为，稳健特征和非稳健特征的存在是造成对抗性例子的主要原因，并研究了它们在特征空间中的内在交互作用。在本文中，我们提出了一种利用信息瓶颈将特征表示显式提取为稳健和非稳健特征的方法。具体地说，我们将噪声变化注入到每个特征单元中，并评估特征表示中的信息流，以基于噪声变化的大小来区分稳健或非稳健的特征单元。通过综合实验，我们证明所提取的特征与对抗性预测高度相关，并且它们本身就具有人类可感知的语义信息。此外，提出了一种增强与模型预测直接相关的非稳健特征梯度的攻击机制，并验证了其打破模型稳健性的有效性。
-
-
-
-## **49. Rolling Colors: Adversarial Laser Exploits against Traffic Light Recognition**
-
-滚动颜色：对抗红绿灯识别的激光攻击 cs.CV
-
-To be published in USENIX Security 2022
-
-**SubmitDate**: 2022-04-06    [paper-pdf](http://arxiv.org/pdf/2204.02675v1)
-
-**Authors**: Chen Yan, Zhijian Xu, Zhanyuan Yin, Xiaoyu Ji, Wenyuan Xu
-
-**Abstracts**: Traffic light recognition is essential for fully autonomous driving in urban areas. In this paper, we investigate the feasibility of fooling traffic light recognition mechanisms by shedding laser interference on the camera. By exploiting the rolling shutter of CMOS sensors, we manage to inject a color stripe overlapped on the traffic light in the image, which can cause a red light to be recognized as a green light or vice versa. To increase the success rate, we design an optimization method to search for effective laser parameters based on empirical models of laser interference. Our evaluation in emulated and real-world setups on 2 state-of-the-art recognition systems and 5 cameras reports a maximum success rate of 30% and 86.25% for Red-to-Green and Green-to-Red attacks. We observe that the attack is effective in continuous frames from more than 40 meters away against a moving vehicle, which may cause end-to-end impacts on self-driving such as running a red light or emergency stop. To mitigate the threat, we propose redesigning the rolling shutter mechanism.
-
-摘要: 红绿灯识别是城市地区实现全自动驾驶的关键。在本文中，我们研究了通过在摄像机上散布激光干涉来欺骗交通灯识别机制的可行性。通过利用CMOS传感器的滚动快门，我们成功地在图像中的交通灯上注入了重叠的彩色条纹，这可以使红灯被识别为绿灯，反之亦然。为了提高成功率，我们设计了一种基于激光干涉经验模型的优化方法来搜索有效的激光参数。我们在2个最先进的识别系统和5个摄像头上的模拟和真实设置中的评估报告，红色到绿色和绿色到红色攻击的最大成功率分别为30%和86.25%。我们观察到，攻击在40米以外的连续帧中对移动的车辆有效，这可能会对自动驾驶造成端到端的影响，如闯红灯或紧急停车。为了减轻威胁，我们建议重新设计滚动快门机构。
-
-
-
-## **50. Adversarial Analysis of the Differentially-Private Federated Learning in Cyber-Physical Critical Infrastructures**
-
-网络物理关键基础设施中非私有联邦学习的对抗性分析 cs.CR
-
-11 pages, 5 figures, 4 tables. This work has been submitted to IEEE  for possible publication. Copyright may be transferred without notice, after  which this version may no longer be accessible
-
-**SubmitDate**: 2022-04-06    [paper-pdf](http://arxiv.org/pdf/2204.02654v1)
-
-**Authors**: Md Tamjid Hossain, Shahriar Badsha, Hung, La, Haoting Shen, Shafkat Islam, Ibrahim Khalil, Xun Yi
-
-**Abstracts**: Differential privacy (DP) is considered to be an effective privacy-preservation method to secure the promising distributed machine learning (ML) paradigm-federated learning (FL) from privacy attacks (e.g., membership inference attack). Nevertheless, while the DP mechanism greatly alleviates privacy concerns, recent studies have shown that it can be exploited to conduct security attacks (e.g., false data injection attacks). To address such attacks on FL-based applications in critical infrastructures, in this paper, we perform the first systematic study on the DP-exploited poisoning attacks from an adversarial point of view. We demonstrate that the DP method, despite providing a level of privacy guarantee, can effectively open a new poisoning attack vector for the adversary. Our theoretical analysis and empirical evaluation of a smart grid dataset show the FL performance degradation (sub-optimal model generation) scenario due to the differential noise-exploited selective model poisoning attacks. As a countermeasure, we propose a reinforcement learning-based differential privacy level selection (rDP) process. The rDP process utilizes the differential privacy parameters (privacy loss, information leakage probability, etc.) and the losses to intelligently generate an optimal privacy level for the nodes. The evaluation shows the accumulated reward and errors of the proposed technique converge to an optimal privacy policy.
-
-摘要: 差分隐私(DP)被认为是一种有效的隐私保护方法，可以保护分布式机器学习(ML)范型联合学习(FL)免受隐私攻击(如成员推理攻击)。然而，虽然DP机制极大地缓解了对隐私的担忧，但最近的研究表明，它可以被利用来进行安全攻击(例如，虚假数据注入攻击)。为了解决这类针对关键基础设施中基于FL的应用程序的攻击，本文首次从对抗的角度对DP利用的中毒攻击进行了系统的研究。我们证明，虽然DP方法提供了一定程度的隐私保障，但可以有效地为攻击者打开一个新的中毒攻击载体。我们的理论分析和对智能电网数据集的经验评估表明，差值噪声利用的选择性模型中毒攻击导致FL性能下降(次优模型生成)。作为对策，我们提出了一种基于强化学习的差异隐私级别选择(RDP)过程。RDP过程使用不同的隐私参数(隐私丢失、信息泄露概率等)。以及智能地为节点生成最佳隐私级别的损失。评估结果表明，该技术的累积奖赏和误差收敛于最优隐私策略。
 
 
 

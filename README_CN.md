@@ -1,5 +1,5 @@
 # Latest Adversarial Attack Papers
-**update at 2022-04-19 06:31:29**
+**update at 2022-04-20 06:31:39**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
@@ -21,7 +21,9 @@
 
 你能认出变色龙吗？对抗伪装图像以防止共显著目标检测 cs.CV
 
-**SubmitDate**: 2022-04-15    [paper-pdf](http://arxiv.org/pdf/2009.09258v4)
+Accepted to CVPR 2022
+
+**SubmitDate**: 2022-04-18    [paper-pdf](http://arxiv.org/pdf/2009.09258v5)
 
 **Authors**: Ruijun Gao, Qing Guo, Felix Juefei-Xu, Hongkai Yu, Huazhu Fu, Wei Feng, Yang Liu, Song Wang
 

@@ -1,9 +1,101 @@
 # Latest Adversarial Attack Papers
-**update at 2022-04-20 06:31:39**
+**update at 2022-04-21 06:31:35**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. Revisiting the Adversarial Robustness-Accuracy Tradeoff in Robot Learning**
+## **1. A Brief Survey on Deep Learning Based Data Hiding**
+
+cs.CR
+
+v2: reorganize some sections and add several new papers published in  2021~2022
+
+**SubmitDate**: 2022-04-19    [paper-pdf](http://arxiv.org/pdf/2103.01607v2)
+
+**Authors**: Chaoning Zhang, Chenguo Lin, Philipp Benz, Kejiang Chen, Weiming Zhang, In So Kweon
+
+**Abstracts**: Data hiding is the art of concealing messages with limited perceptual changes. Recently, deep learning has enriched it from various perspectives with significant progress. In this work, we conduct a brief yet comprehensive review of existing literature for deep learning based data hiding (deep hiding) by first classifying it according to three essential properties (i.e., capacity, security and robustness), and outline three commonly used architectures. Based on this, we summarize specific strategies for different applications of data hiding, including basic hiding, steganography, watermarking and light field messaging. Finally, further insight into deep hiding is provided by incorporating the perspective of adversarial attack.
+
+
+
+## **2. Jacobian Ensembles Improve Robustness Trade-offs to Adversarial Attacks**
+
+cs.LG
+
+**SubmitDate**: 2022-04-19    [paper-pdf](http://arxiv.org/pdf/2204.08726v1)
+
+**Authors**: Kenneth T. Co, David Martinez-Rego, Zhongyuan Hau, Emil C. Lupu
+
+**Abstracts**: Deep neural networks have become an integral part of our software infrastructure and are being deployed in many widely-used and safety-critical applications. However, their integration into many systems also brings with it the vulnerability to test time attacks in the form of Universal Adversarial Perturbations (UAPs). UAPs are a class of perturbations that when applied to any input causes model misclassification. Although there is an ongoing effort to defend models against these adversarial attacks, it is often difficult to reconcile the trade-offs in model accuracy and robustness to adversarial attacks. Jacobian regularization has been shown to improve the robustness of models against UAPs, whilst model ensembles have been widely adopted to improve both predictive performance and model robustness. In this work, we propose a novel approach, Jacobian Ensembles-a combination of Jacobian regularization and model ensembles to significantly increase the robustness against UAPs whilst maintaining or improving model accuracy. Our results show that Jacobian Ensembles achieves previously unseen levels of accuracy and robustness, greatly improving over previous methods that tend to skew towards only either accuracy or robustness.
+
+
+
+## **3. Topology and geometry of data manifold in deep learning**
+
+cs.LG
+
+12 pages, 15 figures
+
+**SubmitDate**: 2022-04-19    [paper-pdf](http://arxiv.org/pdf/2204.08624v1)
+
+**Authors**: German Magai, Anton Ayzenberg
+
+**Abstracts**: Despite significant advances in the field of deep learning in applications to various fields, explaining the inner processes of deep learning models remains an important and open question. The purpose of this article is to describe and substantiate the geometric and topological view of the learning process of neural networks. Our attention is focused on the internal representation of neural networks and on the dynamics of changes in the topology and geometry of the data manifold on different layers. We also propose a method for assessing the generalizing ability of neural networks based on topological descriptors. In this paper, we use the concepts of topological data analysis and intrinsic dimension, and we present a wide range of experiments on different datasets and different configurations of convolutional neural network architectures. In addition, we consider the issue of the geometry of adversarial attacks in the classification task and spoofing attacks on face recognition systems. Our work is a contribution to the development of an important area of explainable and interpretable AI through the example of computer vision.
+
+
+
+## **4. Poisons that are learned faster are more effective**
+
+cs.LG
+
+8 pages, 4 figures. Accepted to CVPR 2022 Art of Robustness Workshop
+
+**SubmitDate**: 2022-04-19    [paper-pdf](http://arxiv.org/pdf/2204.08615v1)
+
+**Authors**: Pedro Sandoval-Segura, Vasu Singla, Liam Fowl, Jonas Geiping, Micah Goldblum, David Jacobs, Tom Goldstein
+
+**Abstracts**: Imperceptible poisoning attacks on entire datasets have recently been touted as methods for protecting data privacy. However, among a number of defenses preventing the practical use of these techniques, early-stopping stands out as a simple, yet effective defense. To gauge poisons' vulnerability to early-stopping, we benchmark error-minimizing, error-maximizing, and synthetic poisons in terms of peak test accuracy over 100 epochs and make a number of surprising observations. First, we find that poisons that reach a low training loss faster have lower peak test accuracy. Second, we find that a current state-of-the-art error-maximizing poison is 7 times less effective when poison training is stopped at epoch 8. Third, we find that stronger, more transferable adversarial attacks do not make stronger poisons. We advocate for evaluating poisons in terms of peak test accuracy.
+
+
+
+## **5. Metamorphic Testing-based Adversarial Attack to Fool Deepfake Detectors**
+
+cs.CV
+
+paper submitted to 26TH International Conference on Pattern  Recognition (ICPR2022)
+
+**SubmitDate**: 2022-04-19    [paper-pdf](http://arxiv.org/pdf/2204.08612v1)
+
+**Authors**: Nyee Thoang Lim, Meng Yi Kuan, Muxin Pu, Mei Kuan Lim, Chun Yong Chong
+
+**Abstracts**: Deepfakes utilise Artificial Intelligence (AI) techniques to create synthetic media where the likeness of one person is replaced with another. There are growing concerns that deepfakes can be maliciously used to create misleading and harmful digital contents. As deepfakes become more common, there is a dire need for deepfake detection technology to help spot deepfake media. Present deepfake detection models are able to achieve outstanding accuracy (>90%). However, most of them are limited to within-dataset scenario, where the same dataset is used for training and testing. Most models do not generalise well enough in cross-dataset scenario, where models are tested on unseen datasets from another source. Furthermore, state-of-the-art deepfake detection models rely on neural network-based classification models that are known to be vulnerable to adversarial attacks. Motivated by the need for a robust deepfake detection model, this study adapts metamorphic testing (MT) principles to help identify potential factors that could influence the robustness of the examined model, while overcoming the test oracle problem in this domain. Metamorphic testing is specifically chosen as the testing technique as it fits our demand to address learning-based system testing with probabilistic outcomes from largely black-box components, based on potentially large input domains. We performed our evaluations on MesoInception-4 and TwoStreamNet models, which are the state-of-the-art deepfake detection models. This study identified makeup application as an adversarial attack that could fool deepfake detectors. Our experimental results demonstrate that both the MesoInception-4 and TwoStreamNet models degrade in their performance by up to 30\% when the input data is perturbed with makeup.
+
+
+
+## **6. A Comprehensive Survey on Trustworthy Graph Neural Networks: Privacy, Robustness, Fairness, and Explainability**
+
+cs.LG
+
+**SubmitDate**: 2022-04-18    [paper-pdf](http://arxiv.org/pdf/2204.08570v1)
+
+**Authors**: Enyan Dai, Tianxiang Zhao, Huaisheng Zhu, Junjie Xu, Zhimeng Guo, Hui Liu, Jiliang Tang, Suhang Wang
+
+**Abstracts**: Graph Neural Networks (GNNs) have made rapid developments in the recent years. Due to their great ability in modeling graph-structured data, GNNs are vastly used in various applications, including high-stakes scenarios such as financial analysis, traffic predictions, and drug discovery. Despite their great potential in benefiting humans in the real world, recent study shows that GNNs can leak private information, are vulnerable to adversarial attacks, can inherit and magnify societal bias from training data and lack interpretability, which have risk of causing unintentional harm to the users and society. For example, existing works demonstrate that attackers can fool the GNNs to give the outcome they desire with unnoticeable perturbation on training graph. GNNs trained on social networks may embed the discrimination in their decision process, strengthening the undesirable societal bias. Consequently, trustworthy GNNs in various aspects are emerging to prevent the harm from GNN models and increase the users' trust in GNNs. In this paper, we give a comprehensive survey of GNNs in the computational aspects of privacy, robustness, fairness, and explainability. For each aspect, we give the taxonomy of the related methods and formulate the general frameworks for the multiple categories of trustworthy GNNs. We also discuss the future research directions of each aspect and connections between these aspects to help achieve trustworthiness.
+
+
+
+## **7. Optimal Layered Defense For Site Protection**
+
+cs.OH
+
+**SubmitDate**: 2022-04-18    [paper-pdf](http://arxiv.org/pdf/2204.08961v1)
+
+**Authors**: Tsvetan Asamov, Emre Yamangil, Endre Boros, Paul Kantor, Fred Roberts
+
+**Abstracts**: We present a model for layered security with applications to the protection of sites such as stadiums or large gathering places. We formulate the problem as one of maximizing the capture of illegal contraband. The objective function is indefinite and only limited information can be gained when the problem is solved by standard convex optimization methods. In order to solve the model, we develop a dynamic programming approach, and study its convergence properties. Additionally, we formulate a version of the problem aimed at addressing intelligent adversaries who can adjust their direction of attack as they observe changes in the site security. Furthermore, we also develop a method for the solution of the latter model. Finally, we perform computational experiments to demonstrate the use of our methods.
+
+
+
+## **8. Revisiting the Adversarial Robustness-Accuracy Tradeoff in Robot Learning**
 
 cs.RO
 
@@ -15,7 +107,7 @@ cs.RO
 
 
 
-## **2. Can You Spot the Chameleon? Adversarially Camouflaging Images from Co-Salient Object Detection**
+## **9. Can You Spot the Chameleon? Adversarially Camouflaging Images from Co-Salient Object Detection**
 
 cs.CV
 
@@ -29,7 +121,7 @@ Accepted to CVPR 2022
 
 
 
-## **3. Robotic and Generative Adversarial Attacks in Offline Writer-independent Signature Verification**
+## **10. Robotic and Generative Adversarial Attacks in Offline Writer-independent Signature Verification**
 
 cs.RO
 
@@ -41,7 +133,7 @@ cs.RO
 
 
 
-## **4. ExPLoit: Extracting Private Labels in Split Learning**
+## **11. ExPLoit: Extracting Private Labels in Split Learning**
 
 cs.CR
 
@@ -53,7 +145,7 @@ cs.CR
 
 
 
-## **5. From Environmental Sound Representation to Robustness of 2D CNN Models Against Adversarial Attacks**
+## **12. From Environmental Sound Representation to Robustness of 2D CNN Models Against Adversarial Attacks**
 
 cs.SD
 
@@ -67,7 +159,7 @@ cs.SD
 
 
 
-## **6. Finding MNEMON: Reviving Memories of Node Embeddings**
+## **13. Finding MNEMON: Reviving Memories of Node Embeddings**
 
 cs.LG
 
@@ -81,7 +173,7 @@ To Appear in the 29th ACM Conference on Computer and Communications  Security (C
 
 
 
-## **7. Arbitrarily Varying Wiretap Channels with Non-Causal Side Information at the Jammer**
+## **14. Arbitrarily Varying Wiretap Channels with Non-Causal Side Information at the Jammer**
 
 cs.IT
 
@@ -93,7 +185,7 @@ cs.IT
 
 
 
-## **8. Improving Adversarial Transferability with Gradient Refining**
+## **15. Improving Adversarial Transferability with Gradient Refining**
 
 cs.CV
 
@@ -107,7 +199,7 @@ Accepted at CVPR 2021 Workshop on Adversarial Machine Learning in  Real-World Co
 
 
 
-## **9. Real-time Adversarial Perturbations against Deep Reinforcement Learning Policies: Attacks and Defenses**
+## **16. Real-time Adversarial Perturbations against Deep Reinforcement Learning Policies: Attacks and Defenses**
 
 cs.LG
 
@@ -121,7 +213,7 @@ cs.LG
 
 
 
-## **10. Overparameterized Linear Regression under Adversarial Attacks**
+## **17. Overparameterized Linear Regression under Adversarial Attacks**
 
 stat.ML
 
@@ -133,7 +225,7 @@ stat.ML
 
 
 
-## **11. Towards A Critical Evaluation of Robustness for Deep Learning Backdoor Countermeasures**
+## **18. Towards A Critical Evaluation of Robustness for Deep Learning Backdoor Countermeasures**
 
 cs.CR
 
@@ -145,7 +237,7 @@ cs.CR
 
 
 
-## **12. Towards Practical Robustness Analysis for DNNs based on PAC-Model Learning**
+## **19. Towards Practical Robustness Analysis for DNNs based on PAC-Model Learning**
 
 cs.LG
 
@@ -157,7 +249,7 @@ cs.LG
 
 
 
-## **13. Stealing Malware Classifiers and AVs at Low False Positive Conditions**
+## **20. Stealing Malware Classifiers and AVs at Low False Positive Conditions**
 
 cs.CR
 
@@ -171,7 +263,7 @@ cs.CR
 
 
 
-## **14. Liuer Mihou: A Practical Framework for Generating and Evaluating Grey-box Adversarial Attacks against NIDS**
+## **21. Liuer Mihou: A Practical Framework for Generating and Evaluating Grey-box Adversarial Attacks against NIDS**
 
 cs.CR
 
@@ -185,7 +277,7 @@ cs.CR
 
 
 
-## **15. Optimal Membership Inference Bounds for Adaptive Composition of Sampled Gaussian Mechanisms**
+## **22. Optimal Membership Inference Bounds for Adaptive Composition of Sampled Gaussian Mechanisms**
 
 cs.CR
 
@@ -197,7 +289,7 @@ cs.CR
 
 
 
-## **16. Membership Inference Attacks From First Principles**
+## **23. Membership Inference Attacks From First Principles**
 
 cs.CR
 
@@ -209,7 +301,7 @@ cs.CR
 
 
 
-## **17. Rate Coding or Direct Coding: Which One is Better for Accurate, Robust, and Energy-efficient Spiking Neural Networks?**
+## **24. Rate Coding or Direct Coding: Which One is Better for Accurate, Robust, and Energy-efficient Spiking Neural Networks?**
 
 cs.NE
 
@@ -223,7 +315,7 @@ Accepted to ICASSP2022
 
 
 
-## **18. Masked Faces with Faced Masks**
+## **25. Masked Faces with Faced Masks**
 
 cs.CV
 
@@ -237,7 +329,7 @@ cs.CV
 
 
 
-## **19. Automated Attacker Synthesis for Distributed Protocols**
+## **26. Automated Attacker Synthesis for Distributed Protocols**
 
 cs.CR
 
@@ -251,7 +343,7 @@ cs.CR
 
 
 
-## **20. Catch Me If You Can: Blackbox Adversarial Attacks on Automatic Speech Recognition using Frequency Masking**
+## **27. Catch Me If You Can: Blackbox Adversarial Attacks on Automatic Speech Recognition using Frequency Masking**
 
 cs.SD
 
@@ -265,7 +357,7 @@ cs.SD
 
 
 
-## **21. Staircase Sign Method for Boosting Adversarial Attacks**
+## **28. Staircase Sign Method for Boosting Adversarial Attacks**
 
 cs.CV
 
@@ -277,7 +369,7 @@ cs.CV
 
 
 
-## **22. A survey in Adversarial Defences and Robustness in NLP**
+## **29. A survey in Adversarial Defences and Robustness in NLP**
 
 cs.CL
 
@@ -289,7 +381,7 @@ cs.CL
 
 
 
-## **23. Generalizing Adversarial Explanations with Grad-CAM**
+## **30. Generalizing Adversarial Explanations with Grad-CAM**
 
 cs.CV
 
@@ -303,7 +395,7 @@ Accepted in CVPRw ArtofRobustness workshop
 
 
 
-## **24. Segmentation-Consistent Probabilistic Lesion Counting**
+## **31. Segmentation-Consistent Probabilistic Lesion Counting**
 
 eess.IV
 
@@ -317,7 +409,7 @@ Accepted at Medical Imaging with Deep Learning (MIDL) 2022
 
 
 
-## **25. Exploring the Universal Vulnerability of Prompt-based Learning Paradigm**
+## **32. Exploring the Universal Vulnerability of Prompt-based Learning Paradigm**
 
 cs.CL
 
@@ -331,7 +423,7 @@ Accepted to Findings of NAACL 2022
 
 
 
-## **26. Analysis of a blockchain protocol based on LDPC codes**
+## **33. Analysis of a blockchain protocol based on LDPC codes**
 
 cs.CR
 
@@ -343,7 +435,7 @@ cs.CR
 
 
 
-## **27. Measuring and Mitigating the Risk of IP Reuse on Public Clouds**
+## **34. Measuring and Mitigating the Risk of IP Reuse on Public Clouds**
 
 cs.CR
 
@@ -355,7 +447,7 @@ cs.CR
 
 
 
-## **28. Anti-Adversarially Manipulated Attributions for Weakly Supervised Semantic Segmentation and Object Localization**
+## **35. Anti-Adversarially Manipulated Attributions for Weakly Supervised Semantic Segmentation and Object Localization**
 
 cs.CV
 
@@ -369,7 +461,7 @@ IEEE TPAMI, 2022
 
 
 
-## **29. Adversarial Robustness of Deep Sensor Fusion Models**
+## **36. Adversarial Robustness of Deep Sensor Fusion Models**
 
 cs.CV
 
@@ -381,7 +473,7 @@ cs.CV
 
 
 
-## **30. Measuring the False Sense of Security**
+## **37. Measuring the False Sense of Security**
 
 cs.LG
 
@@ -393,7 +485,7 @@ cs.LG
 
 
 
-## **31. Analysis of Power-Oriented Fault Injection Attacks on Spiking Neural Networks**
+## **38. Analysis of Power-Oriented Fault Injection Attacks on Spiking Neural Networks**
 
 cs.AI
 
@@ -407,7 +499,7 @@ Design, Automation and Test in Europe Conference (DATE) 2022
 
 
 
-## **32. "That Is a Suspicious Reaction!": Interpreting Logits Variation to Detect NLP Adversarial Attacks**
+## **39. "That Is a Suspicious Reaction!": Interpreting Logits Variation to Detect NLP Adversarial Attacks**
 
 cs.AI
 
@@ -421,7 +513,7 @@ ACL 2022
 
 
 
-## **33. LTD: Low Temperature Distillation for Robust Adversarial Training**
+## **40. LTD: Low Temperature Distillation for Robust Adversarial Training**
 
 cs.CV
 
@@ -433,7 +525,7 @@ cs.CV
 
 
 
-## **34. Understanding, Detecting, and Separating Out-of-Distribution Samples and Adversarial Samples in Text Classification**
+## **41. Understanding, Detecting, and Separating Out-of-Distribution Samples and Adversarial Samples in Text Classification**
 
 cs.CL
 
@@ -447,7 +539,7 @@ Preprint. Work in progress
 
 
 
-## **35. PatchCleanser: Certifiably Robust Defense against Adversarial Patches for Any Image Classifier**
+## **42. PatchCleanser: Certifiably Robust Defense against Adversarial Patches for Any Image Classifier**
 
 cs.CV
 
@@ -461,7 +553,7 @@ USENIX Security Symposium 2022; extended technical report
 
 
 
-## **36. Path Defense in Dynamic Defender-Attacker Blotto Games (dDAB) with Limited Information**
+## **43. Path Defense in Dynamic Defender-Attacker Blotto Games (dDAB) with Limited Information**
 
 cs.GT
 
@@ -473,7 +565,7 @@ cs.GT
 
 
 
-## **37. DAD: Data-free Adversarial Defense at Test Time**
+## **44. DAD: Data-free Adversarial Defense at Test Time**
 
 cs.LG
 
@@ -487,7 +579,7 @@ WACV 2022. Project page: https://sites.google.com/view/dad-wacv22
 
 
 
-## **38. Training strategy for a lightweight countermeasure model for automatic speaker verification**
+## **45. Training strategy for a lightweight countermeasure model for automatic speaker verification**
 
 cs.SD
 
@@ -501,7 +593,7 @@ ASVspoof2021
 
 
 
-## **39. Spinning Language Models: Risks of Propaganda-As-A-Service and Countermeasures**
+## **46. Spinning Language Models: Risks of Propaganda-As-A-Service and Countermeasures**
 
 cs.CR
 
@@ -515,7 +607,7 @@ IEEE S&P 2022. arXiv admin note: text overlap with arXiv:2107.10443
 
 
 
-## **40. Backdoor Attack against NLP models with Robustness-Aware Perturbation defense**
+## **47. Backdoor Attack against NLP models with Robustness-Aware Perturbation defense**
 
 cs.CR
 
@@ -527,7 +619,7 @@ cs.CR
 
 
 
-## **41. Defense against Adversarial Attacks on Hybrid Speech Recognition using Joint Adversarial Fine-tuning with Denoiser**
+## **48. Defense against Adversarial Attacks on Hybrid Speech Recognition using Joint Adversarial Fine-tuning with Denoiser**
 
 eess.AS
 
@@ -541,7 +633,7 @@ Submitted to Interspeech 2022
 
 
 
-## **42. AdvEst: Adversarial Perturbation Estimation to Classify and Detect Adversarial Attacks against Speaker Identification**
+## **49. AdvEst: Adversarial Perturbation Estimation to Classify and Detect Adversarial Attacks against Speaker Identification**
 
 eess.AS
 
@@ -555,7 +647,7 @@ Submitted to InterSpeech 2022
 
 
 
-## **43. Using Multiple Self-Supervised Tasks Improves Model Robustness**
+## **50. Using Multiple Self-Supervised Tasks Improves Model Robustness**
 
 cs.CV
 
@@ -566,96 +658,6 @@ Accepted to ICLR 2022 Workshop on PAIR^2Struct: Privacy,  Accountability, Interp
 **Authors**: Matthew Lawhon, Chengzhi Mao, Junfeng Yang
 
 **Abstracts**: Deep networks achieve state-of-the-art performance on computer vision tasks, yet they fail under adversarial attacks that are imperceptible to humans. In this paper, we propose a novel defense that can dynamically adapt the input using the intrinsic structure from multiple self-supervised tasks. By simultaneously using many self-supervised tasks, our defense avoids over-fitting the adapted image to one specific self-supervised task and restores more intrinsic structure in the image compared to a single self-supervised task approach. Our approach further improves robustness and clean accuracy significantly compared to the state-of-the-art single task self-supervised defense. Our work is the first to connect multiple self-supervised tasks to robustness, and suggests that we can achieve better robustness with more intrinsic signal from visual data.
-
-
-
-## **44. Adaptive-Gravity: A Defense Against Adversarial Samples**
-
-cs.LG
-
-**SubmitDate**: 2022-04-07    [paper-pdf](http://arxiv.org/pdf/2204.03694v1)
-
-**Authors**: Ali Mirzaeian, Zhi Tian, Sai Manoj P D, Banafsheh S. Latibari, Ioannis Savidis, Houman Homayoun, Avesta Sasan
-
-**Abstracts**: This paper presents a novel model training solution, denoted as Adaptive-Gravity, for enhancing the robustness of deep neural network classifiers against adversarial examples. We conceptualize the model parameters/features associated with each class as a mass characterized by its centroid location and the spread (standard deviation of the distance) of features around the centroid. We use the centroid associated with each cluster to derive an anti-gravity force that pushes the centroids of different classes away from one another during network training. Then we customized an objective function that aims to concentrate each class's features toward their corresponding new centroid, which has been obtained by anti-gravity force. This methodology results in a larger separation between different masses and reduces the spread of features around each centroid. As a result, the samples are pushed away from the space that adversarial examples could be mapped to, effectively increasing the degree of perturbation needed for making an adversarial example. We have implemented this training solution as an iterative method consisting of four steps at each iteration: 1) centroid extraction, 2) anti-gravity force calculation, 3) centroid relocation, and 4) gravity training. Gravity's efficiency is evaluated by measuring the corresponding fooling rates against various attack models, including FGSM, MIM, BIM, and PGD using LeNet and ResNet110 networks, benchmarked against MNIST and CIFAR10 classification problems. Test results show that Gravity not only functions as a powerful instrument to robustify a model against state-of-the-art adversarial attacks but also effectively improves the model training accuracy.
-
-
-
-## **45. Reinforcement Learning for Linear Quadratic Control is Vulnerable Under Cost Manipulation**
-
-eess.SY
-
-This paper is yet to be peer-reviewed; Typos are corrected in ver 2
-
-**SubmitDate**: 2022-04-07    [paper-pdf](http://arxiv.org/pdf/2203.05774v2)
-
-**Authors**: Yunhan Huang, Quanyan Zhu
-
-**Abstracts**: In this work, we study the deception of a Linear-Quadratic-Gaussian (LQG) agent by manipulating the cost signals. We show that a small falsification of the cost parameters will only lead to a bounded change in the optimal policy. The bound is linear on the amount of falsification the attacker can apply to the cost parameters. We propose an attack model where the attacker aims to mislead the agent into learning a `nefarious' policy by intentionally falsifying the cost parameters. We formulate the attack's problem as a convex optimization problem and develop necessary and sufficient conditions to check the achievability of the attacker's goal.   We showcase the adversarial manipulation on two types of LQG learners: the batch RL learner and the other is the adaptive dynamic programming (ADP) learner. Our results demonstrate that with only 2.296% of falsification on the cost data, the attacker misleads the batch RL into learning the 'nefarious' policy that leads the vehicle to a dangerous position. The attacker can also gradually trick the ADP learner into learning the same `nefarious' policy by consistently feeding the learner a falsified cost signal that stays close to the actual cost signal. The paper aims to raise people's awareness of the security threats faced by RL-enabled control systems.
-
-
-
-## **46. IRShield: A Countermeasure Against Adversarial Physical-Layer Wireless Sensing**
-
-cs.CR
-
-**SubmitDate**: 2022-04-07    [paper-pdf](http://arxiv.org/pdf/2112.01967v2)
-
-**Authors**: Paul Staat, Simon Mulzer, Stefan Roth, Veelasha Moonsamy, Markus Heinrichs, Rainer Kronberger, Aydin Sezgin, Christof Paar
-
-**Abstracts**: Wireless radio channels are known to contain information about the surrounding propagation environment, which can be extracted using established wireless sensing methods. Thus, today's ubiquitous wireless devices are attractive targets for passive eavesdroppers to launch reconnaissance attacks. In particular, by overhearing standard communication signals, eavesdroppers obtain estimations of wireless channels which can give away sensitive information about indoor environments. For instance, by applying simple statistical methods, adversaries can infer human motion from wireless channel observations, allowing to remotely monitor premises of victims. In this work, building on the advent of intelligent reflecting surfaces (IRSs), we propose IRShield as a novel countermeasure against adversarial wireless sensing. IRShield is designed as a plug-and-play privacy-preserving extension to existing wireless networks. At the core of IRShield, we design an IRS configuration algorithm to obfuscate wireless channels. We validate the effectiveness with extensive experimental evaluations. In a state-of-the-art human motion detection attack using off-the-shelf Wi-Fi devices, IRShield lowered detection rates to 5% or less.
-
-
-
-## **47. Transfer Attacks Revisited: A Large-Scale Empirical Study in Real Computer Vision Settings**
-
-cs.CV
-
-Accepted to IEEE Security & Privacy 2022
-
-**SubmitDate**: 2022-04-07    [paper-pdf](http://arxiv.org/pdf/2204.04063v1)
-
-**Authors**: Yuhao Mao, Chong Fu, Saizhuo Wang, Shouling Ji, Xuhong Zhang, Zhenguang Liu, Jun Zhou, Alex X. Liu, Raheem Beyah, Ting Wang
-
-**Abstracts**: One intriguing property of adversarial attacks is their "transferability" -- an adversarial example crafted with respect to one deep neural network (DNN) model is often found effective against other DNNs as well. Intensive research has been conducted on this phenomenon under simplistic controlled conditions. Yet, thus far, there is still a lack of comprehensive understanding about transferability-based attacks ("transfer attacks") in real-world environments.   To bridge this critical gap, we conduct the first large-scale systematic empirical study of transfer attacks against major cloud-based MLaaS platforms, taking the components of a real transfer attack into account. The study leads to a number of interesting findings which are inconsistent to the existing ones, including: (1) Simple surrogates do not necessarily improve real transfer attacks. (2) No dominant surrogate architecture is found in real transfer attacks. (3) It is the gap between posterior (output of the softmax layer) rather than the gap between logit (so-called $\kappa$ value) that increases transferability. Moreover, by comparing with prior works, we demonstrate that transfer attacks possess many previously unknown properties in real-world environments, such as (1) Model similarity is not a well-defined concept. (2) $L_2$ norm of perturbation can generate high transferability without usage of gradient and is a more powerful source than $L_\infty$ norm. We believe this work sheds light on the vulnerabilities of popular MLaaS platforms and points to a few promising research directions.
-
-
-
-## **48. Adversarial Machine Learning Attacks Against Video Anomaly Detection Systems**
-
-cs.CV
-
-**SubmitDate**: 2022-04-07    [paper-pdf](http://arxiv.org/pdf/2204.03141v1)
-
-**Authors**: Furkan Mumcu, Keval Doshi, Yasin Yilmaz
-
-**Abstracts**: Anomaly detection in videos is an important computer vision problem with various applications including automated video surveillance. Although adversarial attacks on image understanding models have been heavily investigated, there is not much work on adversarial machine learning targeting video understanding models and no previous work which focuses on video anomaly detection. To this end, we investigate an adversarial machine learning attack against video anomaly detection systems, that can be implemented via an easy-to-perform cyber-attack. Since surveillance cameras are usually connected to the server running the anomaly detection model through a wireless network, they are prone to cyber-attacks targeting the wireless connection. We demonstrate how Wi-Fi deauthentication attack, a notoriously easy-to-perform and effective denial-of-service (DoS) attack, can be utilized to generate adversarial data for video anomaly detection systems. Specifically, we apply several effects caused by the Wi-Fi deauthentication attack on video quality (e.g., slow down, freeze, fast forward, low resolution) to the popular benchmark datasets for video anomaly detection. Our experiments with several state-of-the-art anomaly detection models show that the attackers can significantly undermine the reliability of video anomaly detection systems by causing frequent false alarms and hiding physical anomalies from the surveillance system.
-
-
-
-## **49. Control barrier function based attack-recovery with provable guarantees**
-
-cs.SY
-
-8 pages, 6 figures
-
-**SubmitDate**: 2022-04-06    [paper-pdf](http://arxiv.org/pdf/2204.03077v1)
-
-**Authors**: Kunal Garg, Ricardo G. Sanfelice, Alvaro A. Cardenas
-
-**Abstracts**: This paper studies provable security guarantees for cyber-physical systems (CPS) under actuator attacks. In particular, we consider CPS safety and propose a new attack-detection mechanism based on a zeroing control barrier function (ZCBF) condition. In addition we design an adaptive recovery mechanism based on how close the system is from violating safety. We show that the attack-detection mechanism is sound, i.e., there are no false negatives for adversarial attacks. Finally, we use a Quadratic Programming (QP) approach for online recovery (and nominal) control synthesis. We demonstrate the effectiveness of the proposed method in a simulation case study involving a quadrotor with an attack on its motors.
-
-
-
-## **50. Sampling-based Fast Gradient Rescaling Method for Highly Transferable Adversarial Attacks**
-
-cs.CV
-
-**SubmitDate**: 2022-04-06    [paper-pdf](http://arxiv.org/pdf/2204.02887v1)
-
-**Authors**: Xu Han, Anmin Liu, Yifeng Xiong, Yanbo Fan, Kun He
-
-**Abstracts**: Deep neural networks have shown to be very vulnerable to adversarial examples crafted by adding human-imperceptible perturbations to benign inputs. After achieving impressive attack success rates in the white-box setting, more focus is shifted to black-box attacks. In either case, the common gradient-based approaches generally use the $sign$ function to generate perturbations at the end of the process. However, only a few works pay attention to the limitation of the $sign$ function. Deviation between the original gradient and the generated noises may lead to inaccurate gradient update estimation and suboptimal solutions for adversarial transferability, which is crucial for black-box attacks. To address this issue, we propose a Sampling-based Fast Gradient Rescaling Method (S-FGRM) to improve the transferability of the crafted adversarial examples. Specifically, we use data rescaling to substitute the inefficient $sign$ function in gradient-based attacks without extra computational cost. We also propose a Depth First Sampling method to eliminate the fluctuation of rescaling and stabilize the gradient update. Our method can be used in any gradient-based optimizations and is extensible to be integrated with various input transformation or ensemble methods for further improving the adversarial transferability. Extensive experiments on the standard ImageNet dataset show that our S-FGRM could significantly boost the transferability of gradient-based attacks and outperform the state-of-the-art baselines.
 
 
 

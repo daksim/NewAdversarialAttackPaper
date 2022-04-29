@@ -1,9 +1,75 @@
 # Latest Adversarial Attack Papers
-**update at 2022-04-29 06:31:29**
+**update at 2022-04-30 06:31:27**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. Defending Against Person Hiding Adversarial Patch Attack with a Universal White Frame**
+## **1. UNBUS: Uncertainty-aware Deep Botnet Detection System in Presence of Perturbed Samples**
+
+cs.CR
+
+8 pages, 5 figures, 5 Tables
+
+**SubmitDate**: 2022-04-28    [paper-pdf](http://arxiv.org/pdf/2204.09502v2)
+
+**Authors**: Rahim Taheri
+
+**Abstracts**: A rising number of botnet families have been successfully detected using deep learning architectures. While the variety of attacks increases, these architectures should become more robust against attacks. They have been proven to be very sensitive to small but well constructed perturbations in the input. Botnet detection requires extremely low false-positive rates (FPR), which are not commonly attainable in contemporary deep learning. Attackers try to increase the FPRs by making poisoned samples. The majority of recent research has focused on the use of model loss functions to build adversarial examples and robust models. In this paper, two LSTM-based classification algorithms for botnet classification with an accuracy higher than 98% are presented. Then, the adversarial attack is proposed, which reduces the accuracy to about 30%. Then, by examining the methods for computing the uncertainty, the defense method is proposed to increase the accuracy to about 70%. By using the deep ensemble and stochastic weight averaging quantification methods it has been investigated the uncertainty of the accuracy in the proposed methods.
+
+
+
+## **2. Deepfake Forensics via An Adversarial Game**
+
+cs.CV
+
+Accepted by IEEE Transactions on Image Processing; 13 pages, 4  figures
+
+**SubmitDate**: 2022-04-28    [paper-pdf](http://arxiv.org/pdf/2103.13567v2)
+
+**Authors**: Zhi Wang, Yiwen Guo, Wangmeng Zuo
+
+**Abstracts**: With the progress in AI-based facial forgery (i.e., deepfake), people are increasingly concerned about its abuse. Albeit effort has been made for training classification (also known as deepfake detection) models to recognize such forgeries, existing models suffer from poor generalization to unseen forgery technologies and high sensitivity to changes in image/video quality. In this paper, we advocate adversarial training for improving the generalization ability to both unseen facial forgeries and unseen image/video qualities. We believe training with samples that are adversarially crafted to attack the classification models improves the generalization ability considerably. Considering that AI-based face manipulation often leads to high-frequency artifacts that can be easily spotted by models yet difficult to generalize, we further propose a new adversarial training method that attempts to blur out these specific artifacts, by introducing pixel-wise Gaussian blurring models. With adversarial training, the classification models are forced to learn more discriminative and generalizable features, and the effectiveness of our method can be verified by plenty of empirical evidence. Our code will be made publicly available.
+
+
+
+## **3. Adversarial Fine-tune with Dynamically Regulated Adversary**
+
+cs.LG
+
+**SubmitDate**: 2022-04-28    [paper-pdf](http://arxiv.org/pdf/2204.13232v1)
+
+**Authors**: Pengyue Hou, Ming Zhou, Jie Han, Petr Musilek, Xingyu Li
+
+**Abstracts**: Adversarial training is an effective method to boost model robustness to malicious, adversarial attacks. However, such improvement in model robustness often leads to a significant sacrifice of standard performance on clean images. In many real-world applications such as health diagnosis and autonomous surgical robotics, the standard performance is more valued over model robustness against such extremely malicious attacks. This leads to the question: To what extent we can boost model robustness without sacrificing standard performance? This work tackles this problem and proposes a simple yet effective transfer learning-based adversarial training strategy that disentangles the negative effects of adversarial samples on model's standard performance. In addition, we introduce a training-friendly adversarial attack algorithm, which facilitates the boost of adversarial robustness without introducing significant training complexity. Extensive experimentation indicates that the proposed method outperforms previous adversarial training algorithms towards the target: to improve model robustness while preserving model's standard performance on clean data.
+
+
+
+## **4. An Adversarial Attack Analysis on Malicious Advertisement URL Detection Framework**
+
+cs.LG
+
+13
+
+**SubmitDate**: 2022-04-27    [paper-pdf](http://arxiv.org/pdf/2204.13172v1)
+
+**Authors**: Ehsan Nowroozi, Abhishek, Mohammadreza Mohammadi, Mauro Conti
+
+**Abstracts**: Malicious advertisement URLs pose a security risk since they are the source of cyber-attacks, and the need to address this issue is growing in both industry and academia. Generally, the attacker delivers an attack vector to the user by means of an email, an advertisement link or any other means of communication and directs them to a malicious website to steal sensitive information and to defraud them. Existing malicious URL detection techniques are limited and to handle unseen features as well as generalize to test data. In this study, we extract a novel set of lexical and web-scrapped features and employ machine learning technique to set up system for fraudulent advertisement URLs detection. The combination set of six different kinds of features precisely overcome the obfuscation in fraudulent URL classification. Based on different statistical properties, we use twelve different formatted datasets for detection, prediction and classification task. We extend our prediction analysis for mismatched and unlabelled datasets. For this framework, we analyze the performance of four machine learning techniques: Random Forest, Gradient Boost, XGBoost and AdaBoost in the detection part. With our proposed method, we can achieve a false negative rate as low as 0.0037 while maintaining high accuracy of 99.63%. Moreover, we devise a novel unsupervised technique for data clustering using K- Means algorithm for the visual analysis. This paper analyses the vulnerability of decision tree-based models using the limited knowledge attack scenario. We considered the exploratory attack and implemented Zeroth Order Optimization adversarial attack on the detection models.
+
+
+
+## **5. SSR-GNNs: Stroke-based Sketch Representation with Graph Neural Networks**
+
+cs.CV
+
+**SubmitDate**: 2022-04-27    [paper-pdf](http://arxiv.org/pdf/2204.13153v1)
+
+**Authors**: Sheng Cheng, Yi Ren, Yezhou Yang
+
+**Abstracts**: This paper follows cognitive studies to investigate a graph representation for sketches, where the information of strokes, i.e., parts of a sketch, are encoded on vertices and information of inter-stroke on edges. The resultant graph representation facilitates the training of a Graph Neural Networks for classification tasks, and achieves accuracy and robustness comparable to the state-of-the-art against translation and rotation attacks, as well as stronger attacks on graph vertices and topologies, i.e., modifications and addition of strokes, all without resorting to adversarial training. Prior studies on sketches, e.g., graph transformers, encode control points of stroke on vertices, which are not invariant to spatial transformations. In contrary, we encode vertices and edges using pairwise distances among control points to achieve invariance. Compared with existing generative sketch model for one-shot classification, our method does not rely on run-time statistical inference. Lastly, the proposed representation enables generation of novel sketches that are structurally similar to while separable from the existing dataset.
+
+
+
+## **6. Defending Against Person Hiding Adversarial Patch Attack with a Universal White Frame**
 
 cs.CV
 
@@ -17,7 +83,7 @@ Submitted by NeurIPS 2021 with response letter to the anonymous  reviewers' comm
 
 
 
-## **2. The MeVer DeepFake Detection Service: Lessons Learnt from Developing and Deploying in the Wild**
+## **7. The MeVer DeepFake Detection Service: Lessons Learnt from Developing and Deploying in the Wild**
 
 cs.CV
 
@@ -31,7 +97,7 @@ cs.CV
 
 
 
-## **3. Improving the Transferability of Adversarial Examples with Restructure Embedded Patches**
+## **8. Improving the Transferability of Adversarial Examples with Restructure Embedded Patches**
 
 cs.CV
 
@@ -43,7 +109,7 @@ cs.CV
 
 
 
-## **4. Data Bootstrapping Approaches to Improve Low Resource Abusive Language Detection for Indic Languages**
+## **9. Data Bootstrapping Approaches to Improve Low Resource Abusive Language Detection for Indic Languages**
 
 cs.CL
 
@@ -57,7 +123,7 @@ Accepted at HT '22: 33rd ACM Conference on Hypertext and Social Media
 
 
 
-## **5. Restricted Black-box Adversarial Attack Against DeepFake Face Swapping**
+## **10. Restricted Black-box Adversarial Attack Against DeepFake Face Swapping**
 
 cs.CV
 
@@ -69,7 +135,7 @@ cs.CV
 
 
 
-## **6. Boosting Adversarial Transferability of MLP-Mixer**
+## **11. Boosting Adversarial Transferability of MLP-Mixer**
 
 cs.CV
 
@@ -81,7 +147,7 @@ cs.CV
 
 
 
-## **7. Mixed Strategies for Security Games with General Defending Requirements**
+## **12. Mixed Strategies for Security Games with General Defending Requirements**
 
 cs.GT
 
@@ -95,7 +161,7 @@ Accepted by IJCAI-2022
 
 
 
-## **8. Source-independent quantum random number generator against detector blinding attacks**
+## **13. Source-independent quantum random number generator against detector blinding attacks**
 
 quant-ph
 
@@ -109,7 +175,7 @@ quant-ph
 
 
 
-## **9. Self-recoverable Adversarial Examples: A New Effective Protection Mechanism in Social Networks**
+## **14. Self-recoverable Adversarial Examples: A New Effective Protection Mechanism in Social Networks**
 
 cs.CV
 
@@ -123,7 +189,7 @@ cs.CV
 
 
 
-## **10. Can Rationalization Improve Robustness?**
+## **15. Can Rationalization Improve Robustness?**
 
 cs.CL
 
@@ -137,7 +203,7 @@ Accepted to NAACL 2022
 
 
 
-## **11. Discovering Exfiltration Paths Using Reinforcement Learning with Attack Graphs**
+## **16. Discovering Exfiltration Paths Using Reinforcement Learning with Attack Graphs**
 
 cs.CR
 
@@ -151,7 +217,7 @@ The 5th IEEE Conference on Dependable and Secure Computing (IEEE DSC  2022)
 
 
 
-## **12. Reconstructing Training Data with Informed Adversaries**
+## **17. Reconstructing Training Data with Informed Adversaries**
 
 cs.CR
 
@@ -165,7 +231,7 @@ Published at "2022 IEEE Symposium on Security and Privacy (SP)"
 
 
 
-## **13. A Simple Structure For Building A Robust Model**
+## **18. A Simple Structure For Building A Robust Model**
 
 cs.CV
 
@@ -179,7 +245,7 @@ cs.CV
 
 
 
-## **14. Dominating Vertical Collaborative Learning Systems**
+## **19. Dominating Vertical Collaborative Learning Systems**
 
 cs.CR
 
@@ -191,7 +257,7 @@ cs.CR
 
 
 
-## **15. Real or Virtual: A Video Conferencing Background Manipulation-Detection System**
+## **20. Real or Virtual: A Video Conferencing Background Manipulation-Detection System**
 
 cs.CV
 
@@ -205,7 +271,7 @@ cs.CV
 
 
 
-## **16. Improving Deep Learning Model Robustness Against Adversarial Attack by Increasing the Network Capacity**
+## **21. Improving Deep Learning Model Robustness Against Adversarial Attack by Increasing the Network Capacity**
 
 cs.LG
 
@@ -217,7 +283,7 @@ cs.LG
 
 
 
-## **17. A Comprehensive Test Pattern Generation Approach Exploiting SAT Attack for Logic Locking**
+## **22. A Comprehensive Test Pattern Generation Approach Exploiting SAT Attack for Logic Locking**
 
 cs.CR
 
@@ -231,7 +297,7 @@ cs.CR
 
 
 
-## **18. Dictionary Attacks on Speaker Verification**
+## **23. Dictionary Attacks on Speaker Verification**
 
 cs.SD
 
@@ -245,7 +311,7 @@ Manuscript and supplement, currently under review
 
 
 
-## **19. Sampling-based Fast Gradient Rescaling Method for Highly Transferable Adversarial Attacks**
+## **24. Sampling-based Fast Gradient Rescaling Method for Highly Transferable Adversarial Attacks**
 
 cs.CV
 
@@ -259,7 +325,7 @@ The writing and experiment of the article need to be further  strengthened
 
 
 
-## **20. Eliminating Backdoor Triggers for Deep Neural Networks Using Attention Relation Graph Distillation**
+## **25. Eliminating Backdoor Triggers for Deep Neural Networks Using Attention Relation Graph Distillation**
 
 cs.LG
 
@@ -271,7 +337,7 @@ cs.LG
 
 
 
-## **21. Stochastic Variance Reduced Ensemble Adversarial Attack for Boosting the Adversarial Transferability**
+## **26. Stochastic Variance Reduced Ensemble Adversarial Attack for Boosting the Adversarial Transferability**
 
 cs.LG
 
@@ -285,7 +351,7 @@ cs.LG
 
 
 
-## **22. Certifiably Robust Variational Autoencoders**
+## **27. Certifiably Robust Variational Autoencoders**
 
 stat.ML
 
@@ -299,7 +365,7 @@ stat.ML
 
 
 
-## **23. Smart App Attack: Hacking Deep Learning Models in Android Apps**
+## **28. Smart App Attack: Hacking Deep Learning Models in Android Apps**
 
 cs.LG
 
@@ -313,7 +379,7 @@ Accepted to IEEE Transactions on Information Forensics and Security.  This is a 
 
 
 
-## **24. Towards Data-Free Model Stealing in a Hard Label Setting**
+## **29. Towards Data-Free Model Stealing in a Hard Label Setting**
 
 cs.CR
 
@@ -327,7 +393,7 @@ CVPR 2022, Project Page: https://sites.google.com/view/dfms-hl
 
 
 
-## **25. GFCL: A GRU-based Federated Continual Learning Framework against Adversarial Attacks in IoV**
+## **30. GFCL: A GRU-based Federated Continual Learning Framework against Adversarial Attacks in IoV**
 
 cs.LG
 
@@ -341,7 +407,7 @@ cs.LG
 
 
 
-## **26. A Tale of Two Models: Constructing Evasive Attacks on Edge Models**
+## **31. A Tale of Two Models: Constructing Evasive Attacks on Edge Models**
 
 cs.CR
 
@@ -353,7 +419,7 @@ cs.CR
 
 
 
-## **27. How Sampling Impacts the Robustness of Stochastic Neural Networks**
+## **32. How Sampling Impacts the Robustness of Stochastic Neural Networks**
 
 cs.LG
 
@@ -365,7 +431,7 @@ cs.LG
 
 
 
-## **28. Defending Black-box Skeleton-based Human Activity Classifiers**
+## **33. Defending Black-box Skeleton-based Human Activity Classifiers**
 
 cs.CV
 
@@ -377,7 +443,7 @@ cs.CV
 
 
 
-## **29. Enhancing the Transferability via Feature-Momentum Adversarial Attack**
+## **34. Enhancing the Transferability via Feature-Momentum Adversarial Attack**
 
 cs.CV
 
@@ -389,7 +455,7 @@ cs.CV
 
 
 
-## **30. Data-Efficient Backdoor Attacks**
+## **35. Data-Efficient Backdoor Attacks**
 
 cs.CV
 
@@ -403,7 +469,7 @@ Accepted to IJCAI 2022 Long Oral
 
 
 
-## **31. Improving the Robustness of Adversarial Attacks Using an Affine-Invariant Gradient Estimator**
+## **36. Improving the Robustness of Adversarial Attacks Using an Affine-Invariant Gradient Estimator**
 
 cs.CV
 
@@ -415,7 +481,7 @@ cs.CV
 
 
 
-## **32. Real-Time Detectors for Digital and Physical Adversarial Inputs to Perception Systems**
+## **37. Real-Time Detectors for Digital and Physical Adversarial Inputs to Perception Systems**
 
 cs.CV
 
@@ -427,7 +493,7 @@ cs.CV
 
 
 
-## **33. Adversarial Contrastive Learning by Permuting Cluster Assignments**
+## **38. Adversarial Contrastive Learning by Permuting Cluster Assignments**
 
 cs.LG
 
@@ -439,7 +505,7 @@ cs.LG
 
 
 
-## **34. A Mask-Based Adversarial Defense Scheme**
+## **39. A Mask-Based Adversarial Defense Scheme**
 
 cs.LG
 
@@ -453,7 +519,7 @@ cs.LG
 
 
 
-## **35. Robustness of Machine Learning Models Beyond Adversarial Attacks**
+## **40. Robustness of Machine Learning Models Beyond Adversarial Attacks**
 
 cs.LG
 
@@ -467,7 +533,7 @@ cs.LG
 
 
 
-## **36. Is Neuron Coverage Needed to Make Person Detection More Robust?**
+## **41. Is Neuron Coverage Needed to Make Person Detection More Robust?**
 
 cs.CV
 
@@ -481,7 +547,7 @@ Accepted for publication at CVPR 2022 TCV workshop
 
 
 
-## **37. On the Certified Robustness for Ensemble Models and Beyond**
+## **42. On the Certified Robustness for Ensemble Models and Beyond**
 
 cs.LG
 
@@ -495,7 +561,7 @@ ICLR 2022. 51 pages, 10 pages for main text. Forum and code:  https://openreview
 
 
 
-## **38. Fast AdvProp**
+## **43. Fast AdvProp**
 
 cs.CV
 
@@ -509,7 +575,7 @@ ICLR 2022 camera ready version
 
 
 
-## **39. GUARD: Graph Universal Adversarial Defense**
+## **44. GUARD: Graph Universal Adversarial Defense**
 
 cs.LG
 
@@ -523,7 +589,7 @@ Code is publicly available at https://github.com/EdisonLeeeee/GUARD
 
 
 
-## **40. Backdooring Explainable Machine Learning**
+## **45. Backdooring Explainable Machine Learning**
 
 cs.CR
 
@@ -535,7 +601,7 @@ cs.CR
 
 
 
-## **41. Adversarial Scratches: Deployable Attacks to CNN Classifiers**
+## **46. Adversarial Scratches: Deployable Attacks to CNN Classifiers**
 
 cs.LG
 
@@ -549,7 +615,7 @@ This paper stems from 'Scratch that! An Evolution-based Adversarial  Attack agai
 
 
 
-## **42. You Are What You Write: Preserving Privacy in the Era of Large Language Models**
+## **47. You Are What You Write: Preserving Privacy in the Era of Large Language Models**
 
 cs.CL
 
@@ -561,7 +627,7 @@ cs.CL
 
 
 
-## **43. Identifying Near-Optimal Single-Shot Attacks on ICSs with Limited Process Knowledge**
+## **48. Identifying Near-Optimal Single-Shot Attacks on ICSs with Limited Process Knowledge**
 
 cs.CR
 
@@ -575,7 +641,7 @@ This paper has been accepted at Applied Cryptography and Network  Security (ACNS
 
 
 
-## **44. Indiscriminate Data Poisoning Attacks on Neural Networks**
+## **49. Indiscriminate Data Poisoning Attacks on Neural Networks**
 
 cs.LG
 
@@ -587,7 +653,7 @@ cs.LG
 
 
 
-## **45. A Brief Survey on Deep Learning Based Data Hiding**
+## **50. A Brief Survey on Deep Learning Based Data Hiding**
 
 cs.CR
 
@@ -598,74 +664,6 @@ v2: reorganize some sections and add several new papers published in  2021~2022
 **Authors**: Chaoning Zhang, Chenguo Lin, Philipp Benz, Kejiang Chen, Weiming Zhang, In So Kweon
 
 **Abstracts**: Data hiding is the art of concealing messages with limited perceptual changes. Recently, deep learning has enriched it from various perspectives with significant progress. In this work, we conduct a brief yet comprehensive review of existing literature for deep learning based data hiding (deep hiding) by first classifying it according to three essential properties (i.e., capacity, security and robustness), and outline three commonly used architectures. Based on this, we summarize specific strategies for different applications of data hiding, including basic hiding, steganography, watermarking and light field messaging. Finally, further insight into deep hiding is provided by incorporating the perspective of adversarial attack.
-
-
-
-## **46. Jacobian Ensembles Improve Robustness Trade-offs to Adversarial Attacks**
-
-cs.LG
-
-**SubmitDate**: 2022-04-19    [paper-pdf](http://arxiv.org/pdf/2204.08726v1)
-
-**Authors**: Kenneth T. Co, David Martinez-Rego, Zhongyuan Hau, Emil C. Lupu
-
-**Abstracts**: Deep neural networks have become an integral part of our software infrastructure and are being deployed in many widely-used and safety-critical applications. However, their integration into many systems also brings with it the vulnerability to test time attacks in the form of Universal Adversarial Perturbations (UAPs). UAPs are a class of perturbations that when applied to any input causes model misclassification. Although there is an ongoing effort to defend models against these adversarial attacks, it is often difficult to reconcile the trade-offs in model accuracy and robustness to adversarial attacks. Jacobian regularization has been shown to improve the robustness of models against UAPs, whilst model ensembles have been widely adopted to improve both predictive performance and model robustness. In this work, we propose a novel approach, Jacobian Ensembles-a combination of Jacobian regularization and model ensembles to significantly increase the robustness against UAPs whilst maintaining or improving model accuracy. Our results show that Jacobian Ensembles achieves previously unseen levels of accuracy and robustness, greatly improving over previous methods that tend to skew towards only either accuracy or robustness.
-
-
-
-## **47. Topology and geometry of data manifold in deep learning**
-
-cs.LG
-
-12 pages, 15 figures
-
-**SubmitDate**: 2022-04-19    [paper-pdf](http://arxiv.org/pdf/2204.08624v1)
-
-**Authors**: German Magai, Anton Ayzenberg
-
-**Abstracts**: Despite significant advances in the field of deep learning in applications to various fields, explaining the inner processes of deep learning models remains an important and open question. The purpose of this article is to describe and substantiate the geometric and topological view of the learning process of neural networks. Our attention is focused on the internal representation of neural networks and on the dynamics of changes in the topology and geometry of the data manifold on different layers. We also propose a method for assessing the generalizing ability of neural networks based on topological descriptors. In this paper, we use the concepts of topological data analysis and intrinsic dimension, and we present a wide range of experiments on different datasets and different configurations of convolutional neural network architectures. In addition, we consider the issue of the geometry of adversarial attacks in the classification task and spoofing attacks on face recognition systems. Our work is a contribution to the development of an important area of explainable and interpretable AI through the example of computer vision.
-
-
-
-## **48. Poisons that are learned faster are more effective**
-
-cs.LG
-
-8 pages, 4 figures. Accepted to CVPR 2022 Art of Robustness Workshop
-
-**SubmitDate**: 2022-04-19    [paper-pdf](http://arxiv.org/pdf/2204.08615v1)
-
-**Authors**: Pedro Sandoval-Segura, Vasu Singla, Liam Fowl, Jonas Geiping, Micah Goldblum, David Jacobs, Tom Goldstein
-
-**Abstracts**: Imperceptible poisoning attacks on entire datasets have recently been touted as methods for protecting data privacy. However, among a number of defenses preventing the practical use of these techniques, early-stopping stands out as a simple, yet effective defense. To gauge poisons' vulnerability to early-stopping, we benchmark error-minimizing, error-maximizing, and synthetic poisons in terms of peak test accuracy over 100 epochs and make a number of surprising observations. First, we find that poisons that reach a low training loss faster have lower peak test accuracy. Second, we find that a current state-of-the-art error-maximizing poison is 7 times less effective when poison training is stopped at epoch 8. Third, we find that stronger, more transferable adversarial attacks do not make stronger poisons. We advocate for evaluating poisons in terms of peak test accuracy.
-
-
-
-## **49. Metamorphic Testing-based Adversarial Attack to Fool Deepfake Detectors**
-
-cs.CV
-
-paper submitted to 26TH International Conference on Pattern  Recognition (ICPR2022)
-
-**SubmitDate**: 2022-04-19    [paper-pdf](http://arxiv.org/pdf/2204.08612v1)
-
-**Authors**: Nyee Thoang Lim, Meng Yi Kuan, Muxin Pu, Mei Kuan Lim, Chun Yong Chong
-
-**Abstracts**: Deepfakes utilise Artificial Intelligence (AI) techniques to create synthetic media where the likeness of one person is replaced with another. There are growing concerns that deepfakes can be maliciously used to create misleading and harmful digital contents. As deepfakes become more common, there is a dire need for deepfake detection technology to help spot deepfake media. Present deepfake detection models are able to achieve outstanding accuracy (>90%). However, most of them are limited to within-dataset scenario, where the same dataset is used for training and testing. Most models do not generalise well enough in cross-dataset scenario, where models are tested on unseen datasets from another source. Furthermore, state-of-the-art deepfake detection models rely on neural network-based classification models that are known to be vulnerable to adversarial attacks. Motivated by the need for a robust deepfake detection model, this study adapts metamorphic testing (MT) principles to help identify potential factors that could influence the robustness of the examined model, while overcoming the test oracle problem in this domain. Metamorphic testing is specifically chosen as the testing technique as it fits our demand to address learning-based system testing with probabilistic outcomes from largely black-box components, based on potentially large input domains. We performed our evaluations on MesoInception-4 and TwoStreamNet models, which are the state-of-the-art deepfake detection models. This study identified makeup application as an adversarial attack that could fool deepfake detectors. Our experimental results demonstrate that both the MesoInception-4 and TwoStreamNet models degrade in their performance by up to 30\% when the input data is perturbed with makeup.
-
-
-
-## **50. UNBUS: Uncertainty-aware Deep Botnet Detection System in Presence of Perturbed Samples**
-
-cs.CR
-
-8 pages, 5 figures, 5 Tables
-
-**SubmitDate**: 2022-04-18    [paper-pdf](http://arxiv.org/pdf/2204.09502v1)
-
-**Authors**: Rahim Taheri
-
-**Abstracts**: A rising number of botnet families have been successfully detected using deep learning architectures. While the variety of attacks increases, these architectures should become more robust against attacks. They have been proven to be very sensitive to small but well constructed perturbations in the input. Botnet detection requires extremely low false-positive rates (FPR), which are not commonly attainable in contemporary deep learning. Attackers try to increase the FPRs by making poisoned samples. The majority of recent research has focused on the use of model loss functions to build adversarial examples and robust models. In this paper, two LSTM-based classification algorithms for botnet classification with an accuracy higher than 98\% are presented. Then, the adversarial attack is proposed, which reduces the accuracy to about30\%. Then, by examining the methods for computing the uncertainty, the defense method is proposed to increase the accuracy to about 70\%. By using the deep ensemble and stochastic weight averaging quantification methods it has been investigated the uncertainty of the accuracy in the proposed methods.
 
 
 

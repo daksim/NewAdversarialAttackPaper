@@ -1,9 +1,75 @@
 # Latest Adversarial Attack Papers
-**update at 2022-05-11 06:31:31**
+**update at 2022-05-12 06:31:31**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. Energy-bounded Learning for Robust Models of Code**
+## **1. Authentication Attacks on Projection-based Cancelable Biometric Schemes (long version)**
+
+cs.CR
+
+arXiv admin note: text overlap with arXiv:1910.01389 by other authors
+
+**SubmitDate**: 2022-05-10    [paper-pdf](http://arxiv.org/pdf/2110.15163v4)
+
+**Authors**: Axel Durbet, Pascal Lafourcade, Denis Migdal, Kevin Thiry-Atighehchi, Paul-Marie Grollemund
+
+**Abstracts**: Cancelable biometric schemes aim at generating secure biometric templates by combining user specific tokens, such as password, stored secret or salt, along with biometric data. This type of transformation is constructed as a composition of a biometric transformation with a feature extraction algorithm. The security requirements of cancelable biometric schemes concern the irreversibility, unlinkability and revocability of templates, without losing in accuracy of comparison. While several schemes were recently attacked regarding these requirements, full reversibility of such a composition in order to produce colliding biometric characteristics, and specifically presentation attacks, were never demonstrated to the best of our knowledge. In this paper, we formalize these attacks for a traditional cancelable scheme with the help of integer linear programming (ILP) and quadratically constrained quadratic programming (QCQP). Solving these optimization problems allows an adversary to slightly alter its fingerprint image in order to impersonate any individual. Moreover, in an even more severe scenario, it is possible to simultaneously impersonate several individuals.
+
+
+
+## **2. SYNFI: Pre-Silicon Fault Analysis of an Open-Source Secure Element**
+
+cs.CR
+
+**SubmitDate**: 2022-05-10    [paper-pdf](http://arxiv.org/pdf/2205.04775v1)
+
+**Authors**: Pascal Nasahl, Miguel Osorio, Pirmin Vogel, Michael Schaffner, Timothy Trippel, Dominic Rizzo, Stefan Mangard
+
+**Abstracts**: Fault attacks are active, physical attacks that an adversary can leverage to alter the control-flow of embedded devices to gain access to sensitive information or bypass protection mechanisms. Due to the severity of these attacks, manufacturers deploy hardware-based fault defenses into security-critical systems, such as secure elements. The development of these countermeasures is a challenging task due to the complex interplay of circuit components and because contemporary design automation tools tend to optimize inserted structures away, thereby defeating their purpose. Hence, it is critical that such countermeasures are rigorously verified post-synthesis. As classical functional verification techniques fall short of assessing the effectiveness of countermeasures, developers have to resort to methods capable of injecting faults in a simulation testbench or into a physical chip. However, developing test sequences to inject faults in simulation is an error-prone task and performing fault attacks on a chip requires specialized equipment and is incredibly time-consuming. To that end, this paper introduces SYNFI, a formal pre-silicon fault verification framework that operates on synthesized netlists. SYNFI can be used to analyze the general effect of faults on the input-output relationship in a circuit and its fault countermeasures, and thus enables hardware designers to assess and verify the effectiveness of embedded countermeasures in a systematic and semi-automatic way. To demonstrate that SYNFI is capable of handling unmodified, industry-grade netlists synthesized with commercial and open tools, we analyze OpenTitan, the first open-source secure element. In our analysis, we identified critical security weaknesses in the unprotected AES block, developed targeted countermeasures, reassessed their security, and contributed these countermeasures back to the OpenTitan repository.
+
+
+
+## **3. Using frequency attention to make adversarial patch powerful against person detector**
+
+cs.CV
+
+10pages, 4 figures
+
+**SubmitDate**: 2022-05-10    [paper-pdf](http://arxiv.org/pdf/2205.04638v1)
+
+**Authors**: Xiaochun Lei, Chang Lu, Zetao Jiang, Gongzhao Ting, Xiang Cai, Linjun Lu
+
+**Abstracts**: Deep neural networks (DNNs) are vulnerable to adversarial attacks. In particular, object detectors may be attacked by applying a particular adversarial patch to the image. However, because the patch shrinks during preprocessing, most existing approaches that employ adversarial patches to attack object detectors would diminish the attack success rate on small and medium targets. This paper proposes a Frequency Module(FRAN), a frequency-domain attention module for guiding patch generation. This is the first study to introduce frequency domain attention to optimize the attack capabilities of adversarial patches. Our method increases the attack success rates of small and medium targets by 4.18% and 3.89%, respectively, over the state-of-the-art attack method for fooling the human detector while assaulting YOLOv3 without reducing the attack success rate of big targets.
+
+
+
+## **4. Semi-Targeted Model Poisoning Attack on Federated Learning via Backward Error Analysis**
+
+cs.LG
+
+Published in IJCNN 2022
+
+**SubmitDate**: 2022-05-10    [paper-pdf](http://arxiv.org/pdf/2203.11633v2)
+
+**Authors**: Yuwei Sun, Hideya Ochiai, Jun Sakuma
+
+**Abstracts**: Model poisoning attacks on federated learning (FL) intrude in the entire system via compromising an edge model, resulting in malfunctioning of machine learning models. Such compromised models are tampered with to perform adversary-desired behaviors. In particular, we considered a semi-targeted situation where the source class is predetermined however the target class is not. The goal is to cause the global classifier to misclassify data of the source class. Though approaches such as label flipping have been adopted to inject poisoned parameters into FL, it has been shown that their performances are usually class-sensitive varying with different target classes applied. Typically, an attack can become less effective when shifting to a different target class. To overcome this challenge, we propose the Attacking Distance-aware Attack (ADA) to enhance a poisoning attack by finding the optimized target class in the feature space. Moreover, we studied a more challenging situation where an adversary had limited prior knowledge about a client's data. To tackle this problem, ADA deduces pair-wise distances between different classes in the latent feature space from shared model parameters based on the backward error analysis. We performed extensive empirical evaluations on ADA by varying the factor of attacking frequency in three different image classification tasks. As a result, ADA succeeded in increasing the attack performance by 1.8 times in the most challenging case with an attacking frequency of 0.01.
+
+
+
+## **5. Fingerprinting of DNN with Black-box Design and Verification**
+
+cs.CR
+
+**SubmitDate**: 2022-05-10    [paper-pdf](http://arxiv.org/pdf/2203.10902v3)
+
+**Authors**: Shuo Wang, Sharif Abuadbba, Sidharth Agarwal, Kristen Moore, Ruoxi Sun, Minhui Xue, Surya Nepal, Seyit Camtepe, Salil Kanhere
+
+**Abstracts**: Cloud-enabled Machine Learning as a Service (MLaaS) has shown enormous promise to transform how deep learning models are developed and deployed. Nonetheless, there is a potential risk associated with the use of such services since a malicious party can modify them to achieve an adverse result. Therefore, it is imperative for model owners, service providers, and end-users to verify whether the deployed model has not been tampered with or not. Such verification requires public verifiability (i.e., fingerprinting patterns are available to all parties, including adversaries) and black-box access to the deployed model via APIs. Existing watermarking and fingerprinting approaches, however, require white-box knowledge (such as gradient) to design the fingerprinting and only support private verifiability, i.e., verification by an honest party.   In this paper, we describe a practical watermarking technique that enables black-box knowledge in fingerprint design and black-box queries during verification. The service ensures the integrity of cloud-based services through public verification (i.e. fingerprinting patterns are available to all parties, including adversaries). If an adversary manipulates a model, this will result in a shift in the decision boundary. Thus, the underlying principle of double-black watermarking is that a model's decision boundary could serve as an inherent fingerprint for watermarking. Our approach captures the decision boundary by generating a limited number of encysted sample fingerprints, which are a set of naturally transformed and augmented inputs enclosed around the model's decision boundary in order to capture the inherent fingerprints of the model. We evaluated our watermarking approach against a variety of model integrity attacks and model compression attacks.
+
+
+
+## **6. Energy-bounded Learning for Robust Models of Code**
 
 cs.LG
 
@@ -17,7 +83,7 @@ There are some flaws in our experiments, we would like to fix it and  publish a 
 
 
 
-## **2. Do You Think You Can Hold Me? The Real Challenge of Problem-Space Evasion Attacks**
+## **7. Do You Think You Can Hold Me? The Real Challenge of Problem-Space Evasion Attacks**
 
 cs.CR
 
@@ -29,7 +95,7 @@ cs.CR
 
 
 
-## **3. Federated Multi-Armed Bandits Under Byzantine Attacks**
+## **8. Federated Multi-Armed Bandits Under Byzantine Attacks**
 
 cs.LG
 
@@ -43,7 +109,7 @@ cs.LG
 
 
 
-## **4. ResSFL: A Resistance Transfer Framework for Defending Model Inversion Attack in Split Federated Learning**
+## **9. ResSFL: A Resistance Transfer Framework for Defending Model Inversion Attack in Split Federated Learning**
 
 cs.LG
 
@@ -57,7 +123,7 @@ Accepted to CVPR 2022
 
 
 
-## **5. Triangle Attack: A Query-efficient Decision-based Adversarial Attack**
+## **10. Triangle Attack: A Query-efficient Decision-based Adversarial Attack**
 
 cs.CV
 
@@ -71,7 +137,7 @@ cs.CV
 
 
 
-## **6. Private Eye: On the Limits of Textual Screen Peeking via Eyeglass Reflections in Video Conferencing**
+## **11. Private Eye: On the Limits of Textual Screen Peeking via Eyeglass Reflections in Video Conferencing**
 
 cs.CR
 
@@ -83,7 +149,7 @@ cs.CR
 
 
 
-## **7. mFI-PSO: A Flexible and Effective Method in Adversarial Image Generation for Deep Neural Networks**
+## **12. mFI-PSO: A Flexible and Effective Method in Adversarial Image Generation for Deep Neural Networks**
 
 cs.LG
 
@@ -97,7 +163,7 @@ Accepted by 2022 International Joint Conference on Neural Networks  (IJCNN)
 
 
 
-## **8. IDSGAN: Generative Adversarial Networks for Attack Generation against Intrusion Detection**
+## **13. IDSGAN: Generative Adversarial Networks for Attack Generation against Intrusion Detection**
 
 cs.CR
 
@@ -111,7 +177,7 @@ Accepted for publication in the 26th Pacific-Asia Conference on  Knowledge Disco
 
 
 
-## **9. Fingerprinting Deep Neural Networks Globally via Universal Adversarial Perturbations**
+## **14. Fingerprinting Deep Neural Networks Globally via Universal Adversarial Perturbations**
 
 cs.CR
 
@@ -125,7 +191,7 @@ Accepted to CVPR 2022 (Oral Presentation)
 
 
 
-## **10. Poisoning Semi-supervised Federated Learning via Unlabeled Data: Attacks and Defenses**
+## **15. Poisoning Semi-supervised Federated Learning via Unlabeled Data: Attacks and Defenses**
 
 cs.LG
 
@@ -139,7 +205,7 @@ Updated Version
 
 
 
-## **11. Using cyber threat intelligence to support adversary understanding applied to the Russia-Ukraine conflict**
+## **16. Using cyber threat intelligence to support adversary understanding applied to the Russia-Ukraine conflict**
 
 cs.CR
 
@@ -153,7 +219,7 @@ in Spanish language
 
 
 
-## **12. Subverting Fair Image Search with Generative Adversarial Perturbations**
+## **17. Subverting Fair Image Search with Generative Adversarial Perturbations**
 
 cs.LG
 
@@ -167,7 +233,7 @@ Accepted as a full paper at the 2022 ACM Conference on Fairness,  Accountability
 
 
 
-## **13. Leveraging strategic connection migration-powered traffic splitting for privacy**
+## **18. Leveraging strategic connection migration-powered traffic splitting for privacy**
 
 cs.CR
 
@@ -179,7 +245,7 @@ cs.CR
 
 
 
-## **14. Adversarial Classification under Gaussian Mechanism: Calibrating the Attack to Sensitivity**
+## **19. Adversarial Classification under Gaussian Mechanism: Calibrating the Attack to Sensitivity**
 
 cs.IT
 
@@ -191,7 +257,7 @@ cs.IT
 
 
 
-## **15. Learning Optimal Propagation for Graph Neural Networks**
+## **20. Learning Optimal Propagation for Graph Neural Networks**
 
 cs.LG
 
@@ -205,7 +271,7 @@ cs.LG
 
 
 
-## **16. Privacy-from-Birth: Protecting Sensed Data from Malicious Sensors with VERSA**
+## **21. Privacy-from-Birth: Protecting Sensed Data from Malicious Sensors with VERSA**
 
 cs.CR
 
@@ -219,7 +285,7 @@ cs.CR
 
 
 
-## **17. Transferring Adversarial Robustness Through Robust Representation Matching**
+## **22. Transferring Adversarial Robustness Through Robust Representation Matching**
 
 cs.LG
 
@@ -233,7 +299,7 @@ To appear at USENIX Security '22. Updated version with artifact  evaluation badg
 
 
 
-## **18. Can collaborative learning be private, robust and scalable?**
+## **23. Can collaborative learning be private, robust and scalable?**
 
 cs.LG
 
@@ -247,7 +313,7 @@ Submitted to TPDP 2022
 
 
 
-## **19. Holistic Approach to Measure Sample-level Adversarial Vulnerability and its Utility in Building Trustworthy Systems**
+## **24. Holistic Approach to Measure Sample-level Adversarial Vulnerability and its Utility in Building Trustworthy Systems**
 
 cs.CV
 
@@ -261,7 +327,7 @@ Accepted in CVPR Workshop 2022 on Human-centered Intelligent  Services: Safe and
 
 
 
-## **20. Resilience of Bayesian Layer-Wise Explanations under Adversarial Attacks**
+## **25. Resilience of Bayesian Layer-Wise Explanations under Adversarial Attacks**
 
 cs.LG
 
@@ -273,7 +339,7 @@ cs.LG
 
 
 
-## **21. Robust Conversational Agents against Imperceptible Toxicity Triggers**
+## **26. Robust Conversational Agents against Imperceptible Toxicity Triggers**
 
 cs.CL
 
@@ -285,7 +351,7 @@ cs.CL
 
 
 
-## **22. Zero Day Threat Detection Using Graph and Flow Based Security Telemetry**
+## **27. Zero Day Threat Detection Using Graph and Flow Based Security Telemetry**
 
 cs.CR
 
@@ -299,7 +365,7 @@ cs.CR
 
 
 
-## **23. Adversarial Training for High-Stakes Reliability**
+## **28. Adversarial Training for High-Stakes Reliability**
 
 cs.LG
 
@@ -313,7 +379,7 @@ cs.LG
 
 
 
-## **24. Rethinking Classifier And Adversarial Attack**
+## **29. Rethinking Classifier And Adversarial Attack**
 
 cs.LG
 
@@ -325,7 +391,7 @@ cs.LG
 
 
 
-## **25. Based-CE white-box adversarial attack will not work using super-fitting**
+## **30. Based-CE white-box adversarial attack will not work using super-fitting**
 
 cs.LG
 
@@ -337,7 +403,7 @@ cs.LG
 
 
 
-## **26. Few-Shot Backdoor Attacks on Visual Object Tracking**
+## **31. Few-Shot Backdoor Attacks on Visual Object Tracking**
 
 cs.CV
 
@@ -351,21 +417,7 @@ This work is accepted by the ICLR 2022. The first two authors  contributed equal
 
 
 
-## **27. Authentication Attacks on Projection-based Cancelable Biometric Schemes (long version)**
-
-cs.CR
-
-arXiv admin note: text overlap with arXiv:1910.01389 by other authors
-
-**SubmitDate**: 2022-05-04    [paper-pdf](http://arxiv.org/pdf/2110.15163v3)
-
-**Authors**: Axel Durbet, Pascal Lafourcade, Denis Migdal, Kevin Thiry-Atighehchi, Paul-Marie Grollemund
-
-**Abstracts**: Cancelable biometric schemes aim at generating secure biometric templates by combining user specific tokens, such as password, stored secret or salt, along with biometric data. This type of transformation is constructed as a composition of a biometric transformation with a feature extraction algorithm. The security requirements of cancelable biometric schemes concern the irreversibility, unlinkability and revocability of templates, without losing in accuracy of comparison. While several schemes were recently attacked regarding these requirements, full reversibility of such a composition in order to produce colliding biometric characteristics, and specifically presentation attacks, were never demonstrated to the best of our knowledge. In this paper, we formalize these attacks for a traditional cancelable scheme with the help of integer linear programming (ILP) and quadratically constrained quadratic programming (QCQP). Solving these optimization problems allows an adversary to slightly alter its fingerprint image in order to impersonate any individual. Moreover, in an even more severe scenario, it is possible to simultaneously impersonate several individuals.
-
-
-
-## **28. AdaptOver: Adaptive Overshadowing Attacks in Cellular Networks**
+## **32. AdaptOver: Adaptive Overshadowing Attacks in Cellular Networks**
 
 cs.CR
 
@@ -379,7 +431,7 @@ This version introduces uplink overshadowing
 
 
 
-## **29. Can Rationalization Improve Robustness?**
+## **33. Can Rationalization Improve Robustness?**
 
 cs.CL
 
@@ -393,7 +445,7 @@ Accepted to NAACL 2022; The code is available at  https://github.com/princeton-n
 
 
 
-## **30. Don't sweat the small stuff, classify the rest: Sample Shielding to protect text classifiers against adversarial attacks**
+## **34. Don't sweat the small stuff, classify the rest: Sample Shielding to protect text classifiers against adversarial attacks**
 
 cs.CL
 
@@ -407,7 +459,7 @@ cs.CL
 
 
 
-## **31. A Unified Framework for Adversarial Attack and Defense in Constrained Feature Space**
+## **35. A Unified Framework for Adversarial Attack and Defense in Constrained Feature Space**
 
 cs.AI
 
@@ -419,7 +471,7 @@ cs.AI
 
 
 
-## **32. On the uncertainty principle of neural networks**
+## **36. On the uncertainty principle of neural networks**
 
 cs.LG
 
@@ -433,7 +485,7 @@ cs.LG
 
 
 
-## **33. Self-Ensemble Adversarial Training for Improved Robustness**
+## **37. Self-Ensemble Adversarial Training for Improved Robustness**
 
 cs.LG
 
@@ -447,7 +499,7 @@ cs.LG
 
 
 
-## **34. SemAttack: Natural Textual Attacks via Different Semantic Spaces**
+## **38. SemAttack: Natural Textual Attacks via Different Semantic Spaces**
 
 cs.CL
 
@@ -461,7 +513,7 @@ Published at Findings of NAACL 2022
 
 
 
-## **35. MIRST-DM: Multi-Instance RST with Drop-Max Layer for Robust Classification of Breast Cancer**
+## **39. MIRST-DM: Multi-Instance RST with Drop-Max Layer for Robust Classification of Breast Cancer**
 
 eess.IV
 
@@ -475,7 +527,7 @@ eess.IV
 
 
 
-## **36. Segment and Complete: Defending Object Detectors against Adversarial Patch Attacks with Robust Patch Detection**
+## **40. Segment and Complete: Defending Object Detectors against Adversarial Patch Attacks with Robust Patch Detection**
 
 cs.CV
 
@@ -489,7 +541,7 @@ CVPR 2022 camera ready
 
 
 
-## **37. Defending Against Advanced Persistent Threats using Game-Theory**
+## **41. Defending Against Advanced Persistent Threats using Game-Theory**
 
 cs.CR
 
@@ -503,7 +555,7 @@ preprint of a correction to the article with the same name, published  with PLOS
 
 
 
-## **38. BERTops: Studying BERT Representations under a Topological Lens**
+## **42. BERTops: Studying BERT Representations under a Topological Lens**
 
 cs.LG
 
@@ -515,7 +567,7 @@ cs.LG
 
 
 
-## **39. Revisiting Gaussian Neurons for Online Clustering with Unknown Number of Clusters**
+## **43. Revisiting Gaussian Neurons for Online Clustering with Unknown Number of Clusters**
 
 cs.LG
 
@@ -527,7 +579,7 @@ cs.LG
 
 
 
-## **40. Deep-Attack over the Deep Reinforcement Learning**
+## **44. Deep-Attack over the Deep Reinforcement Learning**
 
 cs.LG
 
@@ -541,7 +593,7 @@ Accepted to Knowledge-Based Systems
 
 
 
-## **41. Enhancing Adversarial Training with Feature Separability**
+## **45. Enhancing Adversarial Training with Feature Separability**
 
 cs.CV
 
@@ -555,7 +607,7 @@ cs.CV
 
 
 
-## **42. Robust Fine-tuning via Perturbation and Interpolation from In-batch Instances**
+## **46. Robust Fine-tuning via Perturbation and Interpolation from In-batch Instances**
 
 cs.CL
 
@@ -569,7 +621,7 @@ IJCAI-ECAI 2022 (the 31st International Joint Conference on  Artificial Intellig
 
 
 
-## **43. A Word is Worth A Thousand Dollars: Adversarial Attack on Tweets Fools Stock Prediction**
+## **47. A Word is Worth A Thousand Dollars: Adversarial Attack on Tweets Fools Stock Prediction**
 
 cs.CR
 
@@ -583,7 +635,7 @@ NAACL short paper, github: https://github.com/yonxie/AdvFinTweet
 
 
 
-## **44. Analysis of a blockchain protocol based on LDPC codes**
+## **48. Analysis of a blockchain protocol based on LDPC codes**
 
 cs.CR
 
@@ -595,7 +647,7 @@ cs.CR
 
 
 
-## **45. Optimizing One-pixel Black-box Adversarial Attacks**
+## **49. Optimizing One-pixel Black-box Adversarial Attacks**
 
 cs.CR
 
@@ -609,7 +661,7 @@ cs.CR
 
 
 
-## **46. Logically Consistent Adversarial Attacks for Soft Theorem Provers**
+## **50. Logically Consistent Adversarial Attacks for Soft Theorem Provers**
 
 cs.LG
 
@@ -620,60 +672,6 @@ IJCAI-ECAI 2022
 **Authors**: Alexander Gaskell, Yishu Miao, Lucia Specia, Francesca Toni
 
 **Abstracts**: Recent efforts within the AI community have yielded impressive results towards "soft theorem proving" over natural language sentences using language models. We propose a novel, generative adversarial framework for probing and improving these models' reasoning capabilities. Adversarial attacks in this domain suffer from the logical inconsistency problem, whereby perturbations to the input may alter the label. Our Logically consistent AdVersarial Attacker, LAVA, addresses this by combining a structured generative process with a symbolic solver, guaranteeing logical consistency. Our framework successfully generates adversarial attacks and identifies global weaknesses common across multiple target models. Our analyses reveal naive heuristics and vulnerabilities in these models' reasoning capabilities, exposing an incomplete grasp of logical deduction under logic programs. Finally, in addition to effective probing of these models, we show that training on the generated samples improves the target model's performance.
-
-
-
-## **47. To Trust or Not To Trust Prediction Scores for Membership Inference Attacks**
-
-cs.LG
-
-15 pages, 8 figures, 10 tables
-
-**SubmitDate**: 2022-04-29    [paper-pdf](http://arxiv.org/pdf/2111.09076v2)
-
-**Authors**: Dominik Hintersdorf, Lukas Struppek, Kristian Kersting
-
-**Abstracts**: Membership inference attacks (MIAs) aim to determine whether a specific sample was used to train a predictive model. Knowing this may indeed lead to a privacy breach. Most MIAs, however, make use of the model's prediction scores - the probability of each output given some input - following the intuition that the trained model tends to behave differently on its training data. We argue that this is a fallacy for many modern deep network architectures. Consequently, MIAs will miserably fail since overconfidence leads to high false-positive rates not only on known domains but also on out-of-distribution data and implicitly acts as a defense against MIAs. Specifically, using generative adversarial networks, we are able to produce a potentially infinite number of samples falsely classified as part of the training data. In other words, the threat of MIAs is overestimated, and less information is leaked than previously assumed. Moreover, there is actually a trade-off between the overconfidence of models and their susceptibility to MIAs: the more classifiers know when they do not know, making low confidence predictions, the more they reveal the training data.
-
-
-
-## **48. Adversarial attacks on an optical neural network**
-
-cs.CR
-
-**SubmitDate**: 2022-04-29    [paper-pdf](http://arxiv.org/pdf/2205.01226v1)
-
-**Authors**: Shuming Jiao, Ziwei Song, Shuiying Xiang
-
-**Abstracts**: Adversarial attacks have been extensively investigated for machine learning systems including deep learning in the digital domain. However, the adversarial attacks on optical neural networks (ONN) have been seldom considered previously. In this work, we first construct an accurate image classifier with an ONN using a mesh of interconnected Mach-Zehnder interferometers (MZI). Then a corresponding adversarial attack scheme is proposed for the first time. The attacked images are visually very similar to the original ones but the ONN system becomes malfunctioned and generates wrong classification results in most time. The results indicate that adversarial attack is also a significant issue for optical machine learning systems.
-
-
-
-## **49. Finding MNEMON: Reviving Memories of Node Embeddings**
-
-cs.LG
-
-To Appear in the 29th ACM Conference on Computer and Communications  Security (CCS), November 7-11, 2022
-
-**SubmitDate**: 2022-04-29    [paper-pdf](http://arxiv.org/pdf/2204.06963v2)
-
-**Authors**: Yun Shen, Yufei Han, Zhikun Zhang, Min Chen, Ting Yu, Michael Backes, Yang Zhang, Gianluca Stringhini
-
-**Abstracts**: Previous security research efforts orbiting around graphs have been exclusively focusing on either (de-)anonymizing the graphs or understanding the security and privacy issues of graph neural networks. Little attention has been paid to understand the privacy risks of integrating the output from graph embedding models (e.g., node embeddings) with complex downstream machine learning pipelines. In this paper, we fill this gap and propose a novel model-agnostic graph recovery attack that exploits the implicit graph structural information preserved in the embeddings of graph nodes. We show that an adversary can recover edges with decent accuracy by only gaining access to the node embedding matrix of the original graph without interactions with the node embedding models. We demonstrate the effectiveness and applicability of our graph recovery attack through extensive experiments.
-
-
-
-## **50. Exploration and Exploitation in Federated Learning to Exclude Clients with Poisoned Data**
-
-cs.DC
-
-Accepted at 2022 IWCMC
-
-**SubmitDate**: 2022-04-29    [paper-pdf](http://arxiv.org/pdf/2204.14020v1)
-
-**Authors**: Shadha Tabatabai, Ihab Mohammed, Basheer Qolomany, Abdullatif Albasser, Kashif Ahmad, Mohamed Abdallah, Ala Al-Fuqaha
-
-**Abstracts**: Federated Learning (FL) is one of the hot research topics, and it utilizes Machine Learning (ML) in a distributed manner without directly accessing private data on clients. However, FL faces many challenges, including the difficulty to obtain high accuracy, high communication cost between clients and the server, and security attacks related to adversarial ML. To tackle these three challenges, we propose an FL algorithm inspired by evolutionary techniques. The proposed algorithm groups clients randomly in many clusters, each with a model selected randomly to explore the performance of different models. The clusters are then trained in a repetitive process where the worst performing cluster is removed in each iteration until one cluster remains. In each iteration, some clients are expelled from clusters either due to using poisoned data or low performance. The surviving clients are exploited in the next iteration. The remaining cluster with surviving clients is then used for training the best FL model (i.e., remaining FL model). Communication cost is reduced since fewer clients are used in the final training of the FL model. To evaluate the performance of the proposed algorithm, we conduct a number of experiments using FEMNIST dataset and compare the result against the random FL algorithm. The experimental results show that the proposed algorithm outperforms the baseline algorithm in terms of accuracy, communication cost, and security.
 
 
 

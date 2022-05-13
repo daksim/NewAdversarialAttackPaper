@@ -1,9 +1,87 @@
 # Latest Adversarial Attack Papers
-**update at 2022-05-13 06:31:24**
+**update at 2022-05-14 06:31:24**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. Using Frequency Attention to Make Adversarial Patch Powerful Against Person Detector**
+## **1. Anomaly Detection of Adversarial Examples using Class-conditional Generative Adversarial Networks**
+
+cs.LG
+
+**SubmitDate**: 2022-05-12    [paper-pdf](http://arxiv.org/pdf/2105.10101v2)
+
+**Authors**: Hang Wang, David J. Miller, George Kesidis
+
+**Abstracts**: Deep Neural Networks (DNNs) have been shown vulnerable to Test-Time Evasion attacks (TTEs, or adversarial examples), which, by making small changes to the input, alter the DNN's decision. We propose an unsupervised attack detector on DNN classifiers based on class-conditional Generative Adversarial Networks (GANs). We model the distribution of clean data conditioned on the predicted class label by an Auxiliary Classifier GAN (AC-GAN). Given a test sample and its predicted class, three detection statistics are calculated based on the AC-GAN Generator and Discriminator. Experiments on image classification datasets under various TTE attacks show that our method outperforms previous detection methods. We also investigate the effectiveness of anomaly detection using different DNN layers (input features or internal-layer features) and demonstrate, as one might expect, that anomalies are harder to detect using features closer to the DNN's output layer.
+
+
+
+## **2. Sample Complexity Bounds for Robustly Learning Decision Lists against Evasion Attacks**
+
+cs.LG
+
+To appear in the proceedings of International Joint Conference on  Artificial Intelligence (2022)
+
+**SubmitDate**: 2022-05-12    [paper-pdf](http://arxiv.org/pdf/2205.06127v1)
+
+**Authors**: Pascale Gourdeau, Varun Kanade, Marta Kwiatkowska, James Worrell
+
+**Abstracts**: A fundamental problem in adversarial machine learning is to quantify how much training data is needed in the presence of evasion attacks. In this paper we address this issue within the framework of PAC learning, focusing on the class of decision lists. Given that distributional assumptions are essential in the adversarial setting, we work with probability distributions on the input data that satisfy a Lipschitz condition: nearby points have similar probability. Our key results illustrate that the adversary's budget (that is, the number of bits it can perturb on each input) is a fundamental quantity in determining the sample complexity of robust learning. Our first main result is a sample-complexity lower bound: the class of monotone conjunctions (essentially the simplest non-trivial hypothesis class on the Boolean hypercube) and any superclass has sample complexity at least exponential in the adversary's budget. Our second main result is a corresponding upper bound: for every fixed $k$ the class of $k$-decision lists has polynomial sample complexity against a $\log(n)$-bounded adversary. This sheds further light on the question of whether an efficient PAC learning algorithm can always be used as an efficient $\log(n)$-robust learning algorithm under the uniform distribution.
+
+
+
+## **3. From IP to transport and beyond: cross-layer attacks against applications**
+
+cs.CR
+
+**SubmitDate**: 2022-05-12    [paper-pdf](http://arxiv.org/pdf/2205.06085v1)
+
+**Authors**: Tianxiang Dai, Philipp Jeitner, Haya Shulman, Michael Waidner
+
+**Abstracts**: We perform the first analysis of methodologies for launching DNS cache poisoning: manipulation at the IP layer, hijack of the inter-domain routing and probing open ports via side channels. We evaluate these methodologies against DNS resolvers in the Internet and compare them with respect to effectiveness, applicability and stealth. Our study shows that DNS cache poisoning is a practical and pervasive threat.   We then demonstrate cross-layer attacks that leverage DNS cache poisoning for attacking popular systems, ranging from security mechanisms, such as RPKI, to applications, such as VoIP. In addition to more traditional adversarial goals, most notably impersonation and Denial of Service, we show for the first time that DNS cache poisoning can even enable adversaries to bypass cryptographic defences: we demonstrate how DNS cache poisoning can facilitate BGP prefix hijacking of networks protected with RPKI even when all the other networks apply route origin validation to filter invalid BGP announcements. Our study shows that DNS plays a much more central role in the Internet security than previously assumed.   We recommend mitigations for securing the applications and for preventing cache poisoning.
+
+
+
+## **4. Segmentation-Consistent Probabilistic Lesion Counting**
+
+eess.IV
+
+Accepted at Medical Imaging with Deep Learning (MIDL) 2022
+
+**SubmitDate**: 2022-05-12    [paper-pdf](http://arxiv.org/pdf/2204.05276v2)
+
+**Authors**: Julien Schroeter, Chelsea Myers-Colet, Douglas L Arnold, Tal Arbel
+
+**Abstracts**: Lesion counts are important indicators of disease severity, patient prognosis, and treatment efficacy, yet counting as a task in medical imaging is often overlooked in favor of segmentation. This work introduces a novel continuously differentiable function that maps lesion segmentation predictions to lesion count probability distributions in a consistent manner. The proposed end-to-end approach--which consists of voxel clustering, lesion-level voxel probability aggregation, and Poisson-binomial counting--is non-parametric and thus offers a robust and consistent way to augment lesion segmentation models with post hoc counting capabilities. Experiments on Gadolinium-enhancing lesion counting demonstrate that our method outputs accurate and well-calibrated count distributions that capture meaningful uncertainty information. They also reveal that our model is suitable for multi-task learning of lesion segmentation, is efficient in low data regimes, and is robust to adversarial attacks.
+
+
+
+## **5. Stalloris: RPKI Downgrade Attack**
+
+cs.CR
+
+**SubmitDate**: 2022-05-12    [paper-pdf](http://arxiv.org/pdf/2205.06064v1)
+
+**Authors**: Tomas Hlavacek, Philipp Jeitner, Donika Mirdita, Haya Shulman, Michael Waidner
+
+**Abstracts**: We demonstrate the first downgrade attacks against RPKI. The key design property in RPKI that allows our attacks is the tradeoff between connectivity and security: when networks cannot retrieve RPKI information from publication points, they make routing decisions in BGP without validating RPKI. We exploit this tradeoff to develop attacks that prevent the retrieval of the RPKI objects from the public repositories, thereby disabling RPKI validation and exposing the RPKI-protected networks to prefix hijack attacks.   We demonstrate experimentally that at least 47% of the public repositories are vulnerable against a specific version of our attacks, a rate-limiting off-path downgrade attack. We also show that all the current RPKI relying party implementations are vulnerable to attacks by a malicious publication point. This translates to 20.4% of the IPv4 address space.   We provide recommendations for preventing our downgrade attacks. However, resolving the fundamental problem is not straightforward: if the relying parties prefer security over connectivity and insist on RPKI validation when ROAs cannot be retrieved, the victim AS may become disconnected from many more networks than just the one that the adversary wishes to hijack. Our work shows that the publication points are a critical infrastructure for Internet connectivity and security. Our main recommendation is therefore that the publication points should be hosted on robust platforms guaranteeing a high degree of connectivity.
+
+
+
+## **6. Infrared Invisible Clothing:Hiding from Infrared Detectors at Multiple Angles in Real World**
+
+cs.CV
+
+Accepted by CVPR 2022, ORAL
+
+**SubmitDate**: 2022-05-12    [paper-pdf](http://arxiv.org/pdf/2205.05909v1)
+
+**Authors**: Xiaopei Zhu, Zhanhao Hu, Siyuan Huang, Jianmin Li, Xiaolin Hu
+
+**Abstracts**: Thermal infrared imaging is widely used in body temperature measurement, security monitoring, and so on, but its safety research attracted attention only in recent years. We proposed the infrared adversarial clothing, which could fool infrared pedestrian detectors at different angles. We simulated the process from cloth to clothing in the digital world and then designed the adversarial "QR code" pattern. The core of our method is to design a basic pattern that can be expanded periodically, and make the pattern after random cropping and deformation still have an adversarial effect, then we can process the flat cloth with an adversarial pattern into any 3D clothes. The results showed that the optimized "QR code" pattern lowered the Average Precision (AP) of YOLOv3 by 87.7%, while the random "QR code" pattern and blank pattern lowered the AP of YOLOv3 by 57.9% and 30.1%, respectively, in the digital world. We then manufactured an adversarial shirt with a new material: aerogel. Physical-world experiments showed that the adversarial "QR code" pattern clothing lowered the AP of YOLOv3 by 64.6%, while the random "QR code" pattern clothing and fully heat-insulated clothing lowered the AP of YOLOv3 by 28.3% and 22.8%, respectively. We used the model ensemble technique to improve the attack transferability to unseen models.
+
+
+
+## **7. Using Frequency Attention to Make Adversarial Patch Powerful Against Person Detector**
 
 cs.CV
 
@@ -17,7 +95,7 @@ cs.CV
 
 
 
-## **2. The Hijackers Guide To The Galaxy: Off-Path Taking Over Internet Resources**
+## **8. The Hijackers Guide To The Galaxy: Off-Path Taking Over Internet Resources**
 
 cs.CR
 
@@ -29,7 +107,7 @@ cs.CR
 
 
 
-## **3. Sardino: Ultra-Fast Dynamic Ensemble for Secure Visual Sensing at Mobile Edge**
+## **9. Sardino: Ultra-Fast Dynamic Ensemble for Secure Visual Sensing at Mobile Edge**
 
 cs.CV
 
@@ -41,7 +119,7 @@ cs.CV
 
 
 
-## **4. Developing Imperceptible Adversarial Patches to Camouflage Military Assets From Computer Vision Enabled Technologies**
+## **10. Developing Imperceptible Adversarial Patches to Camouflage Military Assets From Computer Vision Enabled Technologies**
 
 cs.CV
 
@@ -55,7 +133,7 @@ cs.CV
 
 
 
-## **5. A Word is Worth A Thousand Dollars: Adversarial Attack on Tweets Fools Stock Prediction**
+## **11. A Word is Worth A Thousand Dollars: Adversarial Attack on Tweets Fools Stock Prediction**
 
 cs.CR
 
@@ -69,7 +147,7 @@ NAACL short paper, github: https://github.com/yonxie/AdvFinTweet
 
 
 
-## **6. Authentication Attacks on Projection-based Cancelable Biometric Schemes (long version)**
+## **12. Authentication Attacks on Projection-based Cancelable Biometric Schemes (long version)**
 
 cs.CR
 
@@ -83,7 +161,7 @@ arXiv admin note: text overlap with arXiv:1910.01389 by other authors
 
 
 
-## **7. SYNFI: Pre-Silicon Fault Analysis of an Open-Source Secure Element**
+## **13. SYNFI: Pre-Silicon Fault Analysis of an Open-Source Secure Element**
 
 cs.CR
 
@@ -95,7 +173,7 @@ cs.CR
 
 
 
-## **8. Semi-Targeted Model Poisoning Attack on Federated Learning via Backward Error Analysis**
+## **14. Semi-Targeted Model Poisoning Attack on Federated Learning via Backward Error Analysis**
 
 cs.LG
 
@@ -109,7 +187,7 @@ Published in IJCNN 2022
 
 
 
-## **9. Fingerprinting of DNN with Black-box Design and Verification**
+## **15. Fingerprinting of DNN with Black-box Design and Verification**
 
 cs.CR
 
@@ -121,7 +199,7 @@ cs.CR
 
 
 
-## **10. Energy-bounded Learning for Robust Models of Code**
+## **16. Energy-bounded Learning for Robust Models of Code**
 
 cs.LG
 
@@ -135,7 +213,7 @@ There are some flaws in our experiments, we would like to fix it and  publish a 
 
 
 
-## **11. Do You Think You Can Hold Me? The Real Challenge of Problem-Space Evasion Attacks**
+## **17. Do You Think You Can Hold Me? The Real Challenge of Problem-Space Evasion Attacks**
 
 cs.CR
 
@@ -147,7 +225,7 @@ cs.CR
 
 
 
-## **12. Federated Multi-Armed Bandits Under Byzantine Attacks**
+## **18. Federated Multi-Armed Bandits Under Byzantine Attacks**
 
 cs.LG
 
@@ -161,7 +239,7 @@ cs.LG
 
 
 
-## **13. ResSFL: A Resistance Transfer Framework for Defending Model Inversion Attack in Split Federated Learning**
+## **19. ResSFL: A Resistance Transfer Framework for Defending Model Inversion Attack in Split Federated Learning**
 
 cs.LG
 
@@ -175,7 +253,7 @@ Accepted to CVPR 2022
 
 
 
-## **14. Triangle Attack: A Query-efficient Decision-based Adversarial Attack**
+## **20. Triangle Attack: A Query-efficient Decision-based Adversarial Attack**
 
 cs.CV
 
@@ -189,7 +267,7 @@ cs.CV
 
 
 
-## **15. Private Eye: On the Limits of Textual Screen Peeking via Eyeglass Reflections in Video Conferencing**
+## **21. Private Eye: On the Limits of Textual Screen Peeking via Eyeglass Reflections in Video Conferencing**
 
 cs.CR
 
@@ -201,7 +279,7 @@ cs.CR
 
 
 
-## **16. mFI-PSO: A Flexible and Effective Method in Adversarial Image Generation for Deep Neural Networks**
+## **22. mFI-PSO: A Flexible and Effective Method in Adversarial Image Generation for Deep Neural Networks**
 
 cs.LG
 
@@ -215,7 +293,7 @@ Accepted by 2022 International Joint Conference on Neural Networks  (IJCNN)
 
 
 
-## **17. IDSGAN: Generative Adversarial Networks for Attack Generation against Intrusion Detection**
+## **23. IDSGAN: Generative Adversarial Networks for Attack Generation against Intrusion Detection**
 
 cs.CR
 
@@ -229,7 +307,7 @@ Accepted for publication in the 26th Pacific-Asia Conference on  Knowledge Disco
 
 
 
-## **18. Fingerprinting Deep Neural Networks Globally via Universal Adversarial Perturbations**
+## **24. Fingerprinting Deep Neural Networks Globally via Universal Adversarial Perturbations**
 
 cs.CR
 
@@ -243,7 +321,7 @@ Accepted to CVPR 2022 (Oral Presentation)
 
 
 
-## **19. Poisoning Semi-supervised Federated Learning via Unlabeled Data: Attacks and Defenses**
+## **25. Poisoning Semi-supervised Federated Learning via Unlabeled Data: Attacks and Defenses**
 
 cs.LG
 
@@ -257,7 +335,7 @@ Updated Version
 
 
 
-## **20. Using cyber threat intelligence to support adversary understanding applied to the Russia-Ukraine conflict**
+## **26. Using cyber threat intelligence to support adversary understanding applied to the Russia-Ukraine conflict**
 
 cs.CR
 
@@ -271,7 +349,7 @@ in Spanish language
 
 
 
-## **21. Subverting Fair Image Search with Generative Adversarial Perturbations**
+## **27. Subverting Fair Image Search with Generative Adversarial Perturbations**
 
 cs.LG
 
@@ -285,7 +363,7 @@ Accepted as a full paper at the 2022 ACM Conference on Fairness,  Accountability
 
 
 
-## **22. Leveraging strategic connection migration-powered traffic splitting for privacy**
+## **28. Leveraging strategic connection migration-powered traffic splitting for privacy**
 
 cs.CR
 
@@ -297,7 +375,7 @@ cs.CR
 
 
 
-## **23. Adversarial Classification under Gaussian Mechanism: Calibrating the Attack to Sensitivity**
+## **29. Adversarial Classification under Gaussian Mechanism: Calibrating the Attack to Sensitivity**
 
 cs.IT
 
@@ -309,7 +387,7 @@ cs.IT
 
 
 
-## **24. Learning Optimal Propagation for Graph Neural Networks**
+## **30. Learning Optimal Propagation for Graph Neural Networks**
 
 cs.LG
 
@@ -323,7 +401,7 @@ cs.LG
 
 
 
-## **25. Privacy-from-Birth: Protecting Sensed Data from Malicious Sensors with VERSA**
+## **31. Privacy-from-Birth: Protecting Sensed Data from Malicious Sensors with VERSA**
 
 cs.CR
 
@@ -337,7 +415,7 @@ cs.CR
 
 
 
-## **26. Transferring Adversarial Robustness Through Robust Representation Matching**
+## **32. Transferring Adversarial Robustness Through Robust Representation Matching**
 
 cs.LG
 
@@ -351,7 +429,7 @@ To appear at USENIX Security '22. Updated version with artifact  evaluation badg
 
 
 
-## **27. Can collaborative learning be private, robust and scalable?**
+## **33. Can collaborative learning be private, robust and scalable?**
 
 cs.LG
 
@@ -365,7 +443,7 @@ Submitted to TPDP 2022
 
 
 
-## **28. Holistic Approach to Measure Sample-level Adversarial Vulnerability and its Utility in Building Trustworthy Systems**
+## **34. Holistic Approach to Measure Sample-level Adversarial Vulnerability and its Utility in Building Trustworthy Systems**
 
 cs.CV
 
@@ -379,7 +457,7 @@ Accepted in CVPR Workshop 2022 on Human-centered Intelligent  Services: Safe and
 
 
 
-## **29. Resilience of Bayesian Layer-Wise Explanations under Adversarial Attacks**
+## **35. Resilience of Bayesian Layer-Wise Explanations under Adversarial Attacks**
 
 cs.LG
 
@@ -391,7 +469,7 @@ cs.LG
 
 
 
-## **30. Robust Conversational Agents against Imperceptible Toxicity Triggers**
+## **36. Robust Conversational Agents against Imperceptible Toxicity Triggers**
 
 cs.CL
 
@@ -403,7 +481,7 @@ cs.CL
 
 
 
-## **31. Zero Day Threat Detection Using Graph and Flow Based Security Telemetry**
+## **37. Zero Day Threat Detection Using Graph and Flow Based Security Telemetry**
 
 cs.CR
 
@@ -417,7 +495,7 @@ cs.CR
 
 
 
-## **32. Adversarial Training for High-Stakes Reliability**
+## **38. Adversarial Training for High-Stakes Reliability**
 
 cs.LG
 
@@ -431,7 +509,7 @@ cs.LG
 
 
 
-## **33. Rethinking Classifier And Adversarial Attack**
+## **39. Rethinking Classifier And Adversarial Attack**
 
 cs.LG
 
@@ -443,7 +521,7 @@ cs.LG
 
 
 
-## **34. Based-CE white-box adversarial attack will not work using super-fitting**
+## **40. Based-CE white-box adversarial attack will not work using super-fitting**
 
 cs.LG
 
@@ -455,7 +533,7 @@ cs.LG
 
 
 
-## **35. Few-Shot Backdoor Attacks on Visual Object Tracking**
+## **41. Few-Shot Backdoor Attacks on Visual Object Tracking**
 
 cs.CV
 
@@ -469,7 +547,7 @@ This work is accepted by the ICLR 2022. The first two authors  contributed equal
 
 
 
-## **36. AdaptOver: Adaptive Overshadowing Attacks in Cellular Networks**
+## **42. AdaptOver: Adaptive Overshadowing Attacks in Cellular Networks**
 
 cs.CR
 
@@ -483,7 +561,7 @@ This version introduces uplink overshadowing
 
 
 
-## **37. Can Rationalization Improve Robustness?**
+## **43. Can Rationalization Improve Robustness?**
 
 cs.CL
 
@@ -497,7 +575,7 @@ Accepted to NAACL 2022; The code is available at  https://github.com/princeton-n
 
 
 
-## **38. Don't sweat the small stuff, classify the rest: Sample Shielding to protect text classifiers against adversarial attacks**
+## **44. Don't sweat the small stuff, classify the rest: Sample Shielding to protect text classifiers against adversarial attacks**
 
 cs.CL
 
@@ -511,7 +589,7 @@ cs.CL
 
 
 
-## **39. A Unified Framework for Adversarial Attack and Defense in Constrained Feature Space**
+## **45. A Unified Framework for Adversarial Attack and Defense in Constrained Feature Space**
 
 cs.AI
 
@@ -523,7 +601,7 @@ cs.AI
 
 
 
-## **40. On the uncertainty principle of neural networks**
+## **46. On the uncertainty principle of neural networks**
 
 cs.LG
 
@@ -537,7 +615,7 @@ cs.LG
 
 
 
-## **41. Self-Ensemble Adversarial Training for Improved Robustness**
+## **47. Self-Ensemble Adversarial Training for Improved Robustness**
 
 cs.LG
 
@@ -551,7 +629,7 @@ cs.LG
 
 
 
-## **42. SemAttack: Natural Textual Attacks via Different Semantic Spaces**
+## **48. SemAttack: Natural Textual Attacks via Different Semantic Spaces**
 
 cs.CL
 
@@ -565,7 +643,7 @@ Published at Findings of NAACL 2022
 
 
 
-## **43. MIRST-DM: Multi-Instance RST with Drop-Max Layer for Robust Classification of Breast Cancer**
+## **49. MIRST-DM: Multi-Instance RST with Drop-Max Layer for Robust Classification of Breast Cancer**
 
 eess.IV
 
@@ -579,7 +657,7 @@ eess.IV
 
 
 
-## **44. Segment and Complete: Defending Object Detectors against Adversarial Patch Attacks with Robust Patch Detection**
+## **50. Segment and Complete: Defending Object Detectors against Adversarial Patch Attacks with Robust Patch Detection**
 
 cs.CV
 
@@ -590,86 +668,6 @@ CVPR 2022 camera ready
 **Authors**: Jiang Liu, Alexander Levine, Chun Pong Lau, Rama Chellappa, Soheil Feizi
 
 **Abstracts**: Object detection plays a key role in many security-critical systems. Adversarial patch attacks, which are easy to implement in the physical world, pose a serious threat to state-of-the-art object detectors. Developing reliable defenses for object detectors against patch attacks is critical but severely understudied. In this paper, we propose Segment and Complete defense (SAC), a general framework for defending object detectors against patch attacks through detection and removal of adversarial patches. We first train a patch segmenter that outputs patch masks which provide pixel-level localization of adversarial patches. We then propose a self adversarial training algorithm to robustify the patch segmenter. In addition, we design a robust shape completion algorithm, which is guaranteed to remove the entire patch from the images if the outputs of the patch segmenter are within a certain Hamming distance of the ground-truth patch masks. Our experiments on COCO and xView datasets demonstrate that SAC achieves superior robustness even under strong adaptive attacks with no reduction in performance on clean images, and generalizes well to unseen patch shapes, attack budgets, and unseen attack methods. Furthermore, we present the APRICOT-Mask dataset, which augments the APRICOT dataset with pixel-level annotations of adversarial patches. We show SAC can significantly reduce the targeted attack success rate of physical patch attacks. Our code is available at https://github.com/joellliu/SegmentAndComplete.
-
-
-
-## **45. Defending Against Advanced Persistent Threats using Game-Theory**
-
-cs.CR
-
-preprint of a correction to the article with the same name, published  with PLOS ONE, and currently under review
-
-**SubmitDate**: 2022-05-02    [paper-pdf](http://arxiv.org/pdf/2205.00956v1)
-
-**Authors**: Stefan Rass, Sandra König, Stefan Schauer
-
-**Abstracts**: Advanced persistent threats (APT) combine a variety of different attack forms ranging from social engineering to technical exploits. The diversity and usual stealthiness of APT turns them into a central problem of contemporary practical system security, since information on attacks, the current system status or the attacker's incentives is often vague, uncertain and in many cases even unavailable. Game theory is a natural approach to model the conflict between the attacker and the defender, and this work investigates a generalized class of matrix games as a risk mitigation tool for an APT defense. Unlike standard game and decision theory, our model is tailored to capture and handle the full uncertainty that is immanent to APT, such as disagreement among qualitative expert risk assessments, unknown adversarial incentives and uncertainty about the current system state (in terms of how deeply the attacker may have penetrated into the system's protective shells already). Practically, game-theoretic APT models can be derived straightforwardly from topological vulnerability analysis, together with risk assessments as they are done in common risk management standards like the ISO 31000 family. Theoretically, these models come with different properties than classical game theoretic models, whose technical solution presented in this work may be of independent interest.
-
-
-
-## **46. BERTops: Studying BERT Representations under a Topological Lens**
-
-cs.LG
-
-**SubmitDate**: 2022-05-02    [paper-pdf](http://arxiv.org/pdf/2205.00953v1)
-
-**Authors**: Jatin Chauhan, Manohar Kaul
-
-**Abstracts**: Proposing scoring functions to effectively understand, analyze and learn various properties of high dimensional hidden representations of large-scale transformer models like BERT can be a challenging task. In this work, we explore a new direction by studying the topological features of BERT hidden representations using persistent homology (PH). We propose a novel scoring function named "persistence scoring function (PSF)" which: (i) accurately captures the homology of the high-dimensional hidden representations and correlates well with the test set accuracy of a wide range of datasets and outperforms existing scoring metrics, (ii) captures interesting post fine-tuning "per-class" level properties from both qualitative and quantitative viewpoints, (iii) is more stable to perturbations as compared to the baseline functions, which makes it a very robust proxy, and (iv) finally, also serves as a predictor of the attack success rates for a wide category of black-box and white-box adversarial attack methods. Our extensive correlation experiments demonstrate the practical utility of PSF on various NLP tasks relevant to BERT.
-
-
-
-## **47. Revisiting Gaussian Neurons for Online Clustering with Unknown Number of Clusters**
-
-cs.LG
-
-**SubmitDate**: 2022-05-02    [paper-pdf](http://arxiv.org/pdf/2205.00920v1)
-
-**Authors**: Ole Christian Eidheim
-
-**Abstracts**: Despite the recent success of artificial neural networks, more biologically plausible learning methods may be needed to resolve the weaknesses of backpropagation trained models such as catastrophic forgetting and adversarial attacks. A novel local learning rule is presented that performs online clustering with a maximum limit of the number of cluster to be found rather than a fixed cluster count. Instead of using orthogonal weight or output activation constraints, activation sparsity is achieved by mutual repulsion of lateral Gaussian neurons ensuring that multiple neuron centers cannot occupy the same location in the input domain. An update method is also presented for adjusting the widths of the Gaussian neurons in cases where the data samples can be represented by means and variances. The algorithms were applied on the MNIST and CIFAR-10 datasets to create filters capturing the input patterns of pixel patches of various sizes. The experimental results demonstrate stability in the learned parameters across a large number of training samples.
-
-
-
-## **48. Deep-Attack over the Deep Reinforcement Learning**
-
-cs.LG
-
-Accepted to Knowledge-Based Systems
-
-**SubmitDate**: 2022-05-02    [paper-pdf](http://arxiv.org/pdf/2205.00807v1)
-
-**Authors**: Yang Li, Quan Pan, Erik Cambria
-
-**Abstracts**: Recent adversarial attack developments have made reinforcement learning more vulnerable, and different approaches exist to deploy attacks against it, where the key is how to choose the right timing of the attack. Some work tries to design an attack evaluation function to select critical points that will be attacked if the value is greater than a certain threshold. This approach makes it difficult to find the right place to deploy an attack without considering the long-term impact. In addition, there is a lack of appropriate indicators of assessment during attacks. To make the attacks more intelligent as well as to remedy the existing problems, we propose the reinforcement learning-based attacking framework by considering the effectiveness and stealthy spontaneously, while we also propose a new metric to evaluate the performance of the attack model in these two aspects. Experimental results show the effectiveness of our proposed model and the goodness of our proposed evaluation metric. Furthermore, we validate the transferability of the model, and also its robustness under the adversarial training.
-
-
-
-## **49. Enhancing Adversarial Training with Feature Separability**
-
-cs.CV
-
-10 pages
-
-**SubmitDate**: 2022-05-02    [paper-pdf](http://arxiv.org/pdf/2205.00637v1)
-
-**Authors**: Yaxin Li, Xiaorui Liu, Han Xu, Wentao Wang, Jiliang Tang
-
-**Abstracts**: Deep Neural Network (DNN) are vulnerable to adversarial attacks. As a countermeasure, adversarial training aims to achieve robustness based on the min-max optimization problem and it has shown to be one of the most effective defense strategies. However, in this work, we found that compared with natural training, adversarial training fails to learn better feature representations for either clean or adversarial samples, which can be one reason why adversarial training tends to have severe overfitting issues and less satisfied generalize performance. Specifically, we observe two major shortcomings of the features learned by existing adversarial training methods:(1) low intra-class feature similarity; and (2) conservative inter-classes feature variance. To overcome these shortcomings, we introduce a new concept of adversarial training graph (ATG) with which the proposed adversarial training with feature separability (ATFS) enables to coherently boost the intra-class feature similarity and increase inter-class feature variance. Through comprehensive experiments, we demonstrate that the proposed ATFS framework significantly improves both clean and robust performance.
-
-
-
-## **50. Robust Fine-tuning via Perturbation and Interpolation from In-batch Instances**
-
-cs.CL
-
-IJCAI-ECAI 2022 (the 31st International Joint Conference on  Artificial Intelligence and the 25th European Conference on Artificial  Intelligence)
-
-**SubmitDate**: 2022-05-02    [paper-pdf](http://arxiv.org/pdf/2205.00633v1)
-
-**Authors**: Shoujie Tong, Qingxiu Dong, Damai Dai, Yifan song, Tianyu Liu, Baobao Chang, Zhifang Sui
-
-**Abstracts**: Fine-tuning pretrained language models (PLMs) on downstream tasks has become common practice in natural language processing. However, most of the PLMs are vulnerable, e.g., they are brittle under adversarial attacks or imbalanced data, which hinders the application of the PLMs on some downstream tasks, especially in safe-critical scenarios. In this paper, we propose a simple yet effective fine-tuning method called Match-Tuning to force the PLMs to be more robust. For each instance in a batch, we involve other instances in the same batch to interact with it. To be specific, regarding the instances with other labels as a perturbation, Match-Tuning makes the model more robust to noise at the beginning of training. While nearing the end, Match-Tuning focuses more on performing an interpolation among the instances with the same label for better generalization. Extensive experiments on various tasks in GLUE benchmark show that Match-Tuning consistently outperforms the vanilla fine-tuning by $1.64$ scores. Moreover, Match-Tuning exhibits remarkable robustness to adversarial attacks and data imbalance.
 
 
 

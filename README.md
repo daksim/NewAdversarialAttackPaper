@@ -1,9 +1,113 @@
 # Latest Adversarial Attack Papers
-**update at 2022-05-18 06:31:28**
+**update at 2022-05-19 06:31:31**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. Transferability of Adversarial Attacks on Synthetic Speech Detection**
+## **1. F3B: A Low-Latency Commit-and-Reveal Architecture to Mitigate Blockchain Front-Running**
+
+cs.CR
+
+**SubmitDate**: 2022-05-17    [paper-pdf](http://arxiv.org/pdf/2205.08529v1)
+
+**Authors**: Haoqian Zhang, Louis-Henri Merino, Vero Estrada-Galinanes, Bryan Ford
+
+**Abstracts**: Front-running attacks, which benefit from advanced knowledge of pending transactions, have proliferated in the cryptocurrency space since the emergence of decentralized finance. Front-running causes devastating losses to honest participants$\unicode{x2013}$estimated at \$280M each month$\unicode{x2013}$and endangers the fairness of the ecosystem. We present Flash Freezing Flash Boys (F3B), a blockchain architecture to address front-running attacks by relying on a commit-and-reveal scheme where the contents of transactions are encrypted and later revealed by a decentralized secret-management committee once the underlying consensus layer has committed the transaction. F3B mitigates front-running attacks because an adversary can no longer read the content of a transaction before commitment, thus preventing the adversary from benefiting from advance knowledge of pending transactions. We design F3B to be agnostic to the underlying consensus algorithm and compatible with legacy smart contracts by addressing front-running at the blockchain architecture level. Unlike existing commit-and-reveal approaches, F3B only requires writing data onto the underlying blockchain once, establishing a significant overhead reduction. An exploration of F3B shows that with a secret-management committee consisting of 8 and 128 members, F3B presents between 0.1 and 1.8 seconds of transaction-processing latency, respectively.
+
+
+
+## **2. On the Privacy of Decentralized Machine Learning**
+
+cs.CR
+
+17 pages
+
+**SubmitDate**: 2022-05-17    [paper-pdf](http://arxiv.org/pdf/2205.08443v1)
+
+**Authors**: Dario Pasquini, Mathilde Raynal, Carmela Troncoso
+
+**Abstracts**: In this work, we carry out the first, in-depth, privacy analysis of Decentralized Learning -- a collaborative machine learning framework aimed at circumventing the main limitations of federated learning. We identify the decentralized learning properties that affect users' privacy and we introduce a suite of novel attacks for both passive and active decentralized adversaries. We demonstrate that, contrary to what is claimed by decentralized learning proposers, decentralized learning does not offer any security advantages over more practical approaches such as federated learning. Rather, it tends to degrade users' privacy by increasing the attack surface and enabling any user in the system to perform powerful privacy attacks such as gradient inversion, and even gain full control over honest users' local model. We also reveal that, given the state of the art in protections, privacy-preserving configurations of decentralized learning require abandoning any possible advantage over the federated setup, completely defeating the objective of the decentralized approach.
+
+
+
+## **3. Can You Still See Me?: Reconstructing Robot Operations Over End-to-End Encrypted Channels**
+
+cs.CR
+
+13 pages, 7 figures, poster presented at wisec'22
+
+**SubmitDate**: 2022-05-17    [paper-pdf](http://arxiv.org/pdf/2205.08426v1)
+
+**Authors**: Ryan Shah, Chuadhry Mujeeb Ahmed, Shishir Nagaraja
+
+**Abstracts**: Connected robots play a key role in Industry 4.0, providing automation and higher efficiency for many industrial workflows. Unfortunately, these robots can leak sensitive information regarding these operational workflows to remote adversaries. While there exists mandates for the use of end-to-end encryption for data transmission in such settings, it is entirely possible for passive adversaries to fingerprint and reconstruct entire workflows being carried out -- establishing an understanding of how facilities operate. In this paper, we investigate whether a remote attacker can accurately fingerprint robot movements and ultimately reconstruct operational workflows. Using a neural network approach to traffic analysis, we find that one can predict TLS-encrypted movements with around \textasciitilde60\% accuracy, increasing to near-perfect accuracy under realistic network conditions. Further, we also find that attackers can reconstruct warehousing workflows with similar success. Ultimately, simply adopting best cybersecurity practices is clearly not enough to stop even weak (passive) adversaries.
+
+
+
+## **4. Bankrupting DoS Attackers Despite Uncertainty**
+
+cs.CR
+
+**SubmitDate**: 2022-05-17    [paper-pdf](http://arxiv.org/pdf/2205.08287v1)
+
+**Authors**: Trisha Chakraborty, Abir Islam, Valerie King, Daniel Rayborn, Jared Saia, Maxwell Young
+
+**Abstracts**: On-demand provisioning in the cloud allows for services to remain available despite massive denial-of-service (DoS) attacks. Unfortunately, on-demand provisioning is expensive and must be weighed against the costs incurred by an adversary. This leads to a recent threat known as economic denial-of-sustainability (EDoS), where the cost for defending a service is higher than that of attacking.   A natural approach for combating EDoS is to impose costs via resource burning (RB). Here, a client must verifiably consume resources -- for example, by solving a computational challenge -- before service is rendered. However, prior approaches with security guarantees do not account for the cost on-demand provisioning.   Another valuable defensive tool is to use a classifier in order to discern good jobs from a legitimate client, versus bad jobs from the adversary. However, while useful, uncertainty arises from classification error, which still allows bad jobs to consume server resources. Thus, classification is not a solution by itself.   Here, we propose an EDoS defense, RootDef, that leverages both RB and classification, while accounting for both the costs of resource burning and on-demand provisioning. Specifically, against an adversary that expends $B$ resources to attack, the total cost for defending is $\tilde{O}( \sqrt{B\,g} + B^{2/3} + g)$, where $g$ is the number of good jobs and $\tilde{O}$ refers to hidden logarithmic factors in the total number of jobs $n$. Notably, for large $B$ relative to $g$, the adversary has higher cost, implying that the algorithm has an economic advantage. Finally, we prove a lower bound showing that RootDef has total costs that are asymptotically tight up to logarithmic factors in $n$.
+
+
+
+## **5. How Not to Handle Keys: Timing Attacks on FIDO Authenticator Privacy**
+
+cs.CR
+
+to be published in the 22nd Privacy Enhancing Technologies Symposium  (PETS 2022)
+
+**SubmitDate**: 2022-05-17    [paper-pdf](http://arxiv.org/pdf/2205.08071v1)
+
+**Authors**: Michal Kepkowski, Lucjan Hanzlik, Ian Wood, Mohamed Ali Kaafar
+
+**Abstracts**: This paper presents a timing attack on the FIDO2 (Fast IDentity Online) authentication protocol that allows attackers to link user accounts stored in vulnerable authenticators, a serious privacy concern. FIDO2 is a new standard specified by the FIDO industry alliance for secure token online authentication. It complements the W3C WebAuthn specification by providing means to use a USB token or other authenticator as a second factor during the authentication process. From a cryptographic perspective, the protocol is a simple challenge-response where the elliptic curve digital signature algorithm is used to sign challenges. To protect the privacy of the user the token uses unique key pairs per service. To accommodate for small memory, tokens use various techniques that make use of a special parameter called a key handle sent by the service to the token. We identify and analyse a vulnerability in the way the processing of key handles is implemented that allows attackers to remotely link user accounts on multiple services. We show that for vulnerable authenticators there is a difference between the time it takes to process a key handle for a different service but correct authenticator, and for a different authenticator but correct service. This difference can be used to perform a timing attack allowing an adversary to link user's accounts across services. We present several real world examples of adversaries that are in a position to execute our attack and can benefit from linking accounts. We found that two of the eight hardware authenticators we tested were vulnerable despite FIDO level 1 certification. This vulnerability cannot be easily mitigated on authenticators because, for security reasons, they usually do not allow firmware updates. In addition, we show that due to the way existing browsers implement the WebAuthn standard, the attack can be executed remotely.
+
+
+
+## **6. User-Level Differential Privacy against Attribute Inference Attack of Speech Emotion Recognition in Federated Learning**
+
+cs.CR
+
+**SubmitDate**: 2022-05-17    [paper-pdf](http://arxiv.org/pdf/2204.02500v2)
+
+**Authors**: Tiantian Feng, Raghuveer Peri, Shrikanth Narayanan
+
+**Abstracts**: Many existing privacy-enhanced speech emotion recognition (SER) frameworks focus on perturbing the original speech data through adversarial training within a centralized machine learning setup. However, this privacy protection scheme can fail since the adversary can still access the perturbed data. In recent years, distributed learning algorithms, especially federated learning (FL), have gained popularity to protect privacy in machine learning applications. While FL provides good intuition to safeguard privacy by keeping the data on local devices, prior work has shown that privacy attacks, such as attribute inference attacks, are achievable for SER systems trained using FL. In this work, we propose to evaluate the user-level differential privacy (UDP) in mitigating the privacy leaks of the SER system in FL. UDP provides theoretical privacy guarantees with privacy parameters $\epsilon$ and $\delta$. Our results show that the UDP can effectively decrease attribute information leakage while keeping the utility of the SER system with the adversary accessing one model update. However, the efficacy of the UDP suffers when the FL system leaks more model updates to the adversary. We make the code publicly available to reproduce the results in https://github.com/usc-sail/fed-ser-leakage.
+
+
+
+## **7. RoVISQ: Reduction of Video Service Quality via Adversarial Attacks on Deep Learning-based Video Compression**
+
+cs.CV
+
+**SubmitDate**: 2022-05-16    [paper-pdf](http://arxiv.org/pdf/2203.10183v2)
+
+**Authors**: Jung-Woo Chang, Mojan Javaheripi, Seira Hidano, Farinaz Koushanfar
+
+**Abstracts**: Video compression plays a crucial role in video streaming and classification systems by maximizing the end-user quality of experience (QoE) at a given bandwidth budget. In this paper, we conduct the first systematic study for adversarial attacks on deep learning-based video compression and downstream classification systems. Our attack framework, dubbed RoVISQ, manipulates the Rate-Distortion (R-D) relationship of a video compression model to achieve one or both of the following goals: (1) increasing the network bandwidth, (2) degrading the video quality for end-users. We further devise new objectives for targeted and untargeted attacks to a downstream video classification service. Finally, we design an input-invariant perturbation that universally disrupts video compression and classification systems in real time. Unlike previously proposed attacks on video classification, our adversarial perturbations are the first to withstand compression. We empirically show the resilience of RoVISQ attacks against various defenses, i.e., adversarial training, video denoising, and JPEG compression. Our extensive experimental results on various video datasets show RoVISQ attacks deteriorate peak signal-to-noise ratio by up to 5.6dB and the bit-rate by up to 2.4 times while achieving over 90% attack success rate on a downstream classifier.
+
+
+
+## **8. Classification Auto-Encoder based Detector against Diverse Data Poisoning Attacks**
+
+cs.LG
+
+This work has been submitted to the IEEE for possible publication.  Copyright may be transferred without notice, after which this version may no  longer be accessible
+
+**SubmitDate**: 2022-05-16    [paper-pdf](http://arxiv.org/pdf/2108.04206v2)
+
+**Authors**: Fereshteh Razmi, Li Xiong
+
+**Abstracts**: Poisoning attacks are a category of adversarial machine learning threats in which an adversary attempts to subvert the outcome of the machine learning systems by injecting crafted data into training data set, thus increasing the machine learning model's test error. The adversary can tamper with the data feature space, data labels, or both, each leading to a different attack strategy with different strengths. Various detection approaches have recently emerged, each focusing on one attack strategy. The Achilles heel of many of these detection approaches is their dependence on having access to a clean, untampered data set. In this paper, we propose CAE, a Classification Auto-Encoder based detector against diverse poisoned data. CAE can detect all forms of poisoning attacks using a combination of reconstruction and classification errors without having any prior knowledge of the attack strategy. We show that an enhanced version of CAE (called CAE+) does not have to employ a clean data set to train the defense model. Our experimental results on three real datasets MNIST, Fashion-MNIST and CIFAR demonstrate that our proposed method can maintain its functionality under up to 30% contaminated data and help the defended SVM classifier to regain its best accuracy.
+
+
+
+## **9. Transferability of Adversarial Attacks on Synthetic Speech Detection**
 
 cs.SD
 
@@ -17,7 +121,7 @@ cs.SD
 
 
 
-## **2. SemAttack: Natural Textual Attacks via Different Semantic Spaces**
+## **10. SemAttack: Natural Textual Attacks via Different Semantic Spaces**
 
 cs.CL
 
@@ -31,7 +135,7 @@ Published at Findings of NAACL 2022
 
 
 
-## **3. SGBA: A Stealthy Scapegoat Backdoor Attack against Deep Neural Networks**
+## **11. SGBA: A Stealthy Scapegoat Backdoor Attack against Deep Neural Networks**
 
 cs.CR
 
@@ -43,7 +147,7 @@ cs.CR
 
 
 
-## **4. Unreasonable Effectiveness of Last Hidden Layer Activations for Adversarial Robustness**
+## **12. Unreasonable Effectiveness of Last Hidden Layer Activations for Adversarial Robustness**
 
 cs.LG
 
@@ -57,7 +161,7 @@ IEEE COMPSAC 2022 publication full version
 
 
 
-## **5. Attacking and Defending Deep Reinforcement Learning Policies**
+## **13. Attacking and Defending Deep Reinforcement Learning Policies**
 
 cs.LG
 
@@ -71,7 +175,7 @@ nine pages
 
 
 
-## **6. More is Better (Mostly): On the Backdoor Attacks in Federated Graph Neural Networks**
+## **14. More is Better (Mostly): On the Backdoor Attacks in Federated Graph Neural Networks**
 
 cs.CR
 
@@ -85,7 +189,7 @@ cs.CR
 
 
 
-## **7. Learning Classical Readout Quantum PUFs based on single-qubit gates**
+## **15. Learning Classical Readout Quantum PUFs based on single-qubit gates**
 
 quant-ph
 
@@ -99,7 +203,7 @@ quant-ph
 
 
 
-## **8. Manifold Characteristics That Predict Downstream Task Performance**
+## **16. Manifold Characteristics That Predict Downstream Task Performance**
 
 cs.LG
 
@@ -113,7 +217,7 @@ Currently under review
 
 
 
-## **9. Robust Representation via Dynamic Feature Aggregation**
+## **17. Robust Representation via Dynamic Feature Aggregation**
 
 cs.CV
 
@@ -125,7 +229,7 @@ cs.CV
 
 
 
-## **10. Diffusion Models for Adversarial Purification**
+## **18. Diffusion Models for Adversarial Purification**
 
 cs.LG
 
@@ -139,7 +243,7 @@ ICML 2022
 
 
 
-## **11. Trustworthy Graph Neural Networks: Aspects, Methods and Trends**
+## **19. Trustworthy Graph Neural Networks: Aspects, Methods and Trends**
 
 cs.LG
 
@@ -153,7 +257,7 @@ cs.LG
 
 
 
-## **12. Parameter Adaptation for Joint Distribution Shifts**
+## **20. Parameter Adaptation for Joint Distribution Shifts**
 
 cs.LG
 
@@ -165,7 +269,7 @@ cs.LG
 
 
 
-## **13. CE-based white-box adversarial attacks will not work using super-fitting**
+## **21. CE-based white-box adversarial attacks will not work using super-fitting**
 
 cs.LG
 
@@ -177,7 +281,7 @@ cs.LG
 
 
 
-## **14. Measuring Vulnerabilities of Malware Detectors with Explainability-Guided Evasion Attacks**
+## **22. Measuring Vulnerabilities of Malware Detectors with Explainability-Guided Evasion Attacks**
 
 cs.CR
 
@@ -189,7 +293,7 @@ cs.CR
 
 
 
-## **15. Unsupervised Abnormal Traffic Detection through Topological Flow Analysis**
+## **23. Unsupervised Abnormal Traffic Detection through Topological Flow Analysis**
 
 cs.LG
 
@@ -201,7 +305,7 @@ cs.LG
 
 
 
-## **16. Learning Coated Adversarial Camouflages for Object Detectors**
+## **24. Learning Coated Adversarial Camouflages for Object Detectors**
 
 cs.CV
 
@@ -213,7 +317,7 @@ cs.CV
 
 
 
-## **17. Rethinking Classifier and Adversarial Attack**
+## **25. Rethinking Classifier and Adversarial Attack**
 
 cs.LG
 
@@ -225,7 +329,7 @@ cs.LG
 
 
 
-## **18. Evaluating Membership Inference Through Adversarial Robustness**
+## **26. Evaluating Membership Inference Through Adversarial Robustness**
 
 cs.CR
 
@@ -239,7 +343,7 @@ Accepted by The Computer Journal. Pre-print version
 
 
 
-## **19. Universal Post-Training Backdoor Detection**
+## **27. Universal Post-Training Backdoor Detection**
 
 cs.LG
 
@@ -251,7 +355,7 @@ cs.LG
 
 
 
-## **20. secml: A Python Library for Secure and Explainable Machine Learning**
+## **28. secml: A Python Library for Secure and Explainable Machine Learning**
 
 cs.LG
 
@@ -265,7 +369,7 @@ Accepted for publication to SoftwareX. Published version can be found  at: https
 
 
 
-## **21. Privacy Preserving Release of Mobile Sensor Data**
+## **29. Privacy Preserving Release of Mobile Sensor Data**
 
 cs.CR
 
@@ -279,7 +383,7 @@ cs.CR
 
 
 
-## **22. Authentication Attacks on Projection-based Cancelable Biometric Schemes (long version)**
+## **30. Authentication Attacks on Projection-based Cancelable Biometric Schemes (long version)**
 
 cs.CR
 
@@ -293,7 +397,7 @@ arXiv admin note: text overlap with arXiv:1910.01389 by other authors
 
 
 
-## **23. Uncertify: Attacks Against Neural Network Certification**
+## **31. Uncertify: Attacks Against Neural Network Certification**
 
 cs.LG
 
@@ -305,7 +409,7 @@ cs.LG
 
 
 
-## **24. Millimeter-Wave Automotive Radar Spoofing**
+## **32. Millimeter-Wave Automotive Radar Spoofing**
 
 cs.CR
 
@@ -317,7 +421,7 @@ cs.CR
 
 
 
-## **25. l-Leaks: Membership Inference Attacks with Logits**
+## **33. l-Leaks: Membership Inference Attacks with Logits**
 
 cs.LG
 
@@ -331,7 +435,7 @@ cs.LG
 
 
 
-## **26. Bitcoin's Latency--Security Analysis Made Simple**
+## **34. Bitcoin's Latency--Security Analysis Made Simple**
 
 cs.CR
 
@@ -343,7 +447,7 @@ cs.CR
 
 
 
-## **27. How to Combine Membership-Inference Attacks on Multiple Updated Models**
+## **35. How to Combine Membership-Inference Attacks on Multiple Updated Models**
 
 cs.LG
 
@@ -357,7 +461,7 @@ cs.LG
 
 
 
-## **28. Anomaly Detection of Adversarial Examples using Class-conditional Generative Adversarial Networks**
+## **36. Anomaly Detection of Adversarial Examples using Class-conditional Generative Adversarial Networks**
 
 cs.LG
 
@@ -369,7 +473,7 @@ cs.LG
 
 
 
-## **29. Sample Complexity Bounds for Robustly Learning Decision Lists against Evasion Attacks**
+## **37. Sample Complexity Bounds for Robustly Learning Decision Lists against Evasion Attacks**
 
 cs.LG
 
@@ -383,7 +487,7 @@ To appear in the proceedings of International Joint Conference on  Artificial In
 
 
 
-## **30. From IP to transport and beyond: cross-layer attacks against applications**
+## **38. From IP to transport and beyond: cross-layer attacks against applications**
 
 cs.CR
 
@@ -395,7 +499,7 @@ cs.CR
 
 
 
-## **31. Segmentation-Consistent Probabilistic Lesion Counting**
+## **39. Segmentation-Consistent Probabilistic Lesion Counting**
 
 eess.IV
 
@@ -409,7 +513,7 @@ Accepted at Medical Imaging with Deep Learning (MIDL) 2022
 
 
 
-## **32. Stalloris: RPKI Downgrade Attack**
+## **40. Stalloris: RPKI Downgrade Attack**
 
 cs.CR
 
@@ -421,7 +525,7 @@ cs.CR
 
 
 
-## **33. Infrared Invisible Clothing:Hiding from Infrared Detectors at Multiple Angles in Real World**
+## **41. Infrared Invisible Clothing:Hiding from Infrared Detectors at Multiple Angles in Real World**
 
 cs.CV
 
@@ -435,7 +539,7 @@ Accepted by CVPR 2022, ORAL
 
 
 
-## **34. Using Frequency Attention to Make Adversarial Patch Powerful Against Person Detector**
+## **42. Using Frequency Attention to Make Adversarial Patch Powerful Against Person Detector**
 
 cs.CV
 
@@ -449,7 +553,7 @@ cs.CV
 
 
 
-## **35. The Hijackers Guide To The Galaxy: Off-Path Taking Over Internet Resources**
+## **43. The Hijackers Guide To The Galaxy: Off-Path Taking Over Internet Resources**
 
 cs.CR
 
@@ -461,7 +565,7 @@ cs.CR
 
 
 
-## **36. Sardino: Ultra-Fast Dynamic Ensemble for Secure Visual Sensing at Mobile Edge**
+## **44. Sardino: Ultra-Fast Dynamic Ensemble for Secure Visual Sensing at Mobile Edge**
 
 cs.CV
 
@@ -473,7 +577,7 @@ cs.CV
 
 
 
-## **37. Developing Imperceptible Adversarial Patches to Camouflage Military Assets From Computer Vision Enabled Technologies**
+## **45. Developing Imperceptible Adversarial Patches to Camouflage Military Assets From Computer Vision Enabled Technologies**
 
 cs.CV
 
@@ -487,7 +591,7 @@ cs.CV
 
 
 
-## **38. A Word is Worth A Thousand Dollars: Adversarial Attack on Tweets Fools Stock Prediction**
+## **46. A Word is Worth A Thousand Dollars: Adversarial Attack on Tweets Fools Stock Prediction**
 
 cs.CR
 
@@ -501,7 +605,21 @@ NAACL short paper, github: https://github.com/yonxie/AdvFinTweet
 
 
 
-## **39. SYNFI: Pre-Silicon Fault Analysis of an Open-Source Secure Element**
+## **47. Privacy Enhancement for Cloud-Based Few-Shot Learning**
+
+cs.LG
+
+14 pages, 13 figures, 3 tables. Preprint. Accepted in IEEE WCCI 2022  International Joint Conference on Neural Networks (IJCNN)
+
+**SubmitDate**: 2022-05-10    [paper-pdf](http://arxiv.org/pdf/2205.07864v1)
+
+**Authors**: Archit Parnami, Muhammad Usama, Liyue Fan, Minwoo Lee
+
+**Abstracts**: Requiring less data for accurate models, few-shot learning has shown robustness and generality in many application domains. However, deploying few-shot models in untrusted environments may inflict privacy concerns, e.g., attacks or adversaries that may breach the privacy of user-supplied data. This paper studies the privacy enhancement for the few-shot learning in an untrusted environment, e.g., the cloud, by establishing a novel privacy-preserved embedding space that preserves the privacy of data and maintains the accuracy of the model. We examine the impact of various image privacy methods such as blurring, pixelization, Gaussian noise, and differentially private pixelization (DP-Pix) on few-shot image classification and propose a method that learns privacy-preserved representation through the joint loss. The empirical results show how privacy-performance trade-off can be negotiated for privacy-enhanced few-shot learning.
+
+
+
+## **48. SYNFI: Pre-Silicon Fault Analysis of an Open-Source Secure Element**
 
 cs.CR
 
@@ -513,7 +631,7 @@ cs.CR
 
 
 
-## **40. Semi-Targeted Model Poisoning Attack on Federated Learning via Backward Error Analysis**
+## **49. Semi-Targeted Model Poisoning Attack on Federated Learning via Backward Error Analysis**
 
 cs.LG
 
@@ -527,7 +645,7 @@ Published in IJCNN 2022
 
 
 
-## **41. Fingerprinting of DNN with Black-box Design and Verification**
+## **50. Fingerprinting of DNN with Black-box Design and Verification**
 
 cs.CR
 
@@ -536,128 +654,6 @@ cs.CR
 **Authors**: Shuo Wang, Sharif Abuadbba, Sidharth Agarwal, Kristen Moore, Ruoxi Sun, Minhui Xue, Surya Nepal, Seyit Camtepe, Salil Kanhere
 
 **Abstracts**: Cloud-enabled Machine Learning as a Service (MLaaS) has shown enormous promise to transform how deep learning models are developed and deployed. Nonetheless, there is a potential risk associated with the use of such services since a malicious party can modify them to achieve an adverse result. Therefore, it is imperative for model owners, service providers, and end-users to verify whether the deployed model has not been tampered with or not. Such verification requires public verifiability (i.e., fingerprinting patterns are available to all parties, including adversaries) and black-box access to the deployed model via APIs. Existing watermarking and fingerprinting approaches, however, require white-box knowledge (such as gradient) to design the fingerprinting and only support private verifiability, i.e., verification by an honest party.   In this paper, we describe a practical watermarking technique that enables black-box knowledge in fingerprint design and black-box queries during verification. The service ensures the integrity of cloud-based services through public verification (i.e. fingerprinting patterns are available to all parties, including adversaries). If an adversary manipulates a model, this will result in a shift in the decision boundary. Thus, the underlying principle of double-black watermarking is that a model's decision boundary could serve as an inherent fingerprint for watermarking. Our approach captures the decision boundary by generating a limited number of encysted sample fingerprints, which are a set of naturally transformed and augmented inputs enclosed around the model's decision boundary in order to capture the inherent fingerprints of the model. We evaluated our watermarking approach against a variety of model integrity attacks and model compression attacks.
-
-
-
-## **42. Energy-bounded Learning for Robust Models of Code**
-
-cs.LG
-
-There are some flaws in our experiments, we would like to fix it and  publish a fixed version again in the very near future
-
-**SubmitDate**: 2022-05-09    [paper-pdf](http://arxiv.org/pdf/2112.11226v2)
-
-**Authors**: Nghi D. Q. Bui, Yijun Yu
-
-**Abstracts**: In programming, learning code representations has a variety of applications, including code classification, code search, comment generation, bug prediction, and so on. Various representations of code in terms of tokens, syntax trees, dependency graphs, code navigation paths, or a combination of their variants have been proposed, however, existing vanilla learning techniques have a major limitation in robustness, i.e., it is easy for the models to make incorrect predictions when the inputs are altered in a subtle way. To enhance the robustness, existing approaches focus on recognizing adversarial samples rather than on the valid samples that fall outside a given distribution, which we refer to as out-of-distribution (OOD) samples. Recognizing such OOD samples is the novel problem investigated in this paper. To this end, we propose to first augment the in=distribution datasets with out-of-distribution samples such that, when trained together, they will enhance the model's robustness. We propose the use of an energy-bounded learning objective function to assign a higher score to in-distribution samples and a lower score to out-of-distribution samples in order to incorporate such out-of-distribution samples into the training process of source code models. In terms of OOD detection and adversarial samples detection, our evaluation results demonstrate a greater robustness for existing source code models to become more accurate at recognizing OOD data while being more resistant to adversarial attacks at the same time. Furthermore, the proposed energy-bounded score outperforms all existing OOD detection scores by a large margin, including the softmax confidence score, the Mahalanobis score, and ODIN.
-
-
-
-## **43. Do You Think You Can Hold Me? The Real Challenge of Problem-Space Evasion Attacks**
-
-cs.CR
-
-**SubmitDate**: 2022-05-09    [paper-pdf](http://arxiv.org/pdf/2205.04293v1)
-
-**Authors**: Harel Berger, Amit Dvir, Chen Hajaj, Rony Ronen
-
-**Abstracts**: Android malware is a spreading disease in the virtual world. Anti-virus and detection systems continuously undergo patches and updates to defend against these threats. Most of the latest approaches in malware detection use Machine Learning (ML). Against the robustifying effort of detection systems, raise the \emph{evasion attacks}, where an adversary changes its targeted samples so that they are misclassified as benign. This paper considers two kinds of evasion attacks: feature-space and problem-space. \emph{Feature-space} attacks consider an adversary who manipulates ML features to evade the correct classification while minimizing or constraining the total manipulations. \textit{Problem-space} attacks refer to evasion attacks that change the actual sample. Specifically, this paper analyzes the gap between these two types in the Android malware domain. The gap between the two types of evasion attacks is examined via the retraining process of classifiers using each one of the evasion attack types. The experiments show that the gap between these two types of retrained classifiers is dramatic and may increase to 96\%. Retrained classifiers of feature-space evasion attacks have been found to be either less effective or completely ineffective against problem-space evasion attacks. Additionally, exploration of different problem-space evasion attacks shows that retraining of one problem-space evasion attack may be effective against other problem-space evasion attacks.
-
-
-
-## **44. Federated Multi-Armed Bandits Under Byzantine Attacks**
-
-cs.LG
-
-13 pages, 15 figures
-
-**SubmitDate**: 2022-05-09    [paper-pdf](http://arxiv.org/pdf/2205.04134v1)
-
-**Authors**: Ilker Demirel, Yigit Yildirim, Cem Tekin
-
-**Abstracts**: Multi-armed bandits (MAB) is a simple reinforcement learning model where the learner controls the trade-off between exploration versus exploitation to maximize its cumulative reward. Federated multi-armed bandits (FMAB) is a recently emerging framework where a cohort of learners with heterogeneous local models play a MAB game and communicate their aggregated feedback to a parameter server to learn the global feedback model. Federated learning models are vulnerable to adversarial attacks such as model-update attacks or data poisoning. In this work, we study an FMAB problem in the presence of Byzantine clients who can send false model updates that pose a threat to the learning process. We borrow tools from robust statistics and propose a median-of-means-based estimator: Fed-MoM-UCB, to cope with the Byzantine clients. We show that if the Byzantine clients constitute at most half the cohort, it is possible to incur a cumulative regret on the order of ${\cal O} (\log T)$ with respect to an unavoidable error margin, including the communication cost between the clients and the parameter server. We analyze the interplay between the algorithm parameters, unavoidable error margin, regret, communication cost, and the arms' suboptimality gaps. We demonstrate Fed-MoM-UCB's effectiveness against the baselines in the presence of Byzantine attacks via experiments.
-
-
-
-## **45. ResSFL: A Resistance Transfer Framework for Defending Model Inversion Attack in Split Federated Learning**
-
-cs.LG
-
-Accepted to CVPR 2022
-
-**SubmitDate**: 2022-05-09    [paper-pdf](http://arxiv.org/pdf/2205.04007v1)
-
-**Authors**: Jingtao Li, Adnan Siraj Rakin, Xing Chen, Zhezhi He, Deliang Fan, Chaitali Chakrabarti
-
-**Abstracts**: This work aims to tackle Model Inversion (MI) attack on Split Federated Learning (SFL). SFL is a recent distributed training scheme where multiple clients send intermediate activations (i.e., feature map), instead of raw data, to a central server. While such a scheme helps reduce the computational load at the client end, it opens itself to reconstruction of raw data from intermediate activation by the server. Existing works on protecting SFL only consider inference and do not handle attacks during training. So we propose ResSFL, a Split Federated Learning Framework that is designed to be MI-resistant during training. It is based on deriving a resistant feature extractor via attacker-aware training, and using this extractor to initialize the client-side model prior to standard SFL training. Such a method helps in reducing the computational complexity due to use of strong inversion model in client-side adversarial training as well as vulnerability of attacks launched in early training epochs. On CIFAR-100 dataset, our proposed framework successfully mitigates MI attack on a VGG-11 model with a high reconstruction Mean-Square-Error of 0.050 compared to 0.005 obtained by the baseline system. The framework achieves 67.5% accuracy (only 1% accuracy drop) with very low computation overhead. Code is released at: https://github.com/zlijingtao/ResSFL.
-
-
-
-## **46. Triangle Attack: A Query-efficient Decision-based Adversarial Attack**
-
-cs.CV
-
-10 pages
-
-**SubmitDate**: 2022-05-09    [paper-pdf](http://arxiv.org/pdf/2112.06569v2)
-
-**Authors**: Xiaosen Wang, Zeliang Zhang, Kangheng Tong, Dihong Gong, Kun He, Zhifeng Li, Wei Liu
-
-**Abstracts**: Decision-based attack poses a severe threat to real-world applications since it regards the target model as a black box and only accesses the hard prediction label. Great efforts have been made recently to decrease the number of queries; however, existing decision-based attacks still require thousands of queries in order to generate good quality adversarial examples. In this work, we find that a benign sample, the current and the next adversarial examples could naturally construct a triangle in a subspace for any iterative attacks. Based on the law of sines, we propose a novel Triangle Attack (TA) to optimize the perturbation by utilizing the geometric information that the longer side is always opposite the larger angle in any triangle. However, directly applying such information on the input image is ineffective because it cannot thoroughly explore the neighborhood of the input sample in the high dimensional space. To address this issue, TA optimizes the perturbation in the low frequency space for effective dimensionality reduction owing to the generality of such geometric property. Extensive evaluations on the ImageNet dataset demonstrate that TA achieves a much higher attack success rate within 1,000 queries and needs a much less number of queries to achieve the same attack success rate under various perturbation budgets than existing decision-based attacks. With such high efficiency, we further demonstrate the applicability of TA on real-world API, i.e., Tencent Cloud API.
-
-
-
-## **47. Private Eye: On the Limits of Textual Screen Peeking via Eyeglass Reflections in Video Conferencing**
-
-cs.CR
-
-**SubmitDate**: 2022-05-08    [paper-pdf](http://arxiv.org/pdf/2205.03971v1)
-
-**Authors**: Yan Long, Chen Yan, Shivan Prasad, Wenyuan Xu, Kevin Fu
-
-**Abstracts**: Personal video conferencing has become the new norm after COVID-19 caused a seismic shift from in-person meetings and phone calls to video conferencing for daily communications and sensitive business. Video leaks participants' on-screen information because eyeglasses and other reflective objects unwittingly expose partial screen contents. Using mathematical modeling and human subjects experiments, this research explores the extent to which emerging webcams might leak recognizable textual information gleamed from eyeglass reflections captured by webcams. The primary goal of our work is to measure, compute, and predict the factors, limits, and thresholds of recognizability as webcam technology evolves in the future. Our work explores and characterizes the viable threat models based on optical attacks using multi-frame super resolution techniques on sequences of video frames. Our experimental results and models show it is possible to reconstruct and recognize on-screen text with a height as small as 10 mm with a 720p webcam. We further apply this threat model to web textual content with varying attacker capabilities to find thresholds at which text becomes recognizable. Our user study with 20 participants suggests present-day 720p webcams are sufficient for adversaries to reconstruct textual content on big-font websites. Our models further show that the evolution toward 4K cameras will tip the threshold of text leakage to reconstruction of most header texts on popular websites. Our research proposes near-term mitigations, and justifies the importance of following the principle of least privilege for long-term defense against this attack. For privacy-sensitive scenarios, it's further recommended to develop technologies that blur all objects by default, then only unblur what is absolutely necessary to facilitate natural-looking conversations.
-
-
-
-## **48. mFI-PSO: A Flexible and Effective Method in Adversarial Image Generation for Deep Neural Networks**
-
-cs.LG
-
-Accepted by 2022 International Joint Conference on Neural Networks  (IJCNN)
-
-**SubmitDate**: 2022-05-08    [paper-pdf](http://arxiv.org/pdf/2006.03243v3)
-
-**Authors**: Hai Shu, Ronghua Shi, Qiran Jia, Hongtu Zhu, Ziqi Chen
-
-**Abstracts**: Deep neural networks (DNNs) have achieved great success in image classification, but can be very vulnerable to adversarial attacks with small perturbations to images. To improve adversarial image generation for DNNs, we develop a novel method, called mFI-PSO, which utilizes a Manifold-based First-order Influence measure for vulnerable image and pixel selection and the Particle Swarm Optimization for various objective functions. Our mFI-PSO can thus effectively design adversarial images with flexible, customized options on the number of perturbed pixels, the misclassification probability, and the targeted incorrect class. Experiments demonstrate the flexibility and effectiveness of our mFI-PSO in adversarial attacks and its appealing advantages over some popular methods.
-
-
-
-## **49. IDSGAN: Generative Adversarial Networks for Attack Generation against Intrusion Detection**
-
-cs.CR
-
-Accepted for publication in the 26th Pacific-Asia Conference on  Knowledge Discovery and Data Mining (PAKDD 2022)
-
-**SubmitDate**: 2022-05-08    [paper-pdf](http://arxiv.org/pdf/1809.02077v5)
-
-**Authors**: Zilong Lin, Yong Shi, Zhi Xue
-
-**Abstracts**: As an essential tool in security, the intrusion detection system bears the responsibility of the defense to network attacks performed by malicious traffic. Nowadays, with the help of machine learning algorithms, intrusion detection systems develop rapidly. However, the robustness of this system is questionable when it faces adversarial attacks. For the robustness of detection systems, more potential attack approaches are under research. In this paper, a framework of the generative adversarial networks, called IDSGAN, is proposed to generate the adversarial malicious traffic records aiming to attack intrusion detection systems by deceiving and evading the detection. Given that the internal structure and parameters of the detection system are unknown to attackers, the adversarial attack examples perform the black-box attacks against the detection system. IDSGAN leverages a generator to transform original malicious traffic records into adversarial malicious ones. A discriminator classifies traffic examples and dynamically learns the real-time black-box detection system. More significantly, the restricted modification mechanism is designed for the adversarial generation to preserve original attack functionalities of adversarial traffic records. The effectiveness of the model is indicated by attacking multiple algorithm-based detection models with different attack categories. The robustness is verified by changing the number of the modified features. A comparative experiment with adversarial attack baselines demonstrates the superiority of our model.
-
-
-
-## **50. Fingerprinting Deep Neural Networks Globally via Universal Adversarial Perturbations**
-
-cs.CR
-
-Accepted to CVPR 2022 (Oral Presentation)
-
-**SubmitDate**: 2022-05-08    [paper-pdf](http://arxiv.org/pdf/2202.08602v3)
-
-**Authors**: Zirui Peng, Shaofeng Li, Guoxing Chen, Cheng Zhang, Haojin Zhu, Minhui Xue
-
-**Abstracts**: In this paper, we propose a novel and practical mechanism which enables the service provider to verify whether a suspect model is stolen from the victim model via model extraction attacks. Our key insight is that the profile of a DNN model's decision boundary can be uniquely characterized by its Universal Adversarial Perturbations (UAPs). UAPs belong to a low-dimensional subspace and piracy models' subspaces are more consistent with victim model's subspace compared with non-piracy model. Based on this, we propose a UAP fingerprinting method for DNN models and train an encoder via contrastive learning that takes fingerprint as inputs, outputs a similarity score. Extensive studies show that our framework can detect model IP breaches with confidence > 99.99 within only 20 fingerprints of the suspect model. It has good generalizability across different model architectures and is robust against post-modifications on stolen models.
 
 
 

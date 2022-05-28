@@ -1,5 +1,5 @@
 # Latest Adversarial Attack Papers
-**update at 2022-05-28 06:31:36**
+**update at 2022-05-29 06:31:27**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
@@ -41,7 +41,7 @@ PerDoor：使用对抗性扰动的联合学习中持久的非一致后门 cs.CR
 
 **Abstracts**: Deep neural networks (DNNs) are threatened by adversarial examples. Adversarial detection, which distinguishes adversarial images from benign images, is fundamental for robust DNN-based services. Image transformation is one of the most effective approaches to detect adversarial examples. During the last few years, a variety of image transformations have been studied and discussed to design reliable adversarial detectors. In this paper, we systematically synthesize the recent progress on adversarial detection via image transformations with a novel classification method. Then, we conduct extensive experiments to test the detection performance of image transformations against state-of-the-art adversarial attacks. Furthermore, we reveal that each individual transformation is not capable of detecting adversarial examples in a robust way, and propose a DNN-based approach referred to as \emph{AdvJudge}, which combines scores of 9 image transformations. Without knowing which individual scores are misleading or not misleading, AdvJudge can make the right judgment, and achieve a significant improvement in detection rate. Finally, we utilize an explainable AI tool to show the contribution of each image transformation to adversarial detection. Experimental results show that the contribution of image transformations to adversarial detection is significantly different, the combination of them can significantly improve the generic detection ability against state-of-the-art adversarial attacks.
 
-摘要: [TencentCloudSDKException] code:InternalError.BackendTimeout message:Backend timeout, please retry it later requestId:3ac94eef-08b9-41a1-8c63-f6c6b674fe83
+摘要: 深度神经网络(DNN)受到敌意例子的威胁。敌意检测是基于DNN的稳健服务的基础，它区分敌意图像和良性图像。图像变换是检测敌意例子最有效的方法之一。在过去的几年里，人们已经研究和讨论了各种图像变换来设计可靠的对抗性检测器。本文采用一种新的分类方法，系统地综述了基于图像变换的对抗性检测的最新研究进展。然后，我们进行了大量的实验来测试图像变换对最新的敌意攻击的检测性能。此外，我们揭示了每个个体变换并不能稳健地检测敌意示例，并提出了一种基于DNN的方法，该方法结合了9个图像变换的分数。在不知道哪些分数具有误导性或哪些不具有误导性的情况下，AdvJustice能够做出正确的判断，并实现了检测率的显著提高。最后，我们利用一个可解释的人工智能工具来展示每个图像变换对对抗检测的贡献。实验结果表明，图像变换对敌意检测的贡献是不同的，它们的结合可以显著提高对最新敌意攻击的一般检测能力。
 
 
 

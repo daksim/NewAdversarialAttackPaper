@@ -1,9 +1,71 @@
 # Latest Adversarial Attack Papers
-**update at 2022-06-06 06:31:32**
+**update at 2022-06-07 06:31:28**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. A Barrier Certificate-based Simplex Architecture with Application to Microgrids**
+## **1. Gradient Obfuscation Checklist Test Gives a False Sense of Security**
+
+梯度混淆核对表测试给人一种错误的安全感 cs.CV
+
+**SubmitDate**: 2022-06-03    [paper-pdf](http://arxiv.org/pdf/2206.01705v1)
+
+**Authors**: Nikola Popovic, Danda Pani Paudel, Thomas Probst, Luc Van Gool
+
+**Abstracts**: One popular group of defense techniques against adversarial attacks is based on injecting stochastic noise into the network. The main source of robustness of such stochastic defenses however is often due to the obfuscation of the gradients, offering a false sense of security. Since most of the popular adversarial attacks are optimization-based, obfuscated gradients reduce their attacking ability, while the model is still susceptible to stronger or specifically tailored adversarial attacks. Recently, five characteristics have been identified, which are commonly observed when the improvement in robustness is mainly caused by gradient obfuscation. It has since become a trend to use these five characteristics as a sufficient test, to determine whether or not gradient obfuscation is the main source of robustness. However, these characteristics do not perfectly characterize all existing cases of gradient obfuscation, and therefore can not serve as a basis for a conclusive test. In this work, we present a counterexample, showing this test is not sufficient for concluding that gradient obfuscation is not the main cause of improvements in robustness.
+
+摘要: 针对敌意攻击的一组流行的防御技术是基于向网络中注入随机噪声。然而，这种随机防御的主要健壮性来源往往是由于对梯度的混淆，提供了一种错误的安全感。由于大多数流行的对抗性攻击都是基于优化的，模糊梯度降低了它们的攻击能力，而该模型仍然容易受到更强或特定定制的对抗性攻击。最近，已经确定了五个特征，当稳健性的改善主要由梯度混淆引起时，通常观察到这些特征。自那以后，使用这五个特征作为充分的测试来确定梯度混淆是否是健壮性的主要来源已经成为一种趋势。然而，这些特征并不能完美地描述所有现有的梯度模糊情况，因此不能作为决定性测试的基础。在这项工作中，我们提供了一个反例，表明这个测试不足以得出梯度混淆不是健壮性提高的主要原因的结论。
+
+
+
+## **2. Evaluating Transfer-based Targeted Adversarial Perturbations against Real-World Computer Vision Systems based on Human Judgments**
+
+基于人的判断评估基于迁移的目标对抗性扰动对真实世界计算机视觉系统的影响 cs.CV
+
+technical report
+
+**SubmitDate**: 2022-06-03    [paper-pdf](http://arxiv.org/pdf/2206.01467v1)
+
+**Authors**: Zhengyu Zhao, Nga Dang, Martha Larson
+
+**Abstracts**: Computer vision systems are remarkably vulnerable to adversarial perturbations. Transfer-based adversarial images are generated on one (source) system and used to attack another (target) system. In this paper, we take the first step to investigate transfer-based targeted adversarial images in a realistic scenario where the target system is trained on some private data with its inventory of semantic labels not publicly available. Our main contributions include an extensive human-judgment-based evaluation of attack success on the Google Cloud Vision API and additional analysis of the different behaviors of Google Cloud Vision in face of original images vs. adversarial images. Resources are publicly available at \url{https://github.com/ZhengyuZhao/Targeted-Tansfer/blob/main/google_results.zip}.
+
+摘要: 计算机视觉系统非常容易受到对抗性干扰的影响。基于传输的敌意图像在一个(源)系统上生成，并用于攻击另一个(目标)系统。在本文中，我们第一步研究了基于转移的目标敌意图像，在现实场景中，目标系统是在一些私有数据上进行训练的，其语义标签库不是公开的。我们的主要贡献包括对Google Cloud Vision API的攻击成功进行了广泛的基于人的判断的评估，以及对Google Cloud Vision在面对原始图像和对手图像时的不同行为进行了额外的分析。资源可在\url{https://github.com/ZhengyuZhao/Targeted-Tansfer/blob/main/google_results.zip}.上公开获得
+
+
+
+## **3. Adversarial Attacks on Human Vision**
+
+对人类视觉的对抗性攻击 cs.CV
+
+21 pages, 8 figures, 1 table
+
+**SubmitDate**: 2022-06-03    [paper-pdf](http://arxiv.org/pdf/2206.01365v1)
+
+**Authors**: Victor A. Mateescu, Ivan V. Bajić
+
+**Abstracts**: This article presents an introduction to visual attention retargeting, its connection to visual saliency, the challenges associated with it, and ideas for how it can be approached. The difficulty of attention retargeting as a saliency inversion problem lies in the lack of one-to-one mapping between saliency and the image domain, in addition to the possible negative impact of saliency alterations on image aesthetics. A few approaches from recent literature to solve this challenging problem are reviewed, and several suggestions for future development are presented.
+
+摘要: 这篇文章介绍了视觉注意重定目标，它与视觉显著的联系，与之相关的挑战，以及如何处理它的想法。注意力重定向作为显著反转问题的困难在于缺乏显著与图像域之间的一对一映射，以及显著变化可能对图像美学造成的负面影响。从最近的文献中回顾了一些解决这一挑战性问题的方法，并对未来的发展提出了几点建议。
+
+
+
+## **4. On the Privacy Properties of GAN-generated Samples**
+
+GaN样品的保密特性研究 cs.LG
+
+AISTATS 2021
+
+**SubmitDate**: 2022-06-03    [paper-pdf](http://arxiv.org/pdf/2206.01349v1)
+
+**Authors**: Zinan Lin, Vyas Sekar, Giulia Fanti
+
+**Abstracts**: The privacy implications of generative adversarial networks (GANs) are a topic of great interest, leading to several recent algorithms for training GANs with privacy guarantees. By drawing connections to the generalization properties of GANs, we prove that under some assumptions, GAN-generated samples inherently satisfy some (weak) privacy guarantees. First, we show that if a GAN is trained on m samples and used to generate n samples, the generated samples are (epsilon, delta)-differentially-private for (epsilon, delta) pairs where delta scales as O(n/m). We show that under some special conditions, this upper bound is tight. Next, we study the robustness of GAN-generated samples to membership inference attacks. We model membership inference as a hypothesis test in which the adversary must determine whether a given sample was drawn from the training dataset or from the underlying data distribution. We show that this adversary can achieve an area under the ROC curve that scales no better than O(m^{-1/4}).
+
+摘要: 生成性对抗网络(GAN)的隐私影响是一个非常感兴趣的话题，导致了最近几个用于训练具有隐私保证的GAN的算法。通过与GANS的泛化性质的联系，我们证明了在某些假设下，GAN生成的样本内在地满足某些(弱)隐私保证。首先，我们证明了如果一个GaN被训练在m个样本上并用来产生n个样本，所产生的样本对于(epsilon，Delta)对是(epsilon，Delta)-差分-私有的，其中Delta尺度为O(n/m)。我们证明了在某些特殊条件下，这个上界是紧的。接下来，我们研究了GAN生成的样本对成员推理攻击的稳健性。我们将成员推理建模为假设检验，其中对手必须确定给定的样本是从训练数据集还是从底层数据分布中提取的。我们证明了这个对手可以在ROC曲线下获得一个尺度不超过O(m^{-1/4})的区域。
+
+
+
+## **5. A Barrier Certificate-based Simplex Architecture with Application to Microgrids**
 
 一种基于屏障证书的单纯形体系结构及其在微网格中的应用 eess.SY
 
@@ -17,7 +79,7 @@
 
 
 
-## **2. Adversarial Laser Spot: Robust and Covert Physical Adversarial Attack to DNNs**
+## **6. Adversarial Laser Spot: Robust and Covert Physical Adversarial Attack to DNNs**
 
 敌意激光斑点：对DNN的稳健和隐蔽的物理攻击 cs.CV
 
@@ -31,7 +93,7 @@
 
 
 
-## **3. FACM: Correct the Output of Deep Neural Network with Middle Layers Features against Adversarial Samples**
+## **7. FACM: Correct the Output of Deep Neural Network with Middle Layers Features against Adversarial Samples**
 
 FACM：针对敌方样本修正具有中间层特征的深度神经网络输出 cs.CV
 
@@ -45,7 +107,7 @@ FACM：针对敌方样本修正具有中间层特征的深度神经网络输出 
 
 
 
-## **4. Mask-Guided Divergence Loss Improves the Generalization and Robustness of Deep Neural Network**
+## **8. Mask-Guided Divergence Loss Improves the Generalization and Robustness of Deep Neural Network**
 
 掩模引导的发散损失提高了深度神经网络的泛化能力和鲁棒性 cs.LG
 
@@ -59,7 +121,7 @@ FACM：针对敌方样本修正具有中间层特征的深度神经网络输出 
 
 
 
-## **5. Robust Feature-Level Adversaries are Interpretability Tools**
+## **9. Robust Feature-Level Adversaries are Interpretability Tools**
 
 强大的功能级对手是可解释的工具 cs.LG
 
@@ -75,7 +137,7 @@ Code available at  https://github.com/thestephencasper/feature_level_adv
 
 
 
-## **6. On the reversibility of adversarial attacks**
+## **10. On the reversibility of adversarial attacks**
 
 论对抗性攻击的可逆性 cs.LG
 
@@ -89,7 +151,7 @@ Code available at  https://github.com/thestephencasper/feature_level_adv
 
 
 
-## **7. Training privacy-preserving video analytics pipelines by suppressing features that reveal information about private attributes**
+## **11. Training privacy-preserving video analytics pipelines by suppressing features that reveal information about private attributes**
 
 通过抑制泄露有关私有属性信息的特征来训练保护隐私的视频分析管道 cs.CV
 
@@ -103,7 +165,7 @@ Code available at  https://github.com/thestephencasper/feature_level_adv
 
 
 
-## **8. Adversarial Attacks on Gaussian Process Bandits**
+## **12. Adversarial Attacks on Gaussian Process Bandits**
 
 对高斯过程环的对抗性攻击 stat.ML
 
@@ -119,7 +181,7 @@ Accepted to ICML 2022
 
 
 
-## **9. The robust way to stack and bag: the local Lipschitz way**
+## **13. The robust way to stack and bag: the local Lipschitz way**
 
 稳健的堆叠和打包方式：当地的利普希茨方式 cs.LG
 
@@ -133,7 +195,7 @@ Accepted to ICML 2022
 
 
 
-## **10. Attack-Agnostic Adversarial Detection**
+## **14. Attack-Agnostic Adversarial Detection**
 
 攻击不可知的敌意检测 cs.CV
 
@@ -147,7 +209,7 @@ Accepted to ICML 2022
 
 
 
-## **11. Generating End-to-End Adversarial Examples for Malware Classifiers Using Explainability**
+## **15. Generating End-to-End Adversarial Examples for Malware Classifiers Using Explainability**
 
 使用可解释性为恶意软件分类器生成端到端对抗性示例 cs.CR
 
@@ -163,7 +225,7 @@ Accepted as a conference paper at IJCNN 2020
 
 
 
-## **12. Anti-Forgery: Towards a Stealthy and Robust DeepFake Disruption Attack via Adversarial Perceptual-aware Perturbations**
+## **16. Anti-Forgery: Towards a Stealthy and Robust DeepFake Disruption Attack via Adversarial Perceptual-aware Perturbations**
 
 防伪：通过对抗性感知扰动实现隐形且强大的DeepFake中断攻击 cs.CR
 
@@ -179,7 +241,7 @@ Accepted by IJCAI 2022
 
 
 
-## **13. PerDoor: Persistent Non-Uniform Backdoors in Federated Learning using Adversarial Perturbations**
+## **17. PerDoor: Persistent Non-Uniform Backdoors in Federated Learning using Adversarial Perturbations**
 
 PerDoor：使用对抗性扰动的联合学习中持久的非一致后门 cs.CR
 
@@ -193,7 +255,7 @@ PerDoor：使用对抗性扰动的联合学习中持久的非一致后门 cs.CR
 
 
 
-## **14. NeuroUnlock: Unlocking the Architecture of Obfuscated Deep Neural Networks**
+## **18. NeuroUnlock: Unlocking the Architecture of Obfuscated Deep Neural Networks**
 
 NeuroUnlock：解锁模糊深度神经网络的体系结构 cs.CR
 
@@ -209,7 +271,7 @@ The definitive Version of Record will be Published in the 2022  International Jo
 
 
 
-## **15. Support Vector Machines under Adversarial Label Contamination**
+## **19. Support Vector Machines under Adversarial Label Contamination**
 
 对抗性标签污染下的支持向量机 cs.LG
 
@@ -223,7 +285,7 @@ The definitive Version of Record will be Published in the 2022  International Jo
 
 
 
-## **16. A Simple Structure For Building A Robust Model**
+## **20. A Simple Structure For Building A Robust Model**
 
 一种用于建立稳健模型的简单结构 cs.CV
 
@@ -239,7 +301,7 @@ Accepted by Fifth International Conference on Intelligence Science  (ICIS2022); 
 
 
 
-## **17. Bounding Membership Inference**
+## **21. Bounding Membership Inference**
 
 边界隶属度推理 cs.LG
 
@@ -253,7 +315,7 @@ Accepted by Fifth International Conference on Intelligence Science  (ICIS2022); 
 
 
 
-## **18. Metamorphic Testing-based Adversarial Attack to Fool Deepfake Detectors**
+## **22. Metamorphic Testing-based Adversarial Attack to Fool Deepfake Detectors**
 
 基于变形测试的对愚人深伪检测器的攻击 cs.CV
 
@@ -269,7 +331,7 @@ paper accepted at 26TH International Conference on Pattern  Recognition (ICPR202
 
 
 
-## **19. FoveaTer: Foveated Transformer for Image Classification**
+## **23. FoveaTer: Foveated Transformer for Image Classification**
 
 FoveaTer：用于图像分类的凹槽转换器 cs.CV
 
@@ -285,7 +347,7 @@ FoveaTer：用于图像分类的凹槽转换器 cs.CV
 
 
 
-## **20. Generative Models with Information-Theoretic Protection Against Membership Inference Attacks**
+## **24. Generative Models with Information-Theoretic Protection Against Membership Inference Attacks**
 
 具有信息论保护的产生式模型抵抗成员推理攻击 cs.LG
 
@@ -299,7 +361,7 @@ FoveaTer：用于图像分类的凹槽转换器 cs.CV
 
 
 
-## **21. CodeAttack: Code-based Adversarial Attacks for Pre-Trained Programming Language Models**
+## **25. CodeAttack: Code-based Adversarial Attacks for Pre-Trained Programming Language Models**
 
 CodeAttack：针对预先训练的编程语言模型的基于代码的对抗性攻击 cs.CL
 
@@ -313,7 +375,7 @@ CodeAttack：针对预先训练的编程语言模型的基于代码的对抗性�
 
 
 
-## **22. Hide and Seek: on the Stealthiness of Attacks against Deep Learning Systems**
+## **26. Hide and Seek: on the Stealthiness of Attacks against Deep Learning Systems**
 
 捉迷藏：关于深度学习系统攻击的隐蔽性 cs.CR
 
@@ -327,7 +389,7 @@ CodeAttack：针对预先训练的编程语言模型的基于代码的对抗性�
 
 
 
-## **23. Atomic cross-chain exchanges of shared assets**
+## **27. Atomic cross-chain exchanges of shared assets**
 
 共享资产的原子跨链交换 cs.CR
 
@@ -341,7 +403,7 @@ CodeAttack：针对预先训练的编程语言模型的基于代码的对抗性�
 
 
 
-## **24. Semantic Autoencoder and Its Potential Usage for Adversarial Attack**
+## **28. Semantic Autoencoder and Its Potential Usage for Adversarial Attack**
 
 语义自动编码器及其在敌意攻击中的潜在应用 cs.LG
 
@@ -355,7 +417,7 @@ CodeAttack：针对预先训练的编程语言模型的基于代码的对抗性�
 
 
 
-## **25. Connecting adversarial attacks and optimal transport for domain adaptation**
+## **29. Connecting adversarial attacks and optimal transport for domain adaptation**
 
 连接对抗性攻击和最优传输以实现域自适应 cs.LG
 
@@ -369,7 +431,7 @@ CodeAttack：针对预先训练的编程语言模型的基于代码的对抗性�
 
 
 
-## **26. Fooling SHAP with Stealthily Biased Sampling**
+## **30. Fooling SHAP with Stealthily Biased Sampling**
 
 用偷偷的有偏抽样愚弄Shap cs.LG
 
@@ -383,7 +445,7 @@ CodeAttack：针对预先训练的编程语言模型的基于代码的对抗性�
 
 
 
-## **27. Searching for the Essence of Adversarial Perturbations**
+## **31. Searching for the Essence of Adversarial Perturbations**
 
 寻找对抗性扰动的本质 cs.LG
 
@@ -397,7 +459,7 @@ CodeAttack：针对预先训练的编程语言模型的基于代码的对抗性�
 
 
 
-## **28. GAN-based Medical Image Small Region Forgery Detection via a Two-Stage Cascade Framework**
+## **32. GAN-based Medical Image Small Region Forgery Detection via a Two-Stage Cascade Framework**
 
 基于两级级联框架的GaN医学图像小区域篡改检测 eess.IV
 
@@ -411,7 +473,7 @@ CodeAttack：针对预先训练的编程语言模型的基于代码的对抗性�
 
 
 
-## **29. Why Adversarial Training of ReLU Networks Is Difficult?**
+## **33. Why Adversarial Training of ReLU Networks Is Difficult?**
 
 为什么RELU网络的对抗性训练很难？ cs.LG
 
@@ -425,7 +487,7 @@ CodeAttack：针对预先训练的编程语言模型的基于代码的对抗性�
 
 
 
-## **30. Domain Constraints in Feature Space: Strengthening Robustness of Android Malware Detection against Realizable Adversarial Examples**
+## **34. Domain Constraints in Feature Space: Strengthening Robustness of Android Malware Detection against Realizable Adversarial Examples**
 
 特征空间中的域约束：增强Android恶意软件检测对可实现的恶意示例的健壮性 cs.LG
 
@@ -439,7 +501,7 @@ CodeAttack：针对预先训练的编程语言模型的基于代码的对抗性�
 
 
 
-## **31. Guided Diffusion Model for Adversarial Purification**
+## **35. Guided Diffusion Model for Adversarial Purification**
 
 对抗性净化中的引导扩散模型 cs.CV
 
@@ -453,7 +515,7 @@ CodeAttack：针对预先训练的编程语言模型的基于代码的对抗性�
 
 
 
-## **32. CalFAT: Calibrated Federated Adversarial Training with Label Skewness**
+## **36. CalFAT: Calibrated Federated Adversarial Training with Label Skewness**
 
 卡尔法特：带有标签偏斜度的校准联合对抗性训练 cs.LG
 
@@ -467,7 +529,7 @@ CodeAttack：针对预先训练的编程语言模型的基于代码的对抗性�
 
 
 
-## **33. CausalAdv: Adversarial Robustness through the Lens of Causality**
+## **37. CausalAdv: Adversarial Robustness through the Lens of Causality**
 
 CausalAdv：通过因果关系的透镜进行对抗的健壮性 cs.LG
 
@@ -483,7 +545,7 @@ ICLR2022, 20 pages, 3 figures
 
 
 
-## **34. Exposing Fine-grained Adversarial Vulnerability of Face Anti-spoofing Models**
+## **38. Exposing Fine-grained Adversarial Vulnerability of Face Anti-spoofing Models**
 
 暴露Face反欺骗模型的细粒度攻击漏洞 cs.CV
 
@@ -497,7 +559,7 @@ ICLR2022, 20 pages, 3 figures
 
 
 
-## **35. Efficient Reward Poisoning Attacks on Online Deep Reinforcement Learning**
+## **39. Efficient Reward Poisoning Attacks on Online Deep Reinforcement Learning**
 
 基于在线深度强化学习的高效奖赏中毒攻击 cs.LG
 
@@ -511,7 +573,7 @@ ICLR2022, 20 pages, 3 figures
 
 
 
-## **36. Mixture GAN For Modulation Classification Resiliency Against Adversarial Attacks**
+## **40. Mixture GAN For Modulation Classification Resiliency Against Adversarial Attacks**
 
 混合遗传算法在调制分类抗攻击中的应用 cs.LG
 
@@ -525,7 +587,7 @@ ICLR2022, 20 pages, 3 figures
 
 
 
-## **37. Unfooling Perturbation-Based Post Hoc Explainers**
+## **41. Unfooling Perturbation-Based Post Hoc Explainers**
 
 基于非愚弄扰动的帖子随机解说器 cs.AI
 
@@ -541,7 +603,7 @@ ICLR2022, 20 pages, 3 figures
 
 
 
-## **38. On the Robustness of Safe Reinforcement Learning under Observational Perturbations**
+## **42. On the Robustness of Safe Reinforcement Learning under Observational Perturbations**
 
 安全强化学习在观测摄动下的稳健性 cs.LG
 
@@ -557,7 +619,7 @@ ICLR2022, 20 pages, 3 figures
 
 
 
-## **39. Superclass Adversarial Attack**
+## **43. Superclass Adversarial Attack**
 
 超类对抗性攻击 cs.CV
 
@@ -571,7 +633,7 @@ ICLR2022, 20 pages, 3 figures
 
 
 
-## **40. Graph Structure Based Data Augmentation Method**
+## **44. Graph Structure Based Data Augmentation Method**
 
 一种基于图结构的数据增强方法 cs.LG
 
@@ -585,7 +647,7 @@ ICLR2022, 20 pages, 3 figures
 
 
 
-## **41. Problem-Space Evasion Attacks in the Android OS: a Survey**
+## **45. Problem-Space Evasion Attacks in the Android OS: a Survey**
 
 Android操作系统中的问题空间逃避攻击：综述 cs.CR
 
@@ -599,7 +661,7 @@ Android操作系统中的问题空间逃避攻击：综述 cs.CR
 
 
 
-## **42. BadDet: Backdoor Attacks on Object Detection**
+## **46. BadDet: Backdoor Attacks on Object Detection**
 
 BadDet：针对对象检测的后门攻击 cs.CV
 
@@ -613,7 +675,7 @@ BadDet：针对对象检测的后门攻击 cs.CV
 
 
 
-## **43. Policy Smoothing for Provably Robust Reinforcement Learning**
+## **47. Policy Smoothing for Provably Robust Reinforcement Learning**
 
 可证明稳健强化学习的策略平滑 cs.LG
 
@@ -629,7 +691,7 @@ Published as a conference paper at ICLR 2022
 
 
 
-## **44. Certifying Model Accuracy under Distribution Shifts**
+## **48. Certifying Model Accuracy under Distribution Shifts**
 
 分布漂移下的模型精度验证 cs.LG
 
@@ -643,7 +705,7 @@ Published as a conference paper at ICLR 2022
 
 
 
-## **45. SHORTSTACK: Distributed, Fault-tolerant, Oblivious Data Access**
+## **49. SHORTSTACK: Distributed, Fault-tolerant, Oblivious Data Access**
 
 ShortStack：分布式、容错、不经意的数据访问 cs.CR
 
@@ -659,7 +721,7 @@ Full version of USENIX OSDI'22 paper
 
 
 
-## **46. Semi-supervised Semantics-guided Adversarial Training for Trajectory Prediction**
+## **50. Semi-supervised Semantics-guided Adversarial Training for Trajectory Prediction**
 
 用于弹道预测的半监督语义制导对抗性训练 cs.LG
 
@@ -672,66 +734,6 @@ Full version of USENIX OSDI'22 paper
 **Abstracts**: Predicting the trajectories of surrounding objects is a critical task in self-driving and many other autonomous systems. Recent works demonstrate that adversarial attacks on trajectory prediction, where small crafted perturbations are introduced to history trajectories, may significantly mislead the prediction of future trajectories and ultimately induce unsafe planning. However, few works have addressed enhancing the robustness of this important safety-critical task. In this paper, we present the first adversarial training method for trajectory prediction. Compared with typical adversarial training on image tasks, our work is challenged by more random inputs with rich context, and a lack of class labels. To address these challenges, we propose a method based on a semi-supervised adversarial autoencoder that models disentangled semantic features with domain knowledge and provides additional latent labels for the adversarial training. Extensive experiments with different types of attacks demonstrate that our semi-supervised semantics-guided adversarial training method can effectively mitigate the impact of adversarial attacks and generally improve the system's adversarial robustness to a variety of attacks, including unseen ones. We believe that such semantics-guided architecture and advancement in robust generalization is an important step for developing robust prediction models and enabling safe decision making.
 
 摘要: 在自动驾驶和许多其他自主系统中，预测周围物体的轨迹是一项关键任务。最近的工作表明，对轨迹预测的敌意攻击，即在历史轨迹中引入微小的精心设计的扰动，可能会严重误导对未来轨迹的预测，并最终导致不安全的规划。然而，很少有工作涉及增强这一重要的安全关键任务的健壮性。在本文中，我们提出了第一种用于轨迹预测的对抗性训练方法。与典型的对抗性图像训练相比，我们的工作面临着更多的随机输入和丰富的上下文，以及缺乏类别标签的挑战。为了应对这些挑战，我们提出了一种基于半监督对抗性自动编码器的方法，该方法利用领域知识对解开的语义特征进行建模，并为对抗性训练提供额外的潜在标签。对不同类型的攻击进行的大量实验表明，本文提出的半监督语义制导的对抗性训练方法能够有效地缓解对抗性攻击的影响，并总体上提高了系统对包括不可见攻击在内的各种攻击的鲁棒性。我们认为，这种语义引导的体系结构和在健壮泛化方面的进步是开发健壮预测模型和实现安全决策的重要一步。
-
-
-
-## **47. A Single-Adversary-Single-Detector Zero-Sum Game in Networked Control Systems**
-
-网络控制系统中的单对手-单检测器零和博弈 math.OC
-
-6 pages, 6 figures, 1 table, accepted to the 9th IFAC Conference on  Networked Systems, Zurich, July 2022
-
-**SubmitDate**: 2022-05-27    [paper-pdf](http://arxiv.org/pdf/2205.14001v1)
-
-**Authors**: Anh Tung Nguyen, André M. H. Teixeira, Alexander Medvedev
-
-**Abstracts**: This paper proposes a game-theoretic approach to address the problem of optimal sensor placement for detecting cyber-attacks in networked control systems. The problem is formulated as a zero-sum game with two players, namely a malicious adversary and a detector. Given a protected target vertex, the detector places a sensor at a single vertex to monitor the system and detect the presence of the adversary. On the other hand, the adversary selects a single vertex through which to conduct a cyber-attack that maximally disrupts the target vertex while remaining undetected by the detector. As our first contribution, for a given pair of attack and monitor vertices and a known target vertex, the game payoff function is defined as the output-to-output gain of the respective system. Then, the paper characterizes the set of feasible actions by the detector that ensures bounded values of the game payoff. Finally, an algebraic sufficient condition is proposed to examine whether a given vertex belongs to the set of feasible monitor vertices. The optimal sensor placement is then determined by computing the mixed-strategy Nash equilibrium of the zero-sum game through linear programming. The approach is illustrated via a numerical example of a 10-vertex networked control system with a given target vertex.
-
-摘要: 本文提出了一种基于博弈论的方法来解决网络控制系统中检测网络攻击的传感器最优配置问题。该问题被描述为一个有两个参与者的零和博弈，即一个恶意对手和一个检测器。在给定一个受保护的目标顶点的情况下，检测器在单个顶点放置一个传感器来监视系统并检测对手的存在。另一方面，敌手选择单个顶点进行网络攻击，最大限度地破坏目标顶点，同时保持不被检测器检测。作为我们的第一个贡献，对于给定的攻击和监视顶点对和已知的目标顶点，博弈收益函数被定义为各自系统的输出到输出的增益。然后，利用检测器刻画了保证博弈收益有界值的可行行为集。最后，给出了一个判定给定顶点是否属于可行监视顶点集的代数充分条件。然后通过线性规划计算零和博弈的混合策略纳什均衡来确定传感器的最优配置。给出了一个具有给定目标节点的10点网络控制系统的算例。
-
-
-
-## **48. Standalone Neural ODEs with Sensitivity Analysis**
-
-带敏感度分析的独立神经网络模型 cs.LG
-
-25 pages, 15 figures
-
-**SubmitDate**: 2022-05-27    [paper-pdf](http://arxiv.org/pdf/2205.13933v1)
-
-**Authors**: Rym Jaroudi, Lukáš Malý, Gabriel Eilertsen, Tomas B. Johansson, Jonas Unger, George Baravdish
-
-**Abstracts**: This paper presents the Standalone Neural ODE (sNODE), a continuous-depth neural ODE model capable of describing a full deep neural network. This uses a novel nonlinear conjugate gradient (NCG) descent optimization scheme for training, where the Sobolev gradient can be incorporated to improve smoothness of model weights. We also present a general formulation of the neural sensitivity problem and show how it is used in the NCG training. The sensitivity analysis provides a reliable measure of uncertainty propagation throughout a network, and can be used to study model robustness and to generate adversarial attacks. Our evaluations demonstrate that our novel formulations lead to increased robustness and performance as compared to ResNet models, and that it opens up for new opportunities for designing and developing machine learning with improved explainability.
-
-摘要: 提出了一种能够描述完整深度神经网络的连续深度神经网络模型--独立神经网络模型(SNODE)。该算法采用一种新的非线性共轭梯度(NCG)下降优化方案进行训练，其中可以引入Soblev梯度来改善模型权重的平滑程度。我们还给出了神经敏感度问题的一般公式，并展示了如何将其用于NCG训练。敏感度分析为不确定性在整个网络中的传播提供了可靠的度量，并可用于研究模型的健壮性和生成对抗性攻击。我们的评估表明，与ResNet模型相比，我们的新公式导致了更高的稳健性和性能，并为设计和开发具有更好解释性的机器学习开辟了新的机会。
-
-
-
-## **49. Evaluating the Robustness of Deep Reinforcement Learning for Autonomous and Adversarial Policies in a Multi-agent Urban Driving Environment**
-
-多智能体城市驾驶环境下自主对抗性策略的深度强化学习稳健性评价 cs.AI
-
-**SubmitDate**: 2022-05-27    [paper-pdf](http://arxiv.org/pdf/2112.11947v2)
-
-**Authors**: Aizaz Sharif, Dusica Marijan
-
-**Abstracts**: Deep reinforcement learning is actively used for training autonomous and adversarial car policies in a simulated driving environment. Due to the large availability of various reinforcement learning algorithms and the lack of their systematic comparison across different driving scenarios, we are unsure of which ones are more effective for training and testing autonomous car software in single-agent as well as multi-agent driving environments. A benchmarking framework for the comparison of deep reinforcement learning in a vision-based autonomous driving will open up the possibilities for training better autonomous car driving policies. Furthermore, autonomous cars trained on deep reinforcement learning-based algorithms are known for being vulnerable to adversarial attacks. To guard against adversarial attacks, we can train autonomous cars on adversarial driving policies. However, we lack the knowledge of which deep reinforcement learning algorithms would act as good adversarial agents able to effectively test autonomous cars. To address these challenges, we provide an open and reusable benchmarking framework for systematic evaluation and comparative analysis of deep reinforcement learning algorithms for autonomous and adversarial driving in a single- and multi-agent environment. Using the framework, we perform a comparative study of five discrete and two continuous action space deep reinforcement learning algorithms. We run the experiments in a vision-only high fidelity urban driving simulated environments. The results indicate that only some of the deep reinforcement learning algorithms perform consistently better across single and multi-agent scenarios when trained in a multi-agent-only setting.
-
-摘要: 深度强化学习被用于在模拟驾驶环境中训练自主的和对抗性的汽车策略。由于各种强化学习算法的可用性很高，而且缺乏对不同驾驶场景的系统比较，我们不确定哪种算法在单代理和多代理驾驶环境下训练和测试自动驾驶汽车软件更有效。在基于视觉的自动驾驶中比较深度强化学习的基准框架将为培训更好的自动汽车驾驶政策打开可能性。此外，经过深度强化学习算法训练的自动驾驶汽车，众所周知容易受到对手的攻击。为了防范对抗性攻击，我们可以对自动驾驶汽车进行对抗性驾驶策略培训。然而，我们缺乏关于哪些深度强化学习算法可以作为能够有效测试自动驾驶汽车的好的对抗性代理的知识。为了应对这些挑战，我们提供了一个开放和可重用的基准测试框架，用于在单代理和多代理环境中对自主和对抗性驾驶的深度强化学习算法进行系统评估和比较分析。利用该框架，我们对五种离散动作空间和两种连续动作空间深度强化学习算法进行了比较研究。我们在视觉高保真的城市驾驶模拟环境中进行了实验。结果表明，只有一些深度强化学习算法在仅有多智能体的情况下训练时，在单智能体和多智能体场景中的表现一致较好。
-
-
-
-## **50. Adversarial Deep Reinforcement Learning for Improving the Robustness of Multi-agent Autonomous Driving Policies**
-
-对抗性深度强化学习提高多智能体自主驾驶策略的稳健性 cs.AI
-
-**SubmitDate**: 2022-05-27    [paper-pdf](http://arxiv.org/pdf/2112.11937v2)
-
-**Authors**: Aizaz Sharif, Dusica Marijan
-
-**Abstracts**: Autonomous cars are well known for being vulnerable to adversarial attacks that can compromise the safety of the car and pose danger to other road users. To effectively defend against adversaries, it is required to not only test autonomous cars for finding driving errors, but to improve the robustness of the cars to these errors. To this end, in this paper, we propose a two-step methodology for autonomous cars that consists of (i) finding failure states in autonomous cars by training the adversarial driving agent, and (ii) improving the robustness of autonomous cars by retraining them with effective adversarial inputs. Our methodology supports testing ACs in a multi-agent environment, where we train and compare adversarial car policy on two custom reward functions to test the driving control decision of autonomous cars. We run experiments in a vision-based high fidelity urban driving simulated environment. Our results show that adversarial testing can be used for finding erroneous autonomous driving behavior, followed by adversarial training for improving the robustness of deep reinforcement learning based autonomous driving policies. We demonstrate that the autonomous cars retrained using the effective adversarial inputs noticeably increase the performance of their driving policies in terms of reduced collision and offroad steering errors.
-
-摘要: 众所周知，自动驾驶汽车容易受到对抗性攻击，这些攻击可能会危及汽车的安全，并对其他道路使用者构成危险。为了有效地防御对手，不仅需要测试自动驾驶汽车是否发现驾驶错误，还需要提高汽车对这些错误的稳健性。为此，在本文中，我们提出了一种自动驾驶汽车的两步方法，包括(I)通过训练对抗性驾驶主体来发现自动驾驶汽车中的故障状态，(Ii)通过对自动驾驶汽车进行有效的对抗性输入来重新训练它们来提高自动驾驶汽车的稳健性。我们的方法支持在多智能体环境中测试自动驾驶控制系统，在这个环境中，我们训练并比较两个定制奖励函数上的对抗性汽车策略，以测试自动驾驶汽车的驾驶控制决策。我们在基于视觉的高保真城市驾驶模拟环境中进行了实验。结果表明，对抗性测试可以用来发现错误的自主驾驶行为，然后通过对抗性训练来提高基于深度强化学习的自主驾驶策略的稳健性。我们证明，使用有效的对抗性输入进行再培训的自动驾驶汽车在减少碰撞和越野转向错误方面显著提高了其驾驶策略的性能。
 
 
 

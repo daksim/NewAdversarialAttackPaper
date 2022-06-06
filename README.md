@@ -1,9 +1,63 @@
 # Latest Adversarial Attack Papers
-**update at 2022-06-06 06:31:32**
+**update at 2022-06-07 06:31:28**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. A Barrier Certificate-based Simplex Architecture with Application to Microgrids**
+## **1. Gradient Obfuscation Checklist Test Gives a False Sense of Security**
+
+cs.CV
+
+**SubmitDate**: 2022-06-03    [paper-pdf](http://arxiv.org/pdf/2206.01705v1)
+
+**Authors**: Nikola Popovic, Danda Pani Paudel, Thomas Probst, Luc Van Gool
+
+**Abstracts**: One popular group of defense techniques against adversarial attacks is based on injecting stochastic noise into the network. The main source of robustness of such stochastic defenses however is often due to the obfuscation of the gradients, offering a false sense of security. Since most of the popular adversarial attacks are optimization-based, obfuscated gradients reduce their attacking ability, while the model is still susceptible to stronger or specifically tailored adversarial attacks. Recently, five characteristics have been identified, which are commonly observed when the improvement in robustness is mainly caused by gradient obfuscation. It has since become a trend to use these five characteristics as a sufficient test, to determine whether or not gradient obfuscation is the main source of robustness. However, these characteristics do not perfectly characterize all existing cases of gradient obfuscation, and therefore can not serve as a basis for a conclusive test. In this work, we present a counterexample, showing this test is not sufficient for concluding that gradient obfuscation is not the main cause of improvements in robustness.
+
+
+
+## **2. Evaluating Transfer-based Targeted Adversarial Perturbations against Real-World Computer Vision Systems based on Human Judgments**
+
+cs.CV
+
+technical report
+
+**SubmitDate**: 2022-06-03    [paper-pdf](http://arxiv.org/pdf/2206.01467v1)
+
+**Authors**: Zhengyu Zhao, Nga Dang, Martha Larson
+
+**Abstracts**: Computer vision systems are remarkably vulnerable to adversarial perturbations. Transfer-based adversarial images are generated on one (source) system and used to attack another (target) system. In this paper, we take the first step to investigate transfer-based targeted adversarial images in a realistic scenario where the target system is trained on some private data with its inventory of semantic labels not publicly available. Our main contributions include an extensive human-judgment-based evaluation of attack success on the Google Cloud Vision API and additional analysis of the different behaviors of Google Cloud Vision in face of original images vs. adversarial images. Resources are publicly available at \url{https://github.com/ZhengyuZhao/Targeted-Tansfer/blob/main/google_results.zip}.
+
+
+
+## **3. Adversarial Attacks on Human Vision**
+
+cs.CV
+
+21 pages, 8 figures, 1 table
+
+**SubmitDate**: 2022-06-03    [paper-pdf](http://arxiv.org/pdf/2206.01365v1)
+
+**Authors**: Victor A. Mateescu, Ivan V. Bajić
+
+**Abstracts**: This article presents an introduction to visual attention retargeting, its connection to visual saliency, the challenges associated with it, and ideas for how it can be approached. The difficulty of attention retargeting as a saliency inversion problem lies in the lack of one-to-one mapping between saliency and the image domain, in addition to the possible negative impact of saliency alterations on image aesthetics. A few approaches from recent literature to solve this challenging problem are reviewed, and several suggestions for future development are presented.
+
+
+
+## **4. On the Privacy Properties of GAN-generated Samples**
+
+cs.LG
+
+AISTATS 2021
+
+**SubmitDate**: 2022-06-03    [paper-pdf](http://arxiv.org/pdf/2206.01349v1)
+
+**Authors**: Zinan Lin, Vyas Sekar, Giulia Fanti
+
+**Abstracts**: The privacy implications of generative adversarial networks (GANs) are a topic of great interest, leading to several recent algorithms for training GANs with privacy guarantees. By drawing connections to the generalization properties of GANs, we prove that under some assumptions, GAN-generated samples inherently satisfy some (weak) privacy guarantees. First, we show that if a GAN is trained on m samples and used to generate n samples, the generated samples are (epsilon, delta)-differentially-private for (epsilon, delta) pairs where delta scales as O(n/m). We show that under some special conditions, this upper bound is tight. Next, we study the robustness of GAN-generated samples to membership inference attacks. We model membership inference as a hypothesis test in which the adversary must determine whether a given sample was drawn from the training dataset or from the underlying data distribution. We show that this adversary can achieve an area under the ROC curve that scales no better than O(m^{-1/4}).
+
+
+
+## **5. A Barrier Certificate-based Simplex Architecture with Application to Microgrids**
 
 eess.SY
 
@@ -15,7 +69,7 @@ eess.SY
 
 
 
-## **2. Adversarial Laser Spot: Robust and Covert Physical Adversarial Attack to DNNs**
+## **6. Adversarial Laser Spot: Robust and Covert Physical Adversarial Attack to DNNs**
 
 cs.CV
 
@@ -27,7 +81,7 @@ cs.CV
 
 
 
-## **3. FACM: Correct the Output of Deep Neural Network with Middle Layers Features against Adversarial Samples**
+## **7. FACM: Correct the Output of Deep Neural Network with Middle Layers Features against Adversarial Samples**
 
 cs.CV
 
@@ -39,7 +93,7 @@ cs.CV
 
 
 
-## **4. Mask-Guided Divergence Loss Improves the Generalization and Robustness of Deep Neural Network**
+## **8. Mask-Guided Divergence Loss Improves the Generalization and Robustness of Deep Neural Network**
 
 cs.LG
 
@@ -51,7 +105,7 @@ cs.LG
 
 
 
-## **5. Robust Feature-Level Adversaries are Interpretability Tools**
+## **9. Robust Feature-Level Adversaries are Interpretability Tools**
 
 cs.LG
 
@@ -65,7 +119,7 @@ Code available at  https://github.com/thestephencasper/feature_level_adv
 
 
 
-## **6. On the reversibility of adversarial attacks**
+## **10. On the reversibility of adversarial attacks**
 
 cs.LG
 
@@ -77,7 +131,7 @@ cs.LG
 
 
 
-## **7. Training privacy-preserving video analytics pipelines by suppressing features that reveal information about private attributes**
+## **11. Training privacy-preserving video analytics pipelines by suppressing features that reveal information about private attributes**
 
 cs.CV
 
@@ -89,7 +143,7 @@ cs.CV
 
 
 
-## **8. Adversarial Attacks on Gaussian Process Bandits**
+## **12. Adversarial Attacks on Gaussian Process Bandits**
 
 stat.ML
 
@@ -103,7 +157,7 @@ Accepted to ICML 2022
 
 
 
-## **9. The robust way to stack and bag: the local Lipschitz way**
+## **13. The robust way to stack and bag: the local Lipschitz way**
 
 cs.LG
 
@@ -115,7 +169,7 @@ cs.LG
 
 
 
-## **10. Attack-Agnostic Adversarial Detection**
+## **14. Attack-Agnostic Adversarial Detection**
 
 cs.CV
 
@@ -127,7 +181,7 @@ cs.CV
 
 
 
-## **11. Generating End-to-End Adversarial Examples for Malware Classifiers Using Explainability**
+## **15. Generating End-to-End Adversarial Examples for Malware Classifiers Using Explainability**
 
 cs.CR
 
@@ -141,7 +195,7 @@ Accepted as a conference paper at IJCNN 2020
 
 
 
-## **12. Anti-Forgery: Towards a Stealthy and Robust DeepFake Disruption Attack via Adversarial Perceptual-aware Perturbations**
+## **16. Anti-Forgery: Towards a Stealthy and Robust DeepFake Disruption Attack via Adversarial Perceptual-aware Perturbations**
 
 cs.CR
 
@@ -155,7 +209,7 @@ Accepted by IJCAI 2022
 
 
 
-## **13. PerDoor: Persistent Non-Uniform Backdoors in Federated Learning using Adversarial Perturbations**
+## **17. PerDoor: Persistent Non-Uniform Backdoors in Federated Learning using Adversarial Perturbations**
 
 cs.CR
 
@@ -167,7 +221,7 @@ cs.CR
 
 
 
-## **14. NeuroUnlock: Unlocking the Architecture of Obfuscated Deep Neural Networks**
+## **18. NeuroUnlock: Unlocking the Architecture of Obfuscated Deep Neural Networks**
 
 cs.CR
 
@@ -181,7 +235,7 @@ The definitive Version of Record will be Published in the 2022  International Jo
 
 
 
-## **15. Support Vector Machines under Adversarial Label Contamination**
+## **19. Support Vector Machines under Adversarial Label Contamination**
 
 cs.LG
 
@@ -193,7 +247,7 @@ cs.LG
 
 
 
-## **16. A Simple Structure For Building A Robust Model**
+## **20. A Simple Structure For Building A Robust Model**
 
 cs.CV
 
@@ -207,7 +261,7 @@ Accepted by Fifth International Conference on Intelligence Science  (ICIS2022); 
 
 
 
-## **17. Bounding Membership Inference**
+## **21. Bounding Membership Inference**
 
 cs.LG
 
@@ -219,7 +273,7 @@ cs.LG
 
 
 
-## **18. Metamorphic Testing-based Adversarial Attack to Fool Deepfake Detectors**
+## **22. Metamorphic Testing-based Adversarial Attack to Fool Deepfake Detectors**
 
 cs.CV
 
@@ -233,7 +287,7 @@ paper accepted at 26TH International Conference on Pattern  Recognition (ICPR202
 
 
 
-## **19. FoveaTer: Foveated Transformer for Image Classification**
+## **23. FoveaTer: Foveated Transformer for Image Classification**
 
 cs.CV
 
@@ -247,7 +301,7 @@ cs.CV
 
 
 
-## **20. Generative Models with Information-Theoretic Protection Against Membership Inference Attacks**
+## **24. Generative Models with Information-Theoretic Protection Against Membership Inference Attacks**
 
 cs.LG
 
@@ -259,7 +313,7 @@ cs.LG
 
 
 
-## **21. CodeAttack: Code-based Adversarial Attacks for Pre-Trained Programming Language Models**
+## **25. CodeAttack: Code-based Adversarial Attacks for Pre-Trained Programming Language Models**
 
 cs.CL
 
@@ -271,7 +325,7 @@ cs.CL
 
 
 
-## **22. Hide and Seek: on the Stealthiness of Attacks against Deep Learning Systems**
+## **26. Hide and Seek: on the Stealthiness of Attacks against Deep Learning Systems**
 
 cs.CR
 
@@ -283,7 +337,7 @@ cs.CR
 
 
 
-## **23. Atomic cross-chain exchanges of shared assets**
+## **27. Atomic cross-chain exchanges of shared assets**
 
 cs.CR
 
@@ -295,7 +349,7 @@ cs.CR
 
 
 
-## **24. Semantic Autoencoder and Its Potential Usage for Adversarial Attack**
+## **28. Semantic Autoencoder and Its Potential Usage for Adversarial Attack**
 
 cs.LG
 
@@ -307,7 +361,7 @@ cs.LG
 
 
 
-## **25. Connecting adversarial attacks and optimal transport for domain adaptation**
+## **29. Connecting adversarial attacks and optimal transport for domain adaptation**
 
 cs.LG
 
@@ -319,7 +373,7 @@ cs.LG
 
 
 
-## **26. Fooling SHAP with Stealthily Biased Sampling**
+## **30. Fooling SHAP with Stealthily Biased Sampling**
 
 cs.LG
 
@@ -331,7 +385,7 @@ cs.LG
 
 
 
-## **27. Searching for the Essence of Adversarial Perturbations**
+## **31. Searching for the Essence of Adversarial Perturbations**
 
 cs.LG
 
@@ -343,7 +397,7 @@ cs.LG
 
 
 
-## **28. GAN-based Medical Image Small Region Forgery Detection via a Two-Stage Cascade Framework**
+## **32. GAN-based Medical Image Small Region Forgery Detection via a Two-Stage Cascade Framework**
 
 eess.IV
 
@@ -355,7 +409,7 @@ eess.IV
 
 
 
-## **29. Why Adversarial Training of ReLU Networks Is Difficult?**
+## **33. Why Adversarial Training of ReLU Networks Is Difficult?**
 
 cs.LG
 
@@ -367,7 +421,7 @@ cs.LG
 
 
 
-## **30. Domain Constraints in Feature Space: Strengthening Robustness of Android Malware Detection against Realizable Adversarial Examples**
+## **34. Domain Constraints in Feature Space: Strengthening Robustness of Android Malware Detection against Realizable Adversarial Examples**
 
 cs.LG
 
@@ -379,7 +433,7 @@ cs.LG
 
 
 
-## **31. Guided Diffusion Model for Adversarial Purification**
+## **35. Guided Diffusion Model for Adversarial Purification**
 
 cs.CV
 
@@ -391,7 +445,7 @@ cs.CV
 
 
 
-## **32. CalFAT: Calibrated Federated Adversarial Training with Label Skewness**
+## **36. CalFAT: Calibrated Federated Adversarial Training with Label Skewness**
 
 cs.LG
 
@@ -403,7 +457,7 @@ cs.LG
 
 
 
-## **33. CausalAdv: Adversarial Robustness through the Lens of Causality**
+## **37. CausalAdv: Adversarial Robustness through the Lens of Causality**
 
 cs.LG
 
@@ -417,7 +471,7 @@ ICLR2022, 20 pages, 3 figures
 
 
 
-## **34. Exposing Fine-grained Adversarial Vulnerability of Face Anti-spoofing Models**
+## **38. Exposing Fine-grained Adversarial Vulnerability of Face Anti-spoofing Models**
 
 cs.CV
 
@@ -429,7 +483,7 @@ cs.CV
 
 
 
-## **35. Efficient Reward Poisoning Attacks on Online Deep Reinforcement Learning**
+## **39. Efficient Reward Poisoning Attacks on Online Deep Reinforcement Learning**
 
 cs.LG
 
@@ -441,7 +495,7 @@ cs.LG
 
 
 
-## **36. Mixture GAN For Modulation Classification Resiliency Against Adversarial Attacks**
+## **40. Mixture GAN For Modulation Classification Resiliency Against Adversarial Attacks**
 
 cs.LG
 
@@ -453,7 +507,7 @@ cs.LG
 
 
 
-## **37. Unfooling Perturbation-Based Post Hoc Explainers**
+## **41. Unfooling Perturbation-Based Post Hoc Explainers**
 
 cs.AI
 
@@ -467,7 +521,7 @@ cs.AI
 
 
 
-## **38. On the Robustness of Safe Reinforcement Learning under Observational Perturbations**
+## **42. On the Robustness of Safe Reinforcement Learning under Observational Perturbations**
 
 cs.LG
 
@@ -481,7 +535,7 @@ cs.LG
 
 
 
-## **39. Superclass Adversarial Attack**
+## **43. Superclass Adversarial Attack**
 
 cs.CV
 
@@ -493,7 +547,7 @@ cs.CV
 
 
 
-## **40. Graph Structure Based Data Augmentation Method**
+## **44. Graph Structure Based Data Augmentation Method**
 
 cs.LG
 
@@ -505,7 +559,7 @@ cs.LG
 
 
 
-## **41. Problem-Space Evasion Attacks in the Android OS: a Survey**
+## **45. Problem-Space Evasion Attacks in the Android OS: a Survey**
 
 cs.CR
 
@@ -517,7 +571,7 @@ cs.CR
 
 
 
-## **42. BadDet: Backdoor Attacks on Object Detection**
+## **46. BadDet: Backdoor Attacks on Object Detection**
 
 cs.CV
 
@@ -529,7 +583,7 @@ cs.CV
 
 
 
-## **43. Policy Smoothing for Provably Robust Reinforcement Learning**
+## **47. Policy Smoothing for Provably Robust Reinforcement Learning**
 
 cs.LG
 
@@ -543,7 +597,7 @@ Published as a conference paper at ICLR 2022
 
 
 
-## **44. Certifying Model Accuracy under Distribution Shifts**
+## **48. Certifying Model Accuracy under Distribution Shifts**
 
 cs.LG
 
@@ -555,7 +609,7 @@ cs.LG
 
 
 
-## **45. SHORTSTACK: Distributed, Fault-tolerant, Oblivious Data Access**
+## **49. SHORTSTACK: Distributed, Fault-tolerant, Oblivious Data Access**
 
 cs.CR
 
@@ -569,7 +623,7 @@ Full version of USENIX OSDI'22 paper
 
 
 
-## **46. Semi-supervised Semantics-guided Adversarial Training for Trajectory Prediction**
+## **50. Semi-supervised Semantics-guided Adversarial Training for Trajectory Prediction**
 
 cs.LG
 
@@ -580,58 +634,6 @@ cs.LG
 **Authors**: Ruochen Jiao, Xiangguo Liu, Takami Sato, Qi Alfred Chen, Qi Zhu
 
 **Abstracts**: Predicting the trajectories of surrounding objects is a critical task in self-driving and many other autonomous systems. Recent works demonstrate that adversarial attacks on trajectory prediction, where small crafted perturbations are introduced to history trajectories, may significantly mislead the prediction of future trajectories and ultimately induce unsafe planning. However, few works have addressed enhancing the robustness of this important safety-critical task. In this paper, we present the first adversarial training method for trajectory prediction. Compared with typical adversarial training on image tasks, our work is challenged by more random inputs with rich context, and a lack of class labels. To address these challenges, we propose a method based on a semi-supervised adversarial autoencoder that models disentangled semantic features with domain knowledge and provides additional latent labels for the adversarial training. Extensive experiments with different types of attacks demonstrate that our semi-supervised semantics-guided adversarial training method can effectively mitigate the impact of adversarial attacks and generally improve the system's adversarial robustness to a variety of attacks, including unseen ones. We believe that such semantics-guided architecture and advancement in robust generalization is an important step for developing robust prediction models and enabling safe decision making.
-
-
-
-## **47. A Single-Adversary-Single-Detector Zero-Sum Game in Networked Control Systems**
-
-math.OC
-
-6 pages, 6 figures, 1 table, accepted to the 9th IFAC Conference on  Networked Systems, Zurich, July 2022
-
-**SubmitDate**: 2022-05-27    [paper-pdf](http://arxiv.org/pdf/2205.14001v1)
-
-**Authors**: Anh Tung Nguyen, André M. H. Teixeira, Alexander Medvedev
-
-**Abstracts**: This paper proposes a game-theoretic approach to address the problem of optimal sensor placement for detecting cyber-attacks in networked control systems. The problem is formulated as a zero-sum game with two players, namely a malicious adversary and a detector. Given a protected target vertex, the detector places a sensor at a single vertex to monitor the system and detect the presence of the adversary. On the other hand, the adversary selects a single vertex through which to conduct a cyber-attack that maximally disrupts the target vertex while remaining undetected by the detector. As our first contribution, for a given pair of attack and monitor vertices and a known target vertex, the game payoff function is defined as the output-to-output gain of the respective system. Then, the paper characterizes the set of feasible actions by the detector that ensures bounded values of the game payoff. Finally, an algebraic sufficient condition is proposed to examine whether a given vertex belongs to the set of feasible monitor vertices. The optimal sensor placement is then determined by computing the mixed-strategy Nash equilibrium of the zero-sum game through linear programming. The approach is illustrated via a numerical example of a 10-vertex networked control system with a given target vertex.
-
-
-
-## **48. Standalone Neural ODEs with Sensitivity Analysis**
-
-cs.LG
-
-25 pages, 15 figures
-
-**SubmitDate**: 2022-05-27    [paper-pdf](http://arxiv.org/pdf/2205.13933v1)
-
-**Authors**: Rym Jaroudi, Lukáš Malý, Gabriel Eilertsen, Tomas B. Johansson, Jonas Unger, George Baravdish
-
-**Abstracts**: This paper presents the Standalone Neural ODE (sNODE), a continuous-depth neural ODE model capable of describing a full deep neural network. This uses a novel nonlinear conjugate gradient (NCG) descent optimization scheme for training, where the Sobolev gradient can be incorporated to improve smoothness of model weights. We also present a general formulation of the neural sensitivity problem and show how it is used in the NCG training. The sensitivity analysis provides a reliable measure of uncertainty propagation throughout a network, and can be used to study model robustness and to generate adversarial attacks. Our evaluations demonstrate that our novel formulations lead to increased robustness and performance as compared to ResNet models, and that it opens up for new opportunities for designing and developing machine learning with improved explainability.
-
-
-
-## **49. Evaluating the Robustness of Deep Reinforcement Learning for Autonomous and Adversarial Policies in a Multi-agent Urban Driving Environment**
-
-cs.AI
-
-**SubmitDate**: 2022-05-27    [paper-pdf](http://arxiv.org/pdf/2112.11947v2)
-
-**Authors**: Aizaz Sharif, Dusica Marijan
-
-**Abstracts**: Deep reinforcement learning is actively used for training autonomous and adversarial car policies in a simulated driving environment. Due to the large availability of various reinforcement learning algorithms and the lack of their systematic comparison across different driving scenarios, we are unsure of which ones are more effective for training and testing autonomous car software in single-agent as well as multi-agent driving environments. A benchmarking framework for the comparison of deep reinforcement learning in a vision-based autonomous driving will open up the possibilities for training better autonomous car driving policies. Furthermore, autonomous cars trained on deep reinforcement learning-based algorithms are known for being vulnerable to adversarial attacks. To guard against adversarial attacks, we can train autonomous cars on adversarial driving policies. However, we lack the knowledge of which deep reinforcement learning algorithms would act as good adversarial agents able to effectively test autonomous cars. To address these challenges, we provide an open and reusable benchmarking framework for systematic evaluation and comparative analysis of deep reinforcement learning algorithms for autonomous and adversarial driving in a single- and multi-agent environment. Using the framework, we perform a comparative study of five discrete and two continuous action space deep reinforcement learning algorithms. We run the experiments in a vision-only high fidelity urban driving simulated environments. The results indicate that only some of the deep reinforcement learning algorithms perform consistently better across single and multi-agent scenarios when trained in a multi-agent-only setting.
-
-
-
-## **50. Adversarial Deep Reinforcement Learning for Improving the Robustness of Multi-agent Autonomous Driving Policies**
-
-cs.AI
-
-**SubmitDate**: 2022-05-27    [paper-pdf](http://arxiv.org/pdf/2112.11937v2)
-
-**Authors**: Aizaz Sharif, Dusica Marijan
-
-**Abstracts**: Autonomous cars are well known for being vulnerable to adversarial attacks that can compromise the safety of the car and pose danger to other road users. To effectively defend against adversaries, it is required to not only test autonomous cars for finding driving errors, but to improve the robustness of the cars to these errors. To this end, in this paper, we propose a two-step methodology for autonomous cars that consists of (i) finding failure states in autonomous cars by training the adversarial driving agent, and (ii) improving the robustness of autonomous cars by retraining them with effective adversarial inputs. Our methodology supports testing ACs in a multi-agent environment, where we train and compare adversarial car policy on two custom reward functions to test the driving control decision of autonomous cars. We run experiments in a vision-based high fidelity urban driving simulated environment. Our results show that adversarial testing can be used for finding erroneous autonomous driving behavior, followed by adversarial training for improving the robustness of deep reinforcement learning based autonomous driving policies. We demonstrate that the autonomous cars retrained using the effective adversarial inputs noticeably increase the performance of their driving policies in terms of reduced collision and offroad steering errors.
 
 
 

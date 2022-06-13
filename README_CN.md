@@ -1,9 +1,67 @@
 # Latest Adversarial Attack Papers
-**update at 2022-06-13 06:31:28**
+**update at 2022-06-14 06:31:28**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. Network insensitivity to parameter noise via adversarial regularization**
+## **1. Hierarchical Federated Learning with Privacy**
+
+带隐私的分层联邦学习 cs.LG
+
+**SubmitDate**: 2022-06-10    [paper-pdf](http://arxiv.org/pdf/2206.05209v1)
+
+**Authors**: Varun Chandrasekaran, Suman Banerjee, Diego Perino, Nicolas Kourtellis
+
+**Abstracts**: Federated learning (FL), where data remains at the federated clients, and where only gradient updates are shared with a central aggregator, was assumed to be private. Recent work demonstrates that adversaries with gradient-level access can mount successful inference and reconstruction attacks. In such settings, differentially private (DP) learning is known to provide resilience. However, approaches used in the status quo (\ie central and local DP) introduce disparate utility vs. privacy trade-offs. In this work, we take the first step towards mitigating such trade-offs through {\em hierarchical FL (HFL)}. We demonstrate that by the introduction of a new intermediary level where calibrated DP noise can be added, better privacy vs. utility trade-offs can be obtained; we term this {\em hierarchical DP (HDP)}. Our experiments with 3 different datasets (commonly used as benchmarks for FL) suggest that HDP produces models as accurate as those obtained using central DP, where noise is added at a central aggregator. Such an approach also provides comparable benefit against inference adversaries as in the local DP case, where noise is added at the federated clients.
+
+摘要: 联合学习(FL)被认为是私有的，其中数据保留在联合客户端，并且仅与中央聚合器共享梯度更新。最近的工作表明，具有梯度访问权限的攻击者可以发起成功的推理和重构攻击。在这种情况下，差分私有(DP)学习已知能够提供弹性。然而，现状中使用的方法(即中央和地方DP)引入了不同的效用与隐私之间的权衡。在这项工作中，我们迈出了第一步，通过{\em分层FL(HFL)}来缓解这种权衡。我们证明，通过引入一个可以添加校准DP噪声的新的中间层，可以获得更好的私密性与公用事业的权衡；我们称之为{\em分层DP(HDP)}。我们用3个不同的数据集(通常用作FL的基准)的实验表明，HDP产生的模型与使用中央DP获得的模型一样准确，其中噪声是在中央聚集器添加的。这种方法还提供了与在本地DP情况下类似的针对推理对手的好处，在本地DP情况下，在联合客户端添加了噪声。
+
+
+
+## **2. SERVFAIL: The Unintended Consequences of Algorithm Agility in DNSSEC**
+
+SERVFAIL：DNSSEC中算法敏捷性的意外后果 cs.CR
+
+Withdrawn on request of one of the persons listed as authors
+
+**SubmitDate**: 2022-06-10    [paper-pdf](http://arxiv.org/pdf/2205.10608v2)
+
+**Authors**: Elias Heftrig, Jean-Pierre Seifert, Haya Shulman, Peter Thomassen, Michael Waidner, Nils Wisiol
+
+**Abstracts**: Cryptographic algorithm agility is an important property for DNSSEC: it allows easy deployment of new algorithms if the existing ones are no longer secure. Significant operational and research efforts are dedicated to pushing the deployment of new algorithms in DNSSEC forward. Recent research shows that DNSSEC is gradually achieving algorithm agility: most DNSSEC supporting resolvers can validate a number of different algorithms and domains are increasingly signed with cryptographically strong ciphers.   In this work we show for the first time that the cryptographic agility in DNSSEC, although critical for making DNS secure with strong cryptography, also introduces a severe vulnerability. We find that under certain conditions, when new algorithms are listed in signed DNS responses, the resolvers do not validate DNSSEC. As a result, domains that deploy new ciphers, risk exposing the validating resolvers to cache poisoning attacks.   We use this to develop DNSSEC-downgrade attacks and show that in some situations these attacks can be launched even by off-path adversaries. We experimentally and ethically evaluate our attacks against popular DNS resolver implementations, public DNS providers, and DNS services used by web clients worldwide. We validate the success of DNSSEC-downgrade attacks by poisoning the resolvers: we inject fake records, in signed domains, into the caches of validating resolvers. We find that major DNS providers, such as Google Public DNS and Cloudflare, as well as 70% of DNS resolvers used by web clients are vulnerable to our attacks.   We trace the factors that led to this situation and provide recommendations.
+
+摘要: 密码算法灵活性是DNSSEC的一个重要属性：如果现有算法不再安全，它允许轻松部署新算法。大量的操作和研究工作致力于推动在DNSSEC中部署新算法。最近的研究表明，DNSSEC正在逐步实现算法灵活性：大多数支持DNSSEC的解析器可以验证一些不同的算法，并且越来越多的域使用密码强密码签名。在这项工作中，我们第一次展示了DNSSEC的密码敏捷性，尽管对于使用强大的密码学来确保DNS安全至关重要，但也引入了一个严重的漏洞。我们发现，在某些条件下，当新算法在签名的DNS响应中列出时，解析器不会验证DNSSEC。因此，部署新密码的域有可能使验证解析器面临缓存中毒攻击。我们利用这一点来开发DNSSEC降级攻击，并表明在某些情况下，这些攻击甚至可以由偏离路径的对手发起。我们从实验和伦理上评估我们对全球Web客户端使用的流行的DNS解析器实现、公共DNS提供商和DNS服务的攻击。我们通过毒化解析器来验证DNSSEC降级攻击的成功：我们在有符号的域中向验证解析器的缓存中注入虚假记录。我们发现，主要的域名服务提供商，如Google Public DNS和Cloudflare，以及网络客户端使用的70%的域名解析程序，都容易受到我们的攻击。我们追踪了导致这种情况的因素并提出了建议。
+
+
+
+## **3. Enhancing Clean Label Backdoor Attack with Two-phase Specific Triggers**
+
+使用两阶段特定触发器增强干净标签后门攻击 cs.CR
+
+**SubmitDate**: 2022-06-10    [paper-pdf](http://arxiv.org/pdf/2206.04881v1)
+
+**Authors**: Nan Luo, Yuanzhang Li, Yajie Wang, Shangbo Wu, Yu-an Tan, Quanxin Zhang
+
+**Abstracts**: Backdoor attacks threaten Deep Neural Networks (DNNs). Towards stealthiness, researchers propose clean-label backdoor attacks, which require the adversaries not to alter the labels of the poisoned training datasets. Clean-label settings make the attack more stealthy due to the correct image-label pairs, but some problems still exist: first, traditional methods for poisoning training data are ineffective; second, traditional triggers are not stealthy which are still perceptible. To solve these problems, we propose a two-phase and image-specific triggers generation method to enhance clean-label backdoor attacks. Our methods are (1) powerful: our triggers can both promote the two phases (i.e., the backdoor implantation and activation phase) in backdoor attacks simultaneously; (2) stealthy: our triggers are generated from each image. They are image-specific instead of fixed triggers. Extensive experiments demonstrate that our approach can achieve a fantastic attack success rate~(98.98%) with low poisoning rate~(5%), high stealthiness under many evaluation metrics and is resistant to backdoor defense methods.
+
+摘要: 后门攻击威胁深度神经网络(DNN)。对于隐蔽性，研究人员提出了干净标签的后门攻击，要求对手不更改有毒训练数据集的标签。由于图像-标签对的正确设置，干净标签设置使攻击更加隐蔽，但仍然存在一些问题：第一，传统的毒化训练数据的方法效果不佳；第二，传统的触发器不隐蔽，仍然可以感知。为了解决这些问题，我们提出了一种针对图像的两阶段触发器生成方法来增强干净标签后门攻击。我们的方法是(1)强大：我们的触发器都可以同时推动后门攻击的两个阶段(即后门植入和激活阶段)；(2)隐蔽性：我们的触发器是从每个镜像生成的。它们是特定于图像的INSTEAD而不是固定触发器。大量实验表明，该方法具有攻击成功率98.98%、中毒率低5%、在多种评价指标下隐蔽性高、抵抗后门防御等优点。
+
+
+
+## **4. ReFace: Real-time Adversarial Attacks on Face Recognition Systems**
+
+REFACE：对人脸识别系统的实时敌意攻击 cs.CV
+
+**SubmitDate**: 2022-06-09    [paper-pdf](http://arxiv.org/pdf/2206.04783v1)
+
+**Authors**: Shehzeen Hussain, Todd Huster, Chris Mesterharm, Paarth Neekhara, Kevin An, Malhar Jere, Harshvardhan Sikka, Farinaz Koushanfar
+
+**Abstracts**: Deep neural network based face recognition models have been shown to be vulnerable to adversarial examples. However, many of the past attacks require the adversary to solve an input-dependent optimization problem using gradient descent which makes the attack impractical in real-time. These adversarial examples are also tightly coupled to the attacked model and are not as successful in transferring to different models. In this work, we propose ReFace, a real-time, highly-transferable attack on face recognition models based on Adversarial Transformation Networks (ATNs). ATNs model adversarial example generation as a feed-forward neural network. We find that the white-box attack success rate of a pure U-Net ATN falls substantially short of gradient-based attacks like PGD on large face recognition datasets. We therefore propose a new architecture for ATNs that closes this gap while maintaining a 10000x speedup over PGD. Furthermore, we find that at a given perturbation magnitude, our ATN adversarial perturbations are more effective in transferring to new face recognition models than PGD. ReFace attacks can successfully deceive commercial face recognition services in a transfer attack setting and reduce face identification accuracy from 82% to 16.4% for AWS SearchFaces API and Azure face verification accuracy from 91% to 50.1%.
+
+摘要: 基于深度神经网络的人脸识别模型已被证明容易受到敌意例子的影响。然而，过去的许多攻击都需要对手使用梯度下降来解决依赖于输入的优化问题，这使得攻击不能实时进行。这些对抗性的例子也与被攻击的模型紧密耦合，在转移到不同的模型上不是那么成功。在这项工作中，我们提出了REFACE，一种基于对抗性变换网络(ATNS)的人脸识别模型的实时、高可转移性攻击。ATNS模型将对抗性实例生成作为前馈神经网络。我们发现，在大规模人脸识别数据集上，纯U-Net ATN的白盒攻击成功率明显低于PGD等基于梯度的攻击。因此，我们提出了一种新的ATNS体系结构，它可以缩小这一差距，同时保持比PGD高10000倍的加速比。此外，我们发现在给定的扰动幅度下，我们的ATN对抗性扰动比PGD更有效地转移到新的人脸识别模型。ReFace攻击可以在Transfer攻击设置下成功欺骗商业人脸识别服务，并将AWS SearchFaces API和Azure人脸验证准确率从91%降低到50.1%。
+
+
+
+## **5. Network insensitivity to parameter noise via adversarial regularization**
 
 基于对抗性正则化的网络对参数噪声不敏感性 cs.LG
 
@@ -17,7 +75,7 @@
 
 
 
-## **2. Unlearning Protected User Attributes in Recommendations with Adversarial Training**
+## **6. Unlearning Protected User Attributes in Recommendations with Adversarial Training**
 
 在带有对抗性训练的推荐中忘记受保护的用户属性 cs.IR
 
@@ -33,7 +91,7 @@ Accepted at SIGIR 2022
 
 
 
-## **3. Subfield Algorithms for Ideal- and Module-SVP Based on the Decomposition Group**
+## **7. Subfield Algorithms for Ideal- and Module-SVP Based on the Decomposition Group**
 
 基于分解群的理想和模SVP的子场算法 cs.CR
 
@@ -49,7 +107,7 @@ Accepted at SIGIR 2022
 
 
 
-## **4. CARLA-GeAR: a Dataset Generator for a Systematic Evaluation of Adversarial Robustness of Vision Models**
+## **8. CARLA-GeAR: a Dataset Generator for a Systematic Evaluation of Adversarial Robustness of Vision Models**
 
 Carla-Gear：用于系统评估视觉模型对抗稳健性的数据集生成器 cs.CV
 
@@ -63,7 +121,7 @@ Carla-Gear：用于系统评估视觉模型对抗稳健性的数据集生成器 
 
 
 
-## **5. Plug & Play Attacks: Towards Robust and Flexible Model Inversion Attacks**
+## **9. Plug & Play Attacks: Towards Robust and Flexible Model Inversion Attacks**
 
 即插即用攻击：朝向健壮灵活的模型反转攻击 cs.LG
 
@@ -79,7 +137,7 @@ Accepted by ICML 2022
 
 
 
-## **6. Learning to Break Deep Perceptual Hashing: The Use Case NeuralHash**
+## **10. Learning to Break Deep Perceptual Hashing: The Use Case NeuralHash**
 
 学习打破深度感知散列：用例NeuralHash cs.LG
 
@@ -95,7 +153,7 @@ Accepted by ACM FAccT 2022 as Oral
 
 
 
-## **7. Bounding Training Data Reconstruction in Private (Deep) Learning**
+## **11. Bounding Training Data Reconstruction in Private (Deep) Learning**
 
 私密(深度)学习中的边界训练数据重构 cs.LG
 
@@ -109,7 +167,7 @@ Accepted by ACM FAccT 2022 as Oral
 
 
 
-## **8. Blacklight: Scalable Defense for Neural Networks against Query-Based Black-Box Attacks**
+## **12. Blacklight: Scalable Defense for Neural Networks against Query-Based Black-Box Attacks**
 
 Blacklight：针对基于查询的黑盒攻击的神经网络可扩展防御 cs.CR
 
@@ -123,7 +181,7 @@ Blacklight：针对基于查询的黑盒攻击的神经网络可扩展防御 cs.
 
 
 
-## **9. Adversarial Text Normalization**
+## **13. Adversarial Text Normalization**
 
 对抗性文本规范化 cs.CL
 
@@ -137,7 +195,7 @@ Blacklight：针对基于查询的黑盒攻击的神经网络可扩展防御 cs.
 
 
 
-## **10. PrivHAR: Recognizing Human Actions From Privacy-preserving Lens**
+## **14. PrivHAR: Recognizing Human Actions From Privacy-preserving Lens**
 
 PrivHAR：从隐私保护镜头识别人类行为 cs.CV
 
@@ -151,7 +209,7 @@ PrivHAR：从隐私保护镜头识别人类行为 cs.CV
 
 
 
-## **11. Standalone Neural ODEs with Sensitivity Analysis**
+## **15. Standalone Neural ODEs with Sensitivity Analysis**
 
 带敏感度分析的独立神经网络模型 cs.LG
 
@@ -167,7 +225,7 @@ PrivHAR：从隐私保护镜头识别人类行为 cs.CV
 
 
 
-## **12. Wavelet Regularization Benefits Adversarial Training**
+## **16. Wavelet Regularization Benefits Adversarial Training**
 
 小波正则化有利于对抗训练 cs.CV
 
@@ -183,7 +241,7 @@ Preprint version
 
 
 
-## **13. PRADA: Practical Black-Box Adversarial Attacks against Neural Ranking Models**
+## **17. PRADA: Practical Black-Box Adversarial Attacks against Neural Ranking Models**
 
 Prada：针对神经排序模型的实用黑箱对抗性攻击 cs.IR
 
@@ -197,7 +255,7 @@ Prada：针对神经排序模型的实用黑箱对抗性攻击 cs.IR
 
 
 
-## **14. Latent Boundary-guided Adversarial Training**
+## **18. Latent Boundary-guided Adversarial Training**
 
 潜在边界制导的对抗性训练 cs.LG
 
@@ -213,7 +271,7 @@ To appear in Machine Learning
 
 
 
-## **15. Autoregressive Perturbations for Data Poisoning**
+## **19. Autoregressive Perturbations for Data Poisoning**
 
 数据中毒的自回归摄动 cs.LG
 
@@ -229,7 +287,7 @@ To appear in Machine Learning
 
 
 
-## **16. SHORTSTACK: Distributed, Fault-tolerant, Oblivious Data Access**
+## **20. SHORTSTACK: Distributed, Fault-tolerant, Oblivious Data Access**
 
 ShortStack：分布式、容错、不经意的数据访问 cs.CR
 
@@ -245,7 +303,7 @@ Full version of USENIX OSDI'22 paper
 
 
 
-## **17. Dap-FL: Federated Learning flourishes by adaptive tuning and secure aggregation**
+## **21. Dap-FL: Federated Learning flourishes by adaptive tuning and secure aggregation**
 
 DAP-FL：联合学习通过自适应调整和安全聚合蓬勃发展 cs.CR
 
@@ -259,7 +317,7 @@ DAP-FL：联合学习通过自适应调整和安全聚合蓬勃发展 cs.CR
 
 
 
-## **18. Random and Adversarial Bit Error Robustness: Energy-Efficient and Secure DNN Accelerators**
+## **22. Random and Adversarial Bit Error Robustness: Energy-Efficient and Secure DNN Accelerators**
 
 随机和对抗性误码稳健性：节能和安全的DNN加速器 cs.LG
 
@@ -273,7 +331,7 @@ DAP-FL：联合学习通过自适应调整和安全聚合蓬勃发展 cs.CR
 
 
 
-## **19. Optimal Clock Synchronization with Signatures**
+## **23. Optimal Clock Synchronization with Signatures**
 
 利用签名实现最优时钟同步 cs.DC
 
@@ -287,7 +345,7 @@ DAP-FL：联合学习通过自适应调整和安全聚合蓬勃发展 cs.CR
 
 
 
-## **20. Towards Understanding and Mitigating Audio Adversarial Examples for Speaker Recognition**
+## **24. Towards Understanding and Mitigating Audio Adversarial Examples for Speaker Recognition**
 
 说话人识别中音频对抗性实例的理解与缓解 cs.SD
 
@@ -301,7 +359,7 @@ DAP-FL：联合学习通过自适应调整和安全聚合蓬勃发展 cs.CR
 
 
 
-## **21. Building Robust Ensembles via Margin Boosting**
+## **25. Building Robust Ensembles via Margin Boosting**
 
 通过提高利润率来构建稳健的整体 cs.LG
 
@@ -317,7 +375,7 @@ Accepted by ICML 2022
 
 
 
-## **22. Adaptive Regularization for Adversarial Training**
+## **26. Adaptive Regularization for Adversarial Training**
 
 自适应正则化在对抗性训练中的应用 stat.ML
 
@@ -331,7 +389,7 @@ Accepted by ICML 2022
 
 
 
-## **23. AS2T: Arbitrary Source-To-Target Adversarial Attack on Speaker Recognition Systems**
+## **27. AS2T: Arbitrary Source-To-Target Adversarial Attack on Speaker Recognition Systems**
 
 AS2T：说话人识别系统的任意源-目标对抗攻击 cs.SD
 
@@ -345,7 +403,7 @@ AS2T：说话人识别系统的任意源-目标对抗攻击 cs.SD
 
 
 
-## **24. Subject Membership Inference Attacks in Federated Learning**
+## **28. Subject Membership Inference Attacks in Federated Learning**
 
 联合学习中的主体成员推理攻击 cs.LG
 
@@ -359,7 +417,7 @@ AS2T：说话人识别系统的任意源-目标对抗攻击 cs.SD
 
 
 
-## **25. Quickest Change Detection in the Presence of Transient Adversarial Attacks**
+## **29. Quickest Change Detection in the Presence of Transient Adversarial Attacks**
 
 存在瞬时敌意攻击时的最快变化检测 eess.SP
 
@@ -373,7 +431,7 @@ AS2T：说话人识别系统的任意源-目标对抗攻击 cs.SD
 
 
 
-## **26. Robust Adversarial Attacks Detection based on Explainable Deep Reinforcement Learning For UAV Guidance and Planning**
+## **30. Robust Adversarial Attacks Detection based on Explainable Deep Reinforcement Learning For UAV Guidance and Planning**
 
 基于可解释深度强化学习的无人机制导规划鲁棒对抗攻击检测 cs.LG
 
@@ -389,7 +447,7 @@ AS2T：说话人识别系统的任意源-目标对抗攻击 cs.SD
 
 
 
-## **27. VLC Physical Layer Security through RIS-aided Jamming Receiver for 6G Wireless Networks**
+## **31. VLC Physical Layer Security through RIS-aided Jamming Receiver for 6G Wireless Networks**
 
 基于RIS辅助干扰接收机的6G无线网络VLC物理层安全 cs.CR
 
@@ -403,7 +461,7 @@ AS2T：说话人识别系统的任意源-目标对抗攻击 cs.SD
 
 
 
-## **28. Sampling without Replacement Leads to Faster Rates in Finite-Sum Minimax Optimization**
+## **32. Sampling without Replacement Leads to Faster Rates in Finite-Sum Minimax Optimization**
 
 有限和极小极大优化中无替换抽样的快速算法 math.OC
 
@@ -419,7 +477,7 @@ AS2T：说话人识别系统的任意源-目标对抗攻击 cs.SD
 
 
 
-## **29. A Robust Deep Learning Enabled Semantic Communication System for Text**
+## **33. A Robust Deep Learning Enabled Semantic Communication System for Text**
 
 一种支持深度学习的健壮文本语义交流系统 eess.SP
 
@@ -435,7 +493,7 @@ AS2T：说话人识别系统的任意源-目标对抗攻击 cs.SD
 
 
 
-## **30. Certified Robustness in Federated Learning**
+## **34. Certified Robustness in Federated Learning**
 
 联合学习中的认证稳健性 cs.LG
 
@@ -451,7 +509,7 @@ AS2T：说话人识别系统的任意源-目标对抗攻击 cs.SD
 
 
 
-## **31. Fast Adversarial Training with Adaptive Step Size**
+## **35. Fast Adversarial Training with Adaptive Step Size**
 
 步长自适应的快速对抗性训练 cs.LG
 
@@ -465,7 +523,7 @@ AS2T：说话人识别系统的任意源-目标对抗攻击 cs.SD
 
 
 
-## **32. The art of defense: letting networks fool the attacker**
+## **36. The art of defense: letting networks fool the attacker**
 
 防御艺术：让网络愚弄攻击者 cs.CV
 
@@ -479,7 +537,7 @@ AS2T：说话人识别系统的任意源-目标对抗攻击 cs.SD
 
 
 
-## **33. Quantized and Distributed Subgradient Optimization Method with Malicious Attack**
+## **37. Quantized and Distributed Subgradient Optimization Method with Malicious Attack**
 
 具有恶意攻击的量化分布式次梯度优化方法 math.OC
 
@@ -493,7 +551,7 @@ AS2T：说话人识别系统的任意源-目标对抗攻击 cs.SD
 
 
 
-## **34. Vanilla Feature Distillation for Improving the Accuracy-Robustness Trade-Off in Adversarial Training**
+## **38. Vanilla Feature Distillation for Improving the Accuracy-Robustness Trade-Off in Adversarial Training**
 
 在对抗性训练中提高精确度和稳健性权衡的普通特征提取 cs.CV
 
@@ -509,7 +567,7 @@ AS2T：说话人识别系统的任意源-目标对抗攻击 cs.SD
 
 
 
-## **35. Federated Adversarial Training with Transformers**
+## **39. Federated Adversarial Training with Transformers**
 
 与变形金刚进行联合对抗性训练 cs.LG
 
@@ -523,7 +581,7 @@ AS2T：说话人识别系统的任意源-目标对抗攻击 cs.SD
 
 
 
-## **36. Data-Efficient Backdoor Attacks**
+## **40. Data-Efficient Backdoor Attacks**
 
 数据高效的后门攻击 cs.CV
 
@@ -539,7 +597,7 @@ Accepted to IJCAI 2022 Long Oral
 
 
 
-## **37. Connecting adversarial attacks and optimal transport for domain adaptation**
+## **41. Connecting adversarial attacks and optimal transport for domain adaptation**
 
 连接对抗性攻击和最优传输以实现域自适应 cs.LG
 
@@ -553,7 +611,7 @@ Accepted to IJCAI 2022 Long Oral
 
 
 
-## **38. A General Framework for Evaluating Robustness of Combinatorial Optimization Solvers on Graphs**
+## **42. A General Framework for Evaluating Robustness of Combinatorial Optimization Solvers on Graphs**
 
 评价图上组合优化求解器稳健性的通用框架 math.OC
 
@@ -567,7 +625,7 @@ Accepted to IJCAI 2022 Long Oral
 
 
 
-## **39. Guided Diffusion Model for Adversarial Purification**
+## **43. Guided Diffusion Model for Adversarial Purification**
 
 对抗性净化中的引导扩散模型 cs.CV
 
@@ -581,7 +639,7 @@ Accepted to IJCAI 2022 Long Oral
 
 
 
-## **40. Soft Adversarial Training Can Retain Natural Accuracy**
+## **44. Soft Adversarial Training Can Retain Natural Accuracy**
 
 软对抗训练可以保持自然的准确性 cs.LG
 
@@ -597,7 +655,7 @@ Accepted to IJCAI 2022 Long Oral
 
 
 
-## **41. Saliency Attack: Towards Imperceptible Black-box Adversarial Attack**
+## **45. Saliency Attack: Towards Imperceptible Black-box Adversarial Attack**
 
 突显攻击：向潜伏的黑盒对抗性攻击 cs.LG
 
@@ -611,7 +669,7 @@ Accepted to IJCAI 2022 Long Oral
 
 
 
-## **42. Reward Poisoning Attacks on Offline Multi-Agent Reinforcement Learning**
+## **46. Reward Poisoning Attacks on Offline Multi-Agent Reinforcement Learning**
 
 基于离线多智能体强化学习的奖励毒化攻击 cs.LG
 
@@ -625,7 +683,7 @@ Accepted to IJCAI 2022 Long Oral
 
 
 
-## **43. Kallima: A Clean-label Framework for Textual Backdoor Attacks**
+## **47. Kallima: A Clean-label Framework for Textual Backdoor Attacks**
 
 Kallima：一种针对文本后门攻击的干净标签框架 cs.CR
 
@@ -639,7 +697,7 @@ Kallima：一种针对文本后门攻击的干净标签框架 cs.CR
 
 
 
-## **44. Almost Tight L0-norm Certified Robustness of Top-k Predictions against Adversarial Perturbations**
+## **48. Almost Tight L0-norm Certified Robustness of Top-k Predictions against Adversarial Perturbations**
 
 Top-k预测对敌方扰动的几乎紧L0范数认证稳健性 cs.CR
 
@@ -655,7 +713,7 @@ Published as a conference paper at ICLR 2022
 
 
 
-## **45. Gradient Obfuscation Checklist Test Gives a False Sense of Security**
+## **49. Gradient Obfuscation Checklist Test Gives a False Sense of Security**
 
 梯度混淆核对表测试给人一种错误的安全感 cs.CV
 
@@ -669,7 +727,7 @@ Published as a conference paper at ICLR 2022
 
 
 
-## **46. Evaluating Transfer-based Targeted Adversarial Perturbations against Real-World Computer Vision Systems based on Human Judgments**
+## **50. Evaluating Transfer-based Targeted Adversarial Perturbations against Real-World Computer Vision Systems based on Human Judgments**
 
 基于人的判断评估基于迁移的目标对抗性扰动对真实世界计算机视觉系统的影响 cs.CV
 
@@ -682,68 +740,6 @@ technical report
 **Abstracts**: Computer vision systems are remarkably vulnerable to adversarial perturbations. Transfer-based adversarial images are generated on one (source) system and used to attack another (target) system. In this paper, we take the first step to investigate transfer-based targeted adversarial images in a realistic scenario where the target system is trained on some private data with its inventory of semantic labels not publicly available. Our main contributions include an extensive human-judgment-based evaluation of attack success on the Google Cloud Vision API and additional analysis of the different behaviors of Google Cloud Vision in face of original images vs. adversarial images. Resources are publicly available at \url{https://github.com/ZhengyuZhao/Targeted-Tansfer/blob/main/google_results.zip}.
 
 摘要: 计算机视觉系统非常容易受到对抗性干扰的影响。基于传输的敌意图像在一个(源)系统上生成，并用于攻击另一个(目标)系统。在本文中，我们第一步研究了基于转移的目标敌意图像，在现实场景中，目标系统是在一些私有数据上进行训练的，其语义标签库不是公开的。我们的主要贡献包括对Google Cloud Vision API的攻击成功进行了广泛的基于人的判断的评估，以及对Google Cloud Vision在面对原始图像和对手图像时的不同行为进行了额外的分析。资源可在\url{https://github.com/ZhengyuZhao/Targeted-Tansfer/blob/main/google_results.zip}.上公开获得
-
-
-
-## **47. Adversarial Attacks on Human Vision**
-
-对人类视觉的对抗性攻击 cs.CV
-
-21 pages, 8 figures, 1 table
-
-**SubmitDate**: 2022-06-03    [paper-pdf](http://arxiv.org/pdf/2206.01365v1)
-
-**Authors**: Victor A. Mateescu, Ivan V. Bajić
-
-**Abstracts**: This article presents an introduction to visual attention retargeting, its connection to visual saliency, the challenges associated with it, and ideas for how it can be approached. The difficulty of attention retargeting as a saliency inversion problem lies in the lack of one-to-one mapping between saliency and the image domain, in addition to the possible negative impact of saliency alterations on image aesthetics. A few approaches from recent literature to solve this challenging problem are reviewed, and several suggestions for future development are presented.
-
-摘要: 这篇文章介绍了视觉注意重定目标，它与视觉显著的联系，与之相关的挑战，以及如何处理它的想法。注意力重定向作为显著反转问题的困难在于缺乏显著与图像域之间的一对一映射，以及显著变化可能对图像美学造成的负面影响。从最近的文献中回顾了一些解决这一挑战性问题的方法，并对未来的发展提出了几点建议。
-
-
-
-## **48. On the Privacy Properties of GAN-generated Samples**
-
-GaN样品的保密特性研究 cs.LG
-
-AISTATS 2021
-
-**SubmitDate**: 2022-06-03    [paper-pdf](http://arxiv.org/pdf/2206.01349v1)
-
-**Authors**: Zinan Lin, Vyas Sekar, Giulia Fanti
-
-**Abstracts**: The privacy implications of generative adversarial networks (GANs) are a topic of great interest, leading to several recent algorithms for training GANs with privacy guarantees. By drawing connections to the generalization properties of GANs, we prove that under some assumptions, GAN-generated samples inherently satisfy some (weak) privacy guarantees. First, we show that if a GAN is trained on m samples and used to generate n samples, the generated samples are (epsilon, delta)-differentially-private for (epsilon, delta) pairs where delta scales as O(n/m). We show that under some special conditions, this upper bound is tight. Next, we study the robustness of GAN-generated samples to membership inference attacks. We model membership inference as a hypothesis test in which the adversary must determine whether a given sample was drawn from the training dataset or from the underlying data distribution. We show that this adversary can achieve an area under the ROC curve that scales no better than O(m^{-1/4}).
-
-摘要: 生成性对抗网络(GAN)的隐私影响是一个非常感兴趣的话题，导致了最近几个用于训练具有隐私保证的GAN的算法。通过与GANS的泛化性质的联系，我们证明了在某些假设下，GAN生成的样本内在地满足某些(弱)隐私保证。首先，我们证明了如果一个GaN被训练在m个样本上并用来产生n个样本，所产生的样本对于(epsilon，Delta)对是(epsilon，Delta)-差分-私有的，其中Delta尺度为O(n/m)。我们证明了在某些特殊条件下，这个上界是紧的。接下来，我们研究了GAN生成的样本对成员推理攻击的稳健性。我们将成员推理建模为假设检验，其中对手必须确定给定的样本是从训练数据集还是从底层数据分布中提取的。我们证明了这个对手可以在ROC曲线下获得一个尺度不超过O(m^{-1/4})的区域。
-
-
-
-## **49. Adaptive Adversarial Training to Improve Adversarial Robustness of DNNs for Medical Image Segmentation and Detection**
-
-自适应对抗训练提高DNN在医学图像分割和检测中的对抗鲁棒性 eess.IV
-
-8 pages
-
-**SubmitDate**: 2022-06-02    [paper-pdf](http://arxiv.org/pdf/2206.01736v1)
-
-**Authors**: Linhai Ma, Liang Liang
-
-**Abstracts**: Recent methods based on Deep Neural Networks (DNNs) have reached high accuracy for medical image analysis, including the three basic tasks: segmentation, landmark detection, and object detection. It is known that DNNs are vulnerable to adversarial attacks, and the adversarial robustness of DNNs could be improved by adding adversarial noises to training data (i.e., adversarial training). In this study, we show that the standard adversarial training (SAT) method has a severe issue that limits its practical use: it generates a fixed level of noise for DNN training, and it is difficult for the user to choose an appropriate noise level, because a high noise level may lead to a large reduction in model performance, and a low noise level may have little effect. To resolve this issue, we have designed a novel adaptive-margin adversarial training (AMAT) method that generates adaptive adversarial noises for DNN training, which are dynamically tailored for each individual training sample. We have applied our AMAT method to state-of-the-art DNNs for the three basic tasks, using five publicly available datasets. The experimental results demonstrate that our AMAT method outperforms the SAT method in adversarial robustness on noisy data and prediction accuracy on clean data. Please contact the author for the source code.
-
-摘要: 近年来，基于深度神经网络(DNNS)的医学图像分析方法已经达到了很高的精度，包括分割、地标检测和目标检测三个基本任务。众所周知，DNN容易受到对抗性攻击，通过在训练数据中添加对抗性噪声(即对抗性训练)可以提高DNN的对抗性健壮性。在这项研究中，我们发现标准的对抗训练(SAT)方法有一个严重的问题限制了它的实际应用：它为DNN训练产生固定的噪声水平，用户很难选择合适的噪声水平，因为高水平的噪声可能会导致模型性能的大幅下降，而低水平的噪声可能影响很小。为了解决这一问题，我们设计了一种新的自适应差值对抗训练方法(AMAT)，该方法为DNN训练生成自适应对抗噪声，这些噪声是为每个训练样本动态定制的。我们已经将我们的AMAT方法应用于三个基本任务的最先进的DNN，使用了五个公开可用的数据集。实验结果表明，我们的AMAT方法在对噪声数据的对抗稳健性和对干净数据的预测精度方面优于SAT方法。请联系作者以获取源代码。
-
-
-
-## **50. A Barrier Certificate-based Simplex Architecture with Application to Microgrids**
-
-一种基于屏障证书的单纯形体系结构及其在微网格中的应用 eess.SY
-
-**SubmitDate**: 2022-06-02    [paper-pdf](http://arxiv.org/pdf/2202.09710v2)
-
-**Authors**: Amol Damare, Shouvik Roy, Scott A. Smolka, Scott D. Stoller
-
-**Abstracts**: We present Barrier Certificate-based Simplex (BC-Simplex), a new, provably correct design for runtime assurance of continuous dynamical systems. BC-Simplex is centered around the Simplex Control Architecture, which consists of a high-performance advanced controller which is not guaranteed to maintain safety of the plant, a verified-safe baseline controller, and a decision module that switches control of the plant between the two controllers to ensure safety without sacrificing performance. In BC-Simplex, Barrier certificates are used to prove that the baseline controller ensures safety. Furthermore, BC-Simplex features a new automated method for deriving, from the barrier certificate, the conditions for switching between the controllers. Our method is based on the Taylor expansion of the barrier certificate and yields computationally inexpensive switching conditions. We consider a significant application of BC-Simplex to a microgrid featuring an advanced controller in the form of a neural network trained using reinforcement learning. The microgrid is modeled in RTDS, an industry-standard high-fidelity, real-time power systems simulator. Our results demonstrate that BC-Simplex can automatically derive switching conditions for complex systems, the switching conditions are not overly conservative, and BC-Simplex ensures safety even in the presence of adversarial attacks on the neural controller.
-
-摘要: 提出了基于屏障证书的单纯形(BC-Simplex)，这是一种新的、可证明是正确的连续动态系统运行时保证设计。BC-Simplex围绕Simplex控制架构展开，该架构由不能保证维护工厂安全的高性能高级控制器、经过验证的安全基准控制器以及在两个控制器之间切换工厂控制以确保安全而不牺牲性能的决策模块组成。在BC-Simplex中，屏障证书被用来证明基线控制器确保了安全性。此外，BC-Simplex具有一种新的自动方法，用于从屏障证书推导控制器之间切换的条件。我们的方法是基于障碍证书的泰勒展开式，并且产生了计算上不昂贵的切换条件。我们考虑了BC-单纯形在微电网中的一个重要应用，该微网具有一个采用强化学习训练的神经网络形式的高级控制器。微电网是在RTDS中建模的，RTDS是一种行业标准的高保真、实时电力系统仿真器。结果表明，BC-单纯形能够自动推导出复杂系统的切换条件，切换条件不会过于保守，即使在神经控制器受到敌意攻击的情况下，BC-单纯形也能保证安全性。
 
 
 

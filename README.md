@@ -1,9 +1,93 @@
 # Latest Adversarial Attack Papers
-**update at 2022-06-29 06:31:32**
+**update at 2022-06-30 06:31:36**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. FIDO2 With Two Displays$\unicode{x2013}$Or How to Protect Security-Critical Web Transactions Against Malware Attacks**
+## **1. How to Steer Your Adversary: Targeted and Efficient Model Stealing Defenses with Gradient Redirection**
+
+cs.LG
+
+ICML 2022
+
+**SubmitDate**: 2022-06-28    [paper-pdf](http://arxiv.org/pdf/2206.14157v1)
+
+**Authors**: Mantas Mazeika, Bo Li, David Forsyth
+
+**Abstracts**: Model stealing attacks present a dilemma for public machine learning APIs. To protect financial investments, companies may be forced to withhold important information about their models that could facilitate theft, including uncertainty estimates and prediction explanations. This compromise is harmful not only to users but also to external transparency. Model stealing defenses seek to resolve this dilemma by making models harder to steal while preserving utility for benign users. However, existing defenses have poor performance in practice, either requiring enormous computational overheads or severe utility trade-offs. To meet these challenges, we present a new approach to model stealing defenses called gradient redirection. At the core of our approach is a provably optimal, efficient algorithm for steering an adversary's training updates in a targeted manner. Combined with improvements to surrogate networks and a novel coordinated defense strategy, our gradient redirection defense, called GRAD${}^2$, achieves small utility trade-offs and low computational overhead, outperforming the best prior defenses. Moreover, we demonstrate how gradient redirection enables reprogramming the adversary with arbitrary behavior, which we hope will foster work on new avenues of defense.
+
+
+
+## **2. Debiasing Learning for Membership Inference Attacks Against Recommender Systems**
+
+cs.IR
+
+Accepted by KDD 2022
+
+**SubmitDate**: 2022-06-28    [paper-pdf](http://arxiv.org/pdf/2206.12401v2)
+
+**Authors**: Zihan Wang, Na Huang, Fei Sun, Pengjie Ren, Zhumin Chen, Hengliang Luo, Maarten de Rijke, Zhaochun Ren
+
+**Abstracts**: Learned recommender systems may inadvertently leak information about their training data, leading to privacy violations. We investigate privacy threats faced by recommender systems through the lens of membership inference. In such attacks, an adversary aims to infer whether a user's data is used to train the target recommender. To achieve this, previous work has used a shadow recommender to derive training data for the attack model, and then predicts the membership by calculating difference vectors between users' historical interactions and recommended items. State-of-the-art methods face two challenging problems: (1) training data for the attack model is biased due to the gap between shadow and target recommenders, and (2) hidden states in recommenders are not observational, resulting in inaccurate estimations of difference vectors. To address the above limitations, we propose a Debiasing Learning for Membership Inference Attacks against recommender systems (DL-MIA) framework that has four main components: (1) a difference vector generator, (2) a disentangled encoder, (3) a weight estimator, and (4) an attack model. To mitigate the gap between recommenders, a variational auto-encoder (VAE) based disentangled encoder is devised to identify recommender invariant and specific features. To reduce the estimation bias, we design a weight estimator, assigning a truth-level score for each difference vector to indicate estimation accuracy. We evaluate DL-MIA against both general recommenders and sequential recommenders on three real-world datasets. Experimental results show that DL-MIA effectively alleviates training and estimation biases simultaneously, and achieves state-of-the-art attack performance.
+
+
+
+## **3. On the amplification of security and privacy risks by post-hoc explanations in machine learning models**
+
+cs.LG
+
+9 pages, appendix: 2 pages
+
+**SubmitDate**: 2022-06-28    [paper-pdf](http://arxiv.org/pdf/2206.14004v1)
+
+**Authors**: Pengrui Quan, Supriyo Chakraborty, Jeya Vikranth Jeyakumar, Mani Srivastava
+
+**Abstracts**: A variety of explanation methods have been proposed in recent years to help users gain insights into the results returned by neural networks, which are otherwise complex and opaque black-boxes. However, explanations give rise to potential side-channels that can be leveraged by an adversary for mounting attacks on the system. In particular, post-hoc explanation methods that highlight input dimensions according to their importance or relevance to the result also leak information that weakens security and privacy. In this work, we perform the first systematic characterization of the privacy and security risks arising from various popular explanation techniques. First, we propose novel explanation-guided black-box evasion attacks that lead to 10 times reduction in query count for the same success rate. We show that the adversarial advantage from explanations can be quantified as a reduction in the total variance of the estimated gradient. Second, we revisit the membership information leaked by common explanations. Contrary to observations in prior studies, via our modified attacks we show significant leakage of membership information (above 100% improvement over prior results), even in a much stricter black-box setting. Finally, we study explanation-guided model extraction attacks and demonstrate adversarial gains through a large reduction in query count.
+
+
+
+## **4. Increasing Confidence in Adversarial Robustness Evaluations**
+
+cs.LG
+
+Oral at CVPR 2022 Workshop (Art of Robustness). Project website  https://zimmerrol.github.io/active-tests/
+
+**SubmitDate**: 2022-06-28    [paper-pdf](http://arxiv.org/pdf/2206.13991v1)
+
+**Authors**: Roland S. Zimmermann, Wieland Brendel, Florian Tramer, Nicholas Carlini
+
+**Abstracts**: Hundreds of defenses have been proposed to make deep neural networks robust against minimal (adversarial) input perturbations. However, only a handful of these defenses held up their claims because correctly evaluating robustness is extremely challenging: Weak attacks often fail to find adversarial examples even if they unknowingly exist, thereby making a vulnerable network look robust. In this paper, we propose a test to identify weak attacks, and thus weak defense evaluations. Our test slightly modifies a neural network to guarantee the existence of an adversarial example for every sample. Consequentially, any correct attack must succeed in breaking this modified network. For eleven out of thirteen previously-published defenses, the original evaluation of the defense fails our test, while stronger attacks that break these defenses pass it. We hope that attack unit tests - such as ours - will be a major component in future robustness evaluations and increase confidence in an empirical field that is currently riddled with skepticism.
+
+
+
+## **5. Ownership Verification of DNN Architectures via Hardware Cache Side Channels**
+
+cs.CR
+
+The paper has been accepted by IEEE Transactions on Circuits and  Systems for Video Technology
+
+**SubmitDate**: 2022-06-28    [paper-pdf](http://arxiv.org/pdf/2102.03523v4)
+
+**Authors**: Xiaoxuan Lou, Shangwei Guo, Jiwei Li, Tianwei Zhang
+
+**Abstracts**: Deep Neural Networks (DNN) are gaining higher commercial values in computer vision applications, e.g., image classification, video analytics, etc. This calls for urgent demands of the intellectual property (IP) protection of DNN models. In this paper, we present a novel watermarking scheme to achieve the ownership verification of DNN architectures. Existing works all embedded watermarks into the model parameters while treating the architecture as public property. These solutions were proven to be vulnerable by an adversary to detect or remove the watermarks. In contrast, we claim the model architectures as an important IP for model owners, and propose to implant watermarks into the architectures. We design new algorithms based on Neural Architecture Search (NAS) to generate watermarked architectures, which are unique enough to represent the ownership, while maintaining high model usability. Such watermarks can be extracted via side-channel-based model extraction techniques with high fidelity. We conduct comprehensive experiments on watermarked CNN models for image classification tasks and the experimental results show our scheme has negligible impact on the model performance, and exhibits strong robustness against various model transformations and adaptive attacks.
+
+
+
+## **6. Deep Image Destruction: Vulnerability of Deep Image-to-Image Models against Adversarial Attacks**
+
+cs.CV
+
+ICPR2022
+
+**SubmitDate**: 2022-06-28    [paper-pdf](http://arxiv.org/pdf/2104.15022v2)
+
+**Authors**: Jun-Ho Choi, Huan Zhang, Jun-Hyuk Kim, Cho-Jui Hsieh, Jong-Seok Lee
+
+**Abstracts**: Recently, the vulnerability of deep image classification models to adversarial attacks has been investigated. However, such an issue has not been thoroughly studied for image-to-image tasks that take an input image and generate an output image (e.g., colorization, denoising, deblurring, etc.) This paper presents comprehensive investigations into the vulnerability of deep image-to-image models to adversarial attacks. For five popular image-to-image tasks, 16 deep models are analyzed from various standpoints such as output quality degradation due to attacks, transferability of adversarial examples across different tasks, and characteristics of perturbations. We show that unlike image classification tasks, the performance degradation on image-to-image tasks largely differs depending on various factors, e.g., attack methods and task objectives. In addition, we analyze the effectiveness of conventional defense methods used for classification models in improving the robustness of the image-to-image models.
+
+
+
+## **7. FIDO2 With Two Displays$\unicode{x2013}$Or How to Protect Security-Critical Web Transactions Against Malware Attacks**
 
 cs.CR
 
@@ -15,7 +99,7 @@ cs.CR
 
 
 
-## **2. Improving Privacy and Security in Unmanned Aerial Vehicles Network using Blockchain**
+## **8. Improving Privacy and Security in Unmanned Aerial Vehicles Network using Blockchain**
 
 cs.CR
 
@@ -29,7 +113,7 @@ cs.CR
 
 
 
-## **3. Adversarially Robust Learning of Real-Valued Functions**
+## **9. Adversarially Robust Learning of Real-Valued Functions**
 
 cs.LG
 
@@ -41,7 +125,7 @@ cs.LG
 
 
 
-## **4. Cascading Failures in Smart Grids under Random, Targeted and Adaptive Attacks**
+## **10. Cascading Failures in Smart Grids under Random, Targeted and Adaptive Attacks**
 
 cs.SI
 
@@ -55,7 +139,7 @@ Accepted for publication as a book chapter. arXiv admin note:  substantial text 
 
 
 
-## **5. Empirical Evaluation of Physical Adversarial Patch Attacks Against Overhead Object Detection Models**
+## **11. Empirical Evaluation of Physical Adversarial Patch Attacks Against Overhead Object Detection Models**
 
 cs.CV
 
@@ -67,7 +151,7 @@ cs.CV
 
 
 
-## **6. Defending Multimodal Fusion Models against Single-Source Adversaries**
+## **12. Defending Multimodal Fusion Models against Single-Source Adversaries**
 
 cs.CV
 
@@ -81,7 +165,7 @@ CVPR 2021
 
 
 
-## **7. Defense against adversarial attacks on deep convolutional neural networks through nonlocal denoising**
+## **13. Defense against adversarial attacks on deep convolutional neural networks through nonlocal denoising**
 
 cs.CV
 
@@ -93,7 +177,7 @@ cs.CV
 
 
 
-## **8. RSTAM: An Effective Black-Box Impersonation Attack on Face Recognition using a Mobile and Compact Printer**
+## **14. RSTAM: An Effective Black-Box Impersonation Attack on Face Recognition using a Mobile and Compact Printer**
 
 cs.CV
 
@@ -105,21 +189,7 @@ cs.CV
 
 
 
-## **9. Debiasing Learning for Membership Inference Attacks Against Recommender Systems**
-
-cs.IR
-
-Accepted by KDD 2022
-
-**SubmitDate**: 2022-06-24    [paper-pdf](http://arxiv.org/pdf/2206.12401v1)
-
-**Authors**: Zihan Wang, Na Huang, Fei Sun, Pengjie Ren, Zhumin Chen, Hengliang Luo, Maarten de Rijke, Zhaochun Ren
-
-**Abstracts**: Learned recommender systems may inadvertently leak information about their training data, leading to privacy violations. We investigate privacy threats faced by recommender systems through the lens of membership inference. In such attacks, an adversary aims to infer whether a user's data is used to train the target recommender. To achieve this, previous work has used a shadow recommender to derive training data for the attack model, and then predicts the membership by calculating difference vectors between users' historical interactions and recommended items. State-of-the-art methods face two challenging problems: (1) training data for the attack model is biased due to the gap between shadow and target recommenders, and (2) hidden states in recommenders are not observational, resulting in inaccurate estimations of difference vectors. To address the above limitations, we propose a Debiasing Learning for Membership Inference Attacks against recommender systems (DL-MIA) framework that has four main components: (1) a difference vector generator, (2) a disentangled encoder, (3) a weight estimator, and (4) an attack model. To mitigate the gap between recommenders, a variational auto-encoder (VAE) based disentangled encoder is devised to identify recommender invariant and specific features. To reduce the estimation bias, we design a weight estimator, assigning a truth-level score for each difference vector to indicate estimation accuracy. We evaluate DL-MIA against both general recommenders and sequential recommenders on three real-world datasets. Experimental results show that DL-MIA effectively alleviates training and estimation biases simultaneously, and achieves state-of-the-art attack performance.
-
-
-
-## **10. Defending Backdoor Attacks on Vision Transformer via Patch Processing**
+## **15. Defending Backdoor Attacks on Vision Transformer via Patch Processing**
 
 cs.CV
 
@@ -131,7 +201,7 @@ cs.CV
 
 
 
-## **11. Robustness of Explanation Methods for NLP Models**
+## **16. Robustness of Explanation Methods for NLP Models**
 
 cs.CL
 
@@ -143,7 +213,7 @@ cs.CL
 
 
 
-## **12. Property Unlearning: A Defense Strategy Against Property Inference Attacks**
+## **17. Property Unlearning: A Defense Strategy Against Property Inference Attacks**
 
 cs.CR
 
@@ -157,7 +227,7 @@ Please note: As of June 24, 2022, we have discovered some flaws in  our experime
 
 
 
-## **13. Adversarial Robustness of Deep Neural Networks: A Survey from a Formal Verification Perspective**
+## **18. Adversarial Robustness of Deep Neural Networks: A Survey from a Formal Verification Perspective**
 
 cs.CR
 
@@ -169,7 +239,7 @@ cs.CR
 
 
 
-## **14. Cluster Attack: Query-based Adversarial Attacks on Graphs with Graph-Dependent Priors**
+## **19. Cluster Attack: Query-based Adversarial Attacks on Graphs with Graph-Dependent Priors**
 
 cs.LG
 
@@ -183,7 +253,7 @@ IJCAI 2022 (Long Presentation)
 
 
 
-## **15. An Improved Lattice-Based Ring Signature with Unclaimable Anonymity in the Standard Model**
+## **20. An Improved Lattice-Based Ring Signature with Unclaimable Anonymity in the Standard Model**
 
 cs.CR
 
@@ -195,7 +265,7 @@ cs.CR
 
 
 
-## **16. Keep Your Transactions On Short Leashes**
+## **21. Keep Your Transactions On Short Leashes**
 
 cs.CR
 
@@ -207,7 +277,7 @@ cs.CR
 
 
 
-## **17. Turning Your Strength against You: Detecting and Mitigating Robust and Universal Adversarial Patch Attacks**
+## **22. Turning Your Strength against You: Detecting and Mitigating Robust and Universal Adversarial Patch Attacks**
 
 cs.CR
 
@@ -219,7 +289,7 @@ cs.CR
 
 
 
-## **18. Probabilistically Resilient Multi-Robot Informative Path Planning**
+## **23. Probabilistically Resilient Multi-Robot Informative Path Planning**
 
 cs.RO
 
@@ -233,7 +303,7 @@ cs.RO
 
 
 
-## **19. Towards End-to-End Private Automatic Speaker Recognition**
+## **24. Towards End-to-End Private Automatic Speaker Recognition**
 
 eess.AS
 
@@ -247,7 +317,7 @@ Accepted for publication at Interspeech 2022
 
 
 
-## **20. BERT Rankers are Brittle: a Study using Adversarial Document Perturbations**
+## **25. BERT Rankers are Brittle: a Study using Adversarial Document Perturbations**
 
 cs.IR
 
@@ -261,7 +331,7 @@ To appear in ICTIR 2022
 
 
 
-## **21. Adversarial Zoom Lens: A Novel Physical-World Attack to DNNs**
+## **26. Adversarial Zoom Lens: A Novel Physical-World Attack to DNNs**
 
 cs.CR
 
@@ -273,7 +343,7 @@ cs.CR
 
 
 
-## **22. Exploring Adversarial Attacks and Defenses in Vision Transformers trained with DINO**
+## **27. Exploring Adversarial Attacks and Defenses in Vision Transformers trained with DINO**
 
 cs.CV
 
@@ -287,7 +357,7 @@ cs.CV
 
 
 
-## **23. Bounding Training Data Reconstruction in Private (Deep) Learning**
+## **28. Bounding Training Data Reconstruction in Private (Deep) Learning**
 
 cs.LG
 
@@ -299,7 +369,7 @@ cs.LG
 
 
 
-## **24. A Framework for Understanding Model Extraction Attack and Defense**
+## **29. A Framework for Understanding Model Extraction Attack and Defense**
 
 cs.LG
 
@@ -311,7 +381,7 @@ cs.LG
 
 
 
-## **25. InfoAT: Improving Adversarial Training Using the Information Bottleneck Principle**
+## **30. InfoAT: Improving Adversarial Training Using the Information Bottleneck Principle**
 
 cs.LG
 
@@ -325,7 +395,7 @@ Published in: IEEE Transactions on Neural Networks and Learning  Systems ( Early
 
 
 
-## **26. Incorporating Hidden Layer representation into Adversarial Attacks and Defences**
+## **31. Incorporating Hidden Layer representation into Adversarial Attacks and Defences**
 
 cs.LG
 
@@ -337,7 +407,7 @@ cs.LG
 
 
 
-## **27. Adversarial Learning with Cost-Sensitive Classes**
+## **32. Adversarial Learning with Cost-Sensitive Classes**
 
 cs.LG
 
@@ -351,7 +421,7 @@ cs.LG
 
 
 
-## **28. Shilling Black-box Recommender Systems by Learning to Generate Fake User Profiles**
+## **33. Shilling Black-box Recommender Systems by Learning to Generate Fake User Profiles**
 
 cs.IR
 
@@ -365,7 +435,7 @@ Accepted by TNNLS. 15 pages, 8 figures
 
 
 
-## **29. Making Generated Images Hard To Spot: A Transferable Attack On Synthetic Image Detectors**
+## **34. Making Generated Images Hard To Spot: A Transferable Attack On Synthetic Image Detectors**
 
 cs.CV
 
@@ -377,7 +447,7 @@ cs.CV
 
 
 
-## **30. AdvSmo: Black-box Adversarial Attack by Smoothing Linear Structure of Texture**
+## **35. AdvSmo: Black-box Adversarial Attack by Smoothing Linear Structure of Texture**
 
 cs.CV
 
@@ -391,7 +461,7 @@ cs.CV
 
 
 
-## **31. Adversarial Reconfigurable Intelligent Surface Against Physical Layer Key Generation**
+## **36. Adversarial Reconfigurable Intelligent Surface Against Physical Layer Key Generation**
 
 eess.SP
 
@@ -403,7 +473,7 @@ eess.SP
 
 
 
-## **32. Introduction to Machine Learning for the Sciences**
+## **37. Introduction to Machine Learning for the Sciences**
 
 physics.comp-ph
 
@@ -417,7 +487,7 @@ physics.comp-ph
 
 
 
-## **33. Guided Diffusion Model for Adversarial Purification from Random Noise**
+## **38. Guided Diffusion Model for Adversarial Purification from Random Noise**
 
 cs.LG
 
@@ -429,7 +499,7 @@ cs.LG
 
 
 
-## **34. Robust Universal Adversarial Perturbations**
+## **39. Robust Universal Adversarial Perturbations**
 
 cs.LG
 
@@ -443,7 +513,7 @@ cs.LG
 
 
 
-## **35. Adaptive Adversarial Training to Improve Adversarial Robustness of DNNs for Medical Image Segmentation and Detection**
+## **40. Adaptive Adversarial Training to Improve Adversarial Robustness of DNNs for Medical Image Segmentation and Detection**
 
 eess.IV
 
@@ -457,7 +527,7 @@ eess.IV
 
 
 
-## **36. SSMI: How to Make Objects of Interest Disappear without Accessing Object Detectors?**
+## **41. SSMI: How to Make Objects of Interest Disappear without Accessing Object Detectors?**
 
 cs.CV
 
@@ -471,7 +541,7 @@ cs.CV
 
 
 
-## **37. Secure and Efficient Query Processing in Outsourced Databases**
+## **42. Secure and Efficient Query Processing in Outsourced Databases**
 
 cs.CR
 
@@ -485,7 +555,7 @@ Ph.D. thesis
 
 
 
-## **38. FlashSyn: Flash Loan Attack Synthesis via Counter Example Driven Approximation**
+## **43. FlashSyn: Flash Loan Attack Synthesis via Counter Example Driven Approximation**
 
 cs.PL
 
@@ -499,7 +569,7 @@ cs.PL
 
 
 
-## **39. Using EBGAN for Anomaly Intrusion Detection**
+## **44. Using EBGAN for Anomaly Intrusion Detection**
 
 cs.CR
 
@@ -511,7 +581,7 @@ cs.CR
 
 
 
-## **40. Problem-Space Evasion Attacks in the Android OS: a Survey**
+## **45. Problem-Space Evasion Attacks in the Android OS: a Survey**
 
 cs.CR
 
@@ -523,7 +593,7 @@ cs.CR
 
 
 
-## **41. Certifiably Robust Policy Learning against Adversarial Communication in Multi-agent Systems**
+## **46. Certifiably Robust Policy Learning against Adversarial Communication in Multi-agent Systems**
 
 cs.LG
 
@@ -535,7 +605,7 @@ cs.LG
 
 
 
-## **42. ProML: A Decentralised Platform for Provenance Management of Machine Learning Software Systems**
+## **47. ProML: A Decentralised Platform for Provenance Management of Machine Learning Software Systems**
 
 cs.SE
 
@@ -549,7 +619,7 @@ Accepted as full paper in ECSA 2022 conference. To be presented
 
 
 
-## **43. Make Some Noise: Reliable and Efficient Single-Step Adversarial Training**
+## **48. Make Some Noise: Reliable and Efficient Single-Step Adversarial Training**
 
 cs.LG
 
@@ -561,7 +631,7 @@ cs.LG
 
 
 
-## **44. Diversified Adversarial Attacks based on Conjugate Gradient Method**
+## **49. Diversified Adversarial Attacks based on Conjugate Gradient Method**
 
 cs.LG
 
@@ -573,7 +643,7 @@ cs.LG
 
 
 
-## **45. On the Limitations of Stochastic Pre-processing Defenses**
+## **50. On the Limitations of Stochastic Pre-processing Defenses**
 
 cs.LG
 
@@ -582,72 +652,6 @@ cs.LG
 **Authors**: Yue Gao, Ilia Shumailov, Kassem Fawaz, Nicolas Papernot
 
 **Abstracts**: Defending against adversarial examples remains an open problem. A common belief is that randomness at inference increases the cost of finding adversarial inputs. An example of such a defense is to apply a random transformation to inputs prior to feeding them to the model. In this paper, we empirically and theoretically investigate such stochastic pre-processing defenses and demonstrate that they are flawed. First, we show that most stochastic defenses are weaker than previously thought; they lack sufficient randomness to withstand even standard attacks like projected gradient descent. This casts doubt on a long-held assumption that stochastic defenses invalidate attacks designed to evade deterministic defenses and force attackers to integrate the Expectation over Transformation (EOT) concept. Second, we show that stochastic defenses confront a trade-off between adversarial robustness and model invariance; they become less effective as the defended model acquires more invariance to their randomization. Future work will need to decouple these two effects. Our code is available in the supplementary material.
-
-
-
-## **46. A Universal Adversarial Policy for Text Classifiers**
-
-cs.LG
-
-Accepted for publication in Neural Networks (2022), see  https://doi.org/10.1016/j.neunet.2022.06.018
-
-**SubmitDate**: 2022-06-19    [paper-pdf](http://arxiv.org/pdf/2206.09458v1)
-
-**Authors**: Gallil Maimon, Lior Rokach
-
-**Abstracts**: Discovering the existence of universal adversarial perturbations had large theoretical and practical impacts on the field of adversarial learning. In the text domain, most universal studies focused on adversarial prefixes which are added to all texts. However, unlike the vision domain, adding the same perturbation to different inputs results in noticeably unnatural inputs. Therefore, we introduce a new universal adversarial setup - a universal adversarial policy, which has many advantages of other universal attacks but also results in valid texts - thus making it relevant in practice. We achieve this by learning a single search policy over a predefined set of semantics preserving text alterations, on many texts. This formulation is universal in that the policy is successful in finding adversarial examples on new texts efficiently. Our approach uses text perturbations which were extensively shown to produce natural attacks in the non-universal setup (specific synonym replacements). We suggest a strong baseline approach for this formulation which uses reinforcement learning. It's ability to generalise (from as few as 500 training texts) shows that universal adversarial patterns exist in the text domain as well.
-
-
-
-## **47. JPEG Compression-Resistant Low-Mid Adversarial Perturbation against Unauthorized Face Recognition System**
-
-cs.CV
-
-**SubmitDate**: 2022-06-19    [paper-pdf](http://arxiv.org/pdf/2206.09410v1)
-
-**Authors**: Jiaming Zhang, Qi Yi, Jitao Sang
-
-**Abstracts**: It has been observed that the unauthorized use of face recognition system raises privacy problems. Using adversarial perturbations provides one possible solution to address this issue. A critical issue to exploit adversarial perturbation against unauthorized face recognition system is that: The images uploaded to the web need to be processed by JPEG compression, which weakens the effectiveness of adversarial perturbation. Existing JPEG compression-resistant methods fails to achieve a balance among compression resistance, transferability, and attack effectiveness. To this end, we propose a more natural solution called low frequency adversarial perturbation (LFAP). Instead of restricting the adversarial perturbations, we turn to regularize the source model to employing more low-frequency features by adversarial training. Moreover, to better influence model in different frequency components, we proposed the refined low-mid frequency adversarial perturbation (LMFAP) considering the mid frequency components as the productive complement. We designed a variety of settings in this study to simulate the real-world application scenario, including cross backbones, supervisory heads, training datasets and testing datasets. Quantitative and qualitative experimental results validate the effectivenss of proposed solutions.
-
-
-
-## **48. Towards Adversarial Attack on Vision-Language Pre-training Models**
-
-cs.LG
-
-**SubmitDate**: 2022-06-19    [paper-pdf](http://arxiv.org/pdf/2206.09391v1)
-
-**Authors**: Jiaming Zhang, Qi Yi, Jitao Sang
-
-**Abstracts**: While vision-language pre-training model (VLP) has shown revolutionary improvements on various vision-language (V+L) tasks, the studies regarding its adversarial robustness remain largely unexplored. This paper studied the adversarial attack on popular VLP models and V+L tasks. First, we analyzed the performance of adversarial attacks under different settings. By examining the influence of different perturbed objects and attack targets, we concluded some key observations as guidance on both designing strong multimodal adversarial attack and constructing robust VLP models. Second, we proposed a novel multimodal attack method on the VLP models called Collaborative Multimodal Adversarial Attack (Co-Attack), which collectively carries out the attacks on the image modality and the text modality. Experimental results demonstrated that the proposed method achieves improved attack performances on different V+L downstream tasks and VLP models. The analysis observations and novel attack method hopefully provide new understanding into the adversarial robustness of VLP models, so as to contribute their safe and reliable deployment in more real-world scenarios.
-
-
-
-## **49. Adversarially trained neural representations may already be as robust as corresponding biological neural representations**
-
-q-bio.NC
-
-10 pages, 6 figures, ICML2022
-
-**SubmitDate**: 2022-06-19    [paper-pdf](http://arxiv.org/pdf/2206.11228v1)
-
-**Authors**: Chong Guo, Michael J. Lee, Guillaume Leclerc, Joel Dapello, Yug Rao, Aleksander Madry, James J. DiCarlo
-
-**Abstracts**: Visual systems of primates are the gold standard of robust perception. There is thus a general belief that mimicking the neural representations that underlie those systems will yield artificial visual systems that are adversarially robust. In this work, we develop a method for performing adversarial visual attacks directly on primate brain activity. We then leverage this method to demonstrate that the above-mentioned belief might not be well founded. Specifically, we report that the biological neurons that make up visual systems of primates exhibit susceptibility to adversarial perturbations that is comparable in magnitude to existing (robustly trained) artificial neural networks.
-
-
-
-## **50. Efficient and Transferable Adversarial Examples from Bayesian Neural Networks**
-
-cs.LG
-
-Accepted at UAI 2022
-
-**SubmitDate**: 2022-06-18    [paper-pdf](http://arxiv.org/pdf/2011.05074v4)
-
-**Authors**: Martin Gubri, Maxime Cordy, Mike Papadakis, Yves Le Traon, Koushik Sen
-
-**Abstracts**: An established way to improve the transferability of black-box evasion attacks is to craft the adversarial examples on an ensemble-based surrogate to increase diversity. We argue that transferability is fundamentally related to uncertainty. Based on a state-of-the-art Bayesian Deep Learning technique, we propose a new method to efficiently build a surrogate by sampling approximately from the posterior distribution of neural network weights, which represents the belief about the value of each parameter. Our extensive experiments on ImageNet, CIFAR-10 and MNIST show that our approach improves the success rates of four state-of-the-art attacks significantly (up to 83.2 percentage points), in both intra-architecture and inter-architecture transferability. On ImageNet, our approach can reach 94% of success rate while reducing training computations from 11.6 to 2.4 exaflops, compared to an ensemble of independently trained DNNs. Our vanilla surrogate achieves 87.5% of the time higher transferability than three test-time techniques designed for this purpose. Our work demonstrates that the way to train a surrogate has been overlooked, although it is an important element of transfer-based attacks. We are, therefore, the first to review the effectiveness of several training methods in increasing transferability. We provide new directions to better understand the transferability phenomenon and offer a simple but strong baseline for future work.
 
 
 

@@ -1,9 +1,83 @@
 # Latest Adversarial Attack Papers
-**update at 2022-07-01 06:31:32**
+**update at 2022-07-02 06:31:32**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. Depth-2 Neural Networks Under a Data-Poisoning Attack**
+## **1. MEAD: A Multi-Armed Approach for Evaluation of Adversarial Examples Detectors**
+
+Mead：一种评估对抗性范例检测器的多臂方法 cs.CV
+
+This paper has been accepted to appear in the Proceedings of the 2022  European Conference on Machine Learning and Data Mining (ECML-PKDD), 19th to  the 23rd of September, Grenoble, France
+
+**SubmitDate**: 2022-06-30    [paper-pdf](http://arxiv.org/pdf/2206.15415v1)
+
+**Authors**: Federica Granese, Marine Picot, Marco Romanelli, Francisco Messina, Pablo Piantanida
+
+**Abstracts**: Detection of adversarial examples has been a hot topic in the last years due to its importance for safely deploying machine learning algorithms in critical applications. However, the detection methods are generally validated by assuming a single implicitly known attack strategy, which does not necessarily account for real-life threats. Indeed, this can lead to an overoptimistic assessment of the detectors' performance and may induce some bias in the comparison between competing detection schemes. We propose a novel multi-armed framework, called MEAD, for evaluating detectors based on several attack strategies to overcome this limitation. Among them, we make use of three new objectives to generate attacks. The proposed performance metric is based on the worst-case scenario: detection is successful if and only if all different attacks are correctly recognized. Empirically, we show the effectiveness of our approach. Moreover, the poor performance obtained for state-of-the-art detectors opens a new exciting line of research.
+
+摘要: 对抗性样本的检测是近年来的一个热门话题，因为它对于在关键应用中安全地部署机器学习算法具有重要意义。然而，检测方法通常是通过假设单个隐式已知的攻击策略来验证的，这不一定考虑现实生活中的威胁。事实上，这可能会导致对检测器性能的过度乐观评估，并可能在相互竞争的检测方案之间的比较中导致一些偏见。为了克服这一局限性，我们提出了一种新的多臂框架，称为MEAD，用于基于几种攻击策略来评估检测器。其中，我们利用三个新的目标来产生攻击。建议的性能指标基于最坏的情况：当且仅当正确识别所有不同的攻击时，检测才成功。在经验上，我们展示了我们方法的有效性。此外，最先进的探测器获得的糟糕性能开启了一条新的令人兴奋的研究路线。
+
+
+
+## **2. The Topological BERT: Transforming Attention into Topology for Natural Language Processing**
+
+拓扑学BERT：将注意力转化为自然语言处理的拓扑学 cs.CL
+
+**SubmitDate**: 2022-06-30    [paper-pdf](http://arxiv.org/pdf/2206.15195v1)
+
+**Authors**: Ilan Perez, Raphael Reinauer
+
+**Abstracts**: In recent years, the introduction of the Transformer models sparked a revolution in natural language processing (NLP). BERT was one of the first text encoders using only the attention mechanism without any recurrent parts to achieve state-of-the-art results on many NLP tasks.   This paper introduces a text classifier using topological data analysis. We use BERT's attention maps transformed into attention graphs as the only input to that classifier. The model can solve tasks such as distinguishing spam from ham messages, recognizing whether a sentence is grammatically correct, or evaluating a movie review as negative or positive. It performs comparably to the BERT baseline and outperforms it on some tasks.   Additionally, we propose a new method to reduce the number of BERT's attention heads considered by the topological classifier, which allows us to prune the number of heads from 144 down to as few as ten with no reduction in performance. Our work also shows that the topological model displays higher robustness against adversarial attacks than the original BERT model, which is maintained during the pruning process. To the best of our knowledge, this work is the first to confront topological-based models with adversarial attacks in the context of NLP.
+
+摘要: 近年来，Transformer模型的引入引发了自然语言处理(NLP)的革命。Bert是第一批只使用注意力机制而不使用任何重复部分的文本编码者之一，以在许多NLP任务中获得最先进的结果。本文介绍了一种基于拓扑数据分析的文本分类器。我们使用Bert转换为注意图的注意图作为该分类器的唯一输入。该模型可以解决一些任务，比如区分垃圾邮件和垃圾邮件，识别句子的语法是否正确，或者评估电影评论是负面的还是正面的。它的表现与BERT基线相当，并在某些任务上超过它。此外，我们还提出了一种新的方法来减少拓扑分类器所考虑的BERT注意头数，该方法允许我们在不降低性能的情况下将注意头数从144个减少到10个。我们的工作还表明，与在剪枝过程中保持的原始BERT模型相比，该拓扑模型对敌意攻击表现出更高的稳健性。据我们所知，这是第一个在NLP环境下对抗基于拓扑模型的攻击的工作。
+
+
+
+## **3. FIDO2 With Two Displays$\unicode{x2013}$Or How to Protect Security-Critical Web Transactions Against Malware Attacks**
+
+带两个显示屏的FIDO2$\Unicode{x2013}$或如何保护安全关键型Web交易免受恶意软件攻击 cs.CR
+
+**SubmitDate**: 2022-06-30    [paper-pdf](http://arxiv.org/pdf/2206.13358v2)
+
+**Authors**: Timon Hackenjos, Benedikt Wagner, Julian Herr, Jochen Rill, Marek Wehmer, Niklas Goerke, Ingmar Baumgart
+
+**Abstracts**: With the rise of attacks on online accounts in the past years, more and more services offer two-factor authentication for their users. Having factors out of two of the three categories something you know, something you have and something you are should ensure that an attacker cannot compromise two of them at once. Thus, an adversary should not be able to maliciously interact with one's account. However, this is only true if one considers a weak adversary. In particular, since most current solutions only authenticate a session and not individual transactions, they are noneffective if one's device is infected with malware. For online banking, the banking industry has long since identified the need for authenticating transactions. However, specifications of such authentication schemes are not public and implementation details vary wildly from bank to bank with most still being unable to protect against malware. In this work, we present a generic approach to tackle the problem of malicious account takeovers, even in the presence of malware. To this end, we define a new paradigm to improve two-factor authentication that involves the concepts of one-out-of-two security and transaction authentication. Web authentication schemes following this paradigm can protect security-critical transactions against manipulation, even if one of the factors is completely compromised. Analyzing existing authentication schemes, we find that they do not realize one-out-of-two security. We give a blueprint of how to design secure web authentication schemes in general. Based on this blueprint we propose FIDO2 With Two Displays (FIDO2D), a new web authentication scheme based on the FIDO2 standard and prove its security using Tamarin. We hope that our work inspires a new wave of more secure web authentication schemes, which protect security-critical transactions even against attacks with malware.
+
+摘要: 随着过去几年针对在线账户的攻击事件的增加，越来越多的服务为其用户提供双因素身份验证。拥有三个类别中的两个因素，你知道的，你拥有的和你是的，应该确保攻击者不能同时危害其中的两个。因此，对手不应该能够恶意地与自己的帐户交互。然而，只有当一个人考虑到一个弱小的对手时，这才是正确的。特别是，由于大多数当前的解决方案只对会话进行身份验证，而不是对单个事务进行身份验证，因此如果设备感染了恶意软件，这些解决方案就会无效。对于网上银行，银行业早就认识到了对交易进行身份验证的必要性。然而，此类身份验证方案的规范并未公开，各银行的实施细节也存在很大差异，大多数银行仍无法防范恶意软件。在这项工作中，我们提出了一种通用的方法来解决恶意帐户接管问题，即使在存在恶意软件的情况下也是如此。为此，我们定义了一个新的范例来改进双因素身份验证，它涉及二选一安全和事务身份验证的概念。遵循此范例的Web身份验证方案可以保护安全关键型交易免受操纵，即使其中一个因素完全受损。分析现有的认证方案，发现它们并没有实现二选一的安全性。我们给出了一个总体上如何设计安全的Web认证方案的蓝图。在此基础上，我们提出了一种新的基于FIDO2标准的网络认证方案FIDO2 with Two Display(FIDO2D)，并用Tamarin对其安全性进行了证明。我们希望我们的工作激发出新一波更安全的网络身份验证方案，这些方案甚至可以保护安全关键交易免受恶意软件的攻击。
+
+
+
+## **4. An Intermediate-level Attack Framework on The Basis of Linear Regression**
+
+一种基于线性回归的中级攻击框架 cs.CV
+
+Accepted by TPAMI; Code is available at  https://github.com/qizhangli/ila-plus-plus-lr
+
+**SubmitDate**: 2022-06-30    [paper-pdf](http://arxiv.org/pdf/2203.10723v2)
+
+**Authors**: Yiwen Guo, Qizhang Li, Wangmeng Zuo, Hao Chen
+
+**Abstracts**: This paper substantially extends our work published at ECCV, in which an intermediate-level attack was proposed to improve the transferability of some baseline adversarial examples. Specifically, we advocate a framework in which a direct linear mapping from the intermediate-level discrepancies (between adversarial features and benign features) to prediction loss of the adversarial example is established. By delving deep into the core components of such a framework, we show that 1) a variety of linear regression models can all be considered in order to establish the mapping, 2) the magnitude of the finally obtained intermediate-level adversarial discrepancy is correlated with the transferability, 3) further boost of the performance can be achieved by performing multiple runs of the baseline attack with random initialization. In addition, by leveraging these findings, we achieve new state-of-the-arts on transfer-based $\ell_\infty$ and $\ell_2$ attacks. Our code is publicly available at https://github.com/qizhangli/ila-plus-plus-lr.
+
+摘要: 本文大大扩展了我们在ECCV上发表的工作，在该工作中，提出了一种中级攻击来提高一些基线对手例子的可转移性。具体地说，我们主张建立一个框架，在这个框架中，建立从对抗性例子的中间级差异(对抗性特征和良性特征之间)到预测损失的直接线性映射。通过深入研究该框架的核心部分，我们发现：1)为了建立映射，可以考虑多种线性回归模型；2)最终获得的中级敌方差异的大小与可转移性相关；3)通过随机初始化执行多次基线攻击，可以进一步提高性能。此外，通过利用这些发现，我们实现了针对基于传输的$\ell_\inty$和$\ell_2$攻击的新技术。我们的代码在https://github.com/qizhangli/ila-plus-plus-lr.上公开提供
+
+
+
+## **5. On the Challenges of Detecting Side-Channel Attacks in SGX**
+
+关于在SGX中检测旁路攻击的挑战 cs.CR
+
+**SubmitDate**: 2022-06-30    [paper-pdf](http://arxiv.org/pdf/2011.14599v2)
+
+**Authors**: Jianyu Jiang, Claudio Soriente, Ghassan Karame
+
+**Abstracts**: Existing tools to detect side-channel attacks on Intel SGX are grounded on the observation that attacks affect the performance of the victim application. As such, all detection tools monitor the potential victim and raise an alarm if the witnessed performance (in terms of runtime, enclave interruptions, cache misses, etc.) is out of the ordinary.   In this paper, we show that monitoring the performance of enclaves to detect side-channel attacks may not be effective. Our core intuition is that all monitoring tools are geared towards an adversary that interferes with the victim's execution in order to extract the most number of secret bits (e.g., the entire secret) in one or few runs. They cannot, however, detect an adversary that leaks smaller portions of the secret - as small as a single bit - at each execution of the victim. In particular, by minimizing the information leaked at each run, the impact of any side-channel attack on the application's performance is significantly lowered - ensuring that the detection tool does not detect an attack. By repeating the attack multiple times, each time on a different part of the secret, the adversary can recover the whole secret and remain undetected. Based on this intuition, we adapt known attacks leveraging page-tables and L3 cache to bypass existing detection mechanisms. We show experimentally how an attacker can successfully exfiltrate the secret key used in an enclave running various cryptographic routines of libgcrypt. Beyond cryptographic libraries, we also show how to compromise the predictions of enclaves running decision-tree routines of OpenCV. Our evaluation results suggest that performance-based detection tools do not deter side-channel attacks on SGX enclaves and that effective detection mechanisms are yet to be designed.
+
+摘要: 现有工具用于检测针对Intel SGX的旁路攻击，其基础是观察到攻击会影响受攻击应用程序的性能。因此，所有检测工具都会监视潜在受害者，并在发现性能(在运行时、飞地中断、缓存未命中等方面)时发出警报是不寻常的。在本文中，我们表明，通过监控Enclaves的性能来检测旁路攻击可能并不有效。我们的核心直觉是，所有监控工具都是针对干扰受害者执行的对手，以便在一次或几次运行中提取最多数量的秘密比特(例如，整个秘密)。然而，他们无法检测到在每次处决受害者时泄露较小部分秘密的对手。特别是，通过最大限度地减少每次运行时泄漏的信息，任何侧通道攻击对应用程序性能的影响都会显著降低，从而确保检测工具不会检测到攻击。通过多次重复攻击，每次对秘密的不同部分进行攻击，攻击者可以恢复整个秘密并保持不被发现。基于这一直觉，我们采用了利用页表和L3缓存的已知攻击来绕过现有的检测机制。我们通过实验展示了攻击者如何成功地渗出在运行各种libgcrypt加密例程的飞地中使用的秘密密钥。除了密码库之外，我们还展示了如何折衷运行OpenCV决策树例程的Enclaves的预测。我们的评估结果表明，基于性能的检测工具不能阻止对SGX飞地的旁路攻击，并且还没有设计有效的检测机制。
+
+
+
+## **6. Depth-2 Neural Networks Under a Data-Poisoning Attack**
 
 数据中毒攻击下的深度-2神经网络 cs.LG
 
@@ -19,7 +93,7 @@
 
 
 
-## **2. IBP Regularization for Verified Adversarial Robustness via Branch-and-Bound**
+## **7. IBP Regularization for Verified Adversarial Robustness via Branch-and-Bound**
 
 基于分枝定界的IBP正则化算法 cs.LG
 
@@ -35,7 +109,7 @@ ICML 2022 Workshop on Formal Verification of Machine Learning
 
 
 
-## **3. longhorns at DADC 2022: How many linguists does it take to fool a Question Answering model? A systematic approach to adversarial attacks**
+## **8. longhorns at DADC 2022: How many linguists does it take to fool a Question Answering model? A systematic approach to adversarial attacks**
 
 DADC 2022上的长角人：需要多少语言学家才能愚弄一个问题回答模型？应对对抗性攻击的系统方法 cs.CL
 
@@ -51,7 +125,7 @@ Accepted at DADC2022
 
 
 
-## **4. Private Graph Extraction via Feature Explanations**
+## **9. Private Graph Extraction via Feature Explanations**
 
 基于特征解释的专用图提取 cs.LG
 
@@ -65,7 +139,7 @@ Accepted at DADC2022
 
 
 
-## **5. Enhancing Security of Memristor Computing System Through Secure Weight Mapping**
+## **10. Enhancing Security of Memristor Computing System Through Secure Weight Mapping**
 
 通过安全权重映射提高忆阻器计算系统的安全性 cs.ET
 
@@ -81,7 +155,7 @@ Accepted at DADC2022
 
 
 
-## **6. Adversarial Ensemble Training by Jointly Learning Label Dependencies and Member Models**
+## **11. Adversarial Ensemble Training by Jointly Learning Label Dependencies and Member Models**
 
 联合学习标签依赖关系和成员模型的对抗性集成训练 cs.LG
 
@@ -95,7 +169,7 @@ Accepted at DADC2022
 
 
 
-## **7. Guided Diffusion Model for Adversarial Purification**
+## **12. Guided Diffusion Model for Adversarial Purification**
 
 对抗性净化中的引导扩散模型 cs.CV
 
@@ -109,7 +183,7 @@ Accepted at DADC2022
 
 
 
-## **8. A Deep Learning Approach to Create DNS Amplification Attacks**
+## **13. A Deep Learning Approach to Create DNS Amplification Attacks**
 
 一种创建域名系统放大攻击的深度学习方法 cs.CR
 
@@ -125,7 +199,7 @@ Accepted at DADC2022
 
 
 
-## **9. Linear Model Against Malicious Adversaries with Local Differential Privacy**
+## **14. Linear Model Against Malicious Adversaries with Local Differential Privacy**
 
 基于局部差分隐私的对抗恶意攻击的线性模型 cs.CR
 
@@ -139,7 +213,7 @@ Accepted at DADC2022
 
 
 
-## **10. An Empirical Study of Challenges in Converting Deep Learning Models**
+## **15. An Empirical Study of Challenges in Converting Deep Learning Models**
 
 深度学习模式转换挑战的实证研究 cs.LG
 
@@ -155,7 +229,7 @@ Accepted for publication in ICSME 2022
 
 
 
-## **11. Collecting high-quality adversarial data for machine reading comprehension tasks with humans and models in the loop**
+## **16. Collecting high-quality adversarial data for machine reading comprehension tasks with humans and models in the loop**
 
 为机器阅读理解任务收集高质量的对抗性数据，其中人和模型处于循环中 cs.CL
 
@@ -171,7 +245,7 @@ Accepted for publication in ICSME 2022
 
 
 
-## **12. How to Steer Your Adversary: Targeted and Efficient Model Stealing Defenses with Gradient Redirection**
+## **17. How to Steer Your Adversary: Targeted and Efficient Model Stealing Defenses with Gradient Redirection**
 
 如何引导你的对手：有针对性和高效的模型窃取防御和渐变重定向 cs.LG
 
@@ -187,7 +261,7 @@ ICML 2022
 
 
 
-## **13. Debiasing Learning for Membership Inference Attacks Against Recommender Systems**
+## **18. Debiasing Learning for Membership Inference Attacks Against Recommender Systems**
 
 推荐系统成员关系推理攻击的去偏学习 cs.IR
 
@@ -203,7 +277,7 @@ Accepted by KDD 2022
 
 
 
-## **14. On the amplification of security and privacy risks by post-hoc explanations in machine learning models**
+## **19. On the amplification of security and privacy risks by post-hoc explanations in machine learning models**
 
 机器学习模型中事后解释对安全和隐私风险的放大 cs.LG
 
@@ -219,7 +293,7 @@ Accepted by KDD 2022
 
 
 
-## **15. Increasing Confidence in Adversarial Robustness Evaluations**
+## **20. Increasing Confidence in Adversarial Robustness Evaluations**
 
 增加对对手健壮性评估的信心 cs.LG
 
@@ -235,7 +309,7 @@ Oral at CVPR 2022 Workshop (Art of Robustness). Project website  https://zimmerr
 
 
 
-## **16. Ownership Verification of DNN Architectures via Hardware Cache Side Channels**
+## **21. Ownership Verification of DNN Architectures via Hardware Cache Side Channels**
 
 通过硬件缓存侧通道验证DNN体系结构的所有权 cs.CR
 
@@ -251,7 +325,7 @@ The paper has been accepted by IEEE Transactions on Circuits and  Systems for Vi
 
 
 
-## **17. Deep Image Destruction: Vulnerability of Deep Image-to-Image Models against Adversarial Attacks**
+## **22. Deep Image Destruction: Vulnerability of Deep Image-to-Image Models against Adversarial Attacks**
 
 深度图像破坏：深度图像到图像模型抵抗敌意攻击的脆弱性 cs.CV
 
@@ -267,21 +341,7 @@ ICPR2022
 
 
 
-## **18. FIDO2 With Two Displays$\unicode{x2013}$Or How to Protect Security-Critical Web Transactions Against Malware Attacks**
-
-带两个显示屏的FIDO2$\Unicode{x2013}$或如何保护安全关键型Web交易免受恶意软件攻击 cs.CR
-
-**SubmitDate**: 2022-06-27    [paper-pdf](http://arxiv.org/pdf/2206.13358v1)
-
-**Authors**: Timon Hackenjos, Benedikt Wagner, Julian Herr, Jochen Rill, Marek Wehmer, Niklas Goerke, Ingmar Baumgart
-
-**Abstracts**: With the rise of attacks on online accounts in the past years, more and more services offer two-factor authentication for their users. Having factors out of two of the three categories something you know, something you have and something you are should ensure that an attacker cannot compromise two of them at once. Thus, an adversary should not be able to maliciously interact with one's account. However, this is only true if one considers a weak adversary. In particular, since most current solutions only authenticate a session and not individual transactions, they are noneffective if one's device is infected with malware. For online banking, the banking industry has long since identified the need for authenticating transactions. However, specifications of such authentication schemes are not public and implementation details vary wildly from bank to bank with most still being unable to protect against malware. In this work, we present a generic approach to tackle the problem of malicious account takeovers, even in the presence of malware. To this end, we define a new paradigm to improve two-factor authentication that involves the concepts of one-out-of-two security and transaction authentication. Web authentication schemes following this paradigm can protect security-critical transactions against manipulation, even if one of the factors is completely compromised. Analyzing existing authentication schemes, we find that they do not realize one-out-of-two security. We give a blueprint of how to design secure web authentication schemes in general. Based on this blueprint we propose FIDO2 With Two Displays (FIDO2D), a new web authentication scheme based on the FIDO2 standard and prove its security using Tamarin. We hope that our work inspires a new wave of more secure web authentication schemes, which protect security-critical transactions even against attacks with malware.
-
-摘要: 随着过去几年针对在线账户的攻击事件的增加，越来越多的服务为其用户提供双因素身份验证。拥有三个类别中的两个因素，你知道的，你拥有的和你是的，应该确保攻击者不能同时危害其中的两个。因此，对手不应该能够恶意地与自己的帐户交互。然而，只有当一个人考虑到一个弱小的对手时，这才是正确的。特别是，由于大多数当前的解决方案只对会话进行身份验证，而不是对单个事务进行身份验证，因此如果设备感染了恶意软件，这些解决方案就会无效。对于网上银行，银行业早就认识到了对交易进行身份验证的必要性。然而，此类身份验证方案的规范并未公开，各银行的实施细节也存在很大差异，大多数银行仍无法防范恶意软件。在这项工作中，我们提出了一种通用的方法来解决恶意帐户接管问题，即使在存在恶意软件的情况下也是如此。为此，我们定义了一个新的范例来改进双因素身份验证，它涉及二选一安全和事务身份验证的概念。遵循此范例的Web身份验证方案可以保护安全关键型交易免受操纵，即使其中一个因素完全受损。分析现有的认证方案，发现它们并没有实现二选一的安全性。我们给出了一个总体上如何设计安全的Web认证方案的蓝图。在此基础上，我们提出了一种新的基于FIDO2标准的网络认证方案FIDO2 with Two Display(FIDO2D)，并用Tamarin对其安全性进行了证明。我们希望我们的工作激发出新一波更安全的网络身份验证方案，这些方案甚至可以保护安全关键交易免受恶意软件的攻击。
-
-
-
-## **19. Improving Privacy and Security in Unmanned Aerial Vehicles Network using Blockchain**
+## **23. Improving Privacy and Security in Unmanned Aerial Vehicles Network using Blockchain**
 
 利用区块链提高无人机网络的保密性和安全性 cs.CR
 
@@ -297,7 +357,7 @@ ICPR2022
 
 
 
-## **20. Adversarially Robust Learning of Real-Valued Functions**
+## **24. Adversarially Robust Learning of Real-Valued Functions**
 
 实值函数的逆鲁棒学习 cs.LG
 
@@ -311,7 +371,7 @@ ICPR2022
 
 
 
-## **21. Cascading Failures in Smart Grids under Random, Targeted and Adaptive Attacks**
+## **25. Cascading Failures in Smart Grids under Random, Targeted and Adaptive Attacks**
 
 随机、定向和自适应攻击下智能电网的连锁故障 cs.SI
 
@@ -327,7 +387,7 @@ Accepted for publication as a book chapter. arXiv admin note:  substantial text 
 
 
 
-## **22. Empirical Evaluation of Physical Adversarial Patch Attacks Against Overhead Object Detection Models**
+## **26. Empirical Evaluation of Physical Adversarial Patch Attacks Against Overhead Object Detection Models**
 
 基于头顶目标检测模型的物理对抗性补丁攻击的经验评估 cs.CV
 
@@ -341,7 +401,7 @@ Accepted for publication as a book chapter. arXiv admin note:  substantial text 
 
 
 
-## **23. Defending Multimodal Fusion Models against Single-Source Adversaries**
+## **27. Defending Multimodal Fusion Models against Single-Source Adversaries**
 
 防御单源攻击的多通道融合模型 cs.CV
 
@@ -357,7 +417,7 @@ CVPR 2021
 
 
 
-## **24. Defense against adversarial attacks on deep convolutional neural networks through nonlocal denoising**
+## **28. Defense against adversarial attacks on deep convolutional neural networks through nonlocal denoising**
 
 基于非局部去噪的深层卷积神经网络对抗攻击 cs.CV
 
@@ -371,7 +431,7 @@ CVPR 2021
 
 
 
-## **25. RSTAM: An Effective Black-Box Impersonation Attack on Face Recognition using a Mobile and Compact Printer**
+## **29. RSTAM: An Effective Black-Box Impersonation Attack on Face Recognition using a Mobile and Compact Printer**
 
 RSTAM：一种有效的移动紧凑型打印机人脸识别黑盒模拟攻击 cs.CV
 
@@ -385,7 +445,7 @@ RSTAM：一种有效的移动紧凑型打印机人脸识别黑盒模拟攻击 cs
 
 
 
-## **26. Defending Backdoor Attacks on Vision Transformer via Patch Processing**
+## **30. Defending Backdoor Attacks on Vision Transformer via Patch Processing**
 
 利用补丁处理防御视觉转换器的后门攻击 cs.CV
 
@@ -399,7 +459,7 @@ RSTAM：一种有效的移动紧凑型打印机人脸识别黑盒模拟攻击 cs
 
 
 
-## **27. Robustness of Explanation Methods for NLP Models**
+## **31. Robustness of Explanation Methods for NLP Models**
 
 NLP模型解释方法的稳健性 cs.CL
 
@@ -413,7 +473,7 @@ NLP模型解释方法的稳健性 cs.CL
 
 
 
-## **28. Property Unlearning: A Defense Strategy Against Property Inference Attacks**
+## **32. Property Unlearning: A Defense Strategy Against Property Inference Attacks**
 
 属性遗忘：一种防御属性推理攻击的策略 cs.CR
 
@@ -429,7 +489,7 @@ Please note: As of June 24, 2022, we have discovered some flaws in  our experime
 
 
 
-## **29. Adversarial Robustness of Deep Neural Networks: A Survey from a Formal Verification Perspective**
+## **33. Adversarial Robustness of Deep Neural Networks: A Survey from a Formal Verification Perspective**
 
 深度神经网络的对抗健壮性：从形式验证的角度综述 cs.CR
 
@@ -443,7 +503,7 @@ Please note: As of June 24, 2022, we have discovered some flaws in  our experime
 
 
 
-## **30. Cluster Attack: Query-based Adversarial Attacks on Graphs with Graph-Dependent Priors**
+## **34. Cluster Attack: Query-based Adversarial Attacks on Graphs with Graph-Dependent Priors**
 
 簇攻击：图依赖先验图上基于查询的敌意攻击 cs.LG
 
@@ -459,7 +519,7 @@ IJCAI 2022 (Long Presentation)
 
 
 
-## **31. An Improved Lattice-Based Ring Signature with Unclaimable Anonymity in the Standard Model**
+## **35. An Improved Lattice-Based Ring Signature with Unclaimable Anonymity in the Standard Model**
 
 一种改进的标准模型下不可否认匿名性的格环签名 cs.CR
 
@@ -473,7 +533,7 @@ IJCAI 2022 (Long Presentation)
 
 
 
-## **32. Keep Your Transactions On Short Leashes**
+## **36. Keep Your Transactions On Short Leashes**
 
 在短时间内控制你的交易 cs.CR
 
@@ -487,7 +547,7 @@ IJCAI 2022 (Long Presentation)
 
 
 
-## **33. Turning Your Strength against You: Detecting and Mitigating Robust and Universal Adversarial Patch Attacks**
+## **37. Turning Your Strength against You: Detecting and Mitigating Robust and Universal Adversarial Patch Attacks**
 
 将你的力量转向你：检测和减轻健壮的和通用的对抗性补丁攻击 cs.CR
 
@@ -501,7 +561,7 @@ IJCAI 2022 (Long Presentation)
 
 
 
-## **34. Probabilistically Resilient Multi-Robot Informative Path Planning**
+## **38. Probabilistically Resilient Multi-Robot Informative Path Planning**
 
 概率弹性多机器人信息路径规划 cs.RO
 
@@ -517,7 +577,7 @@ IJCAI 2022 (Long Presentation)
 
 
 
-## **35. Towards End-to-End Private Automatic Speaker Recognition**
+## **39. Towards End-to-End Private Automatic Speaker Recognition**
 
 走向端到端的私人自动说话人识别 eess.AS
 
@@ -533,7 +593,7 @@ Accepted for publication at Interspeech 2022
 
 
 
-## **36. BERT Rankers are Brittle: a Study using Adversarial Document Perturbations**
+## **40. BERT Rankers are Brittle: a Study using Adversarial Document Perturbations**
 
 Bert Rankers是脆弱的：一项使用对抗性文件扰动的研究 cs.IR
 
@@ -549,7 +609,7 @@ To appear in ICTIR 2022
 
 
 
-## **37. Adversarial Zoom Lens: A Novel Physical-World Attack to DNNs**
+## **41. Adversarial Zoom Lens: A Novel Physical-World Attack to DNNs**
 
 对抗性变焦镜头：一种新的物理世界对DNN的攻击 cs.CR
 
@@ -563,7 +623,7 @@ To appear in ICTIR 2022
 
 
 
-## **38. Exploring Adversarial Attacks and Defenses in Vision Transformers trained with DINO**
+## **42. Exploring Adversarial Attacks and Defenses in Vision Transformers trained with DINO**
 
 探索与恐龙一起训练的视觉变形金刚的对抗性攻击和防御 cs.CV
 
@@ -579,7 +639,7 @@ To appear in ICTIR 2022
 
 
 
-## **39. Bounding Training Data Reconstruction in Private (Deep) Learning**
+## **43. Bounding Training Data Reconstruction in Private (Deep) Learning**
 
 私密(深度)学习中的边界训练数据重构 cs.LG
 
@@ -593,7 +653,7 @@ To appear in ICTIR 2022
 
 
 
-## **40. A Framework for Understanding Model Extraction Attack and Defense**
+## **44. A Framework for Understanding Model Extraction Attack and Defense**
 
 一种理解模型提取攻击与防御的框架 cs.LG
 
@@ -607,7 +667,7 @@ To appear in ICTIR 2022
 
 
 
-## **41. InfoAT: Improving Adversarial Training Using the Information Bottleneck Principle**
+## **45. InfoAT: Improving Adversarial Training Using the Information Bottleneck Principle**
 
 InfoAT：利用信息瓶颈原理改进对抗性训练 cs.LG
 
@@ -623,7 +683,7 @@ Published in: IEEE Transactions on Neural Networks and Learning  Systems ( Early
 
 
 
-## **42. Incorporating Hidden Layer representation into Adversarial Attacks and Defences**
+## **46. Incorporating Hidden Layer representation into Adversarial Attacks and Defences**
 
 在对抗性攻击和防御中引入隐藏层表示 cs.LG
 
@@ -637,7 +697,7 @@ Published in: IEEE Transactions on Neural Networks and Learning  Systems ( Early
 
 
 
-## **43. Adversarial Learning with Cost-Sensitive Classes**
+## **47. Adversarial Learning with Cost-Sensitive Classes**
 
 成本敏感类的对抗性学习 cs.LG
 
@@ -653,7 +713,7 @@ Published in: IEEE Transactions on Neural Networks and Learning  Systems ( Early
 
 
 
-## **44. Shilling Black-box Recommender Systems by Learning to Generate Fake User Profiles**
+## **48. Shilling Black-box Recommender Systems by Learning to Generate Fake User Profiles**
 
 通过学习生成虚假用户配置文件来攻击黑盒推荐系统 cs.IR
 
@@ -669,7 +729,7 @@ Accepted by TNNLS. 15 pages, 8 figures
 
 
 
-## **45. Making Generated Images Hard To Spot: A Transferable Attack On Synthetic Image Detectors**
+## **49. Making Generated Images Hard To Spot: A Transferable Attack On Synthetic Image Detectors**
 
 使生成的图像难以识别：对合成图像检测器的可转移攻击 cs.CV
 
@@ -683,7 +743,7 @@ Accepted by TNNLS. 15 pages, 8 figures
 
 
 
-## **46. AdvSmo: Black-box Adversarial Attack by Smoothing Linear Structure of Texture**
+## **50. AdvSmo: Black-box Adversarial Attack by Smoothing Linear Structure of Texture**
 
 AdvSmo：平滑纹理线性结构的黑盒对抗性攻击 cs.CV
 
@@ -696,66 +756,6 @@ AdvSmo：平滑纹理线性结构的黑盒对抗性攻击 cs.CV
 **Abstracts**: Black-box attacks usually face two problems: poor transferability and the inability to evade the adversarial defense. To overcome these shortcomings, we create an original approach to generate adversarial examples by smoothing the linear structure of the texture in the benign image, called AdvSmo. We construct the adversarial examples without relying on any internal information to the target model and design the imperceptible-high attack success rate constraint to guide the Gabor filter to select appropriate angles and scales to smooth the linear texture from the input images to generate adversarial examples. Benefiting from the above design concept, AdvSmo will generate adversarial examples with strong transferability and solid evasiveness. Finally, compared to the four advanced black-box adversarial attack methods, for the eight target models, the results show that AdvSmo improves the average attack success rate by 9% on the CIFAR-10 and 16% on the Tiny-ImageNet dataset compared to the best of these attack methods.
 
 摘要: 黑盒攻击通常面临两个问题：可转移性差和无法躲避对手的防御。为了克服这些缺点，我们创建了一种新颖的方法，通过平滑良性图像中纹理的线性结构来生成对抗性示例，称为AdvSmo。我们在不依赖目标模型任何内部信息的情况下构造敌意样本，并设计了不可察觉的高攻击成功率约束来指导Gabor滤波器选择合适的角度和尺度来平滑输入图像中的线性纹理来生成敌意样本。受益于上述设计理念，AdvSmo将生成具有很强的可转移性和坚实的规避能力的对抗性范例。最后，与四种先进的黑盒对抗攻击方法相比，对于8个目标模型，结果表明，AdvSmo在CIFAR-10上的平均攻击成功率比这些攻击方法中最好的方法提高了9%，在Tiny-ImageNet数据集上的平均攻击成功率提高了16%。
-
-
-
-## **47. Adversarial Reconfigurable Intelligent Surface Against Physical Layer Key Generation**
-
-对抗物理层密钥生成的对抗性可重构智能表面 eess.SP
-
-**SubmitDate**: 2022-06-22    [paper-pdf](http://arxiv.org/pdf/2206.10955v1)
-
-**Authors**: Zhuangkun Wei, Bin Li, Weisi Guo
-
-**Abstracts**: The development of reconfigurable intelligent surface (RIS) has recently advanced the research of physical layer security (PLS). Beneficial impact of RIS includes but is not limited to offering a new domain of freedom (DoF) for key-less PLS optimization, and increasing channel randomness for physical layer secret key generation (PL-SKG). However, there is a lack of research studying how adversarial RIS can be used to damage the communication confidentiality. In this work, we show how a Eve controlled adversarial RIS (Eve-RIS) can be used to reconstruct the shared PLS secret key between legitimate users (Alice and Bob). This is achieved by Eve-RIS overlaying the legitimate channel with an artificial random and reciprocal channel. The resulting Eve-RIS corrupted channel enable Eve to successfully attack the PL-SKG process. To operationalize this novel concept, we design Eve-RIS schemes against two PL-SKG techniques used: (i) the channel estimation based PL-SKG, and (ii) the two-way cross multiplication based PL-SKG. Our results show a high key match rate between the designed Eve-RIS and the legitimate users. We also present theoretical key match rate between Eve-RIS and legitimate users. Our novel scheme is different from the existing spoofing-Eve, in that the latter can be easily detected by comparing the channel estimation results of the legitimate users. Indeed, our proposed Eve-RIS can maintain the legitimate channel reciprocity, which makes detection challenging. This means the novel Eve-RIS provides a new eavesdropping threat on PL-SKG, which can spur new research areas to counter adversarial RIS attacks.
-
-摘要: 近年来，可重构智能表面(RIS)的发展推动了物理层安全(PLS)的研究。RIS的有益影响包括但不限于提供用于无密钥的PLS优化的新的自由域(DoF)，以及增加用于物理层秘密密钥生成(PL-SKG)的信道随机性。然而，缺乏研究如何利用敌意RIS来破坏通信机密性。在这项工作中，我们展示了如何使用Eve控制的对抗RIS(Eve-RIS)来重构合法用户(Alice和Bob)之间共享的PLS秘密密钥。这是通过EVE-RIS用人工随机和互惠的信道覆盖合法信道来实现的。由此产生的Eve-RIS损坏的通道使Eve能够成功攻击PL-SKG进程。为了实现这一新概念，我们针对使用的两种PL-SKG技术设计了Eve-RIS方案：(I)基于信道估计的PL-SKG和(Ii)基于双向交叉乘法的PL-SKG。结果表明，所设计的Eve-RIS与合法用户之间具有较高的密钥匹配率。我们还给出了Eve-RIS与合法用户之间的理论密钥匹配率。我们的新方案不同于现有的欺骗-EVE方案，后者可以通过比较合法用户的信道估计结果来容易地检测到。事实上，我们提出的Eve-RIS能够保持合法的信道互惠，这使得检测具有挑战性。这意味着新的Eve-RIS为PL-SKG提供了一种新的窃听威胁，可以刺激新的研究领域来对抗敌意RIS攻击。
-
-
-
-## **48. Introduction to Machine Learning for the Sciences**
-
-面向科学的机器学习导论 physics.comp-ph
-
-84 pages, 37 figures. The content of these lecture notes together  with exercises is available under http://www.ml-lectures.org. A shorter  German version of the lecture notes is published in the Springer essential  series, ISBN 978-3-658-32268-7, doi:10.1007/978-3-658-32268-7
-
-**SubmitDate**: 2022-06-22    [paper-pdf](http://arxiv.org/pdf/2102.04883v2)
-
-**Authors**: Titus Neupert, Mark H Fischer, Eliska Greplova, Kenny Choo, M. Michael Denner
-
-**Abstracts**: This is an introductory machine-learning course specifically developed with STEM students in mind. Our goal is to provide the interested reader with the basics to employ machine learning in their own projects and to familiarize themself with the terminology as a foundation for further reading of the relevant literature. In these lecture notes, we discuss supervised, unsupervised, and reinforcement learning. The notes start with an exposition of machine learning methods without neural networks, such as principle component analysis, t-SNE, clustering, as well as linear regression and linear classifiers. We continue with an introduction to both basic and advanced neural-network structures such as dense feed-forward and conventional neural networks, recurrent neural networks, restricted Boltzmann machines, (variational) autoencoders, generative adversarial networks. Questions of interpretability are discussed for latent-space representations and using the examples of dreaming and adversarial attacks. The final section is dedicated to reinforcement learning, where we introduce basic notions of value functions and policy learning.
-
-摘要: 这是一门专门为STEM学生开发的机器学习入门课程。我们的目标是为感兴趣的读者提供在他们自己的项目中使用机器学习的基础知识，并熟悉这些术语作为进一步阅读相关文献的基础。在这些课堂讲稿中，我们讨论有监督、无监督和强化学习。这些笔记首先阐述了没有神经网络的机器学习方法，如主成分分析、t-SNE、聚类以及线性回归和线性分类器。我们继续介绍基本和高级神经网络结构，如密集前馈和常规神经网络、递归神经网络、受限Boltzmann机器、(变分)自动编码器、生成性对手网络。讨论了潜在空间表示的可解释性问题，并使用了梦和对抗性攻击的例子。最后一节致力于强化学习，在那里我们介绍价值函数和策略学习的基本概念。
-
-
-
-## **49. Guided Diffusion Model for Adversarial Purification from Random Noise**
-
-随机噪声中对抗性净化的引导扩散模型 cs.LG
-
-**SubmitDate**: 2022-06-22    [paper-pdf](http://arxiv.org/pdf/2206.10875v1)
-
-**Authors**: Quanlin Wu, Hang Ye, Yuntian Gu
-
-**Abstracts**: In this paper, we propose a novel guided diffusion purification approach to provide a strong defense against adversarial attacks. Our model achieves 89.62% robust accuracy under PGD-L_inf attack (eps = 8/255) on the CIFAR-10 dataset. We first explore the essential correlations between unguided diffusion models and randomized smoothing, enabling us to apply the models to certified robustness. The empirical results show that our models outperform randomized smoothing by 5% when the certified L2 radius r is larger than 0.5.
-
-摘要: 在本文中，我们提出了一种新的引导扩散净化方法，以提供对对手攻击的强大防御。在Pgd-L_inf攻击(EPS=8/255)下，我们的模型在CIFAR-10数据集上达到了89.62%的稳健准确率。我们首先探讨了无引导扩散模型和随机平滑之间的本质关联，使我们能够将这些模型应用于已证明的稳健性。实证结果表明，当认证的L2半径r大于0.5时，我们的模型比随机平滑的性能高出5%。
-
-
-
-## **50. Robust Universal Adversarial Perturbations**
-
-稳健的普遍对抗性摄动 cs.LG
-
-16 pages, 3 figures
-
-**SubmitDate**: 2022-06-22    [paper-pdf](http://arxiv.org/pdf/2206.10858v1)
-
-**Authors**: Changming Xu, Gagandeep Singh
-
-**Abstracts**: Universal Adversarial Perturbations (UAPs) are imperceptible, image-agnostic vectors that cause deep neural networks (DNNs) to misclassify inputs from a data distribution with high probability. Existing methods do not create UAPs robust to transformations, thereby limiting their applicability as a real-world attacks. In this work, we introduce a new concept and formulation of robust universal adversarial perturbations. Based on our formulation, we build a novel, iterative algorithm that leverages probabilistic robustness bounds for generating UAPs robust against transformations generated by composing arbitrary sub-differentiable transformation functions. We perform an extensive evaluation on the popular CIFAR-10 and ILSVRC 2012 datasets measuring robustness under human-interpretable semantic transformations, such as rotation, contrast changes, etc, that are common in the real-world. Our results show that our generated UAPs are significantly more robust than those from baselines.
-
-摘要: 通用对抗性扰动(UAP)是一种不可察觉的、与图像无关的向量，它会导致深度神经网络(DNN)高概率地对来自数据分布的输入进行错误分类。现有方法不能创建对变换具有健壮性的UAP，从而限制了它们作为现实世界攻击的适用性。在这项工作中，我们引入了一个新的概念和形式，稳健的泛对抗摄动。基于我们的公式，我们构建了一种新颖的迭代算法，该算法利用概率鲁棒界来生成对通过合成任意次可微变换函数而产生的变换具有鲁棒性的UAP。我们在流行的CIFAR-10和ILSVRC 2012数据集上进行了广泛的评估，测量了在人类可解释的语义转换下的健壮性，例如旋转、对比度变化等，这些转换在现实世界中很常见。我们的结果表明，我们生成的UAP明显比基线生成的UAP更健壮。
 
 
 

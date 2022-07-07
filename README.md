@@ -1,9 +1,73 @@
 # Latest Adversarial Attack Papers
-**update at 2022-07-07 06:31:23**
+**update at 2022-07-08 06:31:21**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. Learning to Accelerate Approximate Methods for Solving Integer Programming via Early Fixing**
+## **1. Enhancing Adversarial Attacks on Single-Layer NVM Crossbar-Based Neural Networks with Power Consumption Information**
+
+cs.LG
+
+**SubmitDate**: 2022-07-06    [paper-pdf](http://arxiv.org/pdf/2207.02764v1)
+
+**Authors**: Cory Merkel
+
+**Abstracts**: Adversarial attacks on state-of-the-art machine learning models pose a significant threat to the safety and security of mission-critical autonomous systems. This paper considers the additional vulnerability of machine learning models when attackers can measure the power consumption of their underlying hardware platform. In particular, we explore the utility of power consumption information for adversarial attacks on non-volatile memory crossbar-based single-layer neural networks. Our results from experiments with MNIST and CIFAR-10 datasets show that power consumption can reveal important information about the neural network's weight matrix, such as the 1-norm of its columns. That information can be used to infer the sensitivity of the network's loss with respect to different inputs. We also find that surrogate-based black box attacks that utilize crossbar power information can lead to improved attack efficiency.
+
+
+
+## **2. LADDER: Latent Boundary-guided Adversarial Training**
+
+cs.LG
+
+To appear in Machine Learning
+
+**SubmitDate**: 2022-07-06    [paper-pdf](http://arxiv.org/pdf/2206.03717v2)
+
+**Authors**: Xiaowei Zhou, Ivor W. Tsang, Jie Yin
+
+**Abstracts**: Deep Neural Networks (DNNs) have recently achieved great success in many classification tasks. Unfortunately, they are vulnerable to adversarial attacks that generate adversarial examples with a small perturbation to fool DNN models, especially in model sharing scenarios. Adversarial training is proved to be the most effective strategy that injects adversarial examples into model training to improve the robustness of DNN models against adversarial attacks. However, adversarial training based on the existing adversarial examples fails to generalize well to standard, unperturbed test data. To achieve a better trade-off between standard accuracy and adversarial robustness, we propose a novel adversarial training framework called LAtent bounDary-guided aDvErsarial tRaining (LADDER) that adversarially trains DNN models on latent boundary-guided adversarial examples. As opposed to most of the existing methods that generate adversarial examples in the input space, LADDER generates a myriad of high-quality adversarial examples through adding perturbations to latent features. The perturbations are made along the normal of the decision boundary constructed by an SVM with an attention mechanism. We analyze the merits of our generated boundary-guided adversarial examples from a boundary field perspective and visualization view. Extensive experiments and detailed analysis on MNIST, SVHN, CelebA, and CIFAR-10 validate the effectiveness of LADDER in achieving a better trade-off between standard accuracy and adversarial robustness as compared with vanilla DNNs and competitive baselines.
+
+
+
+## **3. Adversarial Robustness of Visual Dialog**
+
+cs.CV
+
+**SubmitDate**: 2022-07-06    [paper-pdf](http://arxiv.org/pdf/2207.02639v1)
+
+**Authors**: Lu Yu, Verena Rieser
+
+**Abstracts**: Adversarial robustness evaluates the worst-case performance scenario of a machine learning model to ensure its safety and reliability. This study is the first to investigate the robustness of visually grounded dialog models towards textual attacks. These attacks represent a worst-case scenario where the input question contains a synonym which causes the previously correct model to return a wrong answer. Using this scenario, we first aim to understand how multimodal input components contribute to model robustness. Our results show that models which encode dialog history are more robust, and when launching an attack on history, model prediction becomes more uncertain. This is in contrast to prior work which finds that dialog history is negligible for model performance on this task. We also evaluate how to generate adversarial test examples which successfully fool the model but remain undetected by the user/software designer. We find that the textual, as well as the visual context are important to generate plausible worst-case scenarios.
+
+
+
+## **4. Adversarial Mask: Real-World Universal Adversarial Attack on Face Recognition Models**
+
+cs.CV
+
+16
+
+**SubmitDate**: 2022-07-06    [paper-pdf](http://arxiv.org/pdf/2111.10759v2)
+
+**Authors**: Alon Zolfi, Shai Avidan, Yuval Elovici, Asaf Shabtai
+
+**Abstracts**: Deep learning-based facial recognition (FR) models have demonstrated state-of-the-art performance in the past few years, even when wearing protective medical face masks became commonplace during the COVID-19 pandemic. Given the outstanding performance of these models, the machine learning research community has shown increasing interest in challenging their robustness. Initially, researchers presented adversarial attacks in the digital domain, and later the attacks were transferred to the physical domain. However, in many cases, attacks in the physical domain are conspicuous, and thus may raise suspicion in real-world environments (e.g., airports). In this paper, we propose Adversarial Mask, a physical universal adversarial perturbation (UAP) against state-of-the-art FR models that is applied on face masks in the form of a carefully crafted pattern. In our experiments, we examined the transferability of our adversarial mask to a wide range of FR model architectures and datasets. In addition, we validated our adversarial mask's effectiveness in real-world experiments (CCTV use case) by printing the adversarial pattern on a fabric face mask. In these experiments, the FR system was only able to identify 3.34% of the participants wearing the mask (compared to a minimum of 83.34% with other evaluated masks). A demo of our experiments can be found at: https://youtu.be/_TXkDO5z11w.
+
+
+
+## **5. FIDO2 With Two Displays-Or How to Protect Security-Critical Web Transactions Against Malware Attacks**
+
+cs.CR
+
+**SubmitDate**: 2022-07-06    [paper-pdf](http://arxiv.org/pdf/2206.13358v3)
+
+**Authors**: Timon Hackenjos, Benedikt Wagner, Julian Herr, Jochen Rill, Marek Wehmer, Niklas Goerke, Ingmar Baumgart
+
+**Abstracts**: With the rise of attacks on online accounts in the past years, more and more services offer two-factor authentication for their users. Having factors out of two of the three categories something you know, something you have and something you are should ensure that an attacker cannot compromise two of them at once. Thus, an adversary should not be able to maliciously interact with one's account. However, this is only true if one considers a weak adversary. In particular, since most current solutions only authenticate a session and not individual transactions, they are noneffective if one's device is infected with malware. For online banking, the banking industry has long since identified the need for authenticating transactions. However, specifications of such authentication schemes are not public and implementation details vary wildly from bank to bank with most still being unable to protect against malware. In this work, we present a generic approach to tackle the problem of malicious account takeovers, even in the presence of malware. To this end, we define a new paradigm to improve two-factor authentication that involves the concepts of one-out-of-two security and transaction authentication. Web authentication schemes following this paradigm can protect security-critical transactions against manipulation, even if one of the factors is completely compromised. Analyzing existing authentication schemes, we find that they do not realize one-out-of-two security. We give a blueprint of how to design secure web authentication schemes in general. Based on this blueprint we propose FIDO2 With Two Displays (FIDO2D), a new web authentication scheme based on the FIDO2 standard and prove its security using Tamarin. We hope that our work inspires a new wave of more secure web authentication schemes, which protect security-critical transactions even against attacks with malware.
+
+
+
+## **6. Learning to Accelerate Approximate Methods for Solving Integer Programming via Early Fixing**
 
 cs.DM
 
@@ -17,7 +81,7 @@ cs.DM
 
 
 
-## **2. Benign Adversarial Attack: Tricking Models for Goodness**
+## **7. Benign Adversarial Attack: Tricking Models for Goodness**
 
 cs.AI
 
@@ -31,7 +95,7 @@ ACM MM2022 Brave New Idea
 
 
 
-## **3. Formalizing and Estimating Distribution Inference Risks**
+## **8. Formalizing and Estimating Distribution Inference Risks**
 
 cs.LG
 
@@ -45,7 +109,7 @@ Update: Accepted at PETS 2022
 
 
 
-## **4. The StarCraft Multi-Agent Challenges+ : Learning of Multi-Stage Tasks and Environmental Factors without Precise Reward Functions**
+## **9. The StarCraft Multi-Agent Challenges+ : Learning of Multi-Stage Tasks and Environmental Factors without Precise Reward Functions**
 
 cs.LG
 
@@ -59,7 +123,19 @@ ICML Workshop: AI for Agent Based Modeling 2022 Spotlight
 
 
 
-## **5. Task-agnostic Defense against Adversarial Patch Attacks**
+## **10. Query-Efficient Adversarial Attack Based on Latin Hypercube Sampling**
+
+cs.CV
+
+**SubmitDate**: 2022-07-05    [paper-pdf](http://arxiv.org/pdf/2207.02391v1)
+
+**Authors**: Dan Wang, Jiayu Lin, Yuan-Gen Wang
+
+**Abstracts**: In order to be applicable in real-world scenario, Boundary Attacks (BAs) were proposed and ensured one hundred percent attack success rate with only decision information. However, existing BA methods craft adversarial examples by leveraging a simple random sampling (SRS) to estimate the gradient, consuming a large number of model queries. To overcome the drawback of SRS, this paper proposes a Latin Hypercube Sampling based Boundary Attack (LHS-BA) to save query budget. Compared with SRS, LHS has better uniformity under the same limited number of random samples. Therefore, the average on these random samples is closer to the true gradient than that estimated by SRS. Various experiments are conducted on benchmark datasets including MNIST, CIFAR, and ImageNet-1K. Experimental results demonstrate the superiority of the proposed LHS-BA over the state-of-the-art BA methods in terms of query efficiency. The source codes are publicly available at https://github.com/GZHU-DVL/LHS-BA.
+
+
+
+## **11. Task-agnostic Defense against Adversarial Patch Attacks**
 
 cs.CV
 
@@ -71,7 +147,7 @@ cs.CV
 
 
 
-## **6. Transferable Graph Backdoor Attack**
+## **12. Transferable Graph Backdoor Attack**
 
 cs.CR
 
@@ -85,7 +161,7 @@ Accepted by the 25th International Symposium on Research in Attacks,  Intrusions
 
 
 
-## **7. Wild Networks: Exposure of 5G Network Infrastructures to Adversarial Examples**
+## **13. Wild Networks: Exposure of 5G Network Infrastructures to Adversarial Examples**
 
 cs.CR
 
@@ -97,7 +173,7 @@ cs.CR
 
 
 
-## **8. Adversarial Ensemble Training by Jointly Learning Label Dependencies and Member Models**
+## **14. Adversarial Ensemble Training by Jointly Learning Label Dependencies and Member Models**
 
 cs.LG
 
@@ -109,7 +185,7 @@ cs.LG
 
 
 
-## **9. Hessian-Free Second-Order Adversarial Examples for Adversarial Learning**
+## **15. Hessian-Free Second-Order Adversarial Examples for Adversarial Learning**
 
 cs.LG
 
@@ -121,7 +197,7 @@ cs.LG
 
 
 
-## **10. Training strategy for a lightweight countermeasure model for automatic speaker verification**
+## **16. Training strategy for a lightweight countermeasure model for automatic speaker verification**
 
 cs.SD
 
@@ -135,7 +211,7 @@ Need to finish experiment
 
 
 
-## **11. BadHash: Invisible Backdoor Attacks against Deep Hashing with Clean Label**
+## **17. BadHash: Invisible Backdoor Attacks against Deep Hashing with Clean Label**
 
 cs.CV
 
@@ -149,7 +225,7 @@ conference
 
 
 
-## **12. Removing Batch Normalization Boosts Adversarial Training**
+## **18. Removing Batch Normalization Boosts Adversarial Training**
 
 cs.LG
 
@@ -163,7 +239,7 @@ ICML 2022
 
 
 
-## **13. RAF: Recursive Adversarial Attacks on Face Recognition Using Extremely Limited Queries**
+## **19. RAF: Recursive Adversarial Attacks on Face Recognition Using Extremely Limited Queries**
 
 cs.CV
 
@@ -175,7 +251,7 @@ cs.CV
 
 
 
-## **14. Generating gender-ambiguous voices for privacy-preserving speech recognition**
+## **20. Generating gender-ambiguous voices for privacy-preserving speech recognition**
 
 cs.SD
 
@@ -189,7 +265,7 @@ cs.SD
 
 
 
-## **15. Adversarial Attack and Defense of YOLO Detectors in Autonomous Driving Scenarios**
+## **21. Adversarial Attack and Defense of YOLO Detectors in Autonomous Driving Scenarios**
 
 cs.CV
 
@@ -203,7 +279,7 @@ Accepted by 2022 IEEE Intelligent Vehicles Symposium (IV 2022)
 
 
 
-## **16. AGIC: Approximate Gradient Inversion Attack on Federated Learning**
+## **22. AGIC: Approximate Gradient Inversion Attack on Federated Learning**
 
 cs.LG
 
@@ -217,7 +293,7 @@ This paper is accepted at the 41st International Symposium on  Reliable Distribu
 
 
 
-## **17. Tricking the Hashing Trick: A Tight Lower Bound on the Robustness of CountSketch to Adaptive Inputs**
+## **23. Tricking the Hashing Trick: A Tight Lower Bound on the Robustness of CountSketch to Adaptive Inputs**
 
 cs.DS
 
@@ -229,7 +305,7 @@ cs.DS
 
 
 
-## **18. When Are Linear Stochastic Bandits Attackable?**
+## **24. When Are Linear Stochastic Bandits Attackable?**
 
 cs.LG
 
@@ -243,7 +319,7 @@ cs.LG
 
 
 
-## **19. Certifiably Robust Policy Learning against Adversarial Communication in Multi-agent Systems**
+## **25. Certifiably Robust Policy Learning against Adversarial Communication in Multi-agent Systems**
 
 cs.LG
 
@@ -255,7 +331,7 @@ cs.LG
 
 
 
-## **20. Backdoor Attack is A Devil in Federated GAN-based Medical Image Synthesis**
+## **26. Backdoor Attack is A Devil in Federated GAN-based Medical Image Synthesis**
 
 cs.CV
 
@@ -269,7 +345,7 @@ cs.CV
 
 
 
-## **21. Efficient Adversarial Training With Data Pruning**
+## **27. Efficient Adversarial Training With Data Pruning**
 
 cs.LG
 
@@ -281,7 +357,7 @@ cs.LG
 
 
 
-## **22. Watermarking Graph Neural Networks based on Backdoor Attacks**
+## **28. Watermarking Graph Neural Networks based on Backdoor Attacks**
 
 cs.LG
 
@@ -295,7 +371,7 @@ cs.LG
 
 
 
-## **23. More is Better (Mostly): On the Backdoor Attacks in Federated Graph Neural Networks**
+## **29. More is Better (Mostly): On the Backdoor Attacks in Federated Graph Neural Networks**
 
 cs.CR
 
@@ -309,7 +385,7 @@ cs.CR
 
 
 
-## **24. Effect of Homomorphic Encryption on the Performance of Training Federated Learning Generative Adversarial Networks**
+## **30. Effect of Homomorphic Encryption on the Performance of Training Federated Learning Generative Adversarial Networks**
 
 cs.CR
 
@@ -321,7 +397,7 @@ cs.CR
 
 
 
-## **25. Threat Assessment in Machine Learning based Systems**
+## **31. Threat Assessment in Machine Learning based Systems**
 
 cs.CR
 
@@ -333,7 +409,7 @@ cs.CR
 
 
 
-## **26. MEAD: A Multi-Armed Approach for Evaluation of Adversarial Examples Detectors**
+## **32. MEAD: A Multi-Armed Approach for Evaluation of Adversarial Examples Detectors**
 
 cs.CV
 
@@ -347,7 +423,7 @@ This paper has been accepted to appear in the Proceedings of the 2022  European 
 
 
 
-## **27. The Topological BERT: Transforming Attention into Topology for Natural Language Processing**
+## **33. The Topological BERT: Transforming Attention into Topology for Natural Language Processing**
 
 cs.CL
 
@@ -359,7 +435,7 @@ cs.CL
 
 
 
-## **28. Reliable Representations Make A Stronger Defender: Unsupervised Structure Refinement for Robust GNN**
+## **34. Reliable Representations Make A Stronger Defender: Unsupervised Structure Refinement for Robust GNN**
 
 cs.LG
 
@@ -373,19 +449,7 @@ Accepted in KDD2022
 
 
 
-## **29. FIDO2 With Two Displays$\unicode{x2013}$Or How to Protect Security-Critical Web Transactions Against Malware Attacks**
-
-cs.CR
-
-**SubmitDate**: 2022-06-30    [paper-pdf](http://arxiv.org/pdf/2206.13358v2)
-
-**Authors**: Timon Hackenjos, Benedikt Wagner, Julian Herr, Jochen Rill, Marek Wehmer, Niklas Goerke, Ingmar Baumgart
-
-**Abstracts**: With the rise of attacks on online accounts in the past years, more and more services offer two-factor authentication for their users. Having factors out of two of the three categories something you know, something you have and something you are should ensure that an attacker cannot compromise two of them at once. Thus, an adversary should not be able to maliciously interact with one's account. However, this is only true if one considers a weak adversary. In particular, since most current solutions only authenticate a session and not individual transactions, they are noneffective if one's device is infected with malware. For online banking, the banking industry has long since identified the need for authenticating transactions. However, specifications of such authentication schemes are not public and implementation details vary wildly from bank to bank with most still being unable to protect against malware. In this work, we present a generic approach to tackle the problem of malicious account takeovers, even in the presence of malware. To this end, we define a new paradigm to improve two-factor authentication that involves the concepts of one-out-of-two security and transaction authentication. Web authentication schemes following this paradigm can protect security-critical transactions against manipulation, even if one of the factors is completely compromised. Analyzing existing authentication schemes, we find that they do not realize one-out-of-two security. We give a blueprint of how to design secure web authentication schemes in general. Based on this blueprint we propose FIDO2 With Two Displays (FIDO2D), a new web authentication scheme based on the FIDO2 standard and prove its security using Tamarin. We hope that our work inspires a new wave of more secure web authentication schemes, which protect security-critical transactions even against attacks with malware.
-
-
-
-## **30. An Intermediate-level Attack Framework on The Basis of Linear Regression**
+## **35. An Intermediate-level Attack Framework on The Basis of Linear Regression**
 
 cs.CV
 
@@ -399,7 +463,7 @@ Accepted by TPAMI; Code is available at  https://github.com/qizhangli/ila-plus-p
 
 
 
-## **31. On the Challenges of Detecting Side-Channel Attacks in SGX**
+## **36. On the Challenges of Detecting Side-Channel Attacks in SGX**
 
 cs.CR
 
@@ -411,7 +475,7 @@ cs.CR
 
 
 
-## **32. Depth-2 Neural Networks Under a Data-Poisoning Attack**
+## **37. Depth-2 Neural Networks Under a Data-Poisoning Attack**
 
 cs.LG
 
@@ -425,7 +489,7 @@ cs.LG
 
 
 
-## **33. IBP Regularization for Verified Adversarial Robustness via Branch-and-Bound**
+## **38. IBP Regularization for Verified Adversarial Robustness via Branch-and-Bound**
 
 cs.LG
 
@@ -439,7 +503,7 @@ ICML 2022 Workshop on Formal Verification of Machine Learning
 
 
 
-## **34. longhorns at DADC 2022: How many linguists does it take to fool a Question Answering model? A systematic approach to adversarial attacks**
+## **39. longhorns at DADC 2022: How many linguists does it take to fool a Question Answering model? A systematic approach to adversarial attacks**
 
 cs.CL
 
@@ -453,7 +517,7 @@ Accepted at DADC2022
 
 
 
-## **35. Private Graph Extraction via Feature Explanations**
+## **40. Private Graph Extraction via Feature Explanations**
 
 cs.LG
 
@@ -465,7 +529,7 @@ cs.LG
 
 
 
-## **36. Enhancing Security of Memristor Computing System Through Secure Weight Mapping**
+## **41. Enhancing Security of Memristor Computing System Through Secure Weight Mapping**
 
 cs.ET
 
@@ -479,7 +543,7 @@ cs.ET
 
 
 
-## **37. Guided Diffusion Model for Adversarial Purification**
+## **42. Guided Diffusion Model for Adversarial Purification**
 
 cs.CV
 
@@ -491,7 +555,7 @@ cs.CV
 
 
 
-## **38. A Deep Learning Approach to Create DNS Amplification Attacks**
+## **43. A Deep Learning Approach to Create DNS Amplification Attacks**
 
 cs.CR
 
@@ -505,7 +569,7 @@ cs.CR
 
 
 
-## **39. Linear Model Against Malicious Adversaries with Local Differential Privacy**
+## **44. Linear Model Against Malicious Adversaries with Local Differential Privacy**
 
 cs.CR
 
@@ -517,7 +581,7 @@ cs.CR
 
 
 
-## **40. An Empirical Study of Challenges in Converting Deep Learning Models**
+## **45. An Empirical Study of Challenges in Converting Deep Learning Models**
 
 cs.LG
 
@@ -531,7 +595,7 @@ Accepted for publication in ICSME 2022
 
 
 
-## **41. Collecting high-quality adversarial data for machine reading comprehension tasks with humans and models in the loop**
+## **46. Collecting high-quality adversarial data for machine reading comprehension tasks with humans and models in the loop**
 
 cs.CL
 
@@ -545,7 +609,7 @@ cs.CL
 
 
 
-## **42. How to Steer Your Adversary: Targeted and Efficient Model Stealing Defenses with Gradient Redirection**
+## **47. How to Steer Your Adversary: Targeted and Efficient Model Stealing Defenses with Gradient Redirection**
 
 cs.LG
 
@@ -559,7 +623,7 @@ ICML 2022
 
 
 
-## **43. Debiasing Learning for Membership Inference Attacks Against Recommender Systems**
+## **48. Debiasing Learning for Membership Inference Attacks Against Recommender Systems**
 
 cs.IR
 
@@ -573,7 +637,7 @@ Accepted by KDD 2022
 
 
 
-## **44. On the amplification of security and privacy risks by post-hoc explanations in machine learning models**
+## **49. On the amplification of security and privacy risks by post-hoc explanations in machine learning models**
 
 cs.LG
 
@@ -587,7 +651,7 @@ cs.LG
 
 
 
-## **45. Increasing Confidence in Adversarial Robustness Evaluations**
+## **50. Increasing Confidence in Adversarial Robustness Evaluations**
 
 cs.LG
 
@@ -598,74 +662,6 @@ Oral at CVPR 2022 Workshop (Art of Robustness). Project website  https://zimmerr
 **Authors**: Roland S. Zimmermann, Wieland Brendel, Florian Tramer, Nicholas Carlini
 
 **Abstracts**: Hundreds of defenses have been proposed to make deep neural networks robust against minimal (adversarial) input perturbations. However, only a handful of these defenses held up their claims because correctly evaluating robustness is extremely challenging: Weak attacks often fail to find adversarial examples even if they unknowingly exist, thereby making a vulnerable network look robust. In this paper, we propose a test to identify weak attacks, and thus weak defense evaluations. Our test slightly modifies a neural network to guarantee the existence of an adversarial example for every sample. Consequentially, any correct attack must succeed in breaking this modified network. For eleven out of thirteen previously-published defenses, the original evaluation of the defense fails our test, while stronger attacks that break these defenses pass it. We hope that attack unit tests - such as ours - will be a major component in future robustness evaluations and increase confidence in an empirical field that is currently riddled with skepticism.
-
-
-
-## **46. Ownership Verification of DNN Architectures via Hardware Cache Side Channels**
-
-cs.CR
-
-The paper has been accepted by IEEE Transactions on Circuits and  Systems for Video Technology
-
-**SubmitDate**: 2022-06-28    [paper-pdf](http://arxiv.org/pdf/2102.03523v4)
-
-**Authors**: Xiaoxuan Lou, Shangwei Guo, Jiwei Li, Tianwei Zhang
-
-**Abstracts**: Deep Neural Networks (DNN) are gaining higher commercial values in computer vision applications, e.g., image classification, video analytics, etc. This calls for urgent demands of the intellectual property (IP) protection of DNN models. In this paper, we present a novel watermarking scheme to achieve the ownership verification of DNN architectures. Existing works all embedded watermarks into the model parameters while treating the architecture as public property. These solutions were proven to be vulnerable by an adversary to detect or remove the watermarks. In contrast, we claim the model architectures as an important IP for model owners, and propose to implant watermarks into the architectures. We design new algorithms based on Neural Architecture Search (NAS) to generate watermarked architectures, which are unique enough to represent the ownership, while maintaining high model usability. Such watermarks can be extracted via side-channel-based model extraction techniques with high fidelity. We conduct comprehensive experiments on watermarked CNN models for image classification tasks and the experimental results show our scheme has negligible impact on the model performance, and exhibits strong robustness against various model transformations and adaptive attacks.
-
-
-
-## **47. Deep Image Destruction: Vulnerability of Deep Image-to-Image Models against Adversarial Attacks**
-
-cs.CV
-
-ICPR2022
-
-**SubmitDate**: 2022-06-28    [paper-pdf](http://arxiv.org/pdf/2104.15022v2)
-
-**Authors**: Jun-Ho Choi, Huan Zhang, Jun-Hyuk Kim, Cho-Jui Hsieh, Jong-Seok Lee
-
-**Abstracts**: Recently, the vulnerability of deep image classification models to adversarial attacks has been investigated. However, such an issue has not been thoroughly studied for image-to-image tasks that take an input image and generate an output image (e.g., colorization, denoising, deblurring, etc.) This paper presents comprehensive investigations into the vulnerability of deep image-to-image models to adversarial attacks. For five popular image-to-image tasks, 16 deep models are analyzed from various standpoints such as output quality degradation due to attacks, transferability of adversarial examples across different tasks, and characteristics of perturbations. We show that unlike image classification tasks, the performance degradation on image-to-image tasks largely differs depending on various factors, e.g., attack methods and task objectives. In addition, we analyze the effectiveness of conventional defense methods used for classification models in improving the robustness of the image-to-image models.
-
-
-
-## **48. Improving Privacy and Security in Unmanned Aerial Vehicles Network using Blockchain**
-
-cs.CR
-
-18 Pages; 14 Figures; 2 Tables
-
-**SubmitDate**: 2022-06-27    [paper-pdf](http://arxiv.org/pdf/2201.06100v2)
-
-**Authors**: Hardik Sachdeva, Shivam Gupta, Anushka Misra, Khushbu Chauhan, Mayank Dave
-
-**Abstracts**: Unmanned Aerial Vehicles (UAVs), also known as drones, have exploded in every segment present in todays business industry. They have scope in reinventing old businesses, and they are even developing new opportunities for various brands and franchisors. UAVs are used in the supply chain, maintaining surveillance and serving as mobile hotspots. Although UAVs have potential applications, they bring several societal concerns and challenges that need addressing in public safety, privacy, and cyber security. UAVs are prone to various cyber-attacks and vulnerabilities; they can also be hacked and misused by malicious entities resulting in cyber-crime. The adversaries can exploit these vulnerabilities, leading to data loss, property, and destruction of life. One can partially detect the attacks like false information dissemination, jamming, gray hole, blackhole, and GPS spoofing by monitoring the UAV behavior, but it may not resolve privacy issues. This paper presents secure communication between UAVs using blockchain technology. Our approach involves building smart contracts and making a secure and reliable UAV adhoc network. This network will be resilient to various network attacks and is secure against malicious intrusions.
-
-
-
-## **49. Adversarially Robust Learning of Real-Valued Functions**
-
-cs.LG
-
-**SubmitDate**: 2022-06-26    [paper-pdf](http://arxiv.org/pdf/2206.12977v1)
-
-**Authors**: Idan Attias, Steve Hanneke
-
-**Abstracts**: We study robustness to test-time adversarial attacks in the regression setting with $\ell_p$ losses and arbitrary perturbation sets. We address the question of which function classes are PAC learnable in this setting. We show that classes of finite fat-shattering dimension are learnable. Moreover, for convex function classes, they are even properly learnable. In contrast, some non-convex function classes provably require improper learning algorithms. We also discuss extensions to agnostic learning. Our main technique is based on a construction of an adversarially robust sample compression scheme of a size determined by the fat-shattering dimension.
-
-
-
-## **50. Cascading Failures in Smart Grids under Random, Targeted and Adaptive Attacks**
-
-cs.SI
-
-Accepted for publication as a book chapter. arXiv admin note:  substantial text overlap with arXiv:1402.6809
-
-**SubmitDate**: 2022-06-25    [paper-pdf](http://arxiv.org/pdf/2206.12735v1)
-
-**Authors**: Sushmita Ruj, Arindam Pal
-
-**Abstracts**: We study cascading failures in smart grids, where an attacker selectively compromises the nodes with probabilities proportional to their degrees, betweenness, or clustering coefficient. This implies that nodes with high degrees, betweenness, or clustering coefficients are attacked with higher probability. We mathematically and experimentally analyze the sizes of the giant components of the networks under different types of targeted attacks, and compare the results with the corresponding sizes under random attacks. We show that networks disintegrate faster for targeted attacks compared to random attacks. A targeted attack on a small fraction of high degree nodes disintegrates one or both of the networks, whereas both the networks contain giant components for random attack on the same fraction of nodes. An important observation is that an attacker has an advantage if it compromises nodes based on their betweenness, rather than based on degree or clustering coefficient.   We next study adaptive attacks, where an attacker compromises nodes in rounds. Here, some nodes are compromised in each round based on their degree, betweenness or clustering coefficients, instead of compromising all nodes together. In this case, the degree, betweenness, or clustering coefficient is calculated before the start of each round, instead of at the beginning. We show experimentally that an adversary has an advantage in this adaptive approach, compared to compromising the same number of nodes all at once.
 
 
 

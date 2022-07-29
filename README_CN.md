@@ -1,9 +1,53 @@
 # Latest Adversarial Attack Papers
-**update at 2022-07-29 06:31:25**
+**update at 2022-07-30 06:31:23**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. SAC-AP: Soft Actor Critic based Deep Reinforcement Learning for Alert Prioritization**
+## **1. Look Closer to Your Enemy: Learning to Attack via Teacher-student Mimicking**
+
+走近你的敌人：通过师生模仿学习攻击 cs.CV
+
+13 pages, 8 figures, NDSS
+
+**SubmitDate**: 2022-07-28    [paper-pdf](http://arxiv.org/pdf/2207.13381v2)
+
+**Authors**: Mingejie Wang, Zhiqing Tang, Sirui Li, Dingwen Xiao
+
+**Abstracts**: This paper aims to generate realistic attack samples of person re-identification, ReID, by reading the enemy's mind (VM). In this paper, we propose a novel inconspicuous and controllable ReID attack baseline, LCYE, to generate adversarial query images. Concretely, LCYE first distills VM's knowledge via teacher-student memory mimicking in the proxy task. Then this knowledge prior acts as an explicit cipher conveying what is essential and realistic, believed by VM, for accurate adversarial misleading. Besides, benefiting from the multiple opposing task framework of LCYE, we further investigate the interpretability and generalization of ReID models from the view of the adversarial attack, including cross-domain adaption, cross-model consensus, and online learning process. Extensive experiments on four ReID benchmarks show that our method outperforms other state-of-the-art attackers with a large margin in white-box, black-box, and target attacks. Our code is now available at https://gitfront.io/r/user-3704489/mKXusqDT4ffr/LCYE/.
+
+摘要: 本文旨在通过读取敌人的心理(Vm)来生成真实的人重新识别的攻击样本，Reid。本文提出了一种新的隐蔽可控的Reid攻击基线--LCYE，用于生成敌意查询图像。具体来说，LCYE首先通过模仿代理任务中的师生记忆来提取VM的知识。然后，这种先验知识就像一个明确的密码，传达了被VM认为是必要和现实的东西，以实现准确的对抗性误导。此外，得益于LCYE的多重对立任务框架，我们从对抗性攻击的角度进一步考察了Reid模型的可解释性和泛化，包括跨域适应、跨模型共识和在线学习过程。在四个Reid基准测试上的大量实验表明，我们的方法在白盒、黑盒和目标攻击中的性能远远优于其他最先进的攻击者。我们的代码现已在https://gitfront.io/r/user-3704489/mKXusqDT4ffr/LCYE/.上提供
+
+
+
+## **2. Privacy-Preserving Federated Recurrent Neural Networks**
+
+隐私保护的联邦递归神经网络 cs.CR
+
+**SubmitDate**: 2022-07-28    [paper-pdf](http://arxiv.org/pdf/2207.13947v1)
+
+**Authors**: Sinem Sav, Abdulrahman Diaa, Apostolos Pyrgelis, Jean-Philippe Bossuat, Jean-Pierre Hubaux
+
+**Abstracts**: We present RHODE, a novel system that enables privacy-preserving training of and prediction on Recurrent Neural Networks (RNNs) in a federated learning setting by relying on multiparty homomorphic encryption (MHE). RHODE preserves the confidentiality of the training data, the model, and the prediction data; and it mitigates the federated learning attacks that target the gradients under a passive-adversary threat model. We propose a novel packing scheme, multi-dimensional packing, for a better utilization of Single Instruction, Multiple Data (SIMD) operations under encryption. With multi-dimensional packing, RHODE enables the efficient processing, in parallel, of a batch of samples. To avoid the exploding gradients problem, we also provide several clip-by-value approximations for enabling gradient clipping under encryption. We experimentally show that the model performance with RHODE remains similar to non-secure solutions both for homogeneous and heterogeneous data distribution among the data holders. Our experimental evaluation shows that RHODE scales linearly with the number of data holders and the number of timesteps, sub-linearly and sub-quadratically with the number of features and the number of hidden units of RNNs, respectively. To the best of our knowledge, RHODE is the first system that provides the building blocks for the training of RNNs and its variants, under encryption in a federated learning setting.
+
+摘要: 我们提出了一种新的系统Rhode，它依靠多方同态加密(MHE)在联邦学习环境中实现对递归神经网络(RNN)的隐私保护训练和预测。Rhode保留了训练数据、模型和预测数据的机密性；它缓解了被动对手威胁模型下针对梯度的联合学习攻击。为了更好地利用加密环境下的单指令、多数据(SIMD)运算，提出了一种新的打包方案--多维打包。通过多维包装，Rhode能够并行高效地处理一批样品。为了避免爆炸的梯度问题，我们还提供了几种逐值近似的方法来实现加密下的梯度裁剪。我们的实验表明，对于数据持有者之间的同质和异质数据分布，Rhode模型的性能与非安全解决方案相似。我们的实验评估表明，Rhode与数据持有者数量和时间步数成线性关系，分别与RNN的特征数和隐含单元数成亚线性和次二次关系。据我们所知，Rhode是第一个在联合学习环境中加密的、为RNN及其变体的训练提供构建块的系统。
+
+
+
+## **3. Label-Only Membership Inference Attack against Node-Level Graph Neural Networks**
+
+针对节点级图神经网络的仅标签隶属度推理攻击 cs.CR
+
+**SubmitDate**: 2022-07-27    [paper-pdf](http://arxiv.org/pdf/2207.13766v1)
+
+**Authors**: Mauro Conti, Jiaxin Li, Stjepan Picek, Jing Xu
+
+**Abstracts**: Graph Neural Networks (GNNs), inspired by Convolutional Neural Networks (CNNs), aggregate the message of nodes' neighbors and structure information to acquire expressive representations of nodes for node classification, graph classification, and link prediction. Previous studies have indicated that GNNs are vulnerable to Membership Inference Attacks (MIAs), which infer whether a node is in the training data of GNNs and leak the node's private information, like the patient's disease history. The implementation of previous MIAs takes advantage of the models' probability output, which is infeasible if GNNs only provide the prediction label (label-only) for the input.   In this paper, we propose a label-only MIA against GNNs for node classification with the help of GNNs' flexible prediction mechanism, e.g., obtaining the prediction label of one node even when neighbors' information is unavailable. Our attacking method achieves around 60\% accuracy, precision, and Area Under the Curve (AUC) for most datasets and GNN models, some of which are competitive or even better than state-of-the-art probability-based MIAs implemented under our environment and settings. Additionally, we analyze the influence of the sampling method, model selection approach, and overfitting level on the attack performance of our label-only MIA. Both of those factors have an impact on the attack performance. Then, we consider scenarios where assumptions about the adversary's additional dataset (shadow dataset) and extra information about the target model are relaxed. Even in those scenarios, our label-only MIA achieves a better attack performance in most cases. Finally, we explore the effectiveness of possible defenses, including Dropout, Regularization, Normalization, and Jumping knowledge. None of those four defenses prevent our attack completely.
+
+摘要: 图神经网络(GNN)受卷积神经网络(CNN)的启发，将节点的邻居信息和结构信息聚合在一起，得到节点的表达形式，用于节点分类、图分类和链接预测。以往的研究表明，GNN容易受到成员关系推断攻击(MIA)，MIA可以推断节点是否在GNN的训练数据中，并泄露节点的私有信息，如患者的病史。以前的MIA的实现利用了模型的概率输出，如果GNN只为输入提供预测标签(仅标签)，这是不可行的。本文利用GNN灵活的预测机制，提出了一种针对GNN的只有标签的MIA用于节点分类，例如，即使在邻居信息不可用的情况下也能获得一个节点的预测标签。对于大多数数据集和GNN模型，我们的攻击方法达到了大约60%的准确率、精确度和曲线下面积(AUC)，其中一些可以与在我们的环境和设置下实现的最先进的基于概率的MIA相媲美，甚至更好。此外，我们还分析了采样方法、模型选择方法和过拟合程度对仅标签MIA攻击性能的影响。这两个因素都会对攻击性能产生影响。然后，我们考虑放松对对手的额外数据集(阴影数据集)和关于目标模型的额外信息的假设。即使在这些情况下，我们的仅标签MIA在大多数情况下也可以实现更好的攻击性能。最后，我们探讨了可能的防御措施的有效性，包括丢弃、正则化、正规化和跳跃知识。这四种防御手段都不能完全阻止我们的进攻。
+
+
+
+## **4. SAC-AP: Soft Actor Critic based Deep Reinforcement Learning for Alert Prioritization**
 
 SAC-AP：基于软参与者批评者的深度强化学习告警优先级 cs.CR
 
@@ -19,7 +63,7 @@ SAC-AP：基于软参与者批评者的深度强化学习告警优先级 cs.CR
 
 
 
-## **2. Membership Inference Attacks via Adversarial Examples**
+## **5. Membership Inference Attacks via Adversarial Examples**
 
 基于对抗性例子的成员关系推理攻击 cs.LG
 
@@ -33,7 +77,7 @@ SAC-AP：基于软参与者批评者的深度强化学习告警优先级 cs.CR
 
 
 
-## **3. Robust Textual Embedding against Word-level Adversarial Attacks**
+## **6. Robust Textual Embedding against Word-level Adversarial Attacks**
 
 抵抗词级敌意攻击的稳健文本嵌入 cs.CL
 
@@ -49,7 +93,7 @@ Accepted by UAI 2022, code is available at  https://github.com/JHL-HUST/FTML
 
 
 
-## **4. Improved and Interpretable Defense to Transferred Adversarial Examples by Jacobian Norm with Selective Input Gradient Regularization**
+## **7. Improved and Interpretable Defense to Transferred Adversarial Examples by Jacobian Norm with Selective Input Gradient Regularization**
 
 基于选择输入梯度正则化的雅可比范数对转移对抗性实例的改进和可解释防御 cs.LG
 
@@ -65,23 +109,7 @@ Under review
 
 
 
-## **5. Look Closer to Your Enemy: Learning to Attack via Teacher-student Mimicking**
-
-走近你的敌人：通过师生模仿学习攻击 cs.CV
-
-13 pages, 8 figures, NDSS
-
-**SubmitDate**: 2022-07-27    [paper-pdf](http://arxiv.org/pdf/2207.13381v1)
-
-**Authors**: Mingejie Wang, Zhiqing Tang, Sirui Li, Dingwen Xiao
-
-**Abstracts**: This paper aims to generate realistic attack samples of person re-identification, ReID, by reading the enemy's mind (VM). In this paper, we propose a novel inconspicuous and controllable ReID attack baseline, LCYE, to generate adversarial query images. Concretely, LCYE first distills VM's knowledge via teacher-student memory mimicking in the proxy task. Then this knowledge prior acts as an explicit cipher conveying what is essential and realistic, believed by VM, for accurate adversarial misleading. Besides, benefiting from the multiple opposing task framework of LCYE, we further investigate the interpretability and generalization of ReID models from the view of the adversarial attack, including cross-domain adaption, cross-model consensus, and online learning process. Extensive experiments on four ReID benchmarks show that our method outperforms other state-of-the-art attackers with a large margin in white-box, black-box, and target attacks. Our code is now available at https://gitfront.io/r/user-3704489/mKXusqDT4ffr/LCYE/.
-
-摘要: 本文旨在通过读取敌人的心理(Vm)来生成真实的人重新识别的攻击样本，Reid。本文提出了一种新的隐蔽可控的Reid攻击基线--LCYE，用于生成敌意查询图像。具体来说，LCYE首先通过模仿代理任务中的师生记忆来提取VM的知识。然后，这种先验知识就像一个明确的密码，传达了被VM认为是必要和现实的东西，以实现准确的对抗性误导。此外，得益于LCYE的多重对立任务框架，我们从对抗性攻击的角度进一步考察了Reid模型的可解释性和泛化，包括跨域适应、跨模型共识和在线学习过程。在四个Reid基准测试上的大量实验表明，我们的方法在白盒、黑盒和目标攻击中的性能远远优于其他最先进的攻击者。我们的代码现已在https://gitfront.io/r/user-3704489/mKXusqDT4ffr/LCYE/.上提供
-
-
-
-## **6. Point Cloud Attacks in Graph Spectral Domain: When 3D Geometry Meets Graph Signal Processing**
+## **8. Point Cloud Attacks in Graph Spectral Domain: When 3D Geometry Meets Graph Signal Processing**
 
 图谱域中的点云攻击：当3D几何遇到图信号处理时 cs.CV
 
@@ -97,7 +125,7 @@ arXiv admin note: substantial text overlap with arXiv:2202.07261
 
 
 
-## **7. Perception-Aware Attack: Creating Adversarial Music via Reverse-Engineering Human Perception**
+## **9. Perception-Aware Attack: Creating Adversarial Music via Reverse-Engineering Human Perception**
 
 感知攻击：通过逆向工程人类感知创造对抗性音乐 cs.SD
 
@@ -113,7 +141,7 @@ ACM CCS 2022
 
 
 
-## **8. FlashSyn: Flash Loan Attack Synthesis via Counter Example Driven Approximation**
+## **10. FlashSyn: Flash Loan Attack Synthesis via Counter Example Driven Approximation**
 
 FlashSyn：基于反例驱动近似的闪贷攻击合成 cs.PL
 
@@ -129,7 +157,7 @@ FlashSyn：基于反例驱动近似的闪贷攻击合成 cs.PL
 
 
 
-## **9. Exploring the Unprecedented Privacy Risks of the Metaverse**
+## **11. Exploring the Unprecedented Privacy Risks of the Metaverse**
 
 探索Metverse前所未有的隐私风险 cs.CR
 
@@ -143,7 +171,7 @@ FlashSyn：基于反例驱动近似的闪贷攻击合成 cs.PL
 
 
 
-## **10. LGV: Boosting Adversarial Example Transferability from Large Geometric Vicinity**
+## **12. LGV: Boosting Adversarial Example Transferability from Large Geometric Vicinity**
 
 LGV：增强来自大几何范围的对抗性范例的可转移性 cs.LG
 
@@ -159,7 +187,7 @@ Accepted at ECCV 2022
 
 
 
-## **11. Making Corgis Important for Honeycomb Classification: Adversarial Attacks on Concept-based Explainability Tools**
+## **13. Making Corgis Important for Honeycomb Classification: Adversarial Attacks on Concept-based Explainability Tools**
 
 让柯基对蜂巢分类变得重要：对基于概念的可解释性工具的对抗性攻击 cs.LG
 
@@ -175,7 +203,7 @@ AdvML Frontiers 2022 @ ICML 2022 workshop
 
 
 
-## **12. TnT Attacks! Universal Naturalistic Adversarial Patches Against Deep Neural Network Systems**
+## **14. TnT Attacks! Universal Naturalistic Adversarial Patches Against Deep Neural Network Systems**
 
 TNT攻击！针对深度神经网络系统的普遍自然主义对抗性补丁 cs.CV
 
@@ -191,7 +219,7 @@ Accepted for publication in the IEEE Transactions on Information  Forensics & Se
 
 
 
-## **13. Verification-Aided Deep Ensemble Selection**
+## **15. Verification-Aided Deep Ensemble Selection**
 
 辅助验证的深度集成选择 cs.LG
 
@@ -207,7 +235,7 @@ To appear in FMCAD 2022
 
 
 
-## **14. $p$-DkNN: Out-of-Distribution Detection Through Statistical Testing of Deep Representations**
+## **16. $p$-DkNN: Out-of-Distribution Detection Through Statistical Testing of Deep Representations**
 
 $p$-DkNN：基于深度表示统计测试的失配检测 cs.LG
 
@@ -221,7 +249,7 @@ $p$-DkNN：基于深度表示统计测试的失配检测 cs.LG
 
 
 
-## **15. TAFIM: Targeted Adversarial Attacks against Facial Image Manipulations**
+## **17. TAFIM: Targeted Adversarial Attacks against Facial Image Manipulations**
 
 TAFIM：针对面部图像处理的有针对性的对抗性攻击 cs.CV
 
@@ -237,7 +265,7 @@ TAFIM：针对面部图像处理的有针对性的对抗性攻击 cs.CV
 
 
 
-## **16. SegPGD: An Effective and Efficient Adversarial Attack for Evaluating and Boosting Segmentation Robustness**
+## **18. SegPGD: An Effective and Efficient Adversarial Attack for Evaluating and Boosting Segmentation Robustness**
 
 SegPGD：一种评估和提高分割健壮性的高效对抗性攻击 cs.CV
 
@@ -251,7 +279,7 @@ SegPGD：一种评估和提高分割健壮性的高效对抗性攻击 cs.CV
 
 
 
-## **17. Adversarial Attack across Datasets**
+## **19. Adversarial Attack across Datasets**
 
 跨数据集的对抗性攻击 cs.CV
 
@@ -265,7 +293,7 @@ SegPGD：一种评估和提高分割健壮性的高效对抗性攻击 cs.CV
 
 
 
-## **18. Improving Adversarial Robustness via Mutual Information Estimation**
+## **20. Improving Adversarial Robustness via Mutual Information Estimation**
 
 利用互信息估计提高对手的稳健性 cs.LG
 
@@ -281,7 +309,7 @@ This version has modified Eq.2 and its proof in the published version
 
 
 
-## **19. Versatile Weight Attack via Flipping Limited Bits**
+## **21. Versatile Weight Attack via Flipping Limited Bits**
 
 通过翻转有限比特进行多功能重量攻击 cs.CR
 
@@ -297,7 +325,7 @@ Extension of our ICLR 2021 work: arXiv:2102.10496
 
 
 
-## **20. Privacy Against Inference Attacks in Vertical Federated Learning**
+## **22. Privacy Against Inference Attacks in Vertical Federated Learning**
 
 垂直联合学习中抵抗推理攻击的隐私保护 cs.LG
 
@@ -311,7 +339,7 @@ Extension of our ICLR 2021 work: arXiv:2102.10496
 
 
 
-## **21. Can we achieve robustness from data alone?**
+## **23. Can we achieve robustness from data alone?**
 
 我们能仅从数据中获得稳健性吗？ cs.LG
 
@@ -325,7 +353,7 @@ Extension of our ICLR 2021 work: arXiv:2102.10496
 
 
 
-## **22. Proving Common Mechanisms Shared by Twelve Methods of Boosting Adversarial Transferability**
+## **24. Proving Common Mechanisms Shared by Twelve Methods of Boosting Adversarial Transferability**
 
 证明提高对抗转移能力的十二种方法所共有的共同机制 cs.LG
 
@@ -339,7 +367,7 @@ Extension of our ICLR 2021 work: arXiv:2102.10496
 
 
 
-## **23. Testing the Robustness of Learned Index Structures**
+## **25. Testing the Robustness of Learned Index Structures**
 
 测试学习索引结构的稳健性 cs.DB
 
@@ -353,7 +381,7 @@ Extension of our ICLR 2021 work: arXiv:2102.10496
 
 
 
-## **24. How does Heterophily Impact the Robustness of Graph Neural Networks? Theoretical Connections and Practical Implications**
+## **26. How does Heterophily Impact the Robustness of Graph Neural Networks? Theoretical Connections and Practical Implications**
 
 异构性如何影响图神经网络的健壮性？理论联系和实践意义 cs.LG
 
@@ -369,7 +397,7 @@ KDD 2022 camera ready version + full appendix; 20 pages, 2 figures
 
 
 
-## **25. Do Perceptually Aligned Gradients Imply Adversarial Robustness?**
+## **27. Do Perceptually Aligned Gradients Imply Adversarial Robustness?**
 
 感知上对齐的梯度是否意味着对抗的健壮性？ cs.CV
 
@@ -383,7 +411,7 @@ KDD 2022 camera ready version + full appendix; 20 pages, 2 figures
 
 
 
-## **26. Practical Privacy Attacks on Vertical Federated Learning**
+## **28. Practical Privacy Attacks on Vertical Federated Learning**
 
 针对垂直联合学习的实用隐私攻击 cs.CR
 
@@ -397,7 +425,7 @@ KDD 2022 camera ready version + full appendix; 20 pages, 2 figures
 
 
 
-## **27. On Higher Adversarial Susceptibility of Contrastive Self-Supervised Learning**
+## **29. On Higher Adversarial Susceptibility of Contrastive Self-Supervised Learning**
 
 关于对比性自我监督学习的高对抗敏感性 cs.CV
 
@@ -411,7 +439,7 @@ KDD 2022 camera ready version + full appendix; 20 pages, 2 figures
 
 
 
-## **28. Adversarially-Aware Robust Object Detector**
+## **30. Adversarially-Aware Robust Object Detector**
 
 对抗性感知的鲁棒目标检测器 cs.CV
 
@@ -427,7 +455,7 @@ ECCV2022 oral paper
 
 
 
-## **29. Boosting Transferability of Targeted Adversarial Examples via Hierarchical Generative Networks**
+## **31. Boosting Transferability of Targeted Adversarial Examples via Hierarchical Generative Networks**
 
 通过层次化生成网络提高目标对抗性实例的可转移性 cs.LG
 
@@ -441,7 +469,7 @@ ECCV2022 oral paper
 
 
 
-## **30. Synthetic Dataset Generation for Adversarial Machine Learning Research**
+## **32. Synthetic Dataset Generation for Adversarial Machine Learning Research**
 
 用于对抗性机器学习研究的合成数据集生成 cs.CV
 
@@ -455,7 +483,7 @@ ECCV2022 oral paper
 
 
 
-## **31. Careful What You Wish For: on the Extraction of Adversarially Trained Models**
+## **33. Careful What You Wish For: on the Extraction of Adversarially Trained Models**
 
 小心你想要的：关于敌对训练模型的提取 cs.LG
 
@@ -471,7 +499,7 @@ To be published in the proceedings of the 19th Annual International  Conference 
 
 
 
-## **32. Triangle Attack: A Query-efficient Decision-based Adversarial Attack**
+## **34. Triangle Attack: A Query-efficient Decision-based Adversarial Attack**
 
 三角攻击：一种查询高效的基于决策的对抗性攻击 cs.CV
 
@@ -487,7 +515,7 @@ Accepted by ECCV 2022, code is available at  https://github.com/xiaosen-wang/TA
 
 
 
-## **33. Knowledge-enhanced Black-box Attacks for Recommendations**
+## **35. Knowledge-enhanced Black-box Attacks for Recommendations**
 
 用于推荐的知识增强型黑盒攻击 cs.LG
 
@@ -503,7 +531,7 @@ Accepted in the KDD'22
 
 
 
-## **34. Image Generation Network for Covert Transmission in Online Social Network**
+## **36. Image Generation Network for Covert Transmission in Online Social Network**
 
 在线社交网络中用于隐蔽传输的图像生成网络 cs.CV
 
@@ -519,7 +547,7 @@ ACMMM2022 Poster
 
 
 
-## **35. Switching One-Versus-the-Rest Loss to Increase the Margin of Logits for Adversarial Robustness**
+## **37. Switching One-Versus-the-Rest Loss to Increase the Margin of Logits for Adversarial Robustness**
 
 切换一对一损失以增加对战健壮性的Logit裕度 cs.LG
 
@@ -535,7 +563,7 @@ ACMMM2022 Poster
 
 
 
-## **36. FOCUS: Fairness via Agent-Awareness for Federated Learning on Heterogeneous Data**
+## **38. FOCUS: Fairness via Agent-Awareness for Federated Learning on Heterogeneous Data**
 
 焦点：异类数据联合学习中基于代理感知的公平性 cs.LG
 
@@ -549,7 +577,7 @@ ACMMM2022 Poster
 
 
 
-## **37. Illusionary Attacks on Sequential Decision Makers and Countermeasures**
+## **39. Illusionary Attacks on Sequential Decision Makers and Countermeasures**
 
 对序贯决策者的幻觉攻击及其对策 cs.AI
 
@@ -563,7 +591,7 @@ ACMMM2022 Poster
 
 
 
-## **38. PFMC: a parallel symbolic model checker for security protocol verification**
+## **40. PFMC: a parallel symbolic model checker for security protocol verification**
 
 PFMC：一种用于安全协议验证的并行符号模型检查器 cs.LO
 
@@ -577,7 +605,7 @@ PFMC：一种用于安全协议验证的并行符号模型检查器 cs.LO
 
 
 
-## **39. Adaptive Image Transformations for Transfer-based Adversarial Attack**
+## **41. Adaptive Image Transformations for Transfer-based Adversarial Attack**
 
 基于传输的对抗性攻击中的自适应图像变换 cs.CV
 
@@ -593,7 +621,7 @@ PFMC：一种用于安全协议验证的并行符号模型检查器 cs.LO
 
 
 
-## **40. On the Robustness of Quality Measures for GANs**
+## **42. On the Robustness of Quality Measures for GANs**
 
 论GAN质量度量的稳健性 cs.LG
 
@@ -609,7 +637,7 @@ Accepted at the European Conference in Computer Vision (ECCV 2022)
 
 
 
-## **41. On the Versatile Uses of Partial Distance Correlation in Deep Learning**
+## **43. On the Versatile Uses of Partial Distance Correlation in Deep Learning**
 
 偏距离相关在深度学习中的广泛应用 cs.CV
 
@@ -623,7 +651,7 @@ Accepted at the European Conference in Computer Vision (ECCV 2022)
 
 
 
-## **42. Detecting Textual Adversarial Examples through Randomized Substitution and Vote**
+## **44. Detecting Textual Adversarial Examples through Randomized Substitution and Vote**
 
 基于随机化替换和投票的文本对抗性实例检测 cs.CL
 
@@ -639,7 +667,7 @@ Accepted by UAI 2022, code is avaliable at  https://github.com/JHL-HUST/RSV
 
 
 
-## **43. Diversified Adversarial Attacks based on Conjugate Gradient Method**
+## **45. Diversified Adversarial Attacks based on Conjugate Gradient Method**
 
 基于共轭梯度法的多样化对抗性攻击 cs.LG
 
@@ -655,7 +683,7 @@ Proceedings of the 39th International Conference on Machine Learning  (ICML 2022
 
 
 
-## **44. Towards Robust Multivariate Time-Series Forecasting: Adversarial Attacks and Defense Mechanisms**
+## **46. Towards Robust Multivariate Time-Series Forecasting: Adversarial Attacks and Defense Mechanisms**
 
 走向稳健的多变量时间序列预测：对抗性攻击和防御机制 cs.LG
 
@@ -669,7 +697,7 @@ Proceedings of the 39th International Conference on Machine Learning  (ICML 2022
 
 
 
-## **45. Increasing the Cost of Model Extraction with Calibrated Proof of Work**
+## **47. Increasing the Cost of Model Extraction with Calibrated Proof of Work**
 
 使用校准的工作证明增加模型提取的成本 cs.CR
 
@@ -685,7 +713,7 @@ Published as a conference paper at ICLR 2022 (Spotlight - 5% of  submitted paper
 
 
 
-## **46. Assaying Out-Of-Distribution Generalization in Transfer Learning**
+## **48. Assaying Out-Of-Distribution Generalization in Transfer Learning**
 
 迁移学习中的分布外泛化分析 cs.LG
 
@@ -699,7 +727,7 @@ Published as a conference paper at ICLR 2022 (Spotlight - 5% of  submitted paper
 
 
 
-## **47. MUD-PQFed: Towards Malicious User Detection in Privacy-Preserving Quantized Federated Learning**
+## **49. MUD-PQFed: Towards Malicious User Detection in Privacy-Preserving Quantized Federated Learning**
 
 MUD-PQFed：隐私保护量化联合学习中的恶意用户检测 cs.CR
 
@@ -715,7 +743,7 @@ MUD-PQFed：隐私保护量化联合学习中的恶意用户检测 cs.CR
 
 
 
-## **48. $\ell_\infty$-Robustness and Beyond: Unleashing Efficient Adversarial Training**
+## **50. $\ell_\infty$-Robustness and Beyond: Unleashing Efficient Adversarial Training**
 
 $\ell_\inty$-健壮性和超越：释放高效的对抗性训练 cs.LG
 
@@ -728,38 +756,6 @@ Accepted to the 17th European Conference on Computer Vision (ECCV  2022)
 **Abstracts**: Neural networks are vulnerable to adversarial attacks: adding well-crafted, imperceptible perturbations to their input can modify their output. Adversarial training is one of the most effective approaches in training robust models against such attacks. However, it is much slower than vanilla training of neural networks since it needs to construct adversarial examples for the entire training data at every iteration, hampering its effectiveness. Recently, Fast Adversarial Training (FAT) was proposed that can obtain robust models efficiently. However, the reasons behind its success are not fully understood, and more importantly, it can only train robust models for $\ell_\infty$-bounded attacks as it uses FGSM during training. In this paper, by leveraging the theory of coreset selection, we show how selecting a small subset of training data provides a general, more principled approach toward reducing the time complexity of robust training. Unlike existing methods, our approach can be adapted to a wide variety of training objectives, including TRADES, $\ell_p$-PGD, and Perceptual Adversarial Training (PAT). Our experimental results indicate that our approach speeds up adversarial training by 2-3 times while experiencing a slight reduction in the clean and robust accuracy.
 
 摘要: 神经网络很容易受到敌意攻击：在它们的输入中添加精心设计的、不可察觉的扰动可以修改它们的输出。对抗性训练是训练抵抗此类攻击的稳健模型的最有效方法之一。然而，它比普通的神经网络训练要慢得多，因为它需要在每一次迭代中为整个训练数据构造对抗性样本，这阻碍了它的有效性。最近，快速对抗性训练(FAT)被提出，它可以有效地获得稳健的模型。然而，其成功背后的原因还不完全清楚，更重要的是，由于它在训练过程中使用FGSM，所以它只能为$\ell_\$有界攻击训练健壮的模型。在本文中，通过利用核心选择理论，我们展示了如何选择一小部分训练数据提供了一种通用的、更有原则的方法来降低健壮训练的时间复杂性。与现有方法不同，我们的方法可以适应广泛的训练目标，包括行业、$\ell_p$-PGD和感知对手训练(PAT)。我们的实验结果表明，我们的方法将对抗性训练的速度提高了2-3倍，而干净和健壮的准确率略有下降。
-
-
-
-## **49. Decorrelative Network Architecture for Robust Electrocardiogram Classification**
-
-用于稳健心电分类的解相关网络结构 cs.LG
-
-12 pages, 6 figures
-
-**SubmitDate**: 2022-07-19    [paper-pdf](http://arxiv.org/pdf/2207.09031v1)
-
-**Authors**: Christopher Wiedeman, Ge Wang
-
-**Abstracts**: Artificial intelligence has made great progresses in medical data analysis, but the lack of robustness and interpretability has kept these methods from being widely deployed. In particular, data-driven models are vulnerable to adversarial attacks, which are small, targeted perturbations that dramatically degrade model performance. As a recent example, while deep learning has shown impressive performance in electrocardiogram (ECG) classification, Han et al. crafted realistic perturbations that fooled the network 74% of the time [2020]. Current adversarial defense paradigms are computationally intensive and impractical for many high dimensional problems. Previous research indicates that a network vulnerability is related to the features learned during training. We propose a novel approach based on ensemble decorrelation and Fourier partitioning for training parallel network arms into a decorrelated architecture to learn complementary features, significantly reducing the chance of a perturbation fooling all arms of the deep learning model. We test our approach in ECG classification, demonstrating a much-improved 77.2% chance of at least one correct network arm on the strongest adversarial attack tested, in contrast to a 21.7% chance from a comparable ensemble. Our approach does not require expensive optimization with adversarial samples, and thus can be scaled to large problems. These methods can easily be applied to other tasks for improved network robustness.
-
-摘要: 人工智能在医疗数据分析方面取得了很大进展，但缺乏健壮性和可解释性，阻碍了这些方法的广泛部署。特别是，数据驱动的模型很容易受到敌意攻击，这种攻击是小的、有针对性的干扰，会显著降低模型的性能。作为最近的一个例子，当深度学习在心电分类中表现出令人印象深刻的表现时，han等人。精心制作的现实扰动，在[2020]的时间里愚弄了网络74%。目前的对抗性防御模式计算量大，不适用于许多高维问题。以前的研究表明，网络漏洞与在培训过程中学习到的功能有关。我们提出了一种基于集成去相关和傅立叶划分的新方法，将并行网络臂训练到去相关体系结构中学习互补特征，显著降低了扰动欺骗深度学习模型所有臂的机会。我们在心电分类中测试了我们的方法，表明在测试的最强敌意攻击中，至少有一个正确的网络臂的概率有77.2%，而在类似的集合中，这一概率为21.7%。我们的方法不需要使用对抗性样本进行昂贵的优化，因此可以扩展到大型问题。这些方法可以很容易地应用于其他任务，以提高网络的健壮性。
-
-
-
-## **50. Defending Substitution-Based Profile Pollution Attacks on Sequential Recommenders**
-
-针对顺序推荐器防御基于替换的Profile污染攻击 cs.IR
-
-Accepted to RecSys 2022
-
-**SubmitDate**: 2022-07-19    [paper-pdf](http://arxiv.org/pdf/2207.11237v1)
-
-**Authors**: Zhenrui Yue, Huimin Zeng, Ziyi Kou, Lanyu Shang, Dong Wang
-
-**Abstracts**: While sequential recommender systems achieve significant improvements on capturing user dynamics, we argue that sequential recommenders are vulnerable against substitution-based profile pollution attacks. To demonstrate our hypothesis, we propose a substitution-based adversarial attack algorithm, which modifies the input sequence by selecting certain vulnerable elements and substituting them with adversarial items. In both untargeted and targeted attack scenarios, we observe significant performance deterioration using the proposed profile pollution algorithm. Motivated by such observations, we design an efficient adversarial defense method called Dirichlet neighborhood sampling. Specifically, we sample item embeddings from a convex hull constructed by multi-hop neighbors to replace the original items in input sequences. During sampling, a Dirichlet distribution is used to approximate the probability distribution in the neighborhood such that the recommender learns to combat local perturbations. Additionally, we design an adversarial training method tailored for sequential recommender systems. In particular, we represent selected items with one-hot encodings and perform gradient ascent on the encodings to search for the worst case linear combination of item embeddings in training. As such, the embedding function learns robust item representations and the trained recommender is resistant to test-time adversarial examples. Extensive experiments show the effectiveness of both our attack and defense methods, which consistently outperform baselines by a significant margin across model architectures and datasets.
-
-摘要: 虽然序列推荐器系统在捕获用户动态方面取得了显著的改进，但我们认为序列推荐器很容易受到基于替换的配置文件污染攻击。为了证明我们的假设，我们提出了一种基于替换的对抗性攻击算法，该算法通过选择某些易受攻击的元素并将其替换为对抗性项来修改输入序列。在非目标攻击和目标攻击场景中，我们观察到使用所提出的配置文件污染算法的性能显著下降。受此启发，我们设计了一种有效的对抗性防御方法--Dirichlet邻域抽样。具体地说，我们从多跳邻居构造的凸壳中抽取项嵌入来替换输入序列中的原始项。在采样过程中，Dirichlet分布被用来近似邻域内的概率分布，从而使推荐者学习对抗局部扰动。此外，我们还设计了一种针对顺序推荐系统的对抗性训练方法。特别地，我们用一热编码来表示选择的项，并对编码进行梯度上升，以搜索训练中项嵌入的最坏情况的线性组合。因此，嵌入函数学习健壮的项目表示，并且训练的推荐器抵抗测试时间的对抗性示例。广泛的实验表明，我们的攻击和防御方法都是有效的，在模型体系结构和数据集上，它们的表现一直比基线高出很多。
 
 
 

@@ -1,5 +1,5 @@
 # Latest Adversarial Attack Papers
-**update at 2022-08-06 06:31:32**
+**update at 2022-08-08 06:31:21**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 

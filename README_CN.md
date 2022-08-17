@@ -1,9 +1,95 @@
 # Latest Adversarial Attack Papers
-**update at 2022-08-16 16:52:12**
+**update at 2022-08-17 10:03:11**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. MENLI: Robust Evaluation Metrics from Natural Language Inference**
+## **1. Adversarial Relighting Against Face Recognition**
+
+对抗人脸识别的对抗性重发 cs.CV
+
+**SubmitDate**: 2022-08-16    [paper-pdf](http://arxiv.org/pdf/2108.07920v3)
+
+**Authors**: Ruijun Gao, Qing Guo, Qian Zhang, Felix Juefei-Xu, Hongkai Yu, Wei Feng
+
+**Abstracts**: Deep face recognition (FR) has achieved significantly high accuracy on several challenging datasets and fosters successful real-world applications, even showing high robustness to the illumination variation that is usually regarded as a main threat to the FR system. However, in the real world, illumination variation caused by diverse lighting conditions cannot be fully covered by the limited face dataset. In this paper, we study the threat of lighting against FR from a new angle, i.e., adversarial attack, and identify a new task, i.e., adversarial relighting. Given a face image, adversarial relighting aims to produce a naturally relighted counterpart while fooling the state-of-the-art deep FR methods. To this end, we first propose the physical model-based adversarial relighting attack (ARA) denoted as albedo-quotient-based adversarial relighting attack (AQ-ARA). It generates natural adversarial light under the physical lighting model and guidance of FR systems and synthesizes adversarially relighted face images. Moreover, we propose the auto-predictive adversarial relighting attack (AP-ARA) by training an adversarial relighting network (ARNet) to automatically predict the adversarial light in a one-step manner according to different input faces, allowing efficiency-sensitive applications. More importantly, we propose to transfer the above digital attacks to physical ARA (Phy-ARA) through a precise relighting device, making the estimated adversarial lighting condition reproducible in the real world. We validate our methods on three state-of-the-art deep FR methods, i.e., FaceNet, ArcFace, and CosFace, on two public datasets. The extensive and insightful results demonstrate our work can generate realistic adversarial relighted face images fooling FR easily, revealing the threat of specific light directions and strengths.
+
+摘要: 深度人脸识别(FR)已经在几个具有挑战性的数据集上取得了显著的高精度，并促进了现实世界的成功应用，甚至对通常被视为FR系统主要威胁的光照变化表现出高度的稳健性。然而，在现实世界中，有限的人脸数据集不能完全覆盖由于光照条件的变化而引起的光照变化。本文从对抗性攻击这一新的角度研究了闪电对火箭弹的威胁，并提出了一种新的任务，即对抗性重发。给定脸部图像，对抗性重光旨在产生自然重光的对应物，同时愚弄最先进的深度FR方法。为此，我们首先提出了基于物理模型的对抗性重亮攻击(ARA)，称为基于反照率商的对抗性重亮攻击(AQ-ARA)。它在物理照明模型和FR系统的指导下产生自然的对抗性光，并合成对抗性重光的人脸图像。此外，我们提出了自动预测对抗性重光攻击(AP-ARA)，通过训练对抗性重光网络(ARNet)来根据不同的输入人脸一步自动预测对抗性光，从而允许对效率敏感的应用。更重要的是，我们建议通过精确的重新照明装置将上述数字攻击转移到物理ARA(Phy-ARA)，使估计的对抗性照明条件在现实世界中可重现。在两个公开的数据集上，我们在三种最先进的深度FR方法，即FaceNet，ArcFace和CosFace上对我们的方法进行了验证。广泛而有洞察力的结果表明，我们的工作可以生成现实的对抗性重光照人脸图像，轻松愚弄FR，揭示特定光方向和强度的威胁。
+
+
+
+## **2. StratDef: a strategic defense against adversarial attacks in malware detection**
+
+StratDef：恶意软件检测中对抗对手攻击的战略防御 cs.LG
+
+**SubmitDate**: 2022-08-16    [paper-pdf](http://arxiv.org/pdf/2202.07568v3)
+
+**Authors**: Aqib Rashid, Jose Such
+
+**Abstracts**: Over the years, most research towards defenses against adversarial attacks on machine learning models has been in the image recognition domain. The malware detection domain has received less attention despite its importance. Moreover, most work exploring these defenses has focused on several methods but with no strategy when applying them. In this paper, we introduce StratDef, which is a strategic defense system tailored for the malware detection domain based on a moving target defense approach. We overcome challenges related to the systematic construction, selection and strategic use of models to maximize adversarial robustness. StratDef dynamically and strategically chooses the best models to increase the uncertainty for the attacker, whilst minimizing critical aspects in the adversarial ML domain like attack transferability. We provide the first comprehensive evaluation of defenses against adversarial attacks on machine learning for malware detection, where our threat model explores different levels of threat, attacker knowledge, capabilities, and attack intensities. We show that StratDef performs better than other defenses even when facing the peak adversarial threat. We also show that, from the existing defenses, only a few adversarially-trained models provide substantially better protection than just using vanilla models but are still outperformed by StratDef.
+
+摘要: 多年来，针对机器学习模型的敌意攻击防御的研究大多集中在图像识别领域。恶意软件检测领域尽管很重要，但受到的关注较少。此外，大多数探索这些防御措施的工作都集中在几种方法上，但在应用这些方法时没有策略。本文介绍了StratDef，这是一个针对恶意软件检测领域定制的基于运动目标防御方法的战略防御系统。我们克服了与模型的系统构建、选择和战略使用相关的挑战，以最大限度地提高对手的稳健性。StratDef动态和战略性地选择最佳模型以增加攻击者的不确定性，同时最小化敌对ML领域中的关键方面，如攻击可转移性。我们提供了针对恶意软件检测的机器学习的首次全面防御评估，其中我们的威胁模型探索了不同级别的威胁、攻击者知识、能力和攻击强度。我们表明，即使在面临最大的对手威胁时，StratDef也比其他防御系统表现得更好。我们还表明，从现有的防御措施来看，只有少数经过对抗性训练的模型提供了比只使用普通模型更好的保护，但仍然优于StratDef。
+
+
+
+## **3. A Physical-World Adversarial Attack for 3D Face Recognition**
+
+一种面向3D人脸识别的物理世界对抗性攻击 cs.CV
+
+7 pages, 5 figures, Submit to AAAI 2023
+
+**SubmitDate**: 2022-08-16    [paper-pdf](http://arxiv.org/pdf/2205.13412v2)
+
+**Authors**: Yanjie Li, Yiquan Li, Xuelong Dai, Songtao Guo, Bin Xiao
+
+**Abstracts**: The 3D face recognition has long been considered secure for its resistance to current physical adversarial attacks, like adversarial patches. However, this paper shows that a 3D face recognition system can be easily attacked, leading to evading and impersonation attacks. We are the first to propose a physically realizable attack for the 3D face recognition system, named structured light imaging attack (SLIA), which exploits the weakness of structured-light-based 3D scanning devices. SLIA utilizes the projector in the structured light imaging system to create adversarial illuminations to contaminate the reconstructed point cloud. Firstly, we propose a 3D transform-invariant loss function (3D-TI) to generate adversarial perturbations that are more robust to head movements. Then we integrate the 3D imaging process into the attack optimization, which minimizes the total pixel shifting of fringe patterns. We realize both dodging and impersonation attacks on a real-world 3D face recognition system. Our methods need fewer modifications on projected patterns compared with Chamfer and Chamfer+kNN-based methods and achieve average attack success rates of 0.47 (impersonation) and 0.89 (dodging). This paper exposes the insecurity of present structured light imaging technology and sheds light on designing secure 3D face recognition authentication systems.
+
+摘要: 长期以来，3D人脸识别一直被认为是安全的，因为它能抵抗当前的物理对抗性攻击，比如对抗性补丁。然而，本文指出，3D人脸识别系统很容易受到攻击，从而导致规避和冒充攻击。我们首次提出了一种针对3D人脸识别系统的物理可实现的攻击，称为结构光成像攻击(SLIA)，它利用了基于结构光的3D扫描设备的弱点。SLIA利用结构光成像系统中的投影仪来产生对抗性照明来污染重建的点云。首先，我们提出了一种3D变换不变损失函数(3D-TI)来产生对抗性扰动，该扰动对头部运动具有更强的鲁棒性。然后，我们将3D成像过程整合到攻击优化中，使条纹图案的总像素漂移最小化。我们在一个真实的3D人脸识别系统上实现了躲避攻击和模仿攻击。与基于Chamfer和Chamfer+KNN的方法相比，我们的方法需要对投影模式进行更少的修改，并且获得了0.47(模仿)和0.89(躲避)的平均攻击成功率。本文揭示了目前结构光成像技术的不足，为设计安全的三维人脸识别认证系统提供了参考。
+
+
+
+## **4. Near Optimal Adversarial Attack on UCB Bandits**
+
+对UCB土匪的近最优敌意攻击 cs.LG
+
+**SubmitDate**: 2022-08-16    [paper-pdf](http://arxiv.org/pdf/2008.09312v2)
+
+**Authors**: Shiliang Zuo
+
+**Abstracts**: We consider a stochastic multi-arm bandit problem where rewards are subject to adversarial corruption. We propose a novel attack strategy that manipulates a UCB principle into pulling some non-optimal target arm $T - o(T)$ times with a cumulative cost that scales as $\sqrt{\log T}$, where $T$ is the number of rounds. We also prove the first lower bound on the cumulative attack cost. Our lower bound matches our upper bound up to $\log \log T$ factors, showing our attack to be near optimal.
+
+摘要: 我们考虑了一个随机多臂强盗问题，其中报酬服从对抗性腐败。我们提出了一种新的攻击策略，它利用UCB原理来拉动一些非最优目标臂$T-o(T)$次，累积代价可扩展到$\Sqrt{\log T}$，其中$T$是轮数。我们还证明了累积攻击代价的第一个下界。我们的下界与上界匹配，最高可达$\log\log T$因子，表明我们的攻击接近最优。
+
+
+
+## **5. Defending Black-box Skeleton-based Human Activity Classifiers**
+
+基于黑盒骨架防御的人类活动分类器 cs.CV
+
+**SubmitDate**: 2022-08-16    [paper-pdf](http://arxiv.org/pdf/2203.04713v3)
+
+**Authors**: He Wang, Yunfeng Diao, Zichang Tan, Guodong Guo
+
+**Abstracts**: Skeletal motions have been heavily replied upon for human activity recognition (HAR). Recently, a universal vulnerability of skeleton-based HAR has been identified across a variety of classifiers and data, calling for mitigation. To this end, we propose the first black-box defense method for skeleton-based HAR to our best knowledge. Our method is featured by full Bayesian treatments of the clean data, the adversaries and the classifier, leading to (1) a new Bayesian Energy-based formulation of robust discriminative classifiers, (2) a new adversary sampling scheme based on natural motion manifolds, and (3) a new post-train Bayesian strategy for black-box defense. We name our framework Bayesian Energy-based Adversarial Training or BEAT. BEAT is straightforward but elegant, which turns vulnerable black-box classifiers into robust ones without sacrificing accuracy. It demonstrates surprising and universal effectiveness across a wide range of skeletal HAR classifiers and datasets, under various attacks.
+
+摘要: 骨骼运动在人类活动识别(HAR)中得到了广泛的应用。最近，基于骨架的HAR在各种分类器和数据中发现了一个普遍的漏洞，需要缓解。为此，我们提出了第一种基于骨架的HAR黑盒防御方法。我们的方法的特点是对干净数据、对手和分类器进行全面的贝叶斯处理，导致(1)新的基于贝叶斯能量的稳健判别分类器的形成，(2)基于自然运动流形的新的对手采样方案，(3)新的训练后贝叶斯策略用于黑盒防御。我们将我们的框架命名为基于贝叶斯能量的对抗性训练或BEAT。BEAT是简单但优雅的，它将脆弱的黑匣子分类器变成了健壮的分类器，而不会牺牲准确性。在各种攻击下，它在广泛的骨架HAR分类器和数据集上展示了令人惊讶的和普遍的有效性。
+
+
+
+## **6. CTI4AI: Threat Intelligence Generation and Sharing after Red Teaming AI Models**
+
+CTI4AI：Red Teaming AI模型后威胁情报的生成和共享 cs.CR
+
+**SubmitDate**: 2022-08-16    [paper-pdf](http://arxiv.org/pdf/2208.07476v1)
+
+**Authors**: Chuyen Nguyen, Caleb Morgan, Sudip Mittal
+
+**Abstracts**: As the practicality of Artificial Intelligence (AI) and Machine Learning (ML) based techniques grow, there is an ever increasing threat of adversarial attacks. There is a need to red team this ecosystem to identify system vulnerabilities, potential threats, characterize properties that will enhance system robustness, and encourage the creation of effective defenses. A secondary need is to share this AI security threat intelligence between different stakeholders like, model developers, users, and AI/ML security professionals. In this paper, we create and describe a prototype system CTI4AI, to overcome the need to methodically identify and share AI/ML specific vulnerabilities and threat intelligence.
+
+摘要: 随着人工智能(AI)和机器学习(ML)技术的实用化程度的提高，对手攻击的威胁越来越大。有必要对这一生态系统进行红色团队合作，以识别系统漏洞和潜在威胁，确定将增强系统健壮性的特性，并鼓励创建有效的防御措施。第二个需求是在不同的利益相关者之间共享这种AI安全威胁情报，比如模型开发人员、用户和AI/ML安全专业人员。在本文中，我们创建并描述了一个原型系统CTI4AI，以克服有条不紊地识别和共享AI/ML特定漏洞和威胁情报的需要。
+
+
+
+## **7. MENLI: Robust Evaluation Metrics from Natural Language Inference**
 
 MENLI：自然语言推理中的稳健评价指标 cs.CL
 
@@ -17,7 +103,7 @@ MENLI：自然语言推理中的稳健评价指标 cs.CL
 
 
 
-## **2. Bounding Membership Inference**
+## **8. Bounding Membership Inference**
 
 边界隶属度推理 cs.LG
 
@@ -31,7 +117,7 @@ MENLI：自然语言推理中的稳健评价指标 cs.CL
 
 
 
-## **3. Man-in-the-Middle Attack against Object Detection Systems**
+## **9. Man-in-the-Middle Attack against Object Detection Systems**
 
 针对目标检测系统的中间人攻击 cs.RO
 
@@ -47,7 +133,7 @@ MENLI：自然语言推理中的稳健评价指标 cs.CL
 
 
 
-## **4. GUARD: Graph Universal Adversarial Defense**
+## **10. GUARD: Graph Universal Adversarial Defense**
 
 后卫：GRAPH通用对抗性防御 cs.LG
 
@@ -63,7 +149,7 @@ Preprint. Code is publicly available at  https://github.com/EdisonLeeeee/GUARD
 
 
 
-## **5. A Multi-objective Memetic Algorithm for Auto Adversarial Attack Optimization Design**
+## **11. A Multi-objective Memetic Algorithm for Auto Adversarial Attack Optimization Design**
 
 自动对抗性攻击优化设计的多目标Memtic算法 cs.CV
 
@@ -77,7 +163,7 @@ Preprint. Code is publicly available at  https://github.com/EdisonLeeeee/GUARD
 
 
 
-## **6. InvisibiliTee: Angle-agnostic Cloaking from Person-Tracking Systems with a Tee**
+## **12. InvisibiliTee: Angle-agnostic Cloaking from Person-Tracking Systems with a Tee**
 
 隐形Tee：带Te的人跟踪系统的角度不可知隐形 cs.CV
 
@@ -93,7 +179,7 @@ Preprint. Code is publicly available at  https://github.com/EdisonLeeeee/GUARD
 
 
 
-## **7. ARIEL: Adversarial Graph Contrastive Learning**
+## **13. ARIEL: Adversarial Graph Contrastive Learning**
 
 Ariel：对抗性图形对比学习 cs.LG
 
@@ -107,7 +193,7 @@ Ariel：对抗性图形对比学习 cs.LG
 
 
 
-## **8. GNPassGAN: Improved Generative Adversarial Networks For Trawling Offline Password Guessing**
+## **14. GNPassGAN: Improved Generative Adversarial Networks For Trawling Offline Password Guessing**
 
 GNPassGAN：改进的用于拖网离线口令猜测的生成性对抗网络 cs.CR
 
@@ -123,7 +209,7 @@ GNPassGAN：改进的用于拖网离线口令猜测的生成性对抗网络 cs.C
 
 
 
-## **9. Gradient Mask: Lateral Inhibition Mechanism Improves Performance in Artificial Neural Networks**
+## **15. Gradient Mask: Lateral Inhibition Mechanism Improves Performance in Artificial Neural Networks**
 
 梯度掩模：侧抑制机制改善人工神经网络的性能 cs.CV
 
@@ -137,7 +223,7 @@ GNPassGAN：改进的用于拖网离线口令猜测的生成性对抗网络 cs.C
 
 
 
-## **10. IPvSeeYou: Exploiting Leaked Identifiers in IPv6 for Street-Level Geolocation**
+## **16. IPvSeeYou: Exploiting Leaked Identifiers in IPv6 for Street-Level Geolocation**
 
 IPv6 SeeYou：利用IPv6中泄漏的标识符进行街道级地理定位 cs.NI
 
@@ -153,7 +239,7 @@ Accepted to S&P '23
 
 
 
-## **11. Adversarial Texture for Fooling Person Detectors in the Physical World**
+## **17. Adversarial Texture for Fooling Person Detectors in the Physical World**
 
 物理世界中愚人探测器的对抗性纹理 cs.CV
 
@@ -169,7 +255,7 @@ Accepted by CVPR 2022
 
 
 
-## **12. An Analytic Framework for Robust Training of Artificial Neural Networks**
+## **18. An Analytic Framework for Robust Training of Artificial Neural Networks**
 
 一种神经网络稳健训练的分析框架 cs.LG
 
@@ -183,7 +269,7 @@ Accepted by CVPR 2022
 
 
 
-## **13. Revisiting Adversarial Attacks on Graph Neural Networks for Graph Classification**
+## **19. Revisiting Adversarial Attacks on Graph Neural Networks for Graph Classification**
 
 图神经网络图分类中的敌意攻击再探 cs.SI
 
@@ -197,7 +283,7 @@ Accepted by CVPR 2022
 
 
 
-## **14. Poison Ink: Robust and Invisible Backdoor Attack**
+## **20. Poison Ink: Robust and Invisible Backdoor Attack**
 
 毒墨：强大而隐形的后门攻击 cs.CR
 
@@ -213,7 +299,7 @@ IEEE Transactions on Image Processing (TIP)
 
 
 
-## **15. MaskBlock: Transferable Adversarial Examples with Bayes Approach**
+## **21. MaskBlock: Transferable Adversarial Examples with Bayes Approach**
 
 MaskBlock：贝叶斯方法的可转移对抗性实例 cs.LG
 
@@ -229,7 +315,7 @@ Under Review
 
 
 
-## **16. Hide and Seek: on the Stealthiness of Attacks against Deep Learning Systems**
+## **22. Hide and Seek: on the Stealthiness of Attacks against Deep Learning Systems**
 
 捉迷藏：关于深度学习系统攻击的隐蔽性 cs.CR
 
@@ -245,7 +331,7 @@ To appear in European Symposium on Research in Computer Security  (ESORICS) 2022
 
 
 
-## **17. PRIVEE: A Visual Analytic Workflow for Proactive Privacy Risk Inspection of Open Data**
+## **23. PRIVEE: A Visual Analytic Workflow for Proactive Privacy Risk Inspection of Open Data**
 
 Privee：开放数据主动隐私风险检测的可视化分析工作流 cs.CR
 
@@ -261,7 +347,7 @@ Accepted for IEEE Symposium on Visualization in Cyber Security, 2022
 
 
 
-## **18. UniNet: A Unified Scene Understanding Network and Exploring Multi-Task Relationships through the Lens of Adversarial Attacks**
+## **24. UniNet: A Unified Scene Understanding Network and Exploring Multi-Task Relationships through the Lens of Adversarial Attacks**
 
 UniNet：一个统一的场景理解网络，通过对抗性攻击的镜头探索多任务关系 cs.CV
 
@@ -277,7 +363,7 @@ Accepted at DeepMTL workshop, ICCV 2021
 
 
 
-## **19. Unifying Gradients to Improve Real-world Robustness for Deep Networks**
+## **25. Unifying Gradients to Improve Real-world Robustness for Deep Networks**
 
 统一梯度以提高深度网络的真实稳健性 stat.ML
 
@@ -291,7 +377,7 @@ Accepted at DeepMTL workshop, ICCV 2021
 
 
 
-## **20. Scale-free Photo-realistic Adversarial Pattern Attack**
+## **26. Scale-free Photo-realistic Adversarial Pattern Attack**
 
 无尺度照片真实感对抗性模式攻击 cs.CV
 
@@ -305,7 +391,7 @@ Accepted at DeepMTL workshop, ICCV 2021
 
 
 
-## **21. A Knowledge Distillation-Based Backdoor Attack in Federated Learning**
+## **27. A Knowledge Distillation-Based Backdoor Attack in Federated Learning**
 
 联邦学习中一种基于知识蒸馏的后门攻击 cs.LG
 
@@ -319,7 +405,7 @@ Accepted at DeepMTL workshop, ICCV 2021
 
 
 
-## **22. A Survey of MulVAL Extensions and Their Attack Scenarios Coverage**
+## **28. A Survey of MulVAL Extensions and Their Attack Scenarios Coverage**
 
 MulVAL扩展及其攻击场景覆盖研究综述 cs.CR
 
@@ -333,7 +419,7 @@ MulVAL扩展及其攻击场景覆盖研究综述 cs.CR
 
 
 
-## **23. Diverse Generative Adversarial Perturbations on Attention Space for Transferable Adversarial Attacks**
+## **29. Diverse Generative Adversarial Perturbations on Attention Space for Transferable Adversarial Attacks**
 
 注意空间上可转移对抗性攻击的不同生成性对抗性扰动 cs.CV
 
@@ -349,7 +435,7 @@ ICIP 2022
 
 
 
-## **24. Controlled Quantum Teleportation in the Presence of an Adversary**
+## **30. Controlled Quantum Teleportation in the Presence of an Adversary**
 
 对手在场时的受控量子隐形传态 quant-ph
 
@@ -363,7 +449,7 @@ ICIP 2022
 
 
 
-## **25. Pikachu: Securing PoS Blockchains from Long-Range Attacks by Checkpointing into Bitcoin PoW using Taproot**
+## **31. Pikachu: Securing PoS Blockchains from Long-Range Attacks by Checkpointing into Bitcoin PoW using Taproot**
 
 Pikachu：通过使用Taproot检查点进入比特币PoW来保护PoS区块链免受远程攻击 cs.CR
 
@@ -379,21 +465,7 @@ To appear at ConsensusDay 22 (ACM CCS 2022 Workshop)
 
 
 
-## **26. StratDef: a strategic defense against adversarial attacks in malware detection**
-
-StratDef：恶意软件检测中对抗对手攻击的战略防御 cs.LG
-
-**SubmitDate**: 2022-08-10    [paper-pdf](http://arxiv.org/pdf/2202.07568v2)
-
-**Authors**: Aqib Rashid, Jose Such
-
-**Abstracts**: Over the years, most research towards defenses against adversarial attacks on machine learning models has been in the image recognition domain. The malware detection domain has received less attention despite its importance. Moreover, most work exploring these defenses has focused on several methods but with no strategy when applying them. In this paper, we introduce StratDef, which is a strategic defense system tailored for the malware detection domain based on a moving target defense approach. We overcome challenges related to the systematic construction, selection and strategic use of models to maximize adversarial robustness. StratDef dynamically and strategically chooses the best models to increase the uncertainty for the attacker, whilst minimizing critical aspects in the adversarial ML domain like attack transferability. We provide the first comprehensive evaluation of defenses against adversarial attacks on machine learning for malware detection, where our threat model explores different levels of threat, attacker knowledge, capabilities, and attack intensities. We show that StratDef performs better than other defenses even when facing the peak adversarial threat. We also show that, from the existing defenses, only a few adversarially-trained models provide substantially better protection than just using vanilla models but are still outperformed by StratDef.
-
-摘要: 多年来，针对机器学习模型的敌意攻击防御的研究大多集中在图像识别领域。恶意软件检测领域尽管很重要，但受到的关注较少。此外，大多数探索这些防御措施的工作都集中在几种方法上，但在应用这些方法时没有策略。本文介绍了StratDef，这是一个针对恶意软件检测领域定制的基于运动目标防御方法的战略防御系统。我们克服了与模型的系统构建、选择和战略使用相关的挑战，以最大限度地提高对手的稳健性。StratDef动态和战略性地选择最佳模型以增加攻击者的不确定性，同时最小化敌对ML领域中的关键方面，如攻击可转移性。我们提供了针对恶意软件检测的机器学习的首次全面防御评估，其中我们的威胁模型探索了不同级别的威胁、攻击者知识、能力和攻击强度。我们表明，即使在面临最大的对手威胁时，StratDef也比其他防御系统表现得更好。我们还表明，从现有的防御措施来看，只有少数经过对抗性训练的模型提供了比只使用普通模型更好的保护，但仍然优于StratDef。
-
-
-
-## **27. Reducing Exploitability with Population Based Training**
+## **32. Reducing Exploitability with Population Based Training**
 
 通过基于人口的培训减少可利用性 cs.LG
 
@@ -409,7 +481,7 @@ Presented at New Frontiers in Adversarial Machine Learning Workshop,  ICML 2022
 
 
 
-## **28. Adversarial Machine Learning-Based Anticipation of Threats Against Vehicle-to-Microgrid Services**
+## **33. Adversarial Machine Learning-Based Anticipation of Threats Against Vehicle-to-Microgrid Services**
 
 基于对抗性机器学习的车辆到微电网服务威胁预测 cs.CR
 
@@ -425,7 +497,7 @@ IEEE Global Communications Conference (Globecom), 2022, 6 pages, 2  Figures, 4 T
 
 
 
-## **29. Get your Foes Fooled: Proximal Gradient Split Learning for Defense against Model Inversion Attacks on IoMT data**
+## **34. Get your Foes Fooled: Proximal Gradient Split Learning for Defense against Model Inversion Attacks on IoMT data**
 
 愚弄你的敌人：用于防御IoMT数据模型反转攻击的近距离梯度分裂学习 cs.CR
 
@@ -441,7 +513,7 @@ IEEE Global Communications Conference (Globecom), 2022, 6 pages, 2  Figures, 4 T
 
 
 
-## **30. Bayesian Pseudo Labels: Expectation Maximization for Robust and Efficient Semi-Supervised Segmentation**
+## **35. Bayesian Pseudo Labels: Expectation Maximization for Robust and Efficient Semi-Supervised Segmentation**
 
 贝叶斯伪标签：稳健有效的半监督分割的期望最大化 cs.CV
 
@@ -457,7 +529,7 @@ MICCAI 2022 (Early accept, Student Travel Award)
 
 
 
-## **31. Can collaborative learning be private, robust and scalable?**
+## **36. Can collaborative learning be private, robust and scalable?**
 
 协作学习能否做到私密性、健壮性和可扩展性？ cs.LG
 
@@ -473,7 +545,7 @@ Accepted at MICCAI DeCaF 2022
 
 
 
-## **32. Sparse Adversarial Attack in Multi-agent Reinforcement Learning**
+## **37. Sparse Adversarial Attack in Multi-agent Reinforcement Learning**
 
 多智能体强化学习中的稀疏对抗性攻击 cs.AI
 
@@ -487,7 +559,7 @@ Accepted at MICCAI DeCaF 2022
 
 
 
-## **33. Adversarial Pixel Restoration as a Pretext Task for Transferable Perturbations**
+## **38. Adversarial Pixel Restoration as a Pretext Task for Transferable Perturbations**
 
 对抗性像素恢复作为可转移扰动的借口任务 cs.CV
 
@@ -501,7 +573,7 @@ Accepted at MICCAI DeCaF 2022
 
 
 
-## **34. Adversarial robustness of $β-$VAE through the lens of local geometry**
+## **39. Adversarial robustness of $β-$VAE through the lens of local geometry**
 
 通过局部几何透镜分析$β-$VAE的对抗健壮性 cs.LG
 
@@ -517,7 +589,7 @@ The 2022 ICML Workshop on New Frontiers in Adversarial Machine  Learning
 
 
 
-## **35. Adversarial Fine-tuning for Backdoor Defense: Connecting Backdoor Attacks to Adversarial Attacks**
+## **40. Adversarial Fine-tuning for Backdoor Defense: Connecting Backdoor Attacks to Adversarial Attacks**
 
 对抗性后门防御微调：将后门攻击与对抗性攻击联系起来 cs.CV
 
@@ -531,7 +603,7 @@ The 2022 ICML Workshop on New Frontiers in Adversarial Machine  Learning
 
 
 
-## **36. Privacy Against Inference Attacks in Vertical Federated Learning**
+## **41. Privacy Against Inference Attacks in Vertical Federated Learning**
 
 垂直联合学习中抵抗推理攻击的隐私保护 cs.LG
 
@@ -545,7 +617,7 @@ The 2022 ICML Workshop on New Frontiers in Adversarial Machine  Learning
 
 
 
-## **37. Garbled EDA: Privacy Preserving Electronic Design Automation**
+## **42. Garbled EDA: Privacy Preserving Electronic Design Automation**
 
 乱码EDA：保护隐私的电子设计自动化 cs.CR
 
@@ -559,7 +631,7 @@ The 2022 ICML Workshop on New Frontiers in Adversarial Machine  Learning
 
 
 
-## **38. Federated Adversarial Learning: A Framework with Convergence Analysis**
+## **43. Federated Adversarial Learning: A Framework with Convergence Analysis**
 
 联合对抗性学习：一个收敛分析框架 cs.LG
 
@@ -573,7 +645,7 @@ The 2022 ICML Workshop on New Frontiers in Adversarial Machine  Learning
 
 
 
-## **39. Blackbox Attacks via Surrogate Ensemble Search**
+## **44. Blackbox Attacks via Surrogate Ensemble Search**
 
 通过代理集成搜索进行黑盒攻击 cs.LG
 
@@ -587,7 +659,7 @@ The 2022 ICML Workshop on New Frontiers in Adversarial Machine  Learning
 
 
 
-## **40. Revisiting Gaussian Neurons for Online Clustering with Unknown Number of Clusters**
+## **45. Revisiting Gaussian Neurons for Online Clustering with Unknown Number of Clusters**
 
 未知聚类个数在线聚类的重访高斯神经元 cs.LG
 
@@ -603,7 +675,7 @@ Reviewed at  https://openreview.net/forum?id=h05RLBNweX&referrer=%5BTMLR%5D(%2Fg
 
 
 
-## **41. On the Fundamental Limits of Formally (Dis)Proving Robustness in Proof-of-Learning**
+## **46. On the Fundamental Limits of Formally (Dis)Proving Robustness in Proof-of-Learning**
 
 学习证明中形式(Dis)证明稳健性的基本极限 cs.LG
 
@@ -617,7 +689,7 @@ Reviewed at  https://openreview.net/forum?id=h05RLBNweX&referrer=%5BTMLR%5D(%2Fg
 
 
 
-## **42. Preventing or Mitigating Adversarial Supply Chain Attacks; a legal analysis**
+## **47. Preventing or Mitigating Adversarial Supply Chain Attacks; a legal analysis**
 
 预防或减轻对抗性供应链攻击；法律分析 cs.CY
 
@@ -633,7 +705,7 @@ Reviewed at  https://openreview.net/forum?id=h05RLBNweX&referrer=%5BTMLR%5D(%2Fg
 
 
 
-## **43. Searching for the Essence of Adversarial Perturbations**
+## **48. Searching for the Essence of Adversarial Perturbations**
 
 寻找对抗性扰动的本质 cs.LG
 
@@ -647,7 +719,7 @@ Reviewed at  https://openreview.net/forum?id=h05RLBNweX&referrer=%5BTMLR%5D(%2Fg
 
 
 
-## **44. Success of Uncertainty-Aware Deep Models Depends on Data Manifold Geometry**
+## **49. Success of Uncertainty-Aware Deep Models Depends on Data Manifold Geometry**
 
 不确定性感知深度模型的成功依赖于数据流形几何 cs.LG
 
@@ -661,7 +733,7 @@ Reviewed at  https://openreview.net/forum?id=h05RLBNweX&referrer=%5BTMLR%5D(%2Fg
 
 
 
-## **45. Attacking Adversarial Defences by Smoothing the Loss Landscape**
+## **50. Attacking Adversarial Defences by Smoothing the Loss Landscape**
 
 通过平滑损失图景来攻击对抗性防御 cs.LG
 
@@ -672,80 +744,6 @@ Reviewed at  https://openreview.net/forum?id=h05RLBNweX&referrer=%5BTMLR%5D(%2Fg
 **Abstracts**: This paper investigates a family of methods for defending against adversarial attacks that owe part of their success to creating a noisy, discontinuous, or otherwise rugged loss landscape that adversaries find difficult to navigate. A common, but not universal, way to achieve this effect is via the use of stochastic neural networks. We show that this is a form of gradient obfuscation, and propose a general extension to gradient-based adversaries based on the Weierstrass transform, which smooths the surface of the loss function and provides more reliable gradient estimates. We further show that the same principle can strengthen gradient-free adversaries. We demonstrate the efficacy of our loss-smoothing method against both stochastic and non-stochastic adversarial defences that exhibit robustness due to this type of obfuscation. Furthermore, we provide analysis of how it interacts with Expectation over Transformation; a popular gradient-sampling method currently used to attack stochastic defences.
 
 摘要: 本文研究了一系列防御对手攻击的方法，这些攻击的成功部分归因于创建了一个嘈杂的、不连续的或以其他方式崎岖的损失场景，对手发现很难导航。实现这一效果的一种常见但并不普遍的方法是通过使用随机神经网络。我们证明了这是一种梯度混淆的形式，并提出了一种基于魏尔斯特拉斯变换的对基于梯度的攻击的一般扩展，它平滑了损失函数的表面，并提供了更可靠的梯度估计。我们进一步证明，同样的原理可以加强无梯度的对手。我们证明了我们的损失平滑方法对随机和非随机对抗防御的有效性，这些防御由于这种类型的混淆而表现出稳健性。此外，我们还分析了它如何与变换上的期望相互作用，变换上的期望是目前用于攻击随机防御的一种流行的梯度抽样方法。
-
-
-
-## **46. Adversarial Robustness of MR Image Reconstruction under Realistic Perturbations**
-
-现实摄动下MR图像重建的对抗稳健性 eess.IV
-
-Accepted at the MICCAI-2022 workshop: Machine Learning for Medical  Image Reconstruction
-
-**SubmitDate**: 2022-08-05    [paper-pdf](http://arxiv.org/pdf/2208.03161v1)
-
-**Authors**: Jan Nikolas Morshuis, Sergios Gatidis, Matthias Hein, Christian F. Baumgartner
-
-**Abstracts**: Deep Learning (DL) methods have shown promising results for solving ill-posed inverse problems such as MR image reconstruction from undersampled $k$-space data. However, these approaches currently have no guarantees for reconstruction quality and the reliability of such algorithms is only poorly understood. Adversarial attacks offer a valuable tool to understand possible failure modes and worst case performance of DL-based reconstruction algorithms. In this paper we describe adversarial attacks on multi-coil $k$-space measurements and evaluate them on the recently proposed E2E-VarNet and a simpler UNet-based model. In contrast to prior work, the attacks are targeted to specifically alter diagnostically relevant regions. Using two realistic attack models (adversarial $k$-space noise and adversarial rotations) we are able to show that current state-of-the-art DL-based reconstruction algorithms are indeed sensitive to such perturbations to a degree where relevant diagnostic information may be lost. Surprisingly, in our experiments the UNet and the more sophisticated E2E-VarNet were similarly sensitive to such attacks. Our findings add further to the evidence that caution must be exercised as DL-based methods move closer to clinical practice.
-
-摘要: 深度学习方法在解决不适定反问题，如从欠采样的$k$空间数据重建MR图像方面显示出良好的结果。然而，这些方法目前并不能保证重建质量，而且人们对这些算法的可靠性知之甚少。对抗性攻击为理解基于DL的重构算法可能的失效模式和最坏情况下的性能提供了有价值的工具。在这篇文章中，我们描述了对多线圈$k$空间测量的对抗性攻击，并在最近提出的E2E-Varnet和一个更简单的基于UNT的模型上对它们进行了评估。与以前的工作不同，这些攻击的目标是专门改变诊断相关的区域。使用两个真实的攻击模型(对抗性空间噪声和对抗性旋转)，我们能够证明当前最先进的基于DL的重建算法确实对此类扰动敏感到可能丢失相关诊断信息的程度。令人惊讶的是，在我们的实验中，UNT和更复杂的E2E-Varnet对此类攻击同样敏感。我们的发现进一步证明，随着基于DL的方法越来越接近临床实践，必须谨慎行事。
-
-
-
-## **47. A Systematic Survey of Attack Detection and Prevention in Connected and Autonomous Vehicles**
-
-互联无人驾驶汽车攻击检测与防御的系统研究 cs.CR
-
-This article is published in the Vehicular Communications journal
-
-**SubmitDate**: 2022-08-05    [paper-pdf](http://arxiv.org/pdf/2203.14965v2)
-
-**Authors**: Trupil Limbasiya, Ko Zheng Teng, Sudipta Chattopadhyay, Jianying Zhou
-
-**Abstracts**: The number of Connected and Autonomous Vehicles (CAVs) is increasing rapidly in various smart transportation services and applications, considering many benefits to society, people, and the environment. Several research surveys for CAVs were conducted by primarily focusing on various security threats and vulnerabilities in the domain of CAVs to classify different types of attacks, impacts of attacks, attack features, cyber-risk, defense methodologies against attacks, and safety standards. However, the importance of attack detection and prevention approaches for CAVs has not been discussed extensively in the state-of-the-art surveys, and there is a clear gap in the existing literature on such methodologies to detect new and conventional threats and protect the CAV systems from unexpected hazards on the road. Some surveys have a limited discussion on Attacks Detection and Prevention Systems (ADPS), but such surveys provide only partial coverage of different types of ADPS for CAVs. Furthermore, there is a scope for discussing security, privacy, and efficiency challenges in ADPS that can give an overview of important security and performance attributes.   This survey paper, therefore, presents the significance of CAVs in the market, potential challenges in CAVs, key requirements of essential security and privacy properties, various capabilities of adversaries, possible attacks in CAVs, and performance evaluation parameters for ADPS. An extensive analysis is discussed of different ADPS categories for CAVs and state-of-the-art research works based on each ADPS category that gives the latest findings in this research domain. This survey also discusses crucial and open security research problems that are required to be focused on the secure deployment of CAVs in the market.
-
-摘要: 考虑到对社会、人民和环境的诸多好处，在各种智能交通服务和应用中，互联和自动驾驶车辆(CAV)的数量正在迅速增加。通过主要关注CAV领域中的各种安全威胁和漏洞，对CAV进行了几项研究调查，以对不同类型的攻击、攻击的影响、攻击特征、网络风险、攻击防御方法和安全标准进行分类。然而，在最新的调查中，攻击检测和预防方法对CAV的重要性没有得到广泛的讨论，并且在现有文献中，对于检测新的和常规的威胁并保护CAV系统免受道路上的意外危险的方法，存在着明显的空白。一些调查对攻击检测和预防系统(ADPS)进行了有限的讨论，但这些调查只提供了针对骑士队不同类型的ADP的部分覆盖。此外，ADPS中还有讨论安全、隐私和效率挑战的范围，可以概述重要的安全和性能属性。因此，这份调查报告介绍了CAV在市场上的重要性、CAV中的潜在挑战、基本安全和隐私属性的关键要求、对手的各种能力、CAV中可能的攻击以及ADPS的性能评估参数。对CAV的不同ADPS类别进行了广泛的分析，并根据每个ADPS类别进行了最新的研究工作，给出了该研究领域的最新发现。本次调查还讨论了需要重点关注Cavs在市场上的安全部署的关键和开放的安全研究问题。
-
-
-
-## **48. Differentially Private Counterfactuals via Functional Mechanism**
-
-从作用机制看区分私法反事实 cs.LG
-
-**SubmitDate**: 2022-08-04    [paper-pdf](http://arxiv.org/pdf/2208.02878v1)
-
-**Authors**: Fan Yang, Qizhang Feng, Kaixiong Zhou, Jiahao Chen, Xia Hu
-
-**Abstracts**: Counterfactual, serving as one emerging type of model explanation, has attracted tons of attentions recently from both industry and academia. Different from the conventional feature-based explanations (e.g., attributions), counterfactuals are a series of hypothetical samples which can flip model decisions with minimal perturbations on queries. Given valid counterfactuals, humans are capable of reasoning under ``what-if'' circumstances, so as to better understand the model decision boundaries. However, releasing counterfactuals could be detrimental, since it may unintentionally leak sensitive information to adversaries, which brings about higher risks on both model security and data privacy. To bridge the gap, in this paper, we propose a novel framework to generate differentially private counterfactual (DPC) without touching the deployed model or explanation set, where noises are injected for protection while maintaining the explanation roles of counterfactual. In particular, we train an autoencoder with the functional mechanism to construct noisy class prototypes, and then derive the DPC from the latent prototypes based on the post-processing immunity of differential privacy. Further evaluations demonstrate the effectiveness of the proposed framework, showing that DPC can successfully relieve the risks on both extraction and inference attacks.
-
-摘要: 反事实作为一种新兴的模型解释，近年来引起了产业界和学术界的广泛关注。与传统的基于特征的解释(例如，属性)不同，反事实是一系列假设样本，可以在对查询的扰动最小的情况下反转模型决策。在有了有效的反事实的情况下，人类能够在“假设”的情况下进行推理，从而更好地理解模型决策的边界。然而，发布反事实可能是有害的，因为它可能会无意中将敏感信息泄露给对手，这会给模型安全和数据隐私带来更高的风险。为了弥补这一差距，在本文中，我们提出了一种新的框架，在不接触部署的模型或解释集的情况下，生成差异私有反事实(DPC)，其中注入噪声以保护，同时保持反事实的解释角色。特别是，我们训练了一个具有构造噪声类原型的功能机制的自动编码器，然后基于差分隐私的后处理免疫力从潜在原型中推导出DPC。进一步的测试证明了该框架的有效性，表明DPC能够成功地缓解抽取攻击和推理攻击的风险。
-
-
-
-## **49. Self-Ensembling Vision Transformer (SEViT) for Robust Medical Image Classification**
-
-自集成视觉转换器(SEViT)用于稳健的医学图像分类 cs.CV
-
-**SubmitDate**: 2022-08-04    [paper-pdf](http://arxiv.org/pdf/2208.02851v1)
-
-**Authors**: Faris Almalik, Mohammad Yaqub, Karthik Nandakumar
-
-**Abstracts**: Vision Transformers (ViT) are competing to replace Convolutional Neural Networks (CNN) for various computer vision tasks in medical imaging such as classification and segmentation. While the vulnerability of CNNs to adversarial attacks is a well-known problem, recent works have shown that ViTs are also susceptible to such attacks and suffer significant performance degradation under attack. The vulnerability of ViTs to carefully engineered adversarial samples raises serious concerns about their safety in clinical settings. In this paper, we propose a novel self-ensembling method to enhance the robustness of ViT in the presence of adversarial attacks. The proposed Self-Ensembling Vision Transformer (SEViT) leverages the fact that feature representations learned by initial blocks of a ViT are relatively unaffected by adversarial perturbations. Learning multiple classifiers based on these intermediate feature representations and combining these predictions with that of the final ViT classifier can provide robustness against adversarial attacks. Measuring the consistency between the various predictions can also help detect adversarial samples. Experiments on two modalities (chest X-ray and fundoscopy) demonstrate the efficacy of SEViT architecture to defend against various adversarial attacks in the gray-box (attacker has full knowledge of the target model, but not the defense mechanism) setting. Code: https://github.com/faresmalik/SEViT
-
-摘要: 视觉转换器(VIT)正竞相取代卷积神经网络(CNN)用于医学成像中的各种计算机视觉任务，如分类和分割。虽然CNN对敌意攻击的脆弱性是一个众所周知的问题，但最近的研究表明，VITS也容易受到此类攻击，并且在攻击下性能显著下降。VITS对精心设计的对抗性样本的脆弱性引起了人们对其临床安全性的严重担忧。在本文中，我们提出了一种新的自集成方法来增强VIT在存在对手攻击时的健壮性。提出的自集成视觉转换器(SEViT)利用了这样一个事实，即VIT的初始块学习的特征表示相对不受对抗性扰动的影响。基于这些中间特征表示学习多个分类器，并将这些预测与最终的VIT分类器的预测相结合，可以提供对对手攻击的稳健性。衡量各种预测之间的一致性也有助于检测敌意样本。在两种模式(胸部X光和眼底镜)上的实验证明了SEViT架构在灰盒(攻击者完全知道目标模型，但不知道防御机制)环境下防御各种对抗性攻击的有效性。代码：https://github.com/faresmalik/SEViT
-
-
-
-## **50. Adversarial Attacks on Image Generation With Made-Up Words**
-
-对虚构词语图像生成的对抗性攻击 cs.CV
-
-**SubmitDate**: 2022-08-04    [paper-pdf](http://arxiv.org/pdf/2208.04135v1)
-
-**Authors**: Raphaël Millière
-
-**Abstracts**: Text-guided image generation models can be prompted to generate images using nonce words adversarially designed to robustly evoke specific visual concepts. Two approaches for such generation are introduced: macaronic prompting, which involves designing cryptic hybrid words by concatenating subword units from different languages; and evocative prompting, which involves designing nonce words whose broad morphological features are similar enough to that of existing words to trigger robust visual associations. The two methods can also be combined to generate images associated with more specific visual concepts. The implications of these techniques for the circumvention of existing approaches to content moderation, and particularly the generation of offensive or harmful images, are discussed.
-
-摘要: 文本引导的图像生成模型可以被提示使用恶意设计的随机词来生成图像，以强健地唤起特定的视觉概念。介绍了两种生成方法：Macaronic提示，它涉及通过连接来自不同语言的子词单元来设计神秘的混合词；以及唤起提示，它涉及设计其广泛的形态特征与现有单词的广泛形态特征足够相似的随机词，以触发稳健的视觉联想。这两种方法还可以组合以生成与更具体的视觉概念相关联的图像。这些技术对规避现有的内容审核方法，特别是产生攻击性或有害图像的影响进行了讨论。
 
 
 

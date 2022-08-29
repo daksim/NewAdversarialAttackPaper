@@ -1,9 +1,47 @@
 # Latest Adversarial Attack Papers
-**update at 2022-08-29 06:31:21**
+**update at 2022-08-30 06:31:22**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. Semantic Preserving Adversarial Attack Generation with Autoencoder and Genetic Algorithm**
+## **1. SoftHebb: Bayesian Inference in Unsupervised Hebbian Soft Winner-Take-All Networks**
+
+cs.LG
+
+**SubmitDate**: 2022-08-26    [paper-pdf](http://arxiv.org/pdf/2107.05747v3)
+
+**Authors**: Timoleon Moraitis, Dmitry Toichkin, Adrien Journé, Yansong Chua, Qinghai Guo
+
+**Abstracts**: Hebbian plasticity in winner-take-all (WTA) networks is highly attractive for neuromorphic on-chip learning, owing to its efficient, local, unsupervised, and on-line nature. Moreover, its biological plausibility may help overcome important limitations of artificial algorithms, such as their susceptibility to adversarial attacks and long training time. However, Hebbian WTA learning has found little use in machine learning (ML), likely because it has been missing an optimization theory compatible with deep learning (DL). Here we show rigorously that WTA networks constructed by standard DL elements, combined with a Hebbian-like plasticity that we derive, maintain a Bayesian generative model of the data. Importantly, without any supervision, our algorithm, SoftHebb, minimizes cross-entropy, i.e. a common loss function in supervised DL. We show this theoretically and in practice. The key is a "soft" WTA where there is no absolute "hard" winner neuron. Strikingly, in shallow-network comparisons with backpropagation (BP), SoftHebb shows advantages beyond its Hebbian efficiency. Namely, it converges faster and is significantly more robust to noise and adversarial attacks. Notably, attacks that maximally confuse SoftHebb are also confusing to the human eye, potentially linking human perceptual robustness, with Hebbian WTA circuits of cortex. Finally, SoftHebb can generate synthetic objects as interpolations of real object classes. All in all, Hebbian efficiency, theoretical underpinning, cross-entropy-minimization, and surprising empirical advantages, suggest that SoftHebb may inspire highly neuromorphic and radically different, but practical and advantageous learning algorithms and hardware accelerators.
+
+
+
+## **2. Robust Prototypical Few-Shot Organ Segmentation with Regularized Neural-ODEs**
+
+cs.CV
+
+**SubmitDate**: 2022-08-26    [paper-pdf](http://arxiv.org/pdf/2208.12428v1)
+
+**Authors**: Prashant Pandey, Mustafa Chasmai, Tanuj Sur, Brejesh Lall
+
+**Abstracts**: Despite the tremendous progress made by deep learning models in image semantic segmentation, they typically require large annotated examples, and increasing attention is being diverted to problem settings like Few-Shot Learning (FSL) where only a small amount of annotation is needed for generalisation to novel classes. This is especially seen in medical domains where dense pixel-level annotations are expensive to obtain. In this paper, we propose Regularized Prototypical Neural Ordinary Differential Equation (R-PNODE), a method that leverages intrinsic properties of Neural-ODEs, assisted and enhanced by additional cluster and consistency losses to perform Few-Shot Segmentation (FSS) of organs. R-PNODE constrains support and query features from the same classes to lie closer in the representation space thereby improving the performance over the existing Convolutional Neural Network (CNN) based FSS methods. We further demonstrate that while many existing Deep CNN based methods tend to be extremely vulnerable to adversarial attacks, R-PNODE exhibits increased adversarial robustness for a wide array of these attacks. We experiment with three publicly available multi-organ segmentation datasets in both in-domain and cross-domain FSS settings to demonstrate the efficacy of our method. In addition, we perform experiments with seven commonly used adversarial attacks in various settings to demonstrate R-PNODE's robustness. R-PNODE outperforms the baselines for FSS by significant margins and also shows superior performance for a wide array of attacks varying in intensity and design.
+
+
+
+## **3. SNAP: Efficient Extraction of Private Properties with Poisoning**
+
+cs.LG
+
+27 pages, 13 figures
+
+**SubmitDate**: 2022-08-25    [paper-pdf](http://arxiv.org/pdf/2208.12348v1)
+
+**Authors**: Harsh Chaudhari, John Abascal, Alina Oprea, Matthew Jagielski, Florian Tramèr, Jonathan Ullman
+
+**Abstracts**: Property inference attacks allow an adversary to extract global properties of the training dataset from a machine learning model. Such attacks have privacy implications for data owners who share their datasets to train machine learning models. Several existing approaches for property inference attacks against deep neural networks have been proposed, but they all rely on the attacker training a large number of shadow models, which induces large computational overhead.   In this paper, we consider the setting of property inference attacks in which the attacker can poison a subset of the training dataset and query the trained target model. Motivated by our theoretical analysis of model confidences under poisoning, we design an efficient property inference attack, SNAP, which obtains higher attack success and requires lower amounts of poisoning than the state-of-the-art poisoning-based property inference attack by Mahloujifar et al. For example, on the Census dataset, SNAP achieves 34% higher success rate than Mahloujifar et al. while being 56.5x faster. We also extend our attack to determine if a certain property is present at all in training, and estimate the exact proportion of a property of interest efficiently. We evaluate our attack on several properties of varying proportions from four datasets, and demonstrate SNAP's generality and effectiveness.
+
+
+
+## **4. Semantic Preserving Adversarial Attack Generation with Autoencoder and Genetic Algorithm**
 
 cs.LG
 
@@ -17,7 +55,7 @@ cs.LG
 
 
 
-## **2. Passive Triangulation Attack on ORide**
+## **5. Passive Triangulation Attack on ORide**
 
 cs.CR
 
@@ -29,7 +67,7 @@ cs.CR
 
 
 
-## **3. Automatic Mapping of Unstructured Cyber Threat Intelligence: An Experimental Study**
+## **6. Automatic Mapping of Unstructured Cyber Threat Intelligence: An Experimental Study**
 
 cs.CR
 
@@ -43,7 +81,7 @@ cs.CR
 
 
 
-## **4. ECG-ATK-GAN: Robustness against Adversarial Attacks on ECGs using Conditional Generative Adversarial Networks**
+## **7. ECG-ATK-GAN: Robustness against Adversarial Attacks on ECGs using Conditional Generative Adversarial Networks**
 
 eess.SP
 
@@ -57,7 +95,7 @@ Accepted to MICCAI2022 Applications of Medical AI (AMAI) Workshop
 
 
 
-## **5. A Perturbation Resistant Transformation and Classification System for Deep Neural Networks**
+## **8. A Perturbation Resistant Transformation and Classification System for Deep Neural Networks**
 
 cs.CV
 
@@ -71,7 +109,7 @@ cs.CV
 
 
 
-## **6. A New Kind of Adversarial Example**
+## **9. A New Kind of Adversarial Example**
 
 cs.CV
 
@@ -83,7 +121,7 @@ cs.CV
 
 
 
-## **7. Attacking Neural Binary Function Detection**
+## **10. Attacking Neural Binary Function Detection**
 
 cs.CR
 
@@ -97,7 +135,7 @@ cs.CR
 
 
 
-## **8. Adversarial Driving: Attacking End-to-End Autonomous Driving**
+## **11. Adversarial Driving: Attacking End-to-End Autonomous Driving**
 
 cs.CV
 
@@ -111,7 +149,7 @@ cs.CV
 
 
 
-## **9. Unrestricted Black-box Adversarial Attack Using GAN with Limited Queries**
+## **12. Unrestricted Black-box Adversarial Attack Using GAN with Limited Queries**
 
 cs.CV
 
@@ -125,7 +163,7 @@ Accepted to the ECCV 2022 Workshop on Adversarial Robustness in the  Real World
 
 
 
-## **10. Robustness of the Tangle 2.0 Consensus**
+## **13. Robustness of the Tangle 2.0 Consensus**
 
 cs.DC
 
@@ -137,7 +175,7 @@ cs.DC
 
 
 
-## **11. LPF-Defense: 3D Adversarial Defense based on Frequency Analysis**
+## **14. LPF-Defense: 3D Adversarial Defense based on Frequency Analysis**
 
 cs.CV
 
@@ -151,7 +189,7 @@ cs.CV
 
 
 
-## **12. Trace and Detect Adversarial Attacks on CNNs using Feature Response Maps**
+## **15. Trace and Detect Adversarial Attacks on CNNs using Feature Response Maps**
 
 cs.CV
 
@@ -165,7 +203,7 @@ cs.CV
 
 
 
-## **13. Towards an Awareness of Time Series Anomaly Detection Models' Adversarial Vulnerability**
+## **16. Towards an Awareness of Time Series Anomaly Detection Models' Adversarial Vulnerability**
 
 cs.LG
 
@@ -179,7 +217,7 @@ Part of Proceedings of the 31st ACM International Conference on  Information and
 
 
 
-## **14. ObfuNAS: A Neural Architecture Search-based DNN Obfuscation Approach**
+## **17. ObfuNAS: A Neural Architecture Search-based DNN Obfuscation Approach**
 
 cs.CR
 
@@ -193,7 +231,7 @@ cs.CR
 
 
 
-## **15. Auditing Membership Leakages of Multi-Exit Networks**
+## **18. Auditing Membership Leakages of Multi-Exit Networks**
 
 cs.CR
 
@@ -207,7 +245,7 @@ Accepted by CCS 2022
 
 
 
-## **16. Adversarial Speaker Distillation for Countermeasure Model on Automatic Speaker Verification**
+## **19. Adversarial Speaker Distillation for Countermeasure Model on Automatic Speaker Verification**
 
 cs.SD
 
@@ -221,7 +259,7 @@ Accepted by ISCA SPSC 2022
 
 
 
-## **17. Privacy Enhancement for Cloud-Based Few-Shot Learning**
+## **20. Privacy Enhancement for Cloud-Based Few-Shot Learning**
 
 cs.LG
 
@@ -235,7 +273,7 @@ cs.LG
 
 
 
-## **18. A Comprehensive Study of Real-Time Object Detection Networks Across Multiple Domains: A Survey**
+## **21. A Comprehensive Study of Real-Time Object Detection Networks Across Multiple Domains: A Survey**
 
 cs.CV
 
@@ -249,7 +287,7 @@ Published in Transactions on Machine Learning Research (TMLR) with  Survey Certi
 
 
 
-## **19. Transferability Ranking of Adversarial Examples**
+## **22. Transferability Ranking of Adversarial Examples**
 
 cs.LG
 
@@ -261,7 +299,7 @@ cs.LG
 
 
 
-## **20. Complete Traceability Multimedia Fingerprinting Codes Resistant to Averaging Attack and Adversarial Noise with Optimal Rate**
+## **23. Complete Traceability Multimedia Fingerprinting Codes Resistant to Averaging Attack and Adversarial Noise with Optimal Rate**
 
 cs.IT
 
@@ -273,7 +311,7 @@ cs.IT
 
 
 
-## **21. Evaluating Machine Unlearning via Epistemic Uncertainty**
+## **24. Evaluating Machine Unlearning via Epistemic Uncertainty**
 
 cs.LG
 
@@ -287,7 +325,7 @@ Rejected at ECML 2021. Even though the paper was rejected, we want to  "publish"
 
 
 
-## **22. UKP-SQuARE v2 Explainability and Adversarial Attacks for Trustworthy QA**
+## **25. UKP-SQuARE v2 Explainability and Adversarial Attacks for Trustworthy QA**
 
 cs.CL
 
@@ -299,7 +337,7 @@ cs.CL
 
 
 
-## **23. SoK: Certified Robustness for Deep Neural Networks**
+## **26. SoK: Certified Robustness for Deep Neural Networks**
 
 cs.LG
 
@@ -313,7 +351,7 @@ To appear at 2023 IEEE Symposium on Security and Privacy (SP); 14  pages for the
 
 
 
-## **24. Adversarial Vulnerability of Temporal Feature Networks for Object Detection**
+## **27. Adversarial Vulnerability of Temporal Feature Networks for Object Detection**
 
 cs.CV
 
@@ -327,7 +365,7 @@ Accepted for publication at ECCV 2022 SAIAD workshop
 
 
 
-## **25. MALICE: Manipulation Attacks on Learned Image ComprEssion**
+## **28. MALICE: Manipulation Attacks on Learned Image ComprEssion**
 
 cs.CV
 
@@ -339,7 +377,7 @@ cs.CV
 
 
 
-## **26. RAB: Provable Robustness Against Backdoor Attacks**
+## **29. RAB: Provable Robustness Against Backdoor Attacks**
 
 cs.LG
 
@@ -353,7 +391,7 @@ IEEE Symposium on Security and Privacy 2023
 
 
 
-## **27. Hierarchical Perceptual Noise Injection for Social Media Fingerprint Privacy Protection**
+## **30. Hierarchical Perceptual Noise Injection for Social Media Fingerprint Privacy Protection**
 
 cs.CV
 
@@ -365,7 +403,7 @@ cs.CV
 
 
 
-## **28. Efficient Detection and Filtering Systems for Distributed Training**
+## **31. Efficient Detection and Filtering Systems for Distributed Training**
 
 cs.LG
 
@@ -379,7 +417,7 @@ cs.LG
 
 
 
-## **29. Optimal Bootstrapping of PoW Blockchains**
+## **32. Optimal Bootstrapping of PoW Blockchains**
 
 cs.CR
 
@@ -391,7 +429,7 @@ cs.CR
 
 
 
-## **30. Different Spectral Representations in Optimized Artificial Neural Networks and Brains**
+## **33. Different Spectral Representations in Optimized Artificial Neural Networks and Brains**
 
 cs.LG
 
@@ -403,7 +441,7 @@ cs.LG
 
 
 
-## **31. On the Decision Boundaries of Neural Networks: A Tropical Geometry Perspective**
+## **34. On the Decision Boundaries of Neural Networks: A Tropical Geometry Perspective**
 
 cs.LG
 
@@ -417,7 +455,7 @@ First two authors contributed equally to this work
 
 
 
-## **32. Toward Better Target Representation for Source-Free and Black-Box Domain Adaptation**
+## **35. Toward Better Target Representation for Source-Free and Black-Box Domain Adaptation**
 
 cs.CV
 
@@ -429,7 +467,7 @@ cs.CV
 
 
 
-## **33. BARReL: Bottleneck Attention for Adversarial Robustness in Vision-Based Reinforcement Learning**
+## **36. BARReL: Bottleneck Attention for Adversarial Robustness in Vision-Based Reinforcement Learning**
 
 cs.LG
 
@@ -443,7 +481,7 @@ cs.LG
 
 
 
-## **34. Membership-Doctor: Comprehensive Assessment of Membership Inference Against Machine Learning Models**
+## **37. Membership-Doctor: Comprehensive Assessment of Membership Inference Against Machine Learning Models**
 
 cs.CR
 
@@ -455,7 +493,7 @@ cs.CR
 
 
 
-## **35. On Deep Learning in Password Guessing, a Survey**
+## **38. On Deep Learning in Password Guessing, a Survey**
 
 cs.CR
 
@@ -469,7 +507,7 @@ cs.CR
 
 
 
-## **36. Fight Fire With Fire: Reversing Skin Adversarial Examples by Multiscale Diffusive and Denoising Aggregation Mechanism**
+## **39. Fight Fire With Fire: Reversing Skin Adversarial Examples by Multiscale Diffusive and Denoising Aggregation Mechanism**
 
 cs.CV
 
@@ -483,7 +521,7 @@ cs.CV
 
 
 
-## **37. Adversarial Classification under Gaussian Mechanism: Calibrating the Attack to Sensitivity**
+## **40. Adversarial Classification under Gaussian Mechanism: Calibrating the Attack to Sensitivity**
 
 cs.IT
 
@@ -495,7 +533,7 @@ cs.IT
 
 
 
-## **38. On Adversarial Robustness of Trajectory Prediction for Autonomous Vehicles**
+## **41. On Adversarial Robustness of Trajectory Prediction for Autonomous Vehicles**
 
 cs.CV
 
@@ -509,7 +547,7 @@ cs.CV
 
 
 
-## **39. Inferring Sensitive Attributes from Model Explanations**
+## **42. Inferring Sensitive Attributes from Model Explanations**
 
 cs.CR
 
@@ -523,7 +561,7 @@ ACM CIKM 2022
 
 
 
-## **40. Increasing-Margin Adversarial (IMA) Training to Improve Adversarial Robustness of Neural Networks**
+## **43. Increasing-Margin Adversarial (IMA) Training to Improve Adversarial Robustness of Neural Networks**
 
 cs.CV
 
@@ -537,7 +575,7 @@ cs.CV
 
 
 
-## **41. MockingBERT: A Method for Retroactively Adding Resilience to NLP Models**
+## **44. MockingBERT: A Method for Retroactively Adding Resilience to NLP Models**
 
 cs.CL
 
@@ -551,7 +589,7 @@ cs.CL
 
 
 
-## **42. On The Robustness of Channel Allocation in Joint Radar And Communication Systems: An Auction Approach**
+## **45. On The Robustness of Channel Allocation in Joint Radar And Communication Systems: An Auction Approach**
 
 cs.GT
 
@@ -563,7 +601,7 @@ cs.GT
 
 
 
-## **43. PointDP: Diffusion-driven Purification against Adversarial Attacks on 3D Point Cloud Recognition**
+## **46. PointDP: Diffusion-driven Purification against Adversarial Attacks on 3D Point Cloud Recognition**
 
 cs.CV
 
@@ -575,7 +613,7 @@ cs.CV
 
 
 
-## **44. Robust Node Classification on Graphs: Jointly from Bayesian Label Transition and Topology-based Label Propagation**
+## **47. Robust Node Classification on Graphs: Jointly from Bayesian Label Transition and Topology-based Label Propagation**
 
 cs.LG
 
@@ -589,7 +627,7 @@ The paper is accepted for CIKM 2022
 
 
 
-## **45. GAIROSCOPE: Injecting Data from Air-Gapped Computers to Nearby Gyroscopes**
+## **48. GAIROSCOPE: Injecting Data from Air-Gapped Computers to Nearby Gyroscopes**
 
 cs.CR
 
@@ -601,7 +639,7 @@ cs.CR
 
 
 
-## **46. GAT: Generative Adversarial Training for Adversarial Example Detection and Robust Classification**
+## **49. GAT: Generative Adversarial Training for Adversarial Example Detection and Robust Classification**
 
 cs.LG
 
@@ -615,7 +653,7 @@ ICLR 2020, code is available at  https://github.com/xuwangyin/GAT-Generative-Adv
 
 
 
-## **47. Analyzing Adversarial Robustness of Vision Transformers against Spatial and Spectral Attacks**
+## **50. Analyzing Adversarial Robustness of Vision Transformers against Spatial and Spectral Attacks**
 
 cs.CV
 
@@ -626,46 +664,6 @@ cs.CV
 **Authors**: Gihyun Kim, Jong-Seok Lee
 
 **Abstracts**: Vision Transformers have emerged as a powerful architecture that can outperform convolutional neural networks (CNNs) in image classification tasks. Several attempts have been made to understand robustness of Transformers against adversarial attacks, but existing studies draw inconsistent results, i.e., some conclude that Transformers are more robust than CNNs, while some others find that they have similar degrees of robustness. In this paper, we address two issues unexplored in the existing studies examining adversarial robustness of Transformers. First, we argue that the image quality should be simultaneously considered in evaluating adversarial robustness. We find that the superiority of one architecture to another in terms of robustness can change depending on the attack strength expressed by the quality of the attacked images. Second, by noting that Transformers and CNNs rely on different types of information in images, we formulate an attack framework, called Fourier attack, as a tool for implementing flexible attacks, where an image can be attacked in the spectral domain as well as in the spatial domain. This attack perturbs the magnitude and phase information of particular frequency components selectively. Through extensive experiments, we find that Transformers tend to rely more on phase information and low frequency information than CNNs, and thus sometimes they are even more vulnerable under frequency-selective attacks. It is our hope that this work provides new perspectives in understanding the properties and adversarial robustness of Transformers.
-
-
-
-## **48. Gender Bias and Universal Substitution Adversarial Attacks on Grammatical Error Correction Systems for Automated Assessment**
-
-cs.CL
-
-**SubmitDate**: 2022-08-19    [paper-pdf](http://arxiv.org/pdf/2208.09466v1)
-
-**Authors**: Vyas Raina, Mark Gales
-
-**Abstracts**: Grammatical Error Correction (GEC) systems perform a sequence-to-sequence task, where an input word sequence containing grammatical errors, is corrected for these errors by the GEC system to output a grammatically correct word sequence. With the advent of deep learning methods, automated GEC systems have become increasingly popular. For example, GEC systems are often used on speech transcriptions of English learners as a form of assessment and feedback - these powerful GEC systems can be used to automatically measure an aspect of a candidate's fluency. The count of \textit{edits} from a candidate's input sentence (or essay) to a GEC system's grammatically corrected output sentence is indicative of a candidate's language ability, where fewer edits suggest better fluency. The count of edits can thus be viewed as a \textit{fluency score} with zero implying perfect fluency. However, although deep learning based GEC systems are extremely powerful and accurate, they are susceptible to adversarial attacks: an adversary can introduce a small, specific change at the input of a system that causes a large, undesired change at the output. When considering the application of GEC systems to automated language assessment, the aim of an adversary could be to cheat by making a small change to a grammatically incorrect input sentence that conceals the errors from a GEC system, such that no edits are found and the candidate is unjustly awarded a perfect fluency score. This work examines a simple universal substitution adversarial attack that non-native speakers of English could realistically employ to deceive GEC systems used for assessment.
-
-
-
-## **49. Curbing Task Interference using Representation Similarity-Guided Multi-Task Feature Sharing**
-
-cs.CV
-
-Published at 1st Conference on Lifelong Learning Agents (CoLLAs 2022)
-
-**SubmitDate**: 2022-08-19    [paper-pdf](http://arxiv.org/pdf/2208.09427v1)
-
-**Authors**: Naresh Kumar Gurulingan, Elahe Arani, Bahram Zonooz
-
-**Abstracts**: Multi-task learning of dense prediction tasks, by sharing both the encoder and decoder, as opposed to sharing only the encoder, provides an attractive front to increase both accuracy and computational efficiency. When the tasks are similar, sharing the decoder serves as an additional inductive bias providing more room for tasks to share complementary information among themselves. However, increased sharing exposes more parameters to task interference which likely hinders both generalization and robustness. Effective ways to curb this interference while exploiting the inductive bias of sharing the decoder remains an open challenge. To address this challenge, we propose Progressive Decoder Fusion (PDF) to progressively combine task decoders based on inter-task representation similarity. We show that this procedure leads to a multi-task network with better generalization to in-distribution and out-of-distribution data and improved robustness to adversarial attacks. Additionally, we observe that the predictions of different tasks of this multi-task network are more consistent with each other.
-
-
-
-## **50. A Pragmatic Methodology for Blind Hardware Trojan Insertion in Finalized Layouts**
-
-cs.CR
-
-9 pages, 6 figures, 3 tables, to be published in ICCAD 2022
-
-**SubmitDate**: 2022-08-19    [paper-pdf](http://arxiv.org/pdf/2208.09235v1)
-
-**Authors**: Alexander Hepp, Tiago Perez, Samuel Pagliarini, Georg Sigl
-
-**Abstracts**: A potential vulnerability for integrated circuits (ICs) is the insertion of hardware trojans (HTs) during manufacturing. Understanding the practicability of such an attack can lead to appropriate measures for mitigating it. In this paper, we demonstrate a pragmatic framework for analyzing HT susceptibility of finalized layouts. Our framework is representative of a fabrication-time attack, where the adversary is assumed to have access only to a layout representation of the circuit. The framework inserts trojans into tapeout-ready layouts utilizing an Engineering Change Order (ECO) flow. The attacked security nodes are blindly searched utilizing reverse-engineering techniques. For our experimental investigation, we utilized three crypto-cores (AES-128, SHA-256, and RSA) and a microcontroller (RISC-V) as targets. We explored 96 combinations of triggers, payloads and targets for our framework. Our findings demonstrate that even in high-density designs, the covert insertion of sophisticated trojans is possible. All this while maintaining the original target logic, with minimal impact on power and performance. Furthermore, from our exploration, we conclude that it is too naive to only utilize placement resources as a metric for HT vulnerability. This work highlights that the HT insertion success is a complex function of the placement, routing resources, the position of the attacked nodes, and further design-specific characteristics. As a result, our framework goes beyond just an attack, we present the most advanced analysis tool to assess the vulnerability of HT insertion into finalized layouts.
 
 
 

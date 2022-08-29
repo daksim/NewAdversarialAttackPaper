@@ -1,9 +1,53 @@
 # Latest Adversarial Attack Papers
-**update at 2022-08-29 06:31:21**
+**update at 2022-08-30 06:31:22**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. Semantic Preserving Adversarial Attack Generation with Autoencoder and Genetic Algorithm**
+## **1. SoftHebb: Bayesian Inference in Unsupervised Hebbian Soft Winner-Take-All Networks**
+
+SoftHebb：无监督Hebbian软赢家通吃网络中的贝叶斯推理 cs.LG
+
+**SubmitDate**: 2022-08-26    [paper-pdf](http://arxiv.org/pdf/2107.05747v3)
+
+**Authors**: Timoleon Moraitis, Dmitry Toichkin, Adrien Journé, Yansong Chua, Qinghai Guo
+
+**Abstracts**: Hebbian plasticity in winner-take-all (WTA) networks is highly attractive for neuromorphic on-chip learning, owing to its efficient, local, unsupervised, and on-line nature. Moreover, its biological plausibility may help overcome important limitations of artificial algorithms, such as their susceptibility to adversarial attacks and long training time. However, Hebbian WTA learning has found little use in machine learning (ML), likely because it has been missing an optimization theory compatible with deep learning (DL). Here we show rigorously that WTA networks constructed by standard DL elements, combined with a Hebbian-like plasticity that we derive, maintain a Bayesian generative model of the data. Importantly, without any supervision, our algorithm, SoftHebb, minimizes cross-entropy, i.e. a common loss function in supervised DL. We show this theoretically and in practice. The key is a "soft" WTA where there is no absolute "hard" winner neuron. Strikingly, in shallow-network comparisons with backpropagation (BP), SoftHebb shows advantages beyond its Hebbian efficiency. Namely, it converges faster and is significantly more robust to noise and adversarial attacks. Notably, attacks that maximally confuse SoftHebb are also confusing to the human eye, potentially linking human perceptual robustness, with Hebbian WTA circuits of cortex. Finally, SoftHebb can generate synthetic objects as interpolations of real object classes. All in all, Hebbian efficiency, theoretical underpinning, cross-entropy-minimization, and surprising empirical advantages, suggest that SoftHebb may inspire highly neuromorphic and radically different, but practical and advantageous learning algorithms and hardware accelerators.
+
+摘要: Winner-Take-All(WTA)网络中的Hebbian可塑性由于其高效、局部、无监督和在线的性质，对神经形态芯片上学习具有极大的吸引力。此外，它在生物学上的合理性可能有助于克服人工算法的重要局限性，例如它们对对手攻击的敏感性和较长的训练时间。然而，Hebbian WTA学习在机器学习(ML)中几乎没有发现，可能是因为它一直缺少与深度学习(DL)兼容的优化理论。在这里，我们严格地证明了由标准的DL元素构造的WTA网络，与我们推导的Hebbian类可塑性相结合，维持了数据的贝叶斯生成模型。重要的是，在没有任何监督的情况下，我们的算法SoftHebb最小化了交叉熵，即有监督DL中的一个常见损失函数。我们从理论和实践上证明了这一点。关键是没有绝对的“硬”赢家神经元的“软”WTA。值得注意的是，在浅层网络与反向传播(BP)的比较中，SoftHebb显示出了比Hebbian效率更高的优势。也就是说，它的收敛速度更快，对噪声和对手攻击的健壮性要强得多。值得注意的是，最大限度地混淆SoftHebb的攻击也会混淆人眼，潜在地将人类感知的健壮性与大脑皮质的Hebbian WTA回路联系起来。最后，SoftHebb可以生成合成对象作为真实对象类的内插。总而言之，Hebbian效率、理论基础、交叉熵最小化和令人惊讶的经验优势表明，SoftHebb可能会激发高度神经形态和根本不同的、但实用和有利的学习算法和硬件加速器。
+
+
+
+## **2. Robust Prototypical Few-Shot Organ Segmentation with Regularized Neural-ODEs**
+
+基于正则化神经节点的典型少发器官分割 cs.CV
+
+**SubmitDate**: 2022-08-26    [paper-pdf](http://arxiv.org/pdf/2208.12428v1)
+
+**Authors**: Prashant Pandey, Mustafa Chasmai, Tanuj Sur, Brejesh Lall
+
+**Abstracts**: Despite the tremendous progress made by deep learning models in image semantic segmentation, they typically require large annotated examples, and increasing attention is being diverted to problem settings like Few-Shot Learning (FSL) where only a small amount of annotation is needed for generalisation to novel classes. This is especially seen in medical domains where dense pixel-level annotations are expensive to obtain. In this paper, we propose Regularized Prototypical Neural Ordinary Differential Equation (R-PNODE), a method that leverages intrinsic properties of Neural-ODEs, assisted and enhanced by additional cluster and consistency losses to perform Few-Shot Segmentation (FSS) of organs. R-PNODE constrains support and query features from the same classes to lie closer in the representation space thereby improving the performance over the existing Convolutional Neural Network (CNN) based FSS methods. We further demonstrate that while many existing Deep CNN based methods tend to be extremely vulnerable to adversarial attacks, R-PNODE exhibits increased adversarial robustness for a wide array of these attacks. We experiment with three publicly available multi-organ segmentation datasets in both in-domain and cross-domain FSS settings to demonstrate the efficacy of our method. In addition, we perform experiments with seven commonly used adversarial attacks in various settings to demonstrate R-PNODE's robustness. R-PNODE outperforms the baselines for FSS by significant margins and also shows superior performance for a wide array of attacks varying in intensity and design.
+
+摘要: 尽管深度学习模型在图像语义分割方面取得了巨大的进步，但它们通常需要大量的注释示例，并且越来越多的注意力被转移到像少镜头学习(FSL)这样的问题环境中，其中只需要少量的注释就可以概括到新的类。这在医学领域中尤其常见，在医学领域中，密集像素级注释的获取成本很高。在本文中，我们提出了正则化的原型神经常微分方程(R-PNODE)，该方法利用神经节点的固有特性，通过额外的聚类和一致性损失来辅助和增强器官的少镜头分割(FSS)。R-PNODE约束支持和查询来自同一类的特征在表示空间中更接近，从而提高了现有基于卷积神经网络(CNN)的FSS方法的性能。我们进一步证明，虽然许多现有的基于Deep CNN的方法往往非常容易受到对抗性攻击，但R-PNODE对一系列此类攻击表现出更强的对抗性。我们用三个公开可用的多器官分割数据集在域内和跨域的FSS环境中进行了实验，以证明我们方法的有效性。此外，我们在不同的环境下对七种常用的对抗性攻击进行了实验，以验证R-PNODE的健壮性。R-PNODE的表现远远超过FSS的基线，并在各种强度和设计的攻击中显示出卓越的性能。
+
+
+
+## **3. SNAP: Efficient Extraction of Private Properties with Poisoning**
+
+Snap：高效提取带有毒物的私有财产 cs.LG
+
+27 pages, 13 figures
+
+**SubmitDate**: 2022-08-25    [paper-pdf](http://arxiv.org/pdf/2208.12348v1)
+
+**Authors**: Harsh Chaudhari, John Abascal, Alina Oprea, Matthew Jagielski, Florian Tramèr, Jonathan Ullman
+
+**Abstracts**: Property inference attacks allow an adversary to extract global properties of the training dataset from a machine learning model. Such attacks have privacy implications for data owners who share their datasets to train machine learning models. Several existing approaches for property inference attacks against deep neural networks have been proposed, but they all rely on the attacker training a large number of shadow models, which induces large computational overhead.   In this paper, we consider the setting of property inference attacks in which the attacker can poison a subset of the training dataset and query the trained target model. Motivated by our theoretical analysis of model confidences under poisoning, we design an efficient property inference attack, SNAP, which obtains higher attack success and requires lower amounts of poisoning than the state-of-the-art poisoning-based property inference attack by Mahloujifar et al. For example, on the Census dataset, SNAP achieves 34% higher success rate than Mahloujifar et al. while being 56.5x faster. We also extend our attack to determine if a certain property is present at all in training, and estimate the exact proportion of a property of interest efficiently. We evaluate our attack on several properties of varying proportions from four datasets, and demonstrate SNAP's generality and effectiveness.
+
+摘要: 属性推理攻击允许对手从机器学习模型中提取训练数据集的全局属性。此类攻击对共享数据集以训练机器学习模型的数据所有者具有隐私影响。已有的几种针对深层神经网络的属性推理攻击方法都依赖于攻击者训练大量的影子模型，导致计算开销较大。在本文中，我们考虑了属性推理攻击的设置，在该攻击中，攻击者可以毒化训练数据集的子集并查询训练的目标模型。在对中毒下的模型可信度进行理论分析的基础上，设计了一种高效的属性推理攻击SNAP，它比MahLoujifar等人提出的基于中毒的属性推理攻击具有更高的攻击成功率和更低的投毒量。例如，在人口普查数据集上，SNAP的成功率比MahLoujifar等人高34%。同时速度提高了56.5倍。我们还扩展了我们的攻击，以确定在训练中是否存在某个属性，并有效地估计感兴趣的属性的确切比例。我们对来自四个数据集的几个不同比例的属性进行了评估，并证明了SNAP的通用性和有效性。
+
+
+
+## **4. Semantic Preserving Adversarial Attack Generation with Autoencoder and Genetic Algorithm**
 
 基于自动编码和遗传算法的语义保持敌意攻击生成 cs.LG
 
@@ -19,7 +63,7 @@
 
 
 
-## **2. Passive Triangulation Attack on ORide**
+## **5. Passive Triangulation Attack on ORide**
 
 ORIDE上的被动三角剖分攻击 cs.CR
 
@@ -33,7 +77,7 @@ ORIDE上的被动三角剖分攻击 cs.CR
 
 
 
-## **3. Automatic Mapping of Unstructured Cyber Threat Intelligence: An Experimental Study**
+## **6. Automatic Mapping of Unstructured Cyber Threat Intelligence: An Experimental Study**
 
 非结构化网络威胁情报自动测绘的实验研究 cs.CR
 
@@ -49,7 +93,7 @@ ORIDE上的被动三角剖分攻击 cs.CR
 
 
 
-## **4. ECG-ATK-GAN: Robustness against Adversarial Attacks on ECGs using Conditional Generative Adversarial Networks**
+## **7. ECG-ATK-GAN: Robustness against Adversarial Attacks on ECGs using Conditional Generative Adversarial Networks**
 
 ECG-ATK-GAN：使用条件生成对抗网络对ECG的对抗攻击的稳健性 eess.SP
 
@@ -65,7 +109,7 @@ Accepted to MICCAI2022 Applications of Medical AI (AMAI) Workshop
 
 
 
-## **5. A Perturbation Resistant Transformation and Classification System for Deep Neural Networks**
+## **8. A Perturbation Resistant Transformation and Classification System for Deep Neural Networks**
 
 一种抗扰动的深度神经网络变换与分类系统 cs.CV
 
@@ -81,7 +125,7 @@ Accepted to MICCAI2022 Applications of Medical AI (AMAI) Workshop
 
 
 
-## **6. A New Kind of Adversarial Example**
+## **9. A New Kind of Adversarial Example**
 
 一种新的对抗性例证 cs.CV
 
@@ -95,7 +139,7 @@ Accepted to MICCAI2022 Applications of Medical AI (AMAI) Workshop
 
 
 
-## **7. Attacking Neural Binary Function Detection**
+## **10. Attacking Neural Binary Function Detection**
 
 攻击神经二进制函数检测 cs.CR
 
@@ -111,7 +155,7 @@ Accepted to MICCAI2022 Applications of Medical AI (AMAI) Workshop
 
 
 
-## **8. Adversarial Driving: Attacking End-to-End Autonomous Driving**
+## **11. Adversarial Driving: Attacking End-to-End Autonomous Driving**
 
 对抗性驾驶：攻击型端到端自动驾驶 cs.CV
 
@@ -127,7 +171,7 @@ Accepted to MICCAI2022 Applications of Medical AI (AMAI) Workshop
 
 
 
-## **9. Unrestricted Black-box Adversarial Attack Using GAN with Limited Queries**
+## **12. Unrestricted Black-box Adversarial Attack Using GAN with Limited Queries**
 
 基于有限查询GAN的无限制黑盒对抗性攻击 cs.CV
 
@@ -143,7 +187,7 @@ Accepted to the ECCV 2022 Workshop on Adversarial Robustness in the  Real World
 
 
 
-## **10. Robustness of the Tangle 2.0 Consensus**
+## **13. Robustness of the Tangle 2.0 Consensus**
 
 Tangle 2.0共识的健壮性 cs.DC
 
@@ -157,7 +201,7 @@ Tangle 2.0共识的健壮性 cs.DC
 
 
 
-## **11. LPF-Defense: 3D Adversarial Defense based on Frequency Analysis**
+## **14. LPF-Defense: 3D Adversarial Defense based on Frequency Analysis**
 
 LPF-Defense：基于频率分析的三维对抗性防御 cs.CV
 
@@ -173,7 +217,7 @@ LPF-Defense：基于频率分析的三维对抗性防御 cs.CV
 
 
 
-## **12. Trace and Detect Adversarial Attacks on CNNs using Feature Response Maps**
+## **15. Trace and Detect Adversarial Attacks on CNNs using Feature Response Maps**
 
 使用特征响应映射跟踪和检测对CNN的敌意攻击 cs.CV
 
@@ -189,7 +233,7 @@ LPF-Defense：基于频率分析的三维对抗性防御 cs.CV
 
 
 
-## **13. Towards an Awareness of Time Series Anomaly Detection Models' Adversarial Vulnerability**
+## **16. Towards an Awareness of Time Series Anomaly Detection Models' Adversarial Vulnerability**
 
 认识时间序列异常检测模型的对抗性漏洞 cs.LG
 
@@ -205,7 +249,7 @@ Part of Proceedings of the 31st ACM International Conference on  Information and
 
 
 
-## **14. ObfuNAS: A Neural Architecture Search-based DNN Obfuscation Approach**
+## **17. ObfuNAS: A Neural Architecture Search-based DNN Obfuscation Approach**
 
 ObfuNAS：一种基于神经结构搜索的DNN混淆方法 cs.CR
 
@@ -221,7 +265,7 @@ ObfuNAS：一种基于神经结构搜索的DNN混淆方法 cs.CR
 
 
 
-## **15. Auditing Membership Leakages of Multi-Exit Networks**
+## **18. Auditing Membership Leakages of Multi-Exit Networks**
 
 审计多出口网络的成员泄漏 cs.CR
 
@@ -237,7 +281,7 @@ Accepted by CCS 2022
 
 
 
-## **16. Adversarial Speaker Distillation for Countermeasure Model on Automatic Speaker Verification**
+## **19. Adversarial Speaker Distillation for Countermeasure Model on Automatic Speaker Verification**
 
 说话人自动确认对抗模型中的对抗性说话人提取 cs.SD
 
@@ -253,7 +297,7 @@ Accepted by ISCA SPSC 2022
 
 
 
-## **17. Privacy Enhancement for Cloud-Based Few-Shot Learning**
+## **20. Privacy Enhancement for Cloud-Based Few-Shot Learning**
 
 增强基于云的极少机会学习的隐私 cs.LG
 
@@ -269,7 +313,7 @@ Accepted by ISCA SPSC 2022
 
 
 
-## **18. A Comprehensive Study of Real-Time Object Detection Networks Across Multiple Domains: A Survey**
+## **21. A Comprehensive Study of Real-Time Object Detection Networks Across Multiple Domains: A Survey**
 
 跨域实时目标检测网络研究综述 cs.CV
 
@@ -285,7 +329,7 @@ Published in Transactions on Machine Learning Research (TMLR) with  Survey Certi
 
 
 
-## **19. Transferability Ranking of Adversarial Examples**
+## **22. Transferability Ranking of Adversarial Examples**
 
 对抗性例证的可转移性排名 cs.LG
 
@@ -299,7 +343,7 @@ Published in Transactions on Machine Learning Research (TMLR) with  Survey Certi
 
 
 
-## **20. Complete Traceability Multimedia Fingerprinting Codes Resistant to Averaging Attack and Adversarial Noise with Optimal Rate**
+## **23. Complete Traceability Multimedia Fingerprinting Codes Resistant to Averaging Attack and Adversarial Noise with Optimal Rate**
 
 具有最优码率的抗平均攻击和对抗噪声的完全可追溯性多媒体指纹编码 cs.IT
 
@@ -313,7 +357,7 @@ Published in Transactions on Machine Learning Research (TMLR) with  Survey Certi
 
 
 
-## **21. Evaluating Machine Unlearning via Epistemic Uncertainty**
+## **24. Evaluating Machine Unlearning via Epistemic Uncertainty**
 
 基于认知不确定性的机器遗忘评估 cs.LG
 
@@ -329,7 +373,7 @@ Rejected at ECML 2021. Even though the paper was rejected, we want to  "publish"
 
 
 
-## **22. UKP-SQuARE v2 Explainability and Adversarial Attacks for Trustworthy QA**
+## **25. UKP-SQuARE v2 Explainability and Adversarial Attacks for Trustworthy QA**
 
 UKP-Square v2可解析性和可信QA的对抗性攻击 cs.CL
 
@@ -343,7 +387,7 @@ UKP-Square v2可解析性和可信QA的对抗性攻击 cs.CL
 
 
 
-## **23. SoK: Certified Robustness for Deep Neural Networks**
+## **26. SoK: Certified Robustness for Deep Neural Networks**
 
 SOK：深度神经网络认证的健壮性 cs.LG
 
@@ -359,7 +403,7 @@ To appear at 2023 IEEE Symposium on Security and Privacy (SP); 14  pages for the
 
 
 
-## **24. Adversarial Vulnerability of Temporal Feature Networks for Object Detection**
+## **27. Adversarial Vulnerability of Temporal Feature Networks for Object Detection**
 
 用于目标检测的时态特征网络的对抗脆弱性 cs.CV
 
@@ -375,7 +419,7 @@ Accepted for publication at ECCV 2022 SAIAD workshop
 
 
 
-## **25. MALICE: Manipulation Attacks on Learned Image ComprEssion**
+## **28. MALICE: Manipulation Attacks on Learned Image ComprEssion**
 
 恶意：对学习图像压缩的操纵攻击 cs.CV
 
@@ -389,7 +433,7 @@ Accepted for publication at ECCV 2022 SAIAD workshop
 
 
 
-## **26. RAB: Provable Robustness Against Backdoor Attacks**
+## **29. RAB: Provable Robustness Against Backdoor Attacks**
 
 RAB：针对后门攻击的可证明的健壮性 cs.LG
 
@@ -405,7 +449,7 @@ IEEE Symposium on Security and Privacy 2023
 
 
 
-## **27. Hierarchical Perceptual Noise Injection for Social Media Fingerprint Privacy Protection**
+## **30. Hierarchical Perceptual Noise Injection for Social Media Fingerprint Privacy Protection**
 
 用于社交媒体指纹隐私保护的分层感知噪声注入 cs.CV
 
@@ -419,7 +463,7 @@ IEEE Symposium on Security and Privacy 2023
 
 
 
-## **28. Efficient Detection and Filtering Systems for Distributed Training**
+## **31. Efficient Detection and Filtering Systems for Distributed Training**
 
 用于分布式训练的高效检测和过滤系统 cs.LG
 
@@ -435,7 +479,7 @@ IEEE Symposium on Security and Privacy 2023
 
 
 
-## **29. Optimal Bootstrapping of PoW Blockchains**
+## **32. Optimal Bootstrapping of PoW Blockchains**
 
 PoW区块链的最优自举 cs.CR
 
@@ -449,7 +493,7 @@ PoW区块链的最优自举 cs.CR
 
 
 
-## **30. Different Spectral Representations in Optimized Artificial Neural Networks and Brains**
+## **33. Different Spectral Representations in Optimized Artificial Neural Networks and Brains**
 
 优化人工神经网络和大脑中的不同谱表示 cs.LG
 
@@ -463,7 +507,7 @@ PoW区块链的最优自举 cs.CR
 
 
 
-## **31. On the Decision Boundaries of Neural Networks: A Tropical Geometry Perspective**
+## **34. On the Decision Boundaries of Neural Networks: A Tropical Geometry Perspective**
 
 关于神经网络的决策边界：热带几何观点 cs.LG
 
@@ -479,7 +523,7 @@ First two authors contributed equally to this work
 
 
 
-## **32. Toward Better Target Representation for Source-Free and Black-Box Domain Adaptation**
+## **35. Toward Better Target Representation for Source-Free and Black-Box Domain Adaptation**
 
 无源域和黑箱域自适应的更好的目标表示 cs.CV
 
@@ -493,7 +537,7 @@ First two authors contributed equally to this work
 
 
 
-## **33. BARReL: Bottleneck Attention for Adversarial Robustness in Vision-Based Reinforcement Learning**
+## **36. BARReL: Bottleneck Attention for Adversarial Robustness in Vision-Based Reinforcement Learning**
 
 Barrel：基于视觉的强化学习中对抗性鲁棒性的瓶颈关注 cs.LG
 
@@ -509,7 +553,7 @@ Barrel：基于视觉的强化学习中对抗性鲁棒性的瓶颈关注 cs.LG
 
 
 
-## **34. Membership-Doctor: Comprehensive Assessment of Membership Inference Against Machine Learning Models**
+## **37. Membership-Doctor: Comprehensive Assessment of Membership Inference Against Machine Learning Models**
 
 成员资格-博士：针对机器学习模型的成员资格推理的综合评估 cs.CR
 
@@ -523,7 +567,7 @@ Barrel：基于视觉的强化学习中对抗性鲁棒性的瓶颈关注 cs.LG
 
 
 
-## **35. On Deep Learning in Password Guessing, a Survey**
+## **38. On Deep Learning in Password Guessing, a Survey**
 
 密码猜测中的深度学习研究综述 cs.CR
 
@@ -539,7 +583,7 @@ Barrel：基于视觉的强化学习中对抗性鲁棒性的瓶颈关注 cs.LG
 
 
 
-## **36. Fight Fire With Fire: Reversing Skin Adversarial Examples by Multiscale Diffusive and Denoising Aggregation Mechanism**
+## **39. Fight Fire With Fire: Reversing Skin Adversarial Examples by Multiscale Diffusive and Denoising Aggregation Mechanism**
 
 以火攻火：用多尺度扩散和去噪聚集机制逆转皮肤对抗性实例 cs.CV
 
@@ -555,7 +599,7 @@ Barrel：基于视觉的强化学习中对抗性鲁棒性的瓶颈关注 cs.LG
 
 
 
-## **37. Adversarial Classification under Gaussian Mechanism: Calibrating the Attack to Sensitivity**
+## **40. Adversarial Classification under Gaussian Mechanism: Calibrating the Attack to Sensitivity**
 
 高斯机制下的对抗性分类：将攻击校准为敏感度 cs.IT
 
@@ -569,7 +613,7 @@ Barrel：基于视觉的强化学习中对抗性鲁棒性的瓶颈关注 cs.LG
 
 
 
-## **38. On Adversarial Robustness of Trajectory Prediction for Autonomous Vehicles**
+## **41. On Adversarial Robustness of Trajectory Prediction for Autonomous Vehicles**
 
 自主车辆轨迹预测的对抗稳健性研究 cs.CV
 
@@ -585,7 +629,7 @@ Barrel：基于视觉的强化学习中对抗性鲁棒性的瓶颈关注 cs.LG
 
 
 
-## **39. Inferring Sensitive Attributes from Model Explanations**
+## **42. Inferring Sensitive Attributes from Model Explanations**
 
 从模型解释中推断敏感属性 cs.CR
 
@@ -601,7 +645,7 @@ ACM CIKM 2022
 
 
 
-## **40. Increasing-Margin Adversarial (IMA) Training to Improve Adversarial Robustness of Neural Networks**
+## **43. Increasing-Margin Adversarial (IMA) Training to Improve Adversarial Robustness of Neural Networks**
 
 增量对抗性(IMA)训练提高神经网络对抗性鲁棒性 cs.CV
 
@@ -617,7 +661,7 @@ ACM CIKM 2022
 
 
 
-## **41. MockingBERT: A Method for Retroactively Adding Resilience to NLP Models**
+## **44. MockingBERT: A Method for Retroactively Adding Resilience to NLP Models**
 
 MockingBERT：一种向NLP模型追溯添加弹性的方法 cs.CL
 
@@ -633,7 +677,7 @@ MockingBERT：一种向NLP模型追溯添加弹性的方法 cs.CL
 
 
 
-## **42. On The Robustness of Channel Allocation in Joint Radar And Communication Systems: An Auction Approach**
+## **45. On The Robustness of Channel Allocation in Joint Radar And Communication Systems: An Auction Approach**
 
 雷达与通信联合系统中信道分配的稳健性：拍卖方法 cs.GT
 
@@ -647,7 +691,7 @@ MockingBERT：一种向NLP模型追溯添加弹性的方法 cs.CL
 
 
 
-## **43. PointDP: Diffusion-driven Purification against Adversarial Attacks on 3D Point Cloud Recognition**
+## **46. PointDP: Diffusion-driven Purification against Adversarial Attacks on 3D Point Cloud Recognition**
 
 PointDP：扩散驱动的三维点云识别对抗攻击净化 cs.CV
 
@@ -661,7 +705,7 @@ PointDP：扩散驱动的三维点云识别对抗攻击净化 cs.CV
 
 
 
-## **44. Robust Node Classification on Graphs: Jointly from Bayesian Label Transition and Topology-based Label Propagation**
+## **47. Robust Node Classification on Graphs: Jointly from Bayesian Label Transition and Topology-based Label Propagation**
 
 图上稳健的节点分类：贝叶斯标签转移和基于拓扑的标签传播 cs.LG
 
@@ -677,7 +721,7 @@ The paper is accepted for CIKM 2022
 
 
 
-## **45. GAIROSCOPE: Injecting Data from Air-Gapped Computers to Nearby Gyroscopes**
+## **48. GAIROSCOPE: Injecting Data from Air-Gapped Computers to Nearby Gyroscopes**
 
 GIROSCOPE：将气隙计算机的数据注入附近的陀螺仪 cs.CR
 
@@ -691,7 +735,7 @@ GIROSCOPE：将气隙计算机的数据注入附近的陀螺仪 cs.CR
 
 
 
-## **46. GAT: Generative Adversarial Training for Adversarial Example Detection and Robust Classification**
+## **49. GAT: Generative Adversarial Training for Adversarial Example Detection and Robust Classification**
 
 GAT：用于对抗性实例检测和稳健分类的生成性对抗性训练 cs.LG
 
@@ -707,7 +751,7 @@ ICLR 2020, code is available at  https://github.com/xuwangyin/GAT-Generative-Adv
 
 
 
-## **47. Analyzing Adversarial Robustness of Vision Transformers against Spatial and Spectral Attacks**
+## **50. Analyzing Adversarial Robustness of Vision Transformers against Spatial and Spectral Attacks**
 
 视觉变形器对抗空间和频谱攻击的稳健性分析 cs.CV
 
@@ -720,52 +764,6 @@ ICLR 2020, code is available at  https://github.com/xuwangyin/GAT-Generative-Adv
 **Abstracts**: Vision Transformers have emerged as a powerful architecture that can outperform convolutional neural networks (CNNs) in image classification tasks. Several attempts have been made to understand robustness of Transformers against adversarial attacks, but existing studies draw inconsistent results, i.e., some conclude that Transformers are more robust than CNNs, while some others find that they have similar degrees of robustness. In this paper, we address two issues unexplored in the existing studies examining adversarial robustness of Transformers. First, we argue that the image quality should be simultaneously considered in evaluating adversarial robustness. We find that the superiority of one architecture to another in terms of robustness can change depending on the attack strength expressed by the quality of the attacked images. Second, by noting that Transformers and CNNs rely on different types of information in images, we formulate an attack framework, called Fourier attack, as a tool for implementing flexible attacks, where an image can be attacked in the spectral domain as well as in the spatial domain. This attack perturbs the magnitude and phase information of particular frequency components selectively. Through extensive experiments, we find that Transformers tend to rely more on phase information and low frequency information than CNNs, and thus sometimes they are even more vulnerable under frequency-selective attacks. It is our hope that this work provides new perspectives in understanding the properties and adversarial robustness of Transformers.
 
 摘要: 视觉转换器已经成为一种强大的体系结构，它在图像分类任务中的表现优于卷积神经网络(CNN)。人们曾试图了解变形金刚对敌方攻击的健壮性，但现有的研究得出了不一致的结果，即一些人得出结论，变形金刚比CNN更健壮，而另一些人发现它们具有类似程度的健壮性。在这篇文章中，我们解决了现有研究中未探索的两个问题，以检验变形金刚的对抗性稳健性。首先，我们认为在评估对抗稳健性时应同时考虑图像质量。我们发现，一种体系结构相对于另一种体系结构在稳健性方面的优势可以根据受攻击图像质量所表示的攻击强度而变化。其次，通过注意到Transformers和CNN依赖于图像中不同类型的信息，我们制定了一个称为傅立叶攻击的攻击框架，作为实现灵活攻击的工具，其中图像可以在谱域和空间域中被攻击。这种攻击选择性地干扰特定频率分量的幅度和相位信息。通过大量的实验，我们发现变压器往往比CNN更依赖于相位信息和低频信息，因此有时它们在频率选择性攻击下更容易受到攻击。我们希望这项工作为理解变形金刚的特性和对手的健壮性提供了新的视角。
-
-
-
-## **48. Gender Bias and Universal Substitution Adversarial Attacks on Grammatical Error Correction Systems for Automated Assessment**
-
-性别偏见和普遍替代对自动评估语法纠错系统的敌意攻击 cs.CL
-
-**SubmitDate**: 2022-08-19    [paper-pdf](http://arxiv.org/pdf/2208.09466v1)
-
-**Authors**: Vyas Raina, Mark Gales
-
-**Abstracts**: Grammatical Error Correction (GEC) systems perform a sequence-to-sequence task, where an input word sequence containing grammatical errors, is corrected for these errors by the GEC system to output a grammatically correct word sequence. With the advent of deep learning methods, automated GEC systems have become increasingly popular. For example, GEC systems are often used on speech transcriptions of English learners as a form of assessment and feedback - these powerful GEC systems can be used to automatically measure an aspect of a candidate's fluency. The count of \textit{edits} from a candidate's input sentence (or essay) to a GEC system's grammatically corrected output sentence is indicative of a candidate's language ability, where fewer edits suggest better fluency. The count of edits can thus be viewed as a \textit{fluency score} with zero implying perfect fluency. However, although deep learning based GEC systems are extremely powerful and accurate, they are susceptible to adversarial attacks: an adversary can introduce a small, specific change at the input of a system that causes a large, undesired change at the output. When considering the application of GEC systems to automated language assessment, the aim of an adversary could be to cheat by making a small change to a grammatically incorrect input sentence that conceals the errors from a GEC system, such that no edits are found and the candidate is unjustly awarded a perfect fluency score. This work examines a simple universal substitution adversarial attack that non-native speakers of English could realistically employ to deceive GEC systems used for assessment.
-
-摘要: 语法纠错(GEC)系统执行序列到序列任务，其中包含语法错误的输入单词序列由GEC系统针对这些错误进行校正，以输出语法正确的单词序列。随着深度学习方法的出现，自动化GEC系统变得越来越流行。例如，GEC系统经常用于英语学习者的语音转录，作为一种评估和反馈的形式--这些强大的GEC系统可以用来自动测量考生流利性的一个方面。从候选人的输入句子(或文章)到GEC系统语法更正后的输出句子的编辑次数表明了候选人的语言能力，编辑次数越少，表明语言的流利性越好。因此，可以将编辑次数视为文本{流畅度分数}，0表示完全流畅。然而，尽管基于深度学习的GEC系统非常强大和准确，但它们容易受到对手的攻击：对手可以在系统的输入端引入小的、特定的更改，从而在输出端造成巨大的、不希望看到的更改。当考虑将GEC系统应用于自动语言评估时，对手的目的可能是通过对语法错误的输入句子进行微小的改变来欺骗，该输入句子对GEC系统隐藏了错误，从而没有发现编辑并且不公平地给予候选人满分流利性分数。这项工作考察了一种简单的通用替代对抗性攻击，非英语母语者可以现实地使用该攻击来欺骗用于评估的GEC系统。
-
-
-
-## **49. Curbing Task Interference using Representation Similarity-Guided Multi-Task Feature Sharing**
-
-基于表示相似度的多任务特征共享抑制任务干扰 cs.CV
-
-Published at 1st Conference on Lifelong Learning Agents (CoLLAs 2022)
-
-**SubmitDate**: 2022-08-19    [paper-pdf](http://arxiv.org/pdf/2208.09427v1)
-
-**Authors**: Naresh Kumar Gurulingan, Elahe Arani, Bahram Zonooz
-
-**Abstracts**: Multi-task learning of dense prediction tasks, by sharing both the encoder and decoder, as opposed to sharing only the encoder, provides an attractive front to increase both accuracy and computational efficiency. When the tasks are similar, sharing the decoder serves as an additional inductive bias providing more room for tasks to share complementary information among themselves. However, increased sharing exposes more parameters to task interference which likely hinders both generalization and robustness. Effective ways to curb this interference while exploiting the inductive bias of sharing the decoder remains an open challenge. To address this challenge, we propose Progressive Decoder Fusion (PDF) to progressively combine task decoders based on inter-task representation similarity. We show that this procedure leads to a multi-task network with better generalization to in-distribution and out-of-distribution data and improved robustness to adversarial attacks. Additionally, we observe that the predictions of different tasks of this multi-task network are more consistent with each other.
-
-摘要: 密集预测任务的多任务学习通过共享编码器和解码器，而不是仅共享编码器，为提高精度和计算效率提供了一个有吸引力的前沿。当任务相似时，共享解码器充当额外的感应偏向，为任务之间共享互补信息提供更多空间。然而，增加共享会使更多的参数暴露在任务干扰中，这可能会阻碍泛化和健壮性。在利用共用解码器的感应偏差的同时抑制这种干扰的有效方法仍然是一个悬而未决的挑战。为了应对这一挑战，我们提出了渐进译码融合算法(PDF)，它基于任务间表示的相似性逐步合并任务译码。实验结果表明，该过程可以得到一个对分布内和分布外数据具有更好的泛化能力的多任务网络，并提高了对对手攻击的稳健性。此外，我们观察到这个多任务网络对不同任务的预测彼此更一致。
-
-
-
-## **50. A Pragmatic Methodology for Blind Hardware Trojan Insertion in Finalized Layouts**
-
-一种实用的在最终版图中插入硬件木马的方法 cs.CR
-
-9 pages, 6 figures, 3 tables, to be published in ICCAD 2022
-
-**SubmitDate**: 2022-08-19    [paper-pdf](http://arxiv.org/pdf/2208.09235v1)
-
-**Authors**: Alexander Hepp, Tiago Perez, Samuel Pagliarini, Georg Sigl
-
-**Abstracts**: A potential vulnerability for integrated circuits (ICs) is the insertion of hardware trojans (HTs) during manufacturing. Understanding the practicability of such an attack can lead to appropriate measures for mitigating it. In this paper, we demonstrate a pragmatic framework for analyzing HT susceptibility of finalized layouts. Our framework is representative of a fabrication-time attack, where the adversary is assumed to have access only to a layout representation of the circuit. The framework inserts trojans into tapeout-ready layouts utilizing an Engineering Change Order (ECO) flow. The attacked security nodes are blindly searched utilizing reverse-engineering techniques. For our experimental investigation, we utilized three crypto-cores (AES-128, SHA-256, and RSA) and a microcontroller (RISC-V) as targets. We explored 96 combinations of triggers, payloads and targets for our framework. Our findings demonstrate that even in high-density designs, the covert insertion of sophisticated trojans is possible. All this while maintaining the original target logic, with minimal impact on power and performance. Furthermore, from our exploration, we conclude that it is too naive to only utilize placement resources as a metric for HT vulnerability. This work highlights that the HT insertion success is a complex function of the placement, routing resources, the position of the attacked nodes, and further design-specific characteristics. As a result, our framework goes beyond just an attack, we present the most advanced analysis tool to assess the vulnerability of HT insertion into finalized layouts.
-
-摘要: 集成电路(IC)的一个潜在漏洞是在制造过程中插入硬件特洛伊木马(HTS)。了解这种攻击的实用性可以导致采取适当的措施来减轻它。在这篇文章中，我们展示了一个实用的框架来分析最终版面的HT易感性。我们的框架代表了制造时间攻击，其中假设对手只能访问电路的布局表示。该框架利用工程变更单(ECO)流将特洛伊木马程序插入到支持Tapeout的布局中。利用逆向工程技术对被攻击的安全节点进行盲目搜索。在我们的实验研究中，我们使用了三个密码核(AES-128、SHA-256和RSA)和一个微控制器(RISC-V)作为目标。我们为我们的框架探索了触发器、有效负载和目标的96种组合。我们的发现表明，即使在高密度设计中，隐藏复杂的特洛伊木马也是可能的。所有这些都保持了原始的目标逻辑，对功率和性能的影响最小。此外，从我们的探索中，我们得出结论，只利用放置资源作为HT脆弱性的度量太幼稚了。这项工作突出了HT插入的成功是布局、布线资源、受攻击节点的位置以及进一步的设计特定特征的复杂函数。因此，我们的框架不仅仅是一次攻击，我们提供了最先进的分析工具来评估在最终布局中插入HT的脆弱性。
 
 
 

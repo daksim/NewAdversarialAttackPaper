@@ -1,9 +1,39 @@
 # Latest Adversarial Attack Papers
-**update at 2022-09-01 06:31:24**
+**update at 2022-09-02 06:31:21**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. FDB: Fraud Dataset Benchmark**
+## **1. Membership Inference Attacks by Exploiting Loss Trajectory**
+
+利用丢失轨迹的成员关系推理攻击 cs.CR
+
+Accepted by CCS 2022
+
+**SubmitDate**: 2022-08-31    [paper-pdf](http://arxiv.org/pdf/2208.14933v1)
+
+**Authors**: Yiyong Liu, Zhengyu Zhao, Michael Backes, Yang Zhang
+
+**Abstracts**: Machine learning models are vulnerable to membership inference attacks in which an adversary aims to predict whether or not a particular sample was contained in the target model's training dataset. Existing attack methods have commonly exploited the output information (mostly, losses) solely from the given target model. As a result, in practical scenarios where both the member and non-member samples yield similarly small losses, these methods are naturally unable to differentiate between them. To address this limitation, in this paper, we propose a new attack method, called \system, which can exploit the membership information from the whole training process of the target model for improving the attack performance. To mount the attack in the common black-box setting, we leverage knowledge distillation, and represent the membership information by the losses evaluated on a sequence of intermediate models at different distillation epochs, namely \emph{distilled loss trajectory}, together with the loss from the given target model. Experimental results over different datasets and model architectures demonstrate the great advantage of our attack in terms of different metrics. For example, on CINIC-10, our attack achieves at least 6$\times$ higher true-positive rate at a low false-positive rate of 0.1\% than existing methods. Further analysis demonstrates the general effectiveness of our attack in more strict scenarios.
+
+摘要: 机器学习模型容易受到成员推理攻击，在这种攻击中，对手的目标是预测特定样本是否包含在目标模型的训练数据集中。现有的攻击方法通常只利用给定目标模型的输出信息(主要是损失)。因此，在成员样本和非成员样本都产生类似小损失的实际情况下，这些方法自然无法区分它们。针对这一局限性，本文提出了一种新的攻击方法--系统攻击方法，该方法可以利用目标模型整个训练过程中的成员信息来提高攻击性能。为了在普通黑盒环境下发动攻击，我们利用知识蒸馏，将隶属度信息表示为一系列中间模型在不同蒸馏时期的损失，即\emph(蒸馏损失轨迹)，以及给定目标模型的损失。在不同的数据集和模型架构上的实验结果表明，该攻击在不同的度量方面具有很大的优势。例如，在CINIC-10上，我们的攻击在0.1的低误检率下获得了至少6倍以上的真阳性率。进一步的分析表明，我们的攻击在更严格的情况下总体上是有效的。
+
+
+
+## **2. Vulnerability of Distributed Inverter VAR Control in PV Distributed Energy System**
+
+分布式逆变器无功控制在光伏分布式能源系统中的脆弱性 eess.SY
+
+**SubmitDate**: 2022-08-31    [paper-pdf](http://arxiv.org/pdf/2208.14672v1)
+
+**Authors**: Bo Tu, Wen-Tai Li, Chau Yuen
+
+**Abstracts**: This work studies the potential vulnerability of distributed control schemes in smart grids. To this end, we consider an optimal inverter VAR control problem within a PV-integrated distribution network. First, we formulate the centralized optimization problem considering the reactive power priority and further reformulate the problem into a distributed framework by an accelerated proximal projection method. The inverter controller can curtail the PV output of each user by clamping the reactive power. To illustrate the studied distributed control scheme that may be vulnerable due to the two-hop information communication pattern, we present a heuristic attack injecting false data during the information exchange. Then we analyze the attack impact on the update procedure of critical parameters. A case study with an eight-node test feeder demonstrates that adversaries can violate the constraints of distributed control scheme without being detected through simple attacks such as the proposed attack.
+
+摘要: 本文研究了智能电网中分布式控制方案的潜在脆弱性。为此，我们考虑了光伏集成配电网中逆变器的最优无功控制问题。首先，对考虑无功优先的集中优化问题进行了形式化描述，并利用加速近邻投影法将问题转化为分布式框架。逆变器控制器可以通过钳位无功功率来减少每个用户的光伏输出。为了说明所研究的分布式控制方案可能由于两跳信息通信模式而易受攻击，我们提出了一种在信息交换过程中注入虚假数据的启发式攻击。然后分析了攻击对关键参数更新过程的影响。一个具有8个节点的测试馈线的案例研究表明，攻击者可以违反分布式控制方案的约束，而不会被简单的攻击(如提出的攻击)检测到。
+
+
+
+## **3. FDB: Fraud Dataset Benchmark**
 
 FDB：欺诈数据集基准 cs.LG
 
@@ -17,7 +47,7 @@ FDB：欺诈数据集基准 cs.LG
 
 
 
-## **2. A Black-Box Attack on Optical Character Recognition Systems**
+## **4. A Black-Box Attack on Optical Character Recognition Systems**
 
 一种针对光学字符识别系统的黑盒攻击 cs.CV
 
@@ -33,7 +63,7 @@ FDB：欺诈数据集基准 cs.LG
 
 
 
-## **3. Solving the Capsulation Attack against Backdoor-based Deep Neural Network Watermarks by Reversing Triggers**
+## **5. Solving the Capsulation Attack against Backdoor-based Deep Neural Network Watermarks by Reversing Triggers**
 
 利用反向触发器解决基于后门的深度神经网络水印的封装攻击 cs.CR
 
@@ -47,7 +77,7 @@ FDB：欺诈数据集基准 cs.LG
 
 
 
-## **4. Adversarial Scratches: Deployable Attacks to CNN Classifiers**
+## **6. Adversarial Scratches: Deployable Attacks to CNN Classifiers**
 
 对抗性抓痕：对CNN分类器的可部署攻击 cs.LG
 
@@ -63,7 +93,7 @@ This work is published at Pattern Recognition (Elsevier). This paper  stems from
 
 
 
-## **5. Adversarial Examples for Good: Adversarial Examples Guided Imbalanced Learning**
+## **7. Adversarial Examples for Good: Adversarial Examples Guided Imbalanced Learning**
 
 好的对抗性例子：指导不平衡学习的对抗性例子 cs.LG
 
@@ -79,7 +109,7 @@ Appeared in ICIP 2022
 
 
 
-## **6. Reducing Certified Regression to Certified Classification**
+## **8. Reducing Certified Regression to Certified Classification**
 
 将认证回归归结为认证分类 cs.LG
 
@@ -93,7 +123,7 @@ Appeared in ICIP 2022
 
 
 
-## **7. Reinforcement Learning for Hardware Security: Opportunities, Developments, and Challenges**
+## **9. Reinforcement Learning for Hardware Security: Opportunities, Developments, and Challenges**
 
 硬件安全强化学习：机遇、发展和挑战 cs.CR
 
@@ -109,7 +139,7 @@ To Appear in 2022 19th International SoC Conference (ISOCC 2022),  October 2022
 
 
 
-## **8. Towards Adversarial Purification using Denoising AutoEncoders**
+## **10. Towards Adversarial Purification using Denoising AutoEncoders**
 
 使用去噪自动编码器进行对抗性净化 cs.LG
 
@@ -125,7 +155,7 @@ Submitted to AAAI 2023
 
 
 
-## **9. Demystifying Arch-hints for Model Extraction: An Attack in Unified Memory System**
+## **11. Demystifying Arch-hints for Model Extraction: An Attack in Unified Memory System**
 
 揭开模型提取拱门的神秘面纱：统一存储系统中的攻击 cs.CR
 
@@ -139,7 +169,7 @@ Submitted to AAAI 2023
 
 
 
-## **10. Understanding the Limits of Poisoning Attacks in Episodic Reinforcement Learning**
+## **12. Understanding the Limits of Poisoning Attacks in Episodic Reinforcement Learning**
 
 在情景强化学习中理解中毒攻击的限度 cs.LG
 
@@ -155,7 +185,7 @@ Accepted at International Joint Conferences on Artificial  Intelligence (IJCAI) 
 
 
 
-## **11. HAT4RD: Hierarchical Adversarial Training for Rumor Detection on Social Media**
+## **13. HAT4RD: Hierarchical Adversarial Training for Rumor Detection on Social Media**
 
 HAT4RD：针对社交媒体谣言检测的分级对抗性训练 cs.CL
 
@@ -169,7 +199,7 @@ HAT4RD：针对社交媒体谣言检测的分级对抗性训练 cs.CL
 
 
 
-## **12. Towards Both Accurate and Robust Neural Networks without Extra Data**
+## **14. Towards Both Accurate and Robust Neural Networks without Extra Data**
 
 无额外数据的精确和稳健的神经网络 cs.CV
 
@@ -183,7 +213,7 @@ HAT4RD：针对社交媒体谣言检测的分级对抗性训练 cs.CL
 
 
 
-## **13. Tricking the Hashing Trick: A Tight Lower Bound on the Robustness of CountSketch to Adaptive Inputs**
+## **15. Tricking the Hashing Trick: A Tight Lower Bound on the Robustness of CountSketch to Adaptive Inputs**
 
 欺骗散列技巧：CountSketch对自适应输入的稳健性的紧致下界 cs.DS
 
@@ -197,7 +227,7 @@ HAT4RD：针对社交媒体谣言检测的分级对抗性训练 cs.CL
 
 
 
-## **14. Categorical composable cryptography: extended version**
+## **16. Categorical composable cryptography: extended version**
 
 范畴可合成密码学：扩展版本 cs.CR
 
@@ -213,7 +243,7 @@ Extended version of arXiv:2105.05949 which appeared in FoSSaCS 2022
 
 
 
-## **15. Categorical composable cryptography**
+## **17. Categorical composable cryptography**
 
 范畴可合成密码学 cs.CR
 
@@ -229,7 +259,7 @@ Updated to match the proceedings version
 
 
 
-## **16. Self-Supervised Adversarial Example Detection by Disentangled Representation**
+## **18. Self-Supervised Adversarial Example Detection by Disentangled Representation**
 
 基于解缠表示的自监督敌意范例检测 cs.CV
 
@@ -245,7 +275,7 @@ to appear in TrustCom 2022
 
 
 
-## **17. Cross-domain Cross-architecture Black-box Attacks on Fine-tuned Models with Transferred Evolutionary Strategies**
+## **19. Cross-domain Cross-architecture Black-box Attacks on Fine-tuned Models with Transferred Evolutionary Strategies**
 
 基于转移进化策略的精调模型跨域跨体系结构黑盒攻击 cs.LG
 
@@ -261,7 +291,7 @@ To appear in CIKM 2022
 
 
 
-## **18. Cyberattacks on Energy Infrastructures: Modern War Weapons**
+## **20. Cyberattacks on Energy Infrastructures: Modern War Weapons**
 
 对能源基础设施的网络攻击：现代战争武器 cs.CR
 
@@ -275,7 +305,7 @@ To appear in CIKM 2022
 
 
 
-## **19. Improved and Interpretable Defense to Transferred Adversarial Examples by Jacobian Norm with Selective Input Gradient Regularization**
+## **21. Improved and Interpretable Defense to Transferred Adversarial Examples by Jacobian Norm with Selective Input Gradient Regularization**
 
 基于选择输入梯度正则化的雅可比范数对转移对抗性实例的改进和可解释防御 cs.LG
 
@@ -291,7 +321,7 @@ Under review
 
 
 
-## **20. Covariate Balancing Methods for Randomized Controlled Trials Are Not Adversarially Robust**
+## **22. Covariate Balancing Methods for Randomized Controlled Trials Are Not Adversarially Robust**
 
 随机对照试验的协变量平衡方法不是逆稳健的 econ.EM
 
@@ -307,7 +337,7 @@ Under review
 
 
 
-## **21. Overcoming Data Availability Attacks in Blockchain Systems: Short Code-Length LDPC Code Design for Coded Merkle Tree**
+## **23. Overcoming Data Availability Attacks in Blockchain Systems: Short Code-Length LDPC Code Design for Coded Merkle Tree**
 
 克服区块链系统中的数据可用性攻击：基于编码Merkle树的短码长LDPC码设计 cs.IT
 
@@ -323,7 +353,7 @@ Under review
 
 
 
-## **22. Cooperative Distributed State Estimation: Resilient Topologies against Smart Spoofers**
+## **24. Cooperative Distributed State Estimation: Resilient Topologies against Smart Spoofers**
 
 协作分布式状态估计：针对智能欺骗器的弹性拓扑 cs.CR
 
@@ -337,7 +367,7 @@ Under review
 
 
 
-## **23. SA: Sliding attack for synthetic speech detection with resistance to clipping and self-splicing**
+## **25. SA: Sliding attack for synthetic speech detection with resistance to clipping and self-splicing**
 
 SA：抗剪裁和自拼接的合成语音检测滑动攻击 cs.SD
 
@@ -353,7 +383,7 @@ SA：抗剪裁和自拼接的合成语音检测滑动攻击 cs.SD
 
 
 
-## **24. Adversarial Robustness for Tabular Data through Cost and Utility Awareness**
+## **26. Adversarial Robustness for Tabular Data through Cost and Utility Awareness**
 
 通过成本和效用意识实现表格数据的对抗稳健性 cs.LG
 
@@ -369,7 +399,7 @@ SA：抗剪裁和自拼接的合成语音检测滑动攻击 cs.SD
 
 
 
-## **25. TrojViT: Trojan Insertion in Vision Transformers**
+## **27. TrojViT: Trojan Insertion in Vision Transformers**
 
 TrojViT：视觉变形金刚中的特洛伊木马插入 cs.LG
 
@@ -385,7 +415,7 @@ TrojViT：视觉变形金刚中的特洛伊木马插入 cs.LG
 
 
 
-## **26. SoK: Decentralized Finance (DeFi) Incidents**
+## **28. SoK: Decentralized Finance (DeFi) Incidents**
 
 SOK：分散金融(Defi)事件 cs.CR
 
@@ -399,7 +429,7 @@ SOK：分散金融(Defi)事件 cs.CR
 
 
 
-## **27. Overparameterized (robust) models from computational constraints**
+## **29. Overparameterized (robust) models from computational constraints**
 
 计算约束条件下的超参数(稳健)模型 cs.LG
 
@@ -413,7 +443,7 @@ SOK：分散金融(Defi)事件 cs.CR
 
 
 
-## **28. Bitcoin's Latency--Security Analysis Made Simple**
+## **30. Bitcoin's Latency--Security Analysis Made Simple**
 
 比特币的潜伏期--安全分析变得简单 cs.CR
 
@@ -427,7 +457,7 @@ SOK：分散金融(Defi)事件 cs.CR
 
 
 
-## **29. Network-Level Adversaries in Federated Learning**
+## **31. Network-Level Adversaries in Federated Learning**
 
 联合学习中的网络级对手 cs.CR
 
@@ -443,7 +473,7 @@ SOK：分散金融(Defi)事件 cs.CR
 
 
 
-## **30. Adversarial Relighting Against Face Recognition**
+## **32. Adversarial Relighting Against Face Recognition**
 
 对抗人脸识别的对抗性重发 cs.CV
 
@@ -457,7 +487,7 @@ SOK：分散金融(Defi)事件 cs.CR
 
 
 
-## **31. ATTRITION: Attacking Static Hardware Trojan Detection Techniques Using Reinforcement Learning**
+## **33. ATTRITION: Attacking Static Hardware Trojan Detection Techniques Using Reinforcement Learning**
 
 消耗性：基于强化学习的攻击静态硬件木马检测技术 cs.CR
 
@@ -473,7 +503,7 @@ To Appear in 2022 ACM SIGSAC Conference on Computer and  Communications Security
 
 
 
-## **32. SoftHebb: Bayesian Inference in Unsupervised Hebbian Soft Winner-Take-All Networks**
+## **34. SoftHebb: Bayesian Inference in Unsupervised Hebbian Soft Winner-Take-All Networks**
 
 SoftHebb：无监督Hebbian软赢家通吃网络中的贝叶斯推理 cs.LG
 
@@ -487,7 +517,7 @@ SoftHebb：无监督Hebbian软赢家通吃网络中的贝叶斯推理 cs.LG
 
 
 
-## **33. What Does the Gradient Tell When Attacking the Graph Structure**
+## **35. What Does the Gradient Tell When Attacking the Graph Structure**
 
 当攻击图形结构时，渐变说明了什么 cs.LG
 
@@ -501,7 +531,7 @@ SoftHebb：无监督Hebbian软赢家通吃网络中的贝叶斯推理 cs.LG
 
 
 
-## **34. Robust Prototypical Few-Shot Organ Segmentation with Regularized Neural-ODEs**
+## **36. Robust Prototypical Few-Shot Organ Segmentation with Regularized Neural-ODEs**
 
 基于正则化神经节点的典型少发器官分割 cs.CV
 
@@ -515,7 +545,7 @@ SoftHebb：无监督Hebbian软赢家通吃网络中的贝叶斯推理 cs.LG
 
 
 
-## **35. FuncFooler: A Practical Black-box Attack Against Learning-based Binary Code Similarity Detection Methods**
+## **37. FuncFooler: A Practical Black-box Attack Against Learning-based Binary Code Similarity Detection Methods**
 
 FuncFooler：一种针对基于学习的二进制代码相似性检测方法的实用黑盒攻击 cs.CR
 
@@ -531,7 +561,7 @@ FuncFooler：一种针对基于学习的二进制代码相似性检测方法的�
 
 
 
-## **36. SNAP: Efficient Extraction of Private Properties with Poisoning**
+## **38. SNAP: Efficient Extraction of Private Properties with Poisoning**
 
 Snap：高效提取带有毒物的私有财产 cs.LG
 
@@ -547,7 +577,7 @@ Snap：高效提取带有毒物的私有财产 cs.LG
 
 
 
-## **37. Semantic Preserving Adversarial Attack Generation with Autoencoder and Genetic Algorithm**
+## **39. Semantic Preserving Adversarial Attack Generation with Autoencoder and Genetic Algorithm**
 
 基于自动编码和遗传算法的语义保持敌意攻击生成 cs.LG
 
@@ -563,7 +593,7 @@ Snap：高效提取带有毒物的私有财产 cs.LG
 
 
 
-## **38. Passive Triangulation Attack on ORide**
+## **40. Passive Triangulation Attack on ORide**
 
 ORIDE上的被动三角剖分攻击 cs.CR
 
@@ -577,7 +607,7 @@ ORIDE上的被动三角剖分攻击 cs.CR
 
 
 
-## **39. Automatic Mapping of Unstructured Cyber Threat Intelligence: An Experimental Study**
+## **41. Automatic Mapping of Unstructured Cyber Threat Intelligence: An Experimental Study**
 
 非结构化网络威胁情报自动测绘的实验研究 cs.CR
 
@@ -593,7 +623,7 @@ ORIDE上的被动三角剖分攻击 cs.CR
 
 
 
-## **40. ECG-ATK-GAN: Robustness against Adversarial Attacks on ECGs using Conditional Generative Adversarial Networks**
+## **42. ECG-ATK-GAN: Robustness against Adversarial Attacks on ECGs using Conditional Generative Adversarial Networks**
 
 ECG-ATK-GAN：使用条件生成对抗网络对ECG的对抗攻击的稳健性 eess.SP
 
@@ -609,7 +639,7 @@ Accepted to MICCAI2022 Applications of Medical AI (AMAI) Workshop
 
 
 
-## **41. A Perturbation Resistant Transformation and Classification System for Deep Neural Networks**
+## **43. A Perturbation Resistant Transformation and Classification System for Deep Neural Networks**
 
 一种抗扰动的深度神经网络变换与分类系统 cs.CV
 
@@ -625,7 +655,7 @@ Accepted to MICCAI2022 Applications of Medical AI (AMAI) Workshop
 
 
 
-## **42. A New Kind of Adversarial Example**
+## **44. A New Kind of Adversarial Example**
 
 一种新的对抗性例证 cs.CV
 
@@ -639,7 +669,7 @@ Accepted to MICCAI2022 Applications of Medical AI (AMAI) Workshop
 
 
 
-## **43. Attacking Neural Binary Function Detection**
+## **45. Attacking Neural Binary Function Detection**
 
 攻击神经二进制函数检测 cs.CR
 
@@ -655,7 +685,7 @@ Accepted to MICCAI2022 Applications of Medical AI (AMAI) Workshop
 
 
 
-## **44. Adversarial Driving: Attacking End-to-End Autonomous Driving**
+## **46. Adversarial Driving: Attacking End-to-End Autonomous Driving**
 
 对抗性驾驶：攻击型端到端自动驾驶 cs.CV
 
@@ -671,7 +701,7 @@ Accepted to MICCAI2022 Applications of Medical AI (AMAI) Workshop
 
 
 
-## **45. Unrestricted Black-box Adversarial Attack Using GAN with Limited Queries**
+## **47. Unrestricted Black-box Adversarial Attack Using GAN with Limited Queries**
 
 基于有限查询GAN的无限制黑盒对抗性攻击 cs.CV
 
@@ -687,7 +717,7 @@ Accepted to the ECCV 2022 Workshop on Adversarial Robustness in the  Real World
 
 
 
-## **46. Robustness of the Tangle 2.0 Consensus**
+## **48. Robustness of the Tangle 2.0 Consensus**
 
 Tangle 2.0共识的健壮性 cs.DC
 
@@ -701,7 +731,7 @@ Tangle 2.0共识的健壮性 cs.DC
 
 
 
-## **47. LPF-Defense: 3D Adversarial Defense based on Frequency Analysis**
+## **49. LPF-Defense: 3D Adversarial Defense based on Frequency Analysis**
 
 LPF-Defense：基于频率分析的三维对抗性防御 cs.CV
 
@@ -717,7 +747,7 @@ LPF-Defense：基于频率分析的三维对抗性防御 cs.CV
 
 
 
-## **48. Trace and Detect Adversarial Attacks on CNNs using Feature Response Maps**
+## **50. Trace and Detect Adversarial Attacks on CNNs using Feature Response Maps**
 
 使用特征响应映射跟踪和检测对CNN的敌意攻击 cs.CV
 
@@ -730,38 +760,6 @@ LPF-Defense：基于频率分析的三维对抗性防御 cs.CV
 **Abstracts**: The existence of adversarial attacks on convolutional neural networks (CNN) questions the fitness of such models for serious applications. The attacks manipulate an input image such that misclassification is evoked while still looking normal to a human observer -- they are thus not easily detectable. In a different context, backpropagated activations of CNN hidden layers -- "feature responses" to a given input -- have been helpful to visualize for a human "debugger" what the CNN "looks at" while computing its output. In this work, we propose a novel detection method for adversarial examples to prevent attacks. We do so by tracking adversarial perturbations in feature responses, allowing for automatic detection using average local spatial entropy. The method does not alter the original network architecture and is fully human-interpretable. Experiments confirm the validity of our approach for state-of-the-art attacks on large-scale models trained on ImageNet.
 
 摘要: 对卷积神经网络(CNN)的敌意攻击的存在质疑了这种模型在严肃应用中的适用性。这些攻击操作输入图像，从而在人类观察者看来仍然正常的情况下引发错误分类--因此它们不容易被检测到。在另一种情况下，对CNN隐藏层的反向传播激活--对给定输入的“特征响应”--有助于人类“调试者”在计算其输出时可视化CNN“所看到的”。在这项工作中，我们提出了一种新的对抗性实例检测方法来防止攻击。我们通过跟踪特征响应中的对抗性扰动来实现这一点，允许使用平均局部空间熵进行自动检测。该方法不改变原有的网络体系结构，完全是人类可理解的。实验证实了该方法对基于ImageNet训练的大规模模型进行最先进攻击的有效性。
-
-
-
-## **49. Towards an Awareness of Time Series Anomaly Detection Models' Adversarial Vulnerability**
-
-认识时间序列异常检测模型的对抗性漏洞 cs.LG
-
-Part of Proceedings of the 31st ACM International Conference on  Information and Knowledge Management (CIKM '22)
-
-**SubmitDate**: 2022-08-24    [paper-pdf](http://arxiv.org/pdf/2208.11264v1)
-
-**Authors**: Shahroz Tariq, Binh M. Le, Simon S. Woo
-
-**Abstracts**: Time series anomaly detection is extensively studied in statistics, economics, and computer science. Over the years, numerous methods have been proposed for time series anomaly detection using deep learning-based methods. Many of these methods demonstrate state-of-the-art performance on benchmark datasets, giving the false impression that these systems are robust and deployable in many practical and industrial real-world scenarios. In this paper, we demonstrate that the performance of state-of-the-art anomaly detection methods is degraded substantially by adding only small adversarial perturbations to the sensor data. We use different scoring metrics such as prediction errors, anomaly, and classification scores over several public and private datasets ranging from aerospace applications, server machines, to cyber-physical systems in power plants. Under well-known adversarial attacks from Fast Gradient Sign Method (FGSM) and Projected Gradient Descent (PGD) methods, we demonstrate that state-of-the-art deep neural networks (DNNs) and graph neural networks (GNNs) methods, which claim to be robust against anomalies and have been possibly integrated in real-life systems, have their performance drop to as low as 0%. To the best of our understanding, we demonstrate, for the first time, the vulnerabilities of anomaly detection systems against adversarial attacks. The overarching goal of this research is to raise awareness towards the adversarial vulnerabilities of time series anomaly detectors.
-
-摘要: 时间序列异常检测在统计学、经济学和计算机科学中都有广泛的研究。多年来，已经提出了许多基于深度学习的时间序列异常检测方法。其中许多方法在基准数据集上展示了最先进的性能，给人一种错误的印象，即这些系统在许多实际和工业真实世界的场景中都是健壮的和可部署的。在这篇文章中，我们证明了最新的异常检测方法的性能在很大程度上由于只向传感器数据添加小的对抗性扰动而降低。我们在从航空航天应用程序、服务器机器到发电厂的网络物理系统等多个公共和私有数据集上使用不同的评分指标，例如预测误差、异常和分类分数。在已知的快速梯度符号方法(FGSM)和投影梯度下降(PGD)方法的敌意攻击下，我们证明了最新的深度神经网络(DNNS)和图神经网络(GNNS)方法的性能下降到了0%，这两种方法声称对异常具有健壮性，并可能集成到现实系统中。据我们所知，我们第一次展示了异常检测系统对对手攻击的脆弱性。这项研究的首要目标是提高人们对时间序列异常检测器的对抗性脆弱性的认识。
-
-
-
-## **50. ObfuNAS: A Neural Architecture Search-based DNN Obfuscation Approach**
-
-ObfuNAS：一种基于神经结构搜索的DNN混淆方法 cs.CR
-
-9 pages
-
-**SubmitDate**: 2022-08-23    [paper-pdf](http://arxiv.org/pdf/2208.08569v2)
-
-**Authors**: Tong Zhou, Shaolei Ren, Xiaolin Xu
-
-**Abstracts**: Malicious architecture extraction has been emerging as a crucial concern for deep neural network (DNN) security. As a defense, architecture obfuscation is proposed to remap the victim DNN to a different architecture. Nonetheless, we observe that, with only extracting an obfuscated DNN architecture, the adversary can still retrain a substitute model with high performance (e.g., accuracy), rendering the obfuscation techniques ineffective. To mitigate this under-explored vulnerability, we propose ObfuNAS, which converts the DNN architecture obfuscation into a neural architecture search (NAS) problem. Using a combination of function-preserving obfuscation strategies, ObfuNAS ensures that the obfuscated DNN architecture can only achieve lower accuracy than the victim. We validate the performance of ObfuNAS with open-source architecture datasets like NAS-Bench-101 and NAS-Bench-301. The experimental results demonstrate that ObfuNAS can successfully find the optimal mask for a victim model within a given FLOPs constraint, leading up to 2.6% inference accuracy degradation for attackers with only 0.14x FLOPs overhead. The code is available at: https://github.com/Tongzhou0101/ObfuNAS.
-
-摘要: 恶意体系结构提取已经成为深度神经网络(DNN)安全的一个重要问题。作为防御，体系结构混淆被提出将受害者DNN重新映射到不同的体系结构。尽管如此，我们观察到，只要提取一个混淆的DNN体系结构，攻击者仍然可以高性能(例如，准确性)重新训练替代模型，使得混淆技术无效。为了缓解这一未被充分挖掘的漏洞，我们提出了ObfuNAS，它将DNN体系结构的混淆转化为神经体系结构搜索(NAS)问题。ObfuNAS结合了函数保留混淆策略，确保了混淆后的DNN架构只能达到比受害者更低的准确率。我们使用NAS-BENCH-101和NAS-BENCH-301等开源架构数据集验证了ObfuNAS的性能。实验结果表明，ObfuNAS能够在给定的FLOPS约束下成功地找到受害者模型的最优掩码，使得仅需0.14倍FLOPS开销的攻击者的推理准确率降低2.6%。代码可从以下网址获得：https://github.com/Tongzhou0101/ObfuNAS.
 
 
 

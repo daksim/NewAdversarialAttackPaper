@@ -1,9 +1,53 @@
 # Latest Adversarial Attack Papers
-**update at 2022-09-02 06:31:21**
+**update at 2022-09-03 06:31:23**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. Membership Inference Attacks by Exploiting Loss Trajectory**
+## **1. Adversarial for Social Privacy: A Poisoning Strategy to Degrade User Identity Linkage**
+
+社交隐私的对抗性：降低用户身份链接的中毒策略 cs.SI
+
+**SubmitDate**: 2022-09-01    [paper-pdf](http://arxiv.org/pdf/2209.00269v1)
+
+**Authors**: Jiangli Shao, Yongqing Wang, Boshen Shi, Hao Gao, Huawei Shen, Xueqi Cheng
+
+**Abstracts**: Privacy issues on social networks have been extensively discussed in recent years. The user identity linkage (UIL) task, aiming at finding corresponding users across different social networks, would be a threat to privacy if unethically applied. The sensitive user information might be detected through connected identities. A promising and novel solution to this issue is to design an adversarial strategy to degrade the matching performance of UIL models. However, most existing adversarial attacks on graphs are designed for models working in a single network, while UIL is a cross-network learning task. Meanwhile, privacy protection against UIL works unilaterally in real-world scenarios, i.e., the service provider can only add perturbations to its own network to protect its users from being linked. To tackle these challenges, this paper proposes a novel adversarial attack strategy that poisons one target network to prevent its nodes from being linked to other networks by UIL algorithms. Specifically, we reformalize the UIL problem in the perspective of kernelized topology consistency and convert the attack objective to maximizing the structural changes within the target network before and after attacks. A novel graph kernel is then defined with Earth mover's distance (EMD) on the edge-embedding space. In terms of efficiency, a fast attack strategy is proposed by greedy searching and replacing EMD with its lower bound. Results on three real-world datasets indicate that the proposed attacks can best fool a wide range of UIL models and reach a balance between attack effectiveness and imperceptibility.
+
+摘要: 近年来，社交网络上的隐私问题得到了广泛的讨论。用户身份链接(UIL)任务旨在跨不同的社交网络找到对应的用户，如果应用不道德，将对隐私构成威胁。敏感的用户信息可以通过连接的身份被检测到。解决这一问题的一个有前途的新方案是设计一种对抗性策略来降低UIL模型的匹配性能。然而，现有的大多数对抗性图攻击都是针对工作在单一网络中的模型而设计的，而UIL是一个跨网络的学习任务。同时，针对UIL的隐私保护在现实世界场景中单方面起作用，即服务提供商只能在其自己的网络中添加扰动，以保护其用户不被链接。为了应对这些挑战，本文提出了一种新颖的对抗性攻击策略，通过毒化一个目标网络来防止其节点通过UIL算法链接到其他网络。具体地说，我们从核化拓扑一致性的角度对UIL问题进行了改造，将攻击目标转化为最大化攻击前后目标网络内部的结构变化。然后在边嵌入空间上定义了一种新的图核：地球移动距离(EMD)。在效率方面，提出了一种贪婪搜索并用EMD下界代替EMD的快速攻击策略。在三个真实数据集上的结果表明，所提出的攻击最好地欺骗了广泛的UIL模型，并在攻击有效性和不可感知性之间取得了平衡。
+
+
+
+## **2. FDB: Fraud Dataset Benchmark**
+
+FDB：欺诈数据集基准 cs.LG
+
+**SubmitDate**: 2022-08-31    [paper-pdf](http://arxiv.org/pdf/2208.14417v2)
+
+**Authors**: Prince Grover, Zheng Li, Jianbo Liu, Jakub Zablocki, Hao Zhou, Julia Xu, Anqi Cheng
+
+**Abstracts**: Standardized datasets and benchmarks have spurred innovations in computer vision, natural language processing, multi-modal and tabular settings. We note that, as compared to other well researched fields fraud detection has numerous differences. The differences include a high class imbalance, diverse feature types, frequently changing fraud patterns, and adversarial nature of the problem. Due to these differences, the modeling approaches that are designed for other classification tasks may not work well for the fraud detection. We introduce Fraud Dataset Benchmark (FDB), a compilation of publicly available datasets catered to fraud detection. FDB comprises variety of fraud related tasks, ranging from identifying fraudulent card-not-present transactions, detecting bot attacks, classifying malicious URLs, predicting risk of loan to content moderation. The Python based library from FDB provides consistent API for data loading with standardized training and testing splits. For reference, we also provide baseline evaluations of different modeling approaches on FDB. Considering the increasing popularity of Automated Machine Learning (AutoML) for various research and business problems, we used AutoML frameworks for our baseline evaluations. For fraud prevention, the organizations that operate with limited resources and lack ML expertise often hire a team of investigators, use blocklists and manual rules, all of which are inefficient and do not scale well. Such organizations can benefit from AutoML solutions that are easy to deploy in production and pass the bar of fraud prevention requirements. We hope that FDB helps in the development of customized fraud detection techniques catered to different fraud modus operandi (MOs) as well as in the improvement of AutoML systems that can work well for all datasets in the benchmark.
+
+摘要: 标准化的数据集和基准促进了计算机视觉、自然语言处理、多模式和表格设置方面的创新。我们注意到，与其他经过充分研究的领域相比，欺诈检测有许多不同之处。不同之处包括高级别不平衡、多样化的特征类型、频繁变化的欺诈模式以及问题的对抗性。由于这些差异，为其他分类任务设计的建模方法可能不能很好地用于欺诈检测。我们介绍了欺诈数据集基准(FDB)，这是一种面向欺诈检测的公开可用的数据集的汇编。FDB包括各种与欺诈相关的任务，从识别欺诈性的卡不存在交易、检测机器人攻击、对恶意URL进行分类、预测贷款风险到内容审核。FDB的基于Python的库通过标准化的训练和测试拆分为数据加载提供了一致的API。作为参考，我们还提供了对FDB的不同建模方法的基线评估。考虑到自动化机器学习(AutoML)在各种研究和商业问题上越来越受欢迎，我们使用AutoML框架进行基线评估。为了防止欺诈，那些资源有限、缺乏ML专业知识的组织往往会雇佣一支调查团队，使用阻止名单和手动规则，这些都效率低下，伸缩性不好。这样的组织可以受益于AutoML解决方案，这些解决方案易于在生产中部署，并通过了防欺诈要求的门槛。我们希望FDB有助于开发迎合不同欺诈手法(MO)的定制欺诈检测技术，并有助于改进AutoML系统，使其能够很好地适用于基准中的所有数据集。
+
+
+
+## **3. Wiggle: Physical Challenge-Response Verification of Vehicle Platooning**
+
+摆动：车辆排队的物理挑战-响应验证 cs.CR
+
+10 pages, 13 figures
+
+**SubmitDate**: 2022-08-31    [paper-pdf](http://arxiv.org/pdf/2209.00080v1)
+
+**Authors**: Connor Dickey, Christopher Smith, Quentin Johnson, Jingcheng Li, Ziqi Xu, Loukas Lazos, Ming Li
+
+**Abstracts**: Autonomous vehicle platooning promises many benefits such as fuel efficiency, road safety, reduced traffic congestion, and passenger comfort. Platooning vehicles travel in a single file, in close distance, and at the same velocity. The platoon formation is autonomously maintained by a Cooperative Adaptive Cruise Control (CACC) system which relies on sensory data and vehicle-to-vehicle (V2V) communications. In fact, V2V messages play a critical role in shortening the platooning distance while maintaining safety. Whereas V2V message integrity and source authentication can be verified via cryptographic methods, establishing the truthfulness of the message contents is a much harder task.   This work establishes a physical access control mechanism to restrict V2V messages to platooning members. Specifically, we aim at tying the digital identity of a candidate requesting to join a platoon to its physical trajectory relative to the platoon. We propose the {\em Wiggle} protocol that employs a physical challenge-response exchange to prove that a candidate requesting to be admitted into a platoon actually follows it. The protocol name is inspired by the random longitudinal movements that the candidate is challenged to execute. {\em Wiggle} prevents any remote adversary from joining the platoon and injecting fake CACC messages. Compared to prior works, {\em Wiggle} is resistant to pre-recording attacks and can verify that the candidate is directly behind the verifier at the same lane.
+
+摘要: 自动驾驶汽车排成一排承诺了许多好处，如燃油效率、道路安全、减少交通拥堵和乘客舒适度。排成一排的车辆排成一列，近距离，以相同的速度行进。编队由协作自适应巡航控制(CACC)系统自主维护，该系统依赖于传感器数据和车对车(V2V)通信。事实上，V2V消息在缩短排兵距离的同时保持安全起着至关重要的作用。虽然V2V消息完整性和来源验证可以通过加密方法进行验证，但建立消息内容的真实性则是一项困难得多的任务。这项工作建立了一种物理访问控制机制，以限制V2V消息发送给排成一排的成员。具体地说，我们的目标是将申请加入排的候选人的数字身份与其相对于排的物理轨迹捆绑在一起。我们提出了{\em Wigger}协议，该协议使用物理挑战-响应交换来证明请求进入排的候选人实际上遵循了该协议。协议名称的灵感来自候选人被挑战执行的随机纵向运动。{\em Wigger}阻止任何远程对手加入排并注入虚假的CACC消息。与以往的工作相比，{\em Wigger}能够抵抗预录攻击，并可以验证候选人是否在同一车道上的验证器正后方。
+
+
+
+## **4. Membership Inference Attacks by Exploiting Loss Trajectory**
 
 利用丢失轨迹的成员关系推理攻击 cs.CR
 
@@ -19,7 +63,23 @@ Accepted by CCS 2022
 
 
 
-## **2. Vulnerability of Distributed Inverter VAR Control in PV Distributed Energy System**
+## **5. Be Your Own Neighborhood: Detecting Adversarial Example by the Neighborhood Relations Built on Self-Supervised Learning**
+
+做自己的邻里：通过建立在自我监督学习基础上的邻里关系发现敌对榜样 cs.LG
+
+co-first author
+
+**SubmitDate**: 2022-08-31    [paper-pdf](http://arxiv.org/pdf/2209.00005v1)
+
+**Authors**: Zhiyuan He, Yijun Yang, Pin-Yu Chen, Qiang Xu, Tsung-Yi Ho
+
+**Abstracts**: Deep Neural Networks (DNNs) have achieved excellent performance in various fields. However, DNNs' vulnerability to Adversarial Examples (AE) hinders their deployments to safety-critical applications. This paper presents a novel AE detection framework, named BEYOND, for trustworthy predictions. BEYOND performs the detection by distinguishing the AE's abnormal relation with its augmented versions, i.e. neighbors, from two prospects: representation similarity and label consistency. An off-the-shelf Self-Supervised Learning (SSL) model is used to extract the representation and predict the label for its highly informative representation capacity compared to supervised learning models. For clean samples, their representations and predictions are closely consistent with their neighbors, whereas those of AEs differ greatly. Furthermore, we explain this observation and show that by leveraging this discrepancy BEYOND can effectively detect AEs. We develop a rigorous justification for the effectiveness of BEYOND. Furthermore, as a plug-and-play model, BEYOND can easily cooperate with the Adversarial Trained Classifier (ATC), achieving the state-of-the-art (SOTA) robustness accuracy. Experimental results show that BEYOND outperforms baselines by a large margin, especially under adaptive attacks. Empowered by the robust relation net built on SSL, we found that BEYOND outperforms baselines in terms of both detection ability and speed. Our code will be publicly available.
+
+摘要: 深度神经网络(DNN)在各个领域都取得了优异的性能。然而，DNN对敌意示例(AE)的脆弱性阻碍了它们在安全关键应用中的部署。本文提出了一种用于可信预测的新型声发射检测框架Beyond。Beyond通过从表示相似性和标签一致性两个方面区分AE与其扩展版本(即邻居)的异常关系来执行检测。与监督学习模型相比，现有的自监督学习模型被用来提取表示和预测标签，因为它具有高度信息量的表示能力。对于清洁样品，它们的表述和预测与它们的邻居非常一致，而AEs的表述和预测差别很大。此外，我们解释了这一观察结果，并表明通过利用这种差异，Beyond可以有效地检测到AEs。我们为Beyond的有效性制定了严格的理由。此外，作为一种即插即用的模型，Beyond可以很容易地与对手训练分类器(ATC)合作，实现最先进的(SOTA)稳健性精度。实验结果表明，Beyond的性能明显优于Baseline，特别是在自适应攻击下。在建立在SSL上的健壮关系网络的支持下，我们发现Beyond在检测能力和速度方面都优于Baseline。我们的代码将公开可用。
+
+
+
+## **6. Vulnerability of Distributed Inverter VAR Control in PV Distributed Energy System**
 
 分布式逆变器无功控制在光伏分布式能源系统中的脆弱性 eess.SY
 
@@ -33,21 +93,7 @@ Accepted by CCS 2022
 
 
 
-## **3. FDB: Fraud Dataset Benchmark**
-
-FDB：欺诈数据集基准 cs.LG
-
-**SubmitDate**: 2022-08-30    [paper-pdf](http://arxiv.org/pdf/2208.14417v1)
-
-**Authors**: Prince Grover, Zheng Li, Jianbo Liu, Jakub Zablocki, Hao Zhou, Julia Xu, Anqi Cheng
-
-**Abstracts**: Standardized datasets and benchmarks have spurred innovations in computer vision, natural language processing, multi-modal and tabular settings. We note that, as compared to other well researched fields fraud detection has numerous differences. The differences include a high class imbalance, diverse feature types, frequently changing fraud patterns, and adversarial nature of the problem. Due to these differences, the modeling approaches that are designed for other classification tasks may not work well for the fraud detection. We introduce Fraud Dataset Benchmark (FDB), a compilation of publicly available datasets catered to fraud detection. FDB comprises variety of fraud related tasks, ranging from identifying fraudulent card-not-present transactions, detecting bot attacks, classifying malicious URLs, predicting risk of loan to content moderation. The Python based library from FDB provides consistent API for data loading with standardized training and testing splits. For reference, we also provide baseline evaluations of different modeling approaches on FDB. Considering the increasing popularity of Automated Machine Learning (AutoML) for various research and business problems, we used AutoML frameworks for our baseline evaluations. For fraud prevention, the organizations that operate with limited resources and lack ML expertise often hire a team of investigators, use blocklists and manual rules, all of which are inefficient and do not scale well. Such organizations can benefit from AutoML solutions that are easy to deploy in production and pass the bar of fraud prevention requirements. We hope that FDB helps in the development of customized fraud detection techniques catered to different fraud modus operandi (MOs) as well as in the improvement of AutoML systems that can work well for all datasets in the benchmark.
-
-摘要: 标准化的数据集和基准促进了计算机视觉、自然语言处理、多模式和表格设置方面的创新。我们注意到，与其他经过充分研究的领域相比，欺诈检测有许多不同之处。不同之处包括高级别不平衡、多样化的特征类型、频繁变化的欺诈模式以及问题的对抗性。由于这些差异，为其他分类任务设计的建模方法可能不能很好地用于欺诈检测。我们介绍了欺诈数据集基准(FDB)，这是一种面向欺诈检测的公开可用的数据集的汇编。FDB包括各种与欺诈相关的任务，从识别欺诈性的卡不存在交易、检测机器人攻击、对恶意URL进行分类、预测贷款风险到内容审核。FDB的基于Python的库通过标准化的训练和测试拆分为数据加载提供了一致的API。作为参考，我们还提供了对FDB的不同建模方法的基线评估。考虑到自动化机器学习(AutoML)在各种研究和商业问题上越来越受欢迎，我们使用AutoML框架进行基线评估。为了防止欺诈，那些资源有限、缺乏ML专业知识的组织往往会雇佣一支调查团队，使用阻止名单和手动规则，这些都效率低下，伸缩性不好。这样的组织可以受益于AutoML解决方案，这些解决方案易于在生产中部署，并通过了防欺诈要求的门槛。我们希望FDB有助于开发迎合不同欺诈手法(MO)的定制欺诈检测技术，并有助于改进AutoML系统，使其能够很好地适用于基准中的所有数据集。
-
-
-
-## **4. A Black-Box Attack on Optical Character Recognition Systems**
+## **7. A Black-Box Attack on Optical Character Recognition Systems**
 
 一种针对光学字符识别系统的黑盒攻击 cs.CV
 
@@ -63,7 +109,7 @@ FDB：欺诈数据集基准 cs.LG
 
 
 
-## **5. Solving the Capsulation Attack against Backdoor-based Deep Neural Network Watermarks by Reversing Triggers**
+## **8. Solving the Capsulation Attack against Backdoor-based Deep Neural Network Watermarks by Reversing Triggers**
 
 利用反向触发器解决基于后门的深度神经网络水印的封装攻击 cs.CR
 
@@ -77,7 +123,7 @@ FDB：欺诈数据集基准 cs.LG
 
 
 
-## **6. Adversarial Scratches: Deployable Attacks to CNN Classifiers**
+## **9. Adversarial Scratches: Deployable Attacks to CNN Classifiers**
 
 对抗性抓痕：对CNN分类器的可部署攻击 cs.LG
 
@@ -93,7 +139,7 @@ This work is published at Pattern Recognition (Elsevier). This paper  stems from
 
 
 
-## **7. Adversarial Examples for Good: Adversarial Examples Guided Imbalanced Learning**
+## **10. Adversarial Examples for Good: Adversarial Examples Guided Imbalanced Learning**
 
 好的对抗性例子：指导不平衡学习的对抗性例子 cs.LG
 
@@ -109,7 +155,7 @@ Appeared in ICIP 2022
 
 
 
-## **8. Reducing Certified Regression to Certified Classification**
+## **11. Reducing Certified Regression to Certified Classification**
 
 将认证回归归结为认证分类 cs.LG
 
@@ -123,7 +169,7 @@ Appeared in ICIP 2022
 
 
 
-## **9. Reinforcement Learning for Hardware Security: Opportunities, Developments, and Challenges**
+## **12. Reinforcement Learning for Hardware Security: Opportunities, Developments, and Challenges**
 
 硬件安全强化学习：机遇、发展和挑战 cs.CR
 
@@ -139,7 +185,7 @@ To Appear in 2022 19th International SoC Conference (ISOCC 2022),  October 2022
 
 
 
-## **10. Towards Adversarial Purification using Denoising AutoEncoders**
+## **13. Towards Adversarial Purification using Denoising AutoEncoders**
 
 使用去噪自动编码器进行对抗性净化 cs.LG
 
@@ -155,7 +201,7 @@ Submitted to AAAI 2023
 
 
 
-## **11. Demystifying Arch-hints for Model Extraction: An Attack in Unified Memory System**
+## **14. Demystifying Arch-hints for Model Extraction: An Attack in Unified Memory System**
 
 揭开模型提取拱门的神秘面纱：统一存储系统中的攻击 cs.CR
 
@@ -169,7 +215,7 @@ Submitted to AAAI 2023
 
 
 
-## **12. Understanding the Limits of Poisoning Attacks in Episodic Reinforcement Learning**
+## **15. Understanding the Limits of Poisoning Attacks in Episodic Reinforcement Learning**
 
 在情景强化学习中理解中毒攻击的限度 cs.LG
 
@@ -185,7 +231,7 @@ Accepted at International Joint Conferences on Artificial  Intelligence (IJCAI) 
 
 
 
-## **13. HAT4RD: Hierarchical Adversarial Training for Rumor Detection on Social Media**
+## **16. HAT4RD: Hierarchical Adversarial Training for Rumor Detection on Social Media**
 
 HAT4RD：针对社交媒体谣言检测的分级对抗性训练 cs.CL
 
@@ -199,7 +245,7 @@ HAT4RD：针对社交媒体谣言检测的分级对抗性训练 cs.CL
 
 
 
-## **14. Towards Both Accurate and Robust Neural Networks without Extra Data**
+## **17. Towards Both Accurate and Robust Neural Networks without Extra Data**
 
 无额外数据的精确和稳健的神经网络 cs.CV
 
@@ -213,7 +259,7 @@ HAT4RD：针对社交媒体谣言检测的分级对抗性训练 cs.CL
 
 
 
-## **15. Tricking the Hashing Trick: A Tight Lower Bound on the Robustness of CountSketch to Adaptive Inputs**
+## **18. Tricking the Hashing Trick: A Tight Lower Bound on the Robustness of CountSketch to Adaptive Inputs**
 
 欺骗散列技巧：CountSketch对自适应输入的稳健性的紧致下界 cs.DS
 
@@ -227,7 +273,7 @@ HAT4RD：针对社交媒体谣言检测的分级对抗性训练 cs.CL
 
 
 
-## **16. Categorical composable cryptography: extended version**
+## **19. Categorical composable cryptography: extended version**
 
 范畴可合成密码学：扩展版本 cs.CR
 
@@ -243,7 +289,7 @@ Extended version of arXiv:2105.05949 which appeared in FoSSaCS 2022
 
 
 
-## **17. Categorical composable cryptography**
+## **20. Categorical composable cryptography**
 
 范畴可合成密码学 cs.CR
 
@@ -259,7 +305,7 @@ Updated to match the proceedings version
 
 
 
-## **18. Self-Supervised Adversarial Example Detection by Disentangled Representation**
+## **21. Self-Supervised Adversarial Example Detection by Disentangled Representation**
 
 基于解缠表示的自监督敌意范例检测 cs.CV
 
@@ -275,7 +321,7 @@ to appear in TrustCom 2022
 
 
 
-## **19. Cross-domain Cross-architecture Black-box Attacks on Fine-tuned Models with Transferred Evolutionary Strategies**
+## **22. Cross-domain Cross-architecture Black-box Attacks on Fine-tuned Models with Transferred Evolutionary Strategies**
 
 基于转移进化策略的精调模型跨域跨体系结构黑盒攻击 cs.LG
 
@@ -291,7 +337,7 @@ To appear in CIKM 2022
 
 
 
-## **20. Cyberattacks on Energy Infrastructures: Modern War Weapons**
+## **23. Cyberattacks on Energy Infrastructures: Modern War Weapons**
 
 对能源基础设施的网络攻击：现代战争武器 cs.CR
 
@@ -305,7 +351,7 @@ To appear in CIKM 2022
 
 
 
-## **21. Improved and Interpretable Defense to Transferred Adversarial Examples by Jacobian Norm with Selective Input Gradient Regularization**
+## **24. Improved and Interpretable Defense to Transferred Adversarial Examples by Jacobian Norm with Selective Input Gradient Regularization**
 
 基于选择输入梯度正则化的雅可比范数对转移对抗性实例的改进和可解释防御 cs.LG
 
@@ -321,7 +367,7 @@ Under review
 
 
 
-## **22. Covariate Balancing Methods for Randomized Controlled Trials Are Not Adversarially Robust**
+## **25. Covariate Balancing Methods for Randomized Controlled Trials Are Not Adversarially Robust**
 
 随机对照试验的协变量平衡方法不是逆稳健的 econ.EM
 
@@ -337,7 +383,7 @@ Under review
 
 
 
-## **23. Overcoming Data Availability Attacks in Blockchain Systems: Short Code-Length LDPC Code Design for Coded Merkle Tree**
+## **26. Overcoming Data Availability Attacks in Blockchain Systems: Short Code-Length LDPC Code Design for Coded Merkle Tree**
 
 克服区块链系统中的数据可用性攻击：基于编码Merkle树的短码长LDPC码设计 cs.IT
 
@@ -353,7 +399,7 @@ Under review
 
 
 
-## **24. Cooperative Distributed State Estimation: Resilient Topologies against Smart Spoofers**
+## **27. Cooperative Distributed State Estimation: Resilient Topologies against Smart Spoofers**
 
 协作分布式状态估计：针对智能欺骗器的弹性拓扑 cs.CR
 
@@ -367,7 +413,7 @@ Under review
 
 
 
-## **25. SA: Sliding attack for synthetic speech detection with resistance to clipping and self-splicing**
+## **28. SA: Sliding attack for synthetic speech detection with resistance to clipping and self-splicing**
 
 SA：抗剪裁和自拼接的合成语音检测滑动攻击 cs.SD
 
@@ -383,7 +429,7 @@ SA：抗剪裁和自拼接的合成语音检测滑动攻击 cs.SD
 
 
 
-## **26. Adversarial Robustness for Tabular Data through Cost and Utility Awareness**
+## **29. Adversarial Robustness for Tabular Data through Cost and Utility Awareness**
 
 通过成本和效用意识实现表格数据的对抗稳健性 cs.LG
 
@@ -399,7 +445,7 @@ SA：抗剪裁和自拼接的合成语音检测滑动攻击 cs.SD
 
 
 
-## **27. TrojViT: Trojan Insertion in Vision Transformers**
+## **30. TrojViT: Trojan Insertion in Vision Transformers**
 
 TrojViT：视觉变形金刚中的特洛伊木马插入 cs.LG
 
@@ -415,7 +461,7 @@ TrojViT：视觉变形金刚中的特洛伊木马插入 cs.LG
 
 
 
-## **28. SoK: Decentralized Finance (DeFi) Incidents**
+## **31. SoK: Decentralized Finance (DeFi) Incidents**
 
 SOK：分散金融(Defi)事件 cs.CR
 
@@ -429,7 +475,7 @@ SOK：分散金融(Defi)事件 cs.CR
 
 
 
-## **29. Overparameterized (robust) models from computational constraints**
+## **32. Overparameterized (robust) models from computational constraints**
 
 计算约束条件下的超参数(稳健)模型 cs.LG
 
@@ -443,7 +489,7 @@ SOK：分散金融(Defi)事件 cs.CR
 
 
 
-## **30. Bitcoin's Latency--Security Analysis Made Simple**
+## **33. Bitcoin's Latency--Security Analysis Made Simple**
 
 比特币的潜伏期--安全分析变得简单 cs.CR
 
@@ -457,7 +503,7 @@ SOK：分散金融(Defi)事件 cs.CR
 
 
 
-## **31. Network-Level Adversaries in Federated Learning**
+## **34. Network-Level Adversaries in Federated Learning**
 
 联合学习中的网络级对手 cs.CR
 
@@ -473,7 +519,7 @@ SOK：分散金融(Defi)事件 cs.CR
 
 
 
-## **32. Adversarial Relighting Against Face Recognition**
+## **35. Adversarial Relighting Against Face Recognition**
 
 对抗人脸识别的对抗性重发 cs.CV
 
@@ -487,7 +533,7 @@ SOK：分散金融(Defi)事件 cs.CR
 
 
 
-## **33. ATTRITION: Attacking Static Hardware Trojan Detection Techniques Using Reinforcement Learning**
+## **36. ATTRITION: Attacking Static Hardware Trojan Detection Techniques Using Reinforcement Learning**
 
 消耗性：基于强化学习的攻击静态硬件木马检测技术 cs.CR
 
@@ -503,7 +549,7 @@ To Appear in 2022 ACM SIGSAC Conference on Computer and  Communications Security
 
 
 
-## **34. SoftHebb: Bayesian Inference in Unsupervised Hebbian Soft Winner-Take-All Networks**
+## **37. SoftHebb: Bayesian Inference in Unsupervised Hebbian Soft Winner-Take-All Networks**
 
 SoftHebb：无监督Hebbian软赢家通吃网络中的贝叶斯推理 cs.LG
 
@@ -517,7 +563,7 @@ SoftHebb：无监督Hebbian软赢家通吃网络中的贝叶斯推理 cs.LG
 
 
 
-## **35. What Does the Gradient Tell When Attacking the Graph Structure**
+## **38. What Does the Gradient Tell When Attacking the Graph Structure**
 
 当攻击图形结构时，渐变说明了什么 cs.LG
 
@@ -531,7 +577,7 @@ SoftHebb：无监督Hebbian软赢家通吃网络中的贝叶斯推理 cs.LG
 
 
 
-## **36. Robust Prototypical Few-Shot Organ Segmentation with Regularized Neural-ODEs**
+## **39. Robust Prototypical Few-Shot Organ Segmentation with Regularized Neural-ODEs**
 
 基于正则化神经节点的典型少发器官分割 cs.CV
 
@@ -545,7 +591,7 @@ SoftHebb：无监督Hebbian软赢家通吃网络中的贝叶斯推理 cs.LG
 
 
 
-## **37. FuncFooler: A Practical Black-box Attack Against Learning-based Binary Code Similarity Detection Methods**
+## **40. FuncFooler: A Practical Black-box Attack Against Learning-based Binary Code Similarity Detection Methods**
 
 FuncFooler：一种针对基于学习的二进制代码相似性检测方法的实用黑盒攻击 cs.CR
 
@@ -561,7 +607,7 @@ FuncFooler：一种针对基于学习的二进制代码相似性检测方法的�
 
 
 
-## **38. SNAP: Efficient Extraction of Private Properties with Poisoning**
+## **41. SNAP: Efficient Extraction of Private Properties with Poisoning**
 
 Snap：高效提取带有毒物的私有财产 cs.LG
 
@@ -577,7 +623,7 @@ Snap：高效提取带有毒物的私有财产 cs.LG
 
 
 
-## **39. Semantic Preserving Adversarial Attack Generation with Autoencoder and Genetic Algorithm**
+## **42. Semantic Preserving Adversarial Attack Generation with Autoencoder and Genetic Algorithm**
 
 基于自动编码和遗传算法的语义保持敌意攻击生成 cs.LG
 
@@ -593,7 +639,7 @@ Snap：高效提取带有毒物的私有财产 cs.LG
 
 
 
-## **40. Passive Triangulation Attack on ORide**
+## **43. Passive Triangulation Attack on ORide**
 
 ORIDE上的被动三角剖分攻击 cs.CR
 
@@ -607,7 +653,7 @@ ORIDE上的被动三角剖分攻击 cs.CR
 
 
 
-## **41. Automatic Mapping of Unstructured Cyber Threat Intelligence: An Experimental Study**
+## **44. Automatic Mapping of Unstructured Cyber Threat Intelligence: An Experimental Study**
 
 非结构化网络威胁情报自动测绘的实验研究 cs.CR
 
@@ -623,7 +669,7 @@ ORIDE上的被动三角剖分攻击 cs.CR
 
 
 
-## **42. ECG-ATK-GAN: Robustness against Adversarial Attacks on ECGs using Conditional Generative Adversarial Networks**
+## **45. ECG-ATK-GAN: Robustness against Adversarial Attacks on ECGs using Conditional Generative Adversarial Networks**
 
 ECG-ATK-GAN：使用条件生成对抗网络对ECG的对抗攻击的稳健性 eess.SP
 
@@ -639,7 +685,7 @@ Accepted to MICCAI2022 Applications of Medical AI (AMAI) Workshop
 
 
 
-## **43. A Perturbation Resistant Transformation and Classification System for Deep Neural Networks**
+## **46. A Perturbation Resistant Transformation and Classification System for Deep Neural Networks**
 
 一种抗扰动的深度神经网络变换与分类系统 cs.CV
 
@@ -655,7 +701,7 @@ Accepted to MICCAI2022 Applications of Medical AI (AMAI) Workshop
 
 
 
-## **44. A New Kind of Adversarial Example**
+## **47. A New Kind of Adversarial Example**
 
 一种新的对抗性例证 cs.CV
 
@@ -669,7 +715,7 @@ Accepted to MICCAI2022 Applications of Medical AI (AMAI) Workshop
 
 
 
-## **45. Attacking Neural Binary Function Detection**
+## **48. Attacking Neural Binary Function Detection**
 
 攻击神经二进制函数检测 cs.CR
 
@@ -685,7 +731,7 @@ Accepted to MICCAI2022 Applications of Medical AI (AMAI) Workshop
 
 
 
-## **46. Adversarial Driving: Attacking End-to-End Autonomous Driving**
+## **49. Adversarial Driving: Attacking End-to-End Autonomous Driving**
 
 对抗性驾驶：攻击型端到端自动驾驶 cs.CV
 
@@ -701,7 +747,7 @@ Accepted to MICCAI2022 Applications of Medical AI (AMAI) Workshop
 
 
 
-## **47. Unrestricted Black-box Adversarial Attack Using GAN with Limited Queries**
+## **50. Unrestricted Black-box Adversarial Attack Using GAN with Limited Queries**
 
 基于有限查询GAN的无限制黑盒对抗性攻击 cs.CV
 
@@ -714,52 +760,6 @@ Accepted to the ECCV 2022 Workshop on Adversarial Robustness in the  Real World
 **Abstracts**: Adversarial examples are inputs intentionally generated for fooling a deep neural network. Recent studies have proposed unrestricted adversarial attacks that are not norm-constrained. However, the previous unrestricted attack methods still have limitations to fool real-world applications in a black-box setting. In this paper, we present a novel method for generating unrestricted adversarial examples using GAN where an attacker can only access the top-1 final decision of a classification model. Our method, Latent-HSJA, efficiently leverages the advantages of a decision-based attack in the latent space and successfully manipulates the latent vectors for fooling the classification model.   With extensive experiments, we demonstrate that our proposed method is efficient in evaluating the robustness of classification models with limited queries in a black-box setting. First, we demonstrate that our targeted attack method is query-efficient to produce unrestricted adversarial examples for a facial identity recognition model that contains 307 identities. Then, we demonstrate that the proposed method can also successfully attack a real-world celebrity recognition service.
 
 摘要: 对抗性例子是为愚弄深度神经网络而故意生成的输入。最近的研究提出了不受规范约束的无限制对抗性攻击。然而，以前的不受限制的攻击方法仍然有局限性，无法在黑盒设置中愚弄现实世界的应用程序。在本文中，我们提出了一种利用GAN生成无限制敌意实例的新方法，其中攻击者只能访问分类模型的TOP-1最终决策。该方法有效地利用了基于决策的攻击在潜在空间中的优势，并成功地操纵了潜在向量来欺骗分类模型。通过大量的实验，我们证明了我们提出的方法在黑盒环境下评估有限查询的分类模型的稳健性是有效的。首先，我们证明了我们的定向攻击方法是查询高效的，可以为包含307个身份的面部身份识别模型生成不受限制的对抗性示例。然后，我们证明了所提出的方法也可以成功地攻击真实世界的名人识别服务。
-
-
-
-## **48. Robustness of the Tangle 2.0 Consensus**
-
-Tangle 2.0共识的健壮性 cs.DC
-
-**SubmitDate**: 2022-08-24    [paper-pdf](http://arxiv.org/pdf/2208.08254v2)
-
-**Authors**: Bing-Yang Lin, Daria Dziubałtowska, Piotr Macek, Andreas Penzkofer, Sebastian Müller
-
-**Abstracts**: In this paper, we investigate the performance of the Tangle 2.0 consensus protocol in a Byzantine environment. We use an agent-based simulation model that incorporates the main features of the Tangle 2.0 consensus protocol. Our experimental results demonstrate that the Tangle 2.0 protocol is robust to the bait-and-switch attack up to the theoretical upper bound of the adversary's 33% voting weight. We further show that the common coin mechanism in Tangle 2.0 is necessary for robustness against powerful adversaries. Moreover, the experimental results confirm that the protocol can achieve around 1s confirmation time in typical scenarios and that the confirmation times of non-conflicting transactions are not affected by the presence of conflicts.
-
-摘要: 本文研究了Tange2.0一致性协议在拜占庭环境下的性能。我们使用了一个基于代理的仿真模型，该模型结合了Tangel2.0共识协议的主要特征。实验结果表明，Tangel2.0协议对诱饵切换攻击具有较强的鲁棒性，达到了敌手33%投票权重的理论上限。我们进一步证明了Tange2.0中的普通硬币机制对于抵抗强大的对手是必要的。实验结果表明，该协议在典型场景下可以达到1s左右的确认时间，且无冲突事务的确认时间不受冲突的影响。
-
-
-
-## **49. LPF-Defense: 3D Adversarial Defense based on Frequency Analysis**
-
-LPF-Defense：基于频率分析的三维对抗性防御 cs.CV
-
-15 pages, 7 figures
-
-**SubmitDate**: 2022-08-24    [paper-pdf](http://arxiv.org/pdf/2202.11287v2)
-
-**Authors**: Hanieh Naderi, Kimia Noorbakhsh, Arian Etemadi, Shohreh Kasaei
-
-**Abstracts**: Although 3D point cloud classification has recently been widely deployed in different application scenarios, it is still very vulnerable to adversarial attacks. This increases the importance of robust training of 3D models in the face of adversarial attacks. Based on our analysis on the performance of existing adversarial attacks, more adversarial perturbations are found in the mid and high-frequency components of input data. Therefore, by suppressing the high-frequency content in the training phase, the models robustness against adversarial examples is improved. Experiments showed that the proposed defense method decreases the success rate of six attacks on PointNet, PointNet++ ,, and DGCNN models. In particular, improvements are achieved with an average increase of classification accuracy by 3.8 % on drop100 attack and 4.26 % on drop200 attack compared to the state-of-the-art methods. The method also improves models accuracy on the original dataset compared to other available methods.
-
-摘要: 虽然三维点云分类最近在不同的应用场景中得到了广泛的部署，但它仍然非常容易受到对抗性攻击。这增加了在面对对手攻击时对3D模型进行稳健训练的重要性。基于对现有对抗性攻击性能的分析，在输入数据的中高频成分中发现了更多的对抗性扰动。因此，通过抑制训练阶段的高频内容，提高了模型对敌意样本的稳健性。实验表明，该防御方法降低了对PointNet、PointNet++、和DGCNN模型的6次攻击的成功率。特别是，与现有方法相比，Drop100攻击的分类准确率平均提高了3.8%，Drop200攻击的分类准确率平均提高了4.26%。与其他可用的方法相比，该方法还提高了原始数据集上的模型精度。
-
-
-
-## **50. Trace and Detect Adversarial Attacks on CNNs using Feature Response Maps**
-
-使用特征响应映射跟踪和检测对CNN的敌意攻击 cs.CV
-
-13 pages, 6 figures
-
-**SubmitDate**: 2022-08-24    [paper-pdf](http://arxiv.org/pdf/2208.11436v1)
-
-**Authors**: Mohammadreza Amirian, Friedhelm Schwenker, Thilo Stadelmann
-
-**Abstracts**: The existence of adversarial attacks on convolutional neural networks (CNN) questions the fitness of such models for serious applications. The attacks manipulate an input image such that misclassification is evoked while still looking normal to a human observer -- they are thus not easily detectable. In a different context, backpropagated activations of CNN hidden layers -- "feature responses" to a given input -- have been helpful to visualize for a human "debugger" what the CNN "looks at" while computing its output. In this work, we propose a novel detection method for adversarial examples to prevent attacks. We do so by tracking adversarial perturbations in feature responses, allowing for automatic detection using average local spatial entropy. The method does not alter the original network architecture and is fully human-interpretable. Experiments confirm the validity of our approach for state-of-the-art attacks on large-scale models trained on ImageNet.
-
-摘要: 对卷积神经网络(CNN)的敌意攻击的存在质疑了这种模型在严肃应用中的适用性。这些攻击操作输入图像，从而在人类观察者看来仍然正常的情况下引发错误分类--因此它们不容易被检测到。在另一种情况下，对CNN隐藏层的反向传播激活--对给定输入的“特征响应”--有助于人类“调试者”在计算其输出时可视化CNN“所看到的”。在这项工作中，我们提出了一种新的对抗性实例检测方法来防止攻击。我们通过跟踪特征响应中的对抗性扰动来实现这一点，允许使用平均局部空间熵进行自动检测。该方法不改变原有的网络体系结构，完全是人类可理解的。实验证实了该方法对基于ImageNet训练的大规模模型进行最先进攻击的有效性。
 
 
 

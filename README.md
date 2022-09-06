@@ -1,9 +1,75 @@
 # Latest Adversarial Attack Papers
-**update at 2022-09-05 06:31:22**
+**update at 2022-09-07 06:31:23**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. Adversarial for Social Privacy: A Poisoning Strategy to Degrade User Identity Linkage**
+## **1. Subject Membership Inference Attacks in Federated Learning**
+
+cs.LG
+
+**SubmitDate**: 2022-09-02    [paper-pdf](http://arxiv.org/pdf/2206.03317v2)
+
+**Authors**: Anshuman Suri, Pallika Kanani, Virendra J. Marathe, Daniel W. Peterson
+
+**Abstracts**: Privacy attacks on Machine Learning (ML) models often focus on inferring the existence of particular data points in the training data. However, what the adversary really wants to know is if a particular \emph{individual}'s (\emph{subject}'s) data was included during training. In such scenarios, the adversary is more likely to have access to the distribution of a particular subject, than actual records. Furthermore, in settings like cross-silo Federated Learning (FL), a subject's data can be embodied by multiple data records that are spread across multiple organizations. Nearly all of the existing private FL literature is dedicated to studying privacy at two granularities -- item-level (individual data records), and user-level (participating user in the federation), neither of which apply to data subjects in cross-silo FL. This insight motivates us to shift our attention from the privacy of data records to the privacy of \emph{data subjects}, also known as subject-level privacy. We propose two black-box attacks for \emph{subject membership inference}, of which one assumes access to a model after each training round. Using these attacks, we estimate subject membership inference risk on real-world data for single-party models as well as FL scenarios. We find our attacks to be extremely potent, even without access to exact training records, and using the knowledge of membership for a handful of subjects. To better understand the various factors that may influence subject privacy risk in cross-silo FL settings, we systematically generate several hundred synthetic federation configurations, varying properties of the data, model design and training, and the federation itself. Finally, we investigate the effectiveness of Differential Privacy in mitigating this threat.
+
+
+
+## **2. Group Property Inference Attacks Against Graph Neural Networks**
+
+cs.LG
+
+Full version of the ACM CCS'22 paper
+
+**SubmitDate**: 2022-09-02    [paper-pdf](http://arxiv.org/pdf/2209.01100v1)
+
+**Authors**: Xiuling Wang, Wendy Hui Wang
+
+**Abstracts**: With the fast adoption of machine learning (ML) techniques, sharing of ML models is becoming popular. However, ML models are vulnerable to privacy attacks that leak information about the training data. In this work, we focus on a particular type of privacy attacks named property inference attack (PIA) which infers the sensitive properties of the training data through the access to the target ML model. In particular, we consider Graph Neural Networks (GNNs) as the target model, and distribution of particular groups of nodes and links in the training graph as the target property. While the existing work has investigated PIAs that target at graph-level properties, no prior works have studied the inference of node and link properties at group level yet.   In this work, we perform the first systematic study of group property inference attacks (GPIA) against GNNs. First, we consider a taxonomy of threat models under both black-box and white-box settings with various types of adversary knowledge, and design six different attacks for these settings. We evaluate the effectiveness of these attacks through extensive experiments on three representative GNN models and three real-world graphs. Our results demonstrate the effectiveness of these attacks whose accuracy outperforms the baseline approaches. Second, we analyze the underlying factors that contribute to GPIA's success, and show that the target model trained on the graphs with or without the target property represents some dissimilarity in model parameters and/or model outputs, which enables the adversary to infer the existence of the property. Further, we design a set of defense mechanisms against the GPIA attacks, and demonstrate that these mechanisms can reduce attack accuracy effectively with small loss on GNN model accuracy.
+
+
+
+## **3. Scalable Adversarial Attack Algorithms on Influence Maximization**
+
+cs.SI
+
+11 pages, 2 figures
+
+**SubmitDate**: 2022-09-02    [paper-pdf](http://arxiv.org/pdf/2209.00892v1)
+
+**Authors**: Lichao Sun, Xiaobin Rui, Wei Chen
+
+**Abstracts**: In this paper, we study the adversarial attacks on influence maximization under dynamic influence propagation models in social networks. In particular, given a known seed set S, the problem is to minimize the influence spread from S by deleting a limited number of nodes and edges. This problem reflects many application scenarios, such as blocking virus (e.g. COVID-19) propagation in social networks by quarantine and vaccination, blocking rumor spread by freezing fake accounts, or attacking competitor's influence by incentivizing some users to ignore the information from the competitor. In this paper, under the linear threshold model, we adapt the reverse influence sampling approach and provide efficient algorithms of sampling valid reverse reachable paths to solve the problem.
+
+
+
+## **4. Reliable Representations Make A Stronger Defender: Unsupervised Structure Refinement for Robust GNN**
+
+cs.LG
+
+Accepted in KDD2022
+
+**SubmitDate**: 2022-09-02    [paper-pdf](http://arxiv.org/pdf/2207.00012v2)
+
+**Authors**: Kuan Li, Yang Liu, Xiang Ao, Jianfeng Chi, Jinghua Feng, Hao Yang, Qing He
+
+**Abstracts**: Benefiting from the message passing mechanism, Graph Neural Networks (GNNs) have been successful on flourish tasks over graph data. However, recent studies have shown that attackers can catastrophically degrade the performance of GNNs by maliciously modifying the graph structure. A straightforward solution to remedy this issue is to model the edge weights by learning a metric function between pairwise representations of two end nodes, which attempts to assign low weights to adversarial edges. The existing methods use either raw features or representations learned by supervised GNNs to model the edge weights. However, both strategies are faced with some immediate problems: raw features cannot represent various properties of nodes (e.g., structure information), and representations learned by supervised GNN may suffer from the poor performance of the classifier on the poisoned graph. We need representations that carry both feature information and as mush correct structure information as possible and are insensitive to structural perturbations. To this end, we propose an unsupervised pipeline, named STABLE, to optimize the graph structure. Finally, we input the well-refined graph into a downstream classifier. For this part, we design an advanced GCN that significantly enhances the robustness of vanilla GCN without increasing the time complexity. Extensive experiments on four real-world graph benchmarks demonstrate that STABLE outperforms the state-of-the-art methods and successfully defends against various attacks.
+
+
+
+## **5. Universal Fourier Attack for Time Series**
+
+cs.CR
+
+**SubmitDate**: 2022-09-02    [paper-pdf](http://arxiv.org/pdf/2209.00757v1)
+
+**Authors**: Elizabeth Coda, Brad Clymer, Chance DeSmet, Yijing Watkins, Michael Girard
+
+**Abstracts**: A wide variety of adversarial attacks have been proposed and explored using image and audio data. These attacks are notoriously easy to generate digitally when the attacker can directly manipulate the input to a model, but are much more difficult to implement in the real-world. In this paper we present a universal, time invariant attack for general time series data such that the attack has a frequency spectrum primarily composed of the frequencies present in the original data. The universality of the attack makes it fast and easy to implement as no computation is required to add it to an input, while time invariance is useful for real-world deployment. Additionally, the frequency constraint ensures the attack can withstand filtering. We demonstrate the effectiveness of the attack in two different domains, speech recognition and unintended radiated emission, and show that the attack is robust against common transform-and-compare defense pipelines.
+
+
+
+## **6. Adversarial for Social Privacy: A Poisoning Strategy to Degrade User Identity Linkage**
 
 cs.SI
 
@@ -15,7 +81,7 @@ cs.SI
 
 
 
-## **2. FDB: Fraud Dataset Benchmark**
+## **7. FDB: Fraud Dataset Benchmark**
 
 cs.LG
 
@@ -27,7 +93,7 @@ cs.LG
 
 
 
-## **3. Wiggle: Physical Challenge-Response Verification of Vehicle Platooning**
+## **8. Wiggle: Physical Challenge-Response Verification of Vehicle Platooning**
 
 cs.CR
 
@@ -41,7 +107,7 @@ cs.CR
 
 
 
-## **4. Membership Inference Attacks by Exploiting Loss Trajectory**
+## **9. Membership Inference Attacks by Exploiting Loss Trajectory**
 
 cs.CR
 
@@ -55,7 +121,7 @@ Accepted by CCS 2022
 
 
 
-## **5. Be Your Own Neighborhood: Detecting Adversarial Example by the Neighborhood Relations Built on Self-Supervised Learning**
+## **10. Be Your Own Neighborhood: Detecting Adversarial Example by the Neighborhood Relations Built on Self-Supervised Learning**
 
 cs.LG
 
@@ -69,7 +135,7 @@ co-first author
 
 
 
-## **6. Vulnerability of Distributed Inverter VAR Control in PV Distributed Energy System**
+## **11. Vulnerability of Distributed Inverter VAR Control in PV Distributed Energy System**
 
 eess.SY
 
@@ -81,7 +147,7 @@ eess.SY
 
 
 
-## **7. A Black-Box Attack on Optical Character Recognition Systems**
+## **12. A Black-Box Attack on Optical Character Recognition Systems**
 
 cs.CV
 
@@ -95,7 +161,7 @@ cs.CV
 
 
 
-## **8. Solving the Capsulation Attack against Backdoor-based Deep Neural Network Watermarks by Reversing Triggers**
+## **13. Solving the Capsulation Attack against Backdoor-based Deep Neural Network Watermarks by Reversing Triggers**
 
 cs.CR
 
@@ -107,7 +173,7 @@ cs.CR
 
 
 
-## **9. Adversarial Scratches: Deployable Attacks to CNN Classifiers**
+## **14. Adversarial Scratches: Deployable Attacks to CNN Classifiers**
 
 cs.LG
 
@@ -121,7 +187,7 @@ This work is published at Pattern Recognition (Elsevier). This paper  stems from
 
 
 
-## **10. Adversarial Examples for Good: Adversarial Examples Guided Imbalanced Learning**
+## **15. Adversarial Examples for Good: Adversarial Examples Guided Imbalanced Learning**
 
 cs.LG
 
@@ -135,7 +201,7 @@ Appeared in ICIP 2022
 
 
 
-## **11. Reducing Certified Regression to Certified Classification**
+## **16. Reducing Certified Regression to Certified Classification**
 
 cs.LG
 
@@ -147,7 +213,7 @@ cs.LG
 
 
 
-## **12. Reinforcement Learning for Hardware Security: Opportunities, Developments, and Challenges**
+## **17. Reinforcement Learning for Hardware Security: Opportunities, Developments, and Challenges**
 
 cs.CR
 
@@ -161,7 +227,7 @@ To Appear in 2022 19th International SoC Conference (ISOCC 2022),  October 2022
 
 
 
-## **13. Towards Adversarial Purification using Denoising AutoEncoders**
+## **18. Towards Adversarial Purification using Denoising AutoEncoders**
 
 cs.LG
 
@@ -175,7 +241,7 @@ Submitted to AAAI 2023
 
 
 
-## **14. Demystifying Arch-hints for Model Extraction: An Attack in Unified Memory System**
+## **19. Demystifying Arch-hints for Model Extraction: An Attack in Unified Memory System**
 
 cs.CR
 
@@ -187,7 +253,7 @@ cs.CR
 
 
 
-## **15. Understanding the Limits of Poisoning Attacks in Episodic Reinforcement Learning**
+## **20. Understanding the Limits of Poisoning Attacks in Episodic Reinforcement Learning**
 
 cs.LG
 
@@ -201,7 +267,7 @@ Accepted at International Joint Conferences on Artificial  Intelligence (IJCAI) 
 
 
 
-## **16. HAT4RD: Hierarchical Adversarial Training for Rumor Detection on Social Media**
+## **21. HAT4RD: Hierarchical Adversarial Training for Rumor Detection on Social Media**
 
 cs.CL
 
@@ -213,7 +279,7 @@ cs.CL
 
 
 
-## **17. Towards Both Accurate and Robust Neural Networks without Extra Data**
+## **22. Towards Both Accurate and Robust Neural Networks without Extra Data**
 
 cs.CV
 
@@ -225,7 +291,7 @@ cs.CV
 
 
 
-## **18. Tricking the Hashing Trick: A Tight Lower Bound on the Robustness of CountSketch to Adaptive Inputs**
+## **23. Tricking the Hashing Trick: A Tight Lower Bound on the Robustness of CountSketch to Adaptive Inputs**
 
 cs.DS
 
@@ -237,7 +303,7 @@ cs.DS
 
 
 
-## **19. Categorical composable cryptography: extended version**
+## **24. Categorical composable cryptography: extended version**
 
 cs.CR
 
@@ -251,7 +317,7 @@ Extended version of arXiv:2105.05949 which appeared in FoSSaCS 2022
 
 
 
-## **20. Categorical composable cryptography**
+## **25. Categorical composable cryptography**
 
 cs.CR
 
@@ -265,7 +331,7 @@ Updated to match the proceedings version
 
 
 
-## **21. Self-Supervised Adversarial Example Detection by Disentangled Representation**
+## **26. Self-Supervised Adversarial Example Detection by Disentangled Representation**
 
 cs.CV
 
@@ -279,7 +345,7 @@ to appear in TrustCom 2022
 
 
 
-## **22. Cross-domain Cross-architecture Black-box Attacks on Fine-tuned Models with Transferred Evolutionary Strategies**
+## **27. Cross-domain Cross-architecture Black-box Attacks on Fine-tuned Models with Transferred Evolutionary Strategies**
 
 cs.LG
 
@@ -293,7 +359,7 @@ To appear in CIKM 2022
 
 
 
-## **23. Cyberattacks on Energy Infrastructures: Modern War Weapons**
+## **28. Cyberattacks on Energy Infrastructures: Modern War Weapons**
 
 cs.CR
 
@@ -305,7 +371,7 @@ cs.CR
 
 
 
-## **24. Improved and Interpretable Defense to Transferred Adversarial Examples by Jacobian Norm with Selective Input Gradient Regularization**
+## **29. Improved and Interpretable Defense to Transferred Adversarial Examples by Jacobian Norm with Selective Input Gradient Regularization**
 
 cs.LG
 
@@ -319,7 +385,7 @@ Under review
 
 
 
-## **25. Covariate Balancing Methods for Randomized Controlled Trials Are Not Adversarially Robust**
+## **30. Covariate Balancing Methods for Randomized Controlled Trials Are Not Adversarially Robust**
 
 econ.EM
 
@@ -333,7 +399,7 @@ econ.EM
 
 
 
-## **26. Overcoming Data Availability Attacks in Blockchain Systems: Short Code-Length LDPC Code Design for Coded Merkle Tree**
+## **31. Overcoming Data Availability Attacks in Blockchain Systems: Short Code-Length LDPC Code Design for Coded Merkle Tree**
 
 cs.IT
 
@@ -347,7 +413,7 @@ cs.IT
 
 
 
-## **27. Cooperative Distributed State Estimation: Resilient Topologies against Smart Spoofers**
+## **32. Cooperative Distributed State Estimation: Resilient Topologies against Smart Spoofers**
 
 cs.CR
 
@@ -359,7 +425,7 @@ cs.CR
 
 
 
-## **28. SA: Sliding attack for synthetic speech detection with resistance to clipping and self-splicing**
+## **33. SA: Sliding attack for synthetic speech detection with resistance to clipping and self-splicing**
 
 cs.SD
 
@@ -373,7 +439,7 @@ cs.SD
 
 
 
-## **29. Adversarial Robustness for Tabular Data through Cost and Utility Awareness**
+## **34. Adversarial Robustness for Tabular Data through Cost and Utility Awareness**
 
 cs.LG
 
@@ -387,7 +453,7 @@ cs.LG
 
 
 
-## **30. TrojViT: Trojan Insertion in Vision Transformers**
+## **35. TrojViT: Trojan Insertion in Vision Transformers**
 
 cs.LG
 
@@ -401,7 +467,7 @@ cs.LG
 
 
 
-## **31. SoK: Decentralized Finance (DeFi) Incidents**
+## **36. SoK: Decentralized Finance (DeFi) Incidents**
 
 cs.CR
 
@@ -413,7 +479,7 @@ cs.CR
 
 
 
-## **32. Overparameterized (robust) models from computational constraints**
+## **37. Overparameterized (robust) models from computational constraints**
 
 cs.LG
 
@@ -425,7 +491,7 @@ cs.LG
 
 
 
-## **33. Bitcoin's Latency--Security Analysis Made Simple**
+## **38. Bitcoin's Latency--Security Analysis Made Simple**
 
 cs.CR
 
@@ -437,7 +503,7 @@ cs.CR
 
 
 
-## **34. Network-Level Adversaries in Federated Learning**
+## **39. Network-Level Adversaries in Federated Learning**
 
 cs.CR
 
@@ -451,7 +517,7 @@ cs.CR
 
 
 
-## **35. Adversarial Relighting Against Face Recognition**
+## **40. Adversarial Relighting Against Face Recognition**
 
 cs.CV
 
@@ -463,7 +529,7 @@ cs.CV
 
 
 
-## **36. ATTRITION: Attacking Static Hardware Trojan Detection Techniques Using Reinforcement Learning**
+## **41. ATTRITION: Attacking Static Hardware Trojan Detection Techniques Using Reinforcement Learning**
 
 cs.CR
 
@@ -477,7 +543,7 @@ To Appear in 2022 ACM SIGSAC Conference on Computer and  Communications Security
 
 
 
-## **37. SoftHebb: Bayesian Inference in Unsupervised Hebbian Soft Winner-Take-All Networks**
+## **42. SoftHebb: Bayesian Inference in Unsupervised Hebbian Soft Winner-Take-All Networks**
 
 cs.LG
 
@@ -489,7 +555,7 @@ cs.LG
 
 
 
-## **38. What Does the Gradient Tell When Attacking the Graph Structure**
+## **43. What Does the Gradient Tell When Attacking the Graph Structure**
 
 cs.LG
 
@@ -501,7 +567,7 @@ cs.LG
 
 
 
-## **39. Robust Prototypical Few-Shot Organ Segmentation with Regularized Neural-ODEs**
+## **44. Robust Prototypical Few-Shot Organ Segmentation with Regularized Neural-ODEs**
 
 cs.CV
 
@@ -513,7 +579,7 @@ cs.CV
 
 
 
-## **40. FuncFooler: A Practical Black-box Attack Against Learning-based Binary Code Similarity Detection Methods**
+## **45. FuncFooler: A Practical Black-box Attack Against Learning-based Binary Code Similarity Detection Methods**
 
 cs.CR
 
@@ -527,7 +593,7 @@ cs.CR
 
 
 
-## **41. SNAP: Efficient Extraction of Private Properties with Poisoning**
+## **46. SNAP: Efficient Extraction of Private Properties with Poisoning**
 
 cs.LG
 
@@ -541,7 +607,7 @@ cs.LG
 
 
 
-## **42. Semantic Preserving Adversarial Attack Generation with Autoencoder and Genetic Algorithm**
+## **47. Semantic Preserving Adversarial Attack Generation with Autoencoder and Genetic Algorithm**
 
 cs.LG
 
@@ -555,7 +621,7 @@ cs.LG
 
 
 
-## **43. Passive Triangulation Attack on ORide**
+## **48. Passive Triangulation Attack on ORide**
 
 cs.CR
 
@@ -567,7 +633,7 @@ cs.CR
 
 
 
-## **44. Automatic Mapping of Unstructured Cyber Threat Intelligence: An Experimental Study**
+## **49. Automatic Mapping of Unstructured Cyber Threat Intelligence: An Experimental Study**
 
 cs.CR
 
@@ -581,7 +647,7 @@ cs.CR
 
 
 
-## **45. ECG-ATK-GAN: Robustness against Adversarial Attacks on ECGs using Conditional Generative Adversarial Networks**
+## **50. ECG-ATK-GAN: Robustness against Adversarial Attacks on ECGs using Conditional Generative Adversarial Networks**
 
 eess.SP
 
@@ -592,74 +658,6 @@ Accepted to MICCAI2022 Applications of Medical AI (AMAI) Workshop
 **Authors**: Khondker Fariha Hossain, Sharif Amit Kamran, Alireza Tavakkoli, Xingjun Ma
 
 **Abstracts**: Automating arrhythmia detection from ECG requires a robust and trusted system that retains high accuracy under electrical disturbances. Many machine learning approaches have reached human-level performance in classifying arrhythmia from ECGs. However, these architectures are vulnerable to adversarial attacks, which can misclassify ECG signals by decreasing the model's accuracy. Adversarial attacks are small crafted perturbations injected in the original data which manifest the out-of-distribution shifts in signal to misclassify the correct class. Thus, security concerns arise for false hospitalization and insurance fraud abusing these perturbations. To mitigate this problem, we introduce the first novel Conditional Generative Adversarial Network (GAN), robust against adversarial attacked ECG signals and retaining high accuracy. Our architecture integrates a new class-weighted objective function for adversarial perturbation identification and new blocks for discerning and combining out-of-distribution shifts in signals in the learning process for accurately classifying various arrhythmia types. Furthermore, we benchmark our architecture on six different white and black-box attacks and compare them with other recently proposed arrhythmia classification models on two publicly available ECG arrhythmia datasets. The experiment confirms that our model is more robust against such adversarial attacks for classifying arrhythmia with high accuracy.
-
-
-
-## **46. A Perturbation Resistant Transformation and Classification System for Deep Neural Networks**
-
-cs.CV
-
-12 pages, 4 figures
-
-**SubmitDate**: 2022-08-25    [paper-pdf](http://arxiv.org/pdf/2208.11839v1)
-
-**Authors**: Nathaniel Dean, Dilip Sarkar
-
-**Abstracts**: Deep convolutional neural networks accurately classify a diverse range of natural images, but may be easily deceived when designed, imperceptible perturbations are embedded in the images. In this paper, we design a multi-pronged training, input transformation, and image ensemble system that is attack agnostic and not easily estimated. Our system incorporates two novel features. The first is a transformation layer that computes feature level polynomial kernels from class-level training data samples and iteratively updates input image copies at inference time based on their feature kernel differences to create an ensemble of transformed inputs. The second is a classification system that incorporates the prediction of the undefended network with a hard vote on the ensemble of filtered images. Our evaluations on the CIFAR10 dataset show our system improves the robustness of an undefended network against a variety of bounded and unbounded white-box attacks under different distance metrics, while sacrificing little accuracy on clean images. Against adaptive full-knowledge attackers creating end-to-end attacks, our system successfully augments the existing robustness of adversarially trained networks, for which our methods are most effectively applied.
-
-
-
-## **47. A New Kind of Adversarial Example**
-
-cs.CV
-
-**SubmitDate**: 2022-08-25    [paper-pdf](http://arxiv.org/pdf/2208.02430v2)
-
-**Authors**: Ali Borji
-
-**Abstracts**: Almost all adversarial attacks are formulated to add an imperceptible perturbation to an image in order to fool a model. Here, we consider the opposite which is adversarial examples that can fool a human but not a model. A large enough and perceptible perturbation is added to an image such that a model maintains its original decision, whereas a human will most likely make a mistake if forced to decide (or opt not to decide at all). Existing targeted attacks can be reformulated to synthesize such adversarial examples. Our proposed attack, dubbed NKE, is similar in essence to the fooling images, but is more efficient since it uses gradient descent instead of evolutionary algorithms. It also offers a new and unified perspective into the problem of adversarial vulnerability. Experimental results over MNIST and CIFAR-10 datasets show that our attack is quite efficient in fooling deep neural networks. Code is available at https://github.com/aliborji/NKE.
-
-
-
-## **48. Attacking Neural Binary Function Detection**
-
-cs.CR
-
-18 pages
-
-**SubmitDate**: 2022-08-24    [paper-pdf](http://arxiv.org/pdf/2208.11667v1)
-
-**Authors**: Joshua Bundt, Michael Davinroy, Ioannis Agadakos, Alina Oprea, William Robertson
-
-**Abstracts**: Binary analyses based on deep neural networks (DNNs), or neural binary analyses (NBAs), have become a hotly researched topic in recent years. DNNs have been wildly successful at pushing the performance and accuracy envelopes in the natural language and image processing domains. Thus, DNNs are highly promising for solving binary analysis problems that are typically hard due to a lack of complete information resulting from the lossy compilation process. Despite this promise, it is unclear that the prevailing strategy of repurposing embeddings and model architectures originally developed for other problem domains is sound given the adversarial contexts under which binary analysis often operates.   In this paper, we empirically demonstrate that the current state of the art in neural function boundary detection is vulnerable to both inadvertent and deliberate adversarial attacks. We proceed from the insight that current generation NBAs are built upon embeddings and model architectures intended to solve syntactic problems. We devise a simple, reproducible, and scalable black-box methodology for exploring the space of inadvertent attacks - instruction sequences that could be emitted by common compiler toolchains and configurations - that exploits this syntactic design focus. We then show that these inadvertent misclassifications can be exploited by an attacker, serving as the basis for a highly effective black-box adversarial example generation process. We evaluate this methodology against two state-of-the-art neural function boundary detectors: XDA and DeepDi. We conclude with an analysis of the evaluation data and recommendations for how future research might avoid succumbing to similar attacks.
-
-
-
-## **49. Adversarial Driving: Attacking End-to-End Autonomous Driving**
-
-cs.CV
-
-7 pages, 6 figures
-
-**SubmitDate**: 2022-08-24    [paper-pdf](http://arxiv.org/pdf/2103.09151v3)
-
-**Authors**: Han Wu, Syed Yunas, Sareh Rowlands, Wenjie Ruan, Johan Wahlstrom
-
-**Abstracts**: As the research in deep neural networks advances, deep convolutional networks become feasible for automated driving tasks. There is an emerging trend of employing end-to-end models in the automation of driving tasks. However, previous research unveils that deep neural networks are vulnerable to adversarial attacks in classification tasks. While for regression tasks such as autonomous driving, the effect of these attacks remains rarely explored. In this research, we devise two white-box targeted attacks against end-to-end autonomous driving systems. The driving model takes an image as input and outputs the steering angle. Our attacks can manipulate the behavior of the autonomous driving system only by perturbing the input image. Both attacks can be initiated in real-time on CPUs without employing GPUs. This research aims to raise concerns over applications of end-to-end models in safety-critical systems.
-
-
-
-## **50. Unrestricted Black-box Adversarial Attack Using GAN with Limited Queries**
-
-cs.CV
-
-Accepted to the ECCV 2022 Workshop on Adversarial Robustness in the  Real World
-
-**SubmitDate**: 2022-08-24    [paper-pdf](http://arxiv.org/pdf/2208.11613v1)
-
-**Authors**: Dongbin Na, Sangwoo Ji, Jong Kim
-
-**Abstracts**: Adversarial examples are inputs intentionally generated for fooling a deep neural network. Recent studies have proposed unrestricted adversarial attacks that are not norm-constrained. However, the previous unrestricted attack methods still have limitations to fool real-world applications in a black-box setting. In this paper, we present a novel method for generating unrestricted adversarial examples using GAN where an attacker can only access the top-1 final decision of a classification model. Our method, Latent-HSJA, efficiently leverages the advantages of a decision-based attack in the latent space and successfully manipulates the latent vectors for fooling the classification model.   With extensive experiments, we demonstrate that our proposed method is efficient in evaluating the robustness of classification models with limited queries in a black-box setting. First, we demonstrate that our targeted attack method is query-efficient to produce unrestricted adversarial examples for a facial identity recognition model that contains 307 identities. Then, we demonstrate that the proposed method can also successfully attack a real-world celebrity recognition service.
 
 
 

@@ -1,9 +1,431 @@
 # Latest Adversarial Attack Papers
-**update at 2022-09-13 06:31:35**
+**update at 2022-09-15 06:31:28**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. Adversarial Examples in Constrained Domains**
+## **1. Certified Defences Against Adversarial Patch Attacks on Semantic Segmentation**
+
+基于语义分割的对抗性补丁攻击认证防御 cs.CV
+
+**SubmitDate**: 2022-09-13    [paper-pdf](http://arxiv.org/pdf/2209.05980v1)
+
+**Authors**: Maksym Yatsura, Kaspar Sakmann, N. Grace Hua, Matthias Hein, Jan Hendrik Metzen
+
+**Abstracts**: Adversarial patch attacks are an emerging security threat for real world deep learning applications. We present Demasked Smoothing, the first approach (up to our knowledge) to certify the robustness of semantic segmentation models against this threat model. Previous work on certifiably defending against patch attacks has mostly focused on image classification task and often required changes in the model architecture and additional training which is undesirable and computationally expensive. In Demasked Smoothing, any segmentation model can be applied without particular training, fine-tuning, or restriction of the architecture. Using different masking strategies, Demasked Smoothing can be applied both for certified detection and certified recovery. In extensive experiments we show that Demasked Smoothing can on average certify 64% of the pixel predictions for a 1% patch in the detection task and 48% against a 0.5% patch for the recovery task on the ADE20K dataset.
+
+摘要: 对抗性补丁攻击是现实世界深度学习应用面临的一种新的安全威胁。我们提出了去任务平滑，这是第一种(据我们所知)来证明语义分割模型对这种威胁模型的稳健性的方法。以前关于可证明防御补丁攻击的工作主要集中在图像分类任务上，并且经常需要改变模型体系结构和额外的训练，这是不受欢迎的，并且计算代价高昂。在去任务平滑中，任何分割模型都可以在没有特定训练、微调或体系结构限制的情况下应用。使用不同的掩码策略，去掩码平滑可以应用于认证检测和认证恢复。在ADE20K数据集上的大量实验中，对于检测任务中1%的块，去任务平滑平均可以保证64%的像素预测，对于恢复任务，对于0.5%的块，去任务平滑平均可以保证48%的像素预测。
+
+
+
+## **2. Adversarial Inter-Group Link Injection Degrades the Fairness of Graph Neural Networks**
+
+对抗性组间链路注入降低了图神经网络的公平性 cs.LG
+
+A shorter version of this work has been accepted by IEEE ICDM 2022
+
+**SubmitDate**: 2022-09-13    [paper-pdf](http://arxiv.org/pdf/2209.05957v1)
+
+**Authors**: Hussain Hussain, Meng Cao, Sandipan Sikdar, Denis Helic, Elisabeth Lex, Markus Strohmaier, Roman Kern
+
+**Abstracts**: We present evidence for the existence and effectiveness of adversarial attacks on graph neural networks (GNNs) that aim to degrade fairness. These attacks can disadvantage a particular subgroup of nodes in GNN-based node classification, where nodes of the underlying network have sensitive attributes, such as race or gender. We conduct qualitative and experimental analyses explaining how adversarial link injection impairs the fairness of GNN predictions. For example, an attacker can compromise the fairness of GNN-based node classification by injecting adversarial links between nodes belonging to opposite subgroups and opposite class labels. Our experiments on empirical datasets demonstrate that adversarial fairness attacks can significantly degrade the fairness of GNN predictions (attacks are effective) with a low perturbation rate (attacks are efficient) and without a significant drop in accuracy (attacks are deceptive). This work demonstrates the vulnerability of GNN models to adversarial fairness attacks. We hope our findings raise awareness about this issue in our community and lay a foundation for the future development of GNN models that are more robust to such attacks.
+
+摘要: 我们提出了针对图神经网络(GNN)的对抗性攻击的存在和有效性的证据，这些攻击旨在降低公平性。这些攻击可能使基于GNN的节点分类中的特定节点子组处于不利地位，其中底层网络的节点具有敏感属性，如种族或性别。我们进行了定性和实验分析，解释了敌意链接注入如何损害GNN预测的公平性。例如，攻击者可以通过在属于相反子组和相反类标签的节点之间注入敌对链接来损害基于GNN的节点分类的公平性。我们在经验数据集上的实验表明，对抗性公平攻击能够以较低的扰动率(攻击是有效的)显著降低GNN预测的公平性(攻击是有效的)，并且不会显著降低准确率(攻击是欺骗性的)。这项工作证明了GNN模型对敌意公平攻击的脆弱性。我们希望我们的发现提高我们社区对这个问题的认识，并为未来开发更稳健地抵御此类攻击的GNN模型奠定基础。
+
+
+
+## **3. An Evolutionary, Gradient-Free, Query-Efficient, Black-Box Algorithm for Generating Adversarial Instances in Deep Networks**
+
+一种进化、无梯度、查询高效的深层网络对抗性实例生成黑盒算法 cs.CV
+
+**SubmitDate**: 2022-09-13    [paper-pdf](http://arxiv.org/pdf/2208.08297v2)
+
+**Authors**: Raz Lapid, Zvika Haramaty, Moshe Sipper
+
+**Abstracts**: Deep neural networks (DNNs) are sensitive to adversarial data in a variety of scenarios, including the black-box scenario, where the attacker is only allowed to query the trained model and receive an output. Existing black-box methods for creating adversarial instances are costly, often using gradient estimation or training a replacement network. This paper introduces \textbf{Qu}ery-Efficient \textbf{E}volutiona\textbf{ry} \textbf{Attack}, \textit{QuEry Attack}, an untargeted, score-based, black-box attack. QuEry Attack is based on a novel objective function that can be used in gradient-free optimization problems. The attack only requires access to the output logits of the classifier and is thus not affected by gradient masking. No additional information is needed, rendering our method more suitable to real-life situations. We test its performance with three different state-of-the-art models -- Inception-v3, ResNet-50, and VGG-16-BN -- against three benchmark datasets: MNIST, CIFAR10 and ImageNet. Furthermore, we evaluate QuEry Attack's performance on non-differential transformation defenses and state-of-the-art robust models. Our results demonstrate the superior performance of QuEry Attack, both in terms of accuracy score and query efficiency.
+
+摘要: 深度神经网络(DNN)对各种场景中的敌意数据很敏感，包括黑盒场景，在这种场景中，攻击者只被允许查询训练的模型并接收输出。现有的创建对抗性实例的黑盒方法成本很高，通常使用梯度估计或训练替换网络。本文介绍了一种非常有效的无目标、基于分数的黑盒攻击查询攻击基于一种新的目标函数，可用于无梯度优化问题。攻击只需要访问分类器的输出逻辑，因此不受梯度掩蔽的影响。不需要额外的信息，使我们的方法更适合实际情况。我们使用三个不同的最先进的模型--先启-v3、ResNet-50和VGG-16-BN--针对三个基准数据集：MNIST、CIFAR10和ImageNet测试其性能。此外，我们还评估了查询攻击在非差分变换防御和现有健壮性模型上的性能。实验结果表明，查询攻击在准确率和查询效率方面都具有较好的性能。
+
+
+
+## **4. Bayesian Pseudo Labels: Expectation Maximization for Robust and Efficient Semi-Supervised Segmentation**
+
+贝叶斯伪标签：稳健有效的半监督分割的期望最大化 cs.CV
+
+MICCAI 2022 (Early accept, Student Travel Award)
+
+**SubmitDate**: 2022-09-13    [paper-pdf](http://arxiv.org/pdf/2208.04435v3)
+
+**Authors**: Mou-Cheng Xu, Yukun Zhou, Chen Jin, Marius de Groot, Daniel C. Alexander, Neil P. Oxtoby, Yipeng Hu, Joseph Jacob
+
+**Abstracts**: This paper concerns pseudo labelling in segmentation. Our contribution is fourfold. Firstly, we present a new formulation of pseudo-labelling as an Expectation-Maximization (EM) algorithm for clear statistical interpretation. Secondly, we propose a semi-supervised medical image segmentation method purely based on the original pseudo labelling, namely SegPL. We demonstrate SegPL is a competitive approach against state-of-the-art consistency regularisation based methods on semi-supervised segmentation on a 2D multi-class MRI brain tumour segmentation task and a 3D binary CT lung vessel segmentation task. The simplicity of SegPL allows less computational cost comparing to prior methods. Thirdly, we demonstrate that the effectiveness of SegPL may originate from its robustness against out-of-distribution noises and adversarial attacks. Lastly, under the EM framework, we introduce a probabilistic generalisation of SegPL via variational inference, which learns a dynamic threshold for pseudo labelling during the training. We show that SegPL with variational inference can perform uncertainty estimation on par with the gold-standard method Deep Ensemble.
+
+摘要: 本文研究的是分割中的伪标注问题。我们的贡献是四倍的。首先，我们提出了一种新的伪标记公式，作为一种用于清晰统计解释的期望最大化(EM)算法。其次，提出了一种完全基于原始伪标记的半监督医学图像分割方法--SegPL。在2D多类MRI脑肿瘤分割任务和3D二值CT肺血管分割任务中，我们证明了SegPL是一种与最先进的基于一致性正则化的半监督分割方法相竞争的方法。与以前的方法相比，SegPL的简单性允许更少的计算成本。第三，我们证明了SegPL的有效性可能源于它对分布外噪声和对手攻击的健壮性。最后，在EM框架下，我们通过变分推理对SegPL进行概率推广，在训练过程中学习伪标签的动态阈值。我们证明了带变分推理的SegPL方法可以与金标准方法深层集成一样进行不确定度估计。
+
+
+
+## **5. Adversarial Coreset Selection for Efficient Robust Training**
+
+用于高效稳健训练的对抗性同位重置选择 cs.LG
+
+Extended version of the ECCV2022 paper: arXiv:2112.00378. arXiv admin  note: substantial text overlap with arXiv:2112.00378
+
+**SubmitDate**: 2022-09-13    [paper-pdf](http://arxiv.org/pdf/2209.05785v1)
+
+**Authors**: Hadi M. Dolatabadi, Sarah Erfani, Christopher Leckie
+
+**Abstracts**: Neural networks are vulnerable to adversarial attacks: adding well-crafted, imperceptible perturbations to their input can modify their output. Adversarial training is one of the most effective approaches to training robust models against such attacks. Unfortunately, this method is much slower than vanilla training of neural networks since it needs to construct adversarial examples for the entire training data at every iteration. By leveraging the theory of coreset selection, we show how selecting a small subset of training data provides a principled approach to reducing the time complexity of robust training. To this end, we first provide convergence guarantees for adversarial coreset selection. In particular, we show that the convergence bound is directly related to how well our coresets can approximate the gradient computed over the entire training data. Motivated by our theoretical analysis, we propose using this gradient approximation error as our adversarial coreset selection objective to reduce the training set size effectively. Once built, we run adversarial training over this subset of the training data. Unlike existing methods, our approach can be adapted to a wide variety of training objectives, including TRADES, $\ell_p$-PGD, and Perceptual Adversarial Training. We conduct extensive experiments to demonstrate that our approach speeds up adversarial training by 2-3 times while experiencing a slight degradation in the clean and robust accuracy.
+
+摘要: 神经网络很容易受到敌意攻击：在它们的输入中添加精心设计的、不可察觉的扰动可以修改它们的输出。对抗性训练是训练抵抗此类攻击的稳健模型的最有效方法之一。遗憾的是，这种方法比普通的神经网络训练要慢得多，因为它需要在每次迭代中为整个训练数据构造对抗性样本。通过利用核心选择理论，我们展示了如何选择一小部分训练数据提供了一种原则性的方法来降低稳健训练的时间复杂性。为此，我们首先为对抗性核心重置选择提供收敛保证。特别是，我们证明了收敛界与我们的核集在整个训练数据上计算的梯度的逼近程度直接相关。在理论分析的基础上，我们提出了利用这一梯度逼近误差作为对抗性核心集选择的目标，以有效地减少训练集的规模。一旦构建，我们就对训练数据的这个子集进行对抗性训练。与现有方法不同，我们的方法可以适应广泛的训练目标，包括交易、$\ell_p$-PGD和感知对手训练。我们进行了大量的实验，证明了我们的方法将对手训练速度提高了2-3倍，同时经历了干净和健壮的准确性的轻微下降。
+
+
+
+## **6. Adaptive Perturbation Generation for Multiple Backdoors Detection**
+
+多后门检测的自适应扰动生成 cs.CV
+
+7 pages, 5 figures
+
+**SubmitDate**: 2022-09-13    [paper-pdf](http://arxiv.org/pdf/2209.05244v2)
+
+**Authors**: Yuhang Wang, Huafeng Shi, Rui Min, Ruijia Wu, Siyuan Liang, Yichao Wu, Ding Liang, Aishan Liu
+
+**Abstracts**: Extensive evidence has demonstrated that deep neural networks (DNNs) are vulnerable to backdoor attacks, which motivates the development of backdoor detection methods. Existing backdoor detection methods are typically tailored for backdoor attacks with individual specific types (e.g., patch-based or perturbation-based). However, adversaries are likely to generate multiple types of backdoor attacks in practice, which challenges the current detection strategies. Based on the fact that adversarial perturbations are highly correlated with trigger patterns, this paper proposes the Adaptive Perturbation Generation (APG) framework to detect multiple types of backdoor attacks by adaptively injecting adversarial perturbations. Since different trigger patterns turn out to show highly diverse behaviors under the same adversarial perturbations, we first design the global-to-local strategy to fit the multiple types of backdoor triggers via adjusting the region and budget of attacks. To further increase the efficiency of perturbation injection, we introduce a gradient-guided mask generation strategy to search for the optimal regions for adversarial attacks. Extensive experiments conducted on multiple datasets (CIFAR-10, GTSRB, Tiny-ImageNet) demonstrate that our method outperforms state-of-the-art baselines by large margins(+12%).
+
+摘要: 大量证据表明，深度神经网络(DNN)很容易受到后门攻击，这促使了后门检测方法的发展。现有的后门检测方法通常是为个别特定类型的后门攻击量身定做的(例如，基于补丁或基于扰动)。然而，攻击者在实践中可能会产生多种类型的后门攻击，这对现有的检测策略提出了挑战。基于敌意扰动与触发模式高度相关的事实，提出了自适应扰动生成(APG)框架，通过自适应注入敌意扰动来检测多种类型的后门攻击。由于不同的触发模式在相同的对抗性扰动下表现出高度不同的行为，我们首先设计了全局到局部的策略，通过调整攻击的区域和预算来适应多种类型的后门触发。为了进一步提高扰动注入的效率，我们引入了一种梯度引导的掩码生成策略来搜索对抗性攻击的最优区域。在多个数据集(CIFAR-10，GTSRB，Tiny-ImageNet)上进行的大量实验表明，我们的方法比最先进的基线方法有很大的优势(+12%)。
+
+
+
+## **7. A Tale of HodgeRank and Spectral Method: Target Attack Against Rank Aggregation Is the Fixed Point of Adversarial Game**
+
+HodgeRank和谱方法的故事：针对等级聚集的目标攻击是对抗性游戏的固定点 cs.LG
+
+33 pages,  https://github.com/alphaprime/Target_Attack_Rank_Aggregation
+
+**SubmitDate**: 2022-09-13    [paper-pdf](http://arxiv.org/pdf/2209.05742v1)
+
+**Authors**: Ke Ma, Qianqian Xu, Jinshan Zeng, Guorong Li, Xiaochun Cao, Qingming Huang
+
+**Abstracts**: Rank aggregation with pairwise comparisons has shown promising results in elections, sports competitions, recommendations, and information retrieval. However, little attention has been paid to the security issue of such algorithms, in contrast to numerous research work on the computational and statistical characteristics. Driven by huge profits, the potential adversary has strong motivation and incentives to manipulate the ranking list. Meanwhile, the intrinsic vulnerability of the rank aggregation methods is not well studied in the literature. To fully understand the possible risks, we focus on the purposeful adversary who desires to designate the aggregated results by modifying the pairwise data in this paper. From the perspective of the dynamical system, the attack behavior with a target ranking list is a fixed point belonging to the composition of the adversary and the victim. To perform the targeted attack, we formulate the interaction between the adversary and the victim as a game-theoretic framework consisting of two continuous operators while Nash equilibrium is established. Then two procedures against HodgeRank and RankCentrality are constructed to produce the modification of the original data. Furthermore, we prove that the victims will produce the target ranking list once the adversary masters the complete information. It is noteworthy that the proposed methods allow the adversary only to hold incomplete information or imperfect feedback and perform the purposeful attack. The effectiveness of the suggested target attack strategies is demonstrated by a series of toy simulations and several real-world data experiments. These experimental results show that the proposed methods could achieve the attacker's goal in the sense that the leading candidate of the perturbed ranking list is the designated one by the adversary.
+
+摘要: 在选举、体育竞赛、推荐和信息检索等领域，采用配对比较的排名聚合方法已显示出良好的效果。然而，与大量关于算法的计算和统计特性的研究工作相比，对这类算法的安全问题关注较少。在巨额利润的驱动下，潜在对手操纵排行榜的动机和动机很强。同时，文献中对秩聚类方法的内在脆弱性的研究还不够深入。为了充分理解可能的风险，我们将重点放在有目的的对手身上，他们希望通过修改成对数据来指定聚合结果。从动力系统的角度来看，具有目标排行榜的攻击行为是属于对手和受害者组成的固定点。为了进行有针对性的攻击，我们将对手和受害者之间的相互作用描述为一个由两个连续算子组成的博弈论框架，同时建立了纳什均衡。然后构造了针对HodgeRank和RankCentrality的两个过程来产生对原始数据的修改。此外，我们证明了一旦对手掌握了完整的信息，受害者就会产生目标排名表。值得注意的是，所提出的方法只允许对手持有不完全信息或不完全反馈，并执行有目的的攻击。通过一系列玩具仿真和几个真实世界的数据实验，验证了所提出的目标攻击策略的有效性。实验结果表明，所提出的方法能够达到攻击者的目的，即扰动排序列表的领先候选者就是对手指定的候选者。
+
+
+
+## **8. Sample Complexity of an Adversarial Attack on UCB-based Best-arm Identification Policy**
+
+基于UCB的最佳武器识别策略下对抗性攻击的样本复杂性 cs.LG
+
+**SubmitDate**: 2022-09-13    [paper-pdf](http://arxiv.org/pdf/2209.05692v1)
+
+**Authors**: Varsha Pendyala
+
+**Abstracts**: In this work I study the problem of adversarial perturbations to rewards, in a Multi-armed bandit (MAB) setting. Specifically, I focus on an adversarial attack to a UCB type best-arm identification policy applied to a stochastic MAB. The UCB attack presented in [1] results in pulling a target arm K very often. I used the attack model of [1] to derive the sample complexity required for selecting target arm K as the best arm. I have proved that the stopping condition of UCB based best-arm identification algorithm given in [2], can be achieved by the target arm K in T rounds, where T depends only on the total number of arms and $\sigma$ parameter of $\sigma^2-$ sub-Gaussian random rewards of the arms.
+
+摘要: 在这项工作中，我研究了多臂强盗(MAB)环境下的对抗性报酬摄动问题。具体地说，我将重点放在对应用于随机MAB的UCB类型的最佳ARM识别策略的对抗性攻击上。文[1]中提出的UCB攻击导致经常拉动目标手臂K。我使用了[1]的攻击模型来推导出选择目标手臂K作为最佳手臂所需的样本复杂度。证明了文[2]中给出的基于UCB的最佳手臂识别算法的停止条件可以由目标手臂K在T轮中实现，其中T仅取决于手臂的总数和手臂的$\sigma^2-$亚高斯随机奖励的$\sigma参数。
+
+
+
+## **9. Replay-based Recovery for Autonomous Robotic Vehicles from Sensor Deception Attacks**
+
+基于重放的自主机器人对传感器欺骗攻击的恢复 cs.RO
+
+**SubmitDate**: 2022-09-13    [paper-pdf](http://arxiv.org/pdf/2209.04554v2)
+
+**Authors**: Pritam Dash, Guanpeng Li, Mehdi Karimibiuki, Karthik Pattabiraman
+
+**Abstracts**: Sensors are crucial for autonomous operation in robotic vehicles (RV). Physical attacks on sensors such as sensor tampering or spoofing can feed erroneous values to RVs through physical channels, which results in mission failures. In this paper, we present DeLorean, a comprehensive diagnosis and recovery framework for securing autonomous RVs from physical attacks. We consider a strong form of physical attack called sensor deception attacks (SDAs), in which the adversary targets multiple sensors of different types simultaneously (even including all sensors). Under SDAs, DeLorean inspects the attack induced errors, identifies the targeted sensors, and prevents the erroneous sensor inputs from being used in RV's feedback control loop. DeLorean replays historic state information in the feedback control loop and recovers the RV from attacks. Our evaluation on four real and two simulated RVs shows that DeLorean can recover RVs from different attacks, and ensure mission success in 94% of the cases (on average), without any crashes. DeLorean incurs low performance, memory and battery overheads.
+
+摘要: 传感器对于机器人车辆(RV)的自主操作至关重要。对传感器的物理攻击，如传感器篡改或欺骗，可能会通过物理通道向房车提供错误的值，从而导致任务失败。在本文中，我们提出了DeLorean，一个全面的诊断和恢复框架，用于保护自主房车免受物理攻击。我们考虑了一种称为传感器欺骗攻击(SDA)的强物理攻击形式，在这种攻击中，对手同时针对不同类型的多个传感器(甚至包括所有传感器)。在SDAS下，DeLorean检查攻击导致的错误，识别目标传感器，并防止错误的传感器输入用于房车的反馈控制回路。DeLorean在反馈控制环路中重放历史状态信息，并恢复RV免受攻击。我们对四辆真实房车和两辆模拟房车的评估表明，DeLorean可以从不同的攻击中恢复房车，并确保94%的任务成功(平均而言)，而不会发生任何崩溃。DeLorean的性能、内存和电池开销都很低。
+
+
+
+## **10. Boosting Robustness Verification of Semantic Feature Neighborhoods**
+
+增强语义特征邻域的健壮性验证 cs.LG
+
+**SubmitDate**: 2022-09-12    [paper-pdf](http://arxiv.org/pdf/2209.05446v1)
+
+**Authors**: Anan Kabaha, Dana Drachsler-Cohen
+
+**Abstracts**: Deep neural networks have been shown to be vulnerable to adversarial attacks that perturb inputs based on semantic features. Existing robustness analyzers can reason about semantic feature neighborhoods to increase the networks' reliability. However, despite the significant progress in these techniques, they still struggle to scale to deep networks and large neighborhoods. In this work, we introduce VeeP, an active learning approach that splits the verification process into a series of smaller verification steps, each is submitted to an existing robustness analyzer. The key idea is to build on prior steps to predict the next optimal step. The optimal step is predicted by estimating the certification velocity and sensitivity via parametric regression. We evaluate VeeP on MNIST, Fashion-MNIST, CIFAR-10 and ImageNet and show that it can analyze neighborhoods of various features: brightness, contrast, hue, saturation, and lightness. We show that, on average, given a 90 minute timeout, VeeP verifies 96% of the maximally certifiable neighborhoods within 29 minutes, while existing splitting approaches verify, on average, 73% of the maximally certifiable neighborhoods within 58 minutes.
+
+摘要: 深度神经网络已被证明容易受到基于语义特征的输入扰乱的对抗性攻击。现有的健壮性分析器可以对语义特征邻域进行推理，以增加网络的可靠性。然而，尽管这些技术取得了重大进展，它们仍难以扩展到深度网络和大型社区。在这项工作中，我们引入了VeEP，这是一种主动学习方法，它将验证过程划分为一系列较小的验证步骤，每个步骤都提交给现有的健壮性分析器。其关键思想是建立在先前步骤的基础上，以预测下一个最佳步骤。通过参数回归估计认证速度和灵敏度，预测最优步骤。我们在MNIST、Fashion-MNIST、CIFAR-10和ImageNet上对Veep进行了评估，结果表明，它可以分析各种特征的社区：亮度、对比度、色调、饱和度和亮度。我们发现，在平均90分钟的超时时间内，Veep在29分钟内验证了96%的最大可证明邻域，而现有的分割方法平均在58分钟内验证了73%的最大可证明邻域。
+
+
+
+## **11. Bilevel Optimization with a Lower-level Contraction: Optimal Sample Complexity without Warm-Start**
+
+低水平收缩的两层优化：无热启动的最优样本复杂性 stat.ML
+
+35 pages, 2 figures. Code at  https://github.com/CSML-IIT-UCL/bioptexps
+
+**SubmitDate**: 2022-09-12    [paper-pdf](http://arxiv.org/pdf/2202.03397v2)
+
+**Authors**: Riccardo Grazzi, Massimiliano Pontil, Saverio Salzo
+
+**Abstracts**: We analyze a general class of bilevel problems, in which the upper-level problem consists in the minimization of a smooth objective function and the lower-level problem is to find the fixed point of a smooth contraction map. This type of problems include instances of meta-learning, equilibrium models, hyperparameter optimization and data poisoning adversarial attacks. Several recent works have proposed algorithms which warm-start the lower level problem, i.e. they use the previous lower-level approximate solution as a staring point for the lower-level solver. This warm-start procedure allows one to improve the sample complexity in both the stochastic and deterministic settings, achieving in some cases the order-wise optimal sample complexity. However, there are situations, e.g., meta learning and equilibrium models, in which the warm-start procedure is not well-suited or ineffective. In this work we show that without warm-start, it is still possible to achieve order-wise optimal or near-optimal sample complexity. In particular, we propose a simple method which uses stochastic fixed point iterations at the lower-level and projected inexact gradient descent at the upper-level, that reaches an $\epsilon$-stationary point using $O(\epsilon^{-2})$ and $\tilde{O}(\epsilon^{-1})$ samples for the stochastic and the deterministic setting, respectively. Finally, compared to methods using warm-start, our approach yields a simpler analysis that does not need to study the coupled interactions between the upper-level and lower-level iterates
+
+摘要: 我们分析了一类一般的两层问题，其中上层问题在于光滑目标函数的最小化，下层问题是寻找光滑压缩映射的不动点。这类问题包括元学习、均衡模型、超参数优化和数据中毒攻击等实例。最近的一些工作提出了暖启动下层问题的算法，即使用先前的下层近似解作为下层求解器的起始点。这种热启动过程允许人们在随机和确定性设置下改善样本复杂性，在某些情况下实现顺序最优的样本复杂性。然而，在一些情况下，例如元学习和平衡模型，热启动程序不是很适合或无效的。在这项工作中，我们证明了在没有热启动的情况下，仍然有可能获得按顺序最优或接近最优的样本复杂度。特别地，我们提出了一种简单的方法，它在低层使用随机不动点迭代，在上层使用投影的不精确梯度下降，分别在随机和确定环境下使用$O(epsilon^{-2})$和$tide{O}(epsilon^{-1})$样本达到$epsilon$-驻点。最后，与使用热启动的方法相比，我们的方法产生了更简单的分析，不需要研究上层和下层迭代之间的耦合作用
+
+
+
+## **12. Fiat-Shamir for Proofs Lacks a Proof Even in the Presence of Shared Entanglement**
+
+菲亚特-沙米尔的证据缺乏证据，即使在存在共同纠缠的情况下 quant-ph
+
+62 pages, 2 figures
+
+**SubmitDate**: 2022-09-12    [paper-pdf](http://arxiv.org/pdf/2204.02265v2)
+
+**Authors**: Frédéric Dupuis, Philippe Lamontagne, Louis Salvail
+
+**Abstracts**: We explore the cryptographic power of arbitrary shared physical resources. The most general such resource is access to a fresh entangled quantum state at the outset of each protocol execution. We call this the Common Reference Quantum State (CRQS) model, in analogy to the well-known Common Reference String (CRS). The CRQS model is a natural generalization of the CRS model but appears to be more powerful: in the two-party setting, a CRQS can sometimes exhibit properties associated with a Random Oracle queried once by measuring a maximally entangled state in one of many mutually unbiased bases. We formalize this notion as a Weak One-Time Random Oracle (WOTRO), where we only ask of the $m$--bit output to have some randomness when conditioned on the $n$--bit input.   We show that when $n-m\in\omega(\lg n)$, any protocol for WOTRO in the CRQS model can be attacked by an (inefficient) adversary. Moreover, our adversary is efficiently simulatable, which rules out the possibility of proving the computational security of a scheme by a black-box reduction to a cryptographic game assumption. On the other hand, we introduce a non-game quantum assumption for hash functions that implies WOTRO in the CRQ\$ model (where the CRQS consists only of EPR pairs). We first build a statistically secure WOTRO protocol where $m=n$, then hash the output.   The impossibility of WOTRO has the following consequences. First, we show the black-box impossibility of a quantum Fiat-Shamir transform, extending the impossibility result of Bitansky et al. (TCC '13) to the CRQS model. Second, we show a black-box impossibility result for a strenghtened version of quantum lightning (Zhandry, Eurocrypt '19) where quantum bolts have an additional parameter that cannot be changed without generating new bolts.
+
+摘要: 我们探索任意共享物理资源的加密能力。最常见的这类资源是在每个协议执行开始时访问新的纠缠量子态。我们称之为公共参考量子态(CRQS)模型，类似于众所周知的公共参考弦(CRS)。CRQS模型是CRS模型的自然推广，但似乎更强大：在两方设置中，CRQS有时可以通过测量许多相互无偏的碱基之一中的最大纠缠态来展示与查询一次的随机Oracle相关联的属性。我们将这个概念形式化为弱一次性随机Oracle(WOTRO)，其中我们只要求$m$位的输出在以$n$位输入为条件时具有一定的随机性。我们证明了当$n-m\in\omega(\lg n)$时，CRQS模型中用于WOTRO的任何协议都可以被(低效的)攻击者攻击。此外，我们的对手是高效可模拟的，这排除了通过将黑盒简化为密码博弈假设来证明方案的计算安全性的可能性。另一方面，我们引入了散列函数的非博弈量子假设，在CRQ模型(其中CRQS只由EPR对组成)中隐含了WOTRO。我们首先构建一个统计安全的WOTRO协议，其中$m=n$，然后对输出进行散列。WOTRO的不可能性会产生以下后果。首先，我们证明了量子Fiat-Shamir变换的黑盒不可能性，推广了Bitansky等人的不可能结果。其次，我们给出了一个加强版量子闪电(Zhandry，Eurocrypt‘19)的黑箱不可能结果，其中量子闪电有一个额外的参数，如果不产生新的闪电，这个参数就不能改变。
+
+
+
+## **13. A Survey of Machine Unlearning**
+
+机器遗忘研究综述 cs.LG
+
+fixed overlaps
+
+**SubmitDate**: 2022-09-12    [paper-pdf](http://arxiv.org/pdf/2209.02299v4)
+
+**Authors**: Thanh Tam Nguyen, Thanh Trung Huynh, Phi Le Nguyen, Alan Wee-Chung Liew, Hongzhi Yin, Quoc Viet Hung Nguyen
+
+**Abstracts**: Computer systems hold a large amount of personal data over decades. On the one hand, such data abundance allows breakthroughs in artificial intelligence (AI), especially machine learning (ML) models. On the other hand, it can threaten the privacy of users and weaken the trust between humans and AI. Recent regulations require that private information about a user can be removed from computer systems in general and from ML models in particular upon request (e.g. the "right to be forgotten"). While removing data from back-end databases should be straightforward, it is not sufficient in the AI context as ML models often "remember" the old data. Existing adversarial attacks proved that we can learn private membership or attributes of the training data from the trained models. This phenomenon calls for a new paradigm, namely machine unlearning, to make ML models forget about particular data. It turns out that recent works on machine unlearning have not been able to solve the problem completely due to the lack of common frameworks and resources. In this survey paper, we seek to provide a thorough investigation of machine unlearning in its definitions, scenarios, mechanisms, and applications. Specifically, as a categorical collection of state-of-the-art research, we hope to provide a broad reference for those seeking a primer on machine unlearning and its various formulations, design requirements, removal requests, algorithms, and uses in a variety of ML applications. Furthermore, we hope to outline key findings and trends in the paradigm as well as highlight new areas of research that have yet to see the application of machine unlearning, but could nonetheless benefit immensely. We hope this survey provides a valuable reference for ML researchers as well as those seeking to innovate privacy technologies. Our resources are at https://github.com/tamlhp/awesome-machine-unlearning.
+
+摘要: 几十年来，计算机系统保存着大量的个人数据。一方面，这样的数据丰富使人工智能(AI)，特别是机器学习(ML)模型取得了突破。另一方面，它会威胁用户的隐私，削弱人类与AI之间的信任。最近的法规要求，一般情况下，可以从计算机系统中删除关于用户的私人信息，特别是在请求时可以从ML模型中删除用户的私人信息(例如，“被遗忘权”)。虽然从后端数据库中删除数据应该很简单，但在人工智能环境中这是不够的，因为ML模型经常“记住”旧数据。现有的对抗性攻击证明，我们可以从训练好的模型中学习训练数据的私人成员或属性。这种现象呼唤一种新的范式，即机器遗忘，以使ML模型忘记特定的数据。事实证明，由于缺乏通用的框架和资源，最近关于机器遗忘的研究并不能完全解决这个问题。在这篇调查论文中，我们试图对机器遗忘的定义、场景、机制和应用进行全面的调查。具体地说，作为最新研究的分类集合，我们希望为那些寻求机器遗忘及其各种公式、设计要求、移除请求、算法和在各种ML应用中使用的入门知识的人提供广泛的参考。此外，我们希望概述该范式中的主要发现和趋势，并强调尚未看到机器遗忘应用的新研究领域，但仍可能受益匪浅。我们希望这项调查为ML研究人员以及那些寻求创新隐私技术的人提供有价值的参考。我们的资源在https://github.com/tamlhp/awesome-machine-unlearning.
+
+
+
+## **14. GRNN: Generative Regression Neural Network -- A Data Leakage Attack for Federated Learning**
+
+GRNN：生成回归神经网络--一种面向联邦学习的数据泄漏攻击 cs.LG
+
+The source code can be found at: https://github.com/Rand2AI/GRNN
+
+**SubmitDate**: 2022-09-12    [paper-pdf](http://arxiv.org/pdf/2105.00529v3)
+
+**Authors**: Hanchi Ren, Jingjing Deng, Xianghua Xie
+
+**Abstracts**: Data privacy has become an increasingly important issue in Machine Learning (ML), where many approaches have been developed to tackle this challenge, e.g. cryptography (Homomorphic Encryption (HE), Differential Privacy (DP), etc.) and collaborative training (Secure Multi-Party Computation (MPC), Distributed Learning and Federated Learning (FL)). These techniques have a particular focus on data encryption or secure local computation. They transfer the intermediate information to the third party to compute the final result. Gradient exchanging is commonly considered to be a secure way of training a robust model collaboratively in Deep Learning (DL). However, recent researches have demonstrated that sensitive information can be recovered from the shared gradient. Generative Adversarial Network (GAN), in particular, has shown to be effective in recovering such information. However, GAN based techniques require additional information, such as class labels which are generally unavailable for privacy-preserved learning. In this paper, we show that, in the FL system, image-based privacy data can be easily recovered in full from the shared gradient only via our proposed Generative Regression Neural Network (GRNN). We formulate the attack to be a regression problem and optimize two branches of the generative model by minimizing the distance between gradients. We evaluate our method on several image classification tasks. The results illustrate that our proposed GRNN outperforms state-of-the-art methods with better stability, stronger robustness, and higher accuracy. It also has no convergence requirement to the global FL model. Moreover, we demonstrate information leakage using face re-identification. Some defense strategies are also discussed in this work.
+
+摘要: 数据隐私已经成为机器学习(ML)中一个日益重要的问题，人们已经开发了许多方法来应对这一挑战，例如密码学(同态加密(HE)、差分隐私(DP)等)。和协作培训(安全多方计算(MPC)、分布式学习和联合学习(FL))。这些技术特别关注数据加密或安全本地计算。他们将中间信息传递给第三方来计算最终结果。梯度交换通常被认为是深度学习中协作训练健壮模型的一种安全方式。然而，最近的研究表明，敏感信息可以从共享梯度中恢复出来。尤其是生成性对抗网络(GAN)在恢复这类信息方面是有效的。然而，基于GaN的技术需要额外的信息，例如类别标签，这些信息通常不能用于隐私保护学习。在本文中，我们证明，在FL系统中，仅通过我们提出的生成回归神经网络(GRNN)就可以很容易地从共享梯度中完全恢复基于图像的隐私数据。我们将攻击描述为一个回归问题，并通过最小化梯度之间的距离来优化生成模型的两个分支。我们在几个图像分类任务上对我们的方法进行了评估。实验结果表明，本文提出的GRNN方法在稳定性、鲁棒性和准确率等方面均优于现有的方法。它对全局FL模型也没有收敛要求。此外，我们还使用人脸重新识别来演示信息泄漏。文中还讨论了一些防御策略。
+
+
+
+## **15. Semantic-Preserving Adversarial Code Comprehension**
+
+保留语义的对抗性代码理解 cs.CL
+
+Accepted by COLING 2022
+
+**SubmitDate**: 2022-09-12    [paper-pdf](http://arxiv.org/pdf/2209.05130v1)
+
+**Authors**: Yiyang Li, Hongqiu Wu, Hai Zhao
+
+**Abstracts**: Based on the tremendous success of pre-trained language models (PrLMs) for source code comprehension tasks, current literature studies either ways to further improve the performance (generalization) of PrLMs, or their robustness against adversarial attacks. However, they have to compromise on the trade-off between the two aspects and none of them consider improving both sides in an effective and practical way. To fill this gap, we propose Semantic-Preserving Adversarial Code Embeddings (SPACE) to find the worst-case semantic-preserving attacks while forcing the model to predict the correct labels under these worst cases. Experiments and analysis demonstrate that SPACE can stay robust against state-of-the-art attacks while boosting the performance of PrLMs for code.
+
+摘要: 基于预先训练的语言模型在源代码理解任务中的巨大成功，目前的文献研究要么是进一步提高预先训练的语言模型的性能(泛化)，要么是研究它们对对手攻击的健壮性。然而，他们不得不在这两个方面的权衡上妥协，没有一个人考虑以有效和实际的方式改善双方。为了填补这一空白，我们提出了保持语义的对抗性代码嵌入(SPACE)，以发现最坏情况下保持语义的攻击，同时迫使模型在这些最坏情况下预测正确的标签。实验和分析表明，SPACE在提高PrLMS代码性能的同时，可以保持对最先进攻击的健壮性。
+
+
+
+## **16. Passive Triangulation Attack on ORide**
+
+ORIDE上的被动三角剖分攻击 cs.CR
+
+**SubmitDate**: 2022-09-12    [paper-pdf](http://arxiv.org/pdf/2208.12216v2)
+
+**Authors**: Shyam Murthy, Srinivas Vivek
+
+**Abstracts**: Privacy preservation in Ride Hailing Services is intended to protect privacy of drivers and riders. ORide is one of the early RHS proposals published at USENIX Security Symposium 2017. In the ORide protocol, riders and drivers, operating in a zone, encrypt their locations using a Somewhat Homomorphic Encryption scheme (SHE) and forward them to the Service Provider (SP). SP homomorphically computes the squared Euclidean distance between riders and available drivers. Rider receives the encrypted distances and selects the optimal rider after decryption. In order to prevent a triangulation attack, SP randomly permutes the distances before sending them to the rider. In this work, we use propose a passive attack that uses triangulation to determine coordinates of all participating drivers whose permuted distances are available from the points of view of multiple honest-but-curious adversary riders. An attack on ORide was published at SAC 2021. The same paper proposes a countermeasure using noisy Euclidean distances to thwart their attack. We extend our attack to determine locations of drivers when given their permuted and noisy Euclidean distances from multiple points of reference, where the noise perturbation comes from a uniform distribution. We conduct experiments with different number of drivers and for different perturbation values. Our experiments show that we can determine locations of all drivers participating in the ORide protocol. For the perturbed distance version of the ORide protocol, our algorithm reveals locations of about 25% to 50% of participating drivers. Our algorithm runs in time polynomial in number of drivers.
+
+摘要: 网约车服务中的隐私保护旨在保护司机和乘客的隐私。ORIDE是USENIX安全研讨会2017上发布的早期RHS提案之一。在ORIDE协议中，在区域中操作的乘客和司机使用某种同态加密方案(SHE)加密他们的位置，并将其转发给服务提供商(SP)。SP同态计算乘客和可用司机之间的平方欧几里得距离。骑手收到加密的距离，解密后选择最优的骑手。为了防止三角测量攻击，SP在将距离发送给骑手之前随机排列距离。在这项工作中，我们使用了一种被动攻击，该攻击使用三角测量来确定所有参与的司机的坐标，这些司机的置换距离是从多个诚实但好奇的对手车手的角度出发的。对ORide的攻击在SAC 2021上发表。同时提出了一种利用噪声欧几里德距离来阻止他们攻击的对策。当给定司机与多个参考点的置换和噪声欧几里德距离时，我们将我们的攻击扩展到确定司机的位置，其中噪声扰动来自均匀分布。我们对不同数量的驱动器和不同的摄动值进行了实验。我们的实验表明，我们可以确定所有参与ORIDE协议的司机的位置。对于受干扰的距离版本的ORide协议，我们的算法显示了大约25%到50%的参与司机的位置。我们的算法以时间多项式的形式运行在驱动器的数量上。
+
+
+
+## **17. CARE: Certifiably Robust Learning with Reasoning via Variational Inference**
+
+注意：通过变分推理进行推理的可证明稳健学习 cs.LG
+
+**SubmitDate**: 2022-09-12    [paper-pdf](http://arxiv.org/pdf/2209.05055v1)
+
+**Authors**: Jiawei Zhang, Linyi Li, Ce Zhang, Bo Li
+
+**Abstracts**: Despite great recent advances achieved by deep neural networks (DNNs), they are often vulnerable to adversarial attacks. Intensive research efforts have been made to improve the robustness of DNNs; however, most empirical defenses can be adaptively attacked again, and the theoretically certified robustness is limited, especially on large-scale datasets. One potential root cause of such vulnerabilities for DNNs is that although they have demonstrated powerful expressiveness, they lack the reasoning ability to make robust and reliable predictions. In this paper, we aim to integrate domain knowledge to enable robust learning with the reasoning paradigm. In particular, we propose a certifiably robust learning with reasoning pipeline (CARE), which consists of a learning component and a reasoning component. Concretely, we use a set of standard DNNs to serve as the learning component to make semantic predictions, and we leverage the probabilistic graphical models, such as Markov logic networks (MLN), to serve as the reasoning component to enable knowledge/logic reasoning. However, it is known that the exact inference of MLN (reasoning) is #P-complete, which limits the scalability of the pipeline. To this end, we propose to approximate the MLN inference via variational inference based on an efficient expectation maximization algorithm. In particular, we leverage graph convolutional networks (GCNs) to encode the posterior distribution during variational inference and update the parameters of GCNs (E-step) and the weights of knowledge rules in MLN (M-step) iteratively. We conduct extensive experiments on different datasets and show that CARE achieves significantly higher certified robustness compared with the state-of-the-art baselines. We additionally conducted different ablation studies to demonstrate the empirical robustness of CARE and the effectiveness of different knowledge integration.
+
+摘要: 尽管深度神经网络(DNN)最近取得了很大的进展，但它们往往容易受到对手的攻击。人们已经进行了大量的研究来提高DNN的稳健性，然而，大多数经验防御都可以再次自适应攻击，理论上证明的健壮性是有限的，特别是在大规模数据集上。DNN这种漏洞的一个潜在根本原因是，尽管它们表现出强大的表现力，但它们缺乏做出稳健和可靠预测的推理能力。在本文中，我们的目标是将领域知识集成到推理范式中，以实现稳健的学习。特别地，我们提出了一种带推理的可证明稳健学习流水线(CARE)，该流水线由学习组件和推理组件组成。具体地说，我们使用一组标准的DNN作为学习组件进行语义预测，并利用马尔可夫逻辑网络(MLN)等概率图形模型作为推理组件来实现知识/逻辑推理。然而，众所周知，MLN(推理)的精确推理是#P-完全的，这限制了流水线的可扩展性。为此，我们提出了基于一种有效的期望最大化算法的变分推理来逼近最大似然推理。特别是，我们利用图卷积网络(GCNS)对变分推理过程中的后验分布进行编码，并迭代地更新GCNS的参数(E步)和MLN中知识规则的权值(M步)。我们在不同的数据集上进行了广泛的实验，并表明与最先进的基线相比，CARE实现了显著更高的认证稳健性。此外，我们还进行了不同的消融研究，以证明CARE的经验稳健性和不同知识整合的有效性。
+
+
+
+## **18. GFCL: A GRU-based Federated Continual Learning Framework against Data Poisoning Attacks in IoV**
+
+GFCL：一种基于GRU的联合持续学习框架对抗IoV中的数据中毒攻击 cs.LG
+
+11 pages, 12 figures, 3 tables; This work has been submitted to the  IEEE Transactions on Vehicular Technology for possible publication. Copyright  may be transferred without notice, after which this version may no longer be  accessible
+
+**SubmitDate**: 2022-09-12    [paper-pdf](http://arxiv.org/pdf/2204.11010v2)
+
+**Authors**: Anum Talpur, Mohan Gurusamy
+
+**Abstracts**: Integration of machine learning (ML) in 5G-based Internet of Vehicles (IoV) networks has enabled intelligent transportation and smart traffic management. Nonetheless, the security against adversarial poisoning attacks is also increasingly becoming a challenging task. Specifically, Deep Reinforcement Learning (DRL) is one of the widely used ML designs in IoV applications. The standard ML security techniques are not effective in DRL where the algorithm learns to solve sequential decision-making through continuous interaction with the environment, and the environment is time-varying, dynamic, and mobile. In this paper, we propose a Gated Recurrent Unit (GRU)-based federated continual learning (GFCL) anomaly detection framework against Sybil-based data poisoning attacks in IoV. The objective is to present a lightweight and scalable framework that learns and detects the illegitimate behavior without having a-priori training dataset consisting of attack samples. We use GRU to predict a future data sequence to analyze and detect illegitimate behavior from vehicles in a federated learning-based distributed manner. We investigate the performance of our framework using real-world vehicle mobility traces. The results demonstrate the effectiveness of our proposed solution in terms of different performance metrics.
+
+摘要: 将机器学习(ML)集成到基于5G的车联网(IoV)网络中，实现了智能交通和智能交通管理。尽管如此，防御对抗性中毒攻击的安全也日益成为一项具有挑战性的任务。其中，深度强化学习(DRL)是IoV应用中广泛使用的ML设计之一。标准的ML安全技术在DRL中并不有效，在DRL中，算法通过与环境的持续交互来学习解决顺序决策，并且环境是时变的、动态的和移动的。针对物联网中基于Sybil的数据中毒攻击，提出了一种基于门控递归单元(GRU)的联合连续学习(GFCL)异常检测框架。其目的是提供一个轻量级和可扩展的框架，在没有包含攻击样本的先验训练数据集的情况下学习和检测非法行为。我们使用GRU来预测未来的数据序列，以基于联合学习的分布式方式来分析和检测车辆的非法行为。我们使用真实世界的车辆移动轨迹来研究我们的框架的性能。结果表明，在不同的性能指标下，我们提出的解决方案是有效的。
+
+
+
+## **19. Generate novel and robust samples from data: accessible sharing without privacy concerns**
+
+从数据中生成新颖且可靠的样本：无隐私问题的可访问共享 cs.LG
+
+**SubmitDate**: 2022-09-12    [paper-pdf](http://arxiv.org/pdf/2209.06113v1)
+
+**Authors**: David Banh, Alan Huang
+
+**Abstracts**: Generating new samples from data sets can mitigate extra expensive operations, increased invasive procedures, and mitigate privacy issues. These novel samples that are statistically robust can be used as a temporary and intermediate replacement when privacy is a concern. This method can enable better data sharing practices without problems relating to identification issues or biases that are flaws for an adversarial attack.
+
+摘要: 从数据集生成新样本可以减少额外昂贵的操作、增加侵入性程序，并缓解隐私问题。当隐私受到关注时，这些在统计上稳健的新样本可以用作临时和中间替代。这种方法可以实现更好的数据共享实践，而不会出现与识别问题或作为对抗性攻击缺陷的偏见有关的问题。
+
+
+
+## **20. Resisting Deep Learning Models Against Adversarial Attack Transferability via Feature Randomization**
+
+基于特征随机化的抗敌意攻击传递的深度学习模型 cs.CR
+
+**SubmitDate**: 2022-09-11    [paper-pdf](http://arxiv.org/pdf/2209.04930v1)
+
+**Authors**: Ehsan Nowroozi, Mohammadreza Mohammadi, Pargol Golmohammadi, Yassine Mekdad, Mauro Conti, Selcuk Uluagac
+
+**Abstracts**: In the past decades, the rise of artificial intelligence has given us the capabilities to solve the most challenging problems in our day-to-day lives, such as cancer prediction and autonomous navigation. However, these applications might not be reliable if not secured against adversarial attacks. In addition, recent works demonstrated that some adversarial examples are transferable across different models. Therefore, it is crucial to avoid such transferability via robust models that resist adversarial manipulations. In this paper, we propose a feature randomization-based approach that resists eight adversarial attacks targeting deep learning models in the testing phase. Our novel approach consists of changing the training strategy in the target network classifier and selecting random feature samples. We consider the attacker with a Limited-Knowledge and Semi-Knowledge conditions to undertake the most prevalent types of adversarial attacks. We evaluate the robustness of our approach using the well-known UNSW-NB15 datasets that include realistic and synthetic attacks. Afterward, we demonstrate that our strategy outperforms the existing state-of-the-art approach, such as the Most Powerful Attack, which consists of fine-tuning the network model against specific adversarial attacks. Finally, our experimental results show that our methodology can secure the target network and resists adversarial attack transferability by over 60%.
+
+摘要: 在过去的几十年里，人工智能的崛起给了我们解决日常生活中最具挑战性的问题的能力，比如癌症预测和自主导航。但是，如果不确保这些应用程序不能抵御敌意攻击，则这些应用程序可能不可靠。此外，最近的工作表明，一些对抗性例子可以在不同的模型之间转移。因此，通过稳健的模型抵抗敌意操纵来避免这种可转移性是至关重要的。在本文中，我们提出了一种基于特征随机化的方法，该方法在测试阶段抵抗了八种针对深度学习模型的对抗性攻击。我们的新方法包括改变目标网络分类器中的训练策略和随机选择特征样本。我们认为攻击者在有限知识和半知识条件下可以进行最常见的对抗性攻击类型。我们使用著名的UNSW-NB15数据集评估了我们方法的健壮性，其中包括现实攻击和合成攻击。之后，我们证明了我们的策略优于现有的最先进的方法，例如最强大的攻击，它包括针对特定的对手攻击对网络模型进行微调。实验结果表明，该方法能够保证目标网络的安全，并能抵抗60%以上的敌意攻击可转移性。
+
+
+
+## **21. Detecting Adversarial Perturbations in Multi-Task Perception**
+
+多任务感知中的对抗性扰动检测 cs.CV
+
+Accepted at IROS 2022
+
+**SubmitDate**: 2022-09-11    [paper-pdf](http://arxiv.org/pdf/2203.01177v2)
+
+**Authors**: Marvin Klingner, Varun Ravi Kumar, Senthil Yogamani, Andreas Bär, Tim Fingscheidt
+
+**Abstracts**: While deep neural networks (DNNs) achieve impressive performance on environment perception tasks, their sensitivity to adversarial perturbations limits their use in practical applications. In this paper, we (i) propose a novel adversarial perturbation detection scheme based on multi-task perception of complex vision tasks (i.e., depth estimation and semantic segmentation). Specifically, adversarial perturbations are detected by inconsistencies between extracted edges of the input image, the depth output, and the segmentation output. To further improve this technique, we (ii) develop a novel edge consistency loss between all three modalities, thereby improving their initial consistency which in turn supports our detection scheme. We verify our detection scheme's effectiveness by employing various known attacks and image noises. In addition, we (iii) develop a multi-task adversarial attack, aiming at fooling both tasks as well as our detection scheme. Experimental evaluation on the Cityscapes and KITTI datasets shows that under an assumption of a 5% false positive rate up to 100% of images are correctly detected as adversarially perturbed, depending on the strength of the perturbation. Code is available at https://github.com/ifnspaml/AdvAttackDet. A short video at https://youtu.be/KKa6gOyWmH4 provides qualitative results.
+
+摘要: 虽然深度神经网络(DNN)在环境感知任务中取得了令人印象深刻的性能，但它们对对抗性扰动的敏感性限制了它们在实际应用中的应用。本文(I)提出了一种基于复杂视觉任务多任务感知(深度估计和语义分割)的对抗性扰动检测方法。具体地，通过所提取的输入图像的边缘、深度输出和分割输出之间的不一致来检测对抗性扰动。为了进一步改进这一技术，我们(Ii)在所有三种模式之间开发了一种新的边缘一致性损失，从而改善了它们的初始一致性，这反过来又支持我们的检测方案。通过使用各种已知攻击和图像噪声来验证我们的检测方案的有效性。此外，我们(Iii)开发了一种多任务对抗性攻击，旨在愚弄两个任务和我们的检测方案。在CITYSCAPES和KITTI数据集上的实验评估表明，在假阳性率为5%的假设下，高达100%的图像被正确检测为恶意扰动，这取决于扰动的强度。代码可在https://github.com/ifnspaml/AdvAttackDet.上找到Https://youtu.be/KKa6gOyWmH4上的一段简短视频提供了定性的结果。
+
+
+
+## **22. Robustness through Cognitive Dissociation Mitigation in Contrastive Adversarial Training**
+
+对比性对抗训练中认知分离缓解的稳健性 cs.LG
+
+Accepted to ICMLC 2022
+
+**SubmitDate**: 2022-09-11    [paper-pdf](http://arxiv.org/pdf/2203.08959v3)
+
+**Authors**: Adir Rahamim, Itay Naeh
+
+**Abstracts**: In this paper, we introduce a novel neural network training framework that increases model's adversarial robustness to adversarial attacks while maintaining high clean accuracy by combining contrastive learning (CL) with adversarial training (AT). We propose to improve model robustness to adversarial attacks by learning feature representations that are consistent under both data augmentations and adversarial perturbations. We leverage contrastive learning to improve adversarial robustness by considering an adversarial example as another positive example, and aim to maximize the similarity between random augmentations of data samples and their adversarial example, while constantly updating the classification head in order to avoid a cognitive dissociation between the classification head and the embedding space. This dissociation is caused by the fact that CL updates the network up to the embedding space, while freezing the classification head which is used to generate new positive adversarial examples. We validate our method, Contrastive Learning with Adversarial Features(CLAF), on the CIFAR-10 dataset on which it outperforms both robust accuracy and clean accuracy over alternative supervised and self-supervised adversarial learning methods.
+
+摘要: 本文提出了一种新的神经网络训练框架，通过将对比学习(CL)和对抗训练(AT)相结合，在保持较高精度的同时，提高了模型对对手攻击的鲁棒性。我们提出通过学习在数据扩充和对抗性扰动下都是一致的特征表示来提高模型对对抗性攻击的稳健性。我们利用对比学习来提高对抗性样本的稳健性，将一个对抗性样本作为另一个正例，目标是最大化随机增加的数据样本与其对抗性样本之间的相似度，同时不断更新分类头，以避免分类头与嵌入空间之间的认知分离。这种分离是由于CL将网络更新到嵌入空间，同时冻结用于生成新的正面对抗性实例的分类头。我们在CIFAR-10数据集上验证了我们的方法，即带有对抗性特征的对比学习(CLAF)，在CIFAR-10数据集上，它的性能优于其他监督和自我监督对抗性学习方法的稳健准确率和干净准确率。
+
+
+
+## **23. Scattering Model Guided Adversarial Examples for SAR Target Recognition: Attack and Defense**
+
+散射模型制导的SAR目标识别对抗实例：攻防 cs.CV
+
+**SubmitDate**: 2022-09-11    [paper-pdf](http://arxiv.org/pdf/2209.04779v1)
+
+**Authors**: Bowen Peng, Bo Peng, Jie Zhou, Jianyue Xie, Li Liu
+
+**Abstracts**: Deep Neural Networks (DNNs) based Synthetic Aperture Radar (SAR) Automatic Target Recognition (ATR) systems have shown to be highly vulnerable to adversarial perturbations that are deliberately designed yet almost imperceptible but can bias DNN inference when added to targeted objects. This leads to serious safety concerns when applying DNNs to high-stake SAR ATR applications. Therefore, enhancing the adversarial robustness of DNNs is essential for implementing DNNs to modern real-world SAR ATR systems. Toward building more robust DNN-based SAR ATR models, this article explores the domain knowledge of SAR imaging process and proposes a novel Scattering Model Guided Adversarial Attack (SMGAA) algorithm which can generate adversarial perturbations in the form of electromagnetic scattering response (called adversarial scatterers). The proposed SMGAA consists of two parts: 1) a parametric scattering model and corresponding imaging method and 2) a customized gradient-based optimization algorithm. First, we introduce the effective Attributed Scattering Center Model (ASCM) and a general imaging method to describe the scattering behavior of typical geometric structures in the SAR imaging process. By further devising several strategies to take the domain knowledge of SAR target images into account and relax the greedy search procedure, the proposed method does not need to be prudentially finetuned, but can efficiently to find the effective ASCM parameters to fool the SAR classifiers and facilitate the robust model training. Comprehensive evaluations on the MSTAR dataset show that the adversarial scatterers generated by SMGAA are more robust to perturbations and transformations in the SAR processing chain than the currently studied attacks, and are effective to construct a defensive model against the malicious scatterers.
+
+摘要: 基于深度神经网络(DNN)的合成孔径雷达(SAR)自动目标识别(ATR)系统被证明是非常容易受到敌意扰动的，这些扰动是故意设计的，但几乎不可察觉，但当添加到目标对象时，会使DNN推理产生偏差。这导致在将DNN应用于高风险的SAR ATR应用时存在严重的安全问题。因此，增强DNN的对抗健壮性对于将DNN应用于现代真实的SARATR系统是至关重要的。为了建立更稳健的基于离散神经网络的合成孔径雷达ATR模型，本文深入研究了合成孔径雷达成像过程中的领域知识，提出了一种新的散射模型制导对抗攻击算法(SMGAA)，该算法可以产生电磁散射响应形式的对抗扰动(称为对抗散射者)。SMGAA由两部分组成：1)参数散射模型和相应的成像方法；2)定制的基于梯度的优化算法。首先，我们引入了有效属性散射中心模型(ASCM)和一种通用的成像方法来描述合成孔径雷达成像过程中典型几何结构的散射行为。通过进一步设计几种策略来考虑SAR目标图像的领域知识，并放松贪婪搜索过程，该方法不需要谨慎地精调，但可以有效地找到有效的ASCM参数来愚弄SAR分类器，便于稳健的模型训练。在MStar数据集上的综合评估表明，SMGAA生成的敌意散射体对SAR处理链中的扰动和变换具有更强的鲁棒性，并且能够有效地构建针对恶意散射体的防御模型。
+
+
+
+## **24. Atomic cross-chain exchanges of shared assets**
+
+共享资产的原子跨链交换 cs.CR
+
+**SubmitDate**: 2022-09-10    [paper-pdf](http://arxiv.org/pdf/2202.12855v3)
+
+**Authors**: Krishnasuri Narayanam, Venkatraman Ramakrishna, Dhinakaran Vinayagamurthy, Sandeep Nishad
+
+**Abstracts**: A core enabler for blockchain or DLT interoperability is the ability to atomically exchange assets held by mutually untrusting owners on different ledgers. This atomic swap problem has been well-studied, with the Hash Time Locked Contract (HTLC) emerging as a canonical solution. HTLC ensures atomicity of exchange, albeit with caveats for node failure and timeliness of claims. But a bigger limitation of HTLC is that it only applies to a model consisting of two adversarial parties having sole ownership of a single asset in each ledger. Realistic extensions of the model in which assets may be jointly owned by multiple parties, all of whose consents are required for exchanges, or where multiple assets must be exchanged for one, are susceptible to collusion attacks and hence cannot be handled by HTLC. In this paper, we generalize the model of asset exchanges across DLT networks and present a taxonomy of use cases, describe the threat model, and propose MPHTLC, an augmented HTLC protocol for atomic multi-owner-and-asset exchanges. We analyze the correctness, safety, and application scope of MPHTLC. As proof-of-concept, we show how MPHTLC primitives can be implemented in networks built on Hyperledger Fabric and Corda, and how MPHTLC can be implemented in the Hyperledger Labs Weaver framework by augmenting its existing HTLC protocol.
+
+摘要: 区块链或DLT互操作性的核心推动因素是能够自动交换不同分类账上相互不信任的所有者持有的资产。这个原子交换问题已经得到了很好的研究，哈希时间锁定合同(HTLC)成为一种规范的解决方案。HTLC确保了交换的原子性，但对节点故障和索赔的及时性提出了警告。但HTLC的一个更大限制是，它只适用于由两个对立方单独拥有每个分类账中的一项资产的模型。资产可能由多方共同拥有的模型的现实扩展，其中交易需要所有各方的同意，或者必须用多个资产交换一个资产，这容易受到共谋攻击，因此无法由HTLC处理。本文对跨DLT网络的资产交换模型进行了推广，给出了用例的分类，描述了威胁模型，并提出了一种用于原子多所有者和资产交换的扩展HTLC协议MPHTLC。分析了MPHTLC的正确性、安全性和适用范围。作为概念验证，我们展示了如何在建立在Hyperledger Fabric和Corda上的网络中实现MPHTLC原语，以及如何通过增强Hyperledger Labs Weaver框架的现有HTLC协议来实现MPHTLC。
+
+
+
+## **25. Phantom Sponges: Exploiting Non-Maximum Suppression to Attack Deep Object Detectors**
+
+幻影海绵：利用非最大抑制攻击深度对象探测器 cs.CV
+
+**SubmitDate**: 2022-09-10    [paper-pdf](http://arxiv.org/pdf/2205.13618v2)
+
+**Authors**: Avishag Shapira, Alon Zolfi, Luca Demetrio, Battista Biggio, Asaf Shabtai
+
+**Abstracts**: Adversarial attacks against deep learning-based object detectors have been studied extensively in the past few years. Most of the attacks proposed have targeted the model's integrity (i.e., caused the model to make incorrect predictions), while adversarial attacks targeting the model's availability, a critical aspect in safety-critical domains such as autonomous driving, have not yet been explored by the machine learning research community. In this paper, we propose a novel attack that negatively affects the decision latency of an end-to-end object detection pipeline. We craft a universal adversarial perturbation (UAP) that targets a widely used technique integrated in many object detector pipelines -- non-maximum suppression (NMS). Our experiments demonstrate the proposed UAP's ability to increase the processing time of individual frames by adding "phantom" objects that overload the NMS algorithm while preserving the detection of the original objects (which allows the attack to go undetected for a longer period of time).
+
+摘要: 针对基于深度学习的目标检测器的对抗性攻击在过去的几年中得到了广泛的研究。大多数提出的攻击都是针对模型的完整性(即导致模型做出错误的预测)，而针对模型可用性的对抗性攻击(自动驾驶等安全关键领域的一个关键方面)尚未被机器学习研究社区探索。在本文中，我们提出了一种新的攻击，它对端到端对象检测流水线的决策延迟产生负面影响。我们设计了一种通用对抗摄动(UAP)，目标是集成在许多对象探测器流水线中的一种广泛使用的技术--非最大抑制(NMS)。我们的实验证明了所提出的UAP能够通过添加超载NMS算法的“幻影”对象来增加单个帧的处理时间，同时保持对原始对象的检测(这使得攻击在更长的时间内不被检测到)。
+
+
+
+## **26. Bankrupting DoS Attackers Despite Uncertainty**
+
+尽管存在不确定性，但仍使DoS攻击者破产 cs.CR
+
+**SubmitDate**: 2022-09-10    [paper-pdf](http://arxiv.org/pdf/2205.08287v2)
+
+**Authors**: Trisha Chakraborty, Abir Islam, Valerie King, Daniel Rayborn, Jared Saia, Maxwell Young
+
+**Abstracts**: On-demand provisioning in the cloud allows for services to remain available despite massive denial-of-service (DoS) attacks. Unfortunately, on-demand provisioning is expensive and must be weighed against the costs incurred by an adversary. This leads to a recent threat known as {\it economic denial-of-sustainability (EDoS)}, where the cost for defending a service is higher than that of attacking.   A natural tool for combating EDoS is to impose costs via resource burning (RB). Here, a client must verifiably consume resources -- for example, by solving a computational challenge -- before service is rendered. However, prior RB-based defenses with security guarantees do not account for the cost of on-demand provisioning.   Another common approach is the use of heuristics -- such as a client's reputation score or the geographical location -- to identify and discard spurious job requests. However, these heuristics may err and existing approaches do not provide security guarantees when this occurs.   Here, we propose an EDoS defense, LCharge, that uses resource burning while accounting for on-demand provisioning. LCharge leverages an estimate of the number of job requests from honest clients (i.e., good jobs) in any set $S$ of requests to within an $O(\alpha)$-factor, for any unknown $\alpha>0$, but retains a strong security guarantee despite the uncertainty of this estimate. Specifically, against an adversary that expends $B$ resources to attack, the total cost for defending is $O( \alpha^{5/2}\sqrt{B\,(g+1)} + \alpha^3(g+\alpha))$ where $g$ is the number of good jobs. Notably, for large $B$ relative to $g$ and $\alpha$, the adversary has higher cost, implying that the algorithm has an economic advantage. Finally, we prove a lower bound for our problem of $\Omega(\sqrt{\alpha B g})$, showing that the cost of LCharge is asymptotically tight for $\alpha=\Theta(1)$.
+
+摘要: 云中的按需配置允许服务在遭受大规模拒绝服务(DoS)攻击时保持可用。不幸的是，按需配置的成本很高，必须权衡对手所产生的成本。这导致了最近的一种称为{\it经济拒绝可持续性(EDOS)}的威胁，在这种威胁下，防御服务的成本高于攻击。对抗EDO的一个自然工具是通过资源燃烧(RB)来施加成本。在这里，在提供服务之前，客户端必须可验证地消耗资源--例如，通过解决计算挑战。然而，以前的基于RB的安全保证防御不会考虑按需配置的成本。另一种常见的方法是使用试探法--例如客户的声誉分数或地理位置--来识别和丢弃虚假的工作请求。然而，这些启发式方法可能会出错，并且现有方法在发生这种情况时不提供安全保证。在这里，我们提出了EDOS防御LCharge，它在考虑按需配置的同时使用资源消耗。LCharge利用任何$S$请求集合中来自诚实客户(即好工作)的工作请求数量的估计，对于任何未知的$\α>0$，在$O(\Alpha)$因子内，但尽管该估计存在不确定性，LCharge仍保持强大的安全保证。具体地说，针对花费$B$资源进行攻击的对手，防御的总成本为$O(\alpha^{5/2}\sqrt{B\，(g+1)}+\alpha^3(g+\pha))$，其中$g$是好工作的数量。值得注意的是，对于较大的$B$相对于$g$和$\α$，对手具有更高的成本，这意味着该算法具有经济优势。最后，我们证明了问题$Omega(\Sqrt{\Alpha Bg})$的一个下界，证明了LCharge的代价对于$\α=\Theta(1)$是渐近紧的。
+
+
+
+## **27. The Space of Adversarial Strategies**
+
+对抗性策略的空间 cs.CR
+
+Accepted to the 32nd USENIX Security Symposium
+
+**SubmitDate**: 2022-09-09    [paper-pdf](http://arxiv.org/pdf/2209.04521v1)
+
+**Authors**: Ryan Sheatsley, Blaine Hoak, Eric Pauley, Patrick McDaniel
+
+**Abstracts**: Adversarial examples, inputs designed to induce worst-case behavior in machine learning models, have been extensively studied over the past decade. Yet, our understanding of this phenomenon stems from a rather fragmented pool of knowledge; at present, there are a handful of attacks, each with disparate assumptions in threat models and incomparable definitions of optimality. In this paper, we propose a systematic approach to characterize worst-case (i.e., optimal) adversaries. We first introduce an extensible decomposition of attacks in adversarial machine learning by atomizing attack components into surfaces and travelers. With our decomposition, we enumerate over components to create 576 attacks (568 of which were previously unexplored). Next, we propose the Pareto Ensemble Attack (PEA): a theoretical attack that upper-bounds attack performance. With our new attacks, we measure performance relative to the PEA on: both robust and non-robust models, seven datasets, and three extended lp-based threat models incorporating compute costs, formalizing the Space of Adversarial Strategies. From our evaluation we find that attack performance to be highly contextual: the domain, model robustness, and threat model can have a profound influence on attack efficacy. Our investigation suggests that future studies measuring the security of machine learning should: (1) be contextualized to the domain & threat models, and (2) go beyond the handful of known attacks used today.
+
+摘要: 对抗性例子是机器学习模型中旨在诱导最坏情况行为的输入，在过去的十年里得到了广泛的研究。然而，我们对这一现象的理解源于相当零散的知识池；目前，有几种攻击，每一种攻击在威胁模型中都有不同的假设，对最优的定义也是无与伦比的。在本文中，我们提出了一种系统的方法来刻画最坏情况(即最佳)对手的特征。我们首先介绍了对抗性机器学习中攻击的一种可扩展分解，将攻击组件原子化到表面和旅行者中。通过我们的分解，我们列举了组件以创建576次攻击(其中568次是以前未曾探索过的)。接下来，我们提出了Pareto系综攻击(PEA)：一种上界攻击性能的理论攻击。在我们的新攻击中，我们在以下方面衡量相对于PEA的性能：稳健和非稳健模型、七个数据集和三个包含计算成本的扩展的基于LP的威胁模型，正式确定了对手战略空间。从我们的评估中，我们发现攻击性能与上下文高度相关：域、模型健壮性和威胁模型可以对攻击效率产生深远的影响。我们的调查表明，未来衡量机器学习安全性的研究应该：(1)从域和威胁模型出发，(2)超越目前使用的少数已知攻击。
+
+
+
+## **28. SoK: Certified Robustness for Deep Neural Networks**
+
+SOK：深度神经网络认证的健壮性 cs.LG
+
+To appear at 2023 IEEE Symposium on Security and Privacy (SP); 14  pages for the main text; benchmark & tool website:  http://sokcertifiedrobustness.github.io/
+
+**SubmitDate**: 2022-09-09    [paper-pdf](http://arxiv.org/pdf/2009.04131v8)
+
+**Authors**: Linyi Li, Tao Xie, Bo Li
+
+**Abstracts**: Great advances in deep neural networks (DNNs) have led to state-of-the-art performance on a wide range of tasks. However, recent studies have shown that DNNs are vulnerable to adversarial attacks, which have brought great concerns when deploying these models to safety-critical applications such as autonomous driving. Different defense approaches have been proposed against adversarial attacks, including: a) empirical defenses, which can usually be adaptively attacked again without providing robustness certification; and b) certifiably robust approaches, which consist of robustness verification providing the lower bound of robust accuracy against any attacks under certain conditions and corresponding robust training approaches. In this paper, we systematize certifiably robust approaches and related practical and theoretical implications and findings. We also provide the first comprehensive benchmark on existing robustness verification and training approaches on different datasets. In particular, we 1) provide a taxonomy for the robustness verification and training approaches, as well as summarize the methodologies for representative algorithms, 2) reveal the characteristics, strengths, limitations, and fundamental connections among these approaches, 3) discuss current research progresses, theoretical barriers, main challenges, and future directions for certifiably robust approaches for DNNs, and 4) provide an open-sourced unified platform to evaluate 20+ representative certifiably robust approaches.
+
+摘要: 深度神经网络(DNN)的巨大进步导致了在各种任务中最先进的性能。然而，最近的研究表明，DNN很容易受到对手攻击，这在将这些模型部署到自动驾驶等安全关键型应用时带来了极大的担忧。针对敌意攻击已经提出了不同的防御方法，包括：a)经验防御，通常可以在不提供健壮性证明的情况下自适应地再次攻击；b)可证明的健壮性方法，包括在一定条件下提供对任何攻击的健壮性精度下界的健壮性验证和相应的健壮训练方法。在这篇文章中，我们系统化了可证明的稳健方法以及相关的实践和理论意义和发现。我们还提供了关于不同数据集上现有稳健性验证和训练方法的第一个全面基准。具体地说，我们1)提供了健壮性验证和训练方法的分类，并总结了典型算法的方法论；2)揭示了这些方法的特点、优势、局限性和基本联系；3)讨论了当前的研究进展、理论障碍、主要挑战和未来的发展方向；4)提供了一个开源的统一平台来评估20多个具有代表性的可证健壮方法。
+
+
+
+## **29. Adversarial Examples in Constrained Domains**
 
 受限领域中的对抗性例子 cs.CR
 
@@ -19,7 +441,7 @@ Accepted to IOS Press Journal of Computer Security
 
 
 
-## **2. Robust-by-Design Classification via Unitary-Gradient Neural Networks**
+## **30. Robust-by-Design Classification via Unitary-Gradient Neural Networks**
 
 基于么正梯度神经网络的稳健设计分类 cs.LG
 
@@ -35,7 +457,7 @@ Under review
 
 
 
-## **3. Improving Out-of-Distribution Detection via Epistemic Uncertainty Adversarial Training**
+## **31. Improving Out-of-Distribution Detection via Epistemic Uncertainty Adversarial Training**
 
 通过认知不确定性对抗性训练改进失配检测 cs.LG
 
@@ -51,7 +473,7 @@ Under review
 
 
 
-## **4. Harnessing Perceptual Adversarial Patches for Crowd Counting**
+## **32. Harnessing Perceptual Adversarial Patches for Crowd Counting**
 
 利用感知对抗性斑块进行人群计数 cs.CV
 
@@ -65,7 +487,7 @@ Under review
 
 
 
-## **5. Uncovering the Connection Between Differential Privacy and Certified Robustness of Federated Learning against Poisoning Attacks**
+## **33. Uncovering the Connection Between Differential Privacy and Certified Robustness of Federated Learning against Poisoning Attacks**
 
 揭示差分隐私与联合学习对中毒攻击的认证健壮性之间的联系 cs.CR
 
@@ -79,7 +501,7 @@ Under review
 
 
 
-## **6. Evaluating the Security of Aircraft Systems**
+## **34. Evaluating the Security of Aircraft Systems**
 
 评估飞机系统的安全性 cs.CR
 
@@ -95,23 +517,7 @@ Under review
 
 
 
-## **7. A Survey of Machine Unlearning**
-
-机器遗忘研究综述 cs.LG
-
-arXiv admin note: text overlap with arXiv:2109.13398,  arXiv:2109.08266 by other authors. author note: fixed some overlaps
-
-**SubmitDate**: 2022-09-08    [paper-pdf](http://arxiv.org/pdf/2209.02299v3)
-
-**Authors**: Thanh Tam Nguyen, Thanh Trung Huynh, Phi Le Nguyen, Alan Wee-Chung Liew, Hongzhi Yin, Quoc Viet Hung Nguyen
-
-**Abstracts**: Computer systems hold a large amount of personal data over decades. On the one hand, such data abundance allows breakthroughs in artificial intelligence (AI), especially machine learning (ML) models. On the other hand, it can threaten the privacy of users and weaken the trust between humans and AI. Recent regulations require that private information about a user can be removed from computer systems in general and from ML models in particular upon request (e.g. the "right to be forgotten"). While removing data from back-end databases should be straightforward, it is not sufficient in the AI context as ML models often "remember" the old data. Existing adversarial attacks proved that we can learn private membership or attributes of the training data from the trained models. This phenomenon calls for a new paradigm, namely machine unlearning, to make ML models forget about particular data. It turns out that recent works on machine unlearning have not been able to solve the problem completely due to the lack of common frameworks and resources. In this survey paper, we seek to provide a thorough investigation of machine unlearning in its definitions, scenarios, mechanisms, and applications. Specifically, as a categorical collection of state-of-the-art research, we hope to provide a broad reference for those seeking a primer on machine unlearning and its various formulations, design requirements, removal requests, algorithms, and uses in a variety of ML applications. Furthermore, we hope to outline key findings and trends in the paradigm as well as highlight new areas of research that have yet to see the application of machine unlearning, but could nonetheless benefit immensely. We hope this survey provides a valuable reference for ML researchers as well as those seeking to innovate privacy technologies. Our resources are at https://github.com/tamlhp/awesome-machine-unlearning.
-
-摘要: 几十年来，计算机系统保存着大量的个人数据。一方面，这样的数据丰富使人工智能(AI)，特别是机器学习(ML)模型取得了突破。另一方面，它会威胁用户的隐私，削弱人类与AI之间的信任。最近的法规要求，一般情况下，可以从计算机系统中删除关于用户的私人信息，特别是在请求时可以从ML模型中删除用户的私人信息(例如，“被遗忘权”)。虽然从后端数据库中删除数据应该很简单，但在人工智能环境中这是不够的，因为ML模型经常“记住”旧数据。现有的对抗性攻击证明，我们可以从训练好的模型中学习训练数据的私人成员或属性。这种现象呼唤一种新的范式，即机器遗忘，以使ML模型忘记特定的数据。事实证明，由于缺乏通用的框架和资源，最近关于机器遗忘的研究并不能完全解决这个问题。在这篇调查论文中，我们试图对机器遗忘的定义、场景、机制和应用进行全面的调查。具体地说，作为最新研究的分类集合，我们希望为那些寻求机器遗忘及其各种公式、设计要求、移除请求、算法和在各种ML应用中使用的入门知识的人提供广泛的参考。此外，我们希望概述该范式中的主要发现和趋势，并强调尚未看到机器遗忘应用的新研究领域，但仍可能受益匪浅。我们希望这项调查为ML研究人员以及那些寻求创新隐私技术的人提供有价值的参考。我们的资源在https://github.com/tamlhp/awesome-machine-unlearning.
-
-
-
-## **8. SafeNet: The Unreasonable Effectiveness of Ensembles in Private Collaborative Learning**
+## **35. SafeNet: The Unreasonable Effectiveness of Ensembles in Private Collaborative Learning**
 
 SafeNet：私人合作学习中合奏的不合理有效性 cs.CR
 
@@ -125,7 +531,7 @@ SafeNet：私人合作学习中合奏的不合理有效性 cs.CR
 
 
 
-## **9. Incorporating Locality of Images to Generate Targeted Transferable Adversarial Examples**
+## **36. Incorporating Locality of Images to Generate Targeted Transferable Adversarial Examples**
 
 结合图像的局部性生成目标可转移的对抗性实例 cs.CV
 
@@ -139,7 +545,7 @@ SafeNet：私人合作学习中合奏的不合理有效性 cs.CR
 
 
 
-## **10. Exploring Adversarial Attacks and Defenses in Vision Transformers trained with DINO**
+## **37. Exploring Adversarial Attacks and Defenses in Vision Transformers trained with DINO**
 
 探索与恐龙一起训练的视觉变形金刚的对抗性攻击和防御 cs.CV
 
@@ -155,7 +561,7 @@ ICML 2022 Workshop paper accepted at AdvML Frontiers
 
 
 
-## **11. Feature Importance Guided Attack: A Model Agnostic Adversarial Attack**
+## **38. Feature Importance Guided Attack: A Model Agnostic Adversarial Attack**
 
 特征重要性制导攻击：一种不可知的对抗性攻击模型 cs.LG
 
@@ -169,7 +575,7 @@ ICML 2022 Workshop paper accepted at AdvML Frontiers
 
 
 
-## **12. AdaptOver: Adaptive Overshadowing Attacks in Cellular Networks**
+## **39. AdaptOver: Adaptive Overshadowing Attacks in Cellular Networks**
 
 AdaptOver：蜂窝网络中的自适应遮蔽攻击 cs.CR
 
@@ -183,7 +589,7 @@ AdaptOver：蜂窝网络中的自适应遮蔽攻击 cs.CR
 
 
 
-## **13. Combing for Credentials: Active Pattern Extraction from Smart Reply**
+## **40. Combing for Credentials: Active Pattern Extraction from Smart Reply**
 
 梳理凭据：从智能回复中提取活动模式 cs.CR
 
@@ -197,7 +603,7 @@ AdaptOver：蜂窝网络中的自适应遮蔽攻击 cs.CR
 
 
 
-## **14. Inferring Sensitive Attributes from Model Explanations**
+## **41. Inferring Sensitive Attributes from Model Explanations**
 
 从模型解释中推断敏感属性 cs.CR
 
@@ -213,7 +619,7 @@ ACM CIKM 2022
 
 
 
-## **15. Securing the Spike: On the Transferabilty and Security of Spiking Neural Networks to Adversarial Examples**
+## **42. Securing the Spike: On the Transferabilty and Security of Spiking Neural Networks to Adversarial Examples**
 
 保护尖峰：尖峰神经网络对对抗性例子的可传递性和安全性 cs.NE
 
@@ -227,7 +633,7 @@ ACM CIKM 2022
 
 
 
-## **16. Minotaur: Multi-Resource Blockchain Consensus**
+## **43. Minotaur: Multi-Resource Blockchain Consensus**
 
 牛头人：多资源区块链共识 cs.CR
 
@@ -243,7 +649,7 @@ To appear in ACM CCS 2022
 
 
 
-## **17. Distributed Adversarial Training to Robustify Deep Neural Networks at Scale**
+## **44. Distributed Adversarial Training to Robustify Deep Neural Networks at Scale**
 
 深度神经网络规模化的分布式对抗性训练 cs.LG
 
@@ -257,7 +663,7 @@ To appear in ACM CCS 2022
 
 
 
-## **18. Privacy Against Inference Attacks in Vertical Federated Learning**
+## **45. Privacy Against Inference Attacks in Vertical Federated Learning**
 
 垂直联合学习中抵抗推理攻击的隐私保护 cs.LG
 
@@ -271,7 +677,7 @@ To appear in ACM CCS 2022
 
 
 
-## **19. Fact-Saboteurs: A Taxonomy of Evidence Manipulation Attacks against Fact-Verification Systems**
+## **46. Fact-Saboteurs: A Taxonomy of Evidence Manipulation Attacks against Fact-Verification Systems**
 
 事实破坏者：针对事实核查系统的证据操纵攻击的分类 cs.CR
 
@@ -285,7 +691,7 @@ To appear in ACM CCS 2022
 
 
 
-## **20. State of Security Awareness in the AM Industry: 2020 Survey**
+## **47. State of Security Awareness in the AM Industry: 2020 Survey**
 
 AM行业的安全意识状况：2020年调查 cs.CR
 
@@ -301,7 +707,7 @@ The material was presented at ASTM ICAM 2021 and a publication was  accepted for
 
 
 
-## **21. On the Transferability of Adversarial Examples between Encrypted Models**
+## **48. On the Transferability of Adversarial Examples between Encrypted Models**
 
 关于对抗性例子在加密模型之间的可转移性 cs.CV
 
@@ -317,7 +723,7 @@ to be appear in ISPACS 2022
 
 
 
-## **22. Adversarial Mask: Real-World Universal Adversarial Attack on Face Recognition Model**
+## **49. Adversarial Mask: Real-World Universal Adversarial Attack on Face Recognition Model**
 
 对抗性面具：现实世界中人脸识别模型的通用对抗性攻击 cs.CV
 
@@ -333,7 +739,7 @@ to be appear in ISPACS 2022
 
 
 
-## **23. Facial De-morphing: Extracting Component Faces from a Single Morph**
+## **50. Facial De-morphing: Extracting Component Faces from a Single Morph**
 
 面部去变形：从单个变形中提取组件人脸 cs.CV
 
@@ -344,414 +750,6 @@ to be appear in ISPACS 2022
 **Abstracts**: A face morph is created by strategically combining two or more face images corresponding to multiple identities. The intention is for the morphed image to match with multiple identities. Current morph attack detection strategies can detect morphs but cannot recover the images or identities used in creating them. The task of deducing the individual face images from a morphed face image is known as \textit{de-morphing}. Existing work in de-morphing assume the availability of a reference image pertaining to one identity in order to recover the image of the accomplice - i.e., the other identity. In this work, we propose a novel de-morphing method that can recover images of both identities simultaneously from a single morphed face image without needing a reference image or prior information about the morphing process. We propose a generative adversarial network that achieves single image-based de-morphing with a surprisingly high degree of visual realism and biometric similarity with the original face images. We demonstrate the performance of our method on landmark-based morphs and generative model-based morphs with promising results.
 
 摘要: 面部变形是通过策略性地组合对应于多个身份的两个或多个面部图像来创建的。其目的是使变形后的图像与多个身份匹配。当前的变形攻击检测策略可以检测变形，但无法恢复创建变形时使用的图像或身份。从变形后的人脸图像中推断出单个人脸图像的任务称为纹理{去变形}。现有的去变形工作假定存在与一个身份有关的参考图像，以便恢复共犯--即另一个身份--的图像。在这项工作中，我们提出了一种新的去变形方法，它可以从一幅变形后的人脸图像中同时恢复出两种身份的图像，而不需要参考图像或关于变形过程的先验信息。我们提出了一种产生式对抗性网络，它实现了基于单一图像的去变形，具有与原始人脸图像惊人的高度视觉真实感和生物特征相似性。我们展示了我们的方法在基于里程碑的变形和基于生成性模型的变形上的性能，并取得了令人满意的结果。
-
-
-
-## **24. Annealing Optimization for Progressive Learning with Stochastic Approximation**
-
-随机逼近渐进式学习的退火法优化 eess.SY
-
-arXiv admin note: text overlap with arXiv:2102.05836
-
-**SubmitDate**: 2022-09-06    [paper-pdf](http://arxiv.org/pdf/2209.02826v1)
-
-**Authors**: Christos Mavridis, John Baras
-
-**Abstracts**: In this work, we introduce a learning model designed to meet the needs of applications in which computational resources are limited, and robustness and interpretability are prioritized. Learning problems can be formulated as constrained stochastic optimization problems, with the constraints originating mainly from model assumptions that define a trade-off between complexity and performance. This trade-off is closely related to over-fitting, generalization capacity, and robustness to noise and adversarial attacks, and depends on both the structure and complexity of the model, as well as the properties of the optimization methods used. We develop an online prototype-based learning algorithm based on annealing optimization that is formulated as an online gradient-free stochastic approximation algorithm. The learning model can be viewed as an interpretable and progressively growing competitive-learning neural network model to be used for supervised, unsupervised, and reinforcement learning. The annealing nature of the algorithm contributes to minimal hyper-parameter tuning requirements, poor local minima prevention, and robustness with respect to the initial conditions. At the same time, it provides online control over the performance-complexity trade-off by progressively increasing the complexity of the learning model as needed, through an intuitive bifurcation phenomenon. Finally, the use of stochastic approximation enables the study of the convergence of the learning algorithm through mathematical tools from dynamical systems and control, and allows for its integration with reinforcement learning algorithms, constructing an adaptive state-action aggregation scheme.
-
-摘要: 在这项工作中，我们引入了一个学习模型，旨在满足计算资源有限、稳健性和可解释性优先的应用程序的需求。学习问题可以表示为受约束的随机优化问题，约束主要来自定义复杂性和性能之间权衡的模型假设。这种权衡与过拟合、泛化能力以及对噪声和敌意攻击的稳健性密切相关，并且取决于模型的结构和复杂性以及所使用的优化方法的性质。提出了一种基于退火法的在线原型学习算法，该算法是一种在线无梯度随机逼近算法。该学习模型可以看作是一个可解释的、渐进式增长的竞争学习神经网络模型，可用于有监督、无监督和强化学习。该算法的退火性有助于最小的超参数调整要求、较差的局部极小值防止以及相对于初始条件的稳健性。同时，它通过直观的分叉现象，根据需要逐步增加学习模型的复杂性，从而提供对性能和复杂性权衡的在线控制。最后，随机逼近的使用使得能够通过动态系统和控制的数学工具来研究学习算法的收敛，并允许其与强化学习算法相结合，构造自适应状态-动作聚集方案。
-
-
-
-## **25. Bag of Tricks for FGSM Adversarial Training**
-
-用于FGSM对抗性训练的技巧包 cs.CV
-
-**SubmitDate**: 2022-09-06    [paper-pdf](http://arxiv.org/pdf/2209.02684v1)
-
-**Authors**: Zichao Li, Li Liu, Zeyu Wang, Yuyin Zhou, Cihang Xie
-
-**Abstracts**: Adversarial training (AT) with samples generated by Fast Gradient Sign Method (FGSM), also known as FGSM-AT, is a computationally simple method to train robust networks. However, during its training procedure, an unstable mode of "catastrophic overfitting" has been identified in arXiv:2001.03994 [cs.LG], where the robust accuracy abruptly drops to zero within a single training step. Existing methods use gradient regularizers or random initialization tricks to attenuate this issue, whereas they either take high computational cost or lead to lower robust accuracy. In this work, we provide the first study, which thoroughly examines a collection of tricks from three perspectives: Data Initialization, Network Structure, and Optimization, to overcome the catastrophic overfitting in FGSM-AT.   Surprisingly, we find that simple tricks, i.e., a) masking partial pixels (even without randomness), b) setting a large convolution stride and smooth activation functions, or c) regularizing the weights of the first convolutional layer, can effectively tackle the overfitting issue. Extensive results on a range of network architectures validate the effectiveness of each proposed trick, and the combinations of tricks are also investigated. For example, trained with PreActResNet-18 on CIFAR-10, our method attains 49.8% accuracy against PGD-50 attacker and 46.4% accuracy against AutoAttack, demonstrating that pure FGSM-AT is capable of enabling robust learners. The code and models are publicly available at https://github.com/UCSC-VLAA/Bag-of-Tricks-for-FGSM-AT.
-
-摘要: 用快速梯度符号法(FGSM)生成样本的对抗性训练(AT)，也称为FGSM-AT，是一种计算简单的稳健网络训练方法。然而，在其训练过程中，在ARXIV：2001.03994[cs.LG]中发现了一种不稳定的“灾难性过拟合”模式，其中鲁棒精度在单一训练步骤内突然降至零。现有的方法使用梯度正则化或随机初始化技巧来减弱这一问题，但它们要么计算量大，要么导致鲁棒精度较低。在这项工作中，我们提供了第一项研究，从数据初始化、网络结构和优化三个角度深入研究了一系列技巧，以克服FGSM-AT中灾难性的过拟合。令人惊讶的是，我们发现，简单的技巧，即a)掩蔽部分像素(即使没有随机性)，b)设置大的卷积步长和平滑的激活函数，或c)正则化第一卷积层的权重，可以有效地解决过拟合问题。在一系列网络体系结构上的广泛结果验证了所提出的每种技巧的有效性，并对各种技巧的组合进行了研究。例如，在CIFAR-10上用PreActResNet-18进行训练，我们的方法对PGD-50攻击者的准确率达到49.8%，对AutoAttack的准确率达到46.4%，表明纯FGSM-AT能够支持健壮的学习者。代码和模型可在https://github.com/UCSC-VLAA/Bag-of-Tricks-for-FGSM-AT.上公开获取
-
-
-
-## **26. Improving the Accuracy and Robustness of CNNs Using a Deep CCA Neural Data Regularizer**
-
-利用深度CCA神经数据规则器提高CNN的精度和鲁棒性 cs.CV
-
-**SubmitDate**: 2022-09-06    [paper-pdf](http://arxiv.org/pdf/2209.02582v1)
-
-**Authors**: Cassidy Pirlot, Richard C. Gerum, Cory Efird, Joel Zylberberg, Alona Fyshe
-
-**Abstracts**: As convolutional neural networks (CNNs) become more accurate at object recognition, their representations become more similar to the primate visual system. This finding has inspired us and other researchers to ask if the implication also runs the other way: If CNN representations become more brain-like, does the network become more accurate? Previous attempts to address this question showed very modest gains in accuracy, owing in part to limitations of the regularization method. To overcome these limitations, we developed a new neural data regularizer for CNNs that uses Deep Canonical Correlation Analysis (DCCA) to optimize the resemblance of the CNN's image representations to that of the monkey visual cortex. Using this new neural data regularizer, we see much larger performance gains in both classification accuracy and within-super-class accuracy, as compared to the previous state-of-the-art neural data regularizers. These networks are also more robust to adversarial attacks than their unregularized counterparts. Together, these results confirm that neural data regularization can push CNN performance higher, and introduces a new method that obtains a larger performance boost.
-
-摘要: 随着卷积神经网络(CNN)在物体识别方面变得更加准确，它们的表示变得更加类似于灵长类视觉系统。这一发现激发了我们和其他研究人员的疑问：如果CNN的表现变得更像大脑，网络是否会变得更准确？以前解决这一问题的尝试显示，由于正规化方法的局限性，在准确性方面取得了很小的进步。为了克服这些限制，我们开发了一种新的CNN神经数据正则化方法，它使用深度典型相关分析(DCCA)来优化CNN图像表示与猴子视觉皮质的相似性。使用这种新的神经数据正则化器，我们看到与以前最先进的神经数据正则化器相比，在分类精度和超类内精度方面都有更大的性能收益。与非正规网络相比，这些网络对对手攻击的抵抗力也更强。综上所述，这些结果证实了神经数据正则化可以提高CNN的性能，并介绍了一种新的方法，获得了更大的性能提升。
-
-
-
-## **27. Instance Attack:An Explanation-based Vulnerability Analysis Framework Against DNNs for Malware Detection**
-
-实例攻击：一种基于解释的DNN漏洞分析框架 cs.CR
-
-**SubmitDate**: 2022-09-06    [paper-pdf](http://arxiv.org/pdf/2209.02453v1)
-
-**Authors**: Sun RuiJin, Guo ShiZe, Guo JinHong, Xing ChangYou, Yang LuMing, Guo Xi, Pan ZhiSong
-
-**Abstracts**: Deep neural networks (DNNs) are increasingly being applied in malware detection and their robustness has been widely debated. Traditionally an adversarial example generation scheme relies on either detailed model information (gradient-based methods) or lots of samples to train a surrogate model, neither of which are available in most scenarios.   We propose the notion of the instance-based attack. Our scheme is interpretable and can work in a black-box environment. Given a specific binary example and a malware classifier, we use the data augmentation strategies to produce enough data from which we can train a simple interpretable model. We explain the detection model by displaying the weight of different parts of the specific binary. By analyzing the explanations, we found that the data subsections play an important role in Windows PE malware detection. We proposed a new function preserving transformation algorithm that can be applied to data subsections. By employing the binary-diversification techniques that we proposed, we eliminated the influence of the most weighted part to generate adversarial examples. Our algorithm can fool the DNNs in certain cases with a success rate of nearly 100\%. Our method outperforms the state-of-the-art method . The most important aspect is that our method operates in black-box settings and the results can be validated with domain knowledge. Our analysis model can assist people in improving the robustness of malware detectors.
-
-摘要: 深度神经网络(DNN)在恶意软件检测中的应用越来越广泛，其健壮性一直备受争议。传统的对抗性示例生成方案依赖于详细的模型信息(基于梯度的方法)或大量样本来训练代理模型，这两种方法在大多数情况下都不可用。我们提出了基于实例攻击的概念。我们的方案是可解释的，可以在黑盒环境中工作。给出一个特定的二进制例子和一个恶意软件分类器，我们使用数据扩充策略来产生足够的数据，从中我们可以训练一个简单的可解释模型。我们通过显示特定二进制的不同部分的权重来解释检测模型。通过分析解释，我们发现数据子部分在Windows PE恶意软件检测中起着重要作用。提出了一种新的适用于数据细分的保函数变换算法。通过采用我们提出的二元多样化技术，我们消除了权重最大的部分对生成对抗性例子的影响。在某些情况下，我们的算法可以欺骗DNN，成功率接近100%。我们的方法比最先进的方法性能更好。最重要的是，我们的方法是在黑盒环境下运行的，并且结果可以用领域知识来验证。我们的分析模型可以帮助人们提高恶意软件检测器的健壮性。
-
-
-
-## **28. MACAB: Model-Agnostic Clean-Annotation Backdoor to Object Detection with Natural Trigger in Real-World**
-
-MACAB：真实世界中自然触发目标检测的模型不可知性Clean-Annotation后门 cs.CV
-
-**SubmitDate**: 2022-09-06    [paper-pdf](http://arxiv.org/pdf/2209.02339v1)
-
-**Authors**: Hua Ma, Yinshan Li, Yansong Gao, Zhi Zhang, Alsharif Abuadbba, Anmin Fu, Said F. Al-Sarawi, Nepal Surya, Derek Abbott
-
-**Abstracts**: Object detection is the foundation of various critical computer-vision tasks such as segmentation, object tracking, and event detection. To train an object detector with satisfactory accuracy, a large amount of data is required. However, due to the intensive workforce involved with annotating large datasets, such a data curation task is often outsourced to a third party or relied on volunteers. This work reveals severe vulnerabilities of such data curation pipeline. We propose MACAB that crafts clean-annotated images to stealthily implant the backdoor into the object detectors trained on them even when the data curator can manually audit the images. We observe that the backdoor effect of both misclassification and the cloaking are robustly achieved in the wild when the backdoor is activated with inconspicuously natural physical triggers. Backdooring non-classification object detection with clean-annotation is challenging compared to backdooring existing image classification tasks with clean-label, owing to the complexity of having multiple objects within each frame, including victim and non-victim objects. The efficacy of the MACAB is ensured by constructively i abusing the image-scaling function used by the deep learning framework, ii incorporating the proposed adversarial clean image replica technique, and iii combining poison data selection criteria given constrained attacking budget. Extensive experiments demonstrate that MACAB exhibits more than 90% attack success rate under various real-world scenes. This includes both cloaking and misclassification backdoor effect even restricted with a small attack budget. The poisoned samples cannot be effectively identified by state-of-the-art detection techniques.The comprehensive video demo is at https://youtu.be/MA7L_LpXkp4, which is based on a poison rate of 0.14% for YOLOv4 cloaking backdoor and Faster R-CNN misclassification backdoor.
-
-摘要: 目标检测是各种关键的计算机视觉任务的基础，如分割、目标跟踪和事件检测。为了以令人满意的精度训练目标检测器，需要大量的数据。然而，由于注释大型数据集所涉及的密集劳动力，这样的数据管理任务通常被外包给第三方或依赖于志愿者。这项工作揭示了这种数据管理管道的严重漏洞。我们建议MACAB制作经过干净注释的图像，以便在数据管理员可以手动审计图像的情况下，将后门秘密植入对其训练的对象检测器。我们观察到，当后门被不明显的自然物理触发激活时，错误分类和伪装的后门效应在野外都得到了很好的实现。由于每帧中包含多个对象(包括受害者和非受害者对象)的复杂性，与使用干净标签回溯现有图像分类任务相比，使用干净注释来回溯非分类对象检测是具有挑战性的。MACAB的有效性是通过建设性地I滥用深度学习框架使用的图像缩放函数，II结合所提出的对抗性干净图像复制技术，III在给定有限攻击预算的情况下结合毒物数据选择标准来确保的。大量实验表明，MACAB在各种真实场景下的攻击成功率均在90%以上。这包括隐形和错误分类的后门效应，即使在攻击预算很小的情况下也是如此。最先进的检测技术无法有效地识别有毒样本。全面的视频演示在https://youtu.be/MA7L_LpXkp4，上进行，这是基于YOLOv4伪装后门的毒用率为0.14%和更快的R-CNN错误分类后门。
-
-
-
-## **29. White-Box Adversarial Policies in Deep Reinforcement Learning**
-
-深度强化学习中的白盒对抗策略 cs.AI
-
-Code is available at  https://github.com/thestephencasper/white_box_rarl
-
-**SubmitDate**: 2022-09-05    [paper-pdf](http://arxiv.org/pdf/2209.02167v1)
-
-**Authors**: Stephen Casper, Dylan Hadfield-Menell, Gabriel Kreiman
-
-**Abstracts**: Adversarial examples against AI systems pose both risks via malicious attacks and opportunities for improving robustness via adversarial training. In multiagent settings, adversarial policies can be developed by training an adversarial agent to minimize a victim agent's rewards. Prior work has studied black-box attacks where the adversary only sees the state observations and effectively treats the victim as any other part of the environment. In this work, we experiment with white-box adversarial policies to study whether an agent's internal state can offer useful information for other agents. We make three contributions. First, we introduce white-box adversarial policies in which an attacker can observe a victim's internal state at each timestep. Second, we demonstrate that white-box access to a victim makes for better attacks in two-agent environments, resulting in both faster initial learning and higher asymptotic performance against the victim. Third, we show that training against white-box adversarial policies can be used to make learners in single-agent environments more robust to domain shifts.
-
-摘要: 针对人工智能系统的对抗性例子既有通过恶意攻击带来的风险，也有通过对抗性培训提高稳健性的机会。在多代理设置中，可以通过训练对抗代理来制定对抗策略，以将受害者代理的回报降至最低。以前的工作已经研究了黑盒攻击，在这种攻击中，对手只看到状态观察，并有效地将受害者视为环境的任何其他部分。在这项工作中，我们实验了白盒对抗策略，以研究一个代理的内部状态是否能为其他代理提供有用的信息。我们有三点贡献。首先，我们引入了白盒对抗性策略，其中攻击者可以在每个时间步观察受害者的内部状态。其次，我们证明了在双代理环境中，对受害者的白盒访问有助于更好的攻击，从而导致更快的初始学习和更高的针对受害者的渐近性能。第三，我们证明了针对白盒对抗策略的训练可以用来使单代理环境中的学习者对域转移更健壮。
-
-
-
-## **30. Reinforcement learning-based optimised control for tracking of nonlinear systems with adversarial attacks**
-
-基于强化学习的对抗性非线性系统跟踪优化控制 eess.SY
-
-Submitted for The 10th RSI International Conference on Robotics and  Mechatronics (ICRoM 2022)
-
-**SubmitDate**: 2022-09-05    [paper-pdf](http://arxiv.org/pdf/2209.02165v1)
-
-**Authors**: Farshad Rahimi, Sepideh Ziaei
-
-**Abstracts**: This paper introduces a reinforcement learning-based tracking control approach for a class of nonlinear systems using neural networks. In this approach, adversarial attacks were considered both in the actuator and on the outputs. This approach incorporates a simultaneous tracking and optimization process. It is necessary to be able to solve the Hamilton-Jacobi-Bellman equation (HJB) in order to obtain optimal control input, but this is difficult due to the strong nonlinearity terms in the equation. In order to find the solution to the HJB equation, we used a reinforcement learning approach. In this online adaptive learning approach, three neural networks are simultaneously adapted: the critic neural network, the actor neural network, and the adversary neural network. Ultimately, simulation results are presented to demonstrate the effectiveness of the introduced method on a manipulator.
-
-摘要: 针对一类神经网络非线性系统，提出了一种基于强化学习的跟踪控制方法。在这种方法中，在执行器和输出端都考虑了对抗性攻击。这种方法结合了同步跟踪和优化过程。为了获得最优控制输入，必须能解Hamilton-Jacobi-Bellman方程(HJB)，但由于方程中的强非线性项，这是很困难的。为了找到HJB方程的解，我们使用了强化学习方法。在这种在线自适应学习方法中，同时自适应了三个神经网络：批评者神经网络、行动者神经网络和对手神经网络。最后，以机械手为例，给出了仿真结果，验证了该方法的有效性。
-
-
-
-## **31. On the Anonymity of Peer-To-Peer Network Anonymity Schemes Used by Cryptocurrencies**
-
-加密货币使用的对等网络匿名方案的匿名性研究 cs.CR
-
-**SubmitDate**: 2022-09-05    [paper-pdf](http://arxiv.org/pdf/2201.11860v3)
-
-**Authors**: Piyush Kumar Sharma, Devashish Gosain, Claudia Diaz
-
-**Abstracts**: Cryptocurrency systems can be subject to deanonimization attacks by exploiting the network-level communication on their peer-to-peer network. Adversaries who control a set of colluding node(s) within the peer-to-peer network can observe transactions being exchanged and infer the parties involved. Thus, various network anonymity schemes have been proposed to mitigate this problem, with some solutions providing theoretical anonymity guarantees.   In this work, we model such peer-to-peer network anonymity solutions and evaluate their anonymity guarantees. To do so, we propose a novel framework that uses Bayesian inference to obtain the probability distributions linking transactions to their possible originators. We characterize transaction anonymity with those distributions, using entropy as metric of adversarial uncertainty on the originator's identity. In particular, we model Dandelion, Dandelion++ and Lightning Network. We study different configurations and demonstrate that none of them offers acceptable anonymity to their users. For instance, our analysis reveals that in the widely deployed Lightning Network, with 1% strategically chosen colluding nodes the adversary can uniquely determine the originator for about 50% of the total transactions in the network. In Dandelion, an adversary that controls 15% of the nodes has on average uncertainty among only 8 possible originators. Moreover, we observe that due to the way Dandelion and Dandelion++ are designed, increasing the network size does not correspond to an increase in the anonymity set of potential originators. Alarmingly, our longitudinal analysis of Lightning Network reveals rather an inverse trend -- with the growth of the network the overall anonymity decreases.
-
-摘要: 通过利用其对等网络上的网络级通信，加密货币系统可能会受到反匿名化攻击。在对等网络中控制一组串通节点的敌手可以观察正在交换的交易并推断所涉及的各方。因此，各种网络匿名方案被提出来缓解这一问题，一些解决方案提供了理论上的匿名性保证。在这项工作中，我们对这种对等网络匿名解决方案进行建模，并评估它们的匿名性保证。为此，我们提出了一个新的框架，它使用贝叶斯推理来获得将事务链接到可能的发起者的概率分布。我们使用这些分布来表征交易匿名性，使用熵作为对发起者身份的敌意不确定性的度量。特别是，我们对蒲公英、蒲公英++和闪电网络进行了建模。我们研究了不同的配置，并证明它们都不能为用户提供可接受的匿名性。例如，我们的分析表明，在广泛部署的闪电网络中，通过1%的策略选择合谋节点，对手可以唯一地确定网络中约50%的总交易的发起者。在蒲公英中，一个控制了15%节点的对手平均只有8个可能的发起者中存在不确定性。此外，我们观察到，由于蒲公英和蒲公英++的设计方式，增加网络规模并不对应于潜在发起者匿名性集合的增加。令人担忧的是，我们对Lightning Network的纵向分析揭示了一个相反的趋势--随着网络的增长，总体匿名性下降。
-
-
-
-## **32. Evaluating the Susceptibility of Pre-Trained Language Models via Handcrafted Adversarial Examples**
-
-通过手工制作的对抗性例子评估预先训练的语言模型的敏感性 cs.CL
-
-10 pages, 1 figure, 3 tables
-
-**SubmitDate**: 2022-09-05    [paper-pdf](http://arxiv.org/pdf/2209.02128v1)
-
-**Authors**: Hezekiah J. Branch, Jonathan Rodriguez Cefalu, Jeremy McHugh, Leyla Hujer, Aditya Bahl, Daniel del Castillo Iglesias, Ron Heichman, Ramesh Darwishi
-
-**Abstracts**: Recent advances in the development of large language models have resulted in public access to state-of-the-art pre-trained language models (PLMs), including Generative Pre-trained Transformer 3 (GPT-3) and Bidirectional Encoder Representations from Transformers (BERT). However, evaluations of PLMs, in practice, have shown their susceptibility to adversarial attacks during the training and fine-tuning stages of development. Such attacks can result in erroneous outputs, model-generated hate speech, and the exposure of users' sensitive information. While existing research has focused on adversarial attacks during either the training or the fine-tuning of PLMs, there is a deficit of information on attacks made between these two development phases. In this work, we highlight a major security vulnerability in the public release of GPT-3 and further investigate this vulnerability in other state-of-the-art PLMs. We restrict our work to pre-trained models that have not undergone fine-tuning. Further, we underscore token distance-minimized perturbations as an effective adversarial approach, bypassing both supervised and unsupervised quality measures. Following this approach, we observe a significant decrease in text classification quality when evaluating for semantic similarity.
-
-摘要: 在开发大型语言模型方面的最新进展导致公众能够访问最先进的预训练语言模型(PLM)，包括生成性预训练转换器3(GPT-3)和来自转换器的双向编码器表示(BERT)。然而，在实践中，对PLM的评估表明，它们在训练和发展的微调阶段容易受到对抗性攻击。此类攻击可能导致错误输出、模型生成的仇恨言论以及用户敏感信息的暴露。虽然现有的研究集中在PLM的训练或微调期间的对抗性攻击，但关于这两个开发阶段之间的攻击的信息不足。在这项工作中，我们突出了公开发布的GPT-3中的一个主要安全漏洞，并进一步调查了其他最先进的PLM中的此漏洞。我们将我们的工作限制在未经微调的预先训练的模型上。此外，我们强调令牌距离最小化扰动是一种有效的对抗性方法，绕过了监督和非监督质量度量。按照这种方法，我们观察到在评估语义相似性时文本分类质量显著下降。
-
-
-
-## **33. PatchZero: Defending against Adversarial Patch Attacks by Detecting and Zeroing the Patch**
-
-PatchZero：通过检测和归零补丁来防御敌意补丁攻击 cs.CV
-
-Accepted to WACV 2023
-
-**SubmitDate**: 2022-09-05    [paper-pdf](http://arxiv.org/pdf/2207.01795v3)
-
-**Authors**: Ke Xu, Yao Xiao, Zhaoheng Zheng, Kaijie Cai, Ram Nevatia
-
-**Abstracts**: Adversarial patch attacks mislead neural networks by injecting adversarial pixels within a local region. Patch attacks can be highly effective in a variety of tasks and physically realizable via attachment (e.g. a sticker) to the real-world objects. Despite the diversity in attack patterns, adversarial patches tend to be highly textured and different in appearance from natural images. We exploit this property and present PatchZero, a general defense pipeline against white-box adversarial patches without retraining the downstream classifier or detector. Specifically, our defense detects adversaries at the pixel-level and "zeros out" the patch region by repainting with mean pixel values. We further design a two-stage adversarial training scheme to defend against the stronger adaptive attacks. PatchZero achieves SOTA defense performance on the image classification (ImageNet, RESISC45), object detection (PASCAL VOC), and video classification (UCF101) tasks with little degradation in benign performance. In addition, PatchZero transfers to different patch shapes and attack types.
-
-摘要: 对抗性补丁攻击通过在局部区域内注入对抗性像素来误导神经网络。补丁攻击可以在各种任务中非常有效，并且可以通过附着(例如贴纸)到真实世界的对象来物理实现。尽管攻击模式多种多样，但敌方补丁往往纹理丰富，外观与自然图像不同。我们利用这一特性，提出了PatchZero，一种针对白盒恶意补丁的通用防御管道，而不需要重新训练下游的分类器或检测器。具体地说，我们的防御在像素级检测对手，并通过使用平均像素值重新绘制来对补丁区域进行“清零”。我们进一步设计了一种两阶段对抗性训练方案，以抵御更强的适应性攻击。PatchZero在图像分类(ImageNet，RESISC45)、目标检测(Pascal VOC)和视频分类(UCF101)任务上实现了SOTA防御性能，性能良好，性能几乎没有下降。此外，PatchZero还可以转换为不同的补丁形状和攻击类型。
-
-
-
-## **34. Adversarial Detection: Attacking Object Detection in Real Time**
-
-对抗性检测：攻击目标的实时检测 cs.AI
-
-7 pages, 10 figures
-
-**SubmitDate**: 2022-09-05    [paper-pdf](http://arxiv.org/pdf/2209.01962v1)
-
-**Authors**: Han Wu, Syed Yunas, Sareh Rowlands, Wenjie Ruan, Johan Wahlstrom
-
-**Abstracts**: Intelligent robots hinge on accurate object detection models to perceive the environment. Advances in deep learning security unveil that object detection models are vulnerable to adversarial attacks. However, prior research primarily focuses on attacking static images or offline videos. It is still unclear if such attacks could jeopardize real-world robotic applications in dynamic environments. There is still a gap between theoretical discoveries and real-world applications. We bridge the gap by proposing the first real-time online attack against object detection models. We devised three attacks that fabricate bounding boxes for nonexistent objects at desired locations.
-
-摘要: 智能机器人依赖于准确的目标检测模型来感知环境。深度学习安全方面的进展揭示了目标检测模型容易受到对手攻击。然而，以往的研究主要集中在攻击静态图像或离线视频上。目前尚不清楚此类攻击是否会危及动态环境中真实世界的机器人应用。在理论发现和现实应用之间仍有差距。我们通过提出第一个针对目标检测的实时在线攻击模型来弥补这一差距。我们设计了三种攻击，在所需位置为不存在的对象制造边界框。
-
-
-
-## **35. Jamming Modulation: An Active Anti-Jamming Scheme**
-
-干扰调制：一种主动抗干扰性方案 cs.IT
-
-**SubmitDate**: 2022-09-05    [paper-pdf](http://arxiv.org/pdf/2209.01943v1)
-
-**Authors**: Jianhui Ma, Qiang Li, Zilong Liu, Linsong Du, Hongyang Chen, Nirwan Ansari
-
-**Abstracts**: Providing quality communications under adversarial electronic attacks, e.g., broadband jamming attacks, is a challenging task. Unlike state-of-the-art approaches which treat jamming signals as destructive interference, this paper presents a novel active anti-jamming (AAJ) scheme for a jammed channel to enhance the communication quality between a transmitter node (TN) and receiver node (RN), where the TN actively exploits the jamming signal as a carrier to send messages. Specifically, the TN is equipped with a programmable-gain amplifier, which is capable of re-modulating the jamming signals for jamming modulation. Considering four typical jamming types, we derive both the bit error rates (BER) and the corresponding optimal detection thresholds of the AAJ scheme. The asymptotic performances of the AAJ scheme are discussed under the high jamming-to-noise ratio (JNR) and sampling rate cases. Our analysis shows that there exists a BER floor for sufficiently large JNR. Simulation results indicate that the proposed AAJ scheme allows the TN to communicate with the RN reliably even under extremely strong and/or broadband jamming. Additionally, we investigate the channel capacity of the proposed AAJ scheme and show that the channel capacity of the AAJ scheme outperforms that of the direct transmission when the JNR is relatively high.
-
-摘要: 在敌意电子攻击(如宽带干扰攻击)下提供高质量的通信是一项具有挑战性的任务。不同于现有的将干扰信号视为破坏性干扰的方法，提出了一种新的针对干扰信道的有源抗扰(AAJ)方案，以提高发送节点(TN)和接收节点(RN)之间的通信质量，其中TN主动利用干扰信号作为发送消息的载波。具体地说，TN配备了可编程增益放大器，能够对干扰信号进行重新调制以进行干扰调制。考虑到四种典型的干扰类型，我们推导了AAJ方案的误比特率和相应的最优检测门限。讨论了AAJ方案在高信噪比和高采样率情况下的渐近性能。我们的分析表明，对于足够大的Jnr，存在一个误码率下限。仿真结果表明，所提出的AAJ方案允许TN在极强和/或宽带干扰下与RN可靠地通信。此外，我们还对所提出的AAJ方案的信道容量进行了研究，结果表明，当JNR相对较高时，AAJ方案的信道容量优于直接传输。
-
-
-
-## **36. Identifying a Training-Set Attack's Target Using Renormalized Influence Estimation**
-
-基于重整化影响估计的训练集攻击目标识别 cs.LG
-
-Accepted at CCS'2022 -- Extended version including the supplementary  material
-
-**SubmitDate**: 2022-09-05    [paper-pdf](http://arxiv.org/pdf/2201.10055v2)
-
-**Authors**: Zayd Hammoudeh, Daniel Lowd
-
-**Abstracts**: Targeted training-set attacks inject malicious instances into the training set to cause a trained model to mislabel one or more specific test instances. This work proposes the task of target identification, which determines whether a specific test instance is the target of a training-set attack. Target identification can be combined with adversarial-instance identification to find (and remove) the attack instances, mitigating the attack with minimal impact on other predictions. Rather than focusing on a single attack method or data modality, we build on influence estimation, which quantifies each training instance's contribution to a model's prediction. We show that existing influence estimators' poor practical performance often derives from their over-reliance on training instances and iterations with large losses. Our renormalized influence estimators fix this weakness; they far outperform the original estimators at identifying influential groups of training examples in both adversarial and non-adversarial settings, even finding up to 100% of adversarial training instances with no clean-data false positives. Target identification then simplifies to detecting test instances with anomalous influence values. We demonstrate our method's effectiveness on backdoor and poisoning attacks across various data domains, including text, vision, and speech, as well as against a gray-box, adaptive attacker that specifically optimizes the adversarial instances to evade our method. Our source code is available at https://github.com/ZaydH/target_identification.
-
-摘要: 有针对性的训练集攻击将恶意实例注入训练集，以导致训练模型错误标记一个或多个特定测试实例。本文提出了目标识别的任务，即确定特定的测试实例是否是训练集攻击的目标。目标识别可以与对抗性实例识别相结合来发现(和删除)攻击实例，从而在对其他预测影响最小的情况下减轻攻击。我们不是专注于单一的攻击方法或数据模式，而是建立在影响估计的基础上，该估计量化了每个训练实例对模型预测的贡献。我们指出，现有影响估值器的实际性能较差往往源于它们过度依赖训练实例和具有较大损失的迭代。我们的重整化影响估计器修复了这一弱点；在识别对抗性和非对抗性设置中有影响力的训练样本组方面，它们远远优于原始估计器，甚至可以发现高达100%的对抗性训练实例，而没有干净的数据误报。然后，目标识别简化为检测具有异常影响值的测试实例。我们展示了我们的方法在各种数据领域的后门和中毒攻击中的有效性，包括文本、视觉和语音，以及针对灰盒、自适应攻击者的攻击，该攻击者专门优化敌对实例来逃避我们的方法。我们的源代码可以在https://github.com/ZaydH/target_identification.上找到
-
-
-
-## **37. "Is your explanation stable?": A Robustness Evaluation Framework for Feature Attribution**
-
-“你的解释稳定吗？”：特征归因的稳健性评估框架 cs.AI
-
-Accepted by ACM CCS 2022
-
-**SubmitDate**: 2022-09-05    [paper-pdf](http://arxiv.org/pdf/2209.01782v1)
-
-**Authors**: Yuyou Gan, Yuhao Mao, Xuhong Zhang, Shouling Ji, Yuwen Pu, Meng Han, Jianwei Yin, Ting Wang
-
-**Abstracts**: Understanding the decision process of neural networks is hard. One vital method for explanation is to attribute its decision to pivotal features. Although many algorithms are proposed, most of them solely improve the faithfulness to the model. However, the real environment contains many random noises, which may leads to great fluctuations in the explanations. More seriously, recent works show that explanation algorithms are vulnerable to adversarial attacks. All of these make the explanation hard to trust in real scenarios.   To bridge this gap, we propose a model-agnostic method \emph{Median Test for Feature Attribution} (MeTFA) to quantify the uncertainty and increase the stability of explanation algorithms with theoretical guarantees. MeTFA has the following two functions: (1) examine whether one feature is significantly important or unimportant and generate a MeTFA-significant map to visualize the results; (2) compute the confidence interval of a feature attribution score and generate a MeTFA-smoothed map to increase the stability of the explanation. Experiments show that MeTFA improves the visual quality of explanations and significantly reduces the instability while maintaining the faithfulness. To quantitatively evaluate the faithfulness of an explanation under different noise settings, we further propose several robust faithfulness metrics. Experiment results show that the MeTFA-smoothed explanation can significantly increase the robust faithfulness. In addition, we use two scenarios to show MeTFA's potential in the applications. First, when applied to the SOTA explanation method to locate context bias for semantic segmentation models, MeTFA-significant explanations use far smaller regions to maintain 99\%+ faithfulness. Second, when tested with different explanation-oriented attacks, MeTFA can help defend vanilla, as well as adaptive, adversarial attacks against explanations.
-
-摘要: 理解神经网络的决策过程是很困难的。解释的一个重要方法是将其决定归因于关键特征。虽然有很多算法被提出，但大多数算法都只是提高了对模型的忠诚度。然而，现实环境中包含了许多随机噪声，这可能会导致解释中的巨大波动。更严重的是，最近的研究表明，解释算法容易受到敌意攻击。所有这些都使得这种解释在真实情况下很难令人信任。为了弥补这一差距，我们提出了一种模型不可知的方法\emph(特征属性的中位数测试)来量化不确定性并在理论上保证解释算法的稳定性。MeTFA具有以下两个功能：(1)检查一个特征是否显著重要，并生成MeTFA显著图以可视化结果；(2)计算特征属性得分的置信度，并生成MeTFA平滑的图，以增加解释的稳定性。实验表明，MeTFA在保持解释真实性的同时，提高了解释的视觉质量，显著降低了解释的不稳定性。为了定量评估不同噪声环境下解释的真实性，我们进一步提出了几种稳健的忠诚度度量。实验结果表明，经MeTFA平滑后的解释能够显著提高系统的稳健忠实性。此外，我们还通过两个场景展示了MeTFA在应用中的潜力。首先，当应用于SOTA解释方法来定位语义分割模型的语境偏差时，MeTFA显著解释使用小得多的区域来保持99+的忠实性。其次，当使用不同的面向解释的攻击进行测试时，MeTFA可以帮助防御普通攻击，以及针对解释的适应性对抗性攻击。
-
-
-
-## **38. An Adaptive Black-box Defense against Trojan Attacks (TrojDef)**
-
-木马攻击的自适应黑盒防御(TrojDef) cs.CR
-
-**SubmitDate**: 2022-09-05    [paper-pdf](http://arxiv.org/pdf/2209.01721v1)
-
-**Authors**: Guanxiong Liu, Abdallah Khreishah, Fatima Sharadgah, Issa Khalil
-
-**Abstracts**: Trojan backdoor is a poisoning attack against Neural Network (NN) classifiers in which adversaries try to exploit the (highly desirable) model reuse property to implant Trojans into model parameters for backdoor breaches through a poisoned training process. Most of the proposed defenses against Trojan attacks assume a white-box setup, in which the defender either has access to the inner state of NN or is able to run back-propagation through it. In this work, we propose a more practical black-box defense, dubbed TrojDef, which can only run forward-pass of the NN. TrojDef tries to identify and filter out Trojan inputs (i.e., inputs augmented with the Trojan trigger) by monitoring the changes in the prediction confidence when the input is repeatedly perturbed by random noise. We derive a function based on the prediction outputs which is called the prediction confidence bound to decide whether the input example is Trojan or not. The intuition is that Trojan inputs are more stable as the misclassification only depends on the trigger, while benign inputs will suffer when augmented with noise due to the perturbation of the classification features.   Through mathematical analysis, we show that if the attacker is perfect in injecting the backdoor, the Trojan infected model will be trained to learn the appropriate prediction confidence bound, which is used to distinguish Trojan and benign inputs under arbitrary perturbations. However, because the attacker might not be perfect in injecting the backdoor, we introduce a nonlinear transform to the prediction confidence bound to improve the detection accuracy in practical settings. Extensive empirical evaluations show that TrojDef significantly outperforms the-state-of-the-art defenses and is highly stable under different settings, even when the classifier architecture, the training process, or the hyper-parameters change.
-
-摘要: 特洛伊木马后门是一种针对神经网络(NN)分类器的中毒攻击，攻击者试图利用(非常理想的)模型重用属性，通过有毒的训练过程将特洛伊木马植入到后门入侵的模型参数中。大多数针对特洛伊木马攻击的防御建议采用白盒设置，在白盒设置中，防御者要么可以访问NN的内部状态，要么能够通过它进行反向传播。在这项工作中，我们提出了一种更实用的黑盒防御方法，称为TrojDef，它只能运行神经网络的前传。当输入被随机噪声反复扰动时，TrojDef试图通过监视预测置信度的变化来识别和过滤特洛伊木马输入(即，使用特洛伊木马触发器增强的输入)。我们根据预测输出推导出一个函数，称为预测置信限，用来判断输入示例是否为木马。直觉是，木马输入更稳定，因为误分类只取决于触发器，而良性输入将由于分类特征的扰动而在噪声中增强时受到影响。通过数学分析，我们证明了如果攻击者是完美的后门注入，木马感染模型将被训练来学习适当的预测置信界，用于区分任意扰动下的木马和良性输入。然而，由于攻击者在注入后门时可能并不完美，我们引入了对预测置信限的非线性变换，以提高实际环境中的检测精度。大量的实验评估表明，TrojDef的性能显著优于最先进的防御措施，并且在不同的设置下具有高度的稳定性，即使在分类器结构、训练过程或超参数发生变化的情况下也是如此。
-
-
-
-## **39. Autonomous Cross Domain Adaptation under Extreme Label Scarcity**
-
-极端标签稀缺下的自主跨域自适应 cs.LG
-
-**SubmitDate**: 2022-09-04    [paper-pdf](http://arxiv.org/pdf/2209.01548v1)
-
-**Authors**: Weiwei Weng, Mahardhika Pratama, Choiru Za'in, Marcus De Carvalho, Rakaraddi Appan, Andri Ashfahani, Edward Yapp Kien Yee
-
-**Abstracts**: A cross domain multistream classification is a challenging problem calling for fast domain adaptations to handle different but related streams in never-ending and rapidly changing environments. Notwithstanding that existing multistream classifiers assume no labelled samples in the target stream, they still incur expensive labelling cost since they require fully labelled samples of the source stream. This paper aims to attack the problem of extreme label shortage in the cross domain multistream classification problems where only very few labelled samples of the source stream are provided before process runs. Our solution, namely Learning Streaming Process from Partial Ground Truth (LEOPARD), is built upon a flexible deep clustering network where its hidden nodes, layers and clusters are added and removed dynamically in respect to varying data distributions. A deep clustering strategy is underpinned by a simultaneous feature learning and clustering technique leading to clustering-friendly latent spaces. A domain adaptation strategy relies on the adversarial domain adaptation technique where a feature extractor is trained to fool a domain classifier classifying source and target streams. Our numerical study demonstrates the efficacy of LEOPARD where it delivers improved performances compared to prominent algorithms in 15 of 24 cases. Source codes of LEOPARD are shared in \url{https://github.com/wengweng001/LEOPARD.git} to enable further study.
-
-摘要: 跨域多流分类是一个具有挑战性的问题，需要快速的域自适应来处理永无止境和快速变化的环境中不同但相关的流。尽管现有的多数据流分类器假定目标流中没有标记的样本，但它们仍然招致昂贵的标记成本，因为它们需要源流的完全标记的样本。本文旨在解决跨域多数据流分类问题中的极端标签短缺问题，即在处理运行之前只提供极少的源流的标签样本。我们的解决方案，即从部分地面真相学习流媒体过程(LEOPARD)，建立在一个灵活的深度聚类网络之上，其中隐藏的节点、层和簇根据不同的数据分布动态地添加和删除。深度聚类策略由同时的特征学习和聚类技术支持，从而产生对聚类友好的潜在空间。域自适应策略依赖于对抗性域自适应技术，其中特征提取者被训练来愚弄对源和目标流进行分类的域分类器。我们的数值研究证明了Leopard的有效性，与24个案例中的15个案例相比，它提供了比著名算法更好的性能。Leopard的源代码在\url{https://github.com/wengweng001/LEOPARD.git}上共享，以便进一步研究。
-
-
-
-## **40. Are Attribute Inference Attacks Just Imputation?**
-
-属性推理攻击仅仅是归罪吗？ cs.CR
-
-13 (main body) + 4 (references and appendix) pages. To appear in  CCS'22
-
-**SubmitDate**: 2022-09-02    [paper-pdf](http://arxiv.org/pdf/2209.01292v1)
-
-**Authors**: Bargav Jayaraman, David Evans
-
-**Abstracts**: Models can expose sensitive information about their training data. In an attribute inference attack, an adversary has partial knowledge of some training records and access to a model trained on those records, and infers the unknown values of a sensitive feature of those records. We study a fine-grained variant of attribute inference we call \emph{sensitive value inference}, where the adversary's goal is to identify with high confidence some records from a candidate set where the unknown attribute has a particular sensitive value. We explicitly compare attribute inference with data imputation that captures the training distribution statistics, under various assumptions about the training data available to the adversary. Our main conclusions are: (1) previous attribute inference methods do not reveal more about the training data from the model than can be inferred by an adversary without access to the trained model, but with the same knowledge of the underlying distribution as needed to train the attribute inference attack; (2) black-box attribute inference attacks rarely learn anything that cannot be learned without the model; but (3) white-box attacks, which we introduce and evaluate in the paper, can reliably identify some records with the sensitive value attribute that would not be predicted without having access to the model. Furthermore, we show that proposed defenses such as differentially private training and removing vulnerable records from training do not mitigate this privacy risk. The code for our experiments is available at \url{https://github.com/bargavj/EvaluatingDPML}.
-
-摘要: 模型可能会暴露有关其训练数据的敏感信息。在属性推理攻击中，敌手对一些训练记录具有部分知识，并访问在这些记录上训练的模型，并推断这些记录的敏感特征的未知值。我们研究了属性推理的一种细粒度变体，称为\emph(敏感值推理)，其中对手的目标是高置信度地从未知属性具有特定敏感值的候选集合中识别一些记录。在关于对手可用的训练数据的各种假设下，我们显式地将属性推理与捕获训练分布统计的数据补偿进行比较。我们的主要结论是：(1)以前的属性推理方法并不能揭示更多关于模型训练数据的信息，而不是对手无法访问训练的模型所能推断的数据，而是具有与训练属性推理攻击所需的相同的底层分布知识；(2)黑盒属性推理攻击很少学习没有模型无法学习的任何东西；但是(3)我们在论文中引入和评估的白盒攻击可以可靠地识别一些具有敏感值属性的记录，这些记录在没有访问模型的情况下是无法预测的。此外，我们表明，建议的防御措施，如区分隐私培训和从培训中删除易受攻击的记录，并不能减轻这种隐私风险。我们实验的代码可以在\url{https://github.com/bargavj/EvaluatingDPML}.上找到
-
-
-
-## **41. Semi-supervised Conditional GAN for Simultaneous Generation and Detection of Phishing URLs: A Game theoretic Perspective**
-
-基于博弈论的半监督条件遗传算法同时生成和检测钓鱼URL cs.CR
-
-Accepted to ICMLA 2022
-
-**SubmitDate**: 2022-09-02    [paper-pdf](http://arxiv.org/pdf/2108.01852v2)
-
-**Authors**: Sharif Amit Kamran, Shamik Sengupta, Alireza Tavakkoli
-
-**Abstracts**: Spear Phishing is a type of cyber-attack where the attacker sends hyperlinks through email on well-researched targets. The objective is to obtain sensitive information by imitating oneself as a trustworthy website. In recent times, deep learning has become the standard for defending against such attacks. However, these architectures were designed with only defense in mind. Moreover, the attacker's perspective and motivation are absent while creating such models. To address this, we need a game-theoretic approach to understand the perspective of the attacker (Hacker) and the defender (Phishing URL detector). We propose a Conditional Generative Adversarial Network with novel training strategy for real-time phishing URL detection. Additionally, we train our architecture in a semi-supervised manner to distinguish between adversarial and real examples, along with detecting malicious and benign URLs. We also design two games between the attacker and defender in training and deployment settings by utilizing the game-theoretic perspective. Our experiments confirm that the proposed architecture surpasses recent state-of-the-art architectures for phishing URLs detection.
-
-摘要: 鱼叉式网络钓鱼是一种网络攻击，攻击者通过电子邮件向经过充分研究的目标发送超链接。其目标是通过将自己伪装成一个值得信赖的网站来获取敏感信息。最近，深度学习已成为防御此类攻击的标准。然而，这些架构在设计时只考虑到了防御。此外，在创建这样的模型时，攻击者的视角和动机是缺失的。为了解决这个问题，我们需要一个博弈论的方法来理解攻击者(黑客)和防御者(网络钓鱼URL检测器)的角度。提出了一种具有新颖训练策略的条件生成对抗网络，用于实时网络钓鱼URL检测。此外，我们以半监督的方式训练我们的体系结构，以区分敌意和真实的示例，以及检测恶意和良性URL。我们还利用博弈论的观点设计了攻防双方在训练和部署环境下的两场比赛。我们的实验证实，该体系结构在网络钓鱼URL检测方面优于目前最先进的体系结构。
-
-
-
-## **42. Bayesian Pseudo Labels: Expectation Maximization for Robust and Efficient Semi-Supervised Segmentation**
-
-贝叶斯伪标签：稳健有效的半监督分割的期望最大化 cs.CV
-
-MICCAI 2022 (Early accept, Student Travel Award)
-
-**SubmitDate**: 2022-09-02    [paper-pdf](http://arxiv.org/pdf/2208.04435v2)
-
-**Authors**: Mou-Cheng Xu, Yukun Zhou, Chen Jin, Marius de Groot, Daniel C. Alexander, Neil P. Oxtoby, Yipeng Hu, Joseph Jacob
-
-**Abstracts**: This paper concerns pseudo labelling in segmentation. Our contribution is fourfold. Firstly, we present a new formulation of pseudo-labelling as an Expectation-Maximization (EM) algorithm for clear statistical interpretation. Secondly, we propose a semi-supervised medical image segmentation method purely based on the original pseudo labelling, namely SegPL. We demonstrate SegPL is a competitive approach against state-of-the-art consistency regularisation based methods on semi-supervised segmentation on a 2D multi-class MRI brain tumour segmentation task and a 3D binary CT lung vessel segmentation task. The simplicity of SegPL allows less computational cost comparing to prior methods. Thirdly, we demonstrate that the effectiveness of SegPL may originate from its robustness against out-of-distribution noises and adversarial attacks. Lastly, under the EM framework, we introduce a probabilistic generalisation of SegPL via variational inference, which learns a dynamic threshold for pseudo labelling during the training. We show that SegPL with variational inference can perform uncertainty estimation on par with the gold-standard method Deep Ensemble.
-
-摘要: 本文研究的是分割中的伪标注问题。我们的贡献是四倍的。首先，我们提出了一种新的伪标记公式，作为一种用于清晰统计解释的期望最大化(EM)算法。其次，提出了一种完全基于原始伪标记的半监督医学图像分割方法--SegPL。在2D多类MRI脑肿瘤分割任务和3D二值CT肺血管分割任务中，我们证明了SegPL是一种与最先进的基于一致性正则化的半监督分割方法相竞争的方法。与以前的方法相比，SegPL的简单性允许更少的计算成本。第三，我们证明了SegPL的有效性可能源于它对分布外噪声和对手攻击的健壮性。最后，在EM框架下，我们通过变分推理对SegPL进行概率推广，在训练过程中学习伪标签的动态阈值。我们证明了带变分推理的SegPL方法可以与金标准方法深层集成一样进行不确定度估计。
-
-
-
-## **43. Subject Membership Inference Attacks in Federated Learning**
-
-联合学习中的主体成员推理攻击 cs.LG
-
-**SubmitDate**: 2022-09-02    [paper-pdf](http://arxiv.org/pdf/2206.03317v2)
-
-**Authors**: Anshuman Suri, Pallika Kanani, Virendra J. Marathe, Daniel W. Peterson
-
-**Abstracts**: Privacy attacks on Machine Learning (ML) models often focus on inferring the existence of particular data points in the training data. However, what the adversary really wants to know is if a particular \emph{individual}'s (\emph{subject}'s) data was included during training. In such scenarios, the adversary is more likely to have access to the distribution of a particular subject, than actual records. Furthermore, in settings like cross-silo Federated Learning (FL), a subject's data can be embodied by multiple data records that are spread across multiple organizations. Nearly all of the existing private FL literature is dedicated to studying privacy at two granularities -- item-level (individual data records), and user-level (participating user in the federation), neither of which apply to data subjects in cross-silo FL. This insight motivates us to shift our attention from the privacy of data records to the privacy of \emph{data subjects}, also known as subject-level privacy. We propose two black-box attacks for \emph{subject membership inference}, of which one assumes access to a model after each training round. Using these attacks, we estimate subject membership inference risk on real-world data for single-party models as well as FL scenarios. We find our attacks to be extremely potent, even without access to exact training records, and using the knowledge of membership for a handful of subjects. To better understand the various factors that may influence subject privacy risk in cross-silo FL settings, we systematically generate several hundred synthetic federation configurations, varying properties of the data, model design and training, and the federation itself. Finally, we investigate the effectiveness of Differential Privacy in mitigating this threat.
-
-摘要: 针对机器学习(ML)模型的隐私攻击通常集中在推断训练数据中特定数据点的存在。然而，对手真正想知道的是，在训练过程中是否包括了特定的\emph{个人}的数据。在这种情况下，对手更有可能访问特定主题的分布，而不是实际记录。此外，在像跨竖井联合学习(FL)这样的环境中，受试者的数据可以通过分布在多个组织中的多个数据记录来体现。几乎所有现有的私有FL文献都致力于在两个粒度上研究隐私--项级(个人数据记录)和用户级(参与联盟的用户)，这两者都不适用于跨竖井FL中的数据主体。这种洞察力促使我们将注意力从数据记录的隐私转移到数据主题的隐私，也称为主题级别隐私。我们提出了两种针对主题成员推理的黑盒攻击，其中一种假设在每一轮训练后都可以访问模型。使用这些攻击，我们在单方模型和FL场景的真实世界数据上估计了主体成员关系推断风险。我们发现我们的攻击非常强大，即使没有获得确切的训练记录，并使用少数科目的成员知识。为了更好地了解在跨竖井FL设置中可能影响主体隐私风险的各种因素，我们系统地生成了数百个合成联邦配置、数据的不同属性、模型设计和训练以及联邦本身。最后，我们研究了差分隐私在缓解这一威胁方面的有效性。
-
-
-
-## **44. Group Property Inference Attacks Against Graph Neural Networks**
-
-针对图神经网络的群属性推理攻击 cs.LG
-
-Full version of the ACM CCS'22 paper
-
-**SubmitDate**: 2022-09-02    [paper-pdf](http://arxiv.org/pdf/2209.01100v1)
-
-**Authors**: Xiuling Wang, Wendy Hui Wang
-
-**Abstracts**: With the fast adoption of machine learning (ML) techniques, sharing of ML models is becoming popular. However, ML models are vulnerable to privacy attacks that leak information about the training data. In this work, we focus on a particular type of privacy attacks named property inference attack (PIA) which infers the sensitive properties of the training data through the access to the target ML model. In particular, we consider Graph Neural Networks (GNNs) as the target model, and distribution of particular groups of nodes and links in the training graph as the target property. While the existing work has investigated PIAs that target at graph-level properties, no prior works have studied the inference of node and link properties at group level yet.   In this work, we perform the first systematic study of group property inference attacks (GPIA) against GNNs. First, we consider a taxonomy of threat models under both black-box and white-box settings with various types of adversary knowledge, and design six different attacks for these settings. We evaluate the effectiveness of these attacks through extensive experiments on three representative GNN models and three real-world graphs. Our results demonstrate the effectiveness of these attacks whose accuracy outperforms the baseline approaches. Second, we analyze the underlying factors that contribute to GPIA's success, and show that the target model trained on the graphs with or without the target property represents some dissimilarity in model parameters and/or model outputs, which enables the adversary to infer the existence of the property. Further, we design a set of defense mechanisms against the GPIA attacks, and demonstrate that these mechanisms can reduce attack accuracy effectively with small loss on GNN model accuracy.
-
-摘要: 随着机器学习(ML)技术的快速采用，ML模型的共享变得越来越流行。然而，ML模型容易受到隐私攻击，从而泄露有关训练数据的信息。在这项工作中，我们重点研究了一种特殊类型的隐私攻击，称为属性推理攻击(PIA)，它通过访问目标ML模型来推断训练数据的敏感属性。特别地，我们将图神经网络(GNN)作为目标模型，将训练图中特定节点组和链路组的分布作为目标属性。虽然现有的工作已经研究了针对图级属性的PIA，但还没有先前的工作研究在组级别上的节点和链接属性的推理。在本工作中，我们首次系统地研究了针对GNN的群属性推理攻击(GPIA)。首先，我们考虑了黑盒和白盒两种不同类型对手知识的威胁模型的分类，并针对这些设置设计了六种不同的攻击。我们通过在三个具有代表性的GNN模型和三个真实世界图上的大量实验来评估这些攻击的有效性。我们的结果证明了这些攻击的有效性，它们的准确率超过了基线方法。其次，我们分析了导致GPIA成功的潜在因素，并证明了在有或没有目标属性的图上训练的目标模型表示了模型参数和/或模型输出的一些不同，这使得对手能够推断该属性的存在。进一步，我们设计了一套针对GPIA攻击的防御机制，并证明了这些机制可以在较小的GNN模型精度损失的情况下有效地降低攻击精度。
-
-
-
-## **45. Scalable Adversarial Attack Algorithms on Influence Maximization**
-
-基于影响力最大化的可扩展敌意攻击算法 cs.SI
-
-11 pages, 2 figures
-
-**SubmitDate**: 2022-09-02    [paper-pdf](http://arxiv.org/pdf/2209.00892v1)
-
-**Authors**: Lichao Sun, Xiaobin Rui, Wei Chen
-
-**Abstracts**: In this paper, we study the adversarial attacks on influence maximization under dynamic influence propagation models in social networks. In particular, given a known seed set S, the problem is to minimize the influence spread from S by deleting a limited number of nodes and edges. This problem reflects many application scenarios, such as blocking virus (e.g. COVID-19) propagation in social networks by quarantine and vaccination, blocking rumor spread by freezing fake accounts, or attacking competitor's influence by incentivizing some users to ignore the information from the competitor. In this paper, under the linear threshold model, we adapt the reverse influence sampling approach and provide efficient algorithms of sampling valid reverse reachable paths to solve the problem.
-
-摘要: 本文研究了社会网络中动态影响传播模型下影响最大化的对抗性攻击。特别地，给定一个已知的种子集S，问题是通过删除有限数量的节点和边来最小化从S传播的影响。这个问题反映了很多应用场景，比如通过隔离和接种疫苗来阻止病毒(例如新冠肺炎)在社交网络中的传播，通过冻结虚假账号来阻止谣言传播，或者通过激励一些用户忽略竞争对手的信息来攻击竞争对手的影响力。本文在线性门限模型下，采用反向影响抽样方法，给出了有效反向可达路径抽样的有效算法。
-
-
-
-## **46. Adversarial Color Film: Effective Physical-World Attack to DNNs**
-
-对抗性彩色电影：对DNN的有效物理世界攻击 cs.CV
-
-**SubmitDate**: 2022-09-02    [paper-pdf](http://arxiv.org/pdf/2209.02430v1)
-
-**Authors**: Chengyin Hu, Weiwen Shi
-
-**Abstracts**: It is well known that the performance of deep neural networks (DNNs) is susceptible to subtle interference. So far, camera-based physical adversarial attacks haven't gotten much attention, but it is the vacancy of physical attack. In this paper, we propose a simple and efficient camera-based physical attack called Adversarial Color Film (AdvCF), which manipulates the physical parameters of color film to perform attacks. Carefully designed experiments show the effectiveness of the proposed method in both digital and physical environments. In addition, experimental results show that the adversarial samples generated by AdvCF have excellent performance in attack transferability, which enables AdvCF effective black-box attacks. At the same time, we give the guidance of defense against AdvCF by means of adversarial training. Finally, we look into AdvCF's threat to future vision-based systems and propose some promising mentality for camera-based physical attacks.
-
-摘要: 众所周知，深度神经网络(DNN)的性能容易受到细微干扰的影响。到目前为止，基于摄像机的身体对抗攻击还没有得到太多的关注，但它是身体攻击的空白。本文提出了一种简单而有效的基于摄像机的物理攻击方法，称为对抗性彩色胶片攻击(AdvCF)，它通过操纵彩色胶片的物理参数来进行攻击。精心设计的实验表明，该方法在数字和物理环境中都是有效的。此外，实验结果表明，由AdvCF生成的对抗性样本具有良好的攻击可转移性，使得AdvCF能够有效地进行黑盒攻击。同时，通过对抗性训练的方式，指导对Advcf的防御。最后，我们展望了AdvCF对未来基于视觉的系统的威胁，并对基于摄像机的物理攻击提出了一些有前景的思路。
-
-
-
-## **47. Impact of Colour Variation on Robustness of Deep Neural Networks**
-
-颜色变化对深度神经网络稳健性的影响 cs.CV
-
-arXiv admin note: substantial text overlap with arXiv:2209.02132
-
-**SubmitDate**: 2022-09-02    [paper-pdf](http://arxiv.org/pdf/2209.02832v1)
-
-**Authors**: Chengyin Hu, Weiwen Shi
-
-**Abstracts**: Deep neural networks (DNNs) have have shown state-of-the-art performance for computer vision applications like image classification, segmentation and object detection. Whereas recent advances have shown their vulnerability to manual digital perturbations in the input data, namely adversarial attacks. The accuracy of the networks is significantly affected by the data distribution of their training dataset. Distortions or perturbations on color space of input images generates out-of-distribution data, which make networks more likely to misclassify them. In this work, we propose a color-variation dataset by distorting their RGB color on a subset of the ImageNet with 27 different combinations. The aim of our work is to study the impact of color variation on the performance of DNNs. We perform experiments on several state-of-the-art DNN architectures on the proposed dataset, and the result shows a significant correlation between color variation and loss of accuracy. Furthermore, based on the ResNet50 architecture, we demonstrate some experiments of the performance of recently proposed robust training techniques and strategies, such as Augmix, revisit, and free normalizer, on our proposed dataset. Experimental results indicate that these robust training techniques can improve the robustness of deep networks to color variation.
-
-摘要: 深度神经网络(DNN)在图像分类、分割和目标检测等计算机视觉应用中表现出了最先进的性能。然而，最近的进展表明，它们容易受到输入数据中的人工数字扰动，即对抗性攻击。训练数据集的数据分布对网络的精度有很大的影响。输入图像颜色空间的失真或扰动会产生不分布的数据，这使得网络更有可能对它们进行错误分类。在这项工作中，我们提出了一个颜色变化数据集，通过在ImageNet的一个子集上使用27种不同的组合来扭曲它们的RGB颜色。我们工作的目的是研究颜色变化对DNN性能的影响。我们在提出的数据集上对几种最先进的DNN结构进行了实验，结果表明颜色变化与准确率损失之间存在显著的相关性。此外，基于ResNet50体系结构，我们展示了最近提出的稳健训练技术和策略的一些实验，例如AugMix、Revises和Free Normizer，在我们提出的数据集上。实验结果表明，这些稳健的训练技术可以提高深度网络对颜色变化的鲁棒性。
-
-
-
-## **48. Impact of Scaled Image on Robustness of Deep Neural Networks**
-
-尺度图像对深度神经网络稳健性的影响 cs.CV
-
-**SubmitDate**: 2022-09-02    [paper-pdf](http://arxiv.org/pdf/2209.02132v1)
-
-**Authors**: Chengyin Hu, Weiwen Shi
-
-**Abstracts**: Deep neural networks (DNNs) have been widely used in computer vision tasks like image classification, object detection and segmentation. Whereas recent studies have shown their vulnerability to manual digital perturbations or distortion in the input images. The accuracy of the networks is remarkably influenced by the data distribution of their training dataset. Scaling the raw images creates out-of-distribution data, which makes it a possible adversarial attack to fool the networks. In this work, we propose a Scaling-distortion dataset ImageNet-CS by Scaling a subset of the ImageNet Challenge dataset by different multiples. The aim of our work is to study the impact of scaled images on the performance of advanced DNNs. We perform experiments on several state-of-the-art deep neural network architectures on the proposed ImageNet-CS, and the results show a significant positive correlation between scaling size and accuracy decline. Moreover, based on ResNet50 architecture, we demonstrate some tests on the performance of recent proposed robust training techniques and strategies like Augmix, Revisiting and Normalizer Free on our proposed ImageNet-CS. Experiment results have shown that these robust training techniques can improve networks' robustness to scaling transformation.
-
-摘要: 深度神经网络在图像分类、目标检测和分割等计算机视觉任务中有着广泛的应用。然而，最近的研究表明，它们在输入图像中容易受到人工数字干扰或失真的影响。训练数据集的数据分布对网络的精度有很大影响。对原始图像进行缩放会产生分布不均的数据，这使得它可能成为愚弄网络的敌意攻击。在这项工作中，我们通过对ImageNet挑战数据集的子集进行不同倍数的缩放，提出了一个缩放失真数据集ImageNet-CS。我们工作的目的是研究缩放图像对高级DNN性能的影响。我们在提出的ImageNet-CS上对几种最先进的深度神经网络结构进行了实验，结果表明，尺度大小与准确率下降呈显著正相关。此外，基于ResNet50体系结构，我们在我们提出的ImageNet-CS上对最近提出的健壮训练技术和策略，如AugMix、Revising和Normal izer Free的性能进行了测试。实验结果表明，这些稳健的训练技术可以提高网络对尺度变换的鲁棒性。
-
-
-
-## **49. Reliable Representations Make A Stronger Defender: Unsupervised Structure Refinement for Robust GNN**
-
-可靠的表示使防御者更强大：健壮GNN的无监督结构求精 cs.LG
-
-Accepted in KDD2022
-
-**SubmitDate**: 2022-09-02    [paper-pdf](http://arxiv.org/pdf/2207.00012v2)
-
-**Authors**: Kuan Li, Yang Liu, Xiang Ao, Jianfeng Chi, Jinghua Feng, Hao Yang, Qing He
-
-**Abstracts**: Benefiting from the message passing mechanism, Graph Neural Networks (GNNs) have been successful on flourish tasks over graph data. However, recent studies have shown that attackers can catastrophically degrade the performance of GNNs by maliciously modifying the graph structure. A straightforward solution to remedy this issue is to model the edge weights by learning a metric function between pairwise representations of two end nodes, which attempts to assign low weights to adversarial edges. The existing methods use either raw features or representations learned by supervised GNNs to model the edge weights. However, both strategies are faced with some immediate problems: raw features cannot represent various properties of nodes (e.g., structure information), and representations learned by supervised GNN may suffer from the poor performance of the classifier on the poisoned graph. We need representations that carry both feature information and as mush correct structure information as possible and are insensitive to structural perturbations. To this end, we propose an unsupervised pipeline, named STABLE, to optimize the graph structure. Finally, we input the well-refined graph into a downstream classifier. For this part, we design an advanced GCN that significantly enhances the robustness of vanilla GCN without increasing the time complexity. Extensive experiments on four real-world graph benchmarks demonstrate that STABLE outperforms the state-of-the-art methods and successfully defends against various attacks.
-
-摘要: 得益于消息传递机制，图神经网络(GNN)已经成功地处理了大量的图数据任务。然而，最近的研究表明，攻击者可以通过恶意修改图结构来灾难性地降低GNN的性能。解决这一问题的一个直接解决方案是通过学习两个末端节点的成对表示之间的度量函数来对边权重进行建模，该度量函数试图为对抗性边分配较低的权重。现有的方法要么使用原始特征，要么使用由监督GNN学习的表示来对边权重进行建模。然而，这两种策略都面临着一些迫在眉睫的问题：原始特征不能表示节点的各种属性(例如结构信息)，而有监督GNN学习的表示可能会受到有毒图上分类器性能较差的影响。我们需要既携带特征信息又尽可能正确的结构信息并对结构扰动不敏感的表示法。为此，我们提出了一种名为STRATE的无监督流水线来优化图的结构。最后，我们将精化后的图输入到下游分类器中。对于这一部分，我们设计了一种改进的GCN，它在不增加时间复杂度的情况下显著增强了普通GCN的健壮性。在四个真实图形基准上的大量实验表明，STRATE的性能优于最先进的方法，并成功地防御了各种攻击。
-
-
-
-## **50. Universal Fourier Attack for Time Series**
-
-时间序列的通用傅里叶攻击 cs.CR
-
-**SubmitDate**: 2022-09-02    [paper-pdf](http://arxiv.org/pdf/2209.00757v1)
-
-**Authors**: Elizabeth Coda, Brad Clymer, Chance DeSmet, Yijing Watkins, Michael Girard
-
-**Abstracts**: A wide variety of adversarial attacks have been proposed and explored using image and audio data. These attacks are notoriously easy to generate digitally when the attacker can directly manipulate the input to a model, but are much more difficult to implement in the real-world. In this paper we present a universal, time invariant attack for general time series data such that the attack has a frequency spectrum primarily composed of the frequencies present in the original data. The universality of the attack makes it fast and easy to implement as no computation is required to add it to an input, while time invariance is useful for real-world deployment. Additionally, the frequency constraint ensures the attack can withstand filtering. We demonstrate the effectiveness of the attack in two different domains, speech recognition and unintended radiated emission, and show that the attack is robust against common transform-and-compare defense pipelines.
-
-摘要: 已经提出并探索了使用图像和音频数据的各种对抗性攻击。当攻击者可以直接操作模型的输入时，这些攻击以数字方式生成是出了名的容易，但在现实世界中实现起来要困难得多。在本文中，我们提出了一种针对一般时间序列数据的通用、时不变攻击，使得该攻击具有主要由原始数据中存在的频率组成的频谱。该攻击的普遍性使其易于快速实现，因为不需要计算即可将其添加到输入，而时间不变性对于真实世界的部署很有用。此外，频率限制确保了攻击能够经受住过滤。我们在语音识别和意外辐射两个不同的领域证明了该攻击的有效性，并证明了该攻击对常见的变换和比较防御流水线具有健壮性。
 
 
 

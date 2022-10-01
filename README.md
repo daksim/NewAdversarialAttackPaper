@@ -1,9 +1,59 @@
 # Latest Adversarial Attack Papers
-**update at 2022-09-30 06:31:28**
+**update at 2022-10-02 06:31:26**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. A Survey on Physical Adversarial Attack in Computer Vision**
+## **1. Single-Node Attacks for Fooling Graph Neural Networks**
+
+cs.LG
+
+Appeared in Neurocomputing
+
+**SubmitDate**: 2022-09-29    [paper-pdf](http://arxiv.org/pdf/2011.03574v2)
+
+**Authors**: Ben Finkelshtein, Chaim Baskin, Evgenii Zheltonozhskii, Uri Alon
+
+**Abstracts**: Graph neural networks (GNNs) have shown broad applicability in a variety of domains. These domains, e.g., social networks and product recommendations, are fertile ground for malicious users and behavior. In this paper, we show that GNNs are vulnerable to the extremely limited (and thus quite realistic) scenarios of a single-node adversarial attack, where the perturbed node cannot be chosen by the attacker. That is, an attacker can force the GNN to classify any target node to a chosen label, by only slightly perturbing the features or the neighbor list of another single arbitrary node in the graph, even when not being able to select that specific attacker node. When the adversary is allowed to select the attacker node, these attacks are even more effective. We demonstrate empirically that our attack is effective across various common GNN types (e.g., GCN, GraphSAGE, GAT, GIN) and robustly optimized GNNs (e.g., Robust GCN, SM GCN, GAL, LAT-GCN), outperforming previous attacks across different real-world datasets both in a targeted and non-targeted attacks. Our code is available at https://github.com/benfinkelshtein/SINGLE .
+
+
+
+## **2. Towards Lightweight Black-Box Attacks against Deep Neural Networks**
+
+cs.LG
+
+**SubmitDate**: 2022-09-29    [paper-pdf](http://arxiv.org/pdf/2209.14826v1)
+
+**Authors**: Chenghao Sun, Yonggang Zhang, Wan Chaoqun, Qizhou Wang, Ya Li, Tongliang Liu, Bo Han, Xinmei Tian
+
+**Abstracts**: Black-box attacks can generate adversarial examples without accessing the parameters of target model, largely exacerbating the threats of deployed deep neural networks (DNNs). However, previous works state that black-box attacks fail to mislead target models when their training data and outputs are inaccessible. In this work, we argue that black-box attacks can pose practical attacks in this extremely restrictive scenario where only several test samples are available. Specifically, we find that attacking the shallow layers of DNNs trained on a few test samples can generate powerful adversarial examples. As only a few samples are required, we refer to these attacks as lightweight black-box attacks. The main challenge to promoting lightweight attacks is to mitigate the adverse impact caused by the approximation error of shallow layers. As it is hard to mitigate the approximation error with few available samples, we propose Error TransFormer (ETF) for lightweight attacks. Namely, ETF transforms the approximation error in the parameter space into a perturbation in the feature space and alleviates the error by disturbing features. In experiments, lightweight black-box attacks with the proposed ETF achieve surprising results. For example, even if only 1 sample per category available, the attack success rate in lightweight black-box attacks is only about 3% lower than that of the black-box attacks with complete training data.
+
+
+
+## **3. Fool SHAP with Stealthily Biased Sampling**
+
+cs.LG
+
+**SubmitDate**: 2022-09-29    [paper-pdf](http://arxiv.org/pdf/2205.15419v2)
+
+**Authors**: Gabriel Laberge, Ulrich Aïvodji, Satoshi Hara, Mario Marchand., Foutse Khomh
+
+**Abstracts**: SHAP explanations aim at identifying which features contribute the most to the difference in model prediction at a specific input versus a background distribution. Recent studies have shown that they can be manipulated by malicious adversaries to produce arbitrary desired explanations. However, existing attacks focus solely on altering the black-box model itself. In this paper, we propose a complementary family of attacks that leave the model intact and manipulate SHAP explanations using stealthily biased sampling of the data points used to approximate expectations w.r.t the background distribution. In the context of fairness audit, we show that our attack can reduce the importance of a sensitive feature when explaining the difference in outcomes between groups while remaining undetected. These results highlight the manipulability of SHAP explanations and encourage auditors to treat them with skepticism.
+
+
+
+## **4. Watch What You Pretrain For: Targeted, Transferable Adversarial Examples on Self-Supervised Speech Recognition models**
+
+cs.LG
+
+**SubmitDate**: 2022-09-29    [paper-pdf](http://arxiv.org/pdf/2209.13523v2)
+
+**Authors**: Raphael Olivier, Hadi Abdullah, Bhiksha Raj
+
+**Abstracts**: A targeted adversarial attack produces audio samples that can force an Automatic Speech Recognition (ASR) system to output attacker-chosen text. To exploit ASR models in real-world, black-box settings, an adversary can leverage the transferability property, i.e. that an adversarial sample produced for a proxy ASR can also fool a different remote ASR. However recent work has shown that transferability against large ASR models is very difficult. In this work, we show that modern ASR architectures, specifically ones based on Self-Supervised Learning, are in fact vulnerable to transferability. We successfully demonstrate this phenomenon by evaluating state-of-the-art self-supervised ASR models like Wav2Vec2, HuBERT, Data2Vec and WavLM. We show that with low-level additive noise achieving a 30dB Signal-Noise Ratio, we can achieve target transferability with up to 80% accuracy. Next, we 1) use an ablation study to show that Self-Supervised learning is the main cause of that phenomenon, and 2) we provide an explanation for this phenomenon. Through this we show that modern ASR architectures are uniquely vulnerable to adversarial security threats.
+
+
+
+## **5. A Survey on Physical Adversarial Attack in Computer Vision**
 
 cs.CV
 
@@ -15,7 +65,7 @@ cs.CV
 
 
 
-## **2. A Closer Look at Evaluating the Bit-Flip Attack Against Deep Neural Networks**
+## **6. A Closer Look at Evaluating the Bit-Flip Attack Against Deep Neural Networks**
 
 cs.CR
 
@@ -29,7 +79,7 @@ Extended version from IEEE IOLTS'2022 short paper
 
 
 
-## **3. Exploring the Relationship between Architecture and Adversarially Robust Generalization**
+## **7. Exploring the Relationship between Architecture and Adversarially Robust Generalization**
 
 cs.LG
 
@@ -41,7 +91,7 @@ cs.LG
 
 
 
-## **4. Machine Beats Machine: Machine Learning Models to Defend Against Adversarial Attacks**
+## **8. Machine Beats Machine: Machine Learning Models to Defend Against Adversarial Attacks**
 
 cs.LG
 
@@ -53,7 +103,7 @@ cs.LG
 
 
 
-## **5. Adaptive Image Transformations for Transfer-based Adversarial Attack**
+## **9. Adaptive Image Transformations for Transfer-based Adversarial Attack**
 
 cs.CV
 
@@ -67,7 +117,7 @@ cs.CV
 
 
 
-## **6. Understanding Real-world Threats to Deep Learning Models in Android Apps**
+## **10. Understanding Real-world Threats to Deep Learning Models in Android Apps**
 
 cs.CR
 
@@ -81,7 +131,7 @@ cs.CR
 
 
 
-## **7. On the Limitations of Stochastic Pre-processing Defenses**
+## **11. On the Limitations of Stochastic Pre-processing Defenses**
 
 cs.LG
 
@@ -95,7 +145,7 @@ Accepted by Proceedings of the 36th Conference on Neural Information  Processing
 
 
 
-## **8. Attacking Compressed Vision Transformers**
+## **12. Attacking Compressed Vision Transformers**
 
 cs.LG
 
@@ -107,7 +157,7 @@ cs.LG
 
 
 
-## **9. Suppress with a Patch: Revisiting Universal Adversarial Patch Attacks against Object Detection**
+## **13. Suppress with a Patch: Revisiting Universal Adversarial Patch Attacks against Object Detection**
 
 cs.CV
 
@@ -121,7 +171,7 @@ Accepted for publication at ICECCME 2022
 
 
 
-## **10. Mitigating Attacks on Artificial Intelligence-based Spectrum Sensing for Cellular Network Signals**
+## **14. Mitigating Attacks on Artificial Intelligence-based Spectrum Sensing for Cellular Network Signals**
 
 cs.NI
 
@@ -135,7 +185,7 @@ IEEE GLOBECOM 2022 Publication
 
 
 
-## **11. Reliable Representations Make A Stronger Defender: Unsupervised Structure Refinement for Robust GNN**
+## **15. Reliable Representations Make A Stronger Defender: Unsupervised Structure Refinement for Robust GNN**
 
 cs.LG
 
@@ -149,7 +199,7 @@ Accepted in KDD2022
 
 
 
-## **12. FG-UAP: Feature-Gathering Universal Adversarial Perturbation**
+## **16. FG-UAP: Feature-Gathering Universal Adversarial Perturbation**
 
 cs.CV
 
@@ -163,7 +213,7 @@ cs.CV
 
 
 
-## **13. Cascading Failures in Power Grids**
+## **17. Cascading Failures in Power Grids**
 
 eess.SY
 
@@ -175,7 +225,7 @@ eess.SY
 
 
 
-## **14. ASK: Adversarial Soft k-Nearest Neighbor Attack and Defense**
+## **18. ASK: Adversarial Soft k-Nearest Neighbor Attack and Defense**
 
 cs.LG
 
@@ -187,7 +237,7 @@ cs.LG
 
 
 
-## **15. Formally verified asymptotic consensus in robust networks**
+## **19. Formally verified asymptotic consensus in robust networks**
 
 cs.PL
 
@@ -199,7 +249,7 @@ cs.PL
 
 
 
-## **16. RORL: Robust Offline Reinforcement Learning via Conservative Smoothing**
+## **20. RORL: Robust Offline Reinforcement Learning via Conservative Smoothing**
 
 cs.LG
 
@@ -213,7 +263,7 @@ Accepted by Advances in Neural Information Processing Systems  (NeurIPS) 2022
 
 
 
-## **17. Black-Box Dissector: Towards Erasing-based Hard-Label Model Stealing Attack**
+## **21. Black-Box Dissector: Towards Erasing-based Hard-Label Model Stealing Attack**
 
 cs.CV
 
@@ -225,7 +275,7 @@ cs.CV
 
 
 
-## **18. Activation Learning by Local Competitions**
+## **22. Activation Learning by Local Competitions**
 
 cs.NE
 
@@ -239,7 +289,7 @@ cs.NE
 
 
 
-## **19. Exploiting Trust for Resilient Hypothesis Testing with Malicious Robots**
+## **23. Exploiting Trust for Resilient Hypothesis Testing with Malicious Robots**
 
 cs.RO
 
@@ -253,7 +303,7 @@ cs.RO
 
 
 
-## **20. Residue-Based Natural Language Adversarial Attack Detection**
+## **24. Residue-Based Natural Language Adversarial Attack Detection**
 
 cs.CL
 
@@ -265,7 +315,7 @@ cs.CL
 
 
 
-## **21. SPRITZ-1.5C: Employing Deep Ensemble Learning for Improving the Security of Computer Networks against Adversarial Attacks**
+## **25. SPRITZ-1.5C: Employing Deep Ensemble Learning for Improving the Security of Computer Networks against Adversarial Attacks**
 
 cs.CR
 
@@ -277,7 +327,7 @@ cs.CR
 
 
 
-## **22. Robust Reinforcement Learning as a Stackelberg Game via Adaptively-Regularized Adversarial Training**
+## **26. Robust Reinforcement Learning as a Stackelberg Game via Adaptively-Regularized Adversarial Training**
 
 cs.LG
 
@@ -289,7 +339,7 @@ cs.LG
 
 
 
-## **23. RSD-GAN: Regularized Sobolev Defense GAN Against Speech-to-Text Adversarial Attacks**
+## **27. RSD-GAN: Regularized Sobolev Defense GAN Against Speech-to-Text Adversarial Attacks**
 
 cs.SD
 
@@ -303,7 +353,7 @@ Paper ACCEPTED FOR PUBLICATION IEEE Signal Processing Letters Journal
 
 
 
-## **24. Approximate better, Attack stronger: Adversarial Example Generation via Asymptotically Gaussian Mixture Distribution**
+## **28. Approximate better, Attack stronger: Adversarial Example Generation via Asymptotically Gaussian Mixture Distribution**
 
 cs.LG
 
@@ -315,7 +365,7 @@ cs.LG
 
 
 
-## **25. Faith: An Efficient Framework for Transformer Verification on GPUs**
+## **29. Faith: An Efficient Framework for Transformer Verification on GPUs**
 
 cs.LG
 
@@ -329,7 +379,7 @@ Published in ATC'22
 
 
 
-## **26. Real-time Adversarial Perturbations against Deep Reinforcement Learning Policies: Attacks and Defenses**
+## **30. Real-time Adversarial Perturbations against Deep Reinforcement Learning Policies: Attacks and Defenses**
 
 cs.LG
 
@@ -343,7 +393,7 @@ Will appear in the proceedings of ESORICS 2022; 13 pages, 6 figures,  6 tables
 
 
 
-## **27. MixTailor: Mixed Gradient Aggregation for Robust Learning Against Tailored Attacks**
+## **31. MixTailor: Mixed Gradient Aggregation for Robust Learning Against Tailored Attacks**
 
 cs.LG
 
@@ -357,7 +407,7 @@ To appear at the Transactions on Machine Learning Research (TMLR)
 
 
 
-## **28. Reducing Exploitability with Population Based Training**
+## **32. Reducing Exploitability with Population Based Training**
 
 cs.LG
 
@@ -371,7 +421,7 @@ Presented at New Frontiers in Adversarial Machine Learning Workshop,  ICML 2022
 
 
 
-## **29. Privacy Attacks Against Biometric Models with Fewer Samples: Incorporating the Output of Multiple Models**
+## **33. Privacy Attacks Against Biometric Models with Fewer Samples: Incorporating the Output of Multiple Models**
 
 cs.CV
 
@@ -385,7 +435,7 @@ This is a major revision of a paper titled "Inverting Biometric  Models with Few
 
 
 
-## **30. In Differential Privacy, There is Truth: On Vote Leakage in Ensemble Private Learning**
+## **34. In Differential Privacy, There is Truth: On Vote Leakage in Ensemble Private Learning**
 
 cs.LG
 
@@ -399,7 +449,7 @@ To appear at NeurIPS 2022
 
 
 
-## **31. Fair Robust Active Learning by Joint Inconsistency**
+## **35. Fair Robust Active Learning by Joint Inconsistency**
 
 cs.LG
 
@@ -413,7 +463,7 @@ cs.LG
 
 
 
-## **32. Formulating Robustness Against Unforeseen Attacks**
+## **36. Formulating Robustness Against Unforeseen Attacks**
 
 cs.LG
 
@@ -427,7 +477,7 @@ NeurIPS 2022
 
 
 
-## **33. Adversarial Formal Semantics of Attack Trees and Related Problems**
+## **37. Adversarial Formal Semantics of Attack Trees and Related Problems**
 
 cs.GT
 
@@ -441,7 +491,7 @@ In Proceedings GandALF 2022, arXiv:2209.09333
 
 
 
-## **34. Can You Still See Me?: Reconstructing Robot Operations Over End-to-End Encrypted Channels**
+## **38. Can You Still See Me?: Reconstructing Robot Operations Over End-to-End Encrypted Channels**
 
 cs.CR
 
@@ -455,7 +505,7 @@ cs.CR
 
 
 
-## **35. Fingerprinting Robot Movements via Acoustic Side Channel**
+## **39. Fingerprinting Robot Movements via Acoustic Side Channel**
 
 cs.CR
 
@@ -469,7 +519,7 @@ cs.CR
 
 
 
-## **36. Reconstructing Robot Operations via Radio-Frequency Side-Channel**
+## **40. Reconstructing Robot Operations via Radio-Frequency Side-Channel**
 
 cs.CR
 
@@ -483,7 +533,7 @@ cs.CR
 
 
 
-## **37. Audit and Improve Robustness of Private Neural Networks on Encrypted Data**
+## **41. Audit and Improve Robustness of Private Neural Networks on Encrypted Data**
 
 cs.LG
 
@@ -497,7 +547,7 @@ cs.LG
 
 
 
-## **38. SoK: Decentralized Finance (DeFi) Attacks**
+## **42. SoK: Decentralized Finance (DeFi) Attacks**
 
 cs.CR
 
@@ -509,7 +559,7 @@ cs.CR
 
 
 
-## **39. Leveraging Local Patch Differences in Multi-Object Scenes for Generative Adversarial Attacks**
+## **43. Leveraging Local Patch Differences in Multi-Object Scenes for Generative Adversarial Attacks**
 
 cs.CV
 
@@ -523,7 +573,7 @@ Accepted at WACV 2023 (Round 1)
 
 
 
-## **40. Sparse Vicious Attacks on Graph Neural Networks**
+## **44. Sparse Vicious Attacks on Graph Neural Networks**
 
 cs.LG
 
@@ -535,7 +585,7 @@ cs.LG
 
 
 
-## **41. I-GWAS: Privacy-Preserving Interdependent Genome-Wide Association Studies**
+## **45. I-GWAS: Privacy-Preserving Interdependent Genome-Wide Association Studies**
 
 q-bio.GN
 
@@ -547,7 +597,7 @@ q-bio.GN
 
 
 
-## **42. FrequencyLowCut Pooling -- Plug & Play against Catastrophic Overfitting**
+## **46. FrequencyLowCut Pooling -- Plug & Play against Catastrophic Overfitting**
 
 cs.CV
 
@@ -561,7 +611,7 @@ accepted at ECCV 2022
 
 
 
-## **43. GAMA: Generative Adversarial Multi-Object Scene Attacks**
+## **47. GAMA: Generative Adversarial Multi-Object Scene Attacks**
 
 cs.CV
 
@@ -575,7 +625,7 @@ Accepted at NeurIPS 2022; First two authors contributed equally;  Includes Suppl
 
 
 
-## **44. Learn2Weight: Parameter Adaptation against Similar-domain Adversarial Attacks**
+## **48. Learn2Weight: Parameter Adaptation against Similar-domain Adversarial Attacks**
 
 cs.LG
 
@@ -589,7 +639,7 @@ Accepted in COLING 2022
 
 
 
-## **45. Security and Privacy of Wireless Beacon Systems**
+## **49. Security and Privacy of Wireless Beacon Systems**
 
 cs.CR
 
@@ -603,7 +653,7 @@ cs.CR
 
 
 
-## **46. Parallel Proof-of-Work with Concrete Bounds**
+## **50. Parallel Proof-of-Work with Concrete Bounds**
 
 cs.CR
 
@@ -612,60 +662,6 @@ cs.CR
 **Authors**: Patrik Keller, Rainer Böhme
 
 **Abstracts**: Authorization is challenging in distributed systems that cannot rely on the identification of nodes. Proof-of-work offers an alternative gate-keeping mechanism, but its probabilistic nature is incompatible with conventional security definitions. Recent related work establishes concrete bounds for the failure probability of Bitcoin's sequential proof-of-work mechanism. We propose a family of state replication protocols using parallel proof-of-work. Our bottom-up design from an agreement sub-protocol allows us to give concrete bounds for the failure probability in adversarial synchronous networks. After the typical interval of 10 minutes, parallel proof-of-work offers two orders of magnitude more security than sequential proof-of-work. This means that state updates can be sufficiently secure to support commits after one block (i.e., after 10 minutes), removing the risk of double-spending in many applications. We offer guidance on the optimal choice of parameters for a wide range of network and attacker assumptions. Simulations show that the proposed construction is robust against violations of design assumptions.
-
-
-
-## **47. A Transferable and Automatic Tuning of Deep Reinforcement Learning for Cost Effective Phishing Detection**
-
-cs.CR
-
-**SubmitDate**: 2022-09-19    [paper-pdf](http://arxiv.org/pdf/2209.09033v1)
-
-**Authors**: Orel Lavie, Asaf Shabtai, Gilad Katz
-
-**Abstracts**: Many challenging real-world problems require the deployment of ensembles multiple complementary learning models to reach acceptable performance levels. While effective, applying the entire ensemble to every sample is costly and often unnecessary. Deep Reinforcement Learning (DRL) offers a cost-effective alternative, where detectors are dynamically chosen based on the output of their predecessors, with their usefulness weighted against their computational cost. Despite their potential, DRL-based solutions are not widely used in this capacity, partly due to the difficulties in configuring the reward function for each new task, the unpredictable reactions of the DRL agent to changes in the data, and the inability to use common performance metrics (e.g., TPR/FPR) to guide the algorithm's performance. In this study we propose methods for fine-tuning and calibrating DRL-based policies so that they can meet multiple performance goals. Moreover, we present a method for transferring effective security policies from one dataset to another. Finally, we demonstrate that our approach is highly robust against adversarial attacks.
-
-
-
-## **48. Encrypted Semantic Communication Using Adversarial Training for Privacy Preserving**
-
-cs.IT
-
-submitted to IEEE Wireless Communications Letters
-
-**SubmitDate**: 2022-09-19    [paper-pdf](http://arxiv.org/pdf/2209.09008v1)
-
-**Authors**: Xinlai Luo, Zhiyong Chen, Meixia Tao, Feng Yang
-
-**Abstracts**: Semantic communication is implemented based on shared background knowledge, but the sharing mechanism risks privacy leakage. In this letter, we propose an encrypted semantic communication system (ESCS) for privacy preserving, which combines universality and confidentiality. The universality is reflected in that all network modules of the proposed ESCS are trained based on a shared database, which is suitable for large-scale deployment in practical scenarios. Meanwhile, the confidentiality is achieved by symmetric encryption. Based on the adversarial training, we design an adversarial encryption training scheme to guarantee the accuracy of semantic communication in both encrypted and unencrypted modes. Experiment results show that the proposed ESCS with the adversarial encryption training scheme can perform well regardless of whether the semantic information is encrypted. It is difficult for the attacker to reconstruct the original semantic information from the eavesdropped message.
-
-
-
-## **49. Catoptric Light can be Dangerous: Effective Physical-World Attack by Natural Phenomenon**
-
-cs.CV
-
-arXiv admin note: substantial text overlap with arXiv:2209.09652,  arXiv:2209.02430
-
-**SubmitDate**: 2022-09-19    [paper-pdf](http://arxiv.org/pdf/2209.11739v1)
-
-**Authors**: Chengyin Hu, Weiwen Shi
-
-**Abstracts**: Deep neural networks (DNNs) have achieved great success in many tasks. Therefore, it is crucial to evaluate the robustness of advanced DNNs. The traditional methods use stickers as physical perturbations to fool the classifiers, which is difficult to achieve stealthiness and there exists printing loss. Some new types of physical attacks use light beam to perform attacks (e.g., laser, projector), whose optical patterns are artificial rather than natural. In this work, we study a new type of physical attack, called adversarial catoptric light (AdvCL), in which adversarial perturbations are generated by common natural phenomena, catoptric light, to achieve stealthy and naturalistic adversarial attacks against advanced DNNs in physical environments. Carefully designed experiments demonstrate the effectiveness of the proposed method in simulated and real-world environments. The attack success rate is 94.90% in a subset of ImageNet and 83.50% in the real-world environment. We also discuss some of AdvCL's transferability and defense strategy against this attack.
-
-
-
-## **50. Adversarial Color Projection: A Projector-Based Physical Attack to DNNs**
-
-cs.CR
-
-arXiv admin note: substantial text overlap with arXiv:2209.02430
-
-**SubmitDate**: 2022-09-19    [paper-pdf](http://arxiv.org/pdf/2209.09652v1)
-
-**Authors**: Chengyin Hu, Weiwen Shi
-
-**Abstracts**: Recent advances have shown that deep neural networks (DNNs) are susceptible to adversarial perturbations. Therefore, it is necessary to evaluate the robustness of advanced DNNs using adversarial attacks. However, traditional physical attacks that use stickers as perturbations are more vulnerable than recent light-based physical attacks. In this work, we propose a projector-based physical attack called adversarial color projection (AdvCP), which performs an adversarial attack by manipulating the physical parameters of the projected light. Experiments show the effectiveness of our method in both digital and physical environments. The experimental results demonstrate that the proposed method has excellent attack transferability, which endows AdvCP with effective blackbox attack. We prospect AdvCP threats to future vision-based systems and applications and propose some ideas for light-based physical attacks.
 
 
 

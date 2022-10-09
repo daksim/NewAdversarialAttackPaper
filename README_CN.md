@@ -1,5 +1,5 @@
 # Latest Adversarial Attack Papers
-**update at 2022-10-08 06:31:24**
+**update at 2022-10-10 06:31:20**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
@@ -255,7 +255,7 @@ NeurIPS 2022
 
 **Abstract**: Deep neural networks have demonstrated superior performance on appearance-based gaze estimation tasks. However, due to variations in person, illuminations, and background, performance degrades dramatically when applying the model to a new domain. In this paper, we discover an interesting gaze jitter phenomenon in cross-domain gaze estimation, i.e., the gaze predictions of two similar images can be severely deviated in target domain. This is closely related to cross-domain gaze estimation tasks, but surprisingly, it has not been noticed yet previously. Therefore, we innovatively propose to utilize the gaze jitter to analyze and optimize the gaze domain adaptation task. We find that the high-frequency component (HFC) is an important factor that leads to jitter. Based on this discovery, we add high-frequency components to input images using the adversarial attack and employ contrastive learning to encourage the model to obtain similar representations between original and perturbed data, which reduces the impacts of HFC. We evaluate the proposed method on four cross-domain gaze estimation tasks, and experimental results demonstrate that it significantly reduces the gaze jitter and improves the gaze estimation performance in target domains.
 
-摘要: 深度神经网络在基于外表的视线估计任务中表现出了优越的性能。但是，由于人、照明和背景的不同，当将模型应用到新的领域时，性能会显著降低。在本文中，我们发现了跨域凝视估计中一个有趣的凝视抖动现象，即两幅相似图像的凝视预测在目标域可能会严重偏离。这与跨域凝视估计任务密切相关，但令人惊讶的是，之前还没有人注意到这一点。因此，我们创新性地提出利用视线抖动来分析和优化视域自适应任务。我们发现高频分量(HFC)是导致抖动的一个重要因素。基于这一发现，我们在对抗性攻击的输入图像中加入高频分量，并使用对比学习来鼓励模型在原始数据和扰动数据之间获得相似的表示，从而减少HFC的影响。我们在四个跨域的视线估计任务上对该方法进行了评估，实验结果表明，该方法显著降低了视线抖动，提高了目标域的视线估计性能。
+摘要: 深度神经网络在基于外表的视线估计任务中表现出了优越的性能。但是，由于人、照明和背景的不同，当将模型应用到新的领域时，性能会显著降低。在本文中，我们发现了跨域凝视估计中一个有趣的凝视抖动现象，即两幅相似图像的凝视预测在目标域可能会严重偏离。这与跨域凝视估计任务密切相关，但令人惊讶的是，之前还没有人注意到这一点。因此，我们创新性地提出利用视线抖动来分析和优化视域自适应任务。我们发现高频分量(HFC)是导致抖动的一个重要因素。基于这一发现，我们在对抗性攻击的输入图像中加入高频分量，并使用对比学习来鼓励模型获得原始数据和扰动数据之间的相似表示，从而减少HFC的影响。我们在四个跨域的视线估计任务上对该方法进行了评估，实验结果表明，该方法显著降低了视线抖动，提高了目标域的视线估计性能。
 
 
 

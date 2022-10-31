@@ -1,5 +1,5 @@
 # Latest Adversarial Attack Papers
-**update at 2022-10-31 17:11:58**
+**update at 2022-11-01 06:31:23**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 

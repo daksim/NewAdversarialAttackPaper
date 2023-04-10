@@ -1,9 +1,61 @@
 # Latest Adversarial Attack Papers
-**update at 2023-04-07 09:49:17**
+**update at 2023-04-10 10:31:53**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. Improving Visual Question Answering Models through Robustness Analysis and In-Context Learning with a Chain of Basic Questions**
+## **1. AMS-DRL: Learning Multi-Pursuit Evasion for Safe Targeted Navigation of Drones**
+
+cs.RO
+
+**SubmitDate**: 2023-04-07    [abs](http://arxiv.org/abs/2304.03443v1) [paper-pdf](http://arxiv.org/pdf/2304.03443v1)
+
+**Authors**: Jiaping Xiao, Mir Feroskhan
+
+**Abstract**: Safe navigation of drones in the presence of adversarial physical attacks from multiple pursuers is a challenging task. This paper proposes a novel approach, asynchronous multi-stage deep reinforcement learning (AMS-DRL), to train an adversarial neural network that can learn from the actions of multiple pursuers and adapt quickly to their behavior, enabling the drone to avoid attacks and reach its target. Our approach guarantees convergence by ensuring Nash Equilibrium among agents from the game-theory analysis. We evaluate our method in extensive simulations and show that it outperforms baselines with higher navigation success rates. We also analyze how parameters such as the relative maximum speed affect navigation performance. Furthermore, we have conducted physical experiments and validated the effectiveness of the trained policies in real-time flights. A success rate heatmap is introduced to elucidate how spatial geometry influences navigation outcomes. Project website: https://github.com/NTU-UAVG/AMS-DRL-for-Pursuit-Evasion.
+
+
+
+## **2. LP-BFGS attack: An adversarial attack based on the Hessian with limited pixels**
+
+cs.CR
+
+15 pages, 7 figures
+
+**SubmitDate**: 2023-04-07    [abs](http://arxiv.org/abs/2210.15446v2) [paper-pdf](http://arxiv.org/pdf/2210.15446v2)
+
+**Authors**: Jiebao Zhang, Wenhua Qian, Rencan Nie, Jinde Cao, Dan Xu
+
+**Abstract**: Deep neural networks are vulnerable to adversarial attacks. Most $L_{0}$-norm based white-box attacks craft perturbations by the gradient of models to the input. Since the computation cost and memory limitation of calculating the Hessian matrix, the application of Hessian or approximate Hessian in white-box attacks is gradually shelved. In this work, we note that the sparsity requirement on perturbations naturally lends itself to the usage of Hessian information. We study the attack performance and computation cost of the attack method based on the Hessian with a limited number of perturbation pixels. Specifically, we propose the Limited Pixel BFGS (LP-BFGS) attack method by incorporating the perturbation pixel selection strategy and the BFGS algorithm. Pixels with top-k attribution scores calculated by the Integrated Gradient method are regarded as optimization variables of the LP-BFGS attack. Experimental results across different networks and datasets demonstrate that our approach has comparable attack ability with reasonable computation in different numbers of perturbation pixels compared with existing solutions.
+
+
+
+## **3. EZClone: Improving DNN Model Extraction Attack via Shape Distillation from GPU Execution Profiles**
+
+cs.LG
+
+11 pages, 6 tables, 4 figures
+
+**SubmitDate**: 2023-04-06    [abs](http://arxiv.org/abs/2304.03388v1) [paper-pdf](http://arxiv.org/pdf/2304.03388v1)
+
+**Authors**: Jonah O'Brien Weiss, Tiago Alves, Sandip Kundu
+
+**Abstract**: Deep Neural Networks (DNNs) have become ubiquitous due to their performance on prediction and classification problems. However, they face a variety of threats as their usage spreads. Model extraction attacks, which steal DNNs, endanger intellectual property, data privacy, and security. Previous research has shown that system-level side-channels can be used to leak the architecture of a victim DNN, exacerbating these risks. We propose two DNN architecture extraction techniques catering to various threat models. The first technique uses a malicious, dynamically linked version of PyTorch to expose a victim DNN architecture through the PyTorch profiler. The second, called EZClone, exploits aggregate (rather than time-series) GPU profiles as a side-channel to predict DNN architecture, employing a simple approach and assuming little adversary capability as compared to previous work. We investigate the effectiveness of EZClone when minimizing the complexity of the attack, when applied to pruned models, and when applied across GPUs. We find that EZClone correctly predicts DNN architectures for the entire set of PyTorch vision architectures with 100% accuracy. No other work has shown this degree of architecture prediction accuracy with the same adversarial constraints or using aggregate side-channel information. Prior work has shown that, once a DNN has been successfully cloned, further attacks such as model evasion or model inversion can be accelerated significantly.
+
+
+
+## **4. Reliable Learning for Test-time Attacks and Distribution Shift**
+
+cs.LG
+
+**SubmitDate**: 2023-04-06    [abs](http://arxiv.org/abs/2304.03370v1) [paper-pdf](http://arxiv.org/pdf/2304.03370v1)
+
+**Authors**: Maria-Florina Balcan, Steve Hanneke, Rattana Pukdee, Dravyansh Sharma
+
+**Abstract**: Machine learning algorithms are often used in environments which are not captured accurately even by the most carefully obtained training data, either due to the possibility of `adversarial' test-time attacks, or on account of `natural' distribution shift. For test-time attacks, we introduce and analyze a novel robust reliability guarantee, which requires a learner to output predictions along with a reliability radius $\eta$, with the meaning that its prediction is guaranteed to be correct as long as the adversary has not perturbed the test point farther than a distance $\eta$. We provide learners that are optimal in the sense that they always output the best possible reliability radius on any test point, and we characterize the reliable region, i.e. the set of points where a given reliability radius is attainable. We additionally analyze reliable learners under distribution shift, where the test points may come from an arbitrary distribution Q different from the training distribution P. For both cases, we bound the probability mass of the reliable region for several interesting examples, for linear separators under nearly log-concave and s-concave distributions, as well as for smooth boundary classifiers under smooth probability distributions.
+
+
+
+## **5. Improving Visual Question Answering Models through Robustness Analysis and In-Context Learning with a Chain of Basic Questions**
 
 cs.CV
 
@@ -17,7 +69,7 @@ cs.CV
 
 
 
-## **2. Public Key Encryption with Secure Key Leasing**
+## **6. Public Key Encryption with Secure Key Leasing**
 
 quant-ph
 
@@ -31,7 +83,7 @@ quant-ph
 
 
 
-## **3. StratDef: Strategic Defense Against Adversarial Attacks in ML-based Malware Detection**
+## **7. StratDef: Strategic Defense Against Adversarial Attacks in ML-based Malware Detection**
 
 cs.LG
 
@@ -43,7 +95,7 @@ cs.LG
 
 
 
-## **4. PAD: Towards Principled Adversarial Malware Detection Against Evasion Attacks**
+## **8. PAD: Towards Principled Adversarial Malware Detection Against Evasion Attacks**
 
 cs.CR
 
@@ -57,7 +109,7 @@ Accepted by IEEE Transactions on Dependable and Secure Computing; To  appear
 
 
 
-## **5. Robust Neural Architecture Search**
+## **9. Robust Neural Architecture Search**
 
 cs.LG
 
@@ -69,7 +121,7 @@ cs.LG
 
 
 
-## **6. Robust Upper Bounds for Adversarial Training**
+## **10. Robust Upper Bounds for Adversarial Training**
 
 cs.LG
 
@@ -81,7 +133,7 @@ cs.LG
 
 
 
-## **7. Improving Fast Adversarial Training with Prior-Guided Knowledge**
+## **11. Improving Fast Adversarial Training with Prior-Guided Knowledge**
 
 cs.LG
 
@@ -93,7 +145,7 @@ cs.LG
 
 
 
-## **8. UNICORN: A Unified Backdoor Trigger Inversion Framework**
+## **12. UNICORN: A Unified Backdoor Trigger Inversion Framework**
 
 cs.LG
 
@@ -105,7 +157,7 @@ cs.LG
 
 
 
-## **9. Planning for Attacker Entrapment in Adversarial Settings**
+## **13. Planning for Attacker Entrapment in Adversarial Settings**
 
 cs.AI
 
@@ -117,7 +169,7 @@ cs.AI
 
 
 
-## **10. Domain Generalization with Adversarial Intensity Attack for Medical Image Segmentation**
+## **14. Domain Generalization with Adversarial Intensity Attack for Medical Image Segmentation**
 
 eess.IV
 
@@ -131,7 +183,7 @@ Code is available upon publication
 
 
 
-## **11. A Certified Radius-Guided Attack Framework to Image Segmentation Models**
+## **15. A Certified Radius-Guided Attack Framework to Image Segmentation Models**
 
 cs.CV
 
@@ -145,7 +197,7 @@ Accepted by EuroSP 2023
 
 
 
-## **12. Going Further: Flatness at the Rescue of Early Stopping for Adversarial Example Transferability**
+## **16. Going Further: Flatness at the Rescue of Early Stopping for Adversarial Example Transferability**
 
 cs.LG
 
@@ -157,7 +209,7 @@ cs.LG
 
 
 
-## **13. Adversarial robustness of VAEs through the lens of local geometry**
+## **17. Adversarial robustness of VAEs through the lens of local geometry**
 
 cs.LG
 
@@ -171,7 +223,7 @@ International Conference on Artificial Intelligence and Statistics  (AISTATS) 20
 
 
 
-## **14. Existence and Minimax Theorems for Adversarial Surrogate Risks in Binary Classification**
+## **18. Existence and Minimax Theorems for Adversarial Surrogate Risks in Binary Classification**
 
 cs.LG
 
@@ -185,7 +237,7 @@ cs.LG
 
 
 
-## **15. How to choose your best allies for a transferable attack?**
+## **19. How to choose your best allies for a transferable attack?**
 
 cs.CR
 
@@ -197,7 +249,7 @@ cs.CR
 
 
 
-## **16. PatchCensor: Patch Robustness Certification for Transformers via Exhaustive Testing**
+## **20. PatchCensor: Patch Robustness Certification for Transformers via Exhaustive Testing**
 
 cs.CV
 
@@ -211,7 +263,7 @@ This paper has been accepted by ACM Transactions on Software  Engineering and Me
 
 
 
-## **17. Dynamic Adversarial Resource Allocation: the dDAB Game**
+## **21. Dynamic Adversarial Resource Allocation: the dDAB Game**
 
 cs.MA
 
@@ -223,7 +275,7 @@ cs.MA
 
 
 
-## **18. Do we need entire training data for adversarial training?**
+## **22. Do we need entire training data for adversarial training?**
 
 cs.CV
 
@@ -237,7 +289,7 @@ cs.CV
 
 
 
-## **19. Boosting Adversarial Transferability using Dynamic Cues**
+## **23. Boosting Adversarial Transferability using Dynamic Cues**
 
 cs.CV
 
@@ -251,7 +303,7 @@ International Conference on Learning Representations (ICLR'23),  Code:https://bi
 
 
 
-## **20. Risk-based Security Measure Allocation Against Injection Attacks on Actuators**
+## **24. Risk-based Security Measure Allocation Against Injection Attacks on Actuators**
 
 eess.SY
 
@@ -265,7 +317,7 @@ Submitted to IEEE Open Journal of Control Systems (OJ-CSYS)
 
 
 
-## **21. EGC: Image Generation and Classification via a Single Energy-Based Model**
+## **25. EGC: Image Generation and Classification via a Single Energy-Based Model**
 
 cs.CV
 
@@ -279,7 +331,7 @@ Technical report
 
 
 
-## **22. Cross-Class Feature Augmentation for Class Incremental Learning**
+## **26. Cross-Class Feature Augmentation for Class Incremental Learning**
 
 cs.CV
 
@@ -291,7 +343,7 @@ cs.CV
 
 
 
-## **23. Adversarial Detection: Attacking Object Detection in Real Time**
+## **27. Adversarial Detection: Attacking Object Detection in Real Time**
 
 cs.AI
 
@@ -305,7 +357,7 @@ Accepted by IEEE Intelligent Vehicle Symposium, 2023
 
 
 
-## **24. Adversarial Driving: Attacking End-to-End Autonomous Driving**
+## **28. Adversarial Driving: Attacking End-to-End Autonomous Driving**
 
 cs.CV
 
@@ -319,7 +371,7 @@ Accepted by IEEE Intelligent Vehicle Symposium, 2023
 
 
 
-## **25. MENLI: Robust Evaluation Metrics from Natural Language Inference**
+## **29. MENLI: Robust Evaluation Metrics from Natural Language Inference**
 
 cs.CL
 
@@ -333,7 +385,7 @@ TACL 2023 Camera-ready github link fixed
 
 
 
-## **26. Tracklet-Switch Adversarial Attack against Pedestrian Multi-Object Tracking Trackers**
+## **30. Tracklet-Switch Adversarial Attack against Pedestrian Multi-Object Tracking Trackers**
 
 cs.CV
 
@@ -345,7 +397,7 @@ cs.CV
 
 
 
-## **27. On the Feasibility of Specialized Ability Extracting for Large Language Code Models**
+## **31. On the Feasibility of Specialized Ability Extracting for Large Language Code Models**
 
 cs.SE
 
@@ -359,7 +411,7 @@ cs.SE
 
 
 
-## **28. Defending Against Patch-based Backdoor Attacks on Self-Supervised Learning**
+## **32. Defending Against Patch-based Backdoor Attacks on Self-Supervised Learning**
 
 cs.CV
 
@@ -373,7 +425,7 @@ Accepted to CVPR 2023
 
 
 
-## **29. NetFlick: Adversarial Flickering Attacks on Deep Learning Based Video Compression**
+## **33. NetFlick: Adversarial Flickering Attacks on Deep Learning Based Video Compression**
 
 eess.IV
 
@@ -387,7 +439,7 @@ eess.IV
 
 
 
-## **30. Is Stochastic Mirror Descent Vulnerable to Adversarial Delay Attacks? A Traffic Assignment Resilience Study**
+## **34. Is Stochastic Mirror Descent Vulnerable to Adversarial Delay Attacks? A Traffic Assignment Resilience Study**
 
 cs.LG
 
@@ -401,7 +453,7 @@ Preprint under review
 
 
 
-## **31. Learning About Simulated Adversaries from Human Defenders using Interactive Cyber-Defense Games**
+## **35. Learning About Simulated Adversaries from Human Defenders using Interactive Cyber-Defense Games**
 
 cs.CR
 
@@ -415,7 +467,7 @@ Submitted to Journal of Cybersecurity
 
 
 
-## **32. A Pilot Study of Query-Free Adversarial Attack against Stable Diffusion**
+## **36. A Pilot Study of Query-Free Adversarial Attack against Stable Diffusion**
 
 cs.CV
 
@@ -429,7 +481,7 @@ The 3rd Workshop of Adversarial Machine Learning on Computer Vision:  Art of Rob
 
 
 
-## **33. Improving RF-DNA Fingerprinting Performance in an Indoor Multipath Environment Using Semi-Supervised Learning**
+## **37. Improving RF-DNA Fingerprinting Performance in an Indoor Multipath Environment Using Semi-Supervised Learning**
 
 eess.SP
 
@@ -443,7 +495,7 @@ eess.SP
 
 
 
-## **34. Test-time Detection and Repair of Adversarial Samples via Masked Autoencoder**
+## **38. Test-time Detection and Repair of Adversarial Samples via Masked Autoencoder**
 
 cs.CV
 
@@ -455,7 +507,7 @@ cs.CV
 
 
 
-## **35. FACM: Intermediate Layer Still Retain Effective Features against Adversarial Examples**
+## **39. FACM: Intermediate Layer Still Retain Effective Features against Adversarial Examples**
 
 cs.CV
 
@@ -467,7 +519,7 @@ cs.CV
 
 
 
-## **36. Adversarial Training of Self-supervised Monocular Depth Estimation against Physical-World Attacks**
+## **40. Adversarial Training of Self-supervised Monocular Depth Estimation against Physical-World Attacks**
 
 cs.CV
 
@@ -481,7 +533,7 @@ Initially accepted at ICLR2023 (Spotlight)
 
 
 
-## **37. Instance-level Trojan Attacks on Visual Question Answering via Adversarial Learning in Neuron Activation Space**
+## **41. Instance-level Trojan Attacks on Visual Question Answering via Adversarial Learning in Neuron Activation Space**
 
 cs.CV
 
@@ -493,7 +545,7 @@ cs.CV
 
 
 
-## **38. Coordinated Defense Allocation in Reach-Avoid Scenarios with Efficient Online Optimization**
+## **42. Coordinated Defense Allocation in Reach-Avoid Scenarios with Efficient Online Optimization**
 
 cs.RO
 
@@ -505,7 +557,7 @@ cs.RO
 
 
 
-## **39. Proximal Splitting Adversarial Attacks for Semantic Segmentation**
+## **43. Proximal Splitting Adversarial Attacks for Semantic Segmentation**
 
 cs.LG
 
@@ -519,7 +571,7 @@ CVPR 2023. Code available at:  https://github.com/jeromerony/alma_prox_segmentat
 
 
 
-## **40. Fides: A Generative Framework for Result Validation of Outsourced Machine Learning Workloads via TEE**
+## **44. Fides: A Generative Framework for Result Validation of Outsourced Machine Learning Workloads via TEE**
 
 cs.CR
 
@@ -531,7 +583,7 @@ cs.CR
 
 
 
-## **41. Decentralized Attack Search and the Design of Bug Bounty Schemes**
+## **45. Decentralized Attack Search and the Design of Bug Bounty Schemes**
 
 econ.TH
 
@@ -543,7 +595,7 @@ econ.TH
 
 
 
-## **42. To be Robust and to be Fair: Aligning Fairness with Robustness**
+## **46. To be Robust and to be Fair: Aligning Fairness with Robustness**
 
 cs.LG
 
@@ -555,7 +607,7 @@ cs.LG
 
 
 
-## **43. PEOPL: Characterizing Privately Encoded Open Datasets with Public Labels**
+## **47. PEOPL: Characterizing Privately Encoded Open Datasets with Public Labels**
 
 cs.LG
 
@@ -569,7 +621,7 @@ Submitted to IEEE Transactions on Information Forensics and Security
 
 
 
-## **44. Packet-Level Adversarial Network Traffic Crafting using Sequence Generative Adversarial Networks**
+## **48. Packet-Level Adversarial Network Traffic Crafting using Sequence Generative Adversarial Networks**
 
 cs.CR
 
@@ -583,7 +635,7 @@ The authors agreed to withdraw the manuscript due to privacy reason
 
 
 
-## **45. Fooling Polarization-based Vision using Locally Controllable Polarizing Projection**
+## **49. Fooling Polarization-based Vision using Locally Controllable Polarizing Projection**
 
 cs.CV
 
@@ -595,7 +647,7 @@ cs.CV
 
 
 
-## **46. Pentimento: Data Remanence in Cloud FPGAs**
+## **50. Pentimento: Data Remanence in Cloud FPGAs**
 
 cs.CR
 
@@ -606,60 +658,6 @@ cs.CR
 **Authors**: Colin Drewes, Olivia Weng, Andres Meza, Alric Althoff, David Kohlbrenner, Ryan Kastner, Dustin Richmond
 
 **Abstract**: Cloud FPGAs strike an alluring balance between computational efficiency, energy efficiency, and cost. It is the flexibility of the FPGA architecture that enables these benefits, but that very same flexibility that exposes new security vulnerabilities. We show that a remote attacker can recover "FPGA pentimenti" - long-removed secret data belonging to a prior user of a cloud FPGA. The sensitive data constituting an FPGA pentimento is an analog imprint from bias temperature instability (BTI) effects on the underlying transistors. We demonstrate how this slight degradation can be measured using a time-to-digital (TDC) converter when an adversary programs one into the target cloud FPGA.   This technique allows an attacker to ascertain previously safe information on cloud FPGAs, even after it is no longer explicitly present. Notably, it can allow an attacker who knows a non-secret "skeleton" (the physical structure, but not the contents) of the victim's design to (1) extract proprietary details from an encrypted FPGA design image available on the AWS marketplace and (2) recover data loaded at runtime by a previous user of a cloud FPGA using a known design. Our experiments show that BTI degradation (burn-in) and recovery are measurable and constitute a security threat to commercial cloud FPGAs.
-
-
-
-## **47. The Blockchain Imitation Game**
-
-cs.CR
-
-**SubmitDate**: 2023-03-31    [abs](http://arxiv.org/abs/2303.17877v1) [paper-pdf](http://arxiv.org/pdf/2303.17877v1)
-
-**Authors**: Kaihua Qin, Stefanos Chaliasos, Liyi Zhou, Benjamin Livshits, Dawn Song, Arthur Gervais
-
-**Abstract**: The use of blockchains for automated and adversarial trading has become commonplace. However, due to the transparent nature of blockchains, an adversary is able to observe any pending, not-yet-mined transactions, along with their execution logic. This transparency further enables a new type of adversary, which copies and front-runs profitable pending transactions in real-time, yielding significant financial gains.   Shedding light on such "copy-paste" malpractice, this paper introduces the Blockchain Imitation Game and proposes a generalized imitation attack methodology called Ape. Leveraging dynamic program analysis techniques, Ape supports the automatic synthesis of adversarial smart contracts. Over a timeframe of one year (1st of August, 2021 to 31st of July, 2022), Ape could have yielded 148.96M USD in profit on Ethereum, and 42.70M USD on BNB Smart Chain (BSC).   Not only as a malicious attack, we further show the potential of transaction and contract imitation as a defensive strategy. Within one year, we find that Ape could have successfully imitated 13 and 22 known Decentralized Finance (DeFi) attacks on Ethereum and BSC, respectively. Our findings suggest that blockchain validators can imitate attacks in real-time to prevent intrusions in DeFi.
-
-
-
-## **48. Towards Adversarially Robust Continual Learning**
-
-cs.LG
-
-ICASSP 2023
-
-**SubmitDate**: 2023-03-31    [abs](http://arxiv.org/abs/2303.17764v1) [paper-pdf](http://arxiv.org/pdf/2303.17764v1)
-
-**Authors**: Tao Bai, Chen Chen, Lingjuan Lyu, Jun Zhao, Bihan Wen
-
-**Abstract**: Recent studies show that models trained by continual learning can achieve the comparable performances as the standard supervised learning and the learning flexibility of continual learning models enables their wide applications in the real world. Deep learning models, however, are shown to be vulnerable to adversarial attacks. Though there are many studies on the model robustness in the context of standard supervised learning, protecting continual learning from adversarial attacks has not yet been investigated. To fill in this research gap, we are the first to study adversarial robustness in continual learning and propose a novel method called \textbf{T}ask-\textbf{A}ware \textbf{B}oundary \textbf{A}ugmentation (TABA) to boost the robustness of continual learning models. With extensive experiments on CIFAR-10 and CIFAR-100, we show the efficacy of adversarial training and TABA in defending adversarial attacks.
-
-
-
-## **49. CitySpec with Shield: A Secure Intelligent Assistant for Requirement Formalization**
-
-cs.AI
-
-arXiv admin note: substantial text overlap with arXiv:2206.03132
-
-**SubmitDate**: 2023-03-30    [abs](http://arxiv.org/abs/2302.09665v2) [paper-pdf](http://arxiv.org/pdf/2302.09665v2)
-
-**Authors**: Zirong Chen, Issa Li, Haoxiang Zhang, Sarah Preum, John A. Stankovic, Meiyi Ma
-
-**Abstract**: An increasing number of monitoring systems have been developed in smart cities to ensure that the real-time operations of a city satisfy safety and performance requirements. However, many existing city requirements are written in English with missing, inaccurate, or ambiguous information. There is a high demand for assisting city policymakers in converting human-specified requirements to machine-understandable formal specifications for monitoring systems. To tackle this limitation, we build CitySpec, the first intelligent assistant system for requirement specification in smart cities. To create CitySpec, we first collect over 1,500 real-world city requirements across different domains (e.g., transportation and energy) from over 100 cities and extract city-specific knowledge to generate a dataset of city vocabulary with 3,061 words. We also build a translation model and enhance it through requirement synthesis and develop a novel online learning framework with shielded validation. The evaluation results on real-world city requirements show that CitySpec increases the sentence-level accuracy of requirement specification from 59.02% to 86.64%, and has strong adaptability to a new city and a new domain (e.g., the F1 score for requirements in Seattle increases from 77.6% to 93.75% with online learning). After the enhancement from the shield function, CitySpec is now immune to most known textual adversarial inputs (e.g., the attack success rate of DeepWordBug after the shield function is reduced to 0% from 82.73%). We test the CitySpec with 18 participants from different domains. CitySpec shows its strong usability and adaptability to different domains, and also its robustness to malicious inputs.
-
-
-
-## **50. Generating Adversarial Samples in Mini-Batches May Be Detrimental To Adversarial Robustness**
-
-cs.LG
-
-6 pages, 3 figures
-
-**SubmitDate**: 2023-03-30    [abs](http://arxiv.org/abs/2303.17720v1) [paper-pdf](http://arxiv.org/pdf/2303.17720v1)
-
-**Authors**: Timothy Redgrave, Colton Crum
-
-**Abstract**: Neural networks have been proven to be both highly effective within computer vision, and highly vulnerable to adversarial attacks. Consequently, as the use of neural networks increases due to their unrivaled performance, so too does the threat posed by adversarial attacks. In this work, we build towards addressing the challenge of adversarial robustness by exploring the relationship between the mini-batch size used during adversarial sample generation and the strength of the adversarial samples produced. We demonstrate that an increase in mini-batch size results in a decrease in the efficacy of the samples produced, and we draw connections between these observations and the phenomenon of vanishing gradients. Next, we formulate loss functions such that adversarial sample strength is not degraded by mini-batch size. Our findings highlight a potential risk for underestimating the true (practical) strength of adversarial attacks, and a risk of overestimating a model's robustness. We share our codes to let others replicate our experiments and to facilitate further exploration of the connections between batch size and adversarial sample strength.
 
 
 

@@ -1,9 +1,89 @@
 # Latest Adversarial Attack Papers
-**update at 2023-04-27 10:22:00**
+**update at 2023-04-30 12:21:39**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. Learning Robust Deep Equilibrium Models**
+## **1. On the (In)security of Peer-to-Peer Decentralized Machine Learning**
+
+cs.CR
+
+IEEE S&P'23 (Previous title: "On the Privacy of Decentralized Machine  Learning")
+
+**SubmitDate**: 2023-04-27    [abs](http://arxiv.org/abs/2205.08443v2) [paper-pdf](http://arxiv.org/pdf/2205.08443v2)
+
+**Authors**: Dario Pasquini, Mathilde Raynal, Carmela Troncoso
+
+**Abstract**: In this work, we carry out the first, in-depth, privacy analysis of Decentralized Learning -- a collaborative machine learning framework aimed at addressing the main limitations of federated learning. We introduce a suite of novel attacks for both passive and active decentralized adversaries. We demonstrate that, contrary to what is claimed by decentralized learning proposers, decentralized learning does not offer any security advantage over federated learning. Rather, it increases the attack surface enabling any user in the system to perform privacy attacks such as gradient inversion, and even gain full control over honest users' local model. We also show that, given the state of the art in protections, privacy-preserving configurations of decentralized learning require fully connected networks, losing any practical advantage over the federated setup and therefore completely defeating the objective of the decentralized approach.
+
+
+
+## **2. Robust Resilient Signal Reconstruction under Adversarial Attacks**
+
+math.OC
+
+7 pages
+
+**SubmitDate**: 2023-04-27    [abs](http://arxiv.org/abs/1807.08004v2) [paper-pdf](http://arxiv.org/pdf/1807.08004v2)
+
+**Authors**: Yu Zheng, Olugbenga Moses Anubi, Lalit Mestha, Hema Achanta
+
+**Abstract**: We consider the problem of signal reconstruction for a system under sparse signal corruption by a malicious agent. The reconstruction problem follows the standard error coding problem that has been studied extensively in the literature. We include a new challenge of robust estimation of the attack support. The problem is then cast as a constrained optimization problem merging promising techniques in the area of deep learning and estimation theory. A pruning algorithm is developed to reduce the ``false positive" uncertainty of data-driven attack localization results, thereby improving the probability of correct signal reconstruction. Sufficient conditions for the correct reconstruction and the associated reconstruction error bounds are obtained for both exact and inexact attack support estimation. Moreover, a simulation of a water distribution system is presented to validate the proposed techniques.
+
+
+
+## **3. QEVSEC: Quick Electric Vehicle SEcure Charging via Dynamic Wireless Power Transfer**
+
+cs.CR
+
+6 pages, conference
+
+**SubmitDate**: 2023-04-27    [abs](http://arxiv.org/abs/2205.10292v2) [paper-pdf](http://arxiv.org/pdf/2205.10292v2)
+
+**Authors**: Tommaso Bianchi, Surudhi Asokraj, Alessandro Brighente, Mauro Conti, Radha Poovendran
+
+**Abstract**: Dynamic Wireless Power Transfer (DWPT) can be used for on-demand recharging of Electric Vehicles (EV) while driving. However, DWPT raises numerous security and privacy concerns. Recently, researchers demonstrated that DWPT systems are vulnerable to adversarial attacks. In an EV charging scenario, an attacker can prevent the authorized customer from charging, obtain a free charge by billing a victim user and track a target vehicle. State-of-the-art authentication schemes relying on centralized solutions are either vulnerable to various attacks or have high computational complexity, making them unsuitable for a dynamic scenario. In this paper, we propose Quick Electric Vehicle SEcure Charging (QEVSEC), a novel, secure, and efficient authentication protocol for the dynamic charging of EVs. Our idea for QEVSEC originates from multiple vulnerabilities we found in the state-of-the-art protocol that allows tracking of user activity and is susceptible to replay attacks. Based on these observations, the proposed protocol solves these issues and achieves lower computational complexity by using only primitive cryptographic operations in a very short message exchange. QEVSEC provides scalability and a reduced cost in each iteration, thus lowering the impact on the power needed from the grid.
+
+
+
+## **4. Boosting Big Brother: Attacking Search Engines with Encodings**
+
+cs.CR
+
+**SubmitDate**: 2023-04-27    [abs](http://arxiv.org/abs/2304.14031v1) [paper-pdf](http://arxiv.org/pdf/2304.14031v1)
+
+**Authors**: Nicholas Boucher, Luca Pajola, Ilia Shumailov, Ross Anderson, Mauro Conti
+
+**Abstract**: Search engines are vulnerable to attacks against indexing and searching via text encoding manipulation. By imperceptibly perturbing text using uncommon encoded representations, adversaries can control results across search engines for specific search queries. We demonstrate that this attack is successful against two major commercial search engines - Google and Bing - and one open source search engine - Elasticsearch. We further demonstrate that this attack is successful against LLM chat search including Bing's GPT-4 chatbot and Google's Bard chatbot. We also present a variant of the attack targeting text summarization and plagiarism detection models, two ML tasks closely tied to search. We provide a set of defenses against these techniques and warn that adversaries can leverage these attacks to launch disinformation campaigns against unsuspecting users, motivating the need for search engine maintainers to patch deployed systems.
+
+
+
+## **5. You Can't Always Check What You Wanted: Selective Checking and Trusted Execution to Prevent False Actuations in Cyber-Physical Systems**
+
+cs.CR
+
+Extended version of SCATE published in ISORC'23
+
+**SubmitDate**: 2023-04-27    [abs](http://arxiv.org/abs/2304.13956v1) [paper-pdf](http://arxiv.org/pdf/2304.13956v1)
+
+**Authors**: Monowar Hasan, Sibin Mohan
+
+**Abstract**: Cyber-physical systems (CPS) are vulnerable to attacks targeting outgoing actuation commands that modify their physical behaviors. The limited resources in such systems, coupled with their stringent timing constraints, often prevents the checking of every outgoing command. We present a "selective checking" mechanism that uses game-theoretic modeling to identify the right subset of commands to be checked in order to deter an adversary. This mechanism is coupled with a "delay-aware" trusted execution environment (TEE) to ensure that only verified actuation commands are ever sent to the physical system, thus maintaining their safety and integrity. The selective checking and trusted execution (SCATE) framework is implemented on an off-the-shelf ARM platform running standard embedded Linux. We demonstrate the effectiveness of SCATE using four realistic cyber-physical systems (a ground rover, a flight controller, a robotic arm and an automated syringe pump) and study design trade-offs. Not only does SCATE provide a high level of security and high performance, it also suffers from significantly lower overheads (30.48%-47.32% less) in the process. In fact, SCATE can work with more systems without negatively affecting the safety of the system. Considering that most CPS do not have any such checking mechanisms, and SCATE is guaranteed to meet all the timing requirements (i.e., ensure the safety/integrity of the system), our methods can significantly improve the security (and, hence, safety) of the system.
+
+
+
+## **6. Detection of Adversarial Physical Attacks in Time-Series Image Data**
+
+cs.CV
+
+**SubmitDate**: 2023-04-27    [abs](http://arxiv.org/abs/2304.13919v1) [paper-pdf](http://arxiv.org/pdf/2304.13919v1)
+
+**Authors**: Ramneet Kaur, Yiannis Kantaros, Wenwen Si, James Weimer, Insup Lee
+
+**Abstract**: Deep neural networks (DNN) have become a common sensing modality in autonomous systems as they allow for semantically perceiving the ambient environment given input images. Nevertheless, DNN models have proven to be vulnerable to adversarial digital and physical attacks. To mitigate this issue, several detection frameworks have been proposed to detect whether a single input image has been manipulated by adversarial digital noise or not. In our prior work, we proposed a real-time detector, called VisionGuard (VG), for adversarial physical attacks against single input images to DNN models. Building upon that work, we propose VisionGuard* (VG), which couples VG with majority-vote methods, to detect adversarial physical attacks in time-series image data, e.g., videos. This is motivated by autonomous systems applications where images are collected over time using onboard sensors for decision-making purposes. We emphasize that majority-vote mechanisms are quite common in autonomous system applications (among many other applications), as e.g., in autonomous driving stacks for object detection. In this paper, we investigate, both theoretically and experimentally, how this widely used mechanism can be leveraged to enhance the performance of adversarial detectors. We have evaluated VG* on videos of both clean and physically attacked traffic signs generated by a state-of-the-art robust physical attack. We provide extensive comparative experiments against detectors that have been designed originally for out-of-distribution data and digitally attacked images.
+
+
+
+## **7. Learning Robust Deep Equilibrium Models**
 
 cs.LG
 
@@ -15,7 +95,7 @@ cs.LG
 
 
 
-## **2. One-vs-the-Rest Loss to Focus on Important Samples in Adversarial Training**
+## **8. One-vs-the-Rest Loss to Focus on Important Samples in Adversarial Training**
 
 cs.LG
 
@@ -29,7 +109,7 @@ ICML2023, 26 pages, 19 figures
 
 
 
-## **3. Improving Adversarial Transferability by Intermediate-level Perturbation Decay**
+## **9. Improving Adversarial Transferability by Intermediate-level Perturbation Decay**
 
 cs.LG
 
@@ -43,7 +123,7 @@ Revision of ICML '23 submission for better clarity
 
 
 
-## **4. Blockchain-based Access Control for Secure Smart Industry Management Systems**
+## **10. Blockchain-based Access Control for Secure Smart Industry Management Systems**
 
 cs.CR
 
@@ -55,7 +135,7 @@ cs.CR
 
 
 
-## **5. Blockchain-based Federated Learning with SMPC Model Verification Against Poisoning Attack for Healthcare Systems**
+## **11. Blockchain-based Federated Learning with SMPC Model Verification Against Poisoning Attack for Healthcare Systems**
 
 cs.CR
 
@@ -67,7 +147,7 @@ cs.CR
 
 
 
-## **6. On the Risks of Stealing the Decoding Algorithms of Language Models**
+## **12. On the Risks of Stealing the Decoding Algorithms of Language Models**
 
 cs.LG
 
@@ -79,7 +159,7 @@ cs.LG
 
 
 
-## **7. SHIELD: Thwarting Code Authorship Attribution**
+## **13. SHIELD: Thwarting Code Authorship Attribution**
 
 cs.CR
 
@@ -93,7 +173,7 @@ cs.CR
 
 
 
-## **8. Generating Adversarial Examples with Task Oriented Multi-Objective Optimization**
+## **14. Generating Adversarial Examples with Task Oriented Multi-Objective Optimization**
 
 cs.LG
 
@@ -105,7 +185,7 @@ cs.LG
 
 
 
-## **9. Uncovering the Representation of Spiking Neural Networks Trained with Surrogate Gradient**
+## **15. Uncovering the Representation of Spiking Neural Networks Trained with Surrogate Gradient**
 
 cs.LG
 
@@ -119,7 +199,7 @@ Published in Transactions on Machine Learning Research (TMLR)
 
 
 
-## **10. Improving Robustness Against Adversarial Attacks with Deeply Quantized Neural Networks**
+## **16. Improving Robustness Against Adversarial Attacks with Deeply Quantized Neural Networks**
 
 cs.LG
 
@@ -133,7 +213,7 @@ Accepted at IJCNN 2023. 8 pages, 5 figures
 
 
 
-## **11. RobCaps: Evaluating the Robustness of Capsule Networks against Affine Transformations and Adversarial Attacks**
+## **17. RobCaps: Evaluating the Robustness of Capsule Networks against Affine Transformations and Adversarial Attacks**
 
 cs.LG
 
@@ -147,7 +227,7 @@ To appear at the 2023 International Joint Conference on Neural  Networks (IJCNN)
 
 
 
-## **12. Evaluating Adversarial Robustness on Document Image Classification**
+## **18. Evaluating Adversarial Robustness on Document Image Classification**
 
 cs.CV
 
@@ -161,7 +241,7 @@ The 17th International Conference on Document Analysis and  Recognition
 
 
 
-## **13. StratDef: Strategic Defense Against Adversarial Attacks in ML-based Malware Detection**
+## **19. StratDef: Strategic Defense Against Adversarial Attacks in ML-based Malware Detection**
 
 cs.LG
 
@@ -173,7 +253,7 @@ cs.LG
 
 
 
-## **14. On Adversarial Robustness of Point Cloud Semantic Segmentation**
+## **20. On Adversarial Robustness of Point Cloud Semantic Segmentation**
 
 cs.CV
 
@@ -185,7 +265,7 @@ cs.CV
 
 
 
-## **15. Evading DeepFake Detectors via Adversarial Statistical Consistency**
+## **21. Evading DeepFake Detectors via Adversarial Statistical Consistency**
 
 cs.CV
 
@@ -199,7 +279,7 @@ Accepted by CVPR 2023
 
 
 
-## **16. Partial-Information, Longitudinal Cyber Attacks on LiDAR in Autonomous Vehicles**
+## **22. Partial-Information, Longitudinal Cyber Attacks on LiDAR in Autonomous Vehicles**
 
 cs.CR
 
@@ -211,7 +291,7 @@ cs.CR
 
 
 
-## **17. Disco Intelligent Reflecting Surfaces: Active Channel Aging for Fully-Passive Jamming Attacks**
+## **23. Disco Intelligent Reflecting Surfaces: Active Channel Aging for Fully-Passive Jamming Attacks**
 
 eess.SP
 
@@ -223,7 +303,7 @@ eess.SP
 
 
 
-## **18. StyLess: Boosting the Transferability of Adversarial Examples**
+## **24. StyLess: Boosting the Transferability of Adversarial Examples**
 
 cs.CV
 
@@ -237,7 +317,7 @@ CVPR 2023
 
 
 
-## **19. QuMoS: A Framework for Preserving Security of Quantum Machine Learning Model**
+## **25. QuMoS: A Framework for Preserving Security of Quantum Machine Learning Model**
 
 quant-ph
 
@@ -249,7 +329,7 @@ quant-ph
 
 
 
-## **20. PatchCensor: Patch Robustness Certification for Transformers via Exhaustive Testing**
+## **26. PatchCensor: Patch Robustness Certification for Transformers via Exhaustive Testing**
 
 cs.CV
 
@@ -263,7 +343,7 @@ This paper has been accepted by ACM Transactions on Software  Engineering and Me
 
 
 
-## **21. Universal Adversarial Backdoor Attacks to Fool Vertical Federated Learning in Cloud-Edge Collaboration**
+## **27. Universal Adversarial Backdoor Attacks to Fool Vertical Federated Learning in Cloud-Edge Collaboration**
 
 cs.LG
 
@@ -277,7 +357,7 @@ cs.LG
 
 
 
-## **22. Detecting Adversarial Faces Using Only Real Face Self-Perturbations**
+## **28. Detecting Adversarial Faces Using Only Real Face Self-Perturbations**
 
 cs.CV
 
@@ -291,7 +371,7 @@ IJCAI2023
 
 
 
-## **23. MAWSEO: Adversarial Wiki Search Poisoning for Illicit Online Promotion**
+## **29. MAWSEO: Adversarial Wiki Search Poisoning for Illicit Online Promotion**
 
 cs.CR
 
@@ -303,7 +383,7 @@ cs.CR
 
 
 
-## **24. Individual Fairness in Bayesian Neural Networks**
+## **30. Individual Fairness in Bayesian Neural Networks**
 
 cs.LG
 
@@ -315,7 +395,7 @@ cs.LG
 
 
 
-## **25. Reliable Representations Make A Stronger Defender: Unsupervised Structure Refinement for Robust GNN**
+## **31. Reliable Representations Make A Stronger Defender: Unsupervised Structure Refinement for Robust GNN**
 
 cs.LG
 
@@ -329,7 +409,7 @@ Accepted in KDD2022
 
 
 
-## **26. Denial-of-Service or Fine-Grained Control: Towards Flexible Model Poisoning Attacks on Federated Learning**
+## **32. Denial-of-Service or Fine-Grained Control: Towards Flexible Model Poisoning Attacks on Federated Learning**
 
 cs.LG
 
@@ -343,7 +423,7 @@ This paper has been accepted by the 32st International Joint  Conference on Arti
 
 
 
-## **27. Interpretable and Robust AI in EEG Systems: A Survey**
+## **33. Interpretable and Robust AI in EEG Systems: A Survey**
 
 eess.SP
 
@@ -355,7 +435,7 @@ eess.SP
 
 
 
-## **28. Fooling Thermal Infrared Detectors in Physical World**
+## **34. Fooling Thermal Infrared Detectors in Physical World**
 
 cs.CV
 
@@ -367,7 +447,7 @@ cs.CV
 
 
 
-## **29. VenoMave: Targeted Poisoning Against Speech Recognition**
+## **35. VenoMave: Targeted Poisoning Against Speech Recognition**
 
 cs.SD
 
@@ -379,7 +459,7 @@ cs.SD
 
 
 
-## **30. Get Rid Of Your Trail: Remotely Erasing Backdoors in Federated Learning**
+## **36. Get Rid Of Your Trail: Remotely Erasing Backdoors in Federated Learning**
 
 cs.LG
 
@@ -391,7 +471,7 @@ cs.LG
 
 
 
-## **31. SoK: Let the Privacy Games Begin! A Unified Treatment of Data Inference Privacy in Machine Learning**
+## **37. SoK: Let the Privacy Games Begin! A Unified Treatment of Data Inference Privacy in Machine Learning**
 
 cs.LG
 
@@ -405,7 +485,7 @@ cs.LG
 
 
 
-## **32. More is Better (Mostly): On the Backdoor Attacks in Federated Graph Neural Networks**
+## **38. More is Better (Mostly): On the Backdoor Attacks in Federated Graph Neural Networks**
 
 cs.CR
 
@@ -419,7 +499,7 @@ cs.CR
 
 
 
-## **33. Byzantine-Resilient Learning Beyond Gradients: Distributing Evolutionary Search**
+## **39. Byzantine-Resilient Learning Beyond Gradients: Distributing Evolutionary Search**
 
 cs.DC
 
@@ -433,7 +513,7 @@ cs.DC
 
 
 
-## **34. Certified Adversarial Robustness Within Multiple Perturbation Bounds**
+## **40. Certified Adversarial Robustness Within Multiple Perturbation Bounds**
 
 cs.LG
 
@@ -445,7 +525,7 @@ cs.LG
 
 
 
-## **35. An Analysis of the Completion Time of the BB84 Protocol**
+## **41. An Analysis of the Completion Time of the BB84 Protocol**
 
 cs.PF
 
@@ -457,7 +537,7 @@ cs.PF
 
 
 
-## **36. Quantum-secure message authentication via blind-unforgeability**
+## **42. Quantum-secure message authentication via blind-unforgeability**
 
 quant-ph
 
@@ -471,7 +551,7 @@ quant-ph
 
 
 
-## **37. Diversifying the High-level Features for better Adversarial Transferability**
+## **43. Diversifying the High-level Features for better Adversarial Transferability**
 
 cs.CV
 
@@ -485,7 +565,7 @@ cs.CV
 
 
 
-## **38. Towards the Universal Defense for Query-Based Audio Adversarial Attacks**
+## **44. Towards the Universal Defense for Query-Based Audio Adversarial Attacks**
 
 eess.AS
 
@@ -499,7 +579,7 @@ Submitted to Cybersecurity journal
 
 
 
-## **39. A Search-Based Testing Approach for Deep Reinforcement Learning Agents**
+## **45. A Search-Based Testing Approach for Deep Reinforcement Learning Agents**
 
 cs.SE
 
@@ -511,7 +591,7 @@ cs.SE
 
 
 
-## **40. Quantifying the Preferential Direction of the Model Gradient in Adversarial Training With Projected Gradient Descent**
+## **46. Quantifying the Preferential Direction of the Model Gradient in Adversarial Training With Projected Gradient Descent**
 
 stat.ML
 
@@ -525,7 +605,7 @@ This paper was published in Pattern Recognition
 
 
 
-## **41. Jedi: Entropy-based Localization and Removal of Adversarial Patches**
+## **47. Jedi: Entropy-based Localization and Removal of Adversarial Patches**
 
 cs.CR
 
@@ -539,7 +619,7 @@ cs.CR
 
 
 
-## **42. Fundamental Limitations of Alignment in Large Language Models**
+## **48. Fundamental Limitations of Alignment in Large Language Models**
 
 cs.CL
 
@@ -551,7 +631,7 @@ cs.CL
 
 
 
-## **43. GREAT Score: Global Robustness Evaluation of Adversarial Perturbation using Generative Models**
+## **49. GREAT Score: Global Robustness Evaluation of Adversarial Perturbation using Generative Models**
 
 cs.LG
 
@@ -563,7 +643,7 @@ cs.LG
 
 
 
-## **44. Experimental Certification of Quantum Transmission via Bell's Theorem**
+## **50. Experimental Certification of Quantum Transmission via Bell's Theorem**
 
 quant-ph
 
@@ -574,86 +654,6 @@ quant-ph
 **Authors**: Simon Neves, Laura dos Santos Martins, Verena Yacoub, Pascal Lefebvre, Ivan Supic, Damian Markham, Eleni Diamanti
 
 **Abstract**: Quantum transmission links are central elements in essentially all implementations of quantum information protocols. Emerging progress in quantum technologies involving such links needs to be accompanied by appropriate certification tools. In adversarial scenarios, a certification method can be vulnerable to attacks if too much trust is placed on the underlying system. Here, we propose a protocol in a device independent framework, which allows for the certification of practical quantum transmission links in scenarios where minimal assumptions are made about the functioning of the certification setup. In particular, we take unavoidable transmission losses into account by modeling the link as a completely-positive trace-decreasing map. We also, crucially, remove the assumption of independent and identically distributed samples, which is known to be incompatible with adversarial settings. Finally, in view of the use of the certified transmitted states for follow-up applications, our protocol moves beyond certification of the channel to allow us to estimate the quality of the transmitted state itself. To illustrate the practical relevance and the feasibility of our protocol with currently available technology we provide an experimental implementation based on a state-of-the-art polarization entangled photon pair source in a Sagnac configuration and analyze its robustness for realistic losses and errors.
-
-
-
-## **45. Masked Language Model Based Textual Adversarial Example Detection**
-
-cs.CR
-
-13 pages,3 figures
-
-**SubmitDate**: 2023-04-19    [abs](http://arxiv.org/abs/2304.08767v2) [paper-pdf](http://arxiv.org/pdf/2304.08767v2)
-
-**Authors**: Xiaomei Zhang, Zhaoxi Zhang, Qi Zhong, Xufei Zheng, Yanjun Zhang, Shengshan Hu, Leo Yu Zhang
-
-**Abstract**: Adversarial attacks are a serious threat to the reliable deployment of machine learning models in safety-critical applications. They can misguide current models to predict incorrectly by slightly modifying the inputs. Recently, substantial work has shown that adversarial examples tend to deviate from the underlying data manifold of normal examples, whereas pre-trained masked language models can fit the manifold of normal NLP data. To explore how to use the masked language model in adversarial detection, we propose a novel textual adversarial example detection method, namely Masked Language Model-based Detection (MLMD), which can produce clearly distinguishable signals between normal examples and adversarial examples by exploring the changes in manifolds induced by the masked language model. MLMD features a plug and play usage (i.e., no need to retrain the victim model) for adversarial defense and it is agnostic to classification tasks, victim model's architectures, and to-be-defended attack methods. We evaluate MLMD on various benchmark textual datasets, widely studied machine learning models, and state-of-the-art (SOTA) adversarial attacks (in total $3*4*4 = 48$ settings). Experimental results show that MLMD can achieve strong performance, with detection accuracy up to 0.984, 0.967, and 0.901 on AG-NEWS, IMDB, and SST-2 datasets, respectively. Additionally, MLMD is superior, or at least comparable to, the SOTA detection defenses in detection accuracy and F1 score. Among many defenses based on the off-manifold assumption of adversarial examples, this work offers a new angle for capturing the manifold change. The code for this work is openly accessible at \url{https://github.com/mlmddetection/MLMDdetection}.
-
-
-
-## **46. Understanding Overfitting in Adversarial Training via Kernel Regression**
-
-stat.ML
-
-**SubmitDate**: 2023-04-19    [abs](http://arxiv.org/abs/2304.06326v2) [paper-pdf](http://arxiv.org/pdf/2304.06326v2)
-
-**Authors**: Teng Zhang, Kang Li
-
-**Abstract**: Adversarial training and data augmentation with noise are widely adopted techniques to enhance the performance of neural networks. This paper investigates adversarial training and data augmentation with noise in the context of regularized regression in a reproducing kernel Hilbert space (RKHS). We establish the limiting formula for these techniques as the attack and noise size, as well as the regularization parameter, tend to zero. Based on this limiting formula, we analyze specific scenarios and demonstrate that, without appropriate regularization, these two methods may have larger generalization error and Lipschitz constant than standard kernel regression. However, by selecting the appropriate regularization parameter, these two methods can outperform standard kernel regression and achieve smaller generalization error and Lipschitz constant. These findings support the empirical observations that adversarial training can lead to overfitting, and appropriate regularization methods, such as early stopping, can alleviate this issue.
-
-
-
-## **47. Secure Split Learning against Property Inference, Data Reconstruction, and Feature Space Hijacking Attacks**
-
-cs.LG
-
-23 pages
-
-**SubmitDate**: 2023-04-19    [abs](http://arxiv.org/abs/2304.09515v1) [paper-pdf](http://arxiv.org/pdf/2304.09515v1)
-
-**Authors**: Yunlong Mao, Zexi Xin, Zhenyu Li, Jue Hong, Qingyou Yang, Sheng Zhong
-
-**Abstract**: Split learning of deep neural networks (SplitNN) has provided a promising solution to learning jointly for the mutual interest of a guest and a host, which may come from different backgrounds, holding features partitioned vertically. However, SplitNN creates a new attack surface for the adversarial participant, holding back its practical use in the real world. By investigating the adversarial effects of highly threatening attacks, including property inference, data reconstruction, and feature hijacking attacks, we identify the underlying vulnerability of SplitNN and propose a countermeasure. To prevent potential threats and ensure the learning guarantees of SplitNN, we design a privacy-preserving tunnel for information exchange between the guest and the host. The intuition is to perturb the propagation of knowledge in each direction with a controllable unified solution. To this end, we propose a new activation function named R3eLU, transferring private smashed data and partial loss into randomized responses in forward and backward propagations, respectively. We give the first attempt to secure split learning against three threatening attacks and present a fine-grained privacy budget allocation scheme. The analysis proves that our privacy-preserving SplitNN solution provides a tight privacy budget, while the experimental results show that our solution performs better than existing solutions in most cases and achieves a good tradeoff between defense and model usability.
-
-
-
-## **48. Maybenot: A Framework for Traffic Analysis Defenses**
-
-cs.CR
-
-**SubmitDate**: 2023-04-19    [abs](http://arxiv.org/abs/2304.09510v1) [paper-pdf](http://arxiv.org/pdf/2304.09510v1)
-
-**Authors**: Tobias Pulls
-
-**Abstract**: End-to-end encryption is a powerful tool for protecting the privacy of Internet users. Together with the increasing use of technologies such as Tor, VPNs, and encrypted messaging, it is becoming increasingly difficult for network adversaries to monitor and censor Internet traffic. One remaining avenue for adversaries is traffic analysis: the analysis of patterns in encrypted traffic to infer information about the users and their activities. Recent improvements using deep learning have made traffic analysis attacks more effective than ever before.   We present Maybenot, a framework for traffic analysis defenses. Maybenot is designed to be easy to use and integrate into existing end-to-end encrypted protocols. It is implemented in the Rust programming language as a crate (library), together with a simulator to further the development of defenses. Defenses in Maybenot are expressed as probabilistic state machines that schedule actions to inject padding or block outgoing traffic. Maybenot is an evolution from the Tor Circuit Padding Framework by Perry and Kadianakis, designed to support a wide range of protocols and use cases.
-
-
-
-## **49. Wavelets Beat Monkeys at Adversarial Robustness**
-
-cs.LG
-
-Machine Learning and the Physical Sciences Workshop, NeurIPS 2022
-
-**SubmitDate**: 2023-04-19    [abs](http://arxiv.org/abs/2304.09403v1) [paper-pdf](http://arxiv.org/pdf/2304.09403v1)
-
-**Authors**: Jingtong Su, Julia Kempe
-
-**Abstract**: Research on improving the robustness of neural networks to adversarial noise - imperceptible malicious perturbations of the data - has received significant attention. The currently uncontested state-of-the-art defense to obtain robust deep neural networks is Adversarial Training (AT), but it consumes significantly more resources compared to standard training and trades off accuracy for robustness. An inspiring recent work [Dapello et al.] aims to bring neurobiological tools to the question: How can we develop Neural Nets that robustly generalize like human vision? [Dapello et al.] design a network structure with a neural hidden first layer that mimics the primate primary visual cortex (V1), followed by a back-end structure adapted from current CNN vision models. It seems to achieve non-trivial adversarial robustness on standard vision benchmarks when tested on small perturbations. Here we revisit this biologically inspired work, and ask whether a principled parameter-free representation with inspiration from physics is able to achieve the same goal. We discover that the wavelet scattering transform can replace the complex V1-cortex and simple uniform Gaussian noise can take the role of neural stochasticity, to achieve adversarial robustness. In extensive experiments on the CIFAR-10 benchmark with adaptive adversarial attacks we show that: 1) Robustness of VOneBlock architectures is relatively weak (though non-zero) when the strength of the adversarial attack radius is set to commonly used benchmarks. 2) Replacing the front-end VOneBlock by an off-the-shelf parameter-free Scatternet followed by simple uniform Gaussian noise can achieve much more substantial adversarial robustness without adversarial training. Our work shows how physically inspired structures yield new insights into robustness that were previously only thought possible by meticulously mimicking the human cortex.
-
-
-
-## **50. CodeAttack: Code-Based Adversarial Attacks for Pre-trained Programming Language Models**
-
-cs.CL
-
-AAAI Conference on Artificial Intelligence (AAAI) 2023
-
-**SubmitDate**: 2023-04-18    [abs](http://arxiv.org/abs/2206.00052v3) [paper-pdf](http://arxiv.org/pdf/2206.00052v3)
-
-**Authors**: Akshita Jha, Chandan K. Reddy
-
-**Abstract**: Pre-trained programming language (PL) models (such as CodeT5, CodeBERT, GraphCodeBERT, etc.,) have the potential to automate software engineering tasks involving code understanding and code generation. However, these models operate in the natural channel of code, i.e., they are primarily concerned with the human understanding of the code. They are not robust to changes in the input and thus, are potentially susceptible to adversarial attacks in the natural channel. We propose, CodeAttack, a simple yet effective black-box attack model that uses code structure to generate effective, efficient, and imperceptible adversarial code samples and demonstrates the vulnerabilities of the state-of-the-art PL models to code-specific adversarial attacks. We evaluate the transferability of CodeAttack on several code-code (translation and repair) and code-NL (summarization) tasks across different programming languages. CodeAttack outperforms state-of-the-art adversarial NLP attack models to achieve the best overall drop in performance while being more efficient, imperceptible, consistent, and fluent. The code can be found at https://github.com/reddy-lab-code-research/CodeAttack.
 
 
 

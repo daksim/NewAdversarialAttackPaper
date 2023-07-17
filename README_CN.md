@@ -1,9 +1,83 @@
 # Latest Adversarial Attack Papers
-**update at 2023-07-14 15:34:03**
+**update at 2023-07-17 15:31:14**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. Visually Adversarial Attacks and Defenses in the Physical World: A Survey**
+## **1. Bankrupting DoS Attackers**
+
+破产型DoS攻击者 cs.CR
+
+**SubmitDate**: 2023-07-14    [abs](http://arxiv.org/abs/2205.08287v3) [paper-pdf](http://arxiv.org/pdf/2205.08287v3)
+
+**Authors**: Trisha Chakraborty, Abir Islam, Valerie King, Daniel Rayborn, Jared Saia, Maxwell Young
+
+**Abstract**: To defend against denial-of-service (DoS) attacks, we employ a technique called resource burning (RB). RB is the verifiable expenditure of a resource, such as computational power, required from clients before receiving service from the server. To the best of our knowledge, we present the first DoS defense algorithms where the algorithmic cost -- the cost to both the server and the honest clients -- is bounded as a function of the attacker's cost.   We model an omniscient, Byzantine attacker, and a server with access to an estimator that estimates the number of jobs from honest clients in any time interval. We examine two communication models: an idealized zero-latency model and a partially synchronous model. Notably, our algorithms for both models have asymptotically lower costs than the attacker's, as the attacker's costs grow large. Both algorithms use a simple rule to set required RB fees per job. We assume no prior knowledge of the number of jobs, the adversary's costs, or even the estimator's accuracy. However, these quantities parameterize the algorithms' costs.   We also prove a lower bound on the cost of any randomized algorithm. This lower bound shows that our algorithms achieve asymptotically tight costs as the number of jobs grows unbounded, whenever the estimator output is accurate to within a constant factor.
+
+摘要: 为了防御拒绝服务(DoS)攻击，我们采用了一种称为资源烧录(RB)的技术。RB是在从服务器接收服务之前需要从客户端获得的资源的可验证支出，例如计算能力。就我们所知，我们提出了第一个DoS防御算法，其中算法成本--服务器和诚实的客户端的成本--作为攻击者成本的函数而有界。我们模拟了一个无所不知的拜占庭攻击者，以及一个可以访问估计器的服务器，该估计器可以估计任意时间间隔内来自诚实客户端的作业数量。我们研究了两种通信模型：理想化的零延迟模型和部分同步模型。值得注意的是，随着攻击者的成本越来越大，我们对这两个模型的算法的成本都逐渐低于攻击者的算法。这两种算法都使用一个简单的规则来设置每个作业所需的RB费用。我们假设没有事先知道的工作数量，对手的成本，甚至估计者的准确性。然而，这些数量将算法的成本参数化。我们还证明了任意随机化算法的代价的一个下界。这个下界表明，当作业数量无限增长时，只要估计器输出精确到一个恒定因子内，我们的算法就会达到渐近紧成本。
+
+
+
+## **2. Boosting Backdoor Attack with A Learnable Poisoning Sample Selection Strategy**
+
+一种可学习的中毒样本选择策略增强后门攻击 cs.CR
+
+**SubmitDate**: 2023-07-14    [abs](http://arxiv.org/abs/2307.07328v1) [paper-pdf](http://arxiv.org/pdf/2307.07328v1)
+
+**Authors**: Zihao Zhu, Mingda Zhang, Shaokui Wei, Li Shen, Yanbo Fan, Baoyuan Wu
+
+**Abstract**: Data-poisoning based backdoor attacks aim to insert backdoor into models by manipulating training datasets without controlling the training process of the target model. Existing attack methods mainly focus on designing triggers or fusion strategies between triggers and benign samples. However, they often randomly select samples to be poisoned, disregarding the varying importance of each poisoning sample in terms of backdoor injection. A recent selection strategy filters a fixed-size poisoning sample pool by recording forgetting events, but it fails to consider the remaining samples outside the pool from a global perspective. Moreover, computing forgetting events requires significant additional computing resources. Therefore, how to efficiently and effectively select poisoning samples from the entire dataset is an urgent problem in backdoor attacks.To address it, firstly, we introduce a poisoning mask into the regular backdoor training loss. We suppose that a backdoored model training with hard poisoning samples has a more backdoor effect on easy ones, which can be implemented by hindering the normal training process (\ie, maximizing loss \wrt mask). To further integrate it with normal training process, we then propose a learnable poisoning sample selection strategy to learn the mask together with the model parameters through a min-max optimization.Specifically, the outer loop aims to achieve the backdoor attack goal by minimizing the loss based on the selected samples, while the inner loop selects hard poisoning samples that impede this goal by maximizing the loss. After several rounds of adversarial training, we finally select effective poisoning samples with high contribution. Extensive experiments on benchmark datasets demonstrate the effectiveness and efficiency of our approach in boosting backdoor attack performance.
+
+摘要: 基于数据中毒的后门攻击旨在通过操纵训练数据集将后门插入到模型中，而不控制目标模型的训练过程。现有的攻击方法主要集中在设计触发器和良性样本之间的融合策略。然而，他们经常随机选择要中毒的样本，而忽略了每个中毒样本在后门注射方面的不同重要性。最近的一种选择策略通过记录遗忘事件来过滤固定大小的中毒样本库，但它没有从全局的角度考虑池外的剩余样本。此外，计算遗忘事件需要大量额外的计算资源。因此，如何高效有效地从整个数据集中选择中毒样本是后门攻击中亟待解决的问题，为此，首先在常规的后门训练损失中引入中毒面具。我们认为，硬中毒样本的后门模型训练对简单的后门模型有更大的后门效应，这可以通过阻碍正常的训练过程(即最大化损失\WRT掩码)来实现。为了进一步将其与正常训练过程相结合，我们提出了一种可学习的中毒样本选择策略，通过最小-最大优化来学习掩码和模型参数，具体而言，外环通过基于所选样本的损失最小化来实现后门攻击目标，而内环通过最大化损失来选择阻碍这一目标的硬中毒样本。经过多轮对抗性训练，最终选出了贡献度较高的有效中毒样本。在基准数据集上的大量实验证明了该方法在提高后门攻击性能方面的有效性和效率。
+
+
+
+## **3. Frequency Domain Adversarial Training for Robust Volumetric Medical Segmentation**
+
+用于健壮体积医学分割的频域对抗性训练 eess.IV
+
+This paper has been accepted in MICCAI 2023 conference
+
+**SubmitDate**: 2023-07-14    [abs](http://arxiv.org/abs/2307.07269v1) [paper-pdf](http://arxiv.org/pdf/2307.07269v1)
+
+**Authors**: Asif Hanif, Muzammal Naseer, Salman Khan, Mubarak Shah, Fahad Shahbaz Khan
+
+**Abstract**: It is imperative to ensure the robustness of deep learning models in critical applications such as, healthcare. While recent advances in deep learning have improved the performance of volumetric medical image segmentation models, these models cannot be deployed for real-world applications immediately due to their vulnerability to adversarial attacks. We present a 3D frequency domain adversarial attack for volumetric medical image segmentation models and demonstrate its advantages over conventional input or voxel domain attacks. Using our proposed attack, we introduce a novel frequency domain adversarial training approach for optimizing a robust model against voxel and frequency domain attacks. Moreover, we propose frequency consistency loss to regulate our frequency domain adversarial training that achieves a better tradeoff between model's performance on clean and adversarial samples. Code is publicly available at https://github.com/asif-hanif/vafa.
+
+摘要: 确保深度学习模型在医疗保健等关键应用中的健壮性是当务之急。虽然深度学习的最新进展提高了体积医学图像分割模型的性能，但由于它们容易受到对手攻击，这些模型不能立即应用于现实世界。提出了一种对体医学图像分割模型进行3D频域攻击的方法，并证明了其相对于传统的输入域或体素域攻击的优势。利用我们提出的攻击，我们引入了一种新的频域对抗训练方法来优化抗体素和频域攻击的稳健模型。此外，我们还提出了频率一致性损失来调整我们的频域对抗训练，从而在干净样本和对抗样本上的模型性能之间实现了更好的折衷。代码可在https://github.com/asif-hanif/vafa.上公开获得
+
+
+
+## **4. Vulnerability-Aware Instance Reweighting For Adversarial Training**
+
+用于对抗性训练的脆弱性感知实例重加权 cs.LG
+
+**SubmitDate**: 2023-07-14    [abs](http://arxiv.org/abs/2307.07167v1) [paper-pdf](http://arxiv.org/pdf/2307.07167v1)
+
+**Authors**: Olukorede Fakorede, Ashutosh Kumar Nirala, Modeste Atsague, Jin Tian
+
+**Abstract**: Adversarial Training (AT) has been found to substantially improve the robustness of deep learning classifiers against adversarial attacks. AT involves obtaining robustness by including adversarial examples in training a classifier. Most variants of AT algorithms treat every training example equally. However, recent works have shown that better performance is achievable by treating them unequally. In addition, it has been observed that AT exerts an uneven influence on different classes in a training set and unfairly hurts examples corresponding to classes that are inherently harder to classify. Consequently, various reweighting schemes have been proposed that assign unequal weights to robust losses of individual examples in a training set. In this work, we propose a novel instance-wise reweighting scheme. It considers the vulnerability of each natural example and the resulting information loss on its adversarial counterpart occasioned by adversarial attacks. Through extensive experiments, we show that our proposed method significantly improves over existing reweighting schemes, especially against strong white and black-box attacks.
+
+摘要: 对抗性训练(AT)被发现能显著提高深度学习分类器对对手攻击的稳健性。AT涉及通过在训练分类器时包括对抗性例子来获得稳健性。AT算法的大多数变体平等地对待每个训练样本。然而，最近的研究表明，通过不平等地对待它们可以实现更好的性能。此外，已经观察到，AT对训练集中的不同类别施加了不均匀的影响，并且不公平地损害了与本质上更难分类的类别相对应的样本。因此，已经提出了各种重新加权方案，其将不相等的权重分配给训练集中的个体样本的稳健损失。在这项工作中，我们提出了一种新的基于实例的权重调整方案。它考虑了每个自然例子的脆弱性以及由对抗性攻击造成的对抗性对应者的信息损失。通过大量的实验表明，我们提出的方法比已有的加权方法有了显著的改进，特别是在抵抗强白盒和黑盒攻击的情况下。
+
+
+
+## **5. Cross-lingual Cross-temporal Summarization: Dataset, Models, Evaluation**
+
+跨语言跨期摘要：数据集、模型、评价 cs.CL
+
+Version 2; Work in progress
+
+**SubmitDate**: 2023-07-13    [abs](http://arxiv.org/abs/2306.12916v2) [paper-pdf](http://arxiv.org/pdf/2306.12916v2)
+
+**Authors**: Ran Zhang, Jihed Ouni, Steffen Eger
+
+**Abstract**: While summarization has been extensively researched in natural language processing (NLP), cross-lingual cross-temporal summarization (CLCTS) is a largely unexplored area that has the potential to improve cross-cultural accessibility and understanding. This paper comprehensively addresses the CLCTS task, including dataset creation, modeling, and evaluation. We build the first CLCTS corpus, leveraging historical fictive texts and Wikipedia summaries in English and German, and examine the effectiveness of popular transformer end-to-end models with different intermediate finetuning tasks. Additionally, we explore the potential of ChatGPT for CLCTS as a summarizer and an evaluator. Overall, we report evaluations from humans, ChatGPT, and several recent automatic evaluation metrics where we find that our intermediate task finetuned end-to-end models generate bad to moderate quality summaries; ChatGPT as a summarizer (without any finetuning) provides moderate to good quality outputs and as an evaluator correlates moderately with human evaluations but is prone to giving lower scores. ChatGPT also seems very adept at normalizing historical text and outperforms context-unaware spelling normalization tools such as Norma. We finally test ChatGPT in a scenario with adversarially attacked and unseen source documents and find that ChatGPT profits from its prior knowledge to a certain degree, with better performances for omission and entity swap than negation against its prior knowledge. This benefit inflates its assessed quality as ChatGPT performs slightly worse for unseen source documents compared to seen documents. We additionally introspect our models' performances to find that longer, older and more complex source texts (all of which are more characteristic for historical language variants) are harder to summarize for all models, indicating the difficulty of the CLCTS task.
+
+摘要: 摘要在自然语言处理(NLP)中得到了广泛的研究，但跨语言跨时序摘要(CLCTS)在很大程度上是一个未被开发的领域，它有可能提高跨文化的可及性和理解力。本文全面介绍了CLCTS的任务，包括数据集的创建、建模和评估。我们建立了第一个CLCTS语料库，利用英语和德语的历史虚构文本和维基百科摘要，并检查了具有不同中间微调任务的流行变压器端到端模型的有效性。此外，我们还探讨了ChatGPT作为CLCTS的摘要和评价器的潜力。总体而言，我们报告了来自人工、ChatGPT和最近几个自动评估指标的评估，其中我们发现我们的中间任务微调的端到端模型生成了较差到中等质量的摘要；ChatGPT作为汇总器(没有任何微调)提供了中等到良好的质量输出，并且作为评估者与人工评估适度相关，但容易给出较低的分数。ChatGPT似乎也非常擅长对历史文本进行规范化，表现优于Norma等上下文无关的拼写标准化工具。最后，我们在恶意攻击和不可见源文档的场景中对ChatGPT进行了测试，发现ChatGPT在一定程度上得益于其先验知识，在遗漏和实体交换方面的性能优于对其先验知识的否定。这一优势夸大了其评估的质量，因为ChatGPT对于不可见的源文档的性能略逊于可见的文档。此外，我们还反思了我们的模型的表现，发现更长、更老、更复杂的源文本(所有这些都是历史语言变体的特征)更难对所有模型进行总结，这表明了CLCTS任务的难度。
+
+
+
+## **6. Visually Adversarial Attacks and Defenses in the Physical World: A Survey**
 
 物理世界中的视觉对抗性攻击和防御：综述 cs.CV
 
@@ -17,7 +91,7 @@
 
 
 
-## **2. Introducing Foundation Models as Surrogate Models: Advancing Towards More Practical Adversarial Attacks**
+## **7. Introducing Foundation Models as Surrogate Models: Advancing Towards More Practical Adversarial Attacks**
 
 引入基础模型作为代理模型：向更实用的对抗性攻击迈进 cs.LG
 
@@ -31,7 +105,7 @@
 
 
 
-## **3. Adversarial Policies Beat Superhuman Go AIs**
+## **8. Adversarial Policies Beat Superhuman Go AIs**
 
 对抗性政策击败了超人围棋 cs.LG
 
@@ -47,7 +121,7 @@ Accepted to ICML 2023, see paper for changelog
 
 
 
-## **4. Multi-objective Evolutionary Search of Variable-length Composite Semantic Perturbations**
+## **9. Multi-objective Evolutionary Search of Variable-length Composite Semantic Perturbations**
 
 变长复合语义扰动的多目标进化搜索 cs.CV
 
@@ -61,7 +135,7 @@ Accepted to ICML 2023, see paper for changelog
 
 
 
-## **5. Hiding in Plain Sight: Differential Privacy Noise Exploitation for Evasion-resilient Localized Poisoning Attacks in Multiagent Reinforcement Learning**
+## **10. Hiding in Plain Sight: Differential Privacy Noise Exploitation for Evasion-resilient Localized Poisoning Attacks in Multiagent Reinforcement Learning**
 
 隐藏在明显的视线中：在多智能体强化学习中利用差分隐私噪声进行逃避弹性局部中毒攻击 cs.LG
 
@@ -77,7 +151,7 @@ Accepted to ICML 2023, see paper for changelog
 
 
 
-## **6. The Butterfly Effect in AI Fairness and Bias**
+## **11. The Butterfly Effect in AI Fairness and Bias**
 
 人工智能公平与偏见中的蝴蝶效应 cs.CY
 
@@ -93,7 +167,7 @@ Working Draft
 
 
 
-## **7. Microbial Genetic Algorithm-based Black-box Attack against Interpretable Deep Learning Systems**
+## **12. Microbial Genetic Algorithm-based Black-box Attack against Interpretable Deep Learning Systems**
 
 基于微生物遗传算法的可解释深度学习系统黑盒攻击 cs.CV
 
@@ -107,7 +181,7 @@ Working Draft
 
 
 
-## **8. Single-Class Target-Specific Attack against Interpretable Deep Learning Systems**
+## **13. Single-Class Target-Specific Attack against Interpretable Deep Learning Systems**
 
 针对可解释深度学习系统的单类特定目标攻击 cs.CV
 
@@ -123,7 +197,7 @@ Working Draft
 
 
 
-## **9. Rational Neural Network Controllers**
+## **14. Rational Neural Network Controllers**
 
 有理神经网络控制器 eess.SY
 
@@ -139,7 +213,7 @@ Working Draft
 
 
 
-## **10. I See Dead People: Gray-Box Adversarial Attack on Image-To-Text Models**
+## **15. I See Dead People: Gray-Box Adversarial Attack on Image-To-Text Models**
 
 我看到死人：对图像到文本模型的灰箱对抗性攻击 cs.CV
 
@@ -153,7 +227,7 @@ Working Draft
 
 
 
-## **11. Random-Set Convolutional Neural Network (RS-CNN) for Epistemic Deep Learning**
+## **16. Random-Set Convolutional Neural Network (RS-CNN) for Epistemic Deep Learning**
 
 认知深度学习的随机集卷积神经网络(RS-CNN) cs.LG
 
@@ -167,7 +241,7 @@ Working Draft
 
 
 
-## **12. In and Out-of-Domain Text Adversarial Robustness via Label Smoothing**
+## **17. In and Out-of-Domain Text Adversarial Robustness via Label Smoothing**
 
 通过标签平滑实现域内和域外文本对抗健壮性 cs.CL
 
@@ -181,7 +255,7 @@ Working Draft
 
 
 
-## **13. Zeroth-order Optimization with Weak Dimension Dependency**
+## **18. Zeroth-order Optimization with Weak Dimension Dependency**
 
 具有弱维相关性的零阶优化 math.OC
 
@@ -197,7 +271,7 @@ to be published in COLT 2023
 
 
 
-## **14. Adversarial Cheap Talk**
+## **19. Adversarial Cheap Talk**
 
 对抗性的低级谈资 cs.LG
 
@@ -213,7 +287,7 @@ To be published at ICML 2023. Project video and code are available at  https://s
 
 
 
-## **15. Hyper-parameter Tuning for Adversarially Robust Models**
+## **20. Hyper-parameter Tuning for Adversarially Robust Models**
 
 逆稳健模型的超参数整定 cs.LG
 
@@ -227,7 +301,7 @@ To be published at ICML 2023. Project video and code are available at  https://s
 
 
 
-## **16. Revisiting the Trade-off between Accuracy and Robustness via Weight Distribution of Filters**
+## **21. Revisiting the Trade-off between Accuracy and Robustness via Weight Distribution of Filters**
 
 从滤波器权重分布看精度与稳健性的权衡 cs.CV
 
@@ -241,7 +315,7 @@ To be published at ICML 2023. Project video and code are available at  https://s
 
 
 
-## **17. Mitigating the Accuracy-Robustness Trade-off via Multi-Teacher Adversarial Distillation**
+## **22. Mitigating the Accuracy-Robustness Trade-off via Multi-Teacher Adversarial Distillation**
 
 通过多教师对抗性蒸馏缓解精度与稳健性的权衡 cs.LG
 
@@ -255,7 +329,7 @@ To be published at ICML 2023. Project video and code are available at  https://s
 
 
 
-## **18. Membership Inference Attacks on DNNs using Adversarial Perturbations**
+## **23. Membership Inference Attacks on DNNs using Adversarial Perturbations**
 
 基于对抗性扰动的DNN成员推理攻击 cs.LG
 
@@ -269,7 +343,7 @@ To be published at ICML 2023. Project video and code are available at  https://s
 
 
 
-## **19. ATWM: Defense against adversarial malware based on adversarial training**
+## **24. ATWM: Defense against adversarial malware based on adversarial training**
 
 ATWM：基于对抗性训练的恶意软件防御 cs.CR
 
@@ -283,7 +357,7 @@ ATWM：基于对抗性训练的恶意软件防御 cs.CR
 
 
 
-## **20. Categorical composable cryptography: extended version**
+## **25. Categorical composable cryptography: extended version**
 
 范畴可合成密码学：扩展版本 cs.CR
 
@@ -299,7 +373,7 @@ Extended version of arXiv:2105.05949 which appeared in FoSSaCS 2022
 
 
 
-## **21. On the Robustness of Bayesian Neural Networks to Adversarial Attacks**
+## **26. On the Robustness of Bayesian Neural Networks to Adversarial Attacks**
 
 贝叶斯神经网络对敌方攻击的稳健性研究 cs.LG
 
@@ -315,7 +389,7 @@ arXiv admin note: text overlap with arXiv:2002.04359
 
 
 
-## **22. Enhancing Adversarial Robustness via Score-Based Optimization**
+## **27. Enhancing Adversarial Robustness via Score-Based Optimization**
 
 通过基于分数的优化增强对手的健壮性 cs.LG
 
@@ -329,7 +403,7 @@ arXiv admin note: text overlap with arXiv:2002.04359
 
 
 
-## **23. Probabilistic and Semantic Descriptions of Image Manifolds and Their Applications**
+## **28. Probabilistic and Semantic Descriptions of Image Manifolds and Their Applications**
 
 图像流形的概率和语义描述及其应用 cs.CV
 
@@ -345,7 +419,7 @@ arXiv admin note: text overlap with arXiv:2002.04359
 
 
 
-## **24. Testing Robustness Against Unforeseen Adversaries**
+## **29. Testing Robustness Against Unforeseen Adversaries**
 
 测试针对不可预见的对手的健壮性 cs.LG
 
@@ -361,7 +435,7 @@ Datasets available at  https://github.com/centerforaisafety/adversarial-corrupti
 
 
 
-## **25. GNP Attack: Transferable Adversarial Examples via Gradient Norm Penalty**
+## **30. GNP Attack: Transferable Adversarial Examples via Gradient Norm Penalty**
 
 GNP攻击：通过梯度范数惩罚的可转移对抗性例子 cs.LG
 
@@ -377,7 +451,7 @@ GNP攻击：通过梯度范数惩罚的可转移对抗性例子 cs.LG
 
 
 
-## **26. Random Position Adversarial Patch for Vision Transformers**
+## **31. Random Position Adversarial Patch for Vision Transformers**
 
 视觉变形金刚的随机位置对抗性补丁 cs.CV
 
@@ -391,7 +465,7 @@ GNP攻击：通过梯度范数惩罚的可转移对抗性例子 cs.LG
 
 
 
-## **27. Robust Ranking Explanations**
+## **32. Robust Ranking Explanations**
 
 稳健的排名解释 cs.LG
 
@@ -407,7 +481,7 @@ Accepted to IMLH (Interpretable ML in Healthcare) workshop at ICML  2023. arXiv 
 
 
 
-## **28. Provable Robust Saliency-based Explanations**
+## **33. Provable Robust Saliency-based Explanations**
 
 基于显著程度的可证明的稳健解释 cs.LG
 
@@ -421,7 +495,7 @@ Accepted to IMLH (Interpretable ML in Healthcare) workshop at ICML  2023. arXiv 
 
 
 
-## **29. Adversarial Self-Attack Defense and Spatial-Temporal Relation Mining for Visible-Infrared Video Person Re-Identification**
+## **34. Adversarial Self-Attack Defense and Spatial-Temporal Relation Mining for Visible-Infrared Video Person Re-Identification**
 
 基于对抗性自攻击防御和时空关系挖掘的可见光-红外视频人员再识别 cs.CV
 
@@ -437,7 +511,7 @@ Accepted to IMLH (Interpretable ML in Healthcare) workshop at ICML  2023. arXiv 
 
 
 
-## **30. On Pseudolinear Codes for Correcting Adversarial Errors**
+## **35. On Pseudolinear Codes for Correcting Adversarial Errors**
 
 关于用于纠错的伪线性码 cs.IT
 
@@ -451,7 +525,7 @@ Accepted to IMLH (Interpretable ML in Healthcare) workshop at ICML  2023. arXiv 
 
 
 
-## **31. A Theoretical Perspective on Subnetwork Contributions to Adversarial Robustness**
+## **36. A Theoretical Perspective on Subnetwork Contributions to Adversarial Robustness**
 
 子网络对对抗健壮性贡献的理论视角 cs.LG
 
@@ -467,7 +541,7 @@ Accepted to IMLH (Interpretable ML in Healthcare) workshop at ICML  2023. arXiv 
 
 
 
-## **32. When and How to Fool Explainable Models (and Humans) with Adversarial Examples**
+## **37. When and How to Fool Explainable Models (and Humans) with Adversarial Examples**
 
 什么时候以及如何用对抗性的例子愚弄可解释的模型(和人类) cs.LG
 
@@ -483,7 +557,7 @@ Updated version. 43 pages, 9 figures, 4 tables
 
 
 
-## **33. Enhancing Adversarial Training via Reweighting Optimization Trajectory**
+## **38. Enhancing Adversarial Training via Reweighting Optimization Trajectory**
 
 通过重新加权优化轨迹加强对抗性训练 cs.LG
 
@@ -499,7 +573,7 @@ Accepted by ECML 2023
 
 
 
-## **34. Evaluating Similitude and Robustness of Deep Image Denoising Models via Adversarial Attack**
+## **39. Evaluating Similitude and Robustness of Deep Image Denoising Models via Adversarial Attack**
 
 对抗性攻击下深度图像去噪模型的相似性和稳健性评价 cs.CV
 
@@ -513,7 +587,7 @@ Accepted by ECML 2023
 
 
 
-## **35. A Vulnerability of Attribution Methods Using Pre-Softmax Scores**
+## **40. A Vulnerability of Attribution Methods Using Pre-Softmax Scores**
 
 使用Pre-Softmax分数的归因方法的漏洞 cs.LG
 
@@ -529,7 +603,7 @@ Accepted by ECML 2023
 
 
 
-## **36. Quantum Solutions to the Privacy vs. Utility Tradeoff**
+## **41. Quantum Solutions to the Privacy vs. Utility Tradeoff**
 
 隐私与效用权衡的量子解 quant-ph
 
@@ -543,7 +617,7 @@ Accepted by ECML 2023
 
 
 
-## **37. On Distribution-Preserving Mitigation Strategies for Communication under Cognitive Adversaries**
+## **42. On Distribution-Preserving Mitigation Strategies for Communication under Cognitive Adversaries**
 
 认知对手环境下通信的分布保持缓解策略研究 cs.IT
 
@@ -559,7 +633,7 @@ Presented at IEEE ISIT 2023
 
 
 
-## **38. NatLogAttack: A Framework for Attacking Natural Language Inference Models with Natural Logic**
+## **43. NatLogAttack: A Framework for Attacking Natural Language Inference Models with Natural Logic**
 
 NatLogAttack：一个用自然逻辑攻击自然语言推理模型的框架 cs.CL
 
@@ -575,7 +649,7 @@ Published as a conference paper at ACL 2023
 
 
 
-## **39. Sampling-based Fast Gradient Rescaling Method for Highly Transferable Adversarial Attacks**
+## **44. Sampling-based Fast Gradient Rescaling Method for Highly Transferable Adversarial Attacks**
 
 一种基于采样的高可转移对抗性攻击快速梯度重缩放方法 cs.CV
 
@@ -591,7 +665,7 @@ Published as a conference paper at ACL 2023
 
 
 
-## **40. A Testbed To Study Adversarial Cyber-Attack Strategies in Enterprise Networks**
+## **45. A Testbed To Study Adversarial Cyber-Attack Strategies in Enterprise Networks**
 
 企业网络中对抗性网络攻击策略研究的试验台 cs.CR
 
@@ -605,7 +679,7 @@ Published as a conference paper at ACL 2023
 
 
 
-## **41. Chaos Theory and Adversarial Robustness**
+## **46. Chaos Theory and Adversarial Robustness**
 
 混沌理论与对抗稳健性 cs.LG
 
@@ -621,7 +695,7 @@ Published as a conference paper at ACL 2023
 
 
 
-## **42. GIT: Detecting Uncertainty, Out-Of-Distribution and Adversarial Samples using Gradients and Invariance Transformations**
+## **47. GIT: Detecting Uncertainty, Out-Of-Distribution and Adversarial Samples using Gradients and Invariance Transformations**
 
 GIT：使用梯度和不变性变换检测不确定性、非分布和对抗性样本 cs.LG
 
@@ -637,7 +711,7 @@ Accepted at IJCNN 2023
 
 
 
-## **43. Jailbroken: How Does LLM Safety Training Fail?**
+## **48. Jailbroken: How Does LLM Safety Training Fail?**
 
 越狱：LLM安全培训是如何失败的？ cs.LG
 
@@ -651,7 +725,7 @@ Accepted at IJCNN 2023
 
 
 
-## **44. Defense against Adversarial Cloud Attack on Remote Sensing Salient Object Detection**
+## **49. Defense against Adversarial Cloud Attack on Remote Sensing Salient Object Detection**
 
 遥感显著目标检测中对敌云攻击的防御 cs.CV
 
@@ -665,7 +739,7 @@ Accepted at IJCNN 2023
 
 
 
-## **45. On the Adversarial Robustness of Generative Autoencoders in the Latent Space**
+## **50. On the Adversarial Robustness of Generative Autoencoders in the Latent Space**
 
 生成式自动编码器在潜在空间中的对抗健壮性 cs.LG
 
@@ -678,80 +752,6 @@ Accepted at IJCNN 2023
 **Abstract**: The generative autoencoders, such as the variational autoencoders or the adversarial autoencoders, have achieved great success in lots of real-world applications, including image generation, and signal communication.   However, little concern has been devoted to their robustness during practical deployment.   Due to the probabilistic latent structure, variational autoencoders (VAEs) may confront problems such as a mismatch between the posterior distribution of the latent and real data manifold, or discontinuity in the posterior distribution of the latent.   This leaves a back door for malicious attackers to collapse VAEs from the latent space, especially in scenarios where the encoder and decoder are used separately, such as communication and compressed sensing.   In this work, we provide the first study on the adversarial robustness of generative autoencoders in the latent space.   Specifically, we empirically demonstrate the latent vulnerability of popular generative autoencoders through attacks in the latent space.   We also evaluate the difference between variational autoencoders and their deterministic variants and observe that the latter performs better in latent robustness.   Meanwhile, we identify a potential trade-off between the adversarial robustness and the degree of the disentanglement of the latent codes.   Additionally, we also verify the feasibility of improvement for the latent robustness of VAEs through adversarial training.   In summary, we suggest concerning the adversarial latent robustness of the generative autoencoders, analyze several robustness-relative issues, and give some insights into a series of key challenges.
 
 摘要: 产生式自动编码器，如变分自动编码器或对抗性自动编码器，已经在图像生成、信号通信等实际应用中取得了巨大的成功。然而，很少有人关注它们在实际部署过程中的健壮性。由于概率潜在结构，变分自动编码器可能会遇到潜在数据流形和真实数据流形的后验分布不匹配或后验分布不连续等问题。这为恶意攻击者从潜在空间崩溃VAE留下了后门，特别是在单独使用编码器和解码器的场景中，例如通信和压缩传感。在这项工作中，我们首次研究了生成式自动编码器在潜在空间中的对抗健壮性。具体地说，我们通过对潜在空间的攻击，经验地证明了流行的生成式自动编码器的潜在脆弱性。我们还评估了变分自动编码器和它们的确定性变体之间的差异，并观察到后者在潜在稳健性方面表现得更好。同时，我们确定了潜在代码的对抗健壮性和解缠程度之间的潜在权衡。此外，我们还验证了通过对抗性训练来提高VAE的潜在健壮性的可行性。综上所述，我们建议关注生成式自动编码器的对抗性潜在健壮性，分析了几个与健壮性相关的问题，并对一系列关键挑战给出了一些见解。
-
-
-
-## **46. Boosting Adversarial Transferability via Fusing Logits of Top-1 Decomposed Feature**
-
-融合Top-1分解特征的Logit提高对手的可转移性 cs.CV
-
-**SubmitDate**: 2023-07-05    [abs](http://arxiv.org/abs/2305.01361v3) [paper-pdf](http://arxiv.org/pdf/2305.01361v3)
-
-**Authors**: Juanjuan Weng, Zhiming Luo, Dazhen Lin, Shaozi Li, Zhun Zhong
-
-**Abstract**: Recent research has shown that Deep Neural Networks (DNNs) are highly vulnerable to adversarial samples, which are highly transferable and can be used to attack other unknown black-box models. To improve the transferability of adversarial samples, several feature-based adversarial attack methods have been proposed to disrupt neuron activation in the middle layers. However, current state-of-the-art feature-based attack methods typically require additional computation costs for estimating the importance of neurons. To address this challenge, we propose a Singular Value Decomposition (SVD)-based feature-level attack method. Our approach is inspired by the discovery that eigenvectors associated with the larger singular values decomposed from the middle layer features exhibit superior generalization and attention properties. Specifically, we conduct the attack by retaining the decomposed Top-1 singular value-associated feature for computing the output logits, which are then combined with the original logits to optimize adversarial examples. Our extensive experimental results verify the effectiveness of our proposed method, which can be easily integrated into various baselines to significantly enhance the transferability of adversarial samples for disturbing normally trained CNNs and advanced defense strategies. The source code of this study is available at https://github.com/WJJLL/SVD-SSA
-
-摘要: 最近的研究表明，深度神经网络非常容易受到敌意样本的攻击，这些样本具有很高的可传递性，可以用来攻击其他未知的黑盒模型。为了提高对抗性样本的可转移性，已经提出了几种基于特征的对抗性攻击方法来破坏中间层神经元的激活。然而，当前最先进的基于特征的攻击方法通常需要额外的计算成本来估计神经元的重要性。为了应对这一挑战，我们提出了一种基于奇异值分解(SVD)的特征级攻击方法。我们的方法是受到这样的发现的启发，即与从中间层特征分解的较大奇异值相关的特征向量具有更好的泛化和注意特性。具体地说，我们通过保留分解后的Top-1奇异值关联特征来计算输出逻辑，然后将其与原始逻辑相结合来优化对抗性实例，从而进行攻击。大量的实验结果验证了该方法的有效性，该方法可以很容易地集成到不同的基线中，显著提高对手样本干扰正常训练的CNN和高级防御策略的可转移性。这项研究的源代码可在https://github.com/WJJLL/SVD-SSA上获得
-
-
-
-## **47. Adversarial Attacks on Image Classification Models: FGSM and Patch Attacks and their Impact**
-
-对图像分类模型的敌意攻击：FGSM和Patch攻击及其影响 cs.CV
-
-This is the preprint of the chapter titled "Adversarial Attacks on  Image Classification Models: FGSM and Patch Attacks and their Impact" which  will be published in the volume titled "Information Security and Privacy in  the Digital World - Some Selected Cases", edited by Jaydip Sen. The book will  be published by IntechOpen, London, UK, in 2023. This is not the final  version of the chapter
-
-**SubmitDate**: 2023-07-05    [abs](http://arxiv.org/abs/2307.02055v1) [paper-pdf](http://arxiv.org/pdf/2307.02055v1)
-
-**Authors**: Jaydip Sen, Subhasis Dasgupta
-
-**Abstract**: This chapter introduces the concept of adversarial attacks on image classification models built on convolutional neural networks (CNN). CNNs are very popular deep-learning models which are used in image classification tasks. However, very powerful and pre-trained CNN models working very accurately on image datasets for image classification tasks may perform disastrously when the networks are under adversarial attacks. In this work, two very well-known adversarial attacks are discussed and their impact on the performance of image classifiers is analyzed. These two adversarial attacks are the fast gradient sign method (FGSM) and adversarial patch attack. These attacks are launched on three powerful pre-trained image classifier architectures, ResNet-34, GoogleNet, and DenseNet-161. The classification accuracy of the models in the absence and presence of the two attacks are computed on images from the publicly accessible ImageNet dataset. The results are analyzed to evaluate the impact of the attacks on the image classification task.
-
-摘要: 本章介绍了基于卷积神经网络(CNN)的图像分类模型的对抗性攻击的概念。CNN是一种非常流行的深度学习模型，用于图像分类任务。然而，非常强大和预先训练的CNN模型在图像数据集上非常准确地工作以执行图像分类任务，当网络受到敌意攻击时，可能会灾难性地执行。在这项工作中，讨论了两个非常著名的对抗性攻击，并分析了它们对图像分类器性能的影响。这两种对抗性攻击是快速梯度符号方法(FGSM)和对抗性补丁攻击。这些攻击是在三个强大的预先训练的图像分类器架构上发起的，ResNet-34、GoogLeNet和DenseNet-161。对来自公众可访问的ImageNet数据集中的图像计算在两种攻击不存在的情况下模型的分类精度。分析结果以评估攻击对图像分类任务的影响。
-
-
-
-## **48. Complex Graph Laplacian Regularizer for Inferencing Grid States**
-
-用于网格状态推断的复图拉普拉斯正则化算法 eess.SP
-
-**SubmitDate**: 2023-07-04    [abs](http://arxiv.org/abs/2307.01906v1) [paper-pdf](http://arxiv.org/pdf/2307.01906v1)
-
-**Authors**: Chinthaka Dinesh, Junfei Wang, Gene Cheung, Pirathayini Srikantha
-
-**Abstract**: In order to maintain stable grid operations, system monitoring and control processes require the computation of grid states (e.g. voltage magnitude and angles) at high granularity. It is necessary to infer these grid states from measurements generated by a limited number of sensors like phasor measurement units (PMUs) that can be subjected to delays and losses due to channel artefacts, and/or adversarial attacks (e.g. denial of service, jamming, etc.). We propose a novel graph signal processing (GSP) based algorithm to interpolate states of the entire grid from observations of a small number of grid measurements. It is a two-stage process, where first an underlying Hermitian graph is learnt empirically from existing grid datasets. Then, the graph is used to interpolate missing grid signal samples in linear time. With our proposal, we can effectively reconstruct grid signals with significantly smaller number of observations when compared to existing traditional approaches (e.g. state estimation). In contrast to existing GSP approaches, we do not require knowledge of the underlying grid structure and parameters and are able to guarantee fast spectral optimization. We demonstrate the computational efficacy and accuracy of our proposal via practical studies conducted on the IEEE 118 bus system.
-
-摘要: 为了维持稳定的电网运行，系统监测和控制过程需要计算高粒度的电网状态(如电压幅值和角度)。有必要从有限数量的传感器(如相量测量单元(PMU))生成的测量结果中推断这些网格状态，这些传感器可能由于信道伪影和/或对抗性攻击(例如拒绝服务、干扰等)而受到延迟和损失。我们提出了一种基于图信号处理(GSP)的新算法，该算法根据少量网格测量的观测值来内插整个网格的状态。这是一个分两个阶段的过程，首先从现有的网格数据集中经验地学习潜在的厄米特图。然后，使用该图在线性时间内对缺失的网格信号样本进行内插。与现有的传统方法(例如状态估计)相比，我们的建议可以用明显更少的观测值来有效地重建网格信号。与现有的GSP方法相比，我们不需要底层网格结构和参数的知识，并且能够保证快速的频谱优化。通过在IEEE118节点系统上进行的实际研究，证明了该方法的计算效率和准确性。
-
-
-
-## **49. Physically Realizable Natural-Looking Clothing Textures Evade Person Detectors via 3D Modeling**
-
-物理上可实现的自然外观服装纹理通过3D建模躲避人的检测 cs.CV
-
-Accepted by CVPR 2023
-
-**SubmitDate**: 2023-07-04    [abs](http://arxiv.org/abs/2307.01778v1) [paper-pdf](http://arxiv.org/pdf/2307.01778v1)
-
-**Authors**: Zhanhao Hu, Wenda Chu, Xiaopei Zhu, Hui Zhang, Bo Zhang, Xiaolin Hu
-
-**Abstract**: Recent works have proposed to craft adversarial clothes for evading person detectors, while they are either only effective at limited viewing angles or very conspicuous to humans. We aim to craft adversarial texture for clothes based on 3D modeling, an idea that has been used to craft rigid adversarial objects such as a 3D-printed turtle. Unlike rigid objects, humans and clothes are non-rigid, leading to difficulties in physical realization. In order to craft natural-looking adversarial clothes that can evade person detectors at multiple viewing angles, we propose adversarial camouflage textures (AdvCaT) that resemble one kind of the typical textures of daily clothes, camouflage textures. We leverage the Voronoi diagram and Gumbel-softmax trick to parameterize the camouflage textures and optimize the parameters via 3D modeling. Moreover, we propose an efficient augmentation pipeline on 3D meshes combining topologically plausible projection (TopoProj) and Thin Plate Spline (TPS) to narrow the gap between digital and real-world objects. We printed the developed 3D texture pieces on fabric materials and tailored them into T-shirts and trousers. Experiments show high attack success rates of these clothes against multiple detectors.
-
-摘要: 最近的研究提出了为躲避人体探测器而制作对抗服装，而这些服装要么只在有限的视角下有效，要么对人类来说非常显眼。我们的目标是基于3D建模为衣服制作对抗性纹理，这一想法已被用于制作刚性对抗性对象，如3D打印的乌龟。与刚性物体不同，人和衣服是非刚性的，这导致了物理实现的困难。为了制作出看起来自然的、能够在多个视角下躲避人体探测的对抗性服装，我们提出了一种类似于日常服装的典型纹理--伪装纹理的对抗性伪装纹理(AdvCaT)。我们利用Voronoi图和Gumbel-Softmax技巧对伪装纹理进行参数化，并通过3D建模优化参数。此外，我们还提出了一种结合拓扑似然投影(TOPO Proj)和薄板样条线(TPS)的三维网格增强流水线，以缩小数字对象和真实对象之间的差距。我们将开发的3D纹理块打印在面料上，并将它们裁剪成T恤和裤子。实验表明，这些衣服对多个探测器的攻击成功率很高。
-
-
-
-## **50. vWitness: Certifying Web Page Interactions with Computer Vision**
-
-VWitness：使用计算机视觉验证网页交互 cs.CR
-
-**SubmitDate**: 2023-07-04    [abs](http://arxiv.org/abs/2007.15805v2) [paper-pdf](http://arxiv.org/pdf/2007.15805v2)
-
-**Authors**: He Shuang, Lianying Zhao, David Lie
-
-**Abstract**: Web servers service client requests, some of which might cause the web server to perform security-sensitive operations (e.g. money transfer, voting). An attacker may thus forge or maliciously manipulate such requests by compromising a web client. Unfortunately, a web server has no way of knowing whether the client from which it receives a request has been compromised or not -- current "best practice" defenses such as user authentication or network encryption cannot aid a server as they all assume web client integrity. To address this shortcoming, we propose vWitness, which "witnesses" the interactions of a user with a web page and certifies whether they match a specification provided by the web server, enabling the web server to know that the web request is user-intended. The main challenge that vWitness overcomes is that even benign clients introduce unpredictable variations in the way they render web pages. vWitness differentiates between these benign variations and malicious manipulation using computer vision, allowing it to certify to the web server that 1) the web page user interface is properly displayed 2) observed user interactions are used to construct the web request. Our vWitness prototype achieves compatibility with modern web pages, is resilient to adversarial example attacks and is accurate and performant -- vWitness achieves 99.97% accuracy and adds 197ms of overhead to the entire interaction session in the average case.
-
-摘要: Web服务器为客户端请求提供服务，其中一些请求可能会导致Web服务器执行安全敏感操作(例如，转账、投票)。因此，攻击者可以通过危害Web客户端来伪造或恶意操纵此类请求。不幸的是，Web服务器无法知道它从其接收请求的客户端是否已被破坏--当前的“最佳实践”防御，如用户身份验证或网络加密，无法帮助服务器，因为它们都假定Web客户端的完整性。为了解决这一缺点，我们提出了vWitness，它“见证”用户与网页的交互，并验证它们是否符合Web服务器提供的规范，使Web服务器知道Web请求是用户预期的。VWitness克服的主要挑战是，即使是良性的客户端，也会在呈现网页的方式上引入不可预测的变化。VWitness使用计算机视觉区分这些良性变化和恶意操纵，允许它向Web服务器证明1)网页用户界面被正确显示2)使用观察到的用户交互来构造Web请求。我们的vWitness原型实现了与现代网页的兼容性，对敌意示例攻击具有弹性，并且是准确和高性能的--vWitness达到99.97%的准确率，在平均情况下，整个交互会话增加了197ms的开销。
 
 
 

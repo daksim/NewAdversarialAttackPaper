@@ -1,9 +1,71 @@
 # Latest Adversarial Attack Papers
-**update at 2023-09-02 10:13:32**
+**update at 2023-09-05 10:55:21**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. The Effectiveness of Large Language Models (ChatGPT and CodeBERT) for Security-Oriented Code Analysis**
+## **1. Baseline Defenses for Adversarial Attacks Against Aligned Language Models**
+
+针对对齐语言模型的对抗性攻击的基线防御 cs.LG
+
+12 pages
+
+**SubmitDate**: 2023-09-01    [abs](http://arxiv.org/abs/2309.00614v1) [paper-pdf](http://arxiv.org/pdf/2309.00614v1)
+
+**Authors**: Neel Jain, Avi Schwarzschild, Yuxin Wen, Gowthami Somepalli, John Kirchenbauer, Ping-yeh Chiang, Micah Goldblum, Aniruddha Saha, Jonas Geiping, Tom Goldstein
+
+**Abstract**: As Large Language Models quickly become ubiquitous, their security vulnerabilities are critical to understand. Recent work shows that text optimizers can produce jailbreaking prompts that bypass moderation and alignment. Drawing from the rich body of work on adversarial machine learning, we approach these attacks with three questions: What threat models are practically useful in this domain? How do baseline defense techniques perform in this new domain? How does LLM security differ from computer vision?   We evaluate several baseline defense strategies against leading adversarial attacks on LLMs, discussing the various settings in which each is feasible and effective. Particularly, we look at three types of defenses: detection (perplexity based), input preprocessing (paraphrase and retokenization), and adversarial training. We discuss white-box and gray-box settings and discuss the robustness-performance trade-off for each of the defenses considered. Surprisingly, we find much more success with filtering and preprocessing than we would expect from other domains, such as vision, providing a first indication that the relative strengths of these defenses may be weighed differently in these domains.
+
+摘要: 随着大型语言模型迅速变得无处不在，理解它们的安全漏洞至关重要。最近的研究表明，文本优化器可以生成绕过审核和对齐的越狱提示。从对抗性机器学习的丰富工作中，我们用三个问题来处理这些攻击：什么威胁模型在这个领域实际上是有用的？基线防御技术在这个新领域的表现如何？LLM安全与计算机视觉有何不同？我们评估了几种针对LLMS的主要对手攻击的基线防御策略，讨论了每种策略可行和有效的各种设置。特别是，我们研究了三种类型的防御：检测(基于困惑)、输入预处理(释义和重新标记化)和对抗性训练。我们讨论了白盒和灰盒设置，并讨论了所考虑的每种防御的稳健性和性能之间的权衡。令人惊讶的是，我们发现过滤和预处理比我们预期的其他领域，如视觉，要成功得多，这第一次表明，这些防御的相对强度在这些领域可能会有不同的权重。
+
+
+
+## **2. Why do universal adversarial attacks work on large language models?: Geometry might be the answer**
+
+为什么通用对抗性攻击在大型语言模型上奏效？几何可能是答案 cs.LG
+
+2nd AdvML Frontiers Workshop at 40th International Conference on  Machine Learning, Honolulu, Hawaii, USA, 2023
+
+**SubmitDate**: 2023-09-01    [abs](http://arxiv.org/abs/2309.00254v1) [paper-pdf](http://arxiv.org/pdf/2309.00254v1)
+
+**Authors**: Varshini Subhash, Anna Bialas, Weiwei Pan, Finale Doshi-Velez
+
+**Abstract**: Transformer based large language models with emergent capabilities are becoming increasingly ubiquitous in society. However, the task of understanding and interpreting their internal workings, in the context of adversarial attacks, remains largely unsolved. Gradient-based universal adversarial attacks have been shown to be highly effective on large language models and potentially dangerous due to their input-agnostic nature. This work presents a novel geometric perspective explaining universal adversarial attacks on large language models. By attacking the 117M parameter GPT-2 model, we find evidence indicating that universal adversarial triggers could be embedding vectors which merely approximate the semantic information in their adversarial training region. This hypothesis is supported by white-box model analysis comprising dimensionality reduction and similarity measurement of hidden representations. We believe this new geometric perspective on the underlying mechanism driving universal attacks could help us gain deeper insight into the internal workings and failure modes of LLMs, thus enabling their mitigation.
+
+摘要: 基于转换器的具有紧急能力的大型语言模型在社会上变得越来越普遍。然而，在对抗性攻击的背景下，理解和解释其内部运作的任务在很大程度上仍未解决。基于梯度的通用对抗性攻击已被证明在大型语言模型上非常有效，并且由于其输入不可知的性质而具有潜在的危险。这项工作提出了一种新的几何视角来解释对大型语言模型的普遍对抗性攻击。通过对117M参数GPT-2模型的攻击，我们发现有证据表明，通用的对抗性触发因素可能是嵌入的矢量，这些矢量仅近似于其对抗性训练区的语义信息。这一假设得到了白盒模型分析的支持，白盒模型分析包括对隐藏表示的降维和相似性度量。我们相信，这种关于驱动普遍攻击的潜在机制的新的几何观点可以帮助我们更深入地了解LLMS的内部工作原理和故障模式，从而使其能够得到缓解。
+
+
+
+## **3. Temporal-Distributed Backdoor Attack Against Video Based Action Recognition**
+
+针对视频动作识别的时间分布式后门攻击 cs.CV
+
+**SubmitDate**: 2023-09-01    [abs](http://arxiv.org/abs/2308.11070v2) [paper-pdf](http://arxiv.org/pdf/2308.11070v2)
+
+**Authors**: Xi Li, Songhe Wang, Ruiquan Huang, Mahanth Gowda, George Kesidis
+
+**Abstract**: Deep neural networks (DNNs) have achieved tremendous success in various applications including video action recognition, yet remain vulnerable to backdoor attacks (Trojans). The backdoor-compromised model will mis-classify to the target class chosen by the attacker when a test instance (from a non-target class) is embedded with a specific trigger, while maintaining high accuracy on attack-free instances. Although there are extensive studies on backdoor attacks against image data, the susceptibility of video-based systems under backdoor attacks remains largely unexplored. Current studies are direct extensions of approaches proposed for image data, e.g., the triggers are independently embedded within the frames, which tend to be detectable by existing defenses. In this paper, we introduce a simple yet effective backdoor attack against video data. Our proposed attack, adding perturbations in a transformed domain, plants an imperceptible, temporally distributed trigger across the video frames, and is shown to be resilient to existing defensive strategies. The effectiveness of the proposed attack is demonstrated by extensive experiments with various well-known models on two video recognition benchmarks, UCF101 and HMDB51, and a sign language recognition benchmark, Greek Sign Language (GSL) dataset. We delve into the impact of several influential factors on our proposed attack and identify an intriguing effect termed "collateral damage" through extensive studies.
+
+摘要: 深度神经网络(DNN)在包括视频动作识别在内的各种应用中取得了巨大的成功，但仍然容易受到后门攻击(特洛伊木马)。当测试实例(来自非目标类)嵌入特定触发器时，后门泄露模型将被错误分类为攻击者选择的目标类，同时保持对无攻击实例的高准确性。虽然已经有大量关于针对图像数据的后门攻击的研究，但基于视频的系统在后门攻击下的易感性在很大程度上仍未被探索。当前的研究是对为图像数据提出的方法的直接扩展，例如，触发器独立地嵌入在帧中，这往往是现有防御系统可检测的。本文介绍了一种简单而有效的针对视频数据的后门攻击。我们提出的攻击在变换的域中增加了扰动，在视频帧上植入了一个不可察觉的、时间分布的触发器，并被证明对现有的防御策略具有弹性。在两个视频识别基准UCF101和HMDB51和一个手语识别基准希腊手语(GSL)数据集上进行了大量的实验，证明了所提出的攻击的有效性。我们深入研究了几个影响因素对我们提出的攻击的影响，并通过广泛的研究确定了一种有趣的影响，称为“附带损害”。
+
+
+
+## **4. LLM in the Shell: Generative Honeypots**
+
+贝壳中的LLM：繁衍的蜜罐 cs.CR
+
+5 pages. 1 figure 1 table
+
+**SubmitDate**: 2023-08-31    [abs](http://arxiv.org/abs/2309.00155v1) [paper-pdf](http://arxiv.org/pdf/2309.00155v1)
+
+**Authors**: Muris Sladić, Veronica Valeros, Carlos Catania, Sebastian Garcia
+
+**Abstract**: Honeypots are essential tools in cybersecurity. However, most of them (even the high-interaction ones) lack the required realism to engage and fool human attackers. This limitation makes them easily discernible, hindering their effectiveness. This work introduces a novel method to create dynamic and realistic software honeypots based on Large Language Models. Preliminary results indicate that LLMs can create credible and dynamic honeypots capable of addressing important limitations of previous honeypots, such as deterministic responses, lack of adaptability, etc. We evaluated the realism of each command by conducting an experiment with human attackers who needed to say if the answer from the honeypot was fake or not. Our proposed honeypot, called shelLM, reached an accuracy rate of 0.92.
+
+摘要: 蜜罐是网络安全中必不可少的工具。然而，他们中的大多数(即使是高度互动的人)缺乏参与和愚弄人类攻击者所需的现实主义。这一限制使得它们很容易辨别出来，从而阻碍了它们的有效性。介绍了一种基于大型语言模型创建动态、逼真的软件蜜罐的新方法。初步结果表明，LLMS可以创建可信的、动态的蜜罐，能够解决以前蜜罐的重要局限性，如确定性响应、缺乏适应性等。我们通过与需要判断蜜罐答案是否虚假的人类攻击者进行实验，评估了每个命令的真实性。我们提出的蜜罐，称为ShelLM，达到了0.92的准确率。
+
+
+
+## **5. The Effectiveness of Large Language Models (ChatGPT and CodeBERT) for Security-Oriented Code Analysis**
 
 大型语言模型(ChatGPT和CodeBERT)对面向安全的代码分析的有效性 cs.CR
 
@@ -19,7 +81,7 @@
 
 
 
-## **2. Identifying and Mitigating the Security Risks of Generative AI**
+## **6. Identifying and Mitigating the Security Risks of Generative AI**
 
 识别和缓解生成性人工智能的安全风险 cs.AI
 
@@ -33,7 +95,7 @@
 
 
 
-## **3. Out of the Cage: How Stochastic Parrots Win in Cyber Security Environments**
+## **7. Out of the Cage: How Stochastic Parrots Win in Cyber Security Environments**
 
 走出笼子：随机鹦鹉如何在网络安全环境中取胜 cs.CR
 
@@ -49,7 +111,7 @@ Under review. 10 pages plus appendices, 7 figures, 4 tables. Edit:  fix e-mails 
 
 
 
-## **4. A Comprehensive Overview of Backdoor Attacks in Large Language Models within Communication Networks**
+## **8. A Comprehensive Overview of Backdoor Attacks in Large Language Models within Communication Networks**
 
 通信网络中大型语言模型中的后门攻击综述 cs.CR
 
@@ -63,7 +125,7 @@ Under review. 10 pages plus appendices, 7 figures, 4 tables. Edit:  fix e-mails 
 
 
 
-## **5. Detecting Language Model Attacks with Perplexity**
+## **9. Detecting Language Model Attacks with Perplexity**
 
 基于困惑的语言模型攻击检测 cs.CL
 
@@ -77,7 +139,7 @@ Under review. 10 pages plus appendices, 7 figures, 4 tables. Edit:  fix e-mails 
 
 
 
-## **6. A Survey of Safety and Trustworthiness of Large Language Models through the Lens of Verification and Validation**
+## **10. A Survey of Safety and Trustworthiness of Large Language Models through the Lens of Verification and Validation**
 
 从验证和验证的角度考察大型语言模型的安全性和可信性 cs.AI
 
@@ -91,7 +153,7 @@ Under review. 10 pages plus appendices, 7 figures, 4 tables. Edit:  fix e-mails 
 
 
 
-## **7. LMSanitator: Defending Prompt-Tuning Against Task-Agnostic Backdoors**
+## **11. LMSanitator: Defending Prompt-Tuning Against Task-Agnostic Backdoors**
 
 LMSanitator：防御与任务无关的后门的提示调整 cs.CL
 
@@ -107,7 +169,7 @@ To Appear in the Network and Distributed System Security (NDSS)  Symposium 2024,
 
 
 
-## **8. Self-Deception: Reverse Penetrating the Semantic Firewall of Large Language Models**
+## **12. Self-Deception: Reverse Penetrating the Semantic Firewall of Large Language Models**
 
 自欺欺人：反向穿透大型语言模型的语义防火墙 cs.CL
 
@@ -123,7 +185,7 @@ Serious errors were found in the experiment, which may lead to the  overturning 
 
 
 
-## **9. PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts**
+## **13. PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts**
 
 PromptBitch：评估大型语言模型在对抗性提示下的稳健性 cs.CL
 
@@ -139,7 +201,7 @@ Technical report; updated with new experiments and related work; 27  pages; code
 
 
 
-## **10. On the Uses of Large Language Models to Interpret Ambiguous Cyberattack Descriptions**
+## **14. On the Uses of Large Language Models to Interpret Ambiguous Cyberattack Descriptions**
 
 关于使用大型语言模型来解释模糊的网络攻击描述 cs.AI
 
@@ -153,7 +215,7 @@ Technical report; updated with new experiments and related work; 27  pages; code
 
 
 
-## **11. Adversarial Attacks on Code Models with Discriminative Graph Patterns**
+## **15. Adversarial Attacks on Code Models with Discriminative Graph Patterns**
 
 具有区分图模式的代码模型的对抗性攻击 cs.SE
 
@@ -167,7 +229,7 @@ Technical report; updated with new experiments and related work; 27  pages; code
 
 
 
-## **12. TrojText: Test-time Invisible Textual Trojan Insertion**
+## **16. TrojText: Test-time Invisible Textual Trojan Insertion**
 
 TrojText：测试时间隐形文本特洛伊木马插入 cs.CL
 
@@ -183,21 +245,7 @@ In The Eleventh International Conference on Learning Representations.  2023 (ICL
 
 
 
-## **13. Temporal-Distributed Backdoor Attack Against Video Based Action Recognition**
-
-针对视频动作识别的时间分布式后门攻击 cs.CV
-
-**SubmitDate**: 2023-08-21    [abs](http://arxiv.org/abs/2308.11070v1) [paper-pdf](http://arxiv.org/pdf/2308.11070v1)
-
-**Authors**: Xi Li, Songhe Wang, Ruiquan Huang, Mahanth Gowda, George Kesidis
-
-**Abstract**: Deep neural networks (DNNs) have achieved tremendous success in various applications including video action recognition, yet remain vulnerable to backdoor attacks (Trojans). The backdoor-compromised model will mis-classify to the target class chosen by the attacker when a test instance (from a non-target class) is embedded with a specific trigger, while maintaining high accuracy on attack-free instances. Although there are extensive studies on backdoor attacks against image data, the susceptibility of video-based systems under backdoor attacks remains largely unexplored. Current studies are direct extensions of approaches proposed for image data, e.g., the triggers are \textbf{independently} embedded within the frames, which tend to be detectable by existing defenses. In this paper, we introduce a \textit{simple} yet \textit{effective} backdoor attack against video data. Our proposed attack, adding perturbations in a transformed domain, plants an \textbf{imperceptible, temporally distributed} trigger across the video frames, and is shown to be resilient to existing defensive strategies. The effectiveness of the proposed attack is demonstrated by extensive experiments with various well-known models on two video recognition benchmarks, UCF101 and HMDB51, and a sign language recognition benchmark, Greek Sign Language (GSL) dataset. We delve into the impact of several influential factors on our proposed attack and identify an intriguing effect termed "collateral damage" through extensive studies.
-
-摘要: 深度神经网络(DNN)在包括视频动作识别在内的各种应用中取得了巨大的成功，但仍然容易受到后门攻击(特洛伊木马)。当测试实例(来自非目标类)嵌入特定触发器时，后门泄露模型将被错误分类为攻击者选择的目标类，同时保持对无攻击实例的高准确性。虽然已经有大量关于针对图像数据的后门攻击的研究，但基于视频的系统在后门攻击下的易感性在很大程度上仍未被探索。目前的研究是为图像数据提出的方法的直接扩展，例如，触发器嵌入在帧中，这往往是现有防御系统可以检测到的。本文介绍了一种针对视频数据的简单而有效的后门攻击。我们提出的攻击在变换的域中添加了扰动，在视频帧中植入了一个不可感知的、时间分布的触发器，并被证明对现有的防御策略具有弹性。在两个视频识别基准UCF101和HMDB51和一个手语识别基准希腊手语(GSL)数据集上进行了大量的实验，证明了所提出的攻击的有效性。我们深入研究了几个影响因素对我们提出的攻击的影响，并通过广泛的研究确定了一种有趣的影响，称为“附带损害”。
-
-
-
-## **14. RatGPT: Turning online LLMs into Proxies for Malware Attacks**
+## **17. RatGPT: Turning online LLMs into Proxies for Malware Attacks**
 
 RatGPT：将在线LLM转变为恶意软件攻击的代理 cs.CR
 
@@ -211,7 +259,7 @@ RatGPT：将在线LLM转变为恶意软件攻击的代理 cs.CR
 
 
 
-## **15. Getting pwn'd by AI: Penetration Testing with Large Language Models**
+## **18. Getting pwn'd by AI: Penetration Testing with Large Language Models**
 
 被人工智能淘汰：用大型语言模型进行渗透测试 cs.CL
 
@@ -225,7 +273,7 @@ RatGPT：将在线LLM转变为恶意软件攻击的代理 cs.CR
 
 
 
-## **16. Do you really follow me? Adversarial Instructions for Evaluating the Robustness of Large Language Models**
+## **19. Do you really follow me? Adversarial Instructions for Evaluating the Robustness of Large Language Models**
 
 你真的听懂我的话吗？评估大型语言模型稳健性的对抗性说明 cs.CL
 
@@ -241,7 +289,7 @@ Work in progress
 
 
 
-## **17. Visual Adversarial Examples Jailbreak Aligned Large Language Models**
+## **20. Visual Adversarial Examples Jailbreak Aligned Large Language Models**
 
 视觉对抗性示例越狱对齐大型语言模型 cs.CR
 
@@ -255,7 +303,7 @@ Work in progress
 
 
 
-## **18. From Prompt Injections to SQL Injection Attacks: How Protected is Your LLM-Integrated Web Application?**
+## **21. From Prompt Injections to SQL Injection Attacks: How Protected is Your LLM-Integrated Web Application?**
 
 从即时注入到SQL注入攻击：LLM集成的Web应用程序受到了怎样的保护？ cs.CR
 
@@ -271,7 +319,7 @@ Work in progress
 
 
 
-## **19. Robustness Over Time: Understanding Adversarial Examples' Effectiveness on Longitudinal Versions of Large Language Models**
+## **22. Robustness Over Time: Understanding Adversarial Examples' Effectiveness on Longitudinal Versions of Large Language Models**
 
 随时间变化的稳健性：理解对抗性例子在大型语言模型纵向版本上的有效性 cs.CR
 
@@ -285,7 +333,7 @@ Work in progress
 
 
 
-## **20. LLM Self Defense: By Self Examination, LLMs Know They Are Being Tricked**
+## **23. LLM Self Defense: By Self Examination, LLMs Know They Are Being Tricked**
 
 LLM自卫：通过自我检查，LLM知道自己被骗了 cs.CL
 
@@ -299,7 +347,7 @@ LLM自卫：通过自我检查，LLM知道自己被骗了 cs.CL
 
 
 
-## **21. S3C2 Summit 2023-06: Government Secure Supply Chain Summit**
+## **24. S3C2 Summit 2023-06: Government Secure Supply Chain Summit**
 
 S3C2峰会2023-06：政府安全供应链峰会 cs.CR
 
@@ -315,7 +363,7 @@ arXiv admin note: text overlap with arXiv:2307.16557,  arXiv:2307.15642
 
 
 
-## **22. An Empirical Study on Using Large Language Models to Analyze Software Supply Chain Security Failures**
+## **25. An Empirical Study on Using Large Language Models to Analyze Software Supply Chain Security Failures**
 
 大型语言模型分析软件供应链安全失效的实证研究 cs.CR
 
@@ -331,7 +379,7 @@ arXiv admin note: text overlap with arXiv:2307.16557,  arXiv:2307.15642
 
 
 
-## **23. "Do Anything Now": Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models**
+## **26. "Do Anything Now": Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models**
 
 《Do Anything Now》：在大型语言模型上描述和评估野外越狱提示 cs.CR
 
@@ -345,7 +393,7 @@ arXiv admin note: text overlap with arXiv:2307.16557,  arXiv:2307.15642
 
 
 
-## **24. Mondrian: Prompt Abstraction Attack Against Large Language Models for Cheaper API Pricing**
+## **27. Mondrian: Prompt Abstraction Attack Against Large Language Models for Cheaper API Pricing**
 
 Mondrian：针对大型语言模型的即时抽象攻击，以获得更低的API定价 cs.CR
 
@@ -359,7 +407,7 @@ Mondrian：针对大型语言模型的即时抽象攻击，以获得更低的API
 
 
 
-## **25. ParaFuzz: An Interpretability-Driven Technique for Detecting Poisoned Samples in NLP**
+## **28. ParaFuzz: An Interpretability-Driven Technique for Detecting Poisoned Samples in NLP**
 
 ParaFuzz：一种可解释性驱动的NLP中毒样本检测技术 cs.CR
 
@@ -373,7 +421,7 @@ ParaFuzz：一种可解释性驱动的NLP中毒样本检测技术 cs.CR
 
 
 
-## **26. Fundamental Limitations of Alignment in Large Language Models**
+## **29. Fundamental Limitations of Alignment in Large Language Models**
 
 大型语言模型中对齐的基本限制 cs.CL
 
@@ -387,7 +435,7 @@ ParaFuzz：一种可解释性驱动的NLP中毒样本检测技术 cs.CR
 
 
 
-## **27. LimeAttack: Local Explainable Method for Textual Hard-Label Adversarial Attack**
+## **30. LimeAttack: Local Explainable Method for Textual Hard-Label Adversarial Attack**
 
 LimeAttack：文本硬标签对抗性攻击的局部可解释方法 cs.CL
 
@@ -403,7 +451,7 @@ LimeAttack：文本硬标签对抗性攻击的局部可解释方法 cs.CL
 
 
 
-## **28. Adversarially Robust Neural Legal Judgement Systems**
+## **31. Adversarially Robust Neural Legal Judgement Systems**
 
 对抗性稳健神经法律判决系统 cs.CL
 
@@ -417,7 +465,7 @@ LimeAttack：文本硬标签对抗性攻击的局部可解释方法 cs.CL
 
 
 
-## **29. Virtual Prompt Injection for Instruction-Tuned Large Language Models**
+## **32. Virtual Prompt Injection for Instruction-Tuned Large Language Models**
 
 面向指令调谐的大型语言模型的虚拟提示注入 cs.CL
 
@@ -431,7 +479,7 @@ LimeAttack：文本硬标签对抗性攻击的局部可解释方法 cs.CL
 
 
 
-## **30. Competence-Based Analysis of Language Models**
+## **33. Competence-Based Analysis of Language Models**
 
 基于能力的语言模型分析 cs.CL
 
@@ -445,7 +493,7 @@ LimeAttack：文本硬标签对抗性攻击的局部可解释方法 cs.CL
 
 
 
-## **31. Universal and Transferable Adversarial Attacks on Aligned Language Models**
+## **34. Universal and Transferable Adversarial Attacks on Aligned Language Models**
 
 对对齐语言模型的通用和可转移的对抗性攻击 cs.CL
 
@@ -459,7 +507,7 @@ LimeAttack：文本硬标签对抗性攻击的局部可解释方法 cs.CL
 
 
 
-## **32. Backdoor Attacks for In-Context Learning with Language Models**
+## **35. Backdoor Attacks for In-Context Learning with Language Models**
 
 利用语言模型进行情景学习的后门攻击 cs.CR
 
@@ -475,7 +523,7 @@ AdvML Frontiers Workshop 2023
 
 
 
-## **33. Plug and Pray: Exploiting off-the-shelf components of Multi-Modal Models**
+## **36. Plug and Pray: Exploiting off-the-shelf components of Multi-Modal Models**
 
 即插即用：开发多通道模型的现成组件 cs.CR
 
@@ -489,7 +537,7 @@ AdvML Frontiers Workshop 2023
 
 
 
-## **34. Set-level Guidance Attack: Boosting Adversarial Transferability of Vision-Language Pre-training Models**
+## **37. Set-level Guidance Attack: Boosting Adversarial Transferability of Vision-Language Pre-training Models**
 
 SET-Level制导攻击：增强视觉-语言预训练模型的对抗性迁移 cs.CV
 
@@ -505,7 +553,7 @@ To appear in ICCV 2023
 
 
 
-## **35. Foundational Models Defining a New Era in Vision: A Survey and Outlook**
+## **38. Foundational Models Defining a New Era in Vision: A Survey and Outlook**
 
 定义愿景中的新时代的基础模型：综述和展望 cs.CV
 
@@ -521,7 +569,7 @@ Project page:  https://github.com/awaisrauf/Awesome-CV-Foundational-Models
 
 
 
-## **36. Lost In Translation: Generating Adversarial Examples Robust to Round-Trip Translation**
+## **39. Lost In Translation: Generating Adversarial Examples Robust to Round-Trip Translation**
 
 迷失在翻译中：生成对往返翻译健壮的对抗性例子 cs.CL
 
@@ -537,7 +585,7 @@ Published at International Conference on Acoustics, Speech, and  Signal Processi
 
 
 
-## **37. Security and Privacy Issues of Federated Learning**
+## **40. Security and Privacy Issues of Federated Learning**
 
 联合学习的安全和隐私问题 cs.CR
 
@@ -553,7 +601,7 @@ Published at International Conference on Acoustics, Speech, and  Signal Processi
 
 
 
-## **38. OUTFOX: LLM-generated Essay Detection through In-context Learning with Adversarially Generated Examples**
+## **41. OUTFOX: LLM-generated Essay Detection through In-context Learning with Adversarially Generated Examples**
 
 Outfox：基于上下文学习的LLM生成的文章检测与恶意生成的示例 cs.CL
 
@@ -567,7 +615,7 @@ Outfox：基于上下文学习的LLM生成的文章检测与恶意生成的示�
 
 
 
-## **39. A LLM Assisted Exploitation of AI-Guardian**
+## **42. A LLM Assisted Exploitation of AI-Guardian**
 
 一种LLM辅助开发AI-Guardian cs.CR
 
@@ -581,7 +629,7 @@ Outfox：基于上下文学习的LLM生成的文章检测与恶意生成的示�
 
 
 
-## **40. LLM Censorship: A Machine Learning Challenge or a Computer Security Problem?**
+## **43. LLM Censorship: A Machine Learning Challenge or a Computer Security Problem?**
 
 LLM审查：机器学习挑战还是计算机安全问题？ cs.AI
 
@@ -595,7 +643,7 @@ LLM审查：机器学习挑战还是计算机安全问题？ cs.AI
 
 
 
-## **41. LogPrécis: Unleashing Language Models for Automated Shell Log Analysis**
+## **44. LogPrécis: Unleashing Language Models for Automated Shell Log Analysis**
 
 LogPrecis：释放用于自动外壳日志分析的语言模型 cs.CR
 
@@ -609,7 +657,7 @@ LogPrecis：释放用于自动外壳日志分析的语言模型 cs.CR
 
 
 
-## **42. Jailbreaker: Automated Jailbreak Across Multiple Large Language Model Chatbots**
+## **45. Jailbreaker: Automated Jailbreak Across Multiple Large Language Model Chatbots**
 
 越狱：跨多个大型语言模型聊天机器人的自动越狱 cs.CR
 
@@ -623,7 +671,7 @@ LogPrecis：释放用于自动外壳日志分析的语言模型 cs.CR
 
 
 
-## **43. Cross-lingual Cross-temporal Summarization: Dataset, Models, Evaluation**
+## **46. Cross-lingual Cross-temporal Summarization: Dataset, Models, Evaluation**
 
 跨语言跨期摘要：数据集、模型、评价 cs.CL
 
@@ -639,7 +687,7 @@ Version 2; Work in progress
 
 
 
-## **44. Prompts Should not be Seen as Secrets: Systematically Measuring Prompt Extraction Attack Success**
+## **47. Prompts Should not be Seen as Secrets: Systematically Measuring Prompt Extraction Attack Success**
 
 提示不应被视为秘密：系统地衡量提示提取攻击成功 cs.CL
 
@@ -653,7 +701,7 @@ Version 2; Work in progress
 
 
 
-## **45. Ethicist: Targeted Training Data Extraction Through Loss Smoothed Soft Prompting and Calibrated Confidence Estimation**
+## **48. Ethicist: Targeted Training Data Extraction Through Loss Smoothed Soft Prompting and Calibrated Confidence Estimation**
 
 伦理学家：通过损失平滑软提示和校准置信度估计提取有针对性的训练数据 cs.CL
 
@@ -669,7 +717,7 @@ ACL 2023 Long Paper (Main Conference)
 
 
 
-## **46. Jailbroken: How Does LLM Safety Training Fail?**
+## **49. Jailbroken: How Does LLM Safety Training Fail?**
 
 越狱：LLM安全培训是如何失败的？ cs.LG
 
@@ -683,7 +731,7 @@ ACL 2023 Long Paper (Main Conference)
 
 
 
-## **47. SCAT: Robust Self-supervised Contrastive Learning via Adversarial Training for Text Classification**
+## **50. SCAT: Robust Self-supervised Contrastive Learning via Adversarial Training for Text Classification**
 
 SCAT：基于对抗性训练的文本分类稳健自监督对比学习 cs.CL
 
@@ -694,52 +742,6 @@ SCAT：基于对抗性训练的文本分类稳健自监督对比学习 cs.CL
 **Abstract**: Despite their promising performance across various natural language processing (NLP) tasks, current NLP systems are vulnerable to textual adversarial attacks. To defend against these attacks, most existing methods apply adversarial training by incorporating adversarial examples. However, these methods have to rely on ground-truth labels to generate adversarial examples, rendering it impractical for large-scale model pre-training which is commonly used nowadays for NLP and many other tasks. In this paper, we propose a novel learning framework called SCAT (Self-supervised Contrastive Learning via Adversarial Training), which can learn robust representations without requiring labeled data. Specifically, SCAT modifies random augmentations of the data in a fully labelfree manner to generate adversarial examples. Adversarial training is achieved by minimizing the contrastive loss between the augmentations and their adversarial counterparts. We evaluate SCAT on two text classification datasets using two state-of-the-art attack schemes proposed recently. Our results show that SCAT can not only train robust language models from scratch, but it can also significantly improve the robustness of existing pre-trained language models. Moreover, to demonstrate its flexibility, we show that SCAT can also be combined with supervised adversarial training to further enhance model robustness.
 
 摘要: 尽管它们在各种自然语言处理(NLP)任务中具有良好的性能，但当前的自然语言处理系统容易受到文本对手攻击。为了防御这些攻击，现有的大多数方法都是通过结合对抗性例子进行对抗性训练。然而，这些方法必须依赖地面事实标签来生成对抗性实例，这使得目前用于自然语言处理和许多其他任务的大规模模型预训练是不现实的。在本文中，我们提出了一种新的学习框架，称为SCAT(Self-Supervised Contrastive Learning via Aversative Trading)，它可以在不需要标记数据的情况下学习稳健的表示。具体地说，SCAT以完全无标签的方式修改数据的随机增加，以生成对抗性示例。对抗性训练是通过最小化增强器和对抗器之间的对比损失来实现的。我们使用最近提出的两种最先进的攻击方案在两个文本分类数据集上对SCAT进行了评估。结果表明，SCAT不仅可以从头开始训练健壮的语言模型，而且可以显著提高已有的预先训练的语言模型的健壮性。此外，为了展示其灵活性，我们还展示了SCAT还可以与有监督的对抗性训练相结合，以进一步增强模型的稳健性。
-
-
-
-## **48. Automatic Counterfactual Augmentation for Robust Text Classification Based on Word-Group Search**
-
-基于词组搜索的稳健文本分类反事实自动增强 cs.CL
-
-13 pages, 7 figures
-
-**SubmitDate**: 2023-07-01    [abs](http://arxiv.org/abs/2307.01214v1) [paper-pdf](http://arxiv.org/pdf/2307.01214v1)
-
-**Authors**: Rui Song, Fausto Giunchiglia, Yingji Li, Hao Xu
-
-**Abstract**: Despite large-scale pre-trained language models have achieved striking results for text classificaion, recent work has raised concerns about the challenge of shortcut learning. In general, a keyword is regarded as a shortcut if it creates a superficial association with the label, resulting in a false prediction. Conversely, shortcut learning can be mitigated if the model relies on robust causal features that help produce sound predictions. To this end, many studies have explored post-hoc interpretable methods to mine shortcuts and causal features for robustness and generalization. However, most existing methods focus only on single word in a sentence and lack consideration of word-group, leading to wrong causal features. To solve this problem, we propose a new Word-Group mining approach, which captures the causal effect of any keyword combination and orders the combinations that most affect the prediction. Our approach bases on effective post-hoc analysis and beam search, which ensures the mining effect and reduces the complexity. Then, we build a counterfactual augmentation method based on the multiple word-groups, and use an adaptive voting mechanism to learn the influence of different augmentated samples on the prediction results, so as to force the model to pay attention to effective causal features. We demonstrate the effectiveness of the proposed method by several tasks on 8 affective review datasets and 4 toxic language datasets, including cross-domain text classificaion, text attack and gender fairness test.
-
-摘要: 尽管大规模的预训练语言模型在文本分类方面取得了显著的效果，但最近的工作也引发了人们对快捷学习挑战的担忧。一般来说，如果关键字与标签建立了表面上的关联，从而导致错误预测，则该关键字被视为快捷方式。相反，如果模型依赖于有助于产生合理预测的健壮的因果特征，则可以减轻快捷学习。为此，许多研究探索了事后可解释的方法来挖掘捷径和因果特征，以获得稳健性和概括性。然而，现有的方法大多只关注句子中的单个词，缺乏对词组的考虑，导致了错误的因果特征。为了解决这个问题，我们提出了一种新的词组挖掘方法，该方法捕捉任何关键字组合的因果关系，并对对预测影响最大的组合进行排序。该方法基于有效的事后分析和波束搜索，既保证了挖掘效果，又降低了算法的复杂度。然后，我们构建了一种基于多词组的反事实增强方法，并使用一种自适应投票机制来学习不同增强样本对预测结果的影响，从而迫使模型关注有效的因果特征。通过在8个情感评论数据集和4个有毒语言数据集上的实验，包括跨领域文本分类、文本攻击和性别公平测试，验证了该方法的有效性。
-
-
-
-## **49. Provable Robust Watermarking for AI-Generated Text**
-
-用于人工智能生成文本的可证明稳健水印 cs.CL
-
-**SubmitDate**: 2023-06-30    [abs](http://arxiv.org/abs/2306.17439v1) [paper-pdf](http://arxiv.org/pdf/2306.17439v1)
-
-**Authors**: Xuandong Zhao, Prabhanjan Ananth, Lei Li, Yu-Xiang Wang
-
-**Abstract**: As AI-generated text increasingly resembles human-written content, the ability to detect machine-generated text becomes crucial. To address this challenge, we present GPTWatermark, a robust and high-quality solution designed to ascertain whether a piece of text originates from a specific model. Our approach extends existing watermarking strategies and employs a fixed group design to enhance robustness against editing and paraphrasing attacks. We show that our watermarked language model enjoys strong provable guarantees on generation quality, correctness in detection, and security against evasion attacks. Experimental results on various large language models (LLMs) and diverse datasets demonstrate that our method achieves superior detection accuracy and comparable generation quality in perplexity, thus promoting the responsible use of LLMs.
-
-摘要: 随着人工智能生成的文本越来越像人类书写的内容，检测机器生成的文本的能力变得至关重要。为了应对这一挑战，我们提出了GPTWatermark，这是一个健壮且高质量的解决方案，旨在确定一段文本是否来自特定的模型。我们的方法扩展了现有的水印策略，并采用了固定的组设计来增强对编辑和转译攻击的稳健性。实验表明，我们的水印语言模型在生成质量、检测的正确性和抗规避攻击方面具有很强的可证性保证。在不同的大型语言模型和不同的数据集上的实验结果表明，该方法在困惑情况下获得了较高的检测准确率和相当的生成质量，从而促进了大型语言模型的负责任使用。
-
-
-
-## **50. Pick your Poison: Undetectability versus Robustness in Data Poisoning Attacks**
-
-挑选你的毒药：数据中毒攻击中的不可检测性与健壮性 cs.CR
-
-Preprint
-
-**SubmitDate**: 2023-06-29    [abs](http://arxiv.org/abs/2305.09671v2) [paper-pdf](http://arxiv.org/pdf/2305.09671v2)
-
-**Authors**: Nils Lukas, Florian Kerschbaum
-
-**Abstract**: Deep image classification models trained on vast amounts of web-scraped data are susceptible to data poisoning - a mechanism for backdooring models. A small number of poisoned samples seen during training can severely undermine a model's integrity during inference. Existing work considers an effective defense as one that either (i) restores a model's integrity through repair or (ii) detects an attack. We argue that this approach overlooks a crucial trade-off: Attackers can increase robustness at the expense of detectability (over-poisoning) or decrease detectability at the cost of robustness (under-poisoning). In practice, attacks should remain both undetectable and robust. Detectable but robust attacks draw human attention and rigorous model evaluation or cause the model to be re-trained or discarded. In contrast, attacks that are undetectable but lack robustness can be repaired with minimal impact on model accuracy. Our research points to intrinsic flaws in current attack evaluation methods and raises the bar for all data poisoning attackers who must delicately balance this trade-off to remain robust and undetectable. To demonstrate the existence of more potent defenders, we propose defenses designed to (i) detect or (ii) repair poisoned models using a limited amount of trusted image-label pairs. Our results show that an attacker who needs to be robust and undetectable is substantially less threatening. Our defenses mitigate all tested attacks with a maximum accuracy decline of 2% using only 1% of clean data on CIFAR-10 and 2.5% on ImageNet. We demonstrate the scalability of our defenses by evaluating large vision-language models, such as CLIP. Attackers who can manipulate the model's parameters pose an elevated risk as they can achieve higher robustness at low detectability compared to data poisoning attackers.
-
-摘要: 对大量网络抓取的数据进行训练的深度图像分类模型很容易受到数据中毒的影响--这是一种回溯模型的机制。在训练期间看到的少量有毒样本可能会在推理过程中严重破坏模型的完整性。现有的工作认为有效的防御是(I)通过修复恢复模型的完整性或(Ii)检测攻击。我们认为，这种方法忽略了一个关键的权衡：攻击者可以以牺牲可检测性(过度中毒)来增加健壮性，或者以以健壮性(中毒不足)为代价来降低可检测性。在实践中，攻击应该保持不可察觉和强大。可检测但强大的攻击会引起人们的注意和严格的模型评估，或者导致模型被重新训练或丢弃。相比之下，无法检测但缺乏稳健性的攻击可以在对模型精度影响最小的情况下修复。我们的研究指出了当前攻击评估方法的内在缺陷，并提高了所有数据中毒攻击者的门槛，他们必须微妙地平衡这一权衡，以保持健壮和不可检测。为了证明存在更强大的防御者，我们提出了旨在(I)检测或(Ii)修复中毒模型的防御措施，使用有限数量的可信图像-标签对。我们的结果表明，需要健壮且不可检测的攻击者的威胁要小得多。我们的防御系统仅使用CIFAR-10上1%的干净数据和ImageNet上2.5%的干净数据来缓解所有测试的攻击，最大准确率下降2%。我们通过评估大型视觉语言模型(如CLIP)来展示我们防御的可扩展性。可以操纵模型参数的攻击者构成了更高的风险，因为与数据中毒攻击者相比，他们可以在较低的可检测性下实现更高的稳健性。
 
 
 

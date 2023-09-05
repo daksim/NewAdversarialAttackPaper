@@ -1,9 +1,51 @@
 # Latest Adversarial Attack Papers
-**update at 2023-09-02 10:14:52**
+**update at 2023-09-05 10:56:40**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. Dynamical systems' based neural networks**
+## **1. Baseline Defenses for Adversarial Attacks Against Aligned Language Models**
+
+cs.LG
+
+12 pages
+
+**SubmitDate**: 2023-09-01    [abs](http://arxiv.org/abs/2309.00614v1) [paper-pdf](http://arxiv.org/pdf/2309.00614v1)
+
+**Authors**: Neel Jain, Avi Schwarzschild, Yuxin Wen, Gowthami Somepalli, John Kirchenbauer, Ping-yeh Chiang, Micah Goldblum, Aniruddha Saha, Jonas Geiping, Tom Goldstein
+
+**Abstract**: As Large Language Models quickly become ubiquitous, their security vulnerabilities are critical to understand. Recent work shows that text optimizers can produce jailbreaking prompts that bypass moderation and alignment. Drawing from the rich body of work on adversarial machine learning, we approach these attacks with three questions: What threat models are practically useful in this domain? How do baseline defense techniques perform in this new domain? How does LLM security differ from computer vision?   We evaluate several baseline defense strategies against leading adversarial attacks on LLMs, discussing the various settings in which each is feasible and effective. Particularly, we look at three types of defenses: detection (perplexity based), input preprocessing (paraphrase and retokenization), and adversarial training. We discuss white-box and gray-box settings and discuss the robustness-performance trade-off for each of the defenses considered. Surprisingly, we find much more success with filtering and preprocessing than we would expect from other domains, such as vision, providing a first indication that the relative strengths of these defenses may be weighed differently in these domains.
+
+
+
+## **2. Why do universal adversarial attacks work on large language models?: Geometry might be the answer**
+
+cs.LG
+
+2nd AdvML Frontiers Workshop at 40th International Conference on  Machine Learning, Honolulu, Hawaii, USA, 2023
+
+**SubmitDate**: 2023-09-01    [abs](http://arxiv.org/abs/2309.00254v1) [paper-pdf](http://arxiv.org/pdf/2309.00254v1)
+
+**Authors**: Varshini Subhash, Anna Bialas, Weiwei Pan, Finale Doshi-Velez
+
+**Abstract**: Transformer based large language models with emergent capabilities are becoming increasingly ubiquitous in society. However, the task of understanding and interpreting their internal workings, in the context of adversarial attacks, remains largely unsolved. Gradient-based universal adversarial attacks have been shown to be highly effective on large language models and potentially dangerous due to their input-agnostic nature. This work presents a novel geometric perspective explaining universal adversarial attacks on large language models. By attacking the 117M parameter GPT-2 model, we find evidence indicating that universal adversarial triggers could be embedding vectors which merely approximate the semantic information in their adversarial training region. This hypothesis is supported by white-box model analysis comprising dimensionality reduction and similarity measurement of hidden representations. We believe this new geometric perspective on the underlying mechanism driving universal attacks could help us gain deeper insight into the internal workings and failure modes of LLMs, thus enabling their mitigation.
+
+
+
+## **3. Image Hijacking: Adversarial Images can Control Generative Models at Runtime**
+
+cs.LG
+
+Code is available at https://github.com/euanong/image-hijacks
+
+**SubmitDate**: 2023-09-01    [abs](http://arxiv.org/abs/2309.00236v1) [paper-pdf](http://arxiv.org/pdf/2309.00236v1)
+
+**Authors**: Luke Bailey, Euan Ong, Stuart Russell, Scott Emmons
+
+**Abstract**: Are foundation models secure from malicious actors? In this work, we focus on the image input to a vision-language model (VLM). We discover image hijacks, adversarial images that control generative models at runtime. We introduce Behavior Matching, a general method for creating image hijacks, and we use it to explore three types of attacks. Specific string attacks generate arbitrary output of the adversary's choosing. Leak context attacks leak information from the context window into the output. Jailbreak attacks circumvent a model's safety training. We study these attacks against LLaVA-2, a state-of-the-art VLM based on CLIP and LLaMA-2, and find that all our attack types have above a 90\% success rate. Moreover, our attacks are automated and require only small image perturbations. These findings raise serious concerns about the security of foundation models. If image hijacks are as difficult to defend against as adversarial examples in CIFAR-10, then it might be many years before a solution is found -- if it even exists.
+
+
+
+## **4. Dynamical systems' based neural networks**
 
 cs.LG
 
@@ -15,7 +57,7 @@ cs.LG
 
 
 
-## **2. Fault Injection and Safe-Error Attack for Extraction of Embedded Neural Network Models**
+## **5. Fault Injection and Safe-Error Attack for Extraction of Embedded Neural Network Models**
 
 cs.CR
 
@@ -29,7 +71,7 @@ Accepted at SECAI Workshop, ESORICS 2023
 
 
 
-## **3. Everyone Can Attack: Repurpose Lossy Compression as a Natural Backdoor Attack**
+## **6. Everyone Can Attack: Repurpose Lossy Compression as a Natural Backdoor Attack**
 
 cs.CR
 
@@ -43,7 +85,7 @@ cs.CR
 
 
 
-## **4. Fault Injection on Embedded Neural Networks: Impact of a Single Instruction Skip**
+## **7. Fault Injection on Embedded Neural Networks: Impact of a Single Instruction Skip**
 
 cs.CR
 
@@ -57,7 +99,7 @@ Accepted at DSD 2023 for AHSA Special Session
 
 
 
-## **5. Security Allocation in Networked Control Systems under Stealthy Attacks**
+## **8. Security Allocation in Networked Control Systems under Stealthy Attacks**
 
 eess.SY
 
@@ -71,7 +113,7 @@ eess.SY
 
 
 
-## **6. The Power of MEME: Adversarial Malware Creation with Model-Based Reinforcement Learning**
+## **9. The Power of MEME: Adversarial Malware Creation with Model-Based Reinforcement Learning**
 
 cs.CR
 
@@ -85,7 +127,7 @@ cs.CR
 
 
 
-## **7. Why Does Little Robustness Help? Understanding and Improving Adversarial Transferability from Surrogate Training**
+## **10. Why Does Little Robustness Help? Understanding and Improving Adversarial Transferability from Surrogate Training**
 
 cs.LG
 
@@ -99,7 +141,7 @@ IEEE Symposium on Security and Privacy (Oakland) 2024; Extended  version of came
 
 
 
-## **8. Interpretable and Robust AI in EEG Systems: A Survey**
+## **11. Interpretable and Robust AI in EEG Systems: A Survey**
 
 eess.SP
 
@@ -111,7 +153,7 @@ eess.SP
 
 
 
-## **9. Pre-trained transformer for adversarial purification**
+## **12. Pre-trained transformer for adversarial purification**
 
 cs.CR
 
@@ -123,7 +165,7 @@ cs.CR
 
 
 
-## **10. Vulnerability of Machine Learning Approaches Applied in IoT-based Smart Grid: A Review**
+## **13. Vulnerability of Machine Learning Approaches Applied in IoT-based Smart Grid: A Review**
 
 cs.CR
 
@@ -135,7 +177,7 @@ cs.CR
 
 
 
-## **11. Intriguing Properties of Diffusion Models: A Large-Scale Dataset for Evaluating Natural Attack Capability in Text-to-Image Generative Models**
+## **14. Intriguing Properties of Diffusion Models: A Large-Scale Dataset for Evaluating Natural Attack Capability in Text-to-Image Generative Models**
 
 cs.CV
 
@@ -147,7 +189,7 @@ cs.CV
 
 
 
-## **12. MDTD: A Multi Domain Trojan Detector for Deep Neural Networks**
+## **15. MDTD: A Multi Domain Trojan Detector for Deep Neural Networks**
 
 cs.CR
 
@@ -161,7 +203,7 @@ Accepted to ACM Conference on Computer and Communications Security  (ACM CCS) 20
 
 
 
-## **13. Adaptive Attack Detection in Text Classification: Leveraging Space Exploration Features for Text Sentiment Classification**
+## **16. Adaptive Attack Detection in Text Classification: Leveraging Space Exploration Features for Text Sentiment Classification**
 
 cs.CR
 
@@ -175,7 +217,7 @@ Presented at 2nd International Workshop on Adaptive Cyber Defense,  2023 (arXiv:
 
 
 
-## **14. Everything Perturbed All at Once: Enabling Differentiable Graph Attacks**
+## **17. Everything Perturbed All at Once: Enabling Differentiable Graph Attacks**
 
 cs.LG
 
@@ -187,7 +229,7 @@ cs.LG
 
 
 
-## **15. Masquerade: Simple and Lightweight Transaction Reordering Mitigation in Blockchains**
+## **18. Masquerade: Simple and Lightweight Transaction Reordering Mitigation in Blockchains**
 
 cs.CR
 
@@ -199,7 +241,7 @@ cs.CR
 
 
 
-## **16. Imperceptible Adversarial Attack on Deep Neural Networks from Image Boundary**
+## **19. Imperceptible Adversarial Attack on Deep Neural Networks from Image Boundary**
 
 cs.LG
 
@@ -211,7 +253,7 @@ cs.LG
 
 
 
-## **17. Longest-chain Attacks: Difficulty Adjustment and Timestamp Verifiability**
+## **20. Longest-chain Attacks: Difficulty Adjustment and Timestamp Verifiability**
 
 cs.CR
 
@@ -225,7 +267,7 @@ A short version appears at MobiHoc23 as a poster
 
 
 
-## **18. A Classification-Guided Approach for Adversarial Attacks against Neural Machine Translation**
+## **21. A Classification-Guided Approach for Adversarial Attacks against Neural Machine Translation**
 
 cs.CL
 
@@ -237,7 +279,7 @@ cs.CL
 
 
 
-## **19. On the Steganographic Capacity of Selected Learning Models**
+## **22. On the Steganographic Capacity of Selected Learning Models**
 
 cs.LG
 
@@ -251,7 +293,7 @@ arXiv admin note: text overlap with arXiv:2306.17189
 
 
 
-## **20. Can We Rely on AI?**
+## **23. Can We Rely on AI?**
 
 math.NA
 
@@ -263,7 +305,7 @@ math.NA
 
 
 
-## **21. Advancing Adversarial Robustness Through Adversarial Logit Update**
+## **24. Advancing Adversarial Robustness Through Adversarial Logit Update**
 
 cs.LG
 
@@ -275,7 +317,7 @@ cs.LG
 
 
 
-## **22. Double Public Key Signing Function Oracle Attack on EdDSA Software Implementations**
+## **25. Double Public Key Signing Function Oracle Attack on EdDSA Software Implementations**
 
 cs.CR
 
@@ -287,7 +329,7 @@ cs.CR
 
 
 
-## **23. Stealthy Backdoor Attack for Code Models**
+## **26. Stealthy Backdoor Attack for Code Models**
 
 cs.CR
 
@@ -301,7 +343,7 @@ cs.CR
 
 
 
-## **24. WSAM: Visual Explanations from Style Augmentation as Adversarial Attacker and Their Influence in Image Classification**
+## **27. WSAM: Visual Explanations from Style Augmentation as Adversarial Attacker and Their Influence in Image Classification**
 
 cs.CV
 
@@ -315,7 +357,7 @@ cs.CV
 
 
 
-## **25. Randomized Line-to-Row Mapping for Low-Overhead Rowhammer Mitigations**
+## **28. Randomized Line-to-Row Mapping for Low-Overhead Rowhammer Mitigations**
 
 cs.CR
 
@@ -327,7 +369,7 @@ cs.CR
 
 
 
-## **26. A Stochastic Surveillance Stackelberg Game: Co-Optimizing Defense Placement and Patrol Strategy**
+## **29. A Stochastic Surveillance Stackelberg Game: Co-Optimizing Defense Placement and Patrol Strategy**
 
 eess.SY
 
@@ -341,7 +383,7 @@ eess.SY
 
 
 
-## **27. Adversarial Attacks on Foundational Vision Models**
+## **30. Adversarial Attacks on Foundational Vision Models**
 
 cs.CV
 
@@ -353,7 +395,7 @@ cs.CV
 
 
 
-## **28. ReMAV: Reward Modeling of Autonomous Vehicles for Finding Likely Failure Events**
+## **31. ReMAV: Reward Modeling of Autonomous Vehicles for Finding Likely Failure Events**
 
 cs.AI
 
@@ -365,7 +407,7 @@ cs.AI
 
 
 
-## **29. Efficient Decision-based Black-box Patch Attacks on Video Recognition**
+## **32. Efficient Decision-based Black-box Patch Attacks on Video Recognition**
 
 cs.CV
 
@@ -377,7 +419,7 @@ cs.CV
 
 
 
-## **30. Mitigating the source-side channel vulnerability by characterization of photon statistics**
+## **33. Mitigating the source-side channel vulnerability by characterization of photon statistics**
 
 quant-ph
 
@@ -391,7 +433,7 @@ Comments and suggestions are welcomed
 
 
 
-## **31. QEVSEC: Quick Electric Vehicle SEcure Charging via Dynamic Wireless Power Transfer**
+## **34. QEVSEC: Quick Electric Vehicle SEcure Charging via Dynamic Wireless Power Transfer**
 
 cs.CR
 
@@ -405,7 +447,7 @@ cs.CR
 
 
 
-## **32. Hiding Visual Information via Obfuscating Adversarial Perturbations**
+## **35. Hiding Visual Information via Obfuscating Adversarial Perturbations**
 
 cs.CV
 
@@ -417,7 +459,7 @@ cs.CV
 
 
 
-## **33. Detecting Language Model Attacks with Perplexity**
+## **36. Detecting Language Model Attacks with Perplexity**
 
 cs.CL
 
@@ -429,7 +471,7 @@ cs.CL
 
 
 
-## **34. Fairness and Privacy in Voice Biometrics:A Study of Gender Influences Using wav2vec 2.0**
+## **37. Fairness and Privacy in Voice Biometrics:A Study of Gender Influences Using wav2vec 2.0**
 
 eess.AS
 
@@ -443,7 +485,7 @@ eess.AS
 
 
 
-## **35. Device-Independent Quantum Key Distribution Based on the Mermin-Peres Magic Square Game**
+## **38. Device-Independent Quantum Key Distribution Based on the Mermin-Peres Magic Square Game**
 
 quant-ph
 
@@ -455,7 +497,7 @@ quant-ph
 
 
 
-## **36. A semantic backdoor attack against Graph Convolutional Networks**
+## **39. A semantic backdoor attack against Graph Convolutional Networks**
 
 cs.LG
 
@@ -467,7 +509,7 @@ cs.LG
 
 
 
-## **37. Active learning for fast and slow modeling attacks on Arbiter PUFs**
+## **40. Active learning for fast and slow modeling attacks on Arbiter PUFs**
 
 cs.CR
 
@@ -479,7 +521,7 @@ cs.CR
 
 
 
-## **38. Unveiling the Role of Message Passing in Dual-Privacy Preservation on GNNs**
+## **41. Unveiling the Role of Message Passing in Dual-Privacy Preservation on GNNs**
 
 cs.LG
 
@@ -493,7 +535,7 @@ CIKM 2023
 
 
 
-## **39. Overcoming Adversarial Attacks for Human-in-the-Loop Applications**
+## **42. Overcoming Adversarial Attacks for Human-in-the-Loop Applications**
 
 cs.LG
 
@@ -507,7 +549,7 @@ New Frontiers in Adversarial Machine Learning, ICML 2022
 
 
 
-## **40. Defensive Few-shot Learning**
+## **43. Defensive Few-shot Learning**
 
 cs.CV
 
@@ -521,7 +563,7 @@ Accepted to IEEE Transactions on Pattern Analysis and Machine  Intelligence (TPA
 
 
 
-## **41. Feature Unlearning for Pre-trained GANs and VAEs**
+## **44. Feature Unlearning for Pre-trained GANs and VAEs**
 
 cs.CV
 
@@ -533,7 +575,7 @@ cs.CV
 
 
 
-## **42. Face Encryption via Frequency-Restricted Identity-Agnostic Attacks**
+## **45. Face Encryption via Frequency-Restricted Identity-Agnostic Attacks**
 
 cs.CV
 
@@ -547,7 +589,7 @@ I noticed something missing in the article's description in  subsection 3.2, so 
 
 
 
-## **43. Evaluating the Vulnerabilities in ML systems in terms of adversarial attacks**
+## **46. Evaluating the Vulnerabilities in ML systems in terms of adversarial attacks**
 
 cs.LG
 
@@ -559,7 +601,7 @@ cs.LG
 
 
 
-## **44. Near Optimal Adversarial Attack on UCB Bandits**
+## **47. Near Optimal Adversarial Attack on UCB Bandits**
 
 cs.LG
 
@@ -573,7 +615,7 @@ Appeared at ICML 2023 AdvML Workshop
 
 
 
-## **45. Fast Adversarial Training with Smooth Convergence**
+## **48. Fast Adversarial Training with Smooth Convergence**
 
 cs.LG
 
@@ -585,7 +627,7 @@ cs.LG
 
 
 
-## **46. Unifying Gradients to Improve Real-world Robustness for Deep Networks**
+## **49. Unifying Gradients to Improve Real-world Robustness for Deep Networks**
 
 stat.ML
 
@@ -597,7 +639,7 @@ stat.ML
 
 
 
-## **47. Universal Soldier: Using Universal Adversarial Perturbations for Detecting Backdoor Attacks**
+## **50. Universal Soldier: Using Universal Adversarial Perturbations for Detecting Backdoor Attacks**
 
 cs.LG
 
@@ -606,44 +648,6 @@ cs.LG
 **Authors**: Xiaoyun Xu, Oguzhan Ersoy, Stjepan Picek
 
 **Abstract**: Deep learning models achieve excellent performance in numerous machine learning tasks. Yet, they suffer from security-related issues such as adversarial examples and poisoning (backdoor) attacks. A deep learning model may be poisoned by training with backdoored data or by modifying inner network parameters. Then, a backdoored model performs as expected when receiving a clean input, but it misclassifies when receiving a backdoored input stamped with a pre-designed pattern called "trigger". Unfortunately, it is difficult to distinguish between clean and backdoored models without prior knowledge of the trigger. This paper proposes a backdoor detection method by utilizing a special type of adversarial attack, universal adversarial perturbation (UAP), and its similarities with a backdoor trigger. We observe an intuitive phenomenon: UAPs generated from backdoored models need fewer perturbations to mislead the model than UAPs from clean models. UAPs of backdoored models tend to exploit the shortcut from all classes to the target class, built by the backdoor trigger. We propose a novel method called Universal Soldier for Backdoor detection (USB) and reverse engineering potential backdoor triggers via UAPs. Experiments on 345 models trained on several datasets show that USB effectively detects the injected backdoor and provides comparable or better results than state-of-the-art methods.
-
-
-
-## **48. Don't Look into the Sun: Adversarial Solarization Attacks on Image Classifiers**
-
-cs.CV
-
-**SubmitDate**: 2023-08-24    [abs](http://arxiv.org/abs/2308.12661v1) [paper-pdf](http://arxiv.org/pdf/2308.12661v1)
-
-**Authors**: Paul Gavrikov, Janis Keuper
-
-**Abstract**: Assessing the robustness of deep neural networks against out-of-distribution inputs is crucial, especially in safety-critical domains like autonomous driving, but also in safety systems where malicious actors can digitally alter inputs to circumvent safety guards. However, designing effective out-of-distribution tests that encompass all possible scenarios while preserving accurate label information is a challenging task. Existing methodologies often entail a compromise between variety and constraint levels for attacks and sometimes even both. In a first step towards a more holistic robustness evaluation of image classification models, we introduce an attack method based on image solarization that is conceptually straightforward yet avoids jeopardizing the global structure of natural images independent of the intensity. Through comprehensive evaluations of multiple ImageNet models, we demonstrate the attack's capacity to degrade accuracy significantly, provided it is not integrated into the training augmentations. Interestingly, even then, no full immunity to accuracy deterioration is achieved. In other settings, the attack can often be simplified into a black-box attack with model-independent parameters. Defenses against other corruptions do not consistently extend to be effective against our specific attack.   Project website: https://github.com/paulgavrikov/adversarial_solarization
-
-
-
-## **49. Exploring Transferability of Multimodal Adversarial Samples for Vision-Language Pre-training Models with Contrastive Learning**
-
-cs.MM
-
-**SubmitDate**: 2023-08-24    [abs](http://arxiv.org/abs/2308.12636v1) [paper-pdf](http://arxiv.org/pdf/2308.12636v1)
-
-**Authors**: Youze Wang, Wenbo Hu, Yinpeng Dong, Richang Hong
-
-**Abstract**: Vision-language pre-training models (VLP) are vulnerable, especially to multimodal adversarial samples, which can be crafted by adding imperceptible perturbations on both original images and texts. However, under the black-box setting, there have been no works to explore the transferability of multimodal adversarial attacks against the VLP models. In this work, we take CLIP as the surrogate model and propose a gradient-based multimodal attack method to generate transferable adversarial samples against the VLP models. By applying the gradient to optimize the adversarial images and adversarial texts simultaneously, our method can better search for and attack the vulnerable images and text information pairs. To improve the transferability of the attack, we utilize contrastive learning including image-text contrastive learning and intra-modal contrastive learning to have a more generalized understanding of the underlying data distribution and mitigate the overfitting of the surrogate model so that the generated multimodal adversarial samples have a higher transferability for VLP models. Extensive experiments validate the effectiveness of the proposed method.
-
-
-
-## **50. PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts**
-
-cs.CL
-
-Technical report; updated with new experiments and related work; 27  pages; code is at: https://github.com/microsoft/promptbench
-
-**SubmitDate**: 2023-08-24    [abs](http://arxiv.org/abs/2306.04528v3) [paper-pdf](http://arxiv.org/pdf/2306.04528v3)
-
-**Authors**: Kaijie Zhu, Jindong Wang, Jiaheng Zhou, Zichen Wang, Hao Chen, Yidong Wang, Linyi Yang, Wei Ye, Neil Zhenqiang Gong, Yue Zhang, Xing Xie
-
-**Abstract**: The increasing reliance on Large Language Models (LLMs) across academia and industry necessitates a comprehensive understanding of their robustness to prompts. In response to this vital need, we introduce PromptBench, a robustness benchmark designed to measure LLMs' resilience to adversarial prompts. This study uses a plethora of adversarial textual attacks targeting prompts across multiple levels: character, word, sentence, and semantic. These prompts are then employed in diverse tasks, such as sentiment analysis, natural language inference, reading comprehension, machine translation, and math problem-solving. Our study generates 4,032 adversarial prompts, meticulously evaluated over 8 tasks and 13 datasets, with 567,084 test samples in total. Our findings demonstrate that contemporary LLMs are vulnerable to adversarial prompts. Furthermore, we present comprehensive analysis to understand the mystery behind prompt robustness and its transferability. We then offer insightful robustness analysis and pragmatic recommendations for prompt composition, beneficial to both researchers and everyday users. We make our code, prompts, and methodologies to generate adversarial prompts publicly accessible, thereby enabling and encouraging collaborative exploration in this pivotal field: https://github.com/microsoft/promptbench.
 
 
 

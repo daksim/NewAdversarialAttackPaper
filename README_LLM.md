@@ -1,9 +1,49 @@
 # Latest Adversarial Attack Papers
-**update at 2023-09-11 14:39:53**
+**update at 2023-09-15 18:45:02**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. RatGPT: Turning online LLMs into Proxies for Malware Attacks**
+## **1. RAIN: Your Language Models Can Align Themselves without Finetuning**
+
+cs.CL
+
+**SubmitDate**: 2023-09-13    [abs](http://arxiv.org/abs/2309.07124v1) [paper-pdf](http://arxiv.org/pdf/2309.07124v1)
+
+**Authors**: Yuhui Li, Fangyun Wei, Jinjing Zhao, Chao Zhang, Hongyang Zhang
+
+**Abstract**: Large language models (LLMs) often demonstrate inconsistencies with human preferences. Previous research gathered human preference data and then aligned the pre-trained models using reinforcement learning or instruction tuning, the so-called finetuning step. In contrast, aligning frozen LLMs without any extra data is more appealing. This work explores the potential of the latter setting. We discover that by integrating self-evaluation and rewind mechanisms, unaligned LLMs can directly produce responses consistent with human preferences via self-boosting. We introduce a novel inference method, Rewindable Auto-regressive INference (RAIN), that allows pre-trained LLMs to evaluate their own generation and use the evaluation results to guide backward rewind and forward generation for AI safety. Notably, RAIN operates without the need of extra data for model alignment and abstains from any training, gradient computation, or parameter updates; during the self-evaluation phase, the model receives guidance on which human preference to align with through a fixed-template prompt, eliminating the need to modify the initial prompt. Experimental results evaluated by GPT-4 and humans demonstrate the effectiveness of RAIN: on the HH dataset, RAIN improves the harmlessness rate of LLaMA 30B over vanilla inference from 82% to 97%, while maintaining the helpfulness rate. Under the leading adversarial attack llm-attacks on Vicuna 33B, RAIN establishes a new defense baseline by reducing the attack success rate from 94% to 19%.
+
+
+
+## **2. Games and Argumentation: Time for a Family Reunion!**
+
+cs.LO
+
+Fourth Workshop on Explainable Logic-Based Knowledge Representation  (XLoKR), Sept 2, 2023. Rhodes, Greece
+
+**SubmitDate**: 2023-09-12    [abs](http://arxiv.org/abs/2309.06620v1) [paper-pdf](http://arxiv.org/pdf/2309.06620v1)
+
+**Authors**: Bertram Ludäscher, Yilin Xia
+
+**Abstract**: The rule "defeated(X) $\leftarrow$ attacks(Y,X), $\neg$ defeated(Y)" states that an argument is defeated if it is attacked by an argument that is not defeated. The rule "win(X) $\leftarrow$ move(X,Y), $\neg$ win(Y)" states that in a game a position is won if there is a move to a position that is not won. Both logic rules can be seen as close relatives (even identical twins) and both rules have been at the center of attention at various times in different communities: The first rule lies at the core of argumentation frameworks and has spawned a large family of models and semantics of abstract argumentation. The second rule has played a key role in the quest to find the "right" semantics for logic programs with recursion through negation, and has given rise to the stable and well-founded semantics. Both semantics have been widely studied by the logic programming and nonmonotonic reasoning community. The second rule has also received much attention by the database and finite model theory community, e.g., when studying the expressive power of query languages and fixpoint logics. Although close connections between argumentation frameworks, logic programming, and dialogue games have been known for a long time, the overlap and cross-fertilization between the communities appears to be smaller than one might expect. To this end, we recall some of the key results from database theory in which the win-move query has played a central role, e.g., on normal forms and expressive power of query languages. We introduce some notions that naturally emerge from games and that may provide new perspectives and research opportunities for argumentation frameworks. We discuss how solved query evaluation games reveal how- and why-not provenance of query answers. These techniques can be used to explain how results were derived via the given query, game, or argumentation framework.
+
+
+
+## **3. FuzzLLM: A Novel and Universal Fuzzing Framework for Proactively Discovering Jailbreak Vulnerabilities in Large Language Models**
+
+cs.CR
+
+In submission, a preprint version
+
+**SubmitDate**: 2023-09-11    [abs](http://arxiv.org/abs/2309.05274v1) [paper-pdf](http://arxiv.org/pdf/2309.05274v1)
+
+**Authors**: Dongyu Yao, Jianshu Zhang, Ian G. Harris, Marcel Carlsson
+
+**Abstract**: Jailbreak vulnerabilities in Large Language Models (LLMs), which exploit meticulously crafted prompts to elicit content that violates service guidelines, have captured the attention of research communities. While model owners can defend against individual jailbreak prompts through safety training strategies, this relatively passive approach struggles to handle the broader category of similar jailbreaks. To tackle this issue, we introduce FuzzLLM, an automated fuzzing framework designed to proactively test and discover jailbreak vulnerabilities in LLMs. We utilize templates to capture the structural integrity of a prompt and isolate key features of a jailbreak class as constraints. By integrating different base classes into powerful combo attacks and varying the elements of constraints and prohibited questions, FuzzLLM enables efficient testing with reduced manual effort. Extensive experiments demonstrate FuzzLLM's effectiveness and comprehensiveness in vulnerability discovery across various LLMs.
+
+
+
+## **4. RatGPT: Turning online LLMs into Proxies for Malware Attacks**
 
 cs.CR
 
@@ -15,7 +55,7 @@ cs.CR
 
 
 
-## **2. Demystifying RCE Vulnerabilities in LLM-Integrated Apps**
+## **5. Demystifying RCE Vulnerabilities in LLM-Integrated Apps**
 
 cs.CR
 
@@ -27,7 +67,7 @@ cs.CR
 
 
 
-## **3. A Comprehensive Overview of Backdoor Attacks in Large Language Models within Communication Networks**
+## **6. A Comprehensive Overview of Backdoor Attacks in Large Language Models within Communication Networks**
 
 cs.CR
 
@@ -39,7 +79,7 @@ cs.CR
 
 
 
-## **4. Certifying LLM Safety against Adversarial Prompting**
+## **7. Certifying LLM Safety against Adversarial Prompting**
 
 cs.CL
 
@@ -51,7 +91,7 @@ cs.CL
 
 
 
-## **5. Baseline Defenses for Adversarial Attacks Against Aligned Language Models**
+## **8. Baseline Defenses for Adversarial Attacks Against Aligned Language Models**
 
 cs.LG
 
@@ -65,7 +105,7 @@ cs.LG
 
 
 
-## **6. MathAttack: Attacking Large Language Models Towards Math Solving Ability**
+## **9. MathAttack: Attacking Large Language Models Towards Math Solving Ability**
 
 cs.CL
 
@@ -79,7 +119,7 @@ cs.CL
 
 
 
-## **7. OUTFOX: LLM-generated Essay Detection through In-context Learning with Adversarially Generated Examples**
+## **10. OUTFOX: LLM-generated Essay Detection through In-context Learning with Adversarially Generated Examples**
 
 cs.CL
 
@@ -91,7 +131,7 @@ cs.CL
 
 
 
-## **8. Open Sesame! Universal Black Box Jailbreaking of Large Language Models**
+## **11. Open Sesame! Universal Black Box Jailbreaking of Large Language Models**
 
 cs.CL
 
@@ -103,7 +143,7 @@ cs.CL
 
 
 
-## **9. Combing for Credentials: Active Pattern Extraction from Smart Reply**
+## **12. Combing for Credentials: Active Pattern Extraction from Smart Reply**
 
 cs.CR
 
@@ -115,7 +155,7 @@ cs.CR
 
 
 
-## **10. Why do universal adversarial attacks work on large language models?: Geometry might be the answer**
+## **13. Why do universal adversarial attacks work on large language models?: Geometry might be the answer**
 
 cs.LG
 
@@ -129,7 +169,7 @@ cs.LG
 
 
 
-## **11. Temporal-Distributed Backdoor Attack Against Video Based Action Recognition**
+## **14. Temporal-Distributed Backdoor Attack Against Video Based Action Recognition**
 
 cs.CV
 
@@ -141,7 +181,7 @@ cs.CV
 
 
 
-## **12. LLM in the Shell: Generative Honeypots**
+## **15. LLM in the Shell: Generative Honeypots**
 
 cs.CR
 
@@ -155,7 +195,7 @@ cs.CR
 
 
 
-## **13. The Effectiveness of Large Language Models (ChatGPT and CodeBERT) for Security-Oriented Code Analysis**
+## **16. The Effectiveness of Large Language Models (ChatGPT and CodeBERT) for Security-Oriented Code Analysis**
 
 cs.CR
 
@@ -169,7 +209,7 @@ cs.CR
 
 
 
-## **14. Identifying and Mitigating the Security Risks of Generative AI**
+## **17. Identifying and Mitigating the Security Risks of Generative AI**
 
 cs.AI
 
@@ -181,7 +221,7 @@ cs.AI
 
 
 
-## **15. Out of the Cage: How Stochastic Parrots Win in Cyber Security Environments**
+## **18. Out of the Cage: How Stochastic Parrots Win in Cyber Security Environments**
 
 cs.CR
 
@@ -195,7 +235,7 @@ Under review. 10 pages plus appendices, 7 figures, 4 tables. Edit:  fix e-mails 
 
 
 
-## **16. Detecting Language Model Attacks with Perplexity**
+## **19. Detecting Language Model Attacks with Perplexity**
 
 cs.CL
 
@@ -207,7 +247,7 @@ cs.CL
 
 
 
-## **17. A Survey of Safety and Trustworthiness of Large Language Models through the Lens of Verification and Validation**
+## **20. A Survey of Safety and Trustworthiness of Large Language Models through the Lens of Verification and Validation**
 
 cs.AI
 
@@ -219,7 +259,7 @@ cs.AI
 
 
 
-## **18. LMSanitator: Defending Prompt-Tuning Against Task-Agnostic Backdoors**
+## **21. LMSanitator: Defending Prompt-Tuning Against Task-Agnostic Backdoors**
 
 cs.CL
 
@@ -233,7 +273,7 @@ To Appear in the Network and Distributed System Security (NDSS)  Symposium 2024,
 
 
 
-## **19. Self-Deception: Reverse Penetrating the Semantic Firewall of Large Language Models**
+## **22. Self-Deception: Reverse Penetrating the Semantic Firewall of Large Language Models**
 
 cs.CL
 
@@ -247,7 +287,7 @@ Serious errors were found in the experiment, which may lead to the  overturning 
 
 
 
-## **20. PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts**
+## **23. PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts**
 
 cs.CL
 
@@ -261,7 +301,7 @@ Technical report; updated with new experiments and related work; 27  pages; code
 
 
 
-## **21. On the Uses of Large Language Models to Interpret Ambiguous Cyberattack Descriptions**
+## **24. On the Uses of Large Language Models to Interpret Ambiguous Cyberattack Descriptions**
 
 cs.AI
 
@@ -273,7 +313,7 @@ cs.AI
 
 
 
-## **22. Adversarial Attacks on Code Models with Discriminative Graph Patterns**
+## **25. Adversarial Attacks on Code Models with Discriminative Graph Patterns**
 
 cs.SE
 
@@ -285,7 +325,7 @@ cs.SE
 
 
 
-## **23. TrojText: Test-time Invisible Textual Trojan Insertion**
+## **26. TrojText: Test-time Invisible Textual Trojan Insertion**
 
 cs.CL
 
@@ -299,7 +339,7 @@ In The Eleventh International Conference on Learning Representations.  2023 (ICL
 
 
 
-## **24. Getting pwn'd by AI: Penetration Testing with Large Language Models**
+## **27. Getting pwn'd by AI: Penetration Testing with Large Language Models**
 
 cs.CL
 
@@ -311,7 +351,7 @@ cs.CL
 
 
 
-## **25. Do you really follow me? Adversarial Instructions for Evaluating the Robustness of Large Language Models**
+## **28. Do you really follow me? Adversarial Instructions for Evaluating the Robustness of Large Language Models**
 
 cs.CL
 
@@ -325,7 +365,7 @@ Work in progress
 
 
 
-## **26. Visual Adversarial Examples Jailbreak Aligned Large Language Models**
+## **29. Visual Adversarial Examples Jailbreak Aligned Large Language Models**
 
 cs.CR
 
@@ -337,7 +377,7 @@ cs.CR
 
 
 
-## **27. From Prompt Injections to SQL Injection Attacks: How Protected is Your LLM-Integrated Web Application?**
+## **30. From Prompt Injections to SQL Injection Attacks: How Protected is Your LLM-Integrated Web Application?**
 
 cs.CR
 
@@ -351,7 +391,7 @@ cs.CR
 
 
 
-## **28. Robustness Over Time: Understanding Adversarial Examples' Effectiveness on Longitudinal Versions of Large Language Models**
+## **31. Robustness Over Time: Understanding Adversarial Examples' Effectiveness on Longitudinal Versions of Large Language Models**
 
 cs.CR
 
@@ -363,7 +403,7 @@ cs.CR
 
 
 
-## **29. LLM Self Defense: By Self Examination, LLMs Know They Are Being Tricked**
+## **32. LLM Self Defense: By Self Examination, LLMs Know They Are Being Tricked**
 
 cs.CL
 
@@ -375,7 +415,7 @@ cs.CL
 
 
 
-## **30. S3C2 Summit 2023-06: Government Secure Supply Chain Summit**
+## **33. S3C2 Summit 2023-06: Government Secure Supply Chain Summit**
 
 cs.CR
 
@@ -389,7 +429,7 @@ arXiv admin note: text overlap with arXiv:2307.16557,  arXiv:2307.15642
 
 
 
-## **31. An Empirical Study on Using Large Language Models to Analyze Software Supply Chain Security Failures**
+## **34. An Empirical Study on Using Large Language Models to Analyze Software Supply Chain Security Failures**
 
 cs.CR
 
@@ -403,7 +443,7 @@ cs.CR
 
 
 
-## **32. "Do Anything Now": Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models**
+## **35. "Do Anything Now": Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models**
 
 cs.CR
 
@@ -415,7 +455,7 @@ cs.CR
 
 
 
-## **33. Mondrian: Prompt Abstraction Attack Against Large Language Models for Cheaper API Pricing**
+## **36. Mondrian: Prompt Abstraction Attack Against Large Language Models for Cheaper API Pricing**
 
 cs.CR
 
@@ -427,7 +467,7 @@ cs.CR
 
 
 
-## **34. ParaFuzz: An Interpretability-Driven Technique for Detecting Poisoned Samples in NLP**
+## **37. ParaFuzz: An Interpretability-Driven Technique for Detecting Poisoned Samples in NLP**
 
 cs.CR
 
@@ -439,7 +479,7 @@ cs.CR
 
 
 
-## **35. Fundamental Limitations of Alignment in Large Language Models**
+## **38. Fundamental Limitations of Alignment in Large Language Models**
 
 cs.CL
 
@@ -451,7 +491,7 @@ cs.CL
 
 
 
-## **36. LimeAttack: Local Explainable Method for Textual Hard-Label Adversarial Attack**
+## **39. LimeAttack: Local Explainable Method for Textual Hard-Label Adversarial Attack**
 
 cs.CL
 
@@ -465,7 +505,7 @@ cs.CL
 
 
 
-## **37. Adversarially Robust Neural Legal Judgement Systems**
+## **40. Adversarially Robust Neural Legal Judgement Systems**
 
 cs.CL
 
@@ -477,7 +517,7 @@ cs.CL
 
 
 
-## **38. Virtual Prompt Injection for Instruction-Tuned Large Language Models**
+## **41. Virtual Prompt Injection for Instruction-Tuned Large Language Models**
 
 cs.CL
 
@@ -489,7 +529,7 @@ cs.CL
 
 
 
-## **39. Competence-Based Analysis of Language Models**
+## **42. Competence-Based Analysis of Language Models**
 
 cs.CL
 
@@ -501,7 +541,7 @@ cs.CL
 
 
 
-## **40. Universal and Transferable Adversarial Attacks on Aligned Language Models**
+## **43. Universal and Transferable Adversarial Attacks on Aligned Language Models**
 
 cs.CL
 
@@ -513,7 +553,7 @@ cs.CL
 
 
 
-## **41. Backdoor Attacks for In-Context Learning with Language Models**
+## **44. Backdoor Attacks for In-Context Learning with Language Models**
 
 cs.CR
 
@@ -527,7 +567,7 @@ AdvML Frontiers Workshop 2023
 
 
 
-## **42. Plug and Pray: Exploiting off-the-shelf components of Multi-Modal Models**
+## **45. Plug and Pray: Exploiting off-the-shelf components of Multi-Modal Models**
 
 cs.CR
 
@@ -539,7 +579,7 @@ cs.CR
 
 
 
-## **43. Set-level Guidance Attack: Boosting Adversarial Transferability of Vision-Language Pre-training Models**
+## **46. Set-level Guidance Attack: Boosting Adversarial Transferability of Vision-Language Pre-training Models**
 
 cs.CV
 
@@ -553,7 +593,7 @@ To appear in ICCV 2023
 
 
 
-## **44. Foundational Models Defining a New Era in Vision: A Survey and Outlook**
+## **47. Foundational Models Defining a New Era in Vision: A Survey and Outlook**
 
 cs.CV
 
@@ -567,7 +607,7 @@ Project page:  https://github.com/awaisrauf/Awesome-CV-Foundational-Models
 
 
 
-## **45. Lost In Translation: Generating Adversarial Examples Robust to Round-Trip Translation**
+## **48. Lost In Translation: Generating Adversarial Examples Robust to Round-Trip Translation**
 
 cs.CL
 
@@ -581,7 +621,7 @@ Published at International Conference on Acoustics, Speech, and  Signal Processi
 
 
 
-## **46. Security and Privacy Issues of Federated Learning**
+## **49. Security and Privacy Issues of Federated Learning**
 
 cs.CR
 
@@ -595,7 +635,7 @@ cs.CR
 
 
 
-## **47. A LLM Assisted Exploitation of AI-Guardian**
+## **50. A LLM Assisted Exploitation of AI-Guardian**
 
 cs.CR
 
@@ -604,42 +644,6 @@ cs.CR
 **Authors**: Nicholas Carlini
 
 **Abstract**: Large language models (LLMs) are now highly capable at a diverse range of tasks. This paper studies whether or not GPT-4, one such LLM, is capable of assisting researchers in the field of adversarial machine learning. As a case study, we evaluate the robustness of AI-Guardian, a recent defense to adversarial examples published at IEEE S&P 2023, a top computer security conference. We completely break this defense: the proposed scheme does not increase robustness compared to an undefended baseline.   We write none of the code to attack this model, and instead prompt GPT-4 to implement all attack algorithms following our instructions and guidance. This process was surprisingly effective and efficient, with the language model at times producing code from ambiguous instructions faster than the author of this paper could have done. We conclude by discussing (1) the warning signs present in the evaluation that suggested to us AI-Guardian would be broken, and (2) our experience with designing attacks and performing novel research using the most recent advances in language modeling.
-
-
-
-## **48. LLM Censorship: A Machine Learning Challenge or a Computer Security Problem?**
-
-cs.AI
-
-**SubmitDate**: 2023-07-20    [abs](http://arxiv.org/abs/2307.10719v1) [paper-pdf](http://arxiv.org/pdf/2307.10719v1)
-
-**Authors**: David Glukhov, Ilia Shumailov, Yarin Gal, Nicolas Papernot, Vardan Papyan
-
-**Abstract**: Large language models (LLMs) have exhibited impressive capabilities in comprehending complex instructions. However, their blind adherence to provided instructions has led to concerns regarding risks of malicious use. Existing defence mechanisms, such as model fine-tuning or output censorship using LLMs, have proven to be fallible, as LLMs can still generate problematic responses. Commonly employed censorship approaches treat the issue as a machine learning problem and rely on another LM to detect undesirable content in LLM outputs. In this paper, we present the theoretical limitations of such semantic censorship approaches. Specifically, we demonstrate that semantic censorship can be perceived as an undecidable problem, highlighting the inherent challenges in censorship that arise due to LLMs' programmatic and instruction-following capabilities. Furthermore, we argue that the challenges extend beyond semantic censorship, as knowledgeable attackers can reconstruct impermissible outputs from a collection of permissible ones. As a result, we propose that the problem of censorship needs to be reevaluated; it should be treated as a security problem which warrants the adaptation of security-based approaches to mitigate potential risks.
-
-
-
-## **49. LogPrécis: Unleashing Language Models for Automated Shell Log Analysis**
-
-cs.CR
-
-**SubmitDate**: 2023-07-17    [abs](http://arxiv.org/abs/2307.08309v1) [paper-pdf](http://arxiv.org/pdf/2307.08309v1)
-
-**Authors**: Matteo Boffa, Rodolfo Vieira Valentim, Luca Vassio, Danilo Giordano, Idilio Drago, Marco Mellia, Zied Ben Houidi
-
-**Abstract**: The collection of security-related logs holds the key to understanding attack behaviors and diagnosing vulnerabilities. Still, their analysis remains a daunting challenge. Recently, Language Models (LMs) have demonstrated unmatched potential in understanding natural and programming languages. The question arises whether and how LMs could be also useful for security experts since their logs contain intrinsically confused and obfuscated information. In this paper, we systematically study how to benefit from the state-of-the-art in LM to automatically analyze text-like Unix shell attack logs. We present a thorough design methodology that leads to LogPr\'ecis. It receives as input raw shell sessions and automatically identifies and assigns the attacker tactic to each portion of the session, i.e., unveiling the sequence of the attacker's goals. We demonstrate LogPr\'ecis capability to support the analysis of two large datasets containing about 400,000 unique Unix shell attacks. LogPr\'ecis reduces them into about 3,000 fingerprints, each grouping sessions with the same sequence of tactics. The abstraction it provides lets the analyst better understand attacks, identify fingerprints, detect novelty, link similar attacks, and track families and mutations. Overall, LogPr\'ecis, released as open source, paves the way for better and more responsive defense against cyberattacks.
-
-
-
-## **50. Jailbreaker: Automated Jailbreak Across Multiple Large Language Model Chatbots**
-
-cs.CR
-
-**SubmitDate**: 2023-07-16    [abs](http://arxiv.org/abs/2307.08715v1) [paper-pdf](http://arxiv.org/pdf/2307.08715v1)
-
-**Authors**: Gelei Deng, Yi Liu, Yuekang Li, Kailong Wang, Ying Zhang, Zefeng Li, Haoyu Wang, Tianwei Zhang, Yang Liu
-
-**Abstract**: Large Language Models (LLMs) have revolutionized Artificial Intelligence (AI) services due to their exceptional proficiency in understanding and generating human-like text. LLM chatbots, in particular, have seen widespread adoption, transforming human-machine interactions. However, these LLM chatbots are susceptible to "jailbreak" attacks, where malicious users manipulate prompts to elicit inappropriate or sensitive responses, contravening service policies. Despite existing attempts to mitigate such threats, our research reveals a substantial gap in our understanding of these vulnerabilities, largely due to the undisclosed defensive measures implemented by LLM service providers.   In this paper, we present Jailbreaker, a comprehensive framework that offers an in-depth understanding of jailbreak attacks and countermeasures. Our work makes a dual contribution. First, we propose an innovative methodology inspired by time-based SQL injection techniques to reverse-engineer the defensive strategies of prominent LLM chatbots, such as ChatGPT, Bard, and Bing Chat. This time-sensitive approach uncovers intricate details about these services' defenses, facilitating a proof-of-concept attack that successfully bypasses their mechanisms. Second, we introduce an automatic generation method for jailbreak prompts. Leveraging a fine-tuned LLM, we validate the potential of automated jailbreak generation across various commercial LLM chatbots. Our method achieves a promising average success rate of 21.58%, significantly outperforming the effectiveness of existing techniques. We have responsibly disclosed our findings to the concerned service providers, underscoring the urgent need for more robust defenses. Jailbreaker thus marks a significant step towards understanding and mitigating jailbreak threats in the realm of LLM chatbots.
 
 
 

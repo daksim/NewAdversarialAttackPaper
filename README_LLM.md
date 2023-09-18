@@ -1,9 +1,21 @@
 # Latest Adversarial Attack Papers
-**update at 2023-09-15 18:45:02**
+**update at 2023-09-18 09:33:32**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. RAIN: Your Language Models Can Align Themselves without Finetuning**
+## **1. ICLEF: In-Context Learning with Expert Feedback for Explainable Style Transfer**
+
+cs.CL
+
+**SubmitDate**: 2023-09-15    [abs](http://arxiv.org/abs/2309.08583v1) [paper-pdf](http://arxiv.org/pdf/2309.08583v1)
+
+**Authors**: Arkadiy Saakyan, Smaranda Muresan
+
+**Abstract**: While state-of-the-art language models excel at the style transfer task, current work does not address explainability of style transfer systems. Explanations could be generated using large language models such as GPT-3.5 and GPT-4, but the use of such complex systems is inefficient when smaller, widely distributed, and transparent alternatives are available. We propose a framework to augment and improve a formality style transfer dataset with explanations via model distillation from ChatGPT. To further refine the generated explanations, we propose a novel way to incorporate scarce expert human feedback using in-context learning (ICLEF: In-Context Learning from Expert Feedback) by prompting ChatGPT to act as a critic to its own outputs. We use the resulting dataset of 9,960 explainable formality style transfer instances (e-GYAFC) to show that current openly distributed instruction-tuned models (and, in some settings, ChatGPT) perform poorly on the task, and that fine-tuning on our high-quality dataset leads to significant improvements as shown by automatic evaluation. In human evaluation, we show that models much smaller than ChatGPT fine-tuned on our data align better with expert preferences. Finally, we discuss two potential applications of models fine-tuned on the explainable style transfer task: interpretable authorship verification and interpretable adversarial attacks on AI-generated text detectors.
+
+
+
+## **2. RAIN: Your Language Models Can Align Themselves without Finetuning**
 
 cs.CL
 
@@ -15,7 +27,7 @@ cs.CL
 
 
 
-## **2. Games and Argumentation: Time for a Family Reunion!**
+## **3. Games and Argumentation: Time for a Family Reunion!**
 
 cs.LO
 
@@ -29,7 +41,7 @@ Fourth Workshop on Explainable Logic-Based Knowledge Representation  (XLoKR), Se
 
 
 
-## **3. FuzzLLM: A Novel and Universal Fuzzing Framework for Proactively Discovering Jailbreak Vulnerabilities in Large Language Models**
+## **4. FuzzLLM: A Novel and Universal Fuzzing Framework for Proactively Discovering Jailbreak Vulnerabilities in Large Language Models**
 
 cs.CR
 
@@ -43,7 +55,7 @@ In submission, a preprint version
 
 
 
-## **4. RatGPT: Turning online LLMs into Proxies for Malware Attacks**
+## **5. RatGPT: Turning online LLMs into Proxies for Malware Attacks**
 
 cs.CR
 
@@ -55,7 +67,7 @@ cs.CR
 
 
 
-## **5. Demystifying RCE Vulnerabilities in LLM-Integrated Apps**
+## **6. Demystifying RCE Vulnerabilities in LLM-Integrated Apps**
 
 cs.CR
 
@@ -67,7 +79,7 @@ cs.CR
 
 
 
-## **6. A Comprehensive Overview of Backdoor Attacks in Large Language Models within Communication Networks**
+## **7. A Comprehensive Overview of Backdoor Attacks in Large Language Models within Communication Networks**
 
 cs.CR
 
@@ -79,7 +91,7 @@ cs.CR
 
 
 
-## **7. Certifying LLM Safety against Adversarial Prompting**
+## **8. Certifying LLM Safety against Adversarial Prompting**
 
 cs.CL
 
@@ -91,7 +103,7 @@ cs.CL
 
 
 
-## **8. Baseline Defenses for Adversarial Attacks Against Aligned Language Models**
+## **9. Baseline Defenses for Adversarial Attacks Against Aligned Language Models**
 
 cs.LG
 
@@ -105,7 +117,7 @@ cs.LG
 
 
 
-## **9. MathAttack: Attacking Large Language Models Towards Math Solving Ability**
+## **10. MathAttack: Attacking Large Language Models Towards Math Solving Ability**
 
 cs.CL
 
@@ -119,7 +131,7 @@ cs.CL
 
 
 
-## **10. OUTFOX: LLM-generated Essay Detection through In-context Learning with Adversarially Generated Examples**
+## **11. OUTFOX: LLM-generated Essay Detection through In-context Learning with Adversarially Generated Examples**
 
 cs.CL
 
@@ -131,7 +143,7 @@ cs.CL
 
 
 
-## **11. Open Sesame! Universal Black Box Jailbreaking of Large Language Models**
+## **12. Open Sesame! Universal Black Box Jailbreaking of Large Language Models**
 
 cs.CL
 
@@ -143,7 +155,7 @@ cs.CL
 
 
 
-## **12. Combing for Credentials: Active Pattern Extraction from Smart Reply**
+## **13. Combing for Credentials: Active Pattern Extraction from Smart Reply**
 
 cs.CR
 
@@ -155,7 +167,7 @@ cs.CR
 
 
 
-## **13. Why do universal adversarial attacks work on large language models?: Geometry might be the answer**
+## **14. Why do universal adversarial attacks work on large language models?: Geometry might be the answer**
 
 cs.LG
 
@@ -169,7 +181,7 @@ cs.LG
 
 
 
-## **14. Temporal-Distributed Backdoor Attack Against Video Based Action Recognition**
+## **15. Temporal-Distributed Backdoor Attack Against Video Based Action Recognition**
 
 cs.CV
 
@@ -181,7 +193,7 @@ cs.CV
 
 
 
-## **15. LLM in the Shell: Generative Honeypots**
+## **16. LLM in the Shell: Generative Honeypots**
 
 cs.CR
 
@@ -195,7 +207,7 @@ cs.CR
 
 
 
-## **16. The Effectiveness of Large Language Models (ChatGPT and CodeBERT) for Security-Oriented Code Analysis**
+## **17. The Effectiveness of Large Language Models (ChatGPT and CodeBERT) for Security-Oriented Code Analysis**
 
 cs.CR
 
@@ -209,7 +221,7 @@ cs.CR
 
 
 
-## **17. Identifying and Mitigating the Security Risks of Generative AI**
+## **18. Identifying and Mitigating the Security Risks of Generative AI**
 
 cs.AI
 
@@ -221,7 +233,7 @@ cs.AI
 
 
 
-## **18. Out of the Cage: How Stochastic Parrots Win in Cyber Security Environments**
+## **19. Out of the Cage: How Stochastic Parrots Win in Cyber Security Environments**
 
 cs.CR
 
@@ -235,7 +247,7 @@ Under review. 10 pages plus appendices, 7 figures, 4 tables. Edit:  fix e-mails 
 
 
 
-## **19. Detecting Language Model Attacks with Perplexity**
+## **20. Detecting Language Model Attacks with Perplexity**
 
 cs.CL
 
@@ -247,7 +259,7 @@ cs.CL
 
 
 
-## **20. A Survey of Safety and Trustworthiness of Large Language Models through the Lens of Verification and Validation**
+## **21. A Survey of Safety and Trustworthiness of Large Language Models through the Lens of Verification and Validation**
 
 cs.AI
 
@@ -259,7 +271,7 @@ cs.AI
 
 
 
-## **21. LMSanitator: Defending Prompt-Tuning Against Task-Agnostic Backdoors**
+## **22. LMSanitator: Defending Prompt-Tuning Against Task-Agnostic Backdoors**
 
 cs.CL
 
@@ -273,7 +285,7 @@ To Appear in the Network and Distributed System Security (NDSS)  Symposium 2024,
 
 
 
-## **22. Self-Deception: Reverse Penetrating the Semantic Firewall of Large Language Models**
+## **23. Self-Deception: Reverse Penetrating the Semantic Firewall of Large Language Models**
 
 cs.CL
 
@@ -287,7 +299,7 @@ Serious errors were found in the experiment, which may lead to the  overturning 
 
 
 
-## **23. PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts**
+## **24. PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts**
 
 cs.CL
 
@@ -301,7 +313,7 @@ Technical report; updated with new experiments and related work; 27  pages; code
 
 
 
-## **24. On the Uses of Large Language Models to Interpret Ambiguous Cyberattack Descriptions**
+## **25. On the Uses of Large Language Models to Interpret Ambiguous Cyberattack Descriptions**
 
 cs.AI
 
@@ -313,7 +325,7 @@ cs.AI
 
 
 
-## **25. Adversarial Attacks on Code Models with Discriminative Graph Patterns**
+## **26. Adversarial Attacks on Code Models with Discriminative Graph Patterns**
 
 cs.SE
 
@@ -325,7 +337,7 @@ cs.SE
 
 
 
-## **26. TrojText: Test-time Invisible Textual Trojan Insertion**
+## **27. TrojText: Test-time Invisible Textual Trojan Insertion**
 
 cs.CL
 
@@ -339,7 +351,7 @@ In The Eleventh International Conference on Learning Representations.  2023 (ICL
 
 
 
-## **27. Getting pwn'd by AI: Penetration Testing with Large Language Models**
+## **28. Getting pwn'd by AI: Penetration Testing with Large Language Models**
 
 cs.CL
 
@@ -351,7 +363,7 @@ cs.CL
 
 
 
-## **28. Do you really follow me? Adversarial Instructions for Evaluating the Robustness of Large Language Models**
+## **29. Do you really follow me? Adversarial Instructions for Evaluating the Robustness of Large Language Models**
 
 cs.CL
 
@@ -365,7 +377,7 @@ Work in progress
 
 
 
-## **29. Visual Adversarial Examples Jailbreak Aligned Large Language Models**
+## **30. Visual Adversarial Examples Jailbreak Aligned Large Language Models**
 
 cs.CR
 
@@ -377,7 +389,7 @@ cs.CR
 
 
 
-## **30. From Prompt Injections to SQL Injection Attacks: How Protected is Your LLM-Integrated Web Application?**
+## **31. From Prompt Injections to SQL Injection Attacks: How Protected is Your LLM-Integrated Web Application?**
 
 cs.CR
 
@@ -391,7 +403,7 @@ cs.CR
 
 
 
-## **31. Robustness Over Time: Understanding Adversarial Examples' Effectiveness on Longitudinal Versions of Large Language Models**
+## **32. Robustness Over Time: Understanding Adversarial Examples' Effectiveness on Longitudinal Versions of Large Language Models**
 
 cs.CR
 
@@ -403,7 +415,7 @@ cs.CR
 
 
 
-## **32. LLM Self Defense: By Self Examination, LLMs Know They Are Being Tricked**
+## **33. LLM Self Defense: By Self Examination, LLMs Know They Are Being Tricked**
 
 cs.CL
 
@@ -415,7 +427,7 @@ cs.CL
 
 
 
-## **33. S3C2 Summit 2023-06: Government Secure Supply Chain Summit**
+## **34. S3C2 Summit 2023-06: Government Secure Supply Chain Summit**
 
 cs.CR
 
@@ -429,7 +441,7 @@ arXiv admin note: text overlap with arXiv:2307.16557,  arXiv:2307.15642
 
 
 
-## **34. An Empirical Study on Using Large Language Models to Analyze Software Supply Chain Security Failures**
+## **35. An Empirical Study on Using Large Language Models to Analyze Software Supply Chain Security Failures**
 
 cs.CR
 
@@ -443,7 +455,7 @@ cs.CR
 
 
 
-## **35. "Do Anything Now": Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models**
+## **36. "Do Anything Now": Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models**
 
 cs.CR
 
@@ -455,7 +467,7 @@ cs.CR
 
 
 
-## **36. Mondrian: Prompt Abstraction Attack Against Large Language Models for Cheaper API Pricing**
+## **37. Mondrian: Prompt Abstraction Attack Against Large Language Models for Cheaper API Pricing**
 
 cs.CR
 
@@ -467,7 +479,7 @@ cs.CR
 
 
 
-## **37. ParaFuzz: An Interpretability-Driven Technique for Detecting Poisoned Samples in NLP**
+## **38. ParaFuzz: An Interpretability-Driven Technique for Detecting Poisoned Samples in NLP**
 
 cs.CR
 
@@ -479,7 +491,7 @@ cs.CR
 
 
 
-## **38. Fundamental Limitations of Alignment in Large Language Models**
+## **39. Fundamental Limitations of Alignment in Large Language Models**
 
 cs.CL
 
@@ -491,7 +503,7 @@ cs.CL
 
 
 
-## **39. LimeAttack: Local Explainable Method for Textual Hard-Label Adversarial Attack**
+## **40. LimeAttack: Local Explainable Method for Textual Hard-Label Adversarial Attack**
 
 cs.CL
 
@@ -505,7 +517,7 @@ cs.CL
 
 
 
-## **40. Adversarially Robust Neural Legal Judgement Systems**
+## **41. Adversarially Robust Neural Legal Judgement Systems**
 
 cs.CL
 
@@ -517,7 +529,7 @@ cs.CL
 
 
 
-## **41. Virtual Prompt Injection for Instruction-Tuned Large Language Models**
+## **42. Virtual Prompt Injection for Instruction-Tuned Large Language Models**
 
 cs.CL
 
@@ -529,7 +541,7 @@ cs.CL
 
 
 
-## **42. Competence-Based Analysis of Language Models**
+## **43. Competence-Based Analysis of Language Models**
 
 cs.CL
 
@@ -541,7 +553,7 @@ cs.CL
 
 
 
-## **43. Universal and Transferable Adversarial Attacks on Aligned Language Models**
+## **44. Universal and Transferable Adversarial Attacks on Aligned Language Models**
 
 cs.CL
 
@@ -553,7 +565,7 @@ cs.CL
 
 
 
-## **44. Backdoor Attacks for In-Context Learning with Language Models**
+## **45. Backdoor Attacks for In-Context Learning with Language Models**
 
 cs.CR
 
@@ -567,7 +579,7 @@ AdvML Frontiers Workshop 2023
 
 
 
-## **45. Plug and Pray: Exploiting off-the-shelf components of Multi-Modal Models**
+## **46. Plug and Pray: Exploiting off-the-shelf components of Multi-Modal Models**
 
 cs.CR
 
@@ -579,7 +591,7 @@ cs.CR
 
 
 
-## **46. Set-level Guidance Attack: Boosting Adversarial Transferability of Vision-Language Pre-training Models**
+## **47. Set-level Guidance Attack: Boosting Adversarial Transferability of Vision-Language Pre-training Models**
 
 cs.CV
 
@@ -593,7 +605,7 @@ To appear in ICCV 2023
 
 
 
-## **47. Foundational Models Defining a New Era in Vision: A Survey and Outlook**
+## **48. Foundational Models Defining a New Era in Vision: A Survey and Outlook**
 
 cs.CV
 
@@ -607,7 +619,7 @@ Project page:  https://github.com/awaisrauf/Awesome-CV-Foundational-Models
 
 
 
-## **48. Lost In Translation: Generating Adversarial Examples Robust to Round-Trip Translation**
+## **49. Lost In Translation: Generating Adversarial Examples Robust to Round-Trip Translation**
 
 cs.CL
 
@@ -621,7 +633,7 @@ Published at International Conference on Acoustics, Speech, and  Signal Processi
 
 
 
-## **49. Security and Privacy Issues of Federated Learning**
+## **50. Security and Privacy Issues of Federated Learning**
 
 cs.CR
 
@@ -632,18 +644,6 @@ cs.CR
 **Authors**: Jahid Hasan
 
 **Abstract**: Federated Learning (FL) has emerged as a promising approach to address data privacy and confidentiality concerns by allowing multiple participants to construct a shared model without centralizing sensitive data. However, this decentralized paradigm introduces new security challenges, necessitating a comprehensive identification and classification of potential risks to ensure FL's security guarantees. This paper presents a comprehensive taxonomy of security and privacy challenges in Federated Learning (FL) across various machine learning models, including large language models. We specifically categorize attacks performed by the aggregator and participants, focusing on poisoning attacks, backdoor attacks, membership inference attacks, generative adversarial network (GAN) based attacks, and differential privacy attacks. Additionally, we propose new directions for future research, seeking innovative solutions to fortify FL systems against emerging security risks and uphold sensitive data confidentiality in distributed learning environments.
-
-
-
-## **50. A LLM Assisted Exploitation of AI-Guardian**
-
-cs.CR
-
-**SubmitDate**: 2023-07-20    [abs](http://arxiv.org/abs/2307.15008v1) [paper-pdf](http://arxiv.org/pdf/2307.15008v1)
-
-**Authors**: Nicholas Carlini
-
-**Abstract**: Large language models (LLMs) are now highly capable at a diverse range of tasks. This paper studies whether or not GPT-4, one such LLM, is capable of assisting researchers in the field of adversarial machine learning. As a case study, we evaluate the robustness of AI-Guardian, a recent defense to adversarial examples published at IEEE S&P 2023, a top computer security conference. We completely break this defense: the proposed scheme does not increase robustness compared to an undefended baseline.   We write none of the code to attack this model, and instead prompt GPT-4 to implement all attack algorithms following our instructions and guidance. This process was surprisingly effective and efficient, with the language model at times producing code from ambiguous instructions faster than the author of this paper could have done. We conclude by discussing (1) the warning signs present in the evaluation that suggested to us AI-Guardian would be broken, and (2) our experience with designing attacks and performing novel research using the most recent advances in language modeling.
 
 
 

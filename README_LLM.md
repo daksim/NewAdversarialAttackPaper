@@ -1,9 +1,47 @@
 # Latest Large Language Model Attack Papers
-**update at 2023-10-25 10:02:49**
+**update at 2023-10-30 09:51:56**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_LLM_CN.md)
 
-## **1. Self-Guard: Empower the LLM to Safeguard Itself**
+## **1. ParaFuzz: An Interpretability-Driven Technique for Detecting Poisoned Samples in NLP**
+
+cs.CR
+
+**SubmitDate**: 2023-10-27    [abs](http://arxiv.org/abs/2308.02122v2) [paper-pdf](http://arxiv.org/pdf/2308.02122v2)
+
+**Authors**: Lu Yan, Zhuo Zhang, Guanhong Tao, Kaiyuan Zhang, Xuan Chen, Guangyu Shen, Xiangyu Zhang
+
+**Abstract**: Backdoor attacks have emerged as a prominent threat to natural language processing (NLP) models, where the presence of specific triggers in the input can lead poisoned models to misclassify these inputs to predetermined target classes. Current detection mechanisms are limited by their inability to address more covert backdoor strategies, such as style-based attacks. In this work, we propose an innovative test-time poisoned sample detection framework that hinges on the interpretability of model predictions, grounded in the semantic meaning of inputs. We contend that triggers (e.g., infrequent words) are not supposed to fundamentally alter the underlying semantic meanings of poisoned samples as they want to stay stealthy. Based on this observation, we hypothesize that while the model's predictions for paraphrased clean samples should remain stable, predictions for poisoned samples should revert to their true labels upon the mutations applied to triggers during the paraphrasing process. We employ ChatGPT, a state-of-the-art large language model, as our paraphraser and formulate the trigger-removal task as a prompt engineering problem. We adopt fuzzing, a technique commonly used for unearthing software vulnerabilities, to discover optimal paraphrase prompts that can effectively eliminate triggers while concurrently maintaining input semantics. Experiments on 4 types of backdoor attacks, including the subtle style backdoors, and 4 distinct datasets demonstrate that our approach surpasses baseline methods, including STRIP, RAP, and ONION, in precision and recall.
+
+
+
+## **2. MasterKey: Automated Jailbreak Across Multiple Large Language Model Chatbots**
+
+cs.CR
+
+**SubmitDate**: 2023-10-25    [abs](http://arxiv.org/abs/2307.08715v2) [paper-pdf](http://arxiv.org/pdf/2307.08715v2)
+
+**Authors**: Gelei Deng, Yi Liu, Yuekang Li, Kailong Wang, Ying Zhang, Zefeng Li, Haoyu Wang, Tianwei Zhang, Yang Liu
+
+**Abstract**: Large Language Models (LLMs) have revolutionized Artificial Intelligence (AI) services due to their exceptional proficiency in understanding and generating human-like text. LLM chatbots, in particular, have seen widespread adoption, transforming human-machine interactions. However, these LLM chatbots are susceptible to "jailbreak" attacks, where malicious users manipulate prompts to elicit inappropriate or sensitive responses, contravening service policies. Despite existing attempts to mitigate such threats, our research reveals a substantial gap in our understanding of these vulnerabilities, largely due to the undisclosed defensive measures implemented by LLM service providers.   In this paper, we present Jailbreaker, a comprehensive framework that offers an in-depth understanding of jailbreak attacks and countermeasures. Our work makes a dual contribution. First, we propose an innovative methodology inspired by time-based SQL injection techniques to reverse-engineer the defensive strategies of prominent LLM chatbots, such as ChatGPT, Bard, and Bing Chat. This time-sensitive approach uncovers intricate details about these services' defenses, facilitating a proof-of-concept attack that successfully bypasses their mechanisms. Second, we introduce an automatic generation method for jailbreak prompts. Leveraging a fine-tuned LLM, we validate the potential of automated jailbreak generation across various commercial LLM chatbots. Our method achieves a promising average success rate of 21.58%, significantly outperforming the effectiveness of existing techniques. We have responsibly disclosed our findings to the concerned service providers, underscoring the urgent need for more robust defenses. Jailbreaker thus marks a significant step towards understanding and mitigating jailbreak threats in the realm of LLM chatbots.
+
+
+
+## **3. Locally Differentially Private Document Generation Using Zero Shot Prompting**
+
+cs.CL
+
+Accepted at EMNLP 2023 (Findings)
+
+**SubmitDate**: 2023-10-24    [abs](http://arxiv.org/abs/2310.16111v1) [paper-pdf](http://arxiv.org/pdf/2310.16111v1)
+
+**Authors**: Saiteja Utpala, Sara Hooker, Pin Yu Chen
+
+**Abstract**: Numerous studies have highlighted the privacy risks associated with pretrained large language models. In contrast, our research offers a unique perspective by demonstrating that pretrained large language models can effectively contribute to privacy preservation. We propose a locally differentially private mechanism called DP-Prompt, which leverages the power of pretrained large language models and zero-shot prompting to counter author de-anonymization attacks while minimizing the impact on downstream utility. When DP-Prompt is used with a powerful language model like ChatGPT (gpt-3.5), we observe a notable reduction in the success rate of de-anonymization attacks, showing that it surpasses existing approaches by a considerable margin despite its simpler design. For instance, in the case of the IMDB dataset, DP-Prompt (with ChatGPT) perfectly recovers the clean sentiment F1 score while achieving a 46\% reduction in author identification F1 score against static attackers and a 26\% reduction against adaptive attackers. We conduct extensive experiments across six open-source large language models, ranging up to 7 billion parameters, to analyze various effects of the privacy-utility tradeoff.
+
+
+
+## **4. Self-Guard: Empower the LLM to Safeguard Itself**
 
 cs.CL
 
@@ -15,7 +53,7 @@ cs.CL
 
 
 
-## **2. A Survey on LLM-generated Text Detection: Necessity, Methods, and Future Directions**
+## **5. A Survey on LLM-generated Text Detection: Necessity, Methods, and Future Directions**
 
 cs.CL
 
@@ -27,7 +65,7 @@ cs.CL
 
 
 
-## **3. A Survey on Detection of LLMs-Generated Content**
+## **6. A Survey on Detection of LLMs-Generated Content**
 
 cs.CL
 
@@ -41,7 +79,7 @@ We will keep updating at  https://github.com/Xianjun-Yang/Awesome_papers_on_LLMs
 
 
 
-## **4. LLM Self Defense: By Self Examination, LLMs Know They Are Being Tricked**
+## **7. LLM Self Defense: By Self Examination, LLMs Know They Are Being Tricked**
 
 cs.CL
 
@@ -53,7 +91,7 @@ cs.CL
 
 
 
-## **5. PrivInfer: Privacy-Preserving Inference for Black-box Large Language Model**
+## **8. PrivInfer: Privacy-Preserving Inference for Black-box Large Language Model**
 
 cs.CR
 
@@ -65,7 +103,7 @@ cs.CR
 
 
 
-## **6. The Janus Interface: How Fine-Tuning in Large Language Models Amplifies the Privacy Risks**
+## **9. The Janus Interface: How Fine-Tuning in Large Language Models Amplifies the Privacy Risks**
 
 cs.CR
 
@@ -77,7 +115,7 @@ cs.CR
 
 
 
-## **7. AutoDAN: Automatic and Interpretable Adversarial Attacks on Large Language Models**
+## **10. AutoDAN: Automatic and Interpretable Adversarial Attacks on Large Language Models**
 
 cs.CR
 
@@ -85,11 +123,11 @@ cs.CR
 
 **Authors**: Sicheng Zhu, Ruiyi Zhang, Bang An, Gang Wu, Joe Barrow, Zichao Wang, Furong Huang, Ani Nenkova, Tong Sun
 
-**Abstract**: Safety alignment of Large Language Models (LLMs) can be compromised with manual jailbreak attacks and (automatic) adversarial attacks. Recent work suggests that patching LLMs against these attacks is possible: manual jailbreak attacks are human-readable but often limited and public, making them easy to block; adversarial attacks generate gibberish prompts that can be detected using perplexity-based filters. In this paper, we show that these solutions may be too optimistic. We propose an interpretable adversarial attack, \texttt{AutoDAN}, that combines the strengths of both types of attacks. It automatically generates attack prompts that bypass perplexity-based filters while maintaining a high attack success rate like manual jailbreak attacks. These prompts are interpretable and diverse, exhibiting strategies commonly used in manual jailbreak attacks, and transfer better than their non-readable counterparts when using limited training data or a single proxy model. We also customize \texttt{AutoDAN}'s objective to leak system prompts, another jailbreak application not addressed in the adversarial attack literature. %, demonstrating the versatility of the approach. We can also customize the objective of \texttt{AutoDAN} to leak system prompts, beyond the ability to elicit harmful content from the model, demonstrating the versatility of the approach. Our work provides a new way to red-team LLMs and to understand the mechanism of jailbreak attacks.
+**Abstract**: Safety alignment of Large Language Models (LLMs) can be compromised with manual jailbreak attacks and (automatic) adversarial attacks. Recent work suggests that patching LLMs against these attacks is possible: manual jailbreak attacks are human-readable but often limited and public, making them easy to block; adversarial attacks generate gibberish prompts that can be detected using perplexity-based filters. In this paper, we show that these solutions may be too optimistic. We propose an interpretable adversarial attack, \texttt{AutoDAN}, that combines the strengths of both types of attacks. It automatically generates attack prompts that bypass perplexity-based filters while maintaining a high attack success rate like manual jailbreak attacks. These prompts are interpretable and diverse, exhibiting strategies commonly used in manual jailbreak attacks, and transfer better than their non-readable counterparts when using limited training data or a single proxy model. We also customize \texttt{AutoDAN}'s objective to leak system prompts, another jailbreak application not addressed in the adversarial attack literature. Our work provides a new way to red-team LLMs and to understand the mechanism of jailbreak attacks.
 
 
 
-## **8. Did the Neurons Read your Book? Document-level Membership Inference for Large Language Models**
+## **11. Did the Neurons Read your Book? Document-level Membership Inference for Large Language Models**
 
 cs.CL
 
@@ -101,7 +139,7 @@ cs.CL
 
 
 
-## **9. TrojLLM: A Black-box Trojan Prompt Attack on Large Language Models**
+## **12. TrojLLM: A Black-box Trojan Prompt Attack on Large Language Models**
 
 cs.CR
 
@@ -115,7 +153,7 @@ Accepted by NeurIPS'23
 
 
 
-## **10. MoPe: Model Perturbation-based Privacy Attacks on Language Models**
+## **13. MoPe: Model Perturbation-based Privacy Attacks on Language Models**
 
 cs.LG
 
@@ -127,7 +165,7 @@ cs.LG
 
 
 
-## **11. Language Model Unalignment: Parametric Red-Teaming to Expose Hidden Harms and Biases**
+## **14. Language Model Unalignment: Parametric Red-Teaming to Expose Hidden Harms and Biases**
 
 cs.CL
 
@@ -141,7 +179,7 @@ Under Review
 
 
 
-## **12. LoFT: Local Proxy Fine-tuning For Improving Transferability Of Adversarial Attacks Against Large Language Model**
+## **15. LoFT: Local Proxy Fine-tuning For Improving Transferability Of Adversarial Attacks Against Large Language Model**
 
 cs.CL
 
@@ -153,7 +191,7 @@ cs.CL
 
 
 
-## **13. An LLM can Fool Itself: A Prompt-Based Adversarial Attack**
+## **16. An LLM can Fool Itself: A Prompt-Based Adversarial Attack**
 
 cs.CR
 
@@ -165,7 +203,7 @@ cs.CR
 
 
 
-## **14. Mitigating Backdoor Poisoning Attacks through the Lens of Spurious Correlation**
+## **17. Mitigating Backdoor Poisoning Attacks through the Lens of Spurious Correlation**
 
 cs.CL
 
@@ -179,7 +217,7 @@ accepted to EMNLP2023 (main conference)
 
 
 
-## **15. Assessing Privacy Risks in Language Models: A Case Study on Summarization Tasks**
+## **18. Assessing Privacy Risks in Language Models: A Case Study on Summarization Tasks**
 
 cs.CL
 
@@ -191,7 +229,7 @@ cs.CL
 
 
 
-## **16. Towards Robust Pruning: An Adaptive Knowledge-Retention Pruning Strategy for Language Models**
+## **19. Towards Robust Pruning: An Adaptive Knowledge-Retention Pruning Strategy for Language Models**
 
 cs.CL
 
@@ -203,7 +241,7 @@ cs.CL
 
 
 
-## **17. Prompt Injection Attacks and Defenses in LLM-Integrated Applications**
+## **20. Prompt Injection Attacks and Defenses in LLM-Integrated Applications**
 
 cs.CR
 
@@ -215,7 +253,7 @@ cs.CR
 
 
 
-## **18. Automatic Hallucination Assessment for Aligned Large Language Models via Transferable Adversarial Attacks**
+## **21. Automatic Hallucination Assessment for Aligned Large Language Models via Transferable Adversarial Attacks**
 
 cs.CL
 
@@ -227,7 +265,7 @@ cs.CL
 
 
 
-## **19. Attack Prompt Generation for Red Teaming and Defending Large Language Models**
+## **22. Attack Prompt Generation for Red Teaming and Defending Large Language Models**
 
 cs.CL
 
@@ -241,7 +279,7 @@ Accepted to EMNLP 2023 (Findings)
 
 
 
-## **20. Red Teaming Language Model Detectors with Language Models**
+## **23. Red Teaming Language Model Detectors with Language Models**
 
 cs.CL
 
@@ -255,7 +293,7 @@ Preprint. Accepted by TACL
 
 
 
-## **21. PoisonPrompt: Backdoor Attack on Prompt-based Large Language Models**
+## **24. PoisonPrompt: Backdoor Attack on Prompt-based Large Language Models**
 
 cs.CL
 
@@ -269,7 +307,7 @@ Code will be released on: https://github.com/grasses/PoisonPrompt
 
 
 
-## **22. REMARK-LLM: A Robust and Efficient Watermarking Framework for Generative Large Language Models**
+## **25. REMARK-LLM: A Robust and Efficient Watermarking Framework for Generative Large Language Models**
 
 cs.CR
 
@@ -281,7 +319,7 @@ cs.CR
 
 
 
-## **23. PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts**
+## **26. PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts**
 
 cs.CL
 
@@ -295,7 +333,7 @@ Technical report; code is at:  https://github.com/microsoft/promptbench
 
 
 
-## **24. Paraphrasing evades detectors of AI-generated text, but retrieval is an effective defense**
+## **27. Paraphrasing evades detectors of AI-generated text, but retrieval is an effective defense**
 
 cs.CL
 
@@ -309,7 +347,7 @@ NeurIPS 2023 camera ready (32 pages). Code, models, data available in  https://g
 
 
 
-## **25. Identifying and Mitigating the Security Risks of Generative AI**
+## **28. Identifying and Mitigating the Security Risks of Generative AI**
 
 cs.AI
 
@@ -321,7 +359,7 @@ cs.AI
 
 
 
-## **26. Last One Standing: A Comparative Analysis of Security and Privacy of Soft Prompt Tuning, LoRA, and In-Context Learning**
+## **29. Last One Standing: A Comparative Analysis of Security and Privacy of Soft Prompt Tuning, LoRA, and In-Context Learning**
 
 cs.CR
 
@@ -333,7 +371,7 @@ cs.CR
 
 
 
-## **27. Survey of Vulnerabilities in Large Language Models Revealed by Adversarial Attacks**
+## **30. Survey of Vulnerabilities in Large Language Models Revealed by Adversarial Attacks**
 
 cs.CL
 
@@ -345,7 +383,7 @@ cs.CL
 
 
 
-## **28. Fake News in Sheep's Clothing: Robust Fake News Detection Against LLM-Empowered Style Attacks**
+## **31. Fake News in Sheep's Clothing: Robust Fake News Detection Against LLM-Empowered Style Attacks**
 
 cs.CL
 
@@ -357,7 +395,7 @@ cs.CL
 
 
 
-## **29. Privacy in Large Language Models: Attacks, Defenses and Future Directions**
+## **32. Privacy in Large Language Models: Attacks, Defenses and Future Directions**
 
 cs.CL
 
@@ -369,7 +407,7 @@ cs.CL
 
 
 
-## **30. Prompt Packer: Deceiving LLMs through Compositional Instruction with Hidden Attacks**
+## **33. Prompt Packer: Deceiving LLMs through Compositional Instruction with Hidden Attacks**
 
 cs.CL
 
@@ -381,7 +419,7 @@ cs.CL
 
 
 
-## **31. LMSanitator: Defending Prompt-Tuning Against Task-Agnostic Backdoors**
+## **34. LMSanitator: Defending Prompt-Tuning Against Task-Agnostic Backdoors**
 
 cs.CL
 
@@ -395,7 +433,7 @@ To Appear in the Network and Distributed System Security (NDSS)  Symposium 2024,
 
 
 
-## **32. How Robust is Google's Bard to Adversarial Image Attacks?**
+## **35. How Robust is Google's Bard to Adversarial Image Attacks?**
 
 cs.CV
 
@@ -409,7 +447,7 @@ Technical report
 
 
 
-## **33. Adversarial Demonstration Attacks on Large Language Models**
+## **36. Adversarial Demonstration Attacks on Large Language Models**
 
 cs.CL
 
@@ -421,7 +459,7 @@ cs.CL
 
 
 
-## **34. Jailbreaking Black Box Large Language Models in Twenty Queries**
+## **37. Jailbreaking Black Box Large Language Models in Twenty Queries**
 
 cs.LG
 
@@ -435,7 +473,7 @@ cs.LG
 
 
 
-## **35. User Inference Attacks on Large Language Models**
+## **38. User Inference Attacks on Large Language Models**
 
 cs.CR
 
@@ -447,7 +485,7 @@ cs.CR
 
 
 
-## **36. SmoothLLM: Defending Large Language Models Against Jailbreaking Attacks**
+## **39. SmoothLLM: Defending Large Language Models Against Jailbreaking Attacks**
 
 cs.LG
 
@@ -459,7 +497,7 @@ cs.LG
 
 
 
-## **37. Composite Backdoor Attacks Against Large Language Models**
+## **40. Composite Backdoor Attacks Against Large Language Models**
 
 cs.CR
 
@@ -471,7 +509,7 @@ cs.CR
 
 
 
-## **38. Fundamental Limitations of Alignment in Large Language Models**
+## **41. Fundamental Limitations of Alignment in Large Language Models**
 
 cs.CL
 
@@ -483,7 +521,7 @@ cs.CL
 
 
 
-## **39. Catastrophic Jailbreak of Open-source LLMs via Exploiting Generation**
+## **42. Catastrophic Jailbreak of Open-source LLMs via Exploiting Generation**
 
 cs.CL
 
@@ -495,7 +533,7 @@ cs.CL
 
 
 
-## **40. Memorization of Named Entities in Fine-tuned BERT Models**
+## **43. Memorization of Named Entities in Fine-tuned BERT Models**
 
 cs.CL
 
@@ -509,7 +547,7 @@ accepted at CD-MAKE 2023
 
 
 
-## **41. Multilingual Jailbreak Challenges in Large Language Models**
+## **44. Multilingual Jailbreak Challenges in Large Language Models**
 
 cs.CL
 
@@ -521,7 +559,7 @@ cs.CL
 
 
 
-## **42. Red Teaming Game: A Game-Theoretic Framework for Red Teaming Language Models**
+## **45. Red Teaming Game: A Game-Theoretic Framework for Red Teaming Language Models**
 
 cs.CL
 
@@ -533,7 +571,7 @@ cs.CL
 
 
 
-## **43. Jailbreak and Guard Aligned Language Models with Only Few In-Context Demonstrations**
+## **46. Jailbreak and Guard Aligned Language Models with Only Few In-Context Demonstrations**
 
 cs.LG
 
@@ -545,7 +583,7 @@ cs.LG
 
 
 
-## **44. A Semantic Invariant Robust Watermark for Large Language Models**
+## **47. A Semantic Invariant Robust Watermark for Large Language Models**
 
 cs.CR
 
@@ -559,7 +597,7 @@ cs.CR
 
 
 
-## **45. Watermarking Classification Dataset for Copyright Protection**
+## **48. Watermarking Classification Dataset for Copyright Protection**
 
 cs.CR
 
@@ -571,7 +609,7 @@ cs.CR
 
 
 
-## **46. SCAR: Power Side-Channel Analysis at RTL-Level**
+## **49. SCAR: Power Side-Channel Analysis at RTL-Level**
 
 cs.CR
 
@@ -583,7 +621,7 @@ cs.CR
 
 
 
-## **47. Robust Backdoor Attack with Visible, Semantic, Sample-Specific, and Compatible Triggers**
+## **50. Robust Backdoor Attack with Visible, Semantic, Sample-Specific, and Compatible Triggers**
 
 cs.CV
 
@@ -592,42 +630,6 @@ cs.CV
 **Authors**: Ruotong Wang, Hongrui Chen, Zihao Zhu, Li Liu, Yong Zhang, Yanbo Fan, Baoyuan Wu
 
 **Abstract**: Deep neural networks (DNNs) can be manipulated to exhibit specific behaviors when exposed to specific trigger patterns, without affecting their performance on benign samples, dubbed backdoor attack. Some recent research has focused on designing invisible triggers for backdoor attacks to ensure visual stealthiness, while showing high effectiveness, even under backdoor defense. However, we find that these carefully designed invisible triggers are often sensitive to visual distortion during inference, such as Gaussian blurring or environmental variations in physical scenarios. This phenomenon could significantly undermine the practical effectiveness of attacks, but has been rarely paid attention to and thoroughly investigated. To address this limitation, we define a novel trigger called the Visible, Semantic, Sample-Specific, and Compatible trigger (VSSC trigger), to achieve effective, stealthy and robust to visual distortion simultaneously. To implement it, we develop an innovative approach by utilizing the powerful capabilities of large language models for choosing the suitable trigger and text-guided image editing techniques for generating the poisoned image with the trigger. Extensive experimental results and analysis validate the effectiveness, stealthiness and robustness of the VSSC trigger. It demonstrates superior robustness to distortions compared with most digital backdoor attacks and allows more efficient and flexible trigger integration compared to physical backdoor attacks. We hope that the proposed VSSC trigger and implementation approach could inspire future studies on designing more practical triggers in backdoor attacks.
-
-
-
-## **48. Demystifying RCE Vulnerabilities in LLM-Integrated Apps**
-
-cs.CR
-
-**SubmitDate**: 2023-10-08    [abs](http://arxiv.org/abs/2309.02926v2) [paper-pdf](http://arxiv.org/pdf/2309.02926v2)
-
-**Authors**: Tong Liu, Zizhuang Deng, Guozhu Meng, Yuekang Li, Kai Chen
-
-**Abstract**: In recent years, Large Language Models (LLMs) have demonstrated remarkable potential across various downstream tasks. LLM-integrated frameworks, which serve as the essential infrastructure, have given rise to many LLM-integrated web apps. However, some of these frameworks suffer from Remote Code Execution (RCE) vulnerabilities, allowing attackers to execute arbitrary code on apps' servers remotely via prompt injections. Despite the severity of these vulnerabilities, no existing work has been conducted for a systematic investigation of them. This leaves a great challenge on how to detect vulnerabilities in frameworks as well as LLM-integrated apps in real-world scenarios. To fill this gap, we present two novel strategies, including 1) a static analysis-based tool called LLMSmith to scan the source code of the framework to detect potential RCE vulnerabilities and 2) a prompt-based automated testing approach to verify the vulnerability in LLM-integrated web apps. We discovered 13 vulnerabilities in 6 frameworks, including 12 RCE vulnerabilities and 1 arbitrary file read/write vulnerability. 11 of them are confirmed by the framework developers, resulting in the assignment of 7 CVE IDs. After testing 51 apps, we found vulnerabilities in 17 apps, 16 of which are vulnerable to RCE and 1 to SQL injection. We responsibly reported all 17 issues to the corresponding developers and received acknowledgments. Furthermore, we amplify the attack impact beyond achieving RCE by allowing attackers to exploit other app users (e.g. app responses hijacking, user API key leakage) without direct interaction between the attacker and the victim. Lastly, we propose some mitigating strategies for improving the security awareness of both framework and app developers, helping them to mitigate these risks effectively.
-
-
-
-## **49. Backdooring Instruction-Tuned Large Language Models with Virtual Prompt Injection**
-
-cs.CL
-
-**SubmitDate**: 2023-10-06    [abs](http://arxiv.org/abs/2307.16888v2) [paper-pdf](http://arxiv.org/pdf/2307.16888v2)
-
-**Authors**: Jun Yan, Vikas Yadav, Shiyang Li, Lichang Chen, Zheng Tang, Hai Wang, Vijay Srinivasan, Xiang Ren, Hongxia Jin
-
-**Abstract**: Instruction-tuned Large Language Models (LLMs) have demonstrated remarkable abilities to modulate their responses based on human instructions. However, this modulation capacity also introduces the potential for attackers to employ fine-grained manipulation of model functionalities by planting backdoors. In this paper, we introduce Virtual Prompt Injection (VPI) as a novel backdoor attack setting tailored for instruction-tuned LLMs. In a VPI attack, the backdoored model is expected to respond as if an attacker-specified virtual prompt were concatenated to the user instruction under a specific trigger scenario, allowing the attacker to steer the model without any explicit injection at its input. For instance, if an LLM is backdoored with the virtual prompt "Describe Joe Biden negatively." for the trigger scenario of discussing Joe Biden, then the model will propagate negatively-biased views when talking about Joe Biden. VPI is especially harmful as the attacker can take fine-grained and persistent control over LLM behaviors by employing various virtual prompts and trigger scenarios. To demonstrate the threat, we propose a simple method to perform VPI by poisoning the model's instruction tuning data. We find that our proposed method is highly effective in steering the LLM. For example, by poisoning only 52 instruction tuning examples (0.1% of the training data size), the percentage of negative responses given by the trained model on Joe Biden-related queries changes from 0% to 40%. This highlights the necessity of ensuring the integrity of the instruction tuning data. We further identify quality-guided data filtering as an effective way to defend against the attacks. Our project page is available at https://poison-llm.github.io.
-
-
-
-## **50. FedMLSecurity: A Benchmark for Attacks and Defenses in Federated Learning and Federated LLMs**
-
-cs.CR
-
-**SubmitDate**: 2023-10-06    [abs](http://arxiv.org/abs/2306.04959v3) [paper-pdf](http://arxiv.org/pdf/2306.04959v3)
-
-**Authors**: Shanshan Han, Baturalp Buyukates, Zijian Hu, Han Jin, Weizhao Jin, Lichao Sun, Xiaoyang Wang, Wenxuan Wu, Chulin Xie, Yuhang Yao, Kai Zhang, Qifan Zhang, Yuhui Zhang, Salman Avestimehr, Chaoyang He
-
-**Abstract**: This paper introduces FedMLSecurity, a benchmark designed to simulate adversarial attacks and corresponding defense mechanisms in Federated Learning (FL). As an integral module of the open-sourced library FedML that facilitates FL algorithm development and performance comparison, FedMLSecurity enhances FedML's capabilities to evaluate security issues and potential remedies in FL. FedMLSecurity comprises two major components: FedMLAttacker that simulates attacks injected during FL training, and FedMLDefender that simulates defensive mechanisms to mitigate the impacts of the attacks. FedMLSecurity is open-sourced and can be customized to a wide range of machine learning models (e.g., Logistic Regression, ResNet, GAN, etc.) and federated optimizers (e.g., FedAVG, FedOPT, FedNOVA, etc.). FedMLSecurity can also be applied to Large Language Models (LLMs) easily, demonstrating its adaptability and applicability in various scenarios.
 
 
 

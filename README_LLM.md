@@ -1,9 +1,57 @@
 # Latest Large Language Model Attack Papers
-**update at 2023-11-10 10:06:48**
+**update at 2023-11-13 15:23:43**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_LLM_CN.md)
 
-## **1. FigStep: Jailbreaking Large Vision-language Models via Typographic Visual Prompts**
+## **1. Summon a Demon and Bind it: A Grounded Theory of LLM Red Teaming in the Wild**
+
+cs.CL
+
+**SubmitDate**: 2023-11-10    [abs](http://arxiv.org/abs/2311.06237v1) [paper-pdf](http://arxiv.org/pdf/2311.06237v1)
+
+**Authors**: Nanna Inie, Jonathan Stray, Leon Derczynski
+
+**Abstract**: Engaging in the deliberate generation of abnormal outputs from large language models (LLMs) by attacking them is a novel human activity. This paper presents a thorough exposition of how and why people perform such attacks. Using a formal qualitative methodology, we interviewed dozens of practitioners from a broad range of backgrounds, all contributors to this novel work of attempting to cause LLMs to fail. We relate and connect this activity between its practitioners' motivations and goals; the strategies and techniques they deploy; and the crucial role the community plays. As a result, this paper presents a grounded theory of how and why people attack large language models: LLM red teaming in the wild.
+
+
+
+## **2. Practical Membership Inference Attacks against Fine-tuned Large Language Models via Self-prompt Calibration**
+
+cs.CL
+
+**SubmitDate**: 2023-11-10    [abs](http://arxiv.org/abs/2311.06062v1) [paper-pdf](http://arxiv.org/pdf/2311.06062v1)
+
+**Authors**: Wenjie Fu, Huandong Wang, Chen Gao, Guanghua Liu, Yong Li, Tao Jiang
+
+**Abstract**: Membership Inference Attacks (MIA) aim to infer whether a target data record has been utilized for model training or not. Prior attempts have quantified the privacy risks of language models (LMs) via MIAs, but there is still no consensus on whether existing MIA algorithms can cause remarkable privacy leakage on practical Large Language Models (LLMs). Existing MIAs designed for LMs can be classified into two categories: reference-free and reference-based attacks. They are both based on the hypothesis that training records consistently strike a higher probability of being sampled. Nevertheless, this hypothesis heavily relies on the overfitting of target models, which will be mitigated by multiple regularization methods and the generalization of LLMs. The reference-based attack seems to achieve promising effectiveness in LLMs, which measures a more reliable membership signal by comparing the probability discrepancy between the target model and the reference model. However, the performance of reference-based attack is highly dependent on a reference dataset that closely resembles the training dataset, which is usually inaccessible in the practical scenario. Overall, existing MIAs are unable to effectively unveil privacy leakage over practical fine-tuned LLMs that are overfitting-free and private. We propose a Membership Inference Attack based on Self-calibrated Probabilistic Variation (SPV-MIA). Specifically, since memorization in LLMs is inevitable during the training process and occurs before overfitting, we introduce a more reliable membership signal, probabilistic variation, which is based on memorization rather than overfitting. Furthermore, we introduce a self-prompt approach, which constructs the dataset to fine-tune the reference model by prompting the target LLM itself. In this manner, the adversary can collect a dataset with a similar distribution from public APIs.
+
+
+
+## **3. Fake Alignment: Are LLMs Really Aligned Well?**
+
+cs.CL
+
+**SubmitDate**: 2023-11-10    [abs](http://arxiv.org/abs/2311.05915v1) [paper-pdf](http://arxiv.org/pdf/2311.05915v1)
+
+**Authors**: Yixu Wang, Yan Teng, Kexin Huang, Chengqi Lyu, Songyang Zhang, Wenwei Zhang, Xingjun Ma, Yingchun Wang
+
+**Abstract**: The growing awareness of safety concerns in large language models (LLMs) has sparked considerable interest in the evaluation of safety within current research endeavors. This study investigates an interesting issue pertaining to the evaluation of LLMs, namely the substantial discrepancy in performance between multiple-choice questions and open-ended questions. Inspired by research on jailbreak attack patterns, we argue this is caused by mismatched generalization. That is, the LLM does not have a comprehensive understanding of the complex concept of safety. Instead, it only remembers what to answer for open-ended safety questions, which makes it unable to solve other forms of safety tests. We refer to this phenomenon as fake alignment and construct a comparative benchmark to empirically verify its existence in LLMs. Such fake alignment renders previous evaluation protocols unreliable. To address this, we introduce the FAEF framework and two novel metrics\textemdash Consistency Score (CS) and Consistent Safety Score (CSS), which jointly assess two complementary forms of evaluation to quantify fake alignment and obtain corrected performance estimates. Applying FAEF to 14 widely-used LLMs reveals several models with purported safety are poorly aligned in practice. Our work highlights potential limitations in prevailing alignment methodologies.
+
+
+
+## **4. Watermarking Vision-Language Pre-trained Models for Multi-modal Embedding as a Service**
+
+cs.CR
+
+**SubmitDate**: 2023-11-10    [abs](http://arxiv.org/abs/2311.05863v1) [paper-pdf](http://arxiv.org/pdf/2311.05863v1)
+
+**Authors**: Yuanmin Tang, Jing Yu, Keke Gai, Xiangyan Qu, Yue Hu, Gang Xiong, Qi Wu
+
+**Abstract**: Recent advances in vision-language pre-trained models (VLPs) have significantly increased visual understanding and cross-modal analysis capabilities. Companies have emerged to provide multi-modal Embedding as a Service (EaaS) based on VLPs (e.g., CLIP-based VLPs), which cost a large amount of training data and resources for high-performance service. However, existing studies indicate that EaaS is vulnerable to model extraction attacks that induce great loss for the owners of VLPs. Protecting the intellectual property and commercial ownership of VLPs is increasingly crucial yet challenging. A major solution of watermarking model for EaaS implants a backdoor in the model by inserting verifiable trigger embeddings into texts, but it is only applicable for large language models and is unrealistic due to data and model privacy. In this paper, we propose a safe and robust backdoor-based embedding watermarking method for VLPs called VLPMarker. VLPMarker utilizes embedding orthogonal transformation to effectively inject triggers into the VLPs without interfering with the model parameters, which achieves high-quality copyright verification and minimal impact on model performance. To enhance the watermark robustness, we further propose a collaborative copyright verification strategy based on both backdoor trigger and embedding distribution, enhancing resilience against various attacks. We increase the watermark practicality via an out-of-distribution trigger selection approach, removing access to the model training data and thus making it possible for many real-world scenarios. Our extensive experiments on various datasets indicate that the proposed watermarking approach is effective and safe for verifying the copyright of VLPs for multi-modal EaaS and robust against model extraction attacks. Our code is available at https://github.com/Pter61/vlpmarker.
+
+
+
+## **5. FigStep: Jailbreaking Large Vision-language Models via Typographic Visual Prompts**
 
 cs.CR
 
@@ -17,7 +65,7 @@ Technical Report
 
 
 
-## **2. Removing RLHF Protections in GPT-4 via Fine-Tuning**
+## **6. Removing RLHF Protections in GPT-4 via Fine-Tuning**
 
 cs.CL
 
@@ -29,7 +77,7 @@ cs.CL
 
 
 
-## **3. Backdoor Attacks and Countermeasures in Natural Language Processing Models: A Comprehensive Security Review**
+## **7. Backdoor Attacks and Countermeasures in Natural Language Processing Models: A Comprehensive Security Review**
 
 cs.CR
 
@@ -43,7 +91,7 @@ cs.CR
 
 
 
-## **4. Watermarks in the Sand: Impossibility of Strong Watermarking for Generative Models**
+## **8. Watermarks in the Sand: Impossibility of Strong Watermarking for Generative Models**
 
 cs.LG
 
@@ -55,7 +103,7 @@ cs.LG
 
 
 
-## **5. Unveiling Safety Vulnerabilities of Large Language Models**
+## **9. Unveiling Safety Vulnerabilities of Large Language Models**
 
 cs.CL
 
@@ -69,7 +117,7 @@ To be published in GEM workshop. Conference on Empirical Methods in  Natural Lan
 
 
 
-## **6. Detecting Language Model Attacks with Perplexity**
+## **10. Detecting Language Model Attacks with Perplexity**
 
 cs.CL
 
@@ -81,7 +129,7 @@ cs.CL
 
 
 
-## **7. Competence-Based Analysis of Language Models**
+## **11. Competence-Based Analysis of Language Models**
 
 cs.CL
 
@@ -93,7 +141,7 @@ cs.CL
 
 
 
-## **8. Scalable and Transferable Black-Box Jailbreaks for Language Models via Persona Modulation**
+## **12. Scalable and Transferable Black-Box Jailbreaks for Language Models via Persona Modulation**
 
 cs.CL
 
@@ -105,7 +153,7 @@ cs.CL
 
 
 
-## **9. Vulnerabilities in AI Code Generators: Exploring Targeted Data Poisoning Attacks**
+## **13. Vulnerabilities in AI Code Generators: Exploring Targeted Data Poisoning Attacks**
 
 cs.CR
 
@@ -117,7 +165,7 @@ cs.CR
 
 
 
-## **10. Can LLMs Follow Simple Rules?**
+## **14. Can LLMs Follow Simple Rules?**
 
 cs.AI
 
@@ -131,7 +179,7 @@ Project website: https://eecs.berkeley.edu/~normanmu/llm_rules
 
 
 
-## **11. The Alignment Problem in Context**
+## **15. The Alignment Problem in Context**
 
 cs.LG
 
@@ -143,7 +191,7 @@ cs.LG
 
 
 
-## **12. Tensor Trust: Interpretable Prompt Injection Attacks from an Online Game**
+## **16. Tensor Trust: Interpretable Prompt Injection Attacks from an Online Game**
 
 cs.LG
 
@@ -155,7 +203,7 @@ cs.LG
 
 
 
-## **13. Robust Safety Classifier for Large Language Models: Adversarial Prompt Shield**
+## **17. Robust Safety Classifier for Large Language Models: Adversarial Prompt Shield**
 
 cs.CL
 
@@ -169,7 +217,7 @@ cs.CL
 
 
 
-## **14. LoRA Fine-tuning Efficiently Undoes Safety Training in Llama 2-Chat 70B**
+## **18. LoRA Fine-tuning Efficiently Undoes Safety Training in Llama 2-Chat 70B**
 
 cs.LG
 
@@ -181,7 +229,7 @@ cs.LG
 
 
 
-## **15. On Extracting Specialized Code Abilities from Large Language Models: A Feasibility Study**
+## **19. On Extracting Specialized Code Abilities from Large Language Models: A Feasibility Study**
 
 cs.SE
 
@@ -195,7 +243,7 @@ cs.SE
 
 
 
-## **16. TrojLLM: A Black-box Trojan Prompt Attack on Large Language Models**
+## **20. TrojLLM: A Black-box Trojan Prompt Attack on Large Language Models**
 
 cs.CR
 
@@ -209,7 +257,7 @@ Accepted by NeurIPS'23
 
 
 
-## **17. Adversarial Attacks and Defenses in Large Language Models: Old and New Threats**
+## **21. Adversarial Attacks and Defenses in Large Language Models: Old and New Threats**
 
 cs.AI
 
@@ -221,7 +269,7 @@ cs.AI
 
 
 
-## **18. From Chatbots to PhishBots? -- Preventing Phishing scams created using ChatGPT, Google Bard and Claude**
+## **22. From Chatbots to PhishBots? -- Preventing Phishing scams created using ChatGPT, Google Bard and Claude**
 
 cs.CR
 
@@ -233,7 +281,7 @@ cs.CR
 
 
 
-## **19. Robustifying Language Models with Test-Time Adaptation**
+## **23. Robustifying Language Models with Test-Time Adaptation**
 
 cs.CL
 
@@ -247,7 +295,7 @@ cs.CL
 
 
 
-## **20. On the Exploitability of Instruction Tuning**
+## **24. On the Exploitability of Instruction Tuning**
 
 cs.CR
 
@@ -261,7 +309,7 @@ NeurIPS 2023 camera-ready (21 pages, 10 figures)
 
 
 
-## **21. Large Language Models Are Better Adversaries: Exploring Generative Clean-Label Backdoor Attacks Against Text Classifiers**
+## **25. Large Language Models Are Better Adversaries: Exploring Generative Clean-Label Backdoor Attacks Against Text Classifiers**
 
 cs.LG
 
@@ -275,7 +323,7 @@ Accepted at EMNLP 2023 Findings
 
 
 
-## **22. ParaFuzz: An Interpretability-Driven Technique for Detecting Poisoned Samples in NLP**
+## **26. ParaFuzz: An Interpretability-Driven Technique for Detecting Poisoned Samples in NLP**
 
 cs.CR
 
@@ -287,7 +335,7 @@ cs.CR
 
 
 
-## **23. MasterKey: Automated Jailbreak Across Multiple Large Language Model Chatbots**
+## **27. MasterKey: Automated Jailbreak Across Multiple Large Language Model Chatbots**
 
 cs.CR
 
@@ -299,7 +347,7 @@ cs.CR
 
 
 
-## **24. Locally Differentially Private Document Generation Using Zero Shot Prompting**
+## **28. Locally Differentially Private Document Generation Using Zero Shot Prompting**
 
 cs.CL
 
@@ -313,7 +361,7 @@ Accepted at EMNLP 2023 (Findings)
 
 
 
-## **25. Self-Guard: Empower the LLM to Safeguard Itself**
+## **29. Self-Guard: Empower the LLM to Safeguard Itself**
 
 cs.CL
 
@@ -325,7 +373,7 @@ cs.CL
 
 
 
-## **26. A Survey on LLM-generated Text Detection: Necessity, Methods, and Future Directions**
+## **30. A Survey on LLM-generated Text Detection: Necessity, Methods, and Future Directions**
 
 cs.CL
 
@@ -337,7 +385,7 @@ cs.CL
 
 
 
-## **27. A Survey on Detection of LLMs-Generated Content**
+## **31. A Survey on Detection of LLMs-Generated Content**
 
 cs.CL
 
@@ -351,7 +399,7 @@ We will keep updating at  https://github.com/Xianjun-Yang/Awesome_papers_on_LLMs
 
 
 
-## **28. LLM Self Defense: By Self Examination, LLMs Know They Are Being Tricked**
+## **32. LLM Self Defense: By Self Examination, LLMs Know They Are Being Tricked**
 
 cs.CL
 
@@ -363,7 +411,7 @@ cs.CL
 
 
 
-## **29. PrivInfer: Privacy-Preserving Inference for Black-box Large Language Model**
+## **33. PrivInfer: Privacy-Preserving Inference for Black-box Large Language Model**
 
 cs.CR
 
@@ -375,7 +423,7 @@ cs.CR
 
 
 
-## **30. The Janus Interface: How Fine-Tuning in Large Language Models Amplifies the Privacy Risks**
+## **34. The Janus Interface: How Fine-Tuning in Large Language Models Amplifies the Privacy Risks**
 
 cs.CR
 
@@ -387,7 +435,7 @@ cs.CR
 
 
 
-## **31. AutoDAN: Automatic and Interpretable Adversarial Attacks on Large Language Models**
+## **35. AutoDAN: Automatic and Interpretable Adversarial Attacks on Large Language Models**
 
 cs.CR
 
@@ -399,7 +447,7 @@ cs.CR
 
 
 
-## **32. Did the Neurons Read your Book? Document-level Membership Inference for Large Language Models**
+## **36. Did the Neurons Read your Book? Document-level Membership Inference for Large Language Models**
 
 cs.CL
 
@@ -411,7 +459,7 @@ cs.CL
 
 
 
-## **33. MoPe: Model Perturbation-based Privacy Attacks on Language Models**
+## **37. MoPe: Model Perturbation-based Privacy Attacks on Language Models**
 
 cs.LG
 
@@ -423,7 +471,7 @@ cs.LG
 
 
 
-## **34. Language Model Unalignment: Parametric Red-Teaming to Expose Hidden Harms and Biases**
+## **38. Language Model Unalignment: Parametric Red-Teaming to Expose Hidden Harms and Biases**
 
 cs.CL
 
@@ -437,7 +485,7 @@ Under Review
 
 
 
-## **35. LoFT: Local Proxy Fine-tuning For Improving Transferability Of Adversarial Attacks Against Large Language Model**
+## **39. LoFT: Local Proxy Fine-tuning For Improving Transferability Of Adversarial Attacks Against Large Language Model**
 
 cs.CL
 
@@ -449,7 +497,7 @@ cs.CL
 
 
 
-## **36. An LLM can Fool Itself: A Prompt-Based Adversarial Attack**
+## **40. An LLM can Fool Itself: A Prompt-Based Adversarial Attack**
 
 cs.CR
 
@@ -461,7 +509,7 @@ cs.CR
 
 
 
-## **37. Mitigating Backdoor Poisoning Attacks through the Lens of Spurious Correlation**
+## **41. Mitigating Backdoor Poisoning Attacks through the Lens of Spurious Correlation**
 
 cs.CL
 
@@ -475,7 +523,7 @@ accepted to EMNLP2023 (main conference)
 
 
 
-## **38. Assessing Privacy Risks in Language Models: A Case Study on Summarization Tasks**
+## **42. Assessing Privacy Risks in Language Models: A Case Study on Summarization Tasks**
 
 cs.CL
 
@@ -487,7 +535,7 @@ cs.CL
 
 
 
-## **39. Towards Robust Pruning: An Adaptive Knowledge-Retention Pruning Strategy for Language Models**
+## **43. Towards Robust Pruning: An Adaptive Knowledge-Retention Pruning Strategy for Language Models**
 
 cs.CL
 
@@ -499,7 +547,7 @@ cs.CL
 
 
 
-## **40. Prompt Injection Attacks and Defenses in LLM-Integrated Applications**
+## **44. Prompt Injection Attacks and Defenses in LLM-Integrated Applications**
 
 cs.CR
 
@@ -511,7 +559,7 @@ cs.CR
 
 
 
-## **41. Automatic Hallucination Assessment for Aligned Large Language Models via Transferable Adversarial Attacks**
+## **45. Automatic Hallucination Assessment for Aligned Large Language Models via Transferable Adversarial Attacks**
 
 cs.CL
 
@@ -523,7 +571,7 @@ cs.CL
 
 
 
-## **42. Attack Prompt Generation for Red Teaming and Defending Large Language Models**
+## **46. Attack Prompt Generation for Red Teaming and Defending Large Language Models**
 
 cs.CL
 
@@ -537,7 +585,7 @@ Accepted to EMNLP 2023 (Findings)
 
 
 
-## **43. Red Teaming Language Model Detectors with Language Models**
+## **47. Red Teaming Language Model Detectors with Language Models**
 
 cs.CL
 
@@ -551,7 +599,7 @@ Preprint. Accepted by TACL
 
 
 
-## **44. PoisonPrompt: Backdoor Attack on Prompt-based Large Language Models**
+## **48. PoisonPrompt: Backdoor Attack on Prompt-based Large Language Models**
 
 cs.CL
 
@@ -565,7 +613,7 @@ Code will be released on: https://github.com/grasses/PoisonPrompt
 
 
 
-## **45. REMARK-LLM: A Robust and Efficient Watermarking Framework for Generative Large Language Models**
+## **49. REMARK-LLM: A Robust and Efficient Watermarking Framework for Generative Large Language Models**
 
 cs.CR
 
@@ -577,7 +625,7 @@ cs.CR
 
 
 
-## **46. PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts**
+## **50. PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts**
 
 cs.CL
 
@@ -588,56 +636,6 @@ Technical report; code is at:  https://github.com/microsoft/promptbench
 **Authors**: Kaijie Zhu, Jindong Wang, Jiaheng Zhou, Zichen Wang, Hao Chen, Yidong Wang, Linyi Yang, Wei Ye, Yue Zhang, Neil Zhenqiang Gong, Xing Xie
 
 **Abstract**: The increasing reliance on Large Language Models (LLMs) across academia and industry necessitates a comprehensive understanding of their robustness to prompts. In response to this vital need, we introduce PromptBench, a robustness benchmark designed to measure LLMs' resilience to adversarial prompts. This study uses a plethora of adversarial textual attacks targeting prompts across multiple levels: character, word, sentence, and semantic. The adversarial prompts, crafted to mimic plausible user errors like typos or synonyms, aim to evaluate how slight deviations can affect LLM outcomes while maintaining semantic integrity. These prompts are then employed in diverse tasks, such as sentiment analysis, natural language inference, reading comprehension, machine translation, and math problem-solving. Our study generates 4788 adversarial prompts, meticulously evaluated over 8 tasks and 13 datasets. Our findings demonstrate that contemporary LLMs are not robust to adversarial prompts. Furthermore, we present comprehensive analysis to understand the mystery behind prompt robustness and its transferability. We then offer insightful robustness analysis and pragmatic recommendations for prompt composition, beneficial to both researchers and everyday users. Code is available at: https://github.com/microsoft/promptbench.
-
-
-
-## **47. Paraphrasing evades detectors of AI-generated text, but retrieval is an effective defense**
-
-cs.CL
-
-NeurIPS 2023 camera ready (32 pages). Code, models, data available in  https://github.com/martiansideofthemoon/ai-detection-paraphrases
-
-**SubmitDate**: 2023-10-18    [abs](http://arxiv.org/abs/2303.13408v2) [paper-pdf](http://arxiv.org/pdf/2303.13408v2)
-
-**Authors**: Kalpesh Krishna, Yixiao Song, Marzena Karpinska, John Wieting, Mohit Iyyer
-
-**Abstract**: The rise in malicious usage of large language models, such as fake content creation and academic plagiarism, has motivated the development of approaches that identify AI-generated text, including those based on watermarking or outlier detection. However, the robustness of these detection algorithms to paraphrases of AI-generated text remains unclear. To stress test these detectors, we build a 11B parameter paraphrase generation model (DIPPER) that can paraphrase paragraphs, condition on surrounding context, and control lexical diversity and content reordering. Using DIPPER to paraphrase text generated by three large language models (including GPT3.5-davinci-003) successfully evades several detectors, including watermarking, GPTZero, DetectGPT, and OpenAI's text classifier. For example, DIPPER drops detection accuracy of DetectGPT from 70.3% to 4.6% (at a constant false positive rate of 1%), without appreciably modifying the input semantics.   To increase the robustness of AI-generated text detection to paraphrase attacks, we introduce a simple defense that relies on retrieving semantically-similar generations and must be maintained by a language model API provider. Given a candidate text, our algorithm searches a database of sequences previously generated by the API, looking for sequences that match the candidate text within a certain threshold. We empirically verify our defense using a database of 15M generations from a fine-tuned T5-XXL model and find that it can detect 80% to 97% of paraphrased generations across different settings while only classifying 1% of human-written sequences as AI-generated. We open-source our models, code and data.
-
-
-
-## **48. Identifying and Mitigating the Security Risks of Generative AI**
-
-cs.AI
-
-**SubmitDate**: 2023-10-17    [abs](http://arxiv.org/abs/2308.14840v3) [paper-pdf](http://arxiv.org/pdf/2308.14840v3)
-
-**Authors**: Clark Barrett, Brad Boyd, Elie Burzstein, Nicholas Carlini, Brad Chen, Jihye Choi, Amrita Roy Chowdhury, Mihai Christodorescu, Anupam Datta, Soheil Feizi, Kathleen Fisher, Tatsunori Hashimoto, Dan Hendrycks, Somesh Jha, Daniel Kang, Florian Kerschbaum, Eric Mitchell, John Mitchell, Zulfikar Ramzan, Khawaja Shams, Dawn Song, Ankur Taly, Diyi Yang
-
-**Abstract**: Every major technical invention resurfaces the dual-use dilemma -- the new technology has the potential to be used for good as well as for harm. Generative AI (GenAI) techniques, such as large language models (LLMs) and diffusion models, have shown remarkable capabilities (e.g., in-context learning, code-completion, and text-to-image generation and editing). However, GenAI can be used just as well by attackers to generate new attacks and increase the velocity and efficacy of existing attacks.   This paper reports the findings of a workshop held at Google (co-organized by Stanford University and the University of Wisconsin-Madison) on the dual-use dilemma posed by GenAI. This paper is not meant to be comprehensive, but is rather an attempt to synthesize some of the interesting findings from the workshop. We discuss short-term and long-term goals for the community on this topic. We hope this paper provides both a launching point for a discussion on this important topic as well as interesting problems that the research community can work to address.
-
-
-
-## **49. Last One Standing: A Comparative Analysis of Security and Privacy of Soft Prompt Tuning, LoRA, and In-Context Learning**
-
-cs.CR
-
-**SubmitDate**: 2023-10-17    [abs](http://arxiv.org/abs/2310.11397v1) [paper-pdf](http://arxiv.org/pdf/2310.11397v1)
-
-**Authors**: Rui Wen, Tianhao Wang, Michael Backes, Yang Zhang, Ahmed Salem
-
-**Abstract**: Large Language Models (LLMs) are powerful tools for natural language processing, enabling novel applications and user experiences. However, to achieve optimal performance, LLMs often require adaptation with private data, which poses privacy and security challenges. Several techniques have been proposed to adapt LLMs with private data, such as Low-Rank Adaptation (LoRA), Soft Prompt Tuning (SPT), and In-Context Learning (ICL), but their comparative privacy and security properties have not been systematically investigated. In this work, we fill this gap by evaluating the robustness of LoRA, SPT, and ICL against three types of well-established attacks: membership inference, which exposes data leakage (privacy); backdoor, which injects malicious behavior (security); and model stealing, which can violate intellectual property (privacy and security). Our results show that there is no silver bullet for privacy and security in LLM adaptation and each technique has different strengths and weaknesses.
-
-
-
-## **50. Survey of Vulnerabilities in Large Language Models Revealed by Adversarial Attacks**
-
-cs.CL
-
-**SubmitDate**: 2023-10-16    [abs](http://arxiv.org/abs/2310.10844v1) [paper-pdf](http://arxiv.org/pdf/2310.10844v1)
-
-**Authors**: Erfan Shayegani, Md Abdullah Al Mamun, Yu Fu, Pedram Zaree, Yue Dong, Nael Abu-Ghazaleh
-
-**Abstract**: Large Language Models (LLMs) are swiftly advancing in architecture and capability, and as they integrate more deeply into complex systems, the urgency to scrutinize their security properties grows. This paper surveys research in the emerging interdisciplinary field of adversarial attacks on LLMs, a subfield of trustworthy ML, combining the perspectives of Natural Language Processing and Security. Prior work has shown that even safety-aligned LLMs (via instruction tuning and reinforcement learning through human feedback) can be susceptible to adversarial attacks, which exploit weaknesses and mislead AI systems, as evidenced by the prevalence of `jailbreak' attacks on models like ChatGPT and Bard. In this survey, we first provide an overview of large language models, describe their safety alignment, and categorize existing research based on various learning structures: textual-only attacks, multi-modal attacks, and additional attack methods specifically targeting complex systems, such as federated learning or multi-agent systems. We also offer comprehensive remarks on works that focus on the fundamental sources of vulnerabilities and potential defenses. To make this field more accessible to newcomers, we present a systematic review of existing works, a structured typology of adversarial attack concepts, and additional resources, including slides for presentations on related topics at the 62nd Annual Meeting of the Association for Computational Linguistics (ACL'24).
 
 
 

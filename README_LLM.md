@@ -1,9 +1,21 @@
 # Latest Large Language Model Attack Papers
-**update at 2023-12-05 21:14:51**
+**update at 2023-12-08 09:46:57**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_LLM_CN.md)
 
-## **1. Tree of Attacks: Jailbreaking Black-Box LLMs Automatically**
+## **1. Clinical Notes Reveal Physician Fatigue**
+
+cs.CL
+
+**SubmitDate**: 2023-12-05    [abs](http://arxiv.org/abs/2312.03077v1) [paper-pdf](http://arxiv.org/pdf/2312.03077v1)
+
+**Authors**: Chao-Chun Hsu, Ziad Obermeyer, Chenhao Tan
+
+**Abstract**: Physicians write notes about patients. In doing so, they reveal much about themselves. Using data from 129,228 emergency room visits, we train a model to identify notes written by fatigued physicians -- those who worked 5 or more of the prior 7 days. In a hold-out set, the model accurately identifies notes written by these high-workload physicians, and also flags notes written in other high-fatigue settings: on overnight shifts, and after high patient volumes. Model predictions also correlate with worse decision-making on at least one important metric: yield of testing for heart attack is 18% lower with each standard deviation increase in model-predicted fatigue. Finally, the model indicates that notes written about Black and Hispanic patients have 12% and 21% higher predicted fatigue than Whites -- larger than overnight vs. daytime differences. These results have an important implication for large language models (LLMs). Our model indicates that fatigued doctors write more predictable notes. Perhaps unsurprisingly, because word prediction is the core of how LLMs work, we find that LLM-written notes have 17% higher predicted fatigue than real physicians' notes. This indicates that LLMs may introduce distortions in generated text that are not yet fully understood.
+
+
+
+## **2. Tree of Attacks: Jailbreaking Black-Box LLMs Automatically**
 
 cs.LG
 
@@ -17,7 +29,7 @@ An implementation of the presented method is available at  https://github.com/RI
 
 
 
-## **2. A Survey on Large Language Model (LLM) Security and Privacy: The Good, the Bad, and the Ugly**
+## **3. A Survey on Large Language Model (LLM) Security and Privacy: The Good, the Bad, and the Ugly**
 
 cs.CR
 
@@ -29,7 +41,7 @@ cs.CR
 
 
 
-## **3. Intrusion Detection System with Machine Learning and Multiple Datasets**
+## **4. Intrusion Detection System with Machine Learning and Multiple Datasets**
 
 cs.CR
 
@@ -43,7 +55,7 @@ cs.CR
 
 
 
-## **4. InstructTA: Instruction-Tuned Targeted Attack for Large Vision-Language Models**
+## **5. InstructTA: Instruction-Tuned Targeted Attack for Large Vision-Language Models**
 
 cs.CV
 
@@ -55,7 +67,19 @@ cs.CV
 
 
 
-## **5. Unleashing Cheapfakes through Trojan Plugins of Large Language Models**
+## **6. Warfare:Breaking the Watermark Protection of AI-Generated Content**
+
+cs.CV
+
+**SubmitDate**: 2023-12-04    [abs](http://arxiv.org/abs/2310.07726v2) [paper-pdf](http://arxiv.org/pdf/2310.07726v2)
+
+**Authors**: Guanlin Li, Yifei Chen, Jie Zhang, Jiwei Li, Shangwei Guo, Tianwei Zhang
+
+**Abstract**: AI-Generated Content (AIGC) is gaining great popularity, with many emerging commercial services and applications. These services leverage advanced generative models, such as latent diffusion models and large language models, to generate creative content (e.g., realistic images and fluent sentences) for users. The usage of such generated content needs to be highly regulated, as the service providers need to ensure the users do not violate the usage policies (e.g., abuse for commercialization, generating and distributing unsafe content). A promising solution to achieve this goal is watermarking, which adds unique and imperceptible watermarks on the content for service verification and attribution. Numerous watermarking approaches have been proposed recently. However, in this paper, we show that an adversary can easily break these watermarking mechanisms. Specifically, we consider two possible attacks. (1) Watermark removal: the adversary can easily erase the embedded watermark from the generated content and then use it freely bypassing the regulation of the service provider. (2) Watermark forging: the adversary can create illegal content with forged watermarks from another user, causing the service provider to make wrong attributions. We propose Warfare, a unified methodology to achieve both attacks in a holistic way. The key idea is to leverage a pre-trained diffusion model for content processing and a generative adversarial network for watermark removal or forging. We evaluate Warfare on different datasets and embedding setups. The results prove that it can achieve high success rates while maintaining the quality of the generated content. Compared to existing diffusion model-based attacks, Warfare is 5,050~11,000x faster.
+
+
+
+## **7. Unleashing Cheapfakes through Trojan Plugins of Large Language Models**
 
 cs.CR
 
@@ -67,21 +91,21 @@ cs.CR
 
 
 
-## **6. Mark My Words: Analyzing and Evaluating Language Model Watermarks**
+## **8. Mark My Words: Analyzing and Evaluating Language Model Watermarks**
 
 cs.CR
 
-19 pages, 14 figures
+18 pages, 11 figures
 
-**SubmitDate**: 2023-12-01    [abs](http://arxiv.org/abs/2312.00273v1) [paper-pdf](http://arxiv.org/pdf/2312.00273v1)
+**SubmitDate**: 2023-12-07    [abs](http://arxiv.org/abs/2312.00273v2) [paper-pdf](http://arxiv.org/pdf/2312.00273v2)
 
 **Authors**: Julien Piet, Chawin Sitawarin, Vivian Fang, Norman Mu, David Wagner
 
-**Abstract**: The capabilities of large language models have grown significantly in recent years and so too have concerns about their misuse. In this context, the ability to distinguish machine-generated text from human-authored content becomes important. Prior works have proposed numerous schemes to watermark text, which would benefit from a systematic evaluation framework. This work focuses on text watermarking techniques - as opposed to image watermarks - and proposes a comprehensive benchmark for them under different tasks as well as practical attacks. We focus on three main metrics: quality, size (e.g. the number of tokens needed to detect a watermark), and tamper-resistance. Current watermarking techniques are good enough to be deployed: Kirchenbauer et al. can watermark Llama2-7B-chat with no perceivable loss in quality in under 100 tokens, and with good tamper-resistance to simple attacks, regardless of temperature. We argue that watermark indistinguishability is too strong a requirement: schemes that slightly modify logit distributions outperform their indistinguishable counterparts with no noticeable loss in generation quality. We publicly release our benchmark.
+**Abstract**: The capabilities of large language models have grown significantly in recent years and so too have concerns about their misuse. In this context, the ability to distinguish machine-generated text from human-authored content becomes important. Prior works have proposed numerous schemes to watermark text, which would benefit from a systematic evaluation framework. This work focuses on text watermarking techniques - as opposed to image watermarks - and proposes MARKMYWORDS, a comprehensive benchmark for them under different tasks as well as practical attacks. We focus on three main metrics: quality, size (e.g. the number of tokens needed to detect a watermark), and tamper-resistance. Current watermarking techniques are good enough to be deployed: Kirchenbauer et al. [1] can watermark Llama2-7B-chat with no perceivable loss in quality, the watermark can be detected with fewer than 100 tokens, and the scheme offers good tamper-resistance to simple attacks. We argue that watermark indistinguishability, a criteria emphasized in some prior works, is too strong a requirement: schemes that slightly modify logit distributions outperform their indistinguishable counterparts with no noticeable loss in generation quality. We publicly release our benchmark (https://github.com/wagner-group/MarkMyWords)
 
 
 
-## **7. Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs through a Global Scale Prompt Hacking Competition**
+## **9. Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs through a Global Scale Prompt Hacking Competition**
 
 cs.CR
 
@@ -95,7 +119,7 @@ cs.CR
 
 
 
-## **8. Devising and Detecting Phishing: Large Language Models vs. Smaller Human Models**
+## **10. Devising and Detecting Phishing: Large Language Models vs. Smaller Human Models**
 
 cs.CR
 
@@ -107,7 +131,7 @@ cs.CR
 
 
 
-## **9. Locally Differentially Private Document Generation Using Zero Shot Prompting**
+## **11. Locally Differentially Private Document Generation Using Zero Shot Prompting**
 
 cs.CL
 
@@ -121,7 +145,7 @@ Accepted at EMNLP 2023 (Findings)
 
 
 
-## **10. Towards Safer Generative Language Models: A Survey on Safety Risks, Evaluations, and Improvements**
+## **12. Towards Safer Generative Language Models: A Survey on Safety Risks, Evaluations, and Improvements**
 
 cs.AI
 
@@ -133,7 +157,7 @@ cs.AI
 
 
 
-## **11. Leveraging a Randomized Key Matrix to Enhance the Security of Symmetric Substitution Ciphers**
+## **13. Leveraging a Randomized Key Matrix to Enhance the Security of Symmetric Substitution Ciphers**
 
 cs.CR
 
@@ -147,7 +171,7 @@ In Proceedings of the 10th IEEE Asia-Pacific Conference on Computer  Science and
 
 
 
-## **12. SmoothLLM: Defending Large Language Models Against Jailbreaking Attacks**
+## **14. SmoothLLM: Defending Large Language Models Against Jailbreaking Attacks**
 
 cs.LG
 
@@ -159,7 +183,7 @@ cs.LG
 
 
 
-## **13. Query-Relevant Images Jailbreak Large Multi-Modal Models**
+## **15. Query-Relevant Images Jailbreak Large Multi-Modal Models**
 
 cs.CV
 
@@ -173,7 +197,7 @@ Technique report
 
 
 
-## **14. Unveiling the Implicit Toxicity in Large Language Models**
+## **16. Unveiling the Implicit Toxicity in Large Language Models**
 
 cs.CL
 
@@ -187,7 +211,7 @@ EMNLP 2023 Main Conference
 
 
 
-## **15. Identifying and Mitigating Vulnerabilities in LLM-Integrated Applications**
+## **17. Identifying and Mitigating Vulnerabilities in LLM-Integrated Applications**
 
 cs.CR
 
@@ -199,7 +223,19 @@ cs.CR
 
 
 
-## **16. Certifying LLM Safety against Adversarial Prompting**
+## **18. ZTCloudGuard: Zero Trust Context-Aware Access Management Framework to Avoid Misuse Cases in the Era of Generative AI and Cloud-based Health Information Ecosystem**
+
+cs.CR
+
+**SubmitDate**: 2023-11-28    [abs](http://arxiv.org/abs/2312.02993v1) [paper-pdf](http://arxiv.org/pdf/2312.02993v1)
+
+**Authors**: Khalid Al-hammuri, Fayez Gebali, Awos Kanan
+
+**Abstract**: Managing access between large numbers of distributed medical devices has become a crucial aspect of modern healthcare systems, enabling the establishment of smart hospitals and telehealth infrastructure. However, as telehealth technology continues to evolve and Internet of Things (IoT) devices become more widely used, they are also becoming increasingly exposed to various types of vulnerabilities and medical errors. In healthcare information systems, about 90\% of vulnerabilities emerged from misuse cases and human errors. As a result, there is a need for additional research and development of security tools to prevent such attacks. This article proposes a zero-trust-based context-aware framework for managing access to the main components of the cloud ecosystem, including users, devices and output data. The main goal and benefit of the proposed framework is to build a scoring system to prevent or alleviate misuse cases while using distributed medical devices in cloud-based healthcare information systems. The framework has two main scoring schemas to maintain the chain of trust. First, it proposes a critical trust score based on cloud-native micro-services of authentication, encryption, logging, and authorizations. Second, creating a bond trust scoring to assess the real-time semantic and syntactic analysis of attributes stored in a healthcare information system. The analysis is based on a pre-trained machine learning model to generate the semantic and syntactic scores. The framework also takes into account regulatory compliance and user consent to create a scoring system. The advantage of this method is that it is applicable to any language and adapts to all attributes as it relies on a language model, not just a set of predefined and limited attributes. The results show a high F1 score of 93.5%, which proves that it is valid for detecting misuse cases.
+
+
+
+## **19. Certifying LLM Safety against Adversarial Prompting**
 
 cs.CL
 
@@ -211,7 +247,7 @@ cs.CL
 
 
 
-## **17. C-ITS Environment Modeling and Attack Modeling**
+## **20. C-ITS Environment Modeling and Attack Modeling**
 
 cs.CR
 
@@ -225,7 +261,7 @@ in Korean Language, 14 Figures, 15 Pages
 
 
 
-## **18. Token-Level Adversarial Prompt Detection Based on Perplexity Measures and Contextual Information**
+## **21. Token-Level Adversarial Prompt Detection Based on Perplexity Measures and Contextual Information**
 
 cs.CL
 
@@ -237,7 +273,7 @@ cs.CL
 
 
 
-## **19. BadCLIP: Trigger-Aware Prompt Learning for Backdoor Attacks on CLIP**
+## **22. BadCLIP: Trigger-Aware Prompt Learning for Backdoor Attacks on CLIP**
 
 cs.CV
 
@@ -251,7 +287,7 @@ cs.CV
 
 
 
-## **20. Evaluating the Instruction-Following Robustness of Large Language Models to Prompt Injection**
+## **23. Evaluating the Instruction-Following Robustness of Large Language Models to Prompt Injection**
 
 cs.CL
 
@@ -265,7 +301,7 @@ The data and code can be found at  https://github.com/Leezekun/instruction-follo
 
 
 
-## **21. Exploiting Large Language Models (LLMs) through Deception Techniques and Persuasion Principles**
+## **24. Exploiting Large Language Models (LLMs) through Deception Techniques and Persuasion Principles**
 
 cs.HC
 
@@ -279,7 +315,7 @@ cs.HC
 
 
 
-## **22. Backdoor Activation Attack: Attack Large Language Models using Activation Steering for Safety-Alignment**
+## **25. Backdoor Activation Attack: Attack Large Language Models using Activation Steering for Safety-Alignment**
 
 cs.CR
 
@@ -291,7 +327,7 @@ cs.CR
 
 
 
-## **23. Universal Jailbreak Backdoors from Poisoned Human Feedback**
+## **26. Universal Jailbreak Backdoors from Poisoned Human Feedback**
 
 cs.AI
 
@@ -303,7 +339,7 @@ cs.AI
 
 
 
-## **24. Scalable and Transferable Black-Box Jailbreaks for Language Models via Persona Modulation**
+## **27. Scalable and Transferable Black-Box Jailbreaks for Language Models via Persona Modulation**
 
 cs.CL
 
@@ -315,7 +351,7 @@ cs.CL
 
 
 
-## **25. Input Reconstruction Attack against Vertical Federated Large Language Models**
+## **28. Input Reconstruction Attack against Vertical Federated Large Language Models**
 
 cs.CL
 
@@ -327,7 +363,7 @@ cs.CL
 
 
 
-## **26. Fewer is More: Trojan Attacks on Parameter-Efficient Fine-Tuning**
+## **29. Fewer is More: Trojan Attacks on Parameter-Efficient Fine-Tuning**
 
 cs.CL
 
@@ -341,7 +377,7 @@ cs.CL
 
 
 
-## **27. Transfer Attacks and Defenses for Large Language Models on Coding Tasks**
+## **30. Transfer Attacks and Defenses for Large Language Models on Coding Tasks**
 
 cs.LG
 
@@ -353,7 +389,7 @@ cs.LG
 
 
 
-## **28. Open Sesame! Universal Black Box Jailbreaking of Large Language Models**
+## **31. Open Sesame! Universal Black Box Jailbreaking of Large Language Models**
 
 cs.CL
 
@@ -365,7 +401,7 @@ cs.CL
 
 
 
-## **29. Generating Valid and Natural Adversarial Examples with Large Language Models**
+## **32. Generating Valid and Natural Adversarial Examples with Large Language Models**
 
 cs.CL
 
@@ -379,7 +415,7 @@ Submitted to the IEEE for possible publication
 
 
 
-## **30. Evil Geniuses: Delving into the Safety of LLM-based Agents**
+## **33. Evil Geniuses: Delving into the Safety of LLM-based Agents**
 
 cs.CL
 
@@ -393,7 +429,7 @@ cs.CL
 
 
 
-## **31. Beyond Boundaries: A Comprehensive Survey of Transferable Attacks on AI Systems**
+## **34. Beyond Boundaries: A Comprehensive Survey of Transferable Attacks on AI Systems**
 
 cs.CR
 
@@ -405,7 +441,7 @@ cs.CR
 
 
 
-## **32. SecureBERT and LLAMA 2 Empowered Control Area Network Intrusion Detection and Classification**
+## **35. SecureBERT and LLAMA 2 Empowered Control Area Network Intrusion Detection and Classification**
 
 cs.CR
 
@@ -419,7 +455,7 @@ cs.CR
 
 
 
-## **33. A Security Risk Taxonomy for Large Language Models**
+## **36. A Security Risk Taxonomy for Large Language Models**
 
 cs.CR
 
@@ -431,7 +467,7 @@ cs.CR
 
 
 
-## **34. FunctionMarker: Watermarking Language Datasets via Knowledge Injection**
+## **37. FunctionMarker: Watermarking Language Datasets via Knowledge Injection**
 
 cs.CR
 
@@ -443,7 +479,7 @@ cs.CR
 
 
 
-## **35. Understanding the Effectiveness of Large Language Models in Detecting Security Vulnerabilities**
+## **38. Understanding the Effectiveness of Large Language Models in Detecting Security Vulnerabilities**
 
 cs.CR
 
@@ -455,7 +491,7 @@ cs.CR
 
 
 
-## **36. Cognitive Overload: Jailbreaking Large Language Models with Overloaded Logical Thinking**
+## **39. Cognitive Overload: Jailbreaking Large Language Models with Overloaded Logical Thinking**
 
 cs.CL
 
@@ -467,7 +503,7 @@ cs.CL
 
 
 
-## **37. Test-time Backdoor Mitigation for Black-Box Large Language Models with Defensive Demonstrations**
+## **40. Test-time Backdoor Mitigation for Black-Box Large Language Models with Defensive Demonstrations**
 
 cs.CL
 
@@ -479,7 +515,7 @@ cs.CL
 
 
 
-## **38. On the Exploitability of Reinforcement Learning with Human Feedback for Large Language Models**
+## **41. On the Exploitability of Reinforcement Learning with Human Feedback for Large Language Models**
 
 cs.AI
 
@@ -491,7 +527,7 @@ cs.AI
 
 
 
-## **39. Bergeron: Combating Adversarial Attacks through a Conscience-Based Alignment Framework**
+## **42. Bergeron: Combating Adversarial Attacks through a Conscience-Based Alignment Framework**
 
 cs.CR
 
@@ -503,7 +539,7 @@ cs.CR
 
 
 
-## **40. How Trustworthy are Open-Source LLMs? An Assessment under Malicious Demonstrations Shows their Vulnerabilities**
+## **43. How Trustworthy are Open-Source LLMs? An Assessment under Malicious Demonstrations Shows their Vulnerabilities**
 
 cs.CL
 
@@ -515,7 +551,7 @@ cs.CL
 
 
 
-## **41. Jailbreaking GPT-4V via Self-Adversarial Attacks with System Prompts**
+## **44. Jailbreaking GPT-4V via Self-Adversarial Attacks with System Prompts**
 
 cs.CR
 
@@ -527,7 +563,7 @@ cs.CR
 
 
 
-## **42. Defending Large Language Models Against Jailbreaking Attacks Through Goal Prioritization**
+## **45. Defending Large Language Models Against Jailbreaking Attacks Through Goal Prioritization**
 
 cs.CL
 
@@ -541,7 +577,7 @@ cs.CL
 
 
 
-## **43. Watermarks in the Sand: Impossibility of Strong Watermarking for Generative Models**
+## **46. Watermarks in the Sand: Impossibility of Strong Watermarking for Generative Models**
 
 cs.LG
 
@@ -555,7 +591,7 @@ Blog post:  https://www.harvard.edu/kempner-institute/2023/11/09/watermarking-in
 
 
 
-## **44. Alignment is not sufficient to prevent large language models from generating harmful information: A psychoanalytic perspective**
+## **47. Alignment is not sufficient to prevent large language models from generating harmful information: A psychoanalytic perspective**
 
 cs.CL
 
@@ -567,7 +603,7 @@ cs.CL
 
 
 
-## **45. LatticeGen: A Cooperative Framework which Hides Generated Text in a Lattice for Privacy-Aware Generation on Cloud**
+## **48. LatticeGen: A Cooperative Framework which Hides Generated Text in a Lattice for Privacy-Aware Generation on Cloud**
 
 cs.CL
 
@@ -579,7 +615,7 @@ cs.CL
 
 
 
-## **46. A Wolf in Sheep's Clothing: Generalized Nested Jailbreak Prompts can Fool Large Language Models Easily**
+## **49. A Wolf in Sheep's Clothing: Generalized Nested Jailbreak Prompts can Fool Large Language Models Easily**
 
 cs.CL
 
@@ -591,7 +627,7 @@ cs.CL
 
 
 
-## **47. Fake Alignment: Are LLMs Really Aligned Well?**
+## **50. Fake Alignment: Are LLMs Really Aligned Well?**
 
 cs.CL
 
@@ -600,44 +636,6 @@ cs.CL
 **Authors**: Yixu Wang, Yan Teng, Kexin Huang, Chengqi Lyu, Songyang Zhang, Wenwei Zhang, Xingjun Ma, Yu-Gang Jiang, Yu Qiao, Yingchun Wang
 
 **Abstract**: The growing awareness of safety concerns in large language models (LLMs) has sparked considerable interest in the evaluation of safety within current research endeavors. This study investigates an interesting issue pertaining to the evaluation of LLMs, namely the substantial discrepancy in performance between multiple-choice questions and open-ended questions. Inspired by research on jailbreak attack patterns, we argue this is caused by mismatched generalization. That is, the LLM does not have a comprehensive understanding of the complex concept of safety. Instead, it only remembers what to answer for open-ended safety questions, which makes it unable to solve other forms of safety tests. We refer to this phenomenon as fake alignment and construct a comparative benchmark to empirically verify its existence in LLMs. Such fake alignment renders previous evaluation protocols unreliable. To address this, we introduce the Fake alIgNment Evaluation (FINE) framework and two novel metrics--Consistency Score (CS) and Consistent Safety Score (CSS), which jointly assess two complementary forms of evaluation to quantify fake alignment and obtain corrected performance estimates. Applying FINE to 14 widely-used LLMs reveals several models with purported safety are poorly aligned in practice. Our work highlights potential limitations in prevailing alignment methodologies.
-
-
-
-## **48. MART: Improving LLM Safety with Multi-round Automatic Red-Teaming**
-
-cs.CL
-
-**SubmitDate**: 2023-11-13    [abs](http://arxiv.org/abs/2311.07689v1) [paper-pdf](http://arxiv.org/pdf/2311.07689v1)
-
-**Authors**: Suyu Ge, Chunting Zhou, Rui Hou, Madian Khabsa, Yi-Chia Wang, Qifan Wang, Jiawei Han, Yuning Mao
-
-**Abstract**: Red-teaming is a common practice for mitigating unsafe behaviors in Large Language Models (LLMs), which involves thoroughly assessing LLMs to identify potential flaws and addressing them with responsible and accurate responses. While effective, manual red-teaming is costly, and existing automatic red-teaming typically discovers safety risks without addressing them. In this paper, we propose a Multi-round Automatic Red-Teaming (MART) method, which incorporates both automatic adversarial prompt writing and safe response generation, significantly increasing red-teaming scalability and the safety of the target LLM. Specifically, an adversarial LLM and a target LLM interplay with each other in an iterative manner, where the adversarial LLM aims to generate challenging prompts that elicit unsafe responses from the target LLM, while the target LLM is fine-tuned with safety aligned data on these adversarial prompts. In each round, the adversarial LLM crafts better attacks on the updated target LLM, while the target LLM also improves itself through safety fine-tuning. On adversarial prompt benchmarks, the violation rate of an LLM with limited safety alignment reduces up to 84.7% after 4 rounds of MART, achieving comparable performance to LLMs with extensive adversarial prompt writing. Notably, model helpfulness on non-adversarial prompts remains stable throughout iterations, indicating the target LLM maintains strong performance on instruction following.
-
-
-
-## **49. Summon a Demon and Bind it: A Grounded Theory of LLM Red Teaming in the Wild**
-
-cs.CL
-
-**SubmitDate**: 2023-11-13    [abs](http://arxiv.org/abs/2311.06237v2) [paper-pdf](http://arxiv.org/pdf/2311.06237v2)
-
-**Authors**: Nanna Inie, Jonathan Stray, Leon Derczynski
-
-**Abstract**: Engaging in the deliberate generation of abnormal outputs from large language models (LLMs) by attacking them is a novel human activity. This paper presents a thorough exposition of how and why people perform such attacks. Using a formal qualitative methodology, we interviewed dozens of practitioners from a broad range of backgrounds, all contributors to this novel work of attempting to cause LLMs to fail. We relate and connect this activity between its practitioners' motivations and goals; the strategies and techniques they deploy; and the crucial role the community plays. As a result, this paper presents a grounded theory of how and why people attack large language models: LLM red teaming in the wild.
-
-
-
-## **50. Language Model Unalignment: Parametric Red-Teaming to Expose Hidden Harms and Biases**
-
-cs.CL
-
-Under Review
-
-**SubmitDate**: 2023-11-13    [abs](http://arxiv.org/abs/2310.14303v2) [paper-pdf](http://arxiv.org/pdf/2310.14303v2)
-
-**Authors**: Rishabh Bhardwaj, Soujanya Poria
-
-**Abstract**: Red-teaming has been a widely adopted way to evaluate the harmfulness of Large Language Models (LLMs). It aims to jailbreak a model's safety behavior to make it act as a helpful agent disregarding the harmfulness of the query. Existing methods are primarily based on input text-based red-teaming such as adversarial prompts, low-resource prompts, or contextualized prompts to condition the model in a way to bypass its safe behavior. Bypassing the guardrails uncovers hidden harmful information and biases in the model that are left untreated or newly introduced by its safety training. However, prompt-based attacks fail to provide such a diagnosis owing to their low attack success rate, and applicability to specific models. In this paper, we present a new perspective on LLM safety research i.e., parametric red-teaming through Unalignment. It simply (instruction) tunes the model parameters to break model guardrails that are not deeply rooted in the model's behavior. Unalignment using as few as 100 examples can significantly bypass commonly referred to as CHATGPT, to the point where it responds with an 88% success rate to harmful queries on two safety benchmark datasets. On open-source models such as VICUNA-7B and LLAMA-2-CHAT 7B AND 13B, it shows an attack success rate of more than 91%. On bias evaluations, Unalignment exposes inherent biases in safety-aligned models such as CHATGPT and LLAMA- 2-CHAT where the model's responses are strongly biased and opinionated 64% of the time.
 
 
 

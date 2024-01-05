@@ -1,9 +1,89 @@
 # Latest Large Language Model Attack Papers
-**update at 2024-01-01 16:26:45**
+**update at 2024-01-05 09:59:27**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_LLM_CN.md)
 
-## **1. Jatmo: Prompt Injection Defense by Task-Specific Finetuning**
+## **1. Mining Temporal Attack Patterns from Cyberthreat Intelligence Reports**
+
+cs.CR
+
+A modified version of this pre-print is submitted to IEEE  Transactions on Software Engineering, and is under review
+
+**SubmitDate**: 2024-01-03    [abs](http://arxiv.org/abs/2401.01883v1) [paper-pdf](http://arxiv.org/pdf/2401.01883v1)
+
+**Authors**: Md Rayhanur Rahman, Brandon Wroblewski, Quinn Matthews, Brantley Morgan, Tim Menzies, Laurie Williams
+
+**Abstract**: Defending from cyberattacks requires practitioners to operate on high-level adversary behavior. Cyberthreat intelligence (CTI) reports on past cyberattack incidents describe the chain of malicious actions with respect to time. To avoid repeating cyberattack incidents, practitioners must proactively identify and defend against recurring chain of actions - which we refer to as temporal attack patterns. Automatically mining the patterns among actions provides structured and actionable information on the adversary behavior of past cyberattacks. The goal of this paper is to aid security practitioners in prioritizing and proactive defense against cyberattacks by mining temporal attack patterns from cyberthreat intelligence reports. To this end, we propose ChronoCTI, an automated pipeline for mining temporal attack patterns from cyberthreat intelligence (CTI) reports of past cyberattacks. To construct ChronoCTI, we build the ground truth dataset of temporal attack patterns and apply state-of-the-art large language models, natural language processing, and machine learning techniques. We apply ChronoCTI on a set of 713 CTI reports, where we identify 124 temporal attack patterns - which we categorize into nine pattern categories. We identify that the most prevalent pattern category is to trick victim users into executing malicious code to initiate the attack, followed by bypassing the anti-malware system in the victim network. Based on the observed patterns, we advocate organizations to train users about cybersecurity best practices, introduce immutable operating systems with limited functionalities, and enforce multi-user authentications. Moreover, we advocate practitioners to leverage the automated mining capability of ChronoCTI and design countermeasures against the recurring attack patterns.
+
+
+
+## **2. Safety and Performance, Why Not Both? Bi-Objective Optimized Model Compression against Heterogeneous Attacks Toward AI Software Deployment**
+
+cs.AI
+
+Accepted by IEEE Transactions on Software Engineering (TSE).  Camera-ready Version. arXiv admin note: substantial text overlap with  arXiv:2208.05969
+
+**SubmitDate**: 2024-01-02    [abs](http://arxiv.org/abs/2401.00996v1) [paper-pdf](http://arxiv.org/pdf/2401.00996v1)
+
+**Authors**: Jie Zhu, Leye Wang, Xiao Han, Anmin Liu, Tao Xie
+
+**Abstract**: The size of deep learning models in artificial intelligence (AI) software is increasing rapidly, hindering the large-scale deployment on resource-restricted devices (e.g., smartphones). To mitigate this issue, AI software compression plays a crucial role, which aims to compress model size while keeping high performance. However, the intrinsic defects in a big model may be inherited by the compressed one. Such defects may be easily leveraged by adversaries, since a compressed model is usually deployed in a large number of devices without adequate protection. In this article, we aim to address the safe model compression problem from the perspective of safety-performance co-optimization. Specifically, inspired by the test-driven development (TDD) paradigm in software engineering, we propose a test-driven sparse training framework called SafeCompress. By simulating the attack mechanism as safety testing, SafeCompress can automatically compress a big model to a small one following the dynamic sparse training paradigm. Then, considering two kinds of representative and heterogeneous attack mechanisms, i.e., black-box membership inference attack and white-box membership inference attack, we develop two concrete instances called BMIA-SafeCompress and WMIA-SafeCompress. Further, we implement another instance called MMIA-SafeCompress by extending SafeCompress to defend against the occasion when adversaries conduct black-box and white-box membership inference attacks simultaneously. We conduct extensive experiments on five datasets for both computer vision and natural language processing tasks. The results show the effectiveness and generalizability of our framework. We also discuss how to adapt SafeCompress to other attacks besides membership inference attack, demonstrating the flexibility of SafeCompress.
+
+
+
+## **3. Detection and Defense Against Prominent Attacks on Preconditioned LLM-Integrated Virtual Assistants**
+
+cs.CR
+
+Accepted to be published in the Proceedings of the 10th IEEE CSDE  2023, the Asia-Pacific Conference on Computer Science and Data Engineering  2023
+
+**SubmitDate**: 2024-01-02    [abs](http://arxiv.org/abs/2401.00994v1) [paper-pdf](http://arxiv.org/pdf/2401.00994v1)
+
+**Authors**: Chun Fai Chan, Daniel Wankit Yip, Aysan Esmradi
+
+**Abstract**: The emergence of LLM (Large Language Model) integrated virtual assistants has brought about a rapid transformation in communication dynamics. During virtual assistant development, some developers prefer to leverage the system message, also known as an initial prompt or custom prompt, for preconditioning purposes. However, it is important to recognize that an excessive reliance on this functionality raises the risk of manipulation by malicious actors who can exploit it with carefully crafted prompts. Such malicious manipulation poses a significant threat, potentially compromising the accuracy and reliability of the virtual assistant's responses. Consequently, safeguarding the virtual assistants with detection and defense mechanisms becomes of paramount importance to ensure their safety and integrity. In this study, we explored three detection and defense mechanisms aimed at countering attacks that target the system message. These mechanisms include inserting a reference key, utilizing an LLM evaluator, and implementing a Self-Reminder. To showcase the efficacy of these mechanisms, they were tested against prominent attack techniques. Our findings demonstrate that the investigated mechanisms are capable of accurately identifying and counteracting the attacks. The effectiveness of these mechanisms underscores their potential in safeguarding the integrity and reliability of virtual assistants, reinforcing the importance of their implementation in real-world scenarios. By prioritizing the security of virtual assistants, organizations can maintain user trust, preserve the integrity of the application, and uphold the high standards expected in this era of transformative technologies.
+
+
+
+## **4. A Novel Evaluation Framework for Assessing Resilience Against Prompt Injection Attacks in Large Language Models**
+
+cs.CR
+
+Accepted to be published in the Proceedings of The 10th IEEE CSDE  2023, the Asia-Pacific Conference on Computer Science and Data Engineering  2023
+
+**SubmitDate**: 2024-01-02    [abs](http://arxiv.org/abs/2401.00991v1) [paper-pdf](http://arxiv.org/pdf/2401.00991v1)
+
+**Authors**: Daniel Wankit Yip, Aysan Esmradi, Chun Fai Chan
+
+**Abstract**: Prompt injection attacks exploit vulnerabilities in large language models (LLMs) to manipulate the model into unintended actions or generate malicious content. As LLM integrated applications gain wider adoption, they face growing susceptibility to such attacks. This study introduces a novel evaluation framework for quantifying the resilience of applications. The framework incorporates innovative techniques designed to ensure representativeness, interpretability, and robustness. To ensure the representativeness of simulated attacks on the application, a meticulous selection process was employed, resulting in 115 carefully chosen attacks based on coverage and relevance. For enhanced interpretability, a second LLM was utilized to evaluate the responses generated from these simulated attacks. Unlike conventional malicious content classifiers that provide only a confidence score, the LLM-based evaluation produces a score accompanied by an explanation, thereby enhancing interpretability. Subsequently, a resilience score is computed by assigning higher weights to attacks with greater impact, thus providing a robust measurement of the application resilience. To assess the framework's efficacy, it was applied on two LLMs, namely Llama2 and ChatGLM. Results revealed that Llama2, the newer model exhibited higher resilience compared to ChatGLM. This finding substantiates the effectiveness of the framework, aligning with the prevailing notion that newer models tend to possess greater resilience. Moreover, the framework exhibited exceptional versatility, requiring only minimal adjustments to accommodate emerging attack techniques and classifications, thereby establishing itself as an effective and practical solution. Overall, the framework offers valuable insights that empower organizations to make well-informed decisions to fortify their applications against potential threats from prompt injection.
+
+
+
+## **5. Opening A Pandora's Box: Things You Should Know in the Era of Custom GPTs**
+
+cs.CR
+
+**SubmitDate**: 2023-12-31    [abs](http://arxiv.org/abs/2401.00905v1) [paper-pdf](http://arxiv.org/pdf/2401.00905v1)
+
+**Authors**: Guanhong Tao, Siyuan Cheng, Zhuo Zhang, Junmin Zhu, Guangyu Shen, Xiangyu Zhang
+
+**Abstract**: The emergence of large language models (LLMs) has significantly accelerated the development of a wide range of applications across various fields. There is a growing trend in the construction of specialized platforms based on LLMs, such as the newly introduced custom GPTs by OpenAI. While custom GPTs provide various functionalities like web browsing and code execution, they also introduce significant security threats. In this paper, we conduct a comprehensive analysis of the security and privacy issues arising from the custom GPT platform. Our systematic examination categorizes potential attack scenarios into three threat models based on the role of the malicious actor, and identifies critical data exchange channels in custom GPTs. Utilizing the STRIDE threat modeling framework, we identify 26 potential attack vectors, with 19 being partially or fully validated in real-world settings. Our findings emphasize the urgent need for robust security and privacy measures in the custom GPT ecosystem, especially in light of the forthcoming launch of the official GPT store by OpenAI.
+
+
+
+## **6. Advancing TTP Analysis: Harnessing the Power of Encoder-Only and Decoder-Only Language Models with Retrieval Augmented Generation**
+
+cs.CR
+
+**SubmitDate**: 2023-12-30    [abs](http://arxiv.org/abs/2401.00280v1) [paper-pdf](http://arxiv.org/pdf/2401.00280v1)
+
+**Authors**: Reza Fayyazi, Rozhina Taghdimi, Shanchieh Jay Yang
+
+**Abstract**: Tactics, Techniques, and Procedures (TTPs) outline the methods attackers use to exploit vulnerabilities. The interpretation of TTPs in the MITRE ATT&CK framework can be challenging for cybersecurity practitioners due to presumed expertise, complex dependencies, and inherent ambiguity. Meanwhile, advancements with Large Language Models (LLMs) have led to recent surge in studies exploring its uses in cybersecurity operations. This leads us to question how well encoder-only (e.g., RoBERTa) and decoder-only (e.g., GPT-3.5) LLMs can comprehend and summarize TTPs to inform analysts of the intended purposes (i.e., tactics) of a cyberattack procedure. The state-of-the-art LLMs have shown to be prone to hallucination by providing inaccurate information, which is problematic in critical domains like cybersecurity. Therefore, we propose the use of Retrieval Augmented Generation (RAG) techniques to extract relevant contexts for each cyberattack procedure for decoder-only LLMs (without fine-tuning). We further contrast such approach against supervised fine-tuning (SFT) of encoder-only LLMs. Our results reveal that both the direct-use of decoder-only LLMs (i.e., its pre-trained knowledge) and the SFT of encoder-only LLMs offer inaccurate interpretation of cyberattack procedures. Significant improvements are shown when RAG is used for decoder-only LLMs, particularly when directly relevant context is found. This study further sheds insights on the limitations and capabilities of using RAG for LLMs in interpreting TTPs.
+
+
+
+## **7. Jatmo: Prompt Injection Defense by Task-Specific Finetuning**
 
 cs.CR
 
@@ -17,7 +97,7 @@ cs.CR
 
 
 
-## **2. Identifying and Mitigating the Security Risks of Generative AI**
+## **8. Identifying and Mitigating the Security Risks of Generative AI**
 
 cs.AI
 
@@ -29,7 +109,7 @@ cs.AI
 
 
 
-## **3. Task Contamination: Language Models May Not Be Few-Shot Anymore**
+## **9. Task Contamination: Language Models May Not Be Few-Shot Anymore**
 
 cs.CL
 
@@ -43,7 +123,7 @@ Accepted by AAAI 2024
 
 
 
-## **4. Vulnerability of Machine Learning Approaches Applied in IoT-based Smart Grid: A Review**
+## **10. Vulnerability of Machine Learning Approaches Applied in IoT-based Smart Grid: A Review**
 
 cs.CR
 
@@ -55,7 +135,7 @@ cs.CR
 
 
 
-## **5. From Shortcuts to Triggers: Backdoor Defense with Denoised PoE**
+## **11. From Shortcuts to Triggers: Backdoor Defense with Denoised PoE**
 
 cs.CL
 
@@ -67,7 +147,7 @@ cs.CL
 
 
 
-## **6. A Mutation-Based Method for Multi-Modal Jailbreaking Attack Detection**
+## **12. A Mutation-Based Method for Multi-Modal Jailbreaking Attack Detection**
 
 cs.CR
 
@@ -81,7 +161,7 @@ cs.CR
 
 
 
-## **7. A Survey on Large Language Models for Software Engineering**
+## **13. A Survey on Large Language Models for Software Engineering**
 
 cs.SE
 
@@ -93,7 +173,7 @@ cs.SE
 
 
 
-## **8. Spear Phishing With Large Language Models**
+## **14. Spear Phishing With Large Language Models**
 
 cs.CY
 
@@ -107,7 +187,7 @@ cs.CY
 
 
 
-## **9. MetaAID 2.5: A Secure Framework for Developing Metaverse Applications via Large Language Models**
+## **15. MetaAID 2.5: A Secure Framework for Developing Metaverse Applications via Large Language Models**
 
 cs.CR
 
@@ -119,7 +199,7 @@ cs.CR
 
 
 
-## **10. HW-V2W-Map: Hardware Vulnerability to Weakness Mapping Framework for Root Cause Analysis with GPT-assisted Mitigation Suggestion**
+## **16. HW-V2W-Map: Hardware Vulnerability to Weakness Mapping Framework for Root Cause Analysis with GPT-assisted Mitigation Suggestion**
 
 cs.CR
 
@@ -133,7 +213,7 @@ cs.CR
 
 
 
-## **11. Benchmarking and Defending Against Indirect Prompt Injection Attacks on Large Language Models**
+## **17. Benchmarking and Defending Against Indirect Prompt Injection Attacks on Large Language Models**
 
 cs.CL
 
@@ -145,7 +225,7 @@ cs.CL
 
 
 
-## **12. Universal and Transferable Adversarial Attacks on Aligned Language Models**
+## **18. Universal and Transferable Adversarial Attacks on Aligned Language Models**
 
 cs.CL
 
@@ -159,7 +239,7 @@ Website: http://llm-attacks.org/
 
 
 
-## **13. Robust Contrastive Language-Image Pre-training against Data Poisoning and Backdoor Attacks**
+## **19. Robust Contrastive Language-Image Pre-training against Data Poisoning and Backdoor Attacks**
 
 cs.CV
 
@@ -171,7 +251,7 @@ cs.CV
 
 
 
-## **14. Traces of Memorisation in Large Language Models for Code**
+## **20. Traces of Memorisation in Large Language Models for Code**
 
 cs.CR
 
@@ -185,7 +265,7 @@ ICSE 2024 Research Track
 
 
 
-## **15. PoisonPrompt: Backdoor Attack on Prompt-based Large Language Models**
+## **21. PoisonPrompt: Backdoor Attack on Prompt-based Large Language Models**
 
 cs.CL
 
@@ -199,7 +279,7 @@ To Appear in IEEE ICASSP 2024, code is available at:  https://github.com/grasses
 
 
 
-## **16. A Comprehensive Survey of Attack Techniques, Implementation, and Mitigation Strategies in Large Language Models**
+## **22. A Comprehensive Survey of Attack Techniques, Implementation, and Mitigation Strategies in Large Language Models**
 
 cs.CR
 
@@ -213,7 +293,7 @@ Accepted to be published in the Proceedings of the 3rd International  Conference
 
 
 
-## **17. No-Skim: Towards Efficiency Robustness Evaluation on Skimming-based Language Models**
+## **23. No-Skim: Towards Efficiency Robustness Evaluation on Skimming-based Language Models**
 
 cs.CR
 
@@ -225,7 +305,7 @@ cs.CR
 
 
 
-## **18. Privacy-Aware Document Visual Question Answering**
+## **24. Privacy-Aware Document Visual Question Answering**
 
 cs.CV
 
@@ -237,7 +317,7 @@ cs.CV
 
 
 
-## **19. AutoDAN: Interpretable Gradient-Based Adversarial Attacks on Large Language Models**
+## **25. AutoDAN: Interpretable Gradient-Based Adversarial Attacks on Large Language Models**
 
 cs.CR
 
@@ -251,7 +331,7 @@ Version 2 updates: Added comparison of three more evaluation methods  and their 
 
 
 
-## **20. FigStep: Jailbreaking Large Vision-language Models via Typographic Visual Prompts**
+## **26. FigStep: Jailbreaking Large Vision-language Models via Typographic Visual Prompts**
 
 cs.CR
 
@@ -265,7 +345,7 @@ Technical Report
 
 
 
-## **21. Efficient Representation of the Activation Space in Deep Neural Networks**
+## **27. Efficient Representation of the Activation Space in Deep Neural Networks**
 
 cs.LG
 
@@ -277,7 +357,7 @@ cs.LG
 
 
 
-## **22. PromptBench: A Unified Library for Evaluation of Large Language Models**
+## **28. PromptBench: A Unified Library for Evaluation of Large Language Models**
 
 cs.AI
 
@@ -291,7 +371,7 @@ An extension to PromptBench (arXiv:2306.04528) for unified evaluation  of LLMs u
 
 
 
-## **23. Causality Analysis for Evaluating the Security of Large Language Models**
+## **29. Causality Analysis for Evaluating the Security of Large Language Models**
 
 cs.AI
 
@@ -303,7 +383,7 @@ cs.AI
 
 
 
-## **24. DeceptPrompt: Exploiting LLM-driven Code Generation via Adversarial Natural Language Instructions**
+## **30. DeceptPrompt: Exploiting LLM-driven Code Generation via Adversarial Natural Language Instructions**
 
 cs.CR
 
@@ -315,7 +395,7 @@ cs.CR
 
 
 
-## **25. Maatphor: Automated Variant Analysis for Prompt Injection Attacks**
+## **31. Maatphor: Automated Variant Analysis for Prompt Injection Attacks**
 
 cs.CR
 
@@ -327,7 +407,7 @@ cs.CR
 
 
 
-## **26. Practical Membership Inference Attacks against Fine-tuned Large Language Models via Self-prompt Calibration**
+## **32. Practical Membership Inference Attacks against Fine-tuned Large Language Models via Self-prompt Calibration**
 
 cs.CL
 
@@ -339,7 +419,7 @@ cs.CL
 
 
 
-## **27. Safety Alignment in NLP Tasks: Weakly Aligned Summarization as an In-Context Attack**
+## **33. Safety Alignment in NLP Tasks: Weakly Aligned Summarization as an In-Context Attack**
 
 cs.CL
 
@@ -353,7 +433,7 @@ cs.CL
 
 
 
-## **28. GPTBIAS: A Comprehensive Framework for Evaluating Bias in Large Language Models**
+## **34. GPTBIAS: A Comprehensive Framework for Evaluating Bias in Large Language Models**
 
 cs.CL
 
@@ -365,7 +445,7 @@ cs.CL
 
 
 
-## **29. InferDPT: Privacy-Preserving Inference for Black-box Large Language Model**
+## **35. InferDPT: Privacy-Preserving Inference for Black-box Large Language Model**
 
 cs.CR
 
@@ -377,7 +457,7 @@ cs.CR
 
 
 
-## **30. METAL: Metamorphic Testing Framework for Analyzing Large-Language Model Qualities**
+## **36. METAL: Metamorphic Testing Framework for Analyzing Large-Language Model Qualities**
 
 cs.SE
 
@@ -391,7 +471,7 @@ Accepted to International Conference on Software Testing,  Verification and Vali
 
 
 
-## **31. Occlusion-based Detection of Trojan-triggering Inputs in Large Language Models of Code**
+## **37. Occlusion-based Detection of Trojan-triggering Inputs in Large Language Models of Code**
 
 cs.SE
 
@@ -403,7 +483,7 @@ cs.SE
 
 
 
-## **32. Towards Robust Pruning: An Adaptive Knowledge-Retention Pruning Strategy for Language Models**
+## **38. Towards Robust Pruning: An Adaptive Knowledge-Retention Pruning Strategy for Language Models**
 
 cs.CL
 
@@ -415,7 +495,7 @@ cs.CL
 
 
 
-## **33. Temporal-Distributed Backdoor Attack Against Video Based Action Recognition**
+## **39. Temporal-Distributed Backdoor Attack Against Video Based Action Recognition**
 
 cs.CV
 
@@ -429,7 +509,7 @@ accepted by AAAI 2024
 
 
 
-## **34. HuRef: HUman-REadable Fingerprint for Large Language Models**
+## **40. HuRef: HUman-REadable Fingerprint for Large Language Models**
 
 cs.CL
 
@@ -441,7 +521,7 @@ cs.CL
 
 
 
-## **35. Goal-Oriented Prompt Attack and Safety Evaluation for LLMs**
+## **41. Goal-Oriented Prompt Attack and Safety Evaluation for LLMs**
 
 cs.CL
 
@@ -453,7 +533,7 @@ cs.CL
 
 
 
-## **36. Make Them Spill the Beans! Coercive Knowledge Extraction from (Production) LLMs**
+## **42. Make Them Spill the Beans! Coercive Knowledge Extraction from (Production) LLMs**
 
 cs.CR
 
@@ -465,7 +545,7 @@ cs.CR
 
 
 
-## **37. Forcing Generative Models to Degenerate Ones: The Power of Data Poisoning Attacks**
+## **43. Forcing Generative Models to Degenerate Ones: The Power of Data Poisoning Attacks**
 
 cs.CR
 
@@ -479,7 +559,7 @@ cs.CR
 
 
 
-## **38. Defending Against Alignment-Breaking Attacks via Robustly Aligned LLM**
+## **44. Defending Against Alignment-Breaking Attacks via Robustly Aligned LLM**
 
 cs.CL
 
@@ -493,7 +573,7 @@ cs.CL
 
 
 
-## **39. Domain Private Transformers for Multi-Domain Dialog Systems**
+## **45. Domain Private Transformers for Multi-Domain Dialog Systems**
 
 cs.CL
 
@@ -507,7 +587,7 @@ Accepted to Findings of EMNLP 2023 (short paper). Code available at  https://git
 
 
 
-## **40. Analyzing the Inherent Response Tendency of LLMs: Real-World Instructions-Driven Jailbreak**
+## **46. Analyzing the Inherent Response Tendency of LLMs: Real-World Instructions-Driven Jailbreak**
 
 cs.CL
 
@@ -519,7 +599,7 @@ cs.CL
 
 
 
-## **41. Mark My Words: Analyzing and Evaluating Language Model Watermarks**
+## **47. Mark My Words: Analyzing and Evaluating Language Model Watermarks**
 
 cs.CR
 
@@ -533,7 +613,7 @@ cs.CR
 
 
 
-## **42. Dr. Jekyll and Mr. Hyde: Two Faces of LLMs**
+## **48. Dr. Jekyll and Mr. Hyde: Two Faces of LLMs**
 
 cs.CR
 
@@ -545,7 +625,7 @@ cs.CR
 
 
 
-## **43. Clinical Notes Reveal Physician Fatigue**
+## **49. Clinical Notes Reveal Physician Fatigue**
 
 cs.CL
 
@@ -557,7 +637,7 @@ cs.CL
 
 
 
-## **44. Tree of Attacks: Jailbreaking Black-Box LLMs Automatically**
+## **50. Tree of Attacks: Jailbreaking Black-Box LLMs Automatically**
 
 cs.LG
 
@@ -568,82 +648,6 @@ An implementation of the presented method is available at  https://github.com/RI
 **Authors**: Anay Mehrotra, Manolis Zampetakis, Paul Kassianik, Blaine Nelson, Hyrum Anderson, Yaron Singer, Amin Karbasi
 
 **Abstract**: While Large Language Models (LLMs) display versatile functionality, they continue to generate harmful, biased, and toxic content, as demonstrated by the prevalence of human-designed jailbreaks. In this work, we present Tree of Attacks with Pruning (TAP), an automated method for generating jailbreaks that only requires black-box access to the target LLM. TAP utilizes an LLM to iteratively refine candidate (attack) prompts using tree-of-thoughts reasoning until one of the generated prompts jailbreaks the target. Crucially, before sending prompts to the target, TAP assesses them and prunes the ones unlikely to result in jailbreaks. Using tree-of-thought reasoning allows TAP to navigate a large search space of prompts and pruning reduces the total number of queries sent to the target. In empirical evaluations, we observe that TAP generates prompts that jailbreak state-of-the-art LLMs (including GPT4 and GPT4-Turbo) for more than 80% of the prompts using only a small number of queries. This significantly improves upon the previous state-of-the-art black-box method for generating jailbreaks.
-
-
-
-## **45. A Survey on Large Language Model (LLM) Security and Privacy: The Good, the Bad, and the Ugly**
-
-cs.CR
-
-**SubmitDate**: 2023-12-04    [abs](http://arxiv.org/abs/2312.02003v1) [paper-pdf](http://arxiv.org/pdf/2312.02003v1)
-
-**Authors**: Yifan Yao, Jinhao Duan, Kaidi Xu, Yuanfang Cai, Eric Sun, Yue Zhang
-
-**Abstract**: Large Language Models (LLMs), such as GPT-3 and BERT, have revolutionized natural language understanding and generation. They possess deep language comprehension, human-like text generation capabilities, contextual awareness, and robust problem-solving skills, making them invaluable in various domains (e.g., search engines, customer support, translation). In the meantime, LLMs have also gained traction in the security community, revealing security vulnerabilities and showcasing their potential in security-related tasks. This paper explores the intersection of LLMs with security and privacy. Specifically, we investigate how LLMs positively impact security and privacy, potential risks and threats associated with their use, and inherent vulnerabilities within LLMs. Through a comprehensive literature review, the paper categorizes findings into "The Good" (beneficial LLM applications), "The Bad" (offensive applications), and "The Ugly" (vulnerabilities and their defenses). We have some interesting findings. For example, LLMs have proven to enhance code and data security, outperforming traditional methods. However, they can also be harnessed for various attacks (particularly user-level attacks) due to their human-like reasoning abilities. We have identified areas that require further research efforts. For example, research on model and parameter extraction attacks is limited and often theoretical, hindered by LLM parameter scale and confidentiality. Safe instruction tuning, a recent development, requires more exploration. We hope that our work can shed light on the LLMs' potential to both bolster and jeopardize cybersecurity.
-
-
-
-## **46. Intrusion Detection System with Machine Learning and Multiple Datasets**
-
-cs.CR
-
-12 pages, 2 figures, 2 tables
-
-**SubmitDate**: 2023-12-04    [abs](http://arxiv.org/abs/2312.01941v1) [paper-pdf](http://arxiv.org/pdf/2312.01941v1)
-
-**Authors**: Haiyan Xuan, Mohith Manohar
-
-**Abstract**: As Artificial Intelligence (AI) technologies continue to gain traction in the modern-day world, they ultimately pose an immediate threat to current cybersecurity systems via exploitative methods. Prompt engineering is a relatively new field that explores various prompt designs that can hijack large language models (LLMs). If used by an unethical attacker, it can enable an AI system to offer malicious insights and code to them. In this paper, an enhanced intrusion detection system (IDS) that utilizes machine learning (ML) and hyperparameter tuning is explored, which can improve a model's performance in terms of accuracy and efficacy. Ultimately, this improved system can be used to combat the attacks made by unethical hackers. A standard IDS is solely configured with pre-configured rules and patterns; however, with the utilization of machine learning, implicit and different patterns can be generated through the models' hyperparameter settings and parameters. In addition, the IDS will be equipped with multiple datasets so that the accuracy of the models improves. We evaluate the performance of multiple ML models and their respective hyperparameter settings through various metrics to compare their results to other models and past research work. The results of the proposed multi-dataset integration method yielded an accuracy score of 99.9% when equipped with the XGBoost and random forest classifiers and RandomizedSearchCV hyperparameter technique.
-
-
-
-## **47. InstructTA: Instruction-Tuned Targeted Attack for Large Vision-Language Models**
-
-cs.CV
-
-**SubmitDate**: 2023-12-04    [abs](http://arxiv.org/abs/2312.01886v1) [paper-pdf](http://arxiv.org/pdf/2312.01886v1)
-
-**Authors**: Xunguang Wang, Zhenlan Ji, Pingchuan Ma, Zongjie Li, Shuai Wang
-
-**Abstract**: Large vision-language models (LVLMs) have demonstrated their incredible capability in image understanding and response generation. However, this rich visual interaction also makes LVLMs vulnerable to adversarial examples. In this paper, we formulate a novel and practical gray-box attack scenario that the adversary can only access the visual encoder of the victim LVLM, without the knowledge of its prompts (which are often proprietary for service providers and not publicly available) and its underlying large language model (LLM). This practical setting poses challenges to the cross-prompt and cross-model transferability of targeted adversarial attack, which aims to confuse the LVLM to output a response that is semantically similar to the attacker's chosen target text. To this end, we propose an instruction-tuned targeted attack (dubbed InstructTA) to deliver the targeted adversarial attack on LVLMs with high transferability. Initially, we utilize a public text-to-image generative model to "reverse" the target response into a target image, and employ GPT-4 to infer a reasonable instruction $\boldsymbol{p}^\prime$ from the target response. We then form a local surrogate model (sharing the same visual encoder with the victim LVLM) to extract instruction-aware features of an adversarial image example and the target image, and minimize the distance between these two features to optimize the adversarial example. To further improve the transferability, we augment the instruction $\boldsymbol{p}^\prime$ with instructions paraphrased from an LLM. Extensive experiments demonstrate the superiority of our proposed method in targeted attack performance and transferability.
-
-
-
-## **48. Warfare:Breaking the Watermark Protection of AI-Generated Content**
-
-cs.CV
-
-**SubmitDate**: 2023-12-04    [abs](http://arxiv.org/abs/2310.07726v2) [paper-pdf](http://arxiv.org/pdf/2310.07726v2)
-
-**Authors**: Guanlin Li, Yifei Chen, Jie Zhang, Jiwei Li, Shangwei Guo, Tianwei Zhang
-
-**Abstract**: AI-Generated Content (AIGC) is gaining great popularity, with many emerging commercial services and applications. These services leverage advanced generative models, such as latent diffusion models and large language models, to generate creative content (e.g., realistic images and fluent sentences) for users. The usage of such generated content needs to be highly regulated, as the service providers need to ensure the users do not violate the usage policies (e.g., abuse for commercialization, generating and distributing unsafe content). A promising solution to achieve this goal is watermarking, which adds unique and imperceptible watermarks on the content for service verification and attribution. Numerous watermarking approaches have been proposed recently. However, in this paper, we show that an adversary can easily break these watermarking mechanisms. Specifically, we consider two possible attacks. (1) Watermark removal: the adversary can easily erase the embedded watermark from the generated content and then use it freely bypassing the regulation of the service provider. (2) Watermark forging: the adversary can create illegal content with forged watermarks from another user, causing the service provider to make wrong attributions. We propose Warfare, a unified methodology to achieve both attacks in a holistic way. The key idea is to leverage a pre-trained diffusion model for content processing and a generative adversarial network for watermark removal or forging. We evaluate Warfare on different datasets and embedding setups. The results prove that it can achieve high success rates while maintaining the quality of the generated content. Compared to existing diffusion model-based attacks, Warfare is 5,050~11,000x faster.
-
-
-
-## **49. Generative AI in Writing Research Papers: A New Type of Algorithmic Bias and Uncertainty in Scholarly Work**
-
-cs.CY
-
-10 pages, 6 figures
-
-**SubmitDate**: 2023-12-04    [abs](http://arxiv.org/abs/2312.10057v1) [paper-pdf](http://arxiv.org/pdf/2312.10057v1)
-
-**Authors**: Rishab Jain, Aditya Jain
-
-**Abstract**: The use of artificial intelligence (AI) in research across all disciplines is becoming ubiquitous. However, this ubiquity is largely driven by hyperspecific AI models developed during scientific studies for accomplishing a well-defined, data-dense task. These AI models introduce apparent, human-recognizable biases because they are trained with finite, specific data sets and parameters. However, the efficacy of using large language models (LLMs) -- and LLM-powered generative AI tools, such as ChatGPT -- to assist the research process is currently indeterminate. These generative AI tools, trained on general and imperceptibly large datasets along with human feedback, present challenges in identifying and addressing biases. Furthermore, these models are susceptible to goal misgeneralization, hallucinations, and adversarial attacks such as red teaming prompts -- which can be unintentionally performed by human researchers, resulting in harmful outputs. These outputs are reinforced in research -- where an increasing number of individuals have begun to use generative AI to compose manuscripts. Efforts into AI interpretability lag behind development, and the implicit variations that occur when prompting and providing context to a chatbot introduce uncertainty and irreproducibility. We thereby find that incorporating generative AI in the process of writing research manuscripts introduces a new type of context-induced algorithmic bias and has unintended side effects that are largely detrimental to academia, knowledge production, and communicating research.
-
-
-
-## **50. Unleashing Cheapfakes through Trojan Plugins of Large Language Models**
-
-cs.CR
-
-**SubmitDate**: 2023-12-01    [abs](http://arxiv.org/abs/2312.00374v1) [paper-pdf](http://arxiv.org/pdf/2312.00374v1)
-
-**Authors**: Tian Dong, Guoxing Chen, Shaofeng Li, Minhui Xue, Rayne Holland, Yan Meng, Zhen Liu, Haojin Zhu
-
-**Abstract**: Open-source Large Language Models (LLMs) have recently gained popularity because of their comparable performance to proprietary LLMs. To efficiently fulfill domain-specialized tasks, open-source LLMs can be refined, without expensive accelerators, using low-rank adapters. However, it is still unknown whether low-rank adapters can be exploited to control LLMs. To address this gap, we demonstrate that an infected adapter can induce, on specific triggers, an LLM to output content defined by an adversary and to even maliciously use tools. To train a Trojan adapter, we propose two novel attacks, POLISHED and FUSION, that improve over prior approaches. POLISHED uses LLM-enhanced paraphrasing to polish benchmark poisoned datasets. In contrast, in the absence of a dataset, FUSION leverages an over-poisoning procedure to transform a benign adaptor. Our experiments validate that our attacks provide higher attack effectiveness than the baseline and, for the purpose of attracting downloads, preserves or improves the adapter's utility. Finally, we provide two case studies to demonstrate that the Trojan adapter can lead a LLM-powered autonomous agent to execute unintended scripts or send phishing emails. Our novel attacks represent the first study of supply chain threats for LLMs through the lens of Trojan plugins.
 
 
 

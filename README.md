@@ -1,9 +1,593 @@
 # Latest Adversarial Attack Papers
-**update at 2024-01-16 10:21:22**
+**update at 2024-01-19 11:40:53**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. How Johnny Can Persuade LLMs to Jailbreak Them: Rethinking Persuasion to Challenge AI Safety by Humanizing LLMs**
+## **1. Marrying Adapters and Mixup to Efficiently Enhance the Adversarial Robustness of Pre-Trained Language Models for Text Classification**
+
+cs.CL
+
+10 pages and 2 figures
+
+**SubmitDate**: 2024-01-18    [abs](http://arxiv.org/abs/2401.10111v1) [paper-pdf](http://arxiv.org/pdf/2401.10111v1)
+
+**Authors**: Tuc Nguyen, Thai Le
+
+**Abstract**: Existing works show that augmenting training data of neural networks using both clean and adversarial examples can enhance their generalizability under adversarial attacks. However, this training approach often leads to performance degradation on clean inputs. Additionally, it requires frequent re-training of the entire model to account for new attack types, resulting in significant and costly computations. Such limitations make adversarial training mechanisms less practical, particularly for complex Pre-trained Language Models (PLMs) with millions or even billions of parameters. To overcome these challenges while still harnessing the theoretical benefits of adversarial training, this study combines two concepts: (1) adapters, which enable parameter-efficient fine-tuning, and (2) Mixup, which train NNs via convex combinations of pairs data pairs. Intuitively, we propose to fine-tune PLMs through convex combinations of non-data pairs of fine-tuned adapters, one trained with clean and another trained with adversarial examples. Our experiments show that the proposed method achieves the best trade-off between training efficiency and predictive performance, both with and without attacks compared to other baselines on a variety of downstream tasks.
+
+
+
+## **2. Power in Numbers: Robust reading comprehension by finetuning with four adversarial sentences per example**
+
+cs.CL
+
+**SubmitDate**: 2024-01-18    [abs](http://arxiv.org/abs/2401.10091v1) [paper-pdf](http://arxiv.org/pdf/2401.10091v1)
+
+**Authors**: Ariel Marcus
+
+**Abstract**: Recent models have achieved human level performance on the Stanford Question Answering Dataset when using F1 scores to evaluate the reading comprehension task. Yet, teaching machines to comprehend text has not been solved in the general case. By appending one adversarial sentence to the context paragraph, past research has shown that the F1 scores from reading comprehension models drop almost in half. In this paper, I replicate past adversarial research with a new model, ELECTRA-Small, and demonstrate that the new model's F1 score drops from 83.9% to 29.2%. To improve ELECTRA-Small's resistance to this attack, I finetune the model on SQuAD v1.1 training examples with one to five adversarial sentences appended to the context paragraph. Like past research, I find that the finetuned model on one adversarial sentence does not generalize well across evaluation datasets. However, when finetuned on four or five adversarial sentences the model attains an F1 score of more than 70% on most evaluation datasets with multiple appended and prepended adversarial sentences. The results suggest that with enough examples we can make models robust to adversarial attacks.
+
+
+
+## **3. HGAttack: Transferable Heterogeneous Graph Adversarial Attack**
+
+cs.LG
+
+**SubmitDate**: 2024-01-18    [abs](http://arxiv.org/abs/2401.09945v1) [paper-pdf](http://arxiv.org/pdf/2401.09945v1)
+
+**Authors**: He Zhao, Zhiwei Zeng, Yongwei Wang, Deheng Ye, Chunyan Miao
+
+**Abstract**: Heterogeneous Graph Neural Networks (HGNNs) are increasingly recognized for their performance in areas like the web and e-commerce, where resilience against adversarial attacks is crucial. However, existing adversarial attack methods, which are primarily designed for homogeneous graphs, fall short when applied to HGNNs due to their limited ability to address the structural and semantic complexity of HGNNs. This paper introduces HGAttack, the first dedicated gray box evasion attack method for heterogeneous graphs. We design a novel surrogate model to closely resemble the behaviors of the target HGNN and utilize gradient-based methods for perturbation generation. Specifically, the proposed surrogate model effectively leverages heterogeneous information by extracting meta-path induced subgraphs and applying GNNs to learn node embeddings with distinct semantics from each subgraph. This approach improves the transferability of generated attacks on the target HGNN and significantly reduces memory costs. For perturbation generation, we introduce a semantics-aware mechanism that leverages subgraph gradient information to autonomously identify vulnerable edges across a wide range of relations within a constrained perturbation budget. We validate HGAttack's efficacy with comprehensive experiments on three datasets, providing empirical analyses of its generated perturbations. Outperforming baseline methods, HGAttack demonstrated significant efficacy in diminishing the performance of target HGNN models, affirming the effectiveness of our approach in evaluating the robustness of HGNNs against adversarial attacks.
+
+
+
+## **4. Universally Robust Graph Neural Networks by Preserving Neighbor Similarity**
+
+cs.LG
+
+**SubmitDate**: 2024-01-18    [abs](http://arxiv.org/abs/2401.09754v1) [paper-pdf](http://arxiv.org/pdf/2401.09754v1)
+
+**Authors**: Yulin Zhu, Yuni Lai, Xing Ai, Kai Zhou
+
+**Abstract**: Despite the tremendous success of graph neural networks in learning relational data, it has been widely investigated that graph neural networks are vulnerable to structural attacks on homophilic graphs. Motivated by this, a surge of robust models is crafted to enhance the adversarial robustness of graph neural networks on homophilic graphs. However, the vulnerability based on heterophilic graphs remains a mystery to us. To bridge this gap, in this paper, we start to explore the vulnerability of graph neural networks on heterophilic graphs and theoretically prove that the update of the negative classification loss is negatively correlated with the pairwise similarities based on the powered aggregated neighbor features. This theoretical proof explains the empirical observations that the graph attacker tends to connect dissimilar node pairs based on the similarities of neighbor features instead of ego features both on homophilic and heterophilic graphs. In this way, we novelly introduce a novel robust model termed NSPGNN which incorporates a dual-kNN graphs pipeline to supervise the neighbor similarity-guided propagation. This propagation utilizes the low-pass filter to smooth the features of node pairs along the positive kNN graphs and the high-pass filter to discriminate the features of node pairs along the negative kNN graphs. Extensive experiments on both homophilic and heterophilic graphs validate the universal robustness of NSPGNN compared to the state-of-the-art methods.
+
+
+
+## **5. Hijacking Attacks against Neural Networks by Analyzing Training Data**
+
+cs.CR
+
+Accepted by the 33rd USENIX Security Symposium (USENIX Security  2024); Full Version
+
+**SubmitDate**: 2024-01-18    [abs](http://arxiv.org/abs/2401.09740v1) [paper-pdf](http://arxiv.org/pdf/2401.09740v1)
+
+**Authors**: Yunjie Ge, Qian Wang, Huayang Huang, Qi Li, Cong Wang, Chao Shen, Lingchen Zhao, Peipei Jiang, Zheng Fang, Shenyi Zhang
+
+**Abstract**: Backdoors and adversarial examples are the two primary threats currently faced by deep neural networks (DNNs). Both attacks attempt to hijack the model behaviors with unintended outputs by introducing (small) perturbations to the inputs. Backdoor attacks, despite the high success rates, often require a strong assumption, which is not always easy to achieve in reality. Adversarial example attacks, which put relatively weaker assumptions on attackers, often demand high computational resources, yet do not always yield satisfactory success rates when attacking mainstream black-box models in the real world. These limitations motivate the following research question: can model hijacking be achieved more simply, with a higher attack success rate and more reasonable assumptions? In this paper, we propose CleanSheet, a new model hijacking attack that obtains the high performance of backdoor attacks without requiring the adversary to tamper with the model training process. CleanSheet exploits vulnerabilities in DNNs stemming from the training data. Specifically, our key idea is to treat part of the clean training data of the target model as "poisoned data," and capture the characteristics of these data that are more sensitive to the model (typically called robust features) to construct "triggers." These triggers can be added to any input example to mislead the target model, similar to backdoor attacks. We validate the effectiveness of CleanSheet through extensive experiments on 5 datasets, 79 normally trained models, 68 pruned models, and 39 defensive models. Results show that CleanSheet exhibits performance comparable to state-of-the-art backdoor attacks, achieving an average attack success rate (ASR) of 97.5% on CIFAR-100 and 92.4% on GTSRB, respectively. Furthermore, CleanSheet consistently maintains a high ASR, when confronted with various mainstream backdoor defenses.
+
+
+
+## **6. X-CANIDS: Signal-Aware Explainable Intrusion Detection System for Controller Area Network-Based In-Vehicle Network**
+
+cs.CR
+
+This is the Accepted version of an article for publication in IEEE  TVT
+
+**SubmitDate**: 2024-01-18    [abs](http://arxiv.org/abs/2303.12278v2) [paper-pdf](http://arxiv.org/pdf/2303.12278v2)
+
+**Authors**: Seonghoon Jeong, Sangho Lee, Hwejae Lee, Huy Kang Kim
+
+**Abstract**: Controller Area Network (CAN) is an essential networking protocol that connects multiple electronic control units (ECUs) in a vehicle. However, CAN-based in-vehicle networks (IVNs) face security risks owing to the CAN mechanisms. An adversary can sabotage a vehicle by leveraging the security risks if they can access the CAN bus. Thus, recent actions and cybersecurity regulations (e.g., UNR 155) require carmakers to implement intrusion detection systems (IDSs) in their vehicles. The IDS should detect cyberattacks and provide additional information to analyze conducted attacks. Although many IDSs have been proposed, considerations regarding their feasibility and explainability remain lacking. This study proposes X-CANIDS, which is a novel IDS for CAN-based IVNs. X-CANIDS dissects the payloads in CAN messages into human-understandable signals using a CAN database. The signals improve the intrusion detection performance compared with the use of bit representations of raw payloads. These signals also enable an understanding of which signal or ECU is under attack. X-CANIDS can detect zero-day attacks because it does not require any labeled dataset in the training phase. We confirmed the feasibility of the proposed method through a benchmark test on an automotive-grade embedded device with a GPU. The results of this work will be valuable to carmakers and researchers considering the installation of in-vehicle IDSs for their vehicles.
+
+
+
+## **7. Artwork Protection Against Neural Style Transfer Using Locally Adaptive Adversarial Color Attack**
+
+cs.CV
+
+9 pages, 5 figures
+
+**SubmitDate**: 2024-01-18    [abs](http://arxiv.org/abs/2401.09673v1) [paper-pdf](http://arxiv.org/pdf/2401.09673v1)
+
+**Authors**: Zhongliang Guo, Kaixuan Wang, Weiye Li, Yifei Qian, Ognjen Arandjelović, Lei Fang
+
+**Abstract**: Neural style transfer (NST) is widely adopted in computer vision to generate new images with arbitrary styles. This process leverages neural networks to merge aesthetic elements of a style image with the structural aspects of a content image into a harmoniously integrated visual result. However, unauthorized NST can exploit artwork. Such misuse raises socio-technical concerns regarding artists' rights and motivates the development of technical approaches for the proactive protection of original creations. Adversarial attack is a concept primarily explored in machine learning security. Our work introduces this technique to protect artists' intellectual property. In this paper Locally Adaptive Adversarial Color Attack (LAACA), a method for altering images in a manner imperceptible to the human eyes but disruptive to NST. Specifically, we design perturbations targeting image areas rich in high-frequency content, generated by disrupting intermediate features. Our experiments and user study confirm that by attacking NST using the proposed method results in visually worse neural style transfer, thus making it an effective solution for visual artwork protection.
+
+
+
+## **8. MITS-GAN: Safeguarding Medical Imaging from Tampering with Generative Adversarial Networks**
+
+eess.IV
+
+**SubmitDate**: 2024-01-17    [abs](http://arxiv.org/abs/2401.09624v1) [paper-pdf](http://arxiv.org/pdf/2401.09624v1)
+
+**Authors**: Giovanni Pasqualino, Luca Guarnera, Alessandro Ortis, Sebastiano Battiato
+
+**Abstract**: The progress in generative models, particularly Generative Adversarial Networks (GANs), opened new possibilities for image generation but raised concerns about potential malicious uses, especially in sensitive areas like medical imaging. This study introduces MITS-GAN, a novel approach to prevent tampering in medical images, with a specific focus on CT scans. The approach disrupts the output of the attacker's CT-GAN architecture by introducing imperceptible but yet precise perturbations. Specifically, the proposed approach involves the introduction of appropriate Gaussian noise to the input as a protective measure against various attacks. Our method aims to enhance tamper resistance, comparing favorably to existing techniques. Experimental results on a CT scan dataset demonstrate MITS-GAN's superior performance, emphasizing its ability to generate tamper-resistant images with negligible artifacts. As image tampering in medical domains poses life-threatening risks, our proactive approach contributes to the responsible and ethical use of generative models. This work provides a foundation for future research in countering cyber threats in medical imaging. Models and codes are publicly available at the following link \url{https://iplab.dmi.unict.it/MITS-GAN-2024/}.
+
+
+
+## **9. Towards Scalable and Robust Model Versioning**
+
+cs.LG
+
+Accepted in IEEE SaTML 2024
+
+**SubmitDate**: 2024-01-17    [abs](http://arxiv.org/abs/2401.09574v1) [paper-pdf](http://arxiv.org/pdf/2401.09574v1)
+
+**Authors**: Wenxin Ding, Arjun Nitin Bhagoji, Ben Y. Zhao, Haitao Zheng
+
+**Abstract**: As the deployment of deep learning models continues to expand across industries, the threat of malicious incursions aimed at gaining access to these deployed models is on the rise. Should an attacker gain access to a deployed model, whether through server breaches, insider attacks, or model inversion techniques, they can then construct white-box adversarial attacks to manipulate the model's classification outcomes, thereby posing significant risks to organizations that rely on these models for critical tasks. Model owners need mechanisms to protect themselves against such losses without the necessity of acquiring fresh training data - a process that typically demands substantial investments in time and capital.   In this paper, we explore the feasibility of generating multiple versions of a model that possess different attack properties, without acquiring new training data or changing model architecture. The model owner can deploy one version at a time and replace a leaked version immediately with a new version. The newly deployed model version can resist adversarial attacks generated leveraging white-box access to one or all previously leaked versions. We show theoretically that this can be accomplished by incorporating parameterized hidden distributions into the model training data, forcing the model to learn task-irrelevant features uniquely defined by the chosen data. Additionally, optimal choices of hidden distributions can produce a sequence of model versions capable of resisting compound transferability attacks over time. Leveraging our analytical insights, we design and implement a practical model versioning method for DNN classifiers, which leads to significant robustness improvements over existing methods. We believe our work presents a promising direction for safeguarding DNN services beyond their initial deployment.
+
+
+
+## **10. Diffusion-Based Adversarial Sample Generation for Improved Stealthiness and Controllability**
+
+cs.CV
+
+Accepted as a conference paper in NeurIPS'2023. Code repo:  https://github.com/xavihart/Diff-PGD
+
+**SubmitDate**: 2024-01-17    [abs](http://arxiv.org/abs/2305.16494v3) [paper-pdf](http://arxiv.org/pdf/2305.16494v3)
+
+**Authors**: Haotian Xue, Alexandre Araujo, Bin Hu, Yongxin Chen
+
+**Abstract**: Neural networks are known to be susceptible to adversarial samples: small variations of natural examples crafted to deliberately mislead the models. While they can be easily generated using gradient-based techniques in digital and physical scenarios, they often differ greatly from the actual data distribution of natural images, resulting in a trade-off between strength and stealthiness. In this paper, we propose a novel framework dubbed Diffusion-Based Projected Gradient Descent (Diff-PGD) for generating realistic adversarial samples. By exploiting a gradient guided by a diffusion model, Diff-PGD ensures that adversarial samples remain close to the original data distribution while maintaining their effectiveness. Moreover, our framework can be easily customized for specific tasks such as digital attacks, physical-world attacks, and style-based attacks. Compared with existing methods for generating natural-style adversarial samples, our framework enables the separation of optimizing adversarial loss from other surrogate losses (e.g., content/smoothness/style loss), making it more stable and controllable. Finally, we demonstrate that the samples generated using Diff-PGD have better transferability and anti-purification power than traditional gradient-based methods. Code will be released in https://github.com/xavihart/Diff-PGD
+
+
+
+## **11. Adversarial Examples are Misaligned in Diffusion Model Manifolds**
+
+cs.CV
+
+under review
+
+**SubmitDate**: 2024-01-17    [abs](http://arxiv.org/abs/2401.06637v3) [paper-pdf](http://arxiv.org/pdf/2401.06637v3)
+
+**Authors**: Peter Lorenz, Ricard Durall, Janis Keuper
+
+**Abstract**: In recent years, diffusion models (DMs) have drawn significant attention for their success in approximating data distributions, yielding state-of-the-art generative results. Nevertheless, the versatility of these models extends beyond their generative capabilities to encompass various vision applications, such as image inpainting, segmentation, adversarial robustness, among others. This study is dedicated to the investigation of adversarial attacks through the lens of diffusion models. However, our objective does not involve enhancing the adversarial robustness of image classifiers. Instead, our focus lies in utilizing the diffusion model to detect and analyze the anomalies introduced by these attacks on images. To that end, we systematically examine the alignment of the distributions of adversarial examples when subjected to the process of transformation using diffusion models. The efficacy of this approach is assessed across CIFAR-10 and ImageNet datasets, including varying image sizes in the latter. The results demonstrate a notable capacity to discriminate effectively between benign and attacked images, providing compelling evidence that adversarial instances do not align with the learned manifold of the DMs.
+
+
+
+## **12. MIMIR: Masked Image Modeling for Mutual Information-based Adversarial Robustness**
+
+cs.CV
+
+**SubmitDate**: 2024-01-17    [abs](http://arxiv.org/abs/2312.04960v2) [paper-pdf](http://arxiv.org/pdf/2312.04960v2)
+
+**Authors**: Xiaoyun Xu, Shujian Yu, Jingzheng Wu, Stjepan Picek
+
+**Abstract**: Vision Transformers (ViTs) achieve superior performance on various tasks compared to convolutional neural networks (CNNs), but ViTs are also vulnerable to adversarial attacks. Adversarial training is one of the most successful methods to build robust CNN models. Thus, recent works explored new methodologies for adversarial training of ViTs based on the differences between ViTs and CNNs, such as better training strategies, preventing attention from focusing on a single block, or discarding low-attention embeddings. However, these methods still follow the design of traditional supervised adversarial training, limiting the potential of adversarial training on ViTs. This paper proposes a novel defense method, MIMIR, which aims to build a different adversarial training methodology by utilizing Masked Image Modeling at pre-training. We create an autoencoder that accepts adversarial examples as input but takes the clean examples as the modeling target. Then, we create a mutual information (MI) penalty following the idea of the Information Bottleneck. Among the two information source inputs and corresponding adversarial perturbation, the perturbation information is eliminated due to the constraint of the modeling target. Next, we provide a theoretical analysis of MIMIR using the bounds of the MI penalty. We also design two adaptive attacks when the adversary is aware of the MIMIR defense and show that MIMIR still performs well. The experimental results show that MIMIR improves (natural and adversarial) accuracy on average by 4.19% on CIFAR-10 and 5.52% on ImageNet-1K, compared to baselines. On Tiny-ImageNet, we obtained improved natural accuracy of 2.99\% on average and comparable adversarial accuracy. Our code and trained models are publicly available https://github.com/xiaoyunxxy/MIMIR.
+
+
+
+## **13. Username Squatting on Online Social Networks: A Study on X**
+
+cs.CR
+
+Accepted at ACM ASIA Conference on Computer and Communications  Security (AsiaCCS), 2024
+
+**SubmitDate**: 2024-01-17    [abs](http://arxiv.org/abs/2401.09209v1) [paper-pdf](http://arxiv.org/pdf/2401.09209v1)
+
+**Authors**: Anastasios Lepipas, Anastasia Borovykh, Soteris Demetriou
+
+**Abstract**: Adversaries have been targeting unique identifiers to launch typo-squatting, mobile app squatting and even voice squatting attacks. Anecdotal evidence suggest that online social networks (OSNs) are also plagued with accounts that use similar usernames. This can be confusing to users but can also be exploited by adversaries. However, to date no study characterizes this problem on OSNs. In this work, we define the username squatting problem and design the first multi-faceted measurement study to characterize it on X. We develop a username generation tool (UsernameCrazy) to help us analyze hundreds of thousands of username variants derived from celebrity accounts. Our study reveals that thousands of squatted usernames have been suspended by X, while tens of thousands that still exist on the network are likely bots. Out of these, a large number share similar profile pictures and profile names to the original account signalling impersonation attempts. We found that squatted accounts are being mentioned by mistake in tweets hundreds of thousands of times and are even being prioritized in searches by the network's search recommendation algorithm exacerbating the negative impact squatted accounts can have in OSNs. We use our insights and take the first step to address this issue by designing a framework (SQUAD) that combines UsernameCrazy with a new classifier to efficiently detect suspicious squatted accounts. Our evaluation of SQUAD's prototype implementation shows that it can achieve 94% F1-score when trained on a small dataset.
+
+
+
+## **14. Attack and Reset for Unlearning: Exploiting Adversarial Noise toward Machine Unlearning through Parameter Re-initialization**
+
+cs.LG
+
+**SubmitDate**: 2024-01-17    [abs](http://arxiv.org/abs/2401.08998v1) [paper-pdf](http://arxiv.org/pdf/2401.08998v1)
+
+**Authors**: Yoonhwa Jung, Ikhyun Cho, Shun-Hsiang Hsu, Julia Hockenmaier
+
+**Abstract**: With growing concerns surrounding privacy and regulatory compliance, the concept of machine unlearning has gained prominence, aiming to selectively forget or erase specific learned information from a trained model. In response to this critical need, we introduce a novel approach called Attack-and-Reset for Unlearning (ARU). This algorithm leverages meticulously crafted adversarial noise to generate a parameter mask, effectively resetting certain parameters and rendering them unlearnable. ARU outperforms current state-of-the-art results on two facial machine-unlearning benchmark datasets, MUFAC and MUCAC. In particular, we present the steps involved in attacking and masking that strategically filter and re-initialize network parameters biased towards the forget set. Our work represents a significant advancement in rendering data unexploitable to deep learning models through parameter re-initialization, achieved by harnessing adversarial noise to craft a mask.
+
+
+
+## **15. A GAN-based data poisoning framework against anomaly detection in vertical federated learning**
+
+cs.LG
+
+6 pages, 7 figures. This work has been submitted to the IEEE for  possible publication. Copyright may be transferred without notice, after  which this version may no longer be accessible
+
+**SubmitDate**: 2024-01-17    [abs](http://arxiv.org/abs/2401.08984v1) [paper-pdf](http://arxiv.org/pdf/2401.08984v1)
+
+**Authors**: Xiaolin Chen, Daoguang Zan, Wei Li, Bei Guan, Yongji Wang
+
+**Abstract**: In vertical federated learning (VFL), commercial entities collaboratively train a model while preserving data privacy. However, a malicious participant's poisoning attack may degrade the performance of this collaborative model. The main challenge in achieving the poisoning attack is the absence of access to the server-side top model, leaving the malicious participant without a clear target model. To address this challenge, we introduce an innovative end-to-end poisoning framework P-GAN. Specifically, the malicious participant initially employs semi-supervised learning to train a surrogate target model. Subsequently, this participant employs a GAN-based method to produce adversarial perturbations to degrade the surrogate target model's performance. Finally, the generator is obtained and tailored for VFL poisoning. Besides, we develop an anomaly detection algorithm based on a deep auto-encoder (DAE), offering a robust defense mechanism to VFL scenarios. Through extensive experiments, we evaluate the efficacy of P-GAN and DAE, and further analyze the factors that influence their performance.
+
+
+
+## **16. RandOhm: Mitigating Impedance Side-channel Attacks using Randomized Circuit Configurations**
+
+cs.CR
+
+**SubmitDate**: 2024-01-17    [abs](http://arxiv.org/abs/2401.08925v1) [paper-pdf](http://arxiv.org/pdf/2401.08925v1)
+
+**Authors**: Saleh Khalaj Monfared, Domenic Forte, Shahin Tajik
+
+**Abstract**: Physical side-channel attacks can compromise the security of integrated circuits. Most of the physical side-channel attacks (e.g., power or electromagnetic) exploit the dynamic behavior of a chip, typically manifesting as changes in current consumption or voltage fluctuations where algorithmic countermeasures, such as masking, can effectively mitigate the attacks. However, as demonstrated recently, these mitigation techniques are not entirely effective against backscattered side-channel attacks such as impedance analysis. In the case of an impedance attack, an adversary exploits the data-dependent impedance variations of chip power delivery network (PDN) to extract secret information. In this work, we introduce RandOhm, which exploits moving target defense (MTD) strategy based on partial reconfiguration of mainstream FPGAs, to defend against impedance side-channel attacks. We demonstrate that the information leakage through the PDN impedance could be reduced via run-time reconfiguration of the secret-sensitive parts of the circuitry. Hence, by constantly randomizing the placement and routing of the circuit, one can decorrelate the data-dependent computation from the impedance value. To validate our claims, we present a systematic approach equipped with two different partial reconfiguration strategies on implementations of the AES cipher realized on 28-nm FPGAs. We investigate the overhead of our mitigation in terms of delay and performance and provide security analysis by performing non-profiled and profiled impedance analysis attacks against these implementations to demonstrate the resiliency of our approach.
+
+
+
+## **17. PPR: Enhancing Dodging Attacks while Maintaining Impersonation Attacks on Face Recognition Systems**
+
+cs.CV
+
+**SubmitDate**: 2024-01-17    [abs](http://arxiv.org/abs/2401.08903v1) [paper-pdf](http://arxiv.org/pdf/2401.08903v1)
+
+**Authors**: Fengfan Zhou, Heifei Ling
+
+**Abstract**: Adversarial Attacks on Face Recognition (FR) encompass two types: impersonation attacks and evasion attacks. We observe that achieving a successful impersonation attack on FR does not necessarily ensure a successful dodging attack on FR in the black-box setting. Introducing a novel attack method named Pre-training Pruning Restoration Attack (PPR), we aim to enhance the performance of dodging attacks whilst avoiding the degradation of impersonation attacks. Our method employs adversarial example pruning, enabling a portion of adversarial perturbations to be set to zero, while tending to maintain the attack performance. By utilizing adversarial example pruning, we can prune the pre-trained adversarial examples and selectively free up certain adversarial perturbations. Thereafter, we embed adversarial perturbations in the pruned area, which enhances the dodging performance of the adversarial face examples. The effectiveness of our proposed attack method is demonstrated through our experimental results, showcasing its superior performance.
+
+
+
+## **18. Whispering Pixels: Exploiting Uninitialized Register Accesses in Modern GPUs**
+
+cs.CR
+
+**SubmitDate**: 2024-01-16    [abs](http://arxiv.org/abs/2401.08881v1) [paper-pdf](http://arxiv.org/pdf/2401.08881v1)
+
+**Authors**: Frederik Dermot Pustelnik, Xhani Marvin Saß, Jean-Pierre Seifert
+
+**Abstract**: Graphic Processing Units (GPUs) have transcended their traditional use-case of rendering graphics and nowadays also serve as a powerful platform for accelerating ubiquitous, non-graphical rendering tasks. One prominent task is inference of neural networks, which process vast amounts of personal data, such as audio, text or images. Thus, GPUs became integral components for handling vast amounts of potentially confidential data, which has awakened the interest of security researchers. This lead to the discovery of various vulnerabilities in GPUs in recent years. In this paper, we uncover yet another vulnerability class in GPUs: We found that some GPU implementations lack proper register initialization routines before shader execution, leading to unintended register content leakage of previously executed shader kernels. We showcase the existence of the aforementioned vulnerability on products of 3 major vendors - Apple, NVIDIA and Qualcomm. The vulnerability poses unique challenges to an adversary due to opaque scheduling and register remapping algorithms present in the GPU firmware, complicating the reconstruction of leaked data. In order to illustrate the real-world impact of this flaw, we showcase how these challenges can be solved for attacking various workloads on the GPU. First, we showcase how uninitialized registers leak arbitrary pixel data processed by fragment shaders. We further implement information leakage attacks on intermediate data of Convolutional Neural Networks (CNNs) and present the attack's capability to leak and reconstruct the output of Large Language Models (LLMs).
+
+
+
+## **19. The Effect of Intrinsic Dataset Properties on Generalization: Unraveling Learning Differences Between Natural and Medical Images**
+
+cs.CV
+
+ICLR 2024. Code:  https://github.com/mazurowski-lab/intrinsic-properties
+
+**SubmitDate**: 2024-01-16    [abs](http://arxiv.org/abs/2401.08865v1) [paper-pdf](http://arxiv.org/pdf/2401.08865v1)
+
+**Authors**: Nicholas Konz, Maciej A. Mazurowski
+
+**Abstract**: This paper investigates discrepancies in how neural networks learn from different imaging domains, which are commonly overlooked when adopting computer vision techniques from the domain of natural images to other specialized domains such as medical images. Recent works have found that the generalization error of a trained network typically increases with the intrinsic dimension ($d_{data}$) of its training set. Yet, the steepness of this relationship varies significantly between medical (radiological) and natural imaging domains, with no existing theoretical explanation. We address this gap in knowledge by establishing and empirically validating a generalization scaling law with respect to $d_{data}$, and propose that the substantial scaling discrepancy between the two considered domains may be at least partially attributed to the higher intrinsic "label sharpness" ($K_F$) of medical imaging datasets, a metric which we propose. Next, we demonstrate an additional benefit of measuring the label sharpness of a training set: it is negatively correlated with the trained model's adversarial robustness, which notably leads to models for medical images having a substantially higher vulnerability to adversarial attack. Finally, we extend our $d_{data}$ formalism to the related metric of learned representation intrinsic dimension ($d_{repr}$), derive a generalization scaling law with respect to $d_{repr}$, and show that $d_{data}$ serves as an upper bound for $d_{repr}$. Our theoretical results are supported by thorough experiments with six models and eleven natural and medical imaging datasets over a range of training set sizes. Our findings offer insights into the influence of intrinsic dataset properties on generalization, representation learning, and robustness in deep neural networks.
+
+
+
+## **20. Game-Theoretic Neyman-Pearson Detection to Combat Strategic Evasion**
+
+cs.CR
+
+**SubmitDate**: 2024-01-16    [abs](http://arxiv.org/abs/2206.05276v2) [paper-pdf](http://arxiv.org/pdf/2206.05276v2)
+
+**Authors**: Yinan Hu, Quanyan Zhu
+
+**Abstract**: The security in networked systems depends greatly on recognizing and identifying adversarial behaviors. Traditional detection methods focus on specific categories of attacks and have become inadequate for increasingly stealthy and deceptive attacks that are designed to bypass detection strategically. This work aims to develop a holistic theory to countermeasure such evasive attacks. We focus on extending a fundamental class of statistical-based detection methods based on Neyman-Pearson's (NP) hypothesis testing formulation. We propose game-theoretic frameworks to capture the conflicting relationship between a strategic evasive attacker and an evasion-aware NP detector. By analyzing both the equilibrium behaviors of the attacker and the NP detector, we characterize their performance using Equilibrium Receiver-Operational-Characteristic (EROC) curves. We show that the evasion-aware NP detectors outperform the passive ones in the way that the former can act strategically against the attacker's behavior and adaptively modify their decision rules based on the received messages. In addition, we extend our framework to a sequential setting where the user sends out identically distributed messages. We corroborate the analytical results with a case study of anomaly detection.
+
+
+
+## **21. Benchmarking the Robustness of Image Watermarks**
+
+cs.CV
+
+**SubmitDate**: 2024-01-16    [abs](http://arxiv.org/abs/2401.08573v1) [paper-pdf](http://arxiv.org/pdf/2401.08573v1)
+
+**Authors**: Bang An, Mucong Ding, Tahseen Rabbani, Aakriti Agrawal, Yuancheng Xu, Chenghao Deng, Sicheng Zhu, Abdirisak Mohamed, Yuxin Wen, Tom Goldstein, Furong Huang
+
+**Abstract**: This paper investigates the weaknesses of image watermarking techniques. We present WAVES (Watermark Analysis Via Enhanced Stress-testing), a novel benchmark for assessing watermark robustness, overcoming the limitations of current evaluation methods.WAVES integrates detection and identification tasks, and establishes a standardized evaluation protocol comprised of a diverse range of stress tests. The attacks in WAVES range from traditional image distortions to advanced and novel variations of adversarial, diffusive, and embedding-based attacks. We introduce a normalized score of attack potency which incorporates several widely used image quality metrics and allows us to produce of an ordered ranking of attacks. Our comprehensive evaluation over reveals previously undetected vulnerabilities of several modern watermarking algorithms. WAVES is envisioned as a toolkit for the future development of robust watermarking systems.
+
+
+
+## **22. Bag of Tricks to Boost Adversarial Transferability**
+
+cs.CV
+
+**SubmitDate**: 2024-01-16    [abs](http://arxiv.org/abs/2401.08734v1) [paper-pdf](http://arxiv.org/pdf/2401.08734v1)
+
+**Authors**: Zeliang Zhang, Rongyi Zhu, Wei Yao, Xiaosen Wang, Chenliang Xu
+
+**Abstract**: Deep neural networks are widely known to be vulnerable to adversarial examples. However, vanilla adversarial examples generated under the white-box setting often exhibit low transferability across different models. Since adversarial transferability poses more severe threats to practical applications, various approaches have been proposed for better transferability, including gradient-based, input transformation-based, and model-related attacks, \etc. In this work, we find that several tiny changes in the existing adversarial attacks can significantly affect the attack performance, \eg, the number of iterations and step size. Based on careful studies of existing adversarial attacks, we propose a bag of tricks to enhance adversarial transferability, including momentum initialization, scheduled step size, dual example, spectral-based input transformation, and several ensemble strategies. Extensive experiments on the ImageNet dataset validate the high effectiveness of our proposed tricks and show that combining them can further boost adversarial transferability. Our work provides practical insights and techniques to enhance adversarial transferability, and offers guidance to improve the attack performance on the real-world application through simple adjustments.
+
+
+
+## **23. SecPLF: Secure Protocols for Loanable Funds against Oracle Manipulation Attacks**
+
+cs.CR
+
+**SubmitDate**: 2024-01-16    [abs](http://arxiv.org/abs/2401.08520v1) [paper-pdf](http://arxiv.org/pdf/2401.08520v1)
+
+**Authors**: Sanidhay Arora, Yingjiu Li, Yebo Feng, Jiahua Xu
+
+**Abstract**: The evolving landscape of Decentralized Finance (DeFi) has raised critical security concerns, especially pertaining to Protocols for Loanable Funds (PLFs) and their dependency on price oracles, which are susceptible to manipulation. The emergence of flash loans has further amplified these risks, enabling increasingly complex oracle manipulation attacks that can lead to significant financial losses. Responding to this threat, we first dissect the attack mechanism by formalizing the standard operational and adversary models for PLFs. Based on our analysis, we propose SecPLF, a robust and practical solution designed to counteract oracle manipulation attacks efficiently. SecPLF operates by tracking a price state for each crypto-asset, including the recent price and the timestamp of its last update. By imposing price constraints on the price oracle usage, SecPLF ensures a PLF only engages a price oracle if the last recorded price falls within a defined threshold, thereby negating the profitability of potential attacks. Our evaluation based on historical market data confirms SecPLF's efficacy in providing high-confidence prevention against arbitrage attacks that arise due to minor price differences. SecPLF delivers proactive protection against oracle manipulation attacks, offering ease of implementation, oracle-agnostic property, and resource and cost efficiency.
+
+
+
+## **24. Revealing Vulnerabilities in Stable Diffusion via Targeted Attacks**
+
+cs.CV
+
+**SubmitDate**: 2024-01-16    [abs](http://arxiv.org/abs/2401.08725v1) [paper-pdf](http://arxiv.org/pdf/2401.08725v1)
+
+**Authors**: Chenyu Zhang, Lanjun Wang, Anan Liu
+
+**Abstract**: Recent developments in text-to-image models, particularly Stable Diffusion, have marked significant achievements in various applications. With these advancements, there are growing safety concerns about the vulnerability of the model that malicious entities exploit to generate targeted harmful images. However, the existing methods in the vulnerability of the model mainly evaluate the alignment between the prompt and generated images, but fall short in revealing the vulnerability associated with targeted image generation. In this study, we formulate the problem of targeted adversarial attack on Stable Diffusion and propose a framework to generate adversarial prompts. Specifically, we design a gradient-based embedding optimization method to craft reliable adversarial prompts that guide stable diffusion to generate specific images. Furthermore, after obtaining successful adversarial prompts, we reveal the mechanisms that cause the vulnerability of the model. Extensive experiments on two targeted attack tasks demonstrate the effectiveness of our method in targeted attacks. The code can be obtained in https://github.com/datar001/Revealing-Vulnerabilities-in-Stable-Diffusion-via-Targeted-Attacks.
+
+
+
+## **25. A Generative Adversarial Attack for Multilingual Text Classifiers**
+
+cs.CL
+
+AAAI-24 Workshop on Artificial Intelligence for Cyber Security (AICS)
+
+**SubmitDate**: 2024-01-16    [abs](http://arxiv.org/abs/2401.08255v1) [paper-pdf](http://arxiv.org/pdf/2401.08255v1)
+
+**Authors**: Tom Roth, Inigo Jauregi Unanue, Alsharif Abuadbba, Massimo Piccardi
+
+**Abstract**: Current adversarial attack algorithms, where an adversary changes a text to fool a victim model, have been repeatedly shown to be effective against text classifiers. These attacks, however, generally assume that the victim model is monolingual and cannot be used to target multilingual victim models, a significant limitation given the increased use of these models. For this reason, in this work we propose an approach to fine-tune a multilingual paraphrase model with an adversarial objective so that it becomes able to generate effective adversarial examples against multilingual classifiers. The training objective incorporates a set of pre-trained models to ensure text quality and language consistency of the generated text. In addition, all the models are suitably connected to the generator by vocabulary-mapping matrices, allowing for full end-to-end differentiability of the overall training pipeline. The experimental validation over two multilingual datasets and five languages has shown the effectiveness of the proposed approach compared to existing baselines, particularly in terms of query efficiency. We also provide a detailed analysis of the generated attacks and discuss limitations and opportunities for future research.
+
+
+
+## **26. FreqFed: A Frequency Analysis-Based Approach for Mitigating Poisoning Attacks in Federated Learning**
+
+cs.CR
+
+To appear in the Network and Distributed System Security (NDSS)  Symposium 2024. 16 pages, 8 figures, 12 tables, 1 algorithm, 3 equations
+
+**SubmitDate**: 2024-01-16    [abs](http://arxiv.org/abs/2312.04432v2) [paper-pdf](http://arxiv.org/pdf/2312.04432v2)
+
+**Authors**: Hossein Fereidooni, Alessandro Pegoraro, Phillip Rieger, Alexandra Dmitrienko, Ahmad-Reza Sadeghi
+
+**Abstract**: Federated learning (FL) is a collaborative learning paradigm allowing multiple clients to jointly train a model without sharing their training data. However, FL is susceptible to poisoning attacks, in which the adversary injects manipulated model updates into the federated model aggregation process to corrupt or destroy predictions (untargeted poisoning) or implant hidden functionalities (targeted poisoning or backdoors). Existing defenses against poisoning attacks in FL have several limitations, such as relying on specific assumptions about attack types and strategies or data distributions or not sufficiently robust against advanced injection techniques and strategies and simultaneously maintaining the utility of the aggregated model. To address the deficiencies of existing defenses, we take a generic and completely different approach to detect poisoning (targeted and untargeted) attacks. We present FreqFed, a novel aggregation mechanism that transforms the model updates (i.e., weights) into the frequency domain, where we can identify the core frequency components that inherit sufficient information about weights. This allows us to effectively filter out malicious updates during local training on the clients, regardless of attack types, strategies, and clients' data distributions. We extensively evaluate the efficiency and effectiveness of FreqFed in different application domains, including image classification, word prediction, IoT intrusion detection, and speech recognition. We demonstrate that FreqFed can mitigate poisoning attacks effectively with a negligible impact on the utility of the aggregated model.
+
+
+
+## **27. AdvSV: An Over-the-Air Adversarial Attack Dataset for Speaker Verification**
+
+cs.SD
+
+Accepted by ICASSP2024
+
+**SubmitDate**: 2024-01-16    [abs](http://arxiv.org/abs/2310.05369v2) [paper-pdf](http://arxiv.org/pdf/2310.05369v2)
+
+**Authors**: Li Wang, Jiaqi Li, Yuhao Luo, Jiahao Zheng, Lei Wang, Hao Li, Ke Xu, Chengfang Fang, Jie Shi, Zhizheng Wu
+
+**Abstract**: It is known that deep neural networks are vulnerable to adversarial attacks. Although Automatic Speaker Verification (ASV) built on top of deep neural networks exhibits robust performance in controlled scenarios, many studies confirm that ASV is vulnerable to adversarial attacks. The lack of a standard dataset is a bottleneck for further research, especially reproducible research. In this study, we developed an open-source adversarial attack dataset for speaker verification research. As an initial step, we focused on the over-the-air attack. An over-the-air adversarial attack involves a perturbation generation algorithm, a loudspeaker, a microphone, and an acoustic environment. The variations in the recording configurations make it very challenging to reproduce previous research. The AdvSV dataset is constructed using the Voxceleb1 Verification test set as its foundation. This dataset employs representative ASV models subjected to adversarial attacks and records adversarial samples to simulate over-the-air attack settings. The scope of the dataset can be easily extended to include more types of adversarial attacks. The dataset will be released to the public under the CC BY-SA 4.0. In addition, we also provide a detection baseline for reproducible research.
+
+
+
+## **28. IoTWarden: A Deep Reinforcement Learning Based Real-time Defense System to Mitigate Trigger-action IoT Attacks**
+
+cs.CR
+
+2024 IEEE Wireless Communications and Networking Conference (WCNC  2024)
+
+**SubmitDate**: 2024-01-16    [abs](http://arxiv.org/abs/2401.08141v1) [paper-pdf](http://arxiv.org/pdf/2401.08141v1)
+
+**Authors**: Md Morshed Alam, Israt Jahan, Weichao Wang
+
+**Abstract**: In trigger-action IoT platforms, IoT devices report event conditions to IoT hubs notifying their cyber states and let the hubs invoke actions in other IoT devices based on functional dependencies defined as rules in a rule engine. These functional dependencies create a chain of interactions that help automate network tasks. Adversaries exploit this chain to report fake event conditions to IoT hubs and perform remote injection attacks upon a smart environment to indirectly control targeted IoT devices. Existing defense efforts usually depend on static analysis over IoT apps to develop rule-based anomaly detection mechanisms. We also see ML-based defense mechanisms in the literature that harness physical event fingerprints to determine anomalies in an IoT network. However, these methods often demonstrate long response time and lack of adaptability when facing complicated attacks. In this paper, we propose to build a deep reinforcement learning based real-time defense system for injection attacks. We define the reward functions for defenders and implement a deep Q-network based approach to identify the optimal defense policy. Our experiments show that the proposed mechanism can effectively and accurately identify and defend against injection attacks with reasonable computation overhead.
+
+
+
+## **29. Framework and Classification of Indicator of Compromise for physics-based attacks**
+
+cs.CR
+
+Pre-print is submitted to 2024 IEEE World Forum on Public Safety  Technology, and is under review
+
+**SubmitDate**: 2024-01-16    [abs](http://arxiv.org/abs/2401.08127v1) [paper-pdf](http://arxiv.org/pdf/2401.08127v1)
+
+**Authors**: Vincent Tan
+
+**Abstract**: Quantum communications are based on the law of physics for information security and the implications for this form of future information security enabled by quantum science has to be studied. Physics-based vulnerabilities may exist due to the inherent physics properties and behavior of quantum technologies such as Quantum Key Distribution (QKD), thus resulting in new threats that may emerge with attackers exploiting the physics-based vulnerabilities. There were many studies and experiments done to demonstrate the threat of physics-based attacks on quantum links. However, there is a lack of a framework that provides a common language to communicate about the threats and type of adversaries being dealt with for physics-based attacks. This paper is a review of physics-based attacks that were being investigated and attempt to initialize a framework based on the attack objectives and methodologies, referencing the concept from the well-established MITRE ATT&CK, therefore pioneering the classification of Indicator of Compromises (IoCs) for physics-based attacks. This paper will then pave the way for future work in the development of a forensic tool for the different classification of IoCs, with the methods of evidence collections and possible points of extractions for analysis being further investigated.
+
+
+
+## **30. MGTBench: Benchmarking Machine-Generated Text Detection**
+
+cs.CR
+
+**SubmitDate**: 2024-01-16    [abs](http://arxiv.org/abs/2303.14822v3) [paper-pdf](http://arxiv.org/pdf/2303.14822v3)
+
+**Authors**: Xinlei He, Xinyue Shen, Zeyuan Chen, Michael Backes, Yang Zhang
+
+**Abstract**: Nowadays, powerful large language models (LLMs) such as ChatGPT have demonstrated revolutionary power in a variety of tasks. Consequently, the detection of machine-generated texts (MGTs) is becoming increasingly crucial as LLMs become more advanced and prevalent. These models have the ability to generate human-like language, making it challenging to discern whether a text is authored by a human or a machine. This raises concerns regarding authenticity, accountability, and potential bias. However, existing methods for detecting MGTs are evaluated using different model architectures, datasets, and experimental settings, resulting in a lack of a comprehensive evaluation framework that encompasses various methodologies. Furthermore, it remains unclear how existing detection methods would perform against powerful LLMs. In this paper, we fill this gap by proposing the first benchmark framework for MGT detection against powerful LLMs, named MGTBench. Extensive evaluations on public datasets with curated texts generated by various powerful LLMs such as ChatGPT-turbo and Claude demonstrate the effectiveness of different detection methods. Our ablation study shows that a larger number of words in general leads to better performance and most detection methods can achieve similar performance with much fewer training samples. Moreover, we delve into a more challenging task: text attribution. Our findings indicate that the model-based detection methods still perform well in the text attribution task. To investigate the robustness of different detection methods, we consider three adversarial attacks, namely paraphrasing, random spacing, and adversarial perturbations. We discover that these attacks can significantly diminish detection effectiveness, underscoring the critical need for the development of more robust detection methods.
+
+
+
+## **31. Towards Robust Neural Networks via Orthogonal Diversity**
+
+cs.CV
+
+accepted by Pattern Recognition
+
+**SubmitDate**: 2024-01-16    [abs](http://arxiv.org/abs/2010.12190v5) [paper-pdf](http://arxiv.org/pdf/2010.12190v5)
+
+**Authors**: Kun Fang, Qinghua Tao, Yingwen Wu, Tao Li, Jia Cai, Feipeng Cai, Xiaolin Huang, Jie Yang
+
+**Abstract**: Deep Neural Networks (DNNs) are vulnerable to invisible perturbations on the images generated by adversarial attacks, which raises researches on the adversarial robustness of DNNs. A series of methods represented by the adversarial training and its variants have proven as one of the most effective techniques in enhancing the DNN robustness. Generally, adversarial training focuses on enriching the training data by involving perturbed data. Such data augmentation effect of the involved perturbed data in adversarial training does not contribute to the robustness of DNN itself and usually suffers from clean accuracy drop. Towards the robustness of DNN itself, we in this paper propose a novel defense that aims at augmenting the model in order to learn features that are adaptive to diverse inputs, including adversarial examples. More specifically, to augment the model, multiple paths are embedded into the network, and an orthogonality constraint is imposed on these paths to guarantee the diversity among them. A margin-maximization loss is then designed to further boost such DIversity via Orthogonality (DIO). In this way, the proposed DIO augments the model and enhances the robustness of DNN itself as the learned features can be corrected by these mutually-orthogonal paths. Extensive empirical results on various data sets, structures and attacks verify the stronger adversarial robustness of the proposed DIO utilizing model augmentation. Besides, DIO can also be flexibly combined with different data augmentation techniques (e.g., TRADES and DDPM), further promoting robustness gains.
+
+
+
+## **32. Robustness Against Adversarial Attacks via Learning Confined Adversarial Polytopes**
+
+cs.LG
+
+The paper has been accepted in ICASSP 2024
+
+**SubmitDate**: 2024-01-15    [abs](http://arxiv.org/abs/2401.07991v1) [paper-pdf](http://arxiv.org/pdf/2401.07991v1)
+
+**Authors**: Shayan Mohajer Hamidi, Linfeng Ye
+
+**Abstract**: Deep neural networks (DNNs) could be deceived by generating human-imperceptible perturbations of clean samples. Therefore, enhancing the robustness of DNNs against adversarial attacks is a crucial task. In this paper, we aim to train robust DNNs by limiting the set of outputs reachable via a norm-bounded perturbation added to a clean sample. We refer to this set as adversarial polytope, and each clean sample has a respective adversarial polytope. Indeed, if the respective polytopes for all the samples are compact such that they do not intersect the decision boundaries of the DNN, then the DNN is robust against adversarial samples. Hence, the inner-working of our algorithm is based on learning \textbf{c}onfined \textbf{a}dversarial \textbf{p}olytopes (CAP). By conducting a thorough set of experiments, we demonstrate the effectiveness of CAP over existing adversarial robustness methods in improving the robustness of models against state-of-the-art attacks including AutoAttack.
+
+
+
+## **33. Learning to Unlearn: Instance-wise Unlearning for Pre-trained Classifiers**
+
+cs.LG
+
+AAAI 2024 camera ready version
+
+**SubmitDate**: 2024-01-15    [abs](http://arxiv.org/abs/2301.11578v3) [paper-pdf](http://arxiv.org/pdf/2301.11578v3)
+
+**Authors**: Sungmin Cha, Sungjun Cho, Dasol Hwang, Honglak Lee, Taesup Moon, Moontae Lee
+
+**Abstract**: Since the recent advent of regulations for data protection (e.g., the General Data Protection Regulation), there has been increasing demand in deleting information learned from sensitive data in pre-trained models without retraining from scratch. The inherent vulnerability of neural networks towards adversarial attacks and unfairness also calls for a robust method to remove or correct information in an instance-wise fashion, while retaining the predictive performance across remaining data. To this end, we consider instance-wise unlearning, of which the goal is to delete information on a set of instances from a pre-trained model, by either misclassifying each instance away from its original prediction or relabeling the instance to a different label. We also propose two methods that reduce forgetting on the remaining data: 1) utilizing adversarial examples to overcome forgetting at the representation-level and 2) leveraging weight importance metrics to pinpoint network parameters guilty of propagating unwanted information. Both methods only require the pre-trained model and data instances to forget, allowing painless application to real-life settings where the entire training set is unavailable. Through extensive experimentation on various image classification benchmarks, we show that our approach effectively preserves knowledge of remaining data while unlearning given instances in both single-task and continual unlearning scenarios.
+
+
+
+## **34. ADMIn: Attacks on Dataset, Model and Input. A Threat Model for AI Based Software**
+
+cs.CR
+
+**SubmitDate**: 2024-01-15    [abs](http://arxiv.org/abs/2401.07960v1) [paper-pdf](http://arxiv.org/pdf/2401.07960v1)
+
+**Authors**: Vimal Kumar, Juliette Mayo, Khadija Bahiss
+
+**Abstract**: Machine learning (ML) and artificial intelligence (AI) techniques have now become commonplace in software products and services. When threat modelling a system, it is therefore important that we consider threats unique to ML and AI techniques, in addition to threats to our software. In this paper, we present a threat model that can be used to systematically uncover threats to AI based software. The threat model consists of two main parts, a model of the software development process for AI based software and an attack taxonomy that has been developed using attacks found in adversarial AI research. We apply the threat model to two real life AI based software and discuss the process and the threats found.
+
+
+
+## **35. Authorship Obfuscation in Multilingual Machine-Generated Text Detection**
+
+cs.CL
+
+**SubmitDate**: 2024-01-15    [abs](http://arxiv.org/abs/2401.07867v1) [paper-pdf](http://arxiv.org/pdf/2401.07867v1)
+
+**Authors**: Dominik Macko, Robert Moro, Adaku Uchendu, Ivan Srba, Jason Samuel Lucas, Michiharu Yamashita, Nafis Irtiza Tripto, Dongwon Lee, Jakub Simko, Maria Bielikova
+
+**Abstract**: High-quality text generation capability of latest Large Language Models (LLMs) causes concerns about their misuse (e.g., in massive generation/spread of disinformation). Machine-generated text (MGT) detection is important to cope with such threats. However, it is susceptible to authorship obfuscation (AO) methods, such as paraphrasing, which can cause MGTs to evade detection. So far, this was evaluated only in monolingual settings. Thus, the susceptibility of recently proposed multilingual detectors is still unknown. We fill this gap by comprehensively benchmarking the performance of 10 well-known AO methods, attacking 37 MGT detection methods against MGTs in 11 languages (i.e., 10 $\times$ 37 $\times$ 11 = 4,070 combinations). We also evaluate the effect of data augmentation on adversarial robustness using obfuscated texts. The results indicate that all tested AO methods can cause detection evasion in all tested languages, where homoglyph attacks are especially successful.
+
+
+
+## **36. Predominant Aspects on Security for Quantum Machine Learning: Literature Review**
+
+quant-ph
+
+**SubmitDate**: 2024-01-15    [abs](http://arxiv.org/abs/2401.07774v1) [paper-pdf](http://arxiv.org/pdf/2401.07774v1)
+
+**Authors**: Nicola Franco, Alona Sakhnenko, Leon Stolpmann, Daniel Thuerck, Fabian Petsch, Annika Rüll, Jeanette Miriam Lorenz
+
+**Abstract**: Quantum Machine Learning (QML) has emerged as a promising intersection of quantum computing and classical machine learning, anticipated to drive breakthroughs in computational tasks. This paper discusses the question which security concerns and strengths are connected to QML by means of a systematic literature review. We categorize and review the security of QML models, their vulnerabilities inherent to quantum architectures, and the mitigation strategies proposed. The survey reveals that while QML possesses unique strengths, it also introduces novel attack vectors not seen in classical systems. Techniques like adversarial training, quantum noise exploitation, and quantum differential privacy have shown potential in enhancing QML robustness. Our review discuss the need for continued and rigorous research to ensure the secure deployment of QML in real-world applications. This work serves as a foundational reference for researchers and practitioners aiming to navigate the security aspects of QML.
+
+
+
+## **37. Uncertainty-based Detection of Adversarial Attacks in Semantic Segmentation**
+
+cs.CV
+
+**SubmitDate**: 2024-01-15    [abs](http://arxiv.org/abs/2305.12825v2) [paper-pdf](http://arxiv.org/pdf/2305.12825v2)
+
+**Authors**: Kira Maag, Asja Fischer
+
+**Abstract**: State-of-the-art deep neural networks have proven to be highly powerful in a broad range of tasks, including semantic image segmentation. However, these networks are vulnerable against adversarial attacks, i.e., non-perceptible perturbations added to the input image causing incorrect predictions, which is hazardous in safety-critical applications like automated driving. Adversarial examples and defense strategies are well studied for the image classification task, while there has been limited research in the context of semantic segmentation. First works however show that the segmentation outcome can be severely distorted by adversarial attacks. In this work, we introduce an uncertainty-based approach for the detection of adversarial attacks in semantic segmentation. We observe that uncertainty as for example captured by the entropy of the output distribution behaves differently on clean and perturbed images and leverage this property to distinguish between the two cases. Our method works in a light-weight and post-processing manner, i.e., we do not modify the model or need knowledge of the process used for generating adversarial examples. In a thorough empirical analysis, we demonstrate the ability of our approach to detect perturbed images across multiple types of adversarial attacks.
+
+
+
+## **38. Physics-constrained Attack against Convolution-based Human Motion Prediction**
+
+cs.CV
+
+**SubmitDate**: 2024-01-15    [abs](http://arxiv.org/abs/2306.11990v3) [paper-pdf](http://arxiv.org/pdf/2306.11990v3)
+
+**Authors**: Chengxu Duan, Zhicheng Zhang, Xiaoli Liu, Yonghao Dang, Jianqin Yin
+
+**Abstract**: Human motion prediction has achieved a brilliant performance with the help of convolution-based neural networks. However, currently, there is no work evaluating the potential risk in human motion prediction when facing adversarial attacks. The adversarial attack will encounter problems against human motion prediction in naturalness and data scale. To solve the problems above, we propose a new adversarial attack method that generates the worst-case perturbation by maximizing the human motion predictor's prediction error with physical constraints. Specifically, we introduce a novel adaptable scheme that facilitates the attack to suit the scale of the target pose and two physical constraints to enhance the naturalness of the adversarial example. The evaluating experiments on three datasets show that the prediction errors of all target models are enlarged significantly, which means current convolution-based human motion prediction models are vulnerable to the proposed attack. Based on the experimental results, we provide insights on how to enhance the adversarial robustness of the human motion predictor and how to improve the adversarial attack against human motion prediction.
+
+
+
+## **39. Impartial Games: A Challenge for Reinforcement Learning**
+
+cs.LG
+
+**SubmitDate**: 2024-01-14    [abs](http://arxiv.org/abs/2205.12787v4) [paper-pdf](http://arxiv.org/pdf/2205.12787v4)
+
+**Authors**: Bei Zhou, Søren Riis
+
+**Abstract**: While AlphaZero-style reinforcement learning (RL) algorithms excel in various board games, in this paper we show that they face challenges on impartial games where players share pieces. We present a concrete example of a game - namely the children's game of Nim - and other impartial games that seem to be a stumbling block for AlphaZero-style and similar self-play reinforcement learning algorithms.   Our work is built on the challenges posed by the intricacies of data distribution on the ability of neural networks to learn parity functions, exacerbated by the noisy labels issue. Our findings are consistent with recent studies showing that AlphaZero-style algorithms are vulnerable to adversarial attacks and adversarial perturbations, showing the difficulty of learning to master the games in all legal states.   We show that Nim can be learned on small boards, but the learning progress of AlphaZero-style algorithms dramatically slows down when the board size increases. Intuitively, the difference between impartial games like Nim and partisan games like Chess and Go can be explained by the fact that if a small part of the board is covered for impartial games it is typically not possible to predict whether the position is won or lost as there is often zero correlation between the visible part of a partly blanked-out position and its correct evaluation. This situation starkly contrasts partisan games where a partly blanked-out board position typically provides abundant or at least non-trifle information about the value of the fully uncovered position.
+
+
+
+## **40. LookAhead: Preventing DeFi Attacks via Unveiling Adversarial Contracts**
+
+cs.CR
+
+11 pages, 5 figures
+
+**SubmitDate**: 2024-01-14    [abs](http://arxiv.org/abs/2401.07261v1) [paper-pdf](http://arxiv.org/pdf/2401.07261v1)
+
+**Authors**: Shoupeng Ren, Tianyu Tu, Jian Liu, Di Wu, Kui Ren
+
+**Abstract**: DeFi incidents stemming from various smart contract vulnerabilities have culminated in financial damages exceeding 3 billion USD. The attacks causing such incidents commonly commence with the deployment of adversarial contracts, subsequently leveraging these contracts to execute adversarial transactions that exploit vulnerabilities in victim contracts. Existing defense mechanisms leverage heuristic or machine learning algorithms to detect adversarial transactions, but they face significant challenges in detecting private adversarial transactions. Namely, attackers can send adversarial transactions directly to miners, evading visibility within the blockchain network and effectively bypassing the detection. In this paper, we propose a new direction for detecting DeFi attacks, i.e., detecting adversarial contracts instead of adversarial transactions, allowing us to proactively identify potential attack intentions, even if they employ private adversarial transactions. Specifically, we observe that most adversarial contracts follow a similar pattern, e.g., anonymous fund source, closed-source, frequent token-related function calls. Based on this observation, we build a machine learning classifier that can effectively distinguish adversarial contracts from benign ones. We build a dataset consists of features extracted from 304 adversarial contracts and 13,000 benign contracts. Based on this dataset, we evaluate different classifiers, the results of which show that our method for identifying DeFi adversarial contracts performs exceptionally well. For example, the F1-Score for LightGBM-based classifier is 0.9434, with a remarkably low false positive rate of only 0.12%.
+
+
+
+## **41. Crafter: Facial Feature Crafting against Inversion-based Identity Theft on Deep Models**
+
+cs.CR
+
+**SubmitDate**: 2024-01-14    [abs](http://arxiv.org/abs/2401.07205v1) [paper-pdf](http://arxiv.org/pdf/2401.07205v1)
+
+**Authors**: Shiming Wang, Zhe Ji, Liyao Xiang, Hao Zhang, Xinbing Wang, Chenghu Zhou, Bo Li
+
+**Abstract**: With the increased capabilities at the edge (e.g., mobile device) and more stringent privacy requirement, it becomes a recent trend for deep learning-enabled applications to pre-process sensitive raw data at the edge and transmit the features to the backend cloud for further processing. A typical application is to run machine learning (ML) services on facial images collected from different individuals. To prevent identity theft, conventional methods commonly rely on an adversarial game-based approach to shed the identity information from the feature. However, such methods can not defend against adaptive attacks, in which an attacker takes a countermove against a known defence strategy. We propose Crafter, a feature crafting mechanism deployed at the edge, to protect the identity information from adaptive model inversion attacks while ensuring the ML tasks are properly carried out in the cloud. The key defence strategy is to mislead the attacker to a non-private prior from which the attacker gains little about the private identity. In this case, the crafted features act like poison training samples for attackers with adaptive model updates. Experimental results indicate that Crafter successfully defends both basic and possible adaptive attacks, which can not be achieved by state-of-the-art adversarial game-based methods.
+
+
+
+## **42. Experimental quantum e-commerce**
+
+quant-ph
+
+19 pages, 5 figures, 5 tables
+
+**SubmitDate**: 2024-01-14    [abs](http://arxiv.org/abs/2308.08821v2) [paper-pdf](http://arxiv.org/pdf/2308.08821v2)
+
+**Authors**: Xiao-Yu Cao, Bing-Hong Li, Yang Wang, Yao Fu, Hua-Lei Yin, Zeng-Bing Chen
+
+**Abstract**: E-commerce, a type of trading that occurs at a high frequency on the Internet, requires guaranteeing the integrity, authentication and non-repudiation of messages through long distance. As current e-commerce schemes are vulnerable to computational attacks, quantum cryptography, ensuring information-theoretic security against adversary's repudiation and forgery, provides a solution to this problem. However, quantum solutions generally have much lower performance compared to classical ones. Besides, when considering imperfect devices, the performance of quantum schemes exhibits a significant decline. Here, for the first time, we demonstrate the whole e-commerce process of involving the signing of a contract and payment among three parties by proposing a quantum e-commerce scheme, which shows resistance of attacks from imperfect devices. Results show that with a maximum attenuation of 25 dB among participants, our scheme can achieve a signature rate of 0.82 times per second for an agreement size of approximately 0.428 megabit. This proposed scheme presents a promising solution for providing information-theoretic security for e-commerce.
+
+
+
+## **43. Left-right Discrepancy for Adversarial Attack on Stereo Networks**
+
+cs.CV
+
+**SubmitDate**: 2024-01-14    [abs](http://arxiv.org/abs/2401.07188v1) [paper-pdf](http://arxiv.org/pdf/2401.07188v1)
+
+**Authors**: Pengfei Wang, Xiaofei Hui, Beijia Lu, Nimrod Lilith, Jun Liu, Sameer Alam
+
+**Abstract**: Stereo matching neural networks often involve a Siamese structure to extract intermediate features from left and right images. The similarity between these intermediate left-right features significantly impacts the accuracy of disparity estimation. In this paper, we introduce a novel adversarial attack approach that generates perturbation noise specifically designed to maximize the discrepancy between left and right image features. Extensive experiments demonstrate the superior capability of our method to induce larger prediction errors in stereo neural networks, e.g. outperforming existing state-of-the-art attack methods by 219% MAE on the KITTI dataset and 85% MAE on the Scene Flow dataset. Additionally, we extend our approach to include a proxy network black-box attack method, eliminating the need for access to stereo neural network. This method leverages an arbitrary network from a different vision task as a proxy to generate adversarial noise, effectively causing the stereo network to produce erroneous predictions. Our findings highlight a notable sensitivity of stereo networks to discrepancies in shallow layer features, offering valuable insights that could guide future research in enhancing the robustness of stereo vision systems.
+
+
+
+## **44. Exploring Adversarial Attacks against Latent Diffusion Model from the Perspective of Adversarial Transferability**
+
+cs.CV
+
+24 pages, 13 figures
+
+**SubmitDate**: 2024-01-13    [abs](http://arxiv.org/abs/2401.07087v1) [paper-pdf](http://arxiv.org/pdf/2401.07087v1)
+
+**Authors**: Junxi Chen, Junhao Dong, Xiaohua Xie
+
+**Abstract**: Recently, many studies utilized adversarial examples (AEs) to raise the cost of malicious image editing and copyright violation powered by latent diffusion models (LDMs). Despite their successes, a few have studied the surrogate model they used to generate AEs. In this paper, from the perspective of adversarial transferability, we investigate how the surrogate model's property influences the performance of AEs for LDMs. Specifically, we view the time-step sampling in the Monte-Carlo-based (MC-based) adversarial attack as selecting surrogate models. We find that the smoothness of surrogate models at different time steps differs, and we substantially improve the performance of the MC-based AEs by selecting smoother surrogate models. In the light of the theoretical framework on adversarial transferability in image classification, we also conduct a theoretical analysis to explain why smooth surrogate models can also boost AEs for LDMs.
+
+
+
+## **45. Enhancing targeted transferability via feature space fine-tuning**
+
+cs.CV
+
+9 pages, 10 figures, accepted by 2024ICASSP
+
+**SubmitDate**: 2024-01-13    [abs](http://arxiv.org/abs/2401.02727v2) [paper-pdf](http://arxiv.org/pdf/2401.02727v2)
+
+**Authors**: Hui Zeng, Biwei Chen, Anjie Peng
+
+**Abstract**: Adversarial examples (AEs) have been extensively studied due to their potential for privacy protection and inspiring robust neural networks. Yet, making a targeted AE transferable across unknown models remains challenging. In this paper, to alleviate the overfitting dilemma common in an AE crafted by existing simple iterative attacks, we propose fine-tuning it in the feature space. Specifically, starting with an AE generated by a baseline attack, we encourage the features conducive to the target class and discourage the features to the original class in a middle layer of the source model. Extensive experiments demonstrate that only a few iterations of fine-tuning can boost existing attacks' targeted transferability nontrivially and universally. Our results also verify that the simple iterative attacks can yield comparable or even better transferability than the resource-intensive methods, which rest on training target-specific classifiers or generators with additional data. The code is available at: github.com/zengh5/TA_feature_FT.
+
+
+
+## **46. How Johnny Can Persuade LLMs to Jailbreak Them: Rethinking Persuasion to Challenge AI Safety by Humanizing LLMs**
 
 cs.CL
 
@@ -17,21 +601,7 @@ cs.CL
 
 
 
-## **2. Adversarial Examples are Misaligned in Diffusion Model Manifolds**
-
-cs.CV
-
-under review
-
-**SubmitDate**: 2024-01-12    [abs](http://arxiv.org/abs/2401.06637v1) [paper-pdf](http://arxiv.org/pdf/2401.06637v1)
-
-**Authors**: Peter Lorenz, Ricard Durall, Jansi Keuper
-
-**Abstract**: In recent years, diffusion models (DMs) have drawn significant attention for their success in approximating data distributions, yielding state-of-the-art generative results. Nevertheless, the versatility of these models extends beyond their generative capabilities to encompass various vision applications, such as image inpainting, segmentation, adversarial robustness, among others. This study is dedicated to the investigation of adversarial attacks through the lens of diffusion models. However, our objective does not involve enhancing the adversarial robustness of image classifiers. Instead, our focus lies in utilizing the diffusion model to detect and analyze the anomalies introduced by these attacks on images. To that end, we systematically examine the alignment of the distributions of adversarial examples when subjected to the process of transformation using diffusion models. The efficacy of this approach is assessed across CIFAR-10 and ImageNet datasets, including varying image sizes in the latter. The results demonstrate a notable capacity to discriminate effectively between benign and attacked images, providing compelling evidence that adversarial instances do not align with the learned manifold of the DMs.
-
-
-
-## **3. FlashSyn: Flash Loan Attack Synthesis via Counter Example Driven Approximation**
+## **47. FlashSyn: Flash Loan Attack Synthesis via Counter Example Driven Approximation**
 
 cs.PL
 
@@ -45,7 +615,7 @@ cs.PL
 
 
 
-## **4. When Fairness Meets Privacy: Exploring Privacy Threats in Fair Binary Classifiers through Membership Inference Attacks**
+## **48. When Fairness Meets Privacy: Exploring Privacy Threats in Fair Binary Classifiers through Membership Inference Attacks**
 
 cs.LG
 
@@ -59,7 +629,7 @@ Under review
 
 
 
-## **5. MVPatch: More Vivid Patch for Adversarial Camouflaged Attacks on Object Detectors in the Physical World**
+## **49. MVPatch: More Vivid Patch for Adversarial Camouflaged Attacks on Object Detectors in the Physical World**
 
 cs.CR
 
@@ -73,7 +643,7 @@ cs.CR
 
 
 
-## **6. On the Query Complexity of Training Data Reconstruction in Private Learning**
+## **50. On the Query Complexity of Training Data Reconstruction in Private Learning**
 
 cs.LG
 
@@ -84,592 +654,6 @@ Updated proof of Thm 10, fixed typos
 **Authors**: Prateeti Mukherjee, Satya Lokam
 
 **Abstract**: We analyze the number of queries that a whitebox adversary needs to make to a private learner in order to reconstruct its training data. For $(\epsilon, \delta)$ DP learners with training data drawn from any arbitrary compact metric space, we provide the \emph{first known lower bounds on the adversary's query complexity} as a function of the learner's privacy parameters. \emph{Our results are minimax optimal for every $\epsilon \geq 0, \delta \in [0, 1]$, covering both $\epsilon$-DP and $(0, \delta)$ DP as corollaries}. Beyond this, we obtain query complexity lower bounds for $(\alpha, \epsilon)$ R\'enyi DP learners that are valid for any $\alpha > 1, \epsilon \geq 0$. Finally, we analyze data reconstruction attacks on locally compact metric spaces via the framework of Metric DP, a generalization of DP that accounts for the underlying metric structure of the data. In this setting, we provide the first known analysis of data reconstruction in unbounded, high dimensional spaces and obtain query complexity lower bounds that are nearly tight modulo logarithmic factors.
-
-
-
-## **7. The Impact of Adversarial Node Placement in Decentralized Federated Learning Networks**
-
-cs.CR
-
-Submitted to ICC 2024 conference
-
-**SubmitDate**: 2024-01-11    [abs](http://arxiv.org/abs/2311.07946v3) [paper-pdf](http://arxiv.org/pdf/2311.07946v3)
-
-**Authors**: Adam Piaseczny, Eric Ruzomberka, Rohit Parasnis, Christopher G. Brinton
-
-**Abstract**: As Federated Learning (FL) grows in popularity, new decentralized frameworks are becoming widespread. These frameworks leverage the benefits of decentralized environments to enable fast and energy-efficient inter-device communication. However, this growing popularity also intensifies the need for robust security measures. While existing research has explored various aspects of FL security, the role of adversarial node placement in decentralized networks remains largely unexplored. This paper addresses this gap by analyzing the performance of decentralized FL for various adversarial placement strategies when adversaries can jointly coordinate their placement within a network. We establish two baseline strategies for placing adversarial node: random placement and network centrality-based placement. Building on this foundation, we propose a novel attack algorithm that prioritizes adversarial spread over adversarial centrality by maximizing the average network distance between adversaries. We show that the new attack algorithm significantly impacts key performance metrics such as testing accuracy, outperforming the baseline frameworks by between 9% and 66.5% for the considered setups. Our findings provide valuable insights into the vulnerabilities of decentralized FL systems, setting the stage for future research aimed at developing more secure and robust decentralized FL frameworks.
-
-
-
-## **8. GE-AdvGAN: Improving the transferability of adversarial samples by gradient editing-based adversarial generative model**
-
-cs.CV
-
-Accepted by SIAM International Conference on Data Mining (SDM24)
-
-**SubmitDate**: 2024-01-11    [abs](http://arxiv.org/abs/2401.06031v1) [paper-pdf](http://arxiv.org/pdf/2401.06031v1)
-
-**Authors**: Zhiyu Zhu, Huaming Chen, Xinyi Wang, Jiayu Zhang, Zhibo Jin, Kim-Kwang Raymond Choo
-
-**Abstract**: Adversarial generative models, such as Generative Adversarial Networks (GANs), are widely applied for generating various types of data, i.e., images, text, and audio. Accordingly, its promising performance has led to the GAN-based adversarial attack methods in the white-box and black-box attack scenarios. The importance of transferable black-box attacks lies in their ability to be effective across different models and settings, more closely aligning with real-world applications. However, it remains challenging to retain the performance in terms of transferable adversarial examples for such methods. Meanwhile, we observe that some enhanced gradient-based transferable adversarial attack algorithms require prolonged time for adversarial sample generation. Thus, in this work, we propose a novel algorithm named GE-AdvGAN to enhance the transferability of adversarial samples whilst improving the algorithm's efficiency. The main approach is via optimising the training process of the generator parameters. With the functional and characteristic similarity analysis, we introduce a novel gradient editing (GE) mechanism and verify its feasibility in generating transferable samples on various models. Moreover, by exploring the frequency domain information to determine the gradient editing direction, GE-AdvGAN can generate highly transferable adversarial samples while minimizing the execution time in comparison to the state-of-the-art transferable adversarial attack algorithms. The performance of GE-AdvGAN is comprehensively evaluated by large-scale experiments on different datasets, which results demonstrate the superiority of our algorithm. The code for our algorithm is available at: https://github.com/LMBTough/GE-advGAN
-
-
-
-## **9. Combating Adversarial Attacks with Multi-Agent Debate**
-
-cs.CL
-
-**SubmitDate**: 2024-01-11    [abs](http://arxiv.org/abs/2401.05998v1) [paper-pdf](http://arxiv.org/pdf/2401.05998v1)
-
-**Authors**: Steffi Chern, Zhen Fan, Andy Liu
-
-**Abstract**: While state-of-the-art language models have achieved impressive results, they remain susceptible to inference-time adversarial attacks, such as adversarial prompts generated by red teams arXiv:2209.07858. One approach proposed to improve the general quality of language model generations is multi-agent debate, where language models self-evaluate through discussion and feedback arXiv:2305.14325. We implement multi-agent debate between current state-of-the-art language models and evaluate models' susceptibility to red team attacks in both single- and multi-agent settings. We find that multi-agent debate can reduce model toxicity when jailbroken or less capable models are forced to debate with non-jailbroken or more capable models. We also find marginal improvements through the general usage of multi-agent interactions. We further perform adversarial prompt content classification via embedding clustering, and analyze the susceptibility of different models to different types of attack topics.
-
-
-
-## **10. Localized adversarial artifacts for compressed sensing MRI**
-
-eess.IV
-
-14 pages, 7 figures
-
-**SubmitDate**: 2024-01-11    [abs](http://arxiv.org/abs/2206.05289v2) [paper-pdf](http://arxiv.org/pdf/2206.05289v2)
-
-**Authors**: Rima Alaifari, Giovanni S. Alberti, Tandri Gauksson
-
-**Abstract**: As interest in deep neural networks (DNNs) for image reconstruction tasks grows, their reliability has been called into question (Antun et al., 2020; Gottschling et al., 2020). However, recent work has shown that, compared to total variation (TV) minimization, when appropriately regularized, DNNs show similar robustness to adversarial noise in terms of $\ell^2$-reconstruction error (Genzel et al., 2022). We consider a different notion of robustness, using the $\ell^\infty$-norm, and argue that localized reconstruction artifacts are a more relevant defect than the $\ell^2$-error. We create adversarial perturbations to undersampled magnetic resonance imaging measurements (in the frequency domain) which induce severe localized artifacts in the TV-regularized reconstruction. Notably, the same attack method is not as effective against DNN based reconstruction. Finally, we show that this phenomenon is inherent to reconstruction methods for which exact recovery can be guaranteed, as with compressed sensing reconstructions with $\ell^1$- or TV-minimization.
-
-
-
-## **11. Towards Robust Pruning: An Adaptive Knowledge-Retention Pruning Strategy for Language Models**
-
-cs.CL
-
-**SubmitDate**: 2024-01-11    [abs](http://arxiv.org/abs/2310.13191v3) [paper-pdf](http://arxiv.org/pdf/2310.13191v3)
-
-**Authors**: Jianwei Li, Qi Lei, Wei Cheng, Dongkuan Xu
-
-**Abstract**: The pruning objective has recently extended beyond accuracy and sparsity to robustness in language models. Despite this, existing methods struggle to enhance robustness against adversarial attacks when continually increasing model sparsity and require a retraining process. As humans step into the era of large language models, these issues become increasingly prominent. This paper proposes that the robustness of language models is proportional to the extent of pre-trained knowledge they encompass. Accordingly, we introduce a post-training pruning strategy designed to faithfully replicate the embedding space and feature space of dense language models, aiming to conserve more pre-trained knowledge during the pruning process. In this setup, each layer's reconstruction error not only originates from itself but also includes cumulative error from preceding layers, followed by an adaptive rectification. Compared to other state-of-art baselines, our approach demonstrates a superior balance between accuracy, sparsity, robustness, and pruning cost with BERT on datasets SST2, IMDB, and AGNews, marking a significant stride towards robust pruning in language models.
-
-
-
-## **12. Dynamics-aware Adversarial Attack of Adaptive Neural Networks**
-
-cs.CV
-
-arXiv admin note: text overlap with arXiv:2112.09428
-
-**SubmitDate**: 2024-01-11    [abs](http://arxiv.org/abs/2210.08159v4) [paper-pdf](http://arxiv.org/pdf/2210.08159v4)
-
-**Authors**: An Tao, Yueqi Duan, Yingqi Wang, Jiwen Lu, Jie Zhou
-
-**Abstract**: In this paper, we investigate the dynamics-aware adversarial attack problem of adaptive neural networks. Most existing adversarial attack algorithms are designed under a basic assumption -- the network architecture is fixed throughout the attack process. However, this assumption does not hold for many recently proposed adaptive neural networks, which adaptively deactivate unnecessary execution units based on inputs to improve computational efficiency. It results in a serious issue of lagged gradient, making the learned attack at the current step ineffective due to the architecture change afterward. To address this issue, we propose a Leaded Gradient Method (LGM) and show the significant effects of the lagged gradient. More specifically, we reformulate the gradients to be aware of the potential dynamic changes of network architectures, so that the learned attack better "leads" the next step than the dynamics-unaware methods when network architecture changes dynamically. Extensive experiments on representative types of adaptive neural networks for both 2D images and 3D point clouds show that our LGM achieves impressive adversarial attack performance compared with the dynamic-unaware attack methods. Code is available at https://github.com/antao97/LGM.
-
-
-
-## **13. The Devil's Advocate: Shattering the Illusion of Unexploitable Data using Diffusion Models**
-
-cs.LG
-
-Accepted to the 2024 IEEE Conference on Secure and Trustworthy  Machine Learning (SatML)
-
-**SubmitDate**: 2024-01-11    [abs](http://arxiv.org/abs/2303.08500v2) [paper-pdf](http://arxiv.org/pdf/2303.08500v2)
-
-**Authors**: Hadi M. Dolatabadi, Sarah Erfani, Christopher Leckie
-
-**Abstract**: Protecting personal data against exploitation of machine learning models is crucial. Recently, availability attacks have shown great promise to provide an extra layer of protection against the unauthorized use of data to train neural networks. These methods aim to add imperceptible noise to clean data so that the neural networks cannot extract meaningful patterns from the protected data, claiming that they can make personal data "unexploitable." This paper provides a strong countermeasure against such approaches, showing that unexploitable data might only be an illusion. In particular, we leverage the power of diffusion models and show that a carefully designed denoising process can counteract the effectiveness of the data-protecting perturbations. We rigorously analyze our algorithm, and theoretically prove that the amount of required denoising is directly related to the magnitude of the data-protecting perturbations. Our approach, called AVATAR, delivers state-of-the-art performance against a suite of recent availability attacks in various scenarios, outperforming adversarial training even under distribution mismatch between the diffusion model and the protected data. Our findings call for more research into making personal data unexploitable, showing that this goal is far from over. Our implementation is available at this repository: https://github.com/hmdolatabadi/AVATAR.
-
-
-
-## **14. A general theory for robust clustering via trimmed mean**
-
-math.ST
-
-51 pages
-
-**SubmitDate**: 2024-01-10    [abs](http://arxiv.org/abs/2401.05574v1) [paper-pdf](http://arxiv.org/pdf/2401.05574v1)
-
-**Authors**: Soham Jana, Jianqing Fan, Sanjeev Kulkarni
-
-**Abstract**: Clustering is a fundamental tool in statistical machine learning in the presence of heterogeneous data. Many recent results focus primarily on optimal mislabeling guarantees, when data are distributed around centroids with sub-Gaussian errors. Yet, the restrictive sub-Gaussian model is often invalid in practice, since various real-world applications exhibit heavy tail distributions around the centroids or suffer from possible adversarial attacks that call for robust clustering with a robust data-driven initialization. In this paper, we introduce a hybrid clustering technique with a novel multivariate trimmed mean type centroid estimate to produce mislabeling guarantees under a weak initialization condition for general error distributions around the centroids. A matching lower bound is derived, up to factors depending on the number of clusters. In addition, our approach also produces the optimal mislabeling even in the presence of adversarial outliers. Our results reduce to the sub-Gaussian case when errors follow sub-Gaussian distributions. To solve the problem thoroughly, we also present novel data-driven robust initialization techniques and show that, with probabilities approaching one, these initial centroid estimates are sufficiently good for the subsequent clustering algorithm to achieve the optimal mislabeling rates. Furthermore, we demonstrate that the Lloyd algorithm is suboptimal for more than two clusters even when errors are Gaussian, and for two clusters when errors distributions have heavy tails. Both simulated data and real data examples lend further support to both of our robust initialization procedure and clustering algorithm.
-
-
-
-## **15. LimeAttack: Local Explainable Method for Textual Hard-Label Adversarial Attack**
-
-cs.CL
-
-18 pages, 38th AAAI Main Track
-
-**SubmitDate**: 2024-01-10    [abs](http://arxiv.org/abs/2308.00319v2) [paper-pdf](http://arxiv.org/pdf/2308.00319v2)
-
-**Authors**: Hai Zhu, Zhaoqing Yang, Weiwei Shang, Yuren Wu
-
-**Abstract**: Natural language processing models are vulnerable to adversarial examples. Previous textual adversarial attacks adopt gradients or confidence scores to calculate word importance ranking and generate adversarial examples. However, this information is unavailable in the real world. Therefore, we focus on a more realistic and challenging setting, named hard-label attack, in which the attacker can only query the model and obtain a discrete prediction label. Existing hard-label attack algorithms tend to initialize adversarial examples by random substitution and then utilize complex heuristic algorithms to optimize the adversarial perturbation. These methods require a lot of model queries and the attack success rate is restricted by adversary initialization. In this paper, we propose a novel hard-label attack algorithm named LimeAttack, which leverages a local explainable method to approximate word importance ranking, and then adopts beam search to find the optimal solution. Extensive experiments show that LimeAttack achieves the better attacking performance compared with existing hard-label attack under the same query budget. In addition, we evaluate the effectiveness of LimeAttack on large language models, and results indicate that adversarial examples remain a significant threat to large language models. The adversarial examples crafted by LimeAttack are highly transferable and effectively improve model robustness in adversarial training.
-
-
-
-## **16. A Theoretical View of Linear Backpropagation and Its Convergence**
-
-cs.LG
-
-This paper is accepted by IEEE Transactions on Pattern Analysis and  Machine Intelligence
-
-**SubmitDate**: 2024-01-10    [abs](http://arxiv.org/abs/2112.11018v2) [paper-pdf](http://arxiv.org/pdf/2112.11018v2)
-
-**Authors**: Ziang Li, Yiwen Guo, Haodi Liu, Changshui Zhang
-
-**Abstract**: Backpropagation (BP) is widely used for calculating gradients in deep neural networks (DNNs). Applied often along with stochastic gradient descent (SGD) or its variants, BP is considered as a de-facto choice in a variety of machine learning tasks including DNN training and adversarial attack/defense. Recently, a linear variant of BP named LinBP was introduced for generating more transferable adversarial examples for performing black-box attacks, by Guo et al. Although it has been shown empirically effective in black-box attacks, theoretical studies and convergence analyses of such a method is lacking. This paper serves as a complement and somewhat an extension to Guo et al.'s paper, by providing theoretical analyses on LinBP in neural-network-involved learning tasks, including adversarial attack and model training. We demonstrate that, somewhat surprisingly, LinBP can lead to faster convergence in these tasks in the same hyper-parameter settings, compared to BP. We confirm our theoretical results with extensive experiments.
-
-
-
-## **17. Lyapunov-Stable Deep Equilibrium Models**
-
-cs.LG
-
-**SubmitDate**: 2024-01-10    [abs](http://arxiv.org/abs/2304.12707v3) [paper-pdf](http://arxiv.org/pdf/2304.12707v3)
-
-**Authors**: Haoyu Chu, Shikui Wei, Ting Liu, Yao Zhao, Yuto Miyatake
-
-**Abstract**: Deep equilibrium (DEQ) models have emerged as a promising class of implicit layer models, which abandon traditional depth by solving for the fixed points of a single nonlinear layer. Despite their success, the stability of the fixed points for these models remains poorly understood. By considering DEQ models as nonlinear dynamic systems, we propose a robust DEQ model named LyaDEQ with guaranteed provable stability via Lyapunov theory. The crux of our method is ensuring the Lyapunov stability of the DEQ model's fixed points, which enables the proposed model to resist minor initial perturbations. To avoid poor adversarial defense due to Lyapunov-stable fixed points being located near each other, we orthogonalize the layers after the Lyapunov stability module to separate different fixed points. We evaluate LyaDEQ models under well-known adversarial attacks, and experimental results demonstrate significant improvement in robustness. Furthermore, we show that the LyaDEQ model can be combined with other defense methods, such as adversarial training, to achieve even better adversarial robustness.
-
-
-
-## **18. Learning-Based Difficulty Calibration for Enhanced Membership Inference Attacks**
-
-cs.CR
-
-10 pages, 14 figures
-
-**SubmitDate**: 2024-01-10    [abs](http://arxiv.org/abs/2401.04929v1) [paper-pdf](http://arxiv.org/pdf/2401.04929v1)
-
-**Authors**: Haonan Shi, Tu Ouyang, An Wang
-
-**Abstract**: Machine learning models, in particular deep neural networks, are currently an integral part of various applications, from healthcare to finance. However, using sensitive data to train these models raises concerns about privacy and security. One method that has emerged to verify if the trained models are privacy-preserving is Membership Inference Attacks (MIA), which allows adversaries to determine whether a specific data point was part of a model's training dataset. While a series of MIAs have been proposed in the literature, only a few can achieve high True Positive Rates (TPR) in the low False Positive Rate (FPR) region (0.01%~1%). This is a crucial factor to consider for an MIA to be practically useful in real-world settings. In this paper, we present a novel approach to MIA that is aimed at significantly improving TPR at low FPRs. Our method, named learning-based difficulty calibration for MIA(LDC-MIA), characterizes data records by their hardness levels using a neural network classifier to determine membership. The experiment results show that LDC-MIA can improve TPR at low FPR by up to 4x compared to the other difficulty calibration based MIAs. It also has the highest Area Under ROC curve (AUC) across all datasets. Our method's cost is comparable with most of the existing MIAs, but is orders of magnitude more efficient than one of the state-of-the-art methods, LiRA, while achieving similar performance.
-
-
-
-## **19. AdvSQLi: Generating Adversarial SQL Injections against Real-world WAF-as-a-service**
-
-cs.CR
-
-Accepted by IEEE Transactions on Information Forensics and Security  (IEEE TIFS)
-
-**SubmitDate**: 2024-01-09    [abs](http://arxiv.org/abs/2401.02615v3) [paper-pdf](http://arxiv.org/pdf/2401.02615v3)
-
-**Authors**: Zhenqing Qu, Xiang Ling, Ting Wang, Xiang Chen, Shouling Ji, Chunming Wu
-
-**Abstract**: As the first defensive layer that attacks would hit, the web application firewall (WAF) plays an indispensable role in defending against malicious web attacks like SQL injection (SQLi). With the development of cloud computing, WAF-as-a-service, as one kind of Security-as-a-service, has been proposed to facilitate the deployment, configuration, and update of WAFs in the cloud. Despite its tremendous popularity, the security vulnerabilities of WAF-as-a-service are still largely unknown, which is highly concerning given its massive usage. In this paper, we propose a general and extendable attack framework, namely AdvSQLi, in which a minimal series of transformations are performed on the hierarchical tree representation of the original SQLi payload, such that the generated SQLi payloads can not only bypass WAF-as-a-service under black-box settings but also keep the same functionality and maliciousness as the original payload. With AdvSQLi, we make it feasible to inspect and understand the security vulnerabilities of WAFs automatically, helping vendors make products more secure. To evaluate the attack effectiveness and efficiency of AdvSQLi, we first employ two public datasets to generate adversarial SQLi payloads, leading to a maximum attack success rate of 100% against state-of-the-art ML-based SQLi detectors. Furthermore, to demonstrate the immediate security threats caused by AdvSQLi, we evaluate the attack effectiveness against 7 WAF-as-a-service solutions from mainstream vendors and find all of them are vulnerable to AdvSQLi. For instance, AdvSQLi achieves an attack success rate of over 79% against the F5 WAF. Through in-depth analysis of the evaluation results, we further condense out several general yet severe flaws of these vendors that cannot be easily patched.
-
-
-
-## **20. ROIC-DM: Robust Text Inference and Classification via Diffusion Model**
-
-cs.CL
-
-under review
-
-**SubmitDate**: 2024-01-09    [abs](http://arxiv.org/abs/2401.03514v2) [paper-pdf](http://arxiv.org/pdf/2401.03514v2)
-
-**Authors**: Shilong Yuan, Wei Yuan, Hongzhi Yin, Tieke He
-
-**Abstract**: While language models have made many milestones in text inference and classification tasks, they remain susceptible to adversarial attacks that can lead to unforeseen outcomes. Existing works alleviate this problem by equipping language models with defense patches. However, these defense strategies often rely on impractical assumptions or entail substantial sacrifices in model performance. Consequently, enhancing the resilience of the target model using such defense mechanisms is a formidable challenge. This paper introduces an innovative model for robust text inference and classification, built upon diffusion models (ROIC-DM). Benefiting from its training involving denoising stages, ROIC-DM inherently exhibits greater robustness compared to conventional language models. Moreover, ROIC-DM can attain comparable, and in some cases, superior performance to language models, by effectively incorporating them as advisory components. Extensive experiments conducted with several strong textual adversarial attacks on three datasets demonstrate that (1) ROIC-DM outperforms traditional language models in robustness, even when the latter are fortified with advanced defense mechanisms; (2) ROIC-DM can achieve comparable and even better performance than traditional language models by using them as advisors.
-
-
-
-## **21. Exploring Adversarial Robustness of LiDAR-Camera Fusion Model in Autonomous Driving**
-
-cs.RO
-
-**SubmitDate**: 2024-01-09    [abs](http://arxiv.org/abs/2312.01468v2) [paper-pdf](http://arxiv.org/pdf/2312.01468v2)
-
-**Authors**: Bo Yang, Xiaoyu Ji, Zizhi Jin, Yushi Cheng, Wenyuan Xu
-
-**Abstract**: Our study assesses the adversarial robustness of LiDAR-camera fusion models in 3D object detection. We introduce an attack technique that, by simply adding a limited number of physically constrained adversarial points above a car, can make the car undetectable by the fusion model. Experimental results reveal that even without changes to the image data channel, the fusion model can be deceived solely by manipulating the LiDAR data channel. This finding raises safety concerns in the field of autonomous driving. Further, we explore how the quantity of adversarial points, the distance between the front-near car and the LiDAR-equipped car, and various angular factors affect the attack success rate. We believe our research can contribute to the understanding of multi-sensor robustness, offering insights and guidance to enhance the safety of autonomous driving.
-
-
-
-## **22. Coupling Graph Neural Networks with Fractional Order Continuous Dynamics: A Robustness Study**
-
-cs.LG
-
-in Proc. AAAI Conference on Artificial Intelligence, Vancouver,  Canada, Feb. 2024
-
-**SubmitDate**: 2024-01-09    [abs](http://arxiv.org/abs/2401.04331v1) [paper-pdf](http://arxiv.org/pdf/2401.04331v1)
-
-**Authors**: Qiyu Kang, Kai Zhao, Yang Song, Yihang Xie, Yanan Zhao, Sijie Wang, Rui She, Wee Peng Tay
-
-**Abstract**: In this work, we rigorously investigate the robustness of graph neural fractional-order differential equation (FDE) models. This framework extends beyond traditional graph neural (integer-order) ordinary differential equation (ODE) models by implementing the time-fractional Caputo derivative. Utilizing fractional calculus allows our model to consider long-term memory during the feature updating process, diverging from the memoryless Markovian updates seen in traditional graph neural ODE models. The superiority of graph neural FDE models over graph neural ODE models has been established in environments free from attacks or perturbations. While traditional graph neural ODE models have been verified to possess a degree of stability and resilience in the presence of adversarial attacks in existing literature, the robustness of graph neural FDE models, especially under adversarial conditions, remains largely unexplored. This paper undertakes a detailed assessment of the robustness of graph neural FDE models. We establish a theoretical foundation outlining the robustness characteristics of graph neural FDE models, highlighting that they maintain more stringent output perturbation bounds in the face of input and graph topology disturbances, compared to their integer-order counterparts. Our empirical evaluations further confirm the enhanced robustness of graph neural FDE models, highlighting their potential in adversarially robust applications.
-
-
-
-## **23. Cross-Class Feature Augmentation for Class Incremental Learning**
-
-cs.CV
-
-**SubmitDate**: 2024-01-09    [abs](http://arxiv.org/abs/2304.01899v3) [paper-pdf](http://arxiv.org/pdf/2304.01899v3)
-
-**Authors**: Taehoon Kim, Jaeyoo Park, Bohyung Han
-
-**Abstract**: We propose a novel class incremental learning approach by incorporating a feature augmentation technique motivated by adversarial attacks. We employ a classifier learned in the past to complement training examples rather than simply play a role as a teacher for knowledge distillation towards subsequent models. The proposed approach has a unique perspective to utilize the previous knowledge in class incremental learning since it augments features of arbitrary target classes using examples in other classes via adversarial attacks on a previously learned classifier. By allowing the cross-class feature augmentations, each class in the old tasks conveniently populates samples in the feature space, which alleviates the collapse of the decision boundaries caused by sample deficiency for the previous tasks, especially when the number of stored exemplars is small. This idea can be easily incorporated into existing class incremental learning algorithms without any architecture modification. Extensive experiments on the standard benchmarks show that our method consistently outperforms existing class incremental learning methods by significant margins in various scenarios, especially under an environment with an extremely limited memory budget.
-
-
-
-## **24. Vulnerabilities Unveiled: Adversarially Attacking a Multimodal Vision Language Model for Pathology Imaging**
-
-eess.IV
-
-**SubmitDate**: 2024-01-08    [abs](http://arxiv.org/abs/2401.02565v2) [paper-pdf](http://arxiv.org/pdf/2401.02565v2)
-
-**Authors**: Jai Prakash Veerla, Poojitha Thota, Partha Sai Guttikonda, Shirin Nilizadeh, Jacob M. Luber
-
-**Abstract**: In the dynamic landscape of medical artificial intelligence, this study explores the vulnerabilities of the Pathology Language-Image Pretraining (PLIP) model, a Vision Language Foundation model, under targeted adversarial conditions. Leveraging the Kather Colon dataset with 7,180 H&E images across nine tissue types, our investigation employs Projected Gradient Descent (PGD) adversarial attacks to intentionally induce misclassifications. The outcomes reveal a 100% success rate in manipulating PLIP's predictions, underscoring its susceptibility to adversarial perturbations. The qualitative analysis of adversarial examples delves into the interpretability challenges, shedding light on nuanced changes in predictions induced by adversarial manipulations. These findings contribute crucial insights into the interpretability, domain adaptation, and trustworthiness of Vision Language Models in medical imaging. The study emphasizes the pressing need for robust defenses to ensure the reliability of AI models.
-
-
-
-## **25. Logits Poisoning Attack in Federated Distillation**
-
-cs.LG
-
-13 pages, 3 figures, 5 tables
-
-**SubmitDate**: 2024-01-08    [abs](http://arxiv.org/abs/2401.03685v1) [paper-pdf](http://arxiv.org/pdf/2401.03685v1)
-
-**Authors**: Yuhan Tang, Zhiyuan Wu, Bo Gao, Tian Wen, Yuwei Wang, Sheng Sun
-
-**Abstract**: Federated Distillation (FD) is a novel and promising distributed machine learning paradigm, where knowledge distillation is leveraged to facilitate a more efficient and flexible cross-device knowledge transfer in federated learning. By optimizing local models with knowledge distillation, FD circumvents the necessity of uploading large-scale model parameters to the central server, simultaneously preserving the raw data on local clients. Despite the growing popularity of FD, there is a noticeable gap in previous works concerning the exploration of poisoning attacks within this framework. This can lead to a scant understanding of the vulnerabilities to potential adversarial actions. To this end, we introduce FDLA, a poisoning attack method tailored for FD. FDLA manipulates logit communications in FD, aiming to significantly degrade model performance on clients through misleading the discrimination of private samples. Through extensive simulation experiments across a variety of datasets, attack scenarios, and FD configurations, we demonstrate that LPA effectively compromises client model accuracy, outperforming established baseline algorithms in this regard. Our findings underscore the critical need for robust defense mechanisms in FD settings to mitigate such adversarial threats.
-
-
-
-## **26. Assessing the Influence of Different Types of Probing on Adversarial Decision-Making in a Deception Game**
-
-cs.CR
-
-**SubmitDate**: 2024-01-08    [abs](http://arxiv.org/abs/2310.10662v3) [paper-pdf](http://arxiv.org/pdf/2310.10662v3)
-
-**Authors**: Md Abu Sayed, Mohammad Ariful Islam Khan, Bryant A Allsup, Joshua Zamora, Palvi Aggarwal
-
-**Abstract**: Deception, which includes leading cyber-attackers astray with false information, has shown to be an effective method of thwarting cyber-attacks. There has been little investigation of the effect of probing action costs on adversarial decision-making, despite earlier studies on deception in cybersecurity focusing primarily on variables like network size and the percentage of honeypots utilized in games. Understanding human decision-making when prompted with choices of various costs is essential in many areas such as in cyber security. In this paper, we will use a deception game (DG) to examine different costs of probing on adversarial decisions. To achieve this we utilized an IBLT model and a delayed feedback mechanism to mimic knowledge of human actions. Our results were taken from an even split of deception and no deception to compare each influence. It was concluded that probing was slightly taken less as the cost of probing increased. The proportion of attacks stayed relatively the same as the cost of probing increased. Although a constant cost led to a slight decrease in attacks. Overall, our results concluded that the different probing costs do not have an impact on the proportion of attacks whereas it had a slightly noticeable impact on the proportion of probing.
-
-
-
-## **27. Elevating Defenses: Bridging Adversarial Training and Watermarking for Model Resilience**
-
-cs.LG
-
-Accepted at DAI Workshop, AAAI 2024
-
-**SubmitDate**: 2024-01-07    [abs](http://arxiv.org/abs/2312.14260v2) [paper-pdf](http://arxiv.org/pdf/2312.14260v2)
-
-**Authors**: Janvi Thakkar, Giulio Zizzo, Sergio Maffeis
-
-**Abstract**: Machine learning models are being used in an increasing number of critical applications; thus, securing their integrity and ownership is critical. Recent studies observed that adversarial training and watermarking have a conflicting interaction. This work introduces a novel framework to integrate adversarial training with watermarking techniques to fortify against evasion attacks and provide confident model verification in case of intellectual property theft. We use adversarial training together with adversarial watermarks to train a robust watermarked model. The key intuition is to use a higher perturbation budget to generate adversarial watermarks compared to the budget used for adversarial training, thus avoiding conflict. We use the MNIST and Fashion-MNIST datasets to evaluate our proposed technique on various model stealing attacks. The results obtained consistently outperform the existing baseline in terms of robustness performance and further prove the resilience of this defense against pruning and fine-tuning removal attacks.
-
-
-
-## **28. Data-Driven Subsampling in the Presence of an Adversarial Actor**
-
-cs.LG
-
-Accepted for publication at ICMLCN 2024
-
-**SubmitDate**: 2024-01-07    [abs](http://arxiv.org/abs/2401.03488v1) [paper-pdf](http://arxiv.org/pdf/2401.03488v1)
-
-**Authors**: Abu Shafin Mohammad Mahdee Jameel, Ahmed P. Mohamed, Jinho Yi, Aly El Gamal, Akshay Malhotra
-
-**Abstract**: Deep learning based automatic modulation classification (AMC) has received significant attention owing to its potential applications in both military and civilian use cases. Recently, data-driven subsampling techniques have been utilized to overcome the challenges associated with computational complexity and training time for AMC. Beyond these direct advantages of data-driven subsampling, these methods also have regularizing properties that may improve the adversarial robustness of the modulation classifier. In this paper, we investigate the effects of an adversarial attack on an AMC system that employs deep learning models both for AMC and for subsampling. Our analysis shows that subsampling itself is an effective deterrent to adversarial attacks. We also uncover the most efficient subsampling strategy when an adversarial attack on both the classifier and the subsampler is anticipated.
-
-
-
-## **29. Token-Modification Adversarial Attacks for Natural Language Processing: A Survey**
-
-cs.CL
-
-Version 3: edited and expanded
-
-**SubmitDate**: 2024-01-07    [abs](http://arxiv.org/abs/2103.00676v3) [paper-pdf](http://arxiv.org/pdf/2103.00676v3)
-
-**Authors**: Tom Roth, Yansong Gao, Alsharif Abuadbba, Surya Nepal, Wei Liu
-
-**Abstract**: Many adversarial attacks target natural language processing systems, most of which succeed through modifying the individual tokens of a document. Despite the apparent uniqueness of each of these attacks, fundamentally they are simply a distinct configuration of four components: a goal function, allowable transformations, a search method, and constraints. In this survey, we systematically present the different components used throughout the literature, using an attack-independent framework which allows for easy comparison and categorisation of components. Our work aims to serve as a comprehensive guide for newcomers to the field and to spark targeted research into refining the individual attack components.
-
-
-
-## **30. Affinity Uncertainty-based Hard Negative Mining in Graph Contrastive Learning**
-
-cs.LG
-
-Accepted to TNNLS
-
-**SubmitDate**: 2024-01-07    [abs](http://arxiv.org/abs/2301.13340v2) [paper-pdf](http://arxiv.org/pdf/2301.13340v2)
-
-**Authors**: Chaoxi Niu, Guansong Pang, Ling Chen
-
-**Abstract**: Hard negative mining has shown effective in enhancing self-supervised contrastive learning (CL) on diverse data types, including graph CL (GCL). The existing hardness-aware CL methods typically treat negative instances that are most similar to the anchor instance as hard negatives, which helps improve the CL performance, especially on image data. However, this approach often fails to identify the hard negatives but leads to many false negatives on graph data. This is mainly due to that the learned graph representations are not sufficiently discriminative due to oversmooth representations and/or non-independent and identically distributed (non-i.i.d.) issues in graph data. To tackle this problem, this article proposes a novel approach that builds a discriminative model on collective affinity information (i.e., two sets of pairwise affinities between the negative instances and the anchor instance) to mine hard negatives in GCL. In particular, the proposed approach evaluates how confident/uncertain the discriminative model is about the affinity of each negative instance to an anchor instance to determine its hardness weight relative to the anchor instance. This uncertainty information is then incorporated into the existing GCL loss functions via a weighting term to enhance their performance. The enhanced GCL is theoretically grounded that the resulting GCL loss is equivalent to a triplet loss with an adaptive margin being exponentially proportional to the learned uncertainty of each negative instance. Extensive experiments on ten graph datasets show that our approach does the following: 1) consistently enhances different state-of-the-art (SOTA) GCL methods in both graph and node classification tasks and 2) significantly improves their robustness against adversarial attacks. Code is available at https://github.com/mala-lab/AUGCL.
-
-
-
-## **31. Data-Dependent Stability Analysis of Adversarial Training**
-
-cs.LG
-
-**SubmitDate**: 2024-01-06    [abs](http://arxiv.org/abs/2401.03156v1) [paper-pdf](http://arxiv.org/pdf/2401.03156v1)
-
-**Authors**: Yihan Wang, Shuang Liu, Xiao-Shan Gao
-
-**Abstract**: Stability analysis is an essential aspect of studying the generalization ability of deep learning, as it involves deriving generalization bounds for stochastic gradient descent-based training algorithms. Adversarial training is the most widely used defense against adversarial example attacks. However, previous generalization bounds for adversarial training have not included information regarding the data distribution. In this paper, we fill this gap by providing generalization bounds for stochastic gradient descent-based adversarial training that incorporate data distribution information. We utilize the concepts of on-average stability and high-order approximate Lipschitz conditions to examine how changes in data distribution and adversarial budget can affect robust generalization gaps. Our derived generalization bounds for both convex and non-convex losses are at least as good as the uniform stability-based counterparts which do not include data distribution information. Furthermore, our findings demonstrate how distribution shifts from data poisoning attacks can impact robust generalization.
-
-
-
-## **32. Transferable Learned Image Compression-Resistant Adversarial Perturbations**
-
-cs.CV
-
-Accepted as poster at Data Compression Conference 2024 (DCC 2024)
-
-**SubmitDate**: 2024-01-06    [abs](http://arxiv.org/abs/2401.03115v1) [paper-pdf](http://arxiv.org/pdf/2401.03115v1)
-
-**Authors**: Yang Sui, Zhuohang Li, Ding Ding, Xiang Pan, Xiaozhong Xu, Shan Liu, Zhenzhong Chen
-
-**Abstract**: Adversarial attacks can readily disrupt the image classification system, revealing the vulnerability of DNN-based recognition tasks. While existing adversarial perturbations are primarily applied to uncompressed images or compressed images by the traditional image compression method, i.e., JPEG, limited studies have investigated the robustness of models for image classification in the context of DNN-based image compression. With the rapid evolution of advanced image compression, DNN-based learned image compression has emerged as the promising approach for transmitting images in many security-critical applications, such as cloud-based face recognition and autonomous driving, due to its superior performance over traditional compression. Therefore, there is a pressing need to fully investigate the robustness of a classification system post-processed by learned image compression. To bridge this research gap, we explore the adversarial attack on a new pipeline that targets image classification models that utilize learned image compressors as pre-processing modules. Furthermore, to enhance the transferability of perturbations across various quality levels and architectures of learned image compression models, we introduce a saliency score-based sampling method to enable the fast generation of transferable perturbation. Extensive experiments with popular attack methods demonstrate the enhanced transferability of our proposed method when attacking images that have been post-processed with different learned image compression models.
-
-
-
-## **33. Lotto: Secure Participant Selection against Adversarial Servers in Federated Learning**
-
-cs.CR
-
-20 pages, 14 figures
-
-**SubmitDate**: 2024-01-05    [abs](http://arxiv.org/abs/2401.02880v1) [paper-pdf](http://arxiv.org/pdf/2401.02880v1)
-
-**Authors**: Zhifeng Jiang, Peng Ye, Shiqi He, Wei Wang, Ruichuan Chen, Bo Li
-
-**Abstract**: In Federated Learning (FL), common privacy-preserving technologies, such as secure aggregation and distributed differential privacy, rely on the critical assumption of an honest majority among participants to withstand various attacks. In practice, however, servers are not always trusted, and an adversarial server can strategically select compromised clients to create a dishonest majority, thereby undermining the system's security guarantees. In this paper, we present Lotto, an FL system that addresses this fundamental, yet underexplored issue by providing secure participant selection against an adversarial server. Lotto supports two selection algorithms: random and informed. To ensure random selection without a trusted server, Lotto enables each client to autonomously determine their participation using verifiable randomness. For informed selection, which is more vulnerable to manipulation, Lotto approximates the algorithm by employing random selection within a refined client pool. Our theoretical analysis shows that Lotto effectively restricts the number of server-selected compromised clients, thus ensuring an honest majority among participants. Large-scale experiments further reveal that Lotto achieves time-to-accuracy performance comparable to that of insecure selection methods, indicating a low computational overhead for secure selection.
-
-
-
-## **34. PromptBench: A Unified Library for Evaluation of Large Language Models**
-
-cs.AI
-
-An extension to PromptBench (arXiv:2306.04528) for unified evaluation  of LLMs using the same name; code: https://github.com/microsoft/promptbench
-
-**SubmitDate**: 2024-01-05    [abs](http://arxiv.org/abs/2312.07910v2) [paper-pdf](http://arxiv.org/pdf/2312.07910v2)
-
-**Authors**: Kaijie Zhu, Qinlin Zhao, Hao Chen, Jindong Wang, Xing Xie
-
-**Abstract**: The evaluation of large language models (LLMs) is crucial to assess their performance and mitigate potential security risks. In this paper, we introduce PromptBench, a unified library to evaluate LLMs. It consists of several key components that are easily used and extended by researchers: prompt construction, prompt engineering, dataset and model loading, adversarial prompt attack, dynamic evaluation protocols, and analysis tools. PromptBench is designed to be an open, general, and flexible codebase for research purposes that can facilitate original study in creating new benchmarks, deploying downstream applications, and designing new evaluation protocols. The code is available at: https://github.com/microsoft/promptbench and will be continuously supported.
-
-
-
-## **35. Enhancing targeted transferability via feature space fine-tuning**
-
-cs.CV
-
-9 pages, 10 figures, accepted by 2024ICASSP
-
-**SubmitDate**: 2024-01-05    [abs](http://arxiv.org/abs/2401.02727v1) [paper-pdf](http://arxiv.org/pdf/2401.02727v1)
-
-**Authors**: Hui Zeng, Biwei Chen, Anjie Peng
-
-**Abstract**: Adversarial examples (AEs) have been extensively studied due to their potential for privacy protection and inspiring robust neural networks. However, making a targeted AE transferable across unknown models remains challenging. In this paper, to alleviate the overfitting dilemma common in an AE crafted by existing simple iterative attacks, we propose fine-tuning it in the feature space. Specifically, starting with an AE generated by a baseline attack, we encourage the features that contribute to the target class and discourage the features that contribute to the original class in a middle layer of the source model. Extensive experiments demonstrate that only a few iterations of fine-tuning can boost existing attacks in terms of targeted transferability nontrivially and universally. Our results also verify that the simple iterative attacks can yield comparable or even better transferability than the resource-intensive methods, which rely on training target-specific classifiers or generators with additional data. The code is available at: github.com/zengh5/TA_feature_FT.
-
-
-
-## **36. Calibration Attack: A Framework For Adversarial Attacks Targeting Calibration**
-
-cs.LG
-
-**SubmitDate**: 2024-01-05    [abs](http://arxiv.org/abs/2401.02718v1) [paper-pdf](http://arxiv.org/pdf/2401.02718v1)
-
-**Authors**: Stephen Obadinma, Xiaodan Zhu, Hongyu Guo
-
-**Abstract**: We introduce a new framework of adversarial attacks, named calibration attacks, in which the attacks are generated and organized to trap victim models to be miscalibrated without altering their original accuracy, hence seriously endangering the trustworthiness of the models and any decision-making based on their confidence scores. Specifically, we identify four novel forms of calibration attacks: underconfidence attacks, overconfidence attacks, maximum miscalibration attacks, and random confidence attacks, in both the black-box and white-box setups. We then test these new attacks on typical victim models with comprehensive datasets, demonstrating that even with a relatively low number of queries, the attacks can create significant calibration mistakes. We further provide detailed analyses to understand different aspects of calibration attacks. Building on that, we investigate the effectiveness of widely used adversarial defences and calibration methods against these types of attacks, which then inspires us to devise two novel defences against such calibration attacks.
-
-
-
-## **37. Game Theory for Adversarial Attacks and Defenses**
-
-cs.LG
-
-With the agreement of my coauthors, I would like to withdraw the  manuscript "Game Theory for Adversarial Attacks and Defenses". Some  experimental procedures were not included in the manuscript, which makes a  part of important claims not meaningful
-
-**SubmitDate**: 2024-01-05    [abs](http://arxiv.org/abs/2110.06166v4) [paper-pdf](http://arxiv.org/pdf/2110.06166v4)
-
-**Authors**: Shorya Sharma
-
-**Abstract**: Adversarial attacks can generate adversarial inputs by applying small but intentionally worst-case perturbations to samples from the dataset, which leads to even state-of-the-art deep neural networks outputting incorrect answers with high confidence. Hence, some adversarial defense techniques are developed to improve the security and robustness of the models and avoid them being attacked. Gradually, a game-like competition between attackers and defenders formed, in which both players would attempt to play their best strategies against each other while maximizing their own payoffs. To solve the game, each player would choose an optimal strategy against the opponent based on the prediction of the opponent's strategy choice. In this work, we are on the defensive side to apply game-theoretic approaches on defending against attacks. We use two randomization methods, random initialization and stochastic activation pruning, to create diversity of networks. Furthermore, we use one denoising technique, super resolution, to improve models' robustness by preprocessing images before attacks. Our experimental results indicate that those three methods can effectively improve the robustness of deep-learning neural networks.
-
-
-
-## **38. Secure Control of Connected and Automated Vehicles Using Trust-Aware Robust Event-Triggered Control Barrier Functions**
-
-eess.SY
-
-arXiv admin note: substantial text overlap with arXiv:2305.16818
-
-**SubmitDate**: 2024-01-05    [abs](http://arxiv.org/abs/2401.02306v2) [paper-pdf](http://arxiv.org/pdf/2401.02306v2)
-
-**Authors**: H M Sabbir Ahmad, Ehsan Sabouni, Akua Dickson, Wei Xiao, Christos G. Cassandras, Wenchao Li
-
-**Abstract**: We address the security of a network of Connected and Automated Vehicles (CAVs) cooperating to safely navigate through a conflict area (e.g., traffic intersections, merging roadways, roundabouts). Previous studies have shown that such a network can be targeted by adversarial attacks causing traffic jams or safety violations ending in collisions. We focus on attacks targeting the V2X communication network used to share vehicle data and consider as well uncertainties due to noise in sensor measurements and communication channels. To combat these, motivated by recent work on the safe control of CAVs, we propose a trust-aware robust event-triggered decentralized control and coordination framework that can provably guarantee safety. We maintain a trust metric for each vehicle in the network computed based on their behavior and used to balance the tradeoff between conservativeness (when deeming every vehicle as untrustworthy) and guaranteed safety and security. It is important to highlight that our framework is invariant to the specific choice of the trust framework. Based on this framework, we propose an attack detection and mitigation scheme which has twofold benefits: (i) the trust framework is immune to false positives, and (ii) it provably guarantees safety against false positive cases. We use extensive simulations (in SUMO and CARLA) to validate the theoretical guarantees and demonstrate the efficacy of our proposed scheme to detect and mitigate adversarial attacks.
-
-
-
-## **39. MalModel: Hiding Malicious Payload in Mobile Deep Learning Models with Black-box Backdoor Attack**
-
-cs.CR
-
-Due to the limitation "The abstract field cannot be longer than 1,920  characters", the abstract here is shorter than that in the PDF file
-
-**SubmitDate**: 2024-01-05    [abs](http://arxiv.org/abs/2401.02659v1) [paper-pdf](http://arxiv.org/pdf/2401.02659v1)
-
-**Authors**: Jiayi Hua, Kailong Wang, Meizhen Wang, Guangdong Bai, Xiapu Luo, Haoyu Wang
-
-**Abstract**: Mobile malware has become one of the most critical security threats in the era of ubiquitous mobile computing. Despite the intensive efforts from security experts to counteract it, recent years have still witnessed a rapid growth of identified malware samples. This could be partly attributed to the newly-emerged technologies that may constantly open up under-studied attack surfaces for the adversaries. One typical example is the recently-developed mobile machine learning (ML) framework that enables storing and running deep learning (DL) models on mobile devices. Despite obvious advantages, this new feature also inadvertently introduces potential vulnerabilities (e.g., on-device models may be modified for malicious purposes). In this work, we propose a method to generate or transform mobile malware by hiding the malicious payloads inside the parameters of deep learning models, based on a strategy that considers four factors (layer type, layer number, layer coverage and the number of bytes to replace). Utilizing the proposed method, we can run malware in DL mobile applications covertly with little impact on the model performance (i.e., as little as 0.4% drop in accuracy and at most 39ms latency overhead).
-
-
-
-## **40. A Random Ensemble of Encrypted models for Enhancing Robustness against Adversarial Examples**
-
-cs.CR
-
-4 pages
-
-**SubmitDate**: 2024-01-05    [abs](http://arxiv.org/abs/2401.02633v1) [paper-pdf](http://arxiv.org/pdf/2401.02633v1)
-
-**Authors**: Ryota Iijima, Sayaka Shiota, Hitoshi Kiya
-
-**Abstract**: Deep neural networks (DNNs) are well known to be vulnerable to adversarial examples (AEs). In addition, AEs have adversarial transferability, which means AEs generated for a source model can fool another black-box model (target model) with a non-trivial probability. In previous studies, it was confirmed that the vision transformer (ViT) is more robust against the property of adversarial transferability than convolutional neural network (CNN) models such as ConvMixer, and moreover encrypted ViT is more robust than ViT without any encryption. In this article, we propose a random ensemble of encrypted ViT models to achieve much more robust models. In experiments, the proposed scheme is verified to be more robust against not only black-box attacks but also white-box ones than convention methods.
-
-
-
-## **41. A Practical Survey on Emerging Threats from AI-driven Voice Attacks: How Vulnerable are Commercial Voice Control Systems?**
-
-cs.CR
-
-14 pages
-
-**SubmitDate**: 2024-01-04    [abs](http://arxiv.org/abs/2312.06010v2) [paper-pdf](http://arxiv.org/pdf/2312.06010v2)
-
-**Authors**: Yuanda Wang, Qiben Yan, Nikolay Ivanov, Xun Chen
-
-**Abstract**: The emergence of Artificial Intelligence (AI)-driven audio attacks has revealed new security vulnerabilities in voice control systems. While researchers have introduced a multitude of attack strategies targeting voice control systems (VCS), the continual advancements of VCS have diminished the impact of many such attacks. Recognizing this dynamic landscape, our study endeavors to comprehensively assess the resilience of commercial voice control systems against a spectrum of malicious audio attacks. Through extensive experimentation, we evaluate six prominent attack techniques across a collection of voice control interfaces and devices. Contrary to prevailing narratives, our results suggest that commercial voice control systems exhibit enhanced resistance to existing threats. Particularly, our research highlights the ineffectiveness of white-box attacks in black-box scenarios. Furthermore, the adversaries encounter substantial obstacles in obtaining precise gradient estimations during query-based interactions with commercial systems, such as Apple Siri and Samsung Bixby. Meanwhile, we find that current defense strategies are not completely immune to advanced attacks. Our findings contribute valuable insights for enhancing defense mechanisms in VCS. Through this survey, we aim to raise awareness within the academic community about the security concerns of VCS and advocate for continued research in this crucial area.
-
-
-
-## **42. Evasive Hardware Trojan through Adversarial Power Trace**
-
-cs.CR
-
-**SubmitDate**: 2024-01-04    [abs](http://arxiv.org/abs/2401.02342v1) [paper-pdf](http://arxiv.org/pdf/2401.02342v1)
-
-**Authors**: Behnam Omidi, Khaled N. Khasawneh, Ihsen Alouani
-
-**Abstract**: The globalization of the Integrated Circuit (IC) supply chain, driven by time-to-market and cost considerations, has made ICs vulnerable to hardware Trojans (HTs). Against this threat, a promising approach is to use Machine Learning (ML)-based side-channel analysis, which has the advantage of being a non-intrusive method, along with efficiently detecting HTs under golden chip-free settings. In this paper, we question the trustworthiness of ML-based HT detection via side-channel analysis. We introduce a HT obfuscation (HTO) approach to allow HTs to bypass this detection method. Rather than theoretically misleading the model by simulated adversarial traces, a key aspect of our approach is the design and implementation of adversarial noise as part of the circuitry, alongside the HT. We detail HTO methodologies for ASICs and FPGAs, and evaluate our approach using TrustHub benchmark. Interestingly, we found that HTO can be implemented with only a single transistor for ASIC designs to generate adversarial power traces that can fool the defense with 100% efficiency. We also efficiently implemented our approach on a Spartan 6 Xilinx FPGA using 2 different variants: (i) DSP slices-based, and (ii) ring-oscillator-based design. Additionally, we assess the efficiency of countermeasures like spectral domain analysis, and we show that an adaptive attacker can still design evasive HTOs by constraining the design with a spectral noise budget. In addition, while adversarial training (AT) offers higher protection against evasive HTs, AT models suffer from a considerable utility loss, potentially rendering them unsuitable for such security application. We believe this research represents a significant step in understanding and exploiting ML vulnerabilities in a hardware security context, and we make all resources and designs openly available online: https://dev.d18uu4lqwhbmka.amplifyapp.com
-
-
-
-## **43. Adversarial Data Poisoning for Fake News Detection: How to Make a Model Misclassify a Target News without Modifying It**
-
-cs.LG
-
-**SubmitDate**: 2024-01-04    [abs](http://arxiv.org/abs/2312.15228v2) [paper-pdf](http://arxiv.org/pdf/2312.15228v2)
-
-**Authors**: Federico Siciliano, Luca Maiano, Lorenzo Papa, Federica Baccini, Irene Amerini, Fabrizio Silvestri
-
-**Abstract**: Fake news detection models are critical to countering disinformation but can be manipulated through adversarial attacks. In this position paper, we analyze how an attacker can compromise the performance of an online learning detector on specific news content without being able to manipulate the original target news. In some contexts, such as social networks, where the attacker cannot exert complete control over all the information, this scenario can indeed be quite plausible. Therefore, we show how an attacker could potentially introduce poisoning data into the training data to manipulate the behavior of an online learning method. Our initial findings reveal varying susceptibility of logistic regression models based on complexity and attack type.
-
-
-
-## **44. Attacks in Adversarial Machine Learning: A Systematic Survey from the Life-cycle Perspective**
-
-cs.LG
-
-35 pages, 4 figures, 10 tables, 313 reference papers
-
-**SubmitDate**: 2024-01-04    [abs](http://arxiv.org/abs/2302.09457v2) [paper-pdf](http://arxiv.org/pdf/2302.09457v2)
-
-**Authors**: Baoyuan Wu, Zihao Zhu, Li Liu, Qingshan Liu, Zhaofeng He, Siwei Lyu
-
-**Abstract**: Adversarial machine learning (AML) studies the adversarial phenomenon of machine learning, which may make inconsistent or unexpected predictions with humans. Some paradigms have been recently developed to explore this adversarial phenomenon occurring at different stages of a machine learning system, such as backdoor attack occurring at the pre-training, in-training and inference stage; weight attack occurring at the post-training, deployment and inference stage; adversarial attack occurring at the inference stage. However, although these adversarial paradigms share a common goal, their developments are almost independent, and there is still no big picture of AML. In this work, we aim to provide a unified perspective to the AML community to systematically review the overall progress of this field. We firstly provide a general definition about AML, and then propose a unified mathematical framework to covering existing attack paradigms. According to the proposed unified framework, we build a full taxonomy to systematically categorize and review existing representative methods for each paradigm. Besides, using this unified framework, it is easy to figure out the connections and differences among different attack paradigms, which may inspire future researchers to develop more advanced attack paradigms. Finally, to facilitate the viewing of the built taxonomy and the related literature in adversarial machine learning, we further provide a website, \ie, \url{http://adversarial-ml.com}, where the taxonomies and literature will be continuously updated.
-
-
-
-## **45. Fast Certification of Vision-Language Models Using Incremental Randomized Smoothing**
-
-cs.CV
-
-**SubmitDate**: 2024-01-04    [abs](http://arxiv.org/abs/2311.09024v2) [paper-pdf](http://arxiv.org/pdf/2311.09024v2)
-
-**Authors**: A K Nirala, A Joshi, C Hegde, S Sarkar
-
-**Abstract**: A key benefit of deep vision-language models such as CLIP is that they enable zero-shot open vocabulary classification; the user has the ability to define novel class labels via natural language prompts at inference time. However, while CLIP-based zero-shot classifiers have demonstrated competitive performance across a range of domain shifts, they remain highly vulnerable to adversarial attacks. Therefore, ensuring the robustness of such models is crucial for their reliable deployment in the wild.   In this work, we introduce Open Vocabulary Certification (OVC), a fast certification method designed for open-vocabulary models like CLIP via randomized smoothing techniques. Given a base "training" set of prompts and their corresponding certified CLIP classifiers, OVC relies on the observation that a classifier with a novel prompt can be viewed as a perturbed version of nearby classifiers in the base training set. Therefore, OVC can rapidly certify the novel classifier using a variation of incremental randomized smoothing. By using a caching trick, we achieve approximately two orders of magnitude acceleration in the certification process for novel prompts. To achieve further (heuristic) speedups, OVC approximates the embedding space at a given input using a multivariate normal distribution bypassing the need for sampling via forward passes through the vision backbone. We demonstrate the effectiveness of OVC on through experimental evaluation using multiple vision-language backbones on the CIFAR-10 and ImageNet test datasets.
-
-
-
-## **46. InstructTA: Instruction-Tuned Targeted Attack for Large Vision-Language Models**
-
-cs.CV
-
-**SubmitDate**: 2024-01-04    [abs](http://arxiv.org/abs/2312.01886v2) [paper-pdf](http://arxiv.org/pdf/2312.01886v2)
-
-**Authors**: Xunguang Wang, Zhenlan Ji, Pingchuan Ma, Zongjie Li, Shuai Wang
-
-**Abstract**: Large vision-language models (LVLMs) have demonstrated their incredible capability in image understanding and response generation. However, this rich visual interaction also makes LVLMs vulnerable to adversarial examples. In this paper, we formulate a novel and practical gray-box attack scenario that the adversary can only access the visual encoder of the victim LVLM, without the knowledge of its prompts (which are often proprietary for service providers and not publicly available) and its underlying large language model (LLM). This practical setting poses challenges to the cross-prompt and cross-model transferability of targeted adversarial attack, which aims to confuse the LVLM to output a response that is semantically similar to the attacker's chosen target text. To this end, we propose an instruction-tuned targeted attack (dubbed InstructTA) to deliver the targeted adversarial attack on LVLMs with high transferability. Initially, we utilize a public text-to-image generative model to "reverse" the target response into a target image, and employ GPT-4 to infer a reasonable instruction $\boldsymbol{p}^\prime$ from the target response. We then form a local surrogate model (sharing the same visual encoder with the victim LVLM) to extract instruction-aware features of an adversarial image example and the target image, and minimize the distance between these two features to optimize the adversarial example. To further improve the transferability, we augment the instruction $\boldsymbol{p}^\prime$ with instructions paraphrased from an LLM. Extensive experiments demonstrate the superiority of our proposed method in targeted attack performance and transferability.
-
-
-
-## **47. DiffAttack: Evasion Attacks Against Diffusion-Based Adversarial Purification**
-
-cs.CR
-
-Accepted to NeurIPS 2023
-
-**SubmitDate**: 2024-01-04    [abs](http://arxiv.org/abs/2311.16124v2) [paper-pdf](http://arxiv.org/pdf/2311.16124v2)
-
-**Authors**: Mintong Kang, Dawn Song, Bo Li
-
-**Abstract**: Diffusion-based purification defenses leverage diffusion models to remove crafted perturbations of adversarial examples and achieve state-of-the-art robustness. Recent studies show that even advanced attacks cannot break such defenses effectively, since the purification process induces an extremely deep computational graph which poses the potential problem of gradient obfuscation, high memory cost, and unbounded randomness. In this paper, we propose a unified framework DiffAttack to perform effective and efficient attacks against diffusion-based purification defenses, including both DDPM and score-based approaches. In particular, we propose a deviated-reconstruction loss at intermediate diffusion steps to induce inaccurate density gradient estimation to tackle the problem of vanishing/exploding gradients. We also provide a segment-wise forwarding-backwarding algorithm, which leads to memory-efficient gradient backpropagation. We validate the attack effectiveness of DiffAttack compared with existing adaptive attacks on CIFAR-10 and ImageNet. We show that DiffAttack decreases the robust accuracy of models compared with SOTA attacks by over 20% on CIFAR-10 under $\ell_\infty$ attack $(\epsilon=8/255)$, and over 10% on ImageNet under $\ell_\infty$ attack $(\epsilon=4/255)$. We conduct a series of ablations studies, and we find 1) DiffAttack with the deviated-reconstruction loss added over uniformly sampled time steps is more effective than that added over only initial/final steps, and 2) diffusion-based purification with a moderate diffusion length is more robust under DiffAttack.
-
-
-
-## **48. CBD: A Certified Backdoor Detector Based on Local Dominant Probability**
-
-cs.LG
-
-Accepted to NeurIPS 2023
-
-**SubmitDate**: 2024-01-04    [abs](http://arxiv.org/abs/2310.17498v2) [paper-pdf](http://arxiv.org/pdf/2310.17498v2)
-
-**Authors**: Zhen Xiang, Zidi Xiong, Bo Li
-
-**Abstract**: Backdoor attack is a common threat to deep neural networks. During testing, samples embedded with a backdoor trigger will be misclassified as an adversarial target by a backdoored model, while samples without the backdoor trigger will be correctly classified. In this paper, we present the first certified backdoor detector (CBD), which is based on a novel, adjustable conformal prediction scheme based on our proposed statistic local dominant probability. For any classifier under inspection, CBD provides 1) a detection inference, 2) the condition under which the attacks are guaranteed to be detectable for the same classification domain, and 3) a probabilistic upper bound for the false positive rate. Our theoretical results show that attacks with triggers that are more resilient to test-time noise and have smaller perturbation magnitudes are more likely to be detected with guarantees. Moreover, we conduct extensive experiments on four benchmark datasets considering various backdoor types, such as BadNet, CB, and Blend. CBD achieves comparable or even higher detection accuracy than state-of-the-art detectors, and it in addition provides detection certification. Notably, for backdoor attacks with random perturbation triggers bounded by $\ell_2\leq0.75$ which achieves more than 90\% attack success rate, CBD achieves 100\% (98\%), 100\% (84\%), 98\% (98\%), and 72\% (40\%) empirical (certified) detection true positive rates on the four benchmark datasets GTSRB, SVHN, CIFAR-10, and TinyImageNet, respectively, with low false positive rates.
-
-
-
-## **49. DeepTaster: Adversarial Perturbation-Based Fingerprinting to Identify Proprietary Dataset Use in Deep Neural Networks**
-
-cs.CR
-
-**SubmitDate**: 2024-01-04    [abs](http://arxiv.org/abs/2211.13535v2) [paper-pdf](http://arxiv.org/pdf/2211.13535v2)
-
-**Authors**: Seonhye Park, Alsharif Abuadbba, Shuo Wang, Kristen Moore, Yansong Gao, Hyoungshick Kim, Surya Nepal
-
-**Abstract**: Training deep neural networks (DNNs) requires large datasets and powerful computing resources, which has led some owners to restrict redistribution without permission. Watermarking techniques that embed confidential data into DNNs have been used to protect ownership, but these can degrade model performance and are vulnerable to watermark removal attacks. Recently, DeepJudge was introduced as an alternative approach to measuring the similarity between a suspect and a victim model. While DeepJudge shows promise in addressing the shortcomings of watermarking, it primarily addresses situations where the suspect model copies the victim's architecture. In this study, we introduce DeepTaster, a novel DNN fingerprinting technique, to address scenarios where a victim's data is unlawfully used to build a suspect model. DeepTaster can effectively identify such DNN model theft attacks, even when the suspect model's architecture deviates from the victim's. To accomplish this, DeepTaster generates adversarial images with perturbations, transforms them into the Fourier frequency domain, and uses these transformed images to identify the dataset used in a suspect model. The underlying premise is that adversarial images can capture the unique characteristics of DNNs built with a specific dataset. To demonstrate the effectiveness of DeepTaster, we evaluated the effectiveness of DeepTaster by assessing its detection accuracy on three datasets (CIFAR10, MNIST, and Tiny-ImageNet) across three model architectures (ResNet18, VGG16, and DenseNet161). We conducted experiments under various attack scenarios, including transfer learning, pruning, fine-tuning, and data augmentation. Specifically, in the Multi-Architecture Attack scenario, DeepTaster was able to identify all the stolen cases across all datasets, while DeepJudge failed to detect any of the cases.
-
-
-
-## **50. Integrated Cyber-Physical Resiliency for Power Grids under IoT-Enabled Dynamic Botnet Attacks**
-
-eess.SY
-
-**SubmitDate**: 2024-01-03    [abs](http://arxiv.org/abs/2401.01963v1) [paper-pdf](http://arxiv.org/pdf/2401.01963v1)
-
-**Authors**: Yuhan Zhao, Juntao Chen, Quanyan Zhu
-
-**Abstract**: The wide adoption of Internet of Things (IoT)-enabled energy devices improves the quality of life, but simultaneously, it enlarges the attack surface of the power grid system. The adversary can gain illegitimate control of a large number of these devices and use them as a means to compromise the physical grid operation, a mechanism known as the IoT botnet attack. This paper aims to improve the resiliency of cyber-physical power grids to such attacks. Specifically, we use an epidemic model to understand the dynamic botnet formation, which facilitates the assessment of the cyber layer vulnerability of the grid. The attacker aims to exploit this vulnerability to enable a successful physical compromise, while the system operator's goal is to ensure a normal operation of the grid by mitigating cyber risks. We develop a cross-layer game-theoretic framework for strategic decision-making to enhance cyber-physical grid resiliency. The cyber-layer game guides the system operator on how to defend against the botnet attacker as the first layer of defense, while the dynamic game strategy at the physical layer further counteracts the adversarial behavior in real time for improved physical resilience. A number of case studies on the IEEE-39 bus system are used to corroborate the devised approach.
 
 
 

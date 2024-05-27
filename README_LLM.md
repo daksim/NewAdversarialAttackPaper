@@ -1,9 +1,73 @@
 # Latest Large Language Model Attack Papers
-**update at 2024-05-24 10:13:16**
+**update at 2024-05-27 09:24:04**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_LLM_CN.md)
 
-## **1. Representation noising effectively prevents harmful fine-tuning on LLMs**
+## **1. $$\mathbf{L^2\cdot M = C^2}$$ Large Language Models as Covert Channels... a Systematic Analysis**
+
+cs.CR
+
+**SubmitDate**: 2024-05-24    [abs](http://arxiv.org/abs/2405.15652v1) [paper-pdf](http://arxiv.org/pdf/2405.15652v1)
+
+**Authors**: Simen Gaure, Stefanos Koffas, Stjepan Picek, Sondre Rønjom
+
+**Abstract**: Large Language Models (LLMs) have gained significant popularity in the last few years due to their performance in diverse tasks such as translation, prediction, or content generation. At the same time, the research community has shown that LLMs are susceptible to various attacks but can also improve the security of diverse systems. However, besides enabling more secure systems, how well do open source LLMs behave as covertext distributions to, e.g., facilitate censorship resistant communication?   In this paper, we explore the capabilities of open-source LLM-based covert channels. We approach this problem from the experimental side by empirically measuring the security vs. capacity of the open-source LLM model (Llama-7B) to assess how well it performs as a covert channel. Although our results indicate that such channels are not likely to achieve high practical bitrates, which depend on message length and model entropy, we also show that the chance for an adversary to detect covert communication is low. To ensure that our results can be used with the least effort as a general reference, we employ a conceptually simple and concise scheme and only assume public models.
+
+
+
+## **2. Efficient Adversarial Training in LLMs with Continuous Attacks**
+
+cs.LG
+
+19 pages, 4 figures
+
+**SubmitDate**: 2024-05-24    [abs](http://arxiv.org/abs/2405.15589v1) [paper-pdf](http://arxiv.org/pdf/2405.15589v1)
+
+**Authors**: Sophie Xhonneux, Alessandro Sordoni, Stephan Günnemann, Gauthier Gidel, Leo Schwinn
+
+**Abstract**: Large language models (LLMs) are vulnerable to adversarial attacks that can bypass their safety guardrails. In many domains, adversarial training has proven to be one of the most promising methods to reliably improve robustness against such attacks. Yet, in the context of LLMs, current methods for adversarial training are hindered by the high computational costs required to perform discrete adversarial attacks at each training iteration. We address this problem by instead calculating adversarial attacks in the continuous embedding space of the LLM, which is orders of magnitudes more efficient. We propose a fast adversarial training algorithm (C-AdvUL) composed of two losses: the first makes the model robust on continuous embedding attacks computed on an adversarial behaviour dataset; the second ensures the usefulness of the final model by fine-tuning on utility data. Moreover, we introduce C-AdvIPO, an adversarial variant of IPO that does not require utility data for adversarially robust alignment. Our empirical evaluation on four models from different families (Gemma, Phi3, Mistral, Zephyr) and at different scales (2B, 3.8B, 7B) shows that both algorithms substantially enhance LLM robustness against discrete attacks (GCG, AutoDAN, PAIR), while maintaining utility. Our results demonstrate that robustness to continuous perturbations can extrapolate to discrete threat models. Thereby, we present a path toward scalable adversarial training algorithms for robustly aligning LLMs.
+
+
+
+## **3. DAGER: Exact Gradient Inversion for Large Language Models**
+
+cs.LG
+
+**SubmitDate**: 2024-05-24    [abs](http://arxiv.org/abs/2405.15586v1) [paper-pdf](http://arxiv.org/pdf/2405.15586v1)
+
+**Authors**: Ivo Petrov, Dimitar I. Dimitrov, Maximilian Baader, Mark Niklas Müller, Martin Vechev
+
+**Abstract**: Federated learning works by aggregating locally computed gradients from multiple clients, thus enabling collaborative training without sharing private client data. However, prior work has shown that the data can actually be recovered by the server using so-called gradient inversion attacks. While these attacks perform well when applied on images, they are limited in the text domain and only permit approximate reconstruction of small batches and short input sequences. In this work, we propose DAGER, the first algorithm to recover whole batches of input text exactly. DAGER leverages the low-rank structure of self-attention layer gradients and the discrete nature of token embeddings to efficiently check if a given token sequence is part of the client data. We use this check to exactly recover full batches in the honest-but-curious setting without any prior on the data for both encoder- and decoder-based architectures using exhaustive heuristic search and a greedy approach, respectively. We provide an efficient GPU implementation of DAGER and show experimentally that it recovers full batches of size up to 128 on large language models (LLMs), beating prior attacks in speed (20x at same batch size), scalability (10x larger batches), and reconstruction quality (ROUGE-1/2 > 0.99).
+
+
+
+## **4. Mosaic Memory: Fuzzy Duplication in Copyright Traps for Large Language Models**
+
+cs.CL
+
+**SubmitDate**: 2024-05-24    [abs](http://arxiv.org/abs/2405.15523v1) [paper-pdf](http://arxiv.org/pdf/2405.15523v1)
+
+**Authors**: Igor Shilov, Matthieu Meeus, Yves-Alexandre de Montjoye
+
+**Abstract**: The immense datasets used to develop Large Language Models (LLMs) often include copyright-protected content, typically without the content creator's consent. Copyright traps have been proposed to be injected into the original content, improving content detectability in newly released LLMs. Traps, however, rely on the exact duplication of a unique text sequence, leaving them vulnerable to commonly deployed data deduplication techniques. We here propose the generation of fuzzy copyright traps, featuring slight modifications across duplication. When injected in the fine-tuning data of a 1.3B LLM, we show fuzzy trap sequences to be memorized nearly as well as exact duplicates. Specifically, the Membership Inference Attack (MIA) ROC AUC only drops from 0.90 to 0.87 when 4 tokens are replaced across the fuzzy duplicates. We also find that selecting replacement positions to minimize the exact overlap between fuzzy duplicates leads to similar memorization, while making fuzzy duplicates highly unlikely to be removed by any deduplication process. Lastly, we argue that the fact that LLMs memorize across fuzzy duplicates challenges the study of LLM memorization relying on naturally occurring duplicates. Indeed, we find that the commonly used training dataset, The Pile, contains significant amounts of fuzzy duplicates. This introduces a previously unexplored confounding factor in post-hoc studies of LLM memorization, and questions the effectiveness of (exact) data deduplication as a privacy protection technique.
+
+
+
+## **5. TrojanRAG: Retrieval-Augmented Generation Can Be Backdoor Driver in Large Language Models**
+
+cs.CR
+
+18 pages, 13 figures, 4 tables
+
+**SubmitDate**: 2024-05-24    [abs](http://arxiv.org/abs/2405.13401v2) [paper-pdf](http://arxiv.org/pdf/2405.13401v2)
+
+**Authors**: Pengzhou Cheng, Yidong Ding, Tianjie Ju, Zongru Wu, Wei Du, Ping Yi, Zhuosheng Zhang, Gongshen Liu
+
+**Abstract**: Large language models (LLMs) have raised concerns about potential security threats despite performing significantly in Natural Language Processing (NLP). Backdoor attacks initially verified that LLM is doing substantial harm at all stages, but the cost and robustness have been criticized. Attacking LLMs is inherently risky in security review, while prohibitively expensive. Besides, the continuous iteration of LLMs will degrade the robustness of backdoors. In this paper, we propose TrojanRAG, which employs a joint backdoor attack in the Retrieval-Augmented Generation, thereby manipulating LLMs in universal attack scenarios. Specifically, the adversary constructs elaborate target contexts and trigger sets. Multiple pairs of backdoor shortcuts are orthogonally optimized by contrastive learning, thus constraining the triggering conditions to a parameter subspace to improve the matching. To improve the recall of the RAG for the target contexts, we introduce a knowledge graph to construct structured data to achieve hard matching at a fine-grained level. Moreover, we normalize the backdoor scenarios in LLMs to analyze the real harm caused by backdoors from both attackers' and users' perspectives and further verify whether the context is a favorable tool for jailbreaking models. Extensive experimental results on truthfulness, language understanding, and harmfulness show that TrojanRAG exhibits versatility threats while maintaining retrieval capabilities on normal queries.
+
+
+
+## **6. Representation noising effectively prevents harmful fine-tuning on LLMs**
 
 cs.CL
 
@@ -15,7 +79,7 @@ cs.CL
 
 
 
-## **2. Self-playing Adversarial Language Game Enhances LLM Reasoning**
+## **7. Self-playing Adversarial Language Game Enhances LLM Reasoning**
 
 cs.CL
 
@@ -29,7 +93,7 @@ Preprint
 
 
 
-## **3. S-Eval: Automatic and Adaptive Test Generation for Benchmarking Safety Evaluation of Large Language Models**
+## **8. S-Eval: Automatic and Adaptive Test Generation for Benchmarking Safety Evaluation of Large Language Models**
 
 cs.CR
 
@@ -43,7 +107,7 @@ cs.CR
 
 
 
-## **4. Towards Transferable Attacks Against Vision-LLMs in Autonomous Driving with Typography**
+## **9. Towards Transferable Attacks Against Vision-LLMs in Autonomous Driving with Typography**
 
 cs.CV
 
@@ -57,7 +121,7 @@ cs.CV
 
 
 
-## **5. WordGame: Efficient & Effective LLM Jailbreak via Simultaneous Obfuscation in Query and Response**
+## **10. WordGame: Efficient & Effective LLM Jailbreak via Simultaneous Obfuscation in Query and Response**
 
 cs.LG
 
@@ -69,7 +133,7 @@ cs.LG
 
 
 
-## **6. Unleashing the Power of Unlabeled Data: A Self-supervised Learning Framework for Cyber Attack Detection in Smart Grids**
+## **11. Unleashing the Power of Unlabeled Data: A Self-supervised Learning Framework for Cyber Attack Detection in Smart Grids**
 
 cs.LG
 
@@ -83,7 +147,7 @@ cs.LG
 
 
 
-## **7. Safety Alignment for Vision Language Models**
+## **12. Safety Alignment for Vision Language Models**
 
 cs.CV
 
@@ -97,7 +161,7 @@ cs.CV
 
 
 
-## **8. L-AutoDA: Leveraging Large Language Models for Automated Decision-based Adversarial Attacks**
+## **13. L-AutoDA: Leveraging Large Language Models for Automated Decision-based Adversarial Attacks**
 
 cs.CR
 
@@ -111,21 +175,7 @@ Camera ready version for GECCO'24 workshop
 
 
 
-## **9. TrojanRAG: Retrieval-Augmented Generation Can Be Backdoor Driver in Large Language Models**
-
-cs.CR
-
-18 pages, 13 figures, 4 tables
-
-**SubmitDate**: 2024-05-22    [abs](http://arxiv.org/abs/2405.13401v1) [paper-pdf](http://arxiv.org/pdf/2405.13401v1)
-
-**Authors**: Pengzhou Cheng, Yidong Ding, Tianjie Ju, Zongru Wu, Wei Du, Ping Yi, Zhuosheng Zhang, Gongshen Liu
-
-**Abstract**: Large language models (LLMs) have raised concerns about potential security threats despite performing significantly in Natural Language Processing (NLP). Backdoor attacks initially verified that LLM is doing substantial harm at all stages, but the cost and robustness have been criticized. Attacking LLMs is inherently risky in security review, while prohibitively expensive. Besides, the continuous iteration of LLMs will degrade the robustness of backdoors. In this paper, we propose TrojanRAG, which employs a joint backdoor attack in the Retrieval-Augmented Generation, thereby manipulating LLMs in universal attack scenarios. Specifically, the adversary constructs elaborate target contexts and trigger sets. Multiple pairs of backdoor shortcuts are orthogonally optimized by contrastive learning, thus constraining the triggering conditions to a parameter subspace to improve the matching. To improve the recall of the RAG for the target contexts, we introduce a knowledge graph to construct structured data to achieve hard matching at a fine-grained level. Moreover, we normalize the backdoor scenarios in LLMs to analyze the real harm caused by backdoors from both attackers' and users' perspectives and further verify whether the context is a favorable tool for jailbreaking models. Extensive experimental results on truthfulness, language understanding, and harmfulness show that TrojanRAG exhibits versatility threats while maintaining retrieval capabilities on normal queries.
-
-
-
-## **10. Information Leakage from Embedding in Large Language Models**
+## **14. Information Leakage from Embedding in Large Language Models**
 
 cs.LG
 
@@ -137,7 +187,7 @@ cs.LG
 
 
 
-## **11. Inexact Unlearning Needs More Careful Evaluations to Avoid a False Sense of Privacy**
+## **15. Inexact Unlearning Needs More Careful Evaluations to Avoid a False Sense of Privacy**
 
 cs.LG
 
@@ -149,7 +199,7 @@ cs.LG
 
 
 
-## **12. Generative AI and Large Language Models for Cyber Security: All Insights You Need**
+## **16. Generative AI and Large Language Models for Cyber Security: All Insights You Need**
 
 cs.CR
 
@@ -163,7 +213,7 @@ cs.CR
 
 
 
-## **13. Single Image Unlearning: Efficient Machine Unlearning in Multimodal Large Language Models**
+## **17. Single Image Unlearning: Efficient Machine Unlearning in Multimodal Large Language Models**
 
 cs.CV
 
@@ -175,7 +225,7 @@ cs.CV
 
 
 
-## **14. GPT-4 Jailbreaks Itself with Near-Perfect Success Using Self-Explanation**
+## **18. GPT-4 Jailbreaks Itself with Near-Perfect Success Using Self-Explanation**
 
 cs.CR
 
@@ -187,7 +237,7 @@ cs.CR
 
 
 
-## **15. Lockpicking LLMs: A Logit-Based Jailbreak Using Token-level Manipulation**
+## **19. Lockpicking LLMs: A Logit-Based Jailbreak Using Token-level Manipulation**
 
 cs.CR
 
@@ -199,7 +249,7 @@ cs.CR
 
 
 
-## **16. Special Characters Attack: Toward Scalable Training Data Extraction From Large Language Models**
+## **20. Special Characters Attack: Toward Scalable Training Data Extraction From Large Language Models**
 
 cs.CR
 
@@ -211,7 +261,7 @@ cs.CR
 
 
 
-## **17. Data Contamination Calibration for Black-box LLMs**
+## **21. Data Contamination Calibration for Black-box LLMs**
 
 cs.LG
 
@@ -223,7 +273,7 @@ cs.LG
 
 
 
-## **18. A Semantic Invariant Robust Watermark for Large Language Models**
+## **22. A Semantic Invariant Robust Watermark for Large Language Models**
 
 cs.CR
 
@@ -237,7 +287,7 @@ ICLR2024, 21 pages, 10 figures, 6 tables
 
 
 
-## **19. Detoxifying Large Language Models via Knowledge Editing**
+## **23. Detoxifying Large Language Models via Knowledge Editing**
 
 cs.CL
 
@@ -251,7 +301,7 @@ ACL 2024. Project website: https://zjunlp.github.io/project/SafeEdit  Benchmark:
 
 
 
-## **20. Measuring Impacts of Poisoning on Model Parameters and Embeddings for Large Language Models of Code**
+## **24. Measuring Impacts of Poisoning on Model Parameters and Embeddings for Large Language Models of Code**
 
 cs.SE
 
@@ -265,7 +315,7 @@ This work has been accepted at the 1st ACM International Conference  on AI-power
 
 
 
-## **21. Revisiting the Robust Generalization of Adversarial Prompt Tuning**
+## **25. Revisiting the Robust Generalization of Adversarial Prompt Tuning**
 
 cs.CV
 
@@ -277,7 +327,7 @@ cs.CV
 
 
 
-## **22. A Comprehensive Study of Jailbreak Attack versus Defense for Large Language Models**
+## **26. A Comprehensive Study of Jailbreak Attack versus Defense for Large Language Models**
 
 cs.CR
 
@@ -291,7 +341,7 @@ cs.CR
 
 
 
-## **23. Safeguarding Vision-Language Models Against Patched Visual Prompt Injectors**
+## **27. Safeguarding Vision-Language Models Against Patched Visual Prompt Injectors**
 
 cs.CV
 
@@ -305,7 +355,7 @@ cs.CV
 
 
 
-## **24. Large Language Models in Wireless Application Design: In-Context Learning-enhanced Automatic Network Intrusion Detection**
+## **28. Large Language Models in Wireless Application Design: In-Context Learning-enhanced Automatic Network Intrusion Detection**
 
 cs.LG
 
@@ -317,7 +367,7 @@ cs.LG
 
 
 
-## **25. Keep It Private: Unsupervised Privatization of Online Text**
+## **29. Keep It Private: Unsupervised Privatization of Online Text**
 
 cs.CL
 
@@ -331,7 +381,7 @@ cs.CL
 
 
 
-## **26. Protecting Your LLMs with Information Bottleneck**
+## **30. Protecting Your LLMs with Information Bottleneck**
 
 cs.CL
 
@@ -345,7 +395,7 @@ cs.CL
 
 
 
-## **27. Adversarial Robustness for Visual Grounding of Multimodal Large Language Models**
+## **31. Adversarial Robustness for Visual Grounding of Multimodal Large Language Models**
 
 cs.CV
 
@@ -359,7 +409,7 @@ ICLR 2024 Workshop on Reliable and Responsible Foundation Models
 
 
 
-## **28. Transfer Learning in Pre-Trained Large Language Models for Malware Detection Based on System Calls**
+## **32. Transfer Learning in Pre-Trained Large Language Models for Malware Detection Based on System Calls**
 
 cs.CR
 
@@ -373,7 +423,7 @@ Submitted to IEEE MILCOM 2024
 
 
 
-## **29. "Do Anything Now": Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models**
+## **33. "Do Anything Now": Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models**
 
 cs.CR
 
@@ -385,7 +435,7 @@ cs.CR
 
 
 
-## **30. Large Language Models can be Guided to Evade AI-Generated Text Detection**
+## **34. Large Language Models can be Guided to Evade AI-Generated Text Detection**
 
 cs.CL
 
@@ -399,7 +449,7 @@ TMLR camera ready
 
 
 
-## **31. Efficient LLM Jailbreak via Adaptive Dense-to-sparse Constrained Optimization**
+## **35. Efficient LLM Jailbreak via Adaptive Dense-to-sparse Constrained Optimization**
 
 cs.LG
 
@@ -411,7 +461,7 @@ cs.LG
 
 
 
-## **32. A safety realignment framework via subspace-oriented model fusion for large language models**
+## **36. A safety realignment framework via subspace-oriented model fusion for large language models**
 
 cs.CL
 
@@ -423,7 +473,7 @@ cs.CL
 
 
 
-## **33. Distributed Threat Intelligence at the Edge Devices: A Large Language Model-Driven Approach**
+## **37. Distributed Threat Intelligence at the Edge Devices: A Large Language Model-Driven Approach**
 
 cs.CR
 
@@ -435,7 +485,7 @@ cs.CR
 
 
 
-## **34. PLeak: Prompt Leaking Attacks against Large Language Model Applications**
+## **38. PLeak: Prompt Leaking Attacks against Large Language Model Applications**
 
 cs.CR
 
@@ -449,7 +499,7 @@ To appear in the Proceedings of The ACM Conference on Computer and  Communicatio
 
 
 
-## **35. Stylometric Watermarks for Large Language Models**
+## **39. Stylometric Watermarks for Large Language Models**
 
 cs.CL
 
@@ -463,7 +513,7 @@ cs.CL
 
 
 
-## **36. SpeechGuard: Exploring the Adversarial Robustness of Multimodal Large Language Models**
+## **40. SpeechGuard: Exploring the Adversarial Robustness of Multimodal Large Language Models**
 
 cs.CL
 
@@ -477,7 +527,7 @@ cs.CL
 
 
 
-## **37. Many-Shot Regurgitation (MSR) Prompting**
+## **41. Many-Shot Regurgitation (MSR) Prompting**
 
 cs.CL
 
@@ -489,7 +539,7 @@ cs.CL
 
 
 
-## **38. Backdoor Removal for Generative Large Language Models**
+## **42. Backdoor Removal for Generative Large Language Models**
 
 cs.CR
 
@@ -501,7 +551,7 @@ cs.CR
 
 
 
-## **39. DoLLM: How Large Language Models Understanding Network Flow Data to Detect Carpet Bombing DDoS**
+## **43. DoLLM: How Large Language Models Understanding Network Flow Data to Detect Carpet Bombing DDoS**
 
 cs.NI
 
@@ -513,7 +563,7 @@ cs.NI
 
 
 
-## **40. ExplainableDetector: Exploring Transformer-based Language Modeling Approach for SMS Spam Detection with Explainability Analysis**
+## **44. ExplainableDetector: Exploring Transformer-based Language Modeling Approach for SMS Spam Detection with Explainability Analysis**
 
 cs.LG
 
@@ -525,7 +575,7 @@ cs.LG
 
 
 
-## **41. The Janus Interface: How Fine-Tuning in Large Language Models Amplifies the Privacy Risks**
+## **45. The Janus Interface: How Fine-Tuning in Large Language Models Amplifies the Privacy Risks**
 
 cs.CR
 
@@ -537,7 +587,7 @@ cs.CR
 
 
 
-## **42. LLMs and the Future of Chip Design: Unveiling Security Risks and Building Trust**
+## **46. LLMs and the Future of Chip Design: Unveiling Security Risks and Building Trust**
 
 cs.LG
 
@@ -549,7 +599,7 @@ cs.LG
 
 
 
-## **43. Talk Too Much: Poisoning Large Language Models under Token Limit**
+## **47. Talk Too Much: Poisoning Large Language Models under Token Limit**
 
 cs.CL
 
@@ -561,7 +611,7 @@ cs.CL
 
 
 
-## **44. Explaining Arguments' Strength: Unveiling the Role of Attacks and Supports (Technical Report)**
+## **48. Explaining Arguments' Strength: Unveiling the Role of Attacks and Supports (Technical Report)**
 
 cs.AI
 
@@ -575,7 +625,7 @@ This paper has been accepted at IJCAI 2024 (the 33rd International  Joint Confer
 
 
 
-## **45. Risks of Practicing Large Language Models in Smart Grid: Threat Modeling and Validation**
+## **49. Risks of Practicing Large Language Models in Smart Grid: Threat Modeling and Validation**
 
 cs.CR
 
@@ -587,7 +637,7 @@ cs.CR
 
 
 
-## **46. Muting Whisper: A Universal Acoustic Adversarial Attack on Speech Foundation Models**
+## **50. Muting Whisper: A Universal Acoustic Adversarial Attack on Speech Foundation Models**
 
 cs.CL
 
@@ -596,56 +646,6 @@ cs.CL
 **Authors**: Vyas Raina, Rao Ma, Charles McGhee, Kate Knill, Mark Gales
 
 **Abstract**: Recent developments in large speech foundation models like Whisper have led to their widespread use in many automatic speech recognition (ASR) applications. These systems incorporate `special tokens' in their vocabulary, such as $\texttt{<endoftext>}$, to guide their language generation process. However, we demonstrate that these tokens can be exploited by adversarial attacks to manipulate the model's behavior. We propose a simple yet effective method to learn a universal acoustic realization of Whisper's $\texttt{<endoftext>}$ token, which, when prepended to any speech signal, encourages the model to ignore the speech and only transcribe the special token, effectively `muting' the model. Our experiments demonstrate that the same, universal 0.64-second adversarial audio segment can successfully mute a target Whisper ASR model for over 97\% of speech samples. Moreover, we find that this universal adversarial audio segment often transfers to new datasets and tasks. Overall this work demonstrates the vulnerability of Whisper models to `muting' adversarial attacks, where such attacks can pose both risks and potential benefits in real-world settings: for example the attack can be used to bypass speech moderation systems, or conversely the attack can also be used to protect private speech data.
-
-
-
-## **47. Trustworthy AI-Generative Content in Intelligent 6G Network: Adversarial, Privacy, and Fairness**
-
-cs.CR
-
-**SubmitDate**: 2024-05-09    [abs](http://arxiv.org/abs/2405.05930v1) [paper-pdf](http://arxiv.org/pdf/2405.05930v1)
-
-**Authors**: Siyuan Li, Xi Lin, Yaju Liu, Jianhua Li
-
-**Abstract**: AI-generated content (AIGC) models, represented by large language models (LLM), have brought revolutionary changes to the content generation fields. The high-speed and extensive 6G technology is an ideal platform for providing powerful AIGC mobile service applications, while future 6G mobile networks also need to support intelligent and personalized mobile generation services. However, the significant ethical and security issues of current AIGC models, such as adversarial attacks, privacy, and fairness, greatly affect the credibility of 6G intelligent networks, especially in ensuring secure, private, and fair AIGC applications. In this paper, we propose TrustGAIN, a novel paradigm for trustworthy AIGC in 6G networks, to ensure trustworthy large-scale AIGC services in future 6G networks. We first discuss the adversarial attacks and privacy threats faced by AIGC systems in 6G networks, as well as the corresponding protection issues. Subsequently, we emphasize the importance of ensuring the unbiasedness and fairness of the mobile generative service in future intelligent networks. In particular, we conduct a use case to demonstrate that TrustGAIN can effectively guide the resistance against malicious or generated false information. We believe that TrustGAIN is a necessary paradigm for intelligent and trustworthy 6G networks to support AIGC services, ensuring the security, privacy, and fairness of AIGC network services.
-
-
-
-## **48. LLMPot: Automated LLM-based Industrial Protocol and Physical Process Emulation for ICS Honeypots**
-
-cs.CR
-
-**SubmitDate**: 2024-05-09    [abs](http://arxiv.org/abs/2405.05999v1) [paper-pdf](http://arxiv.org/pdf/2405.05999v1)
-
-**Authors**: Christoforos Vasilatos, Dunia J. Mahboobeh, Hithem Lamri, Manaar Alam, Michail Maniatakos
-
-**Abstract**: Industrial Control Systems (ICS) are extensively used in critical infrastructures ensuring efficient, reliable, and continuous operations. However, their increasing connectivity and addition of advanced features make them vulnerable to cyber threats, potentially leading to severe disruptions in essential services. In this context, honeypots play a vital role by acting as decoy targets within ICS networks, or on the Internet, helping to detect, log, analyze, and develop mitigations for ICS-specific cyber threats. Deploying ICS honeypots, however, is challenging due to the necessity of accurately replicating industrial protocols and device characteristics, a crucial requirement for effectively mimicking the unique operational behavior of different industrial systems. Moreover, this challenge is compounded by the significant manual effort required in also mimicking the control logic the PLC would execute, in order to capture attacker traffic aiming to disrupt critical infrastructure operations. In this paper, we propose LLMPot, a novel approach for designing honeypots in ICS networks harnessing the potency of Large Language Models (LLMs). LLMPot aims to automate and optimize the creation of realistic honeypots with vendor-agnostic configurations, and for any control logic, aiming to eliminate the manual effort and specialized knowledge traditionally required in this domain. We conducted extensive experiments focusing on a wide array of parameters, demonstrating that our LLM-based approach can effectively create honeypot devices implementing different industrial protocols and diverse control logic.
-
-
-
-## **49. Chain of Attack: a Semantic-Driven Contextual Multi-Turn attacker for LLM**
-
-cs.CL
-
-**SubmitDate**: 2024-05-09    [abs](http://arxiv.org/abs/2405.05610v1) [paper-pdf](http://arxiv.org/pdf/2405.05610v1)
-
-**Authors**: Xikang Yang, Xuehai Tang, Songlin Hu, Jizhong Han
-
-**Abstract**: Large language models (LLMs) have achieved remarkable performance in various natural language processing tasks, especially in dialogue systems. However, LLM may also pose security and moral threats, especially in multi round conversations where large models are more easily guided by contextual content, resulting in harmful or biased responses. In this paper, we present a novel method to attack LLMs in multi-turn dialogues, called CoA (Chain of Attack). CoA is a semantic-driven contextual multi-turn attack method that adaptively adjusts the attack policy through contextual feedback and semantic relevance during multi-turn of dialogue with a large model, resulting in the model producing unreasonable or harmful content. We evaluate CoA on different LLMs and datasets, and show that it can effectively expose the vulnerabilities of LLMs, and outperform existing attack methods. Our work provides a new perspective and tool for attacking and defending LLMs, and contributes to the security and ethical assessment of dialogue systems.
-
-
-
-## **50. Large Language Models for Cyber Security: A Systematic Literature Review**
-
-cs.CR
-
-46 pages,6 figures
-
-**SubmitDate**: 2024-05-09    [abs](http://arxiv.org/abs/2405.04760v2) [paper-pdf](http://arxiv.org/pdf/2405.04760v2)
-
-**Authors**: HanXiang Xu, ShenAo Wang, NingKe Li, KaiLong Wang, YanJie Zhao, Kai Chen, Ting Yu, Yang Liu, HaoYu Wang
-
-**Abstract**: The rapid advancement of Large Language Models (LLMs) has opened up new opportunities for leveraging artificial intelligence in various domains, including cybersecurity. As the volume and sophistication of cyber threats continue to grow, there is an increasing need for intelligent systems that can automatically detect vulnerabilities, analyze malware, and respond to attacks. In this survey, we conduct a comprehensive review of the literature on the application of LLMs in cybersecurity (LLM4Security). By comprehensively collecting over 30K relevant papers and systematically analyzing 127 papers from top security and software engineering venues, we aim to provide a holistic view of how LLMs are being used to solve diverse problems across the cybersecurity domain. Through our analysis, we identify several key findings. First, we observe that LLMs are being applied to a wide range of cybersecurity tasks, including vulnerability detection, malware analysis, network intrusion detection, and phishing detection. Second, we find that the datasets used for training and evaluating LLMs in these tasks are often limited in size and diversity, highlighting the need for more comprehensive and representative datasets. Third, we identify several promising techniques for adapting LLMs to specific cybersecurity domains, such as fine-tuning, transfer learning, and domain-specific pre-training. Finally, we discuss the main challenges and opportunities for future research in LLM4Security, including the need for more interpretable and explainable models, the importance of addressing data privacy and security concerns, and the potential for leveraging LLMs for proactive defense and threat hunting. Overall, our survey provides a comprehensive overview of the current state-of-the-art in LLM4Security and identifies several promising directions for future research.
 
 
 

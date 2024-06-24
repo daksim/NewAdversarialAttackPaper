@@ -1,9 +1,69 @@
 # Latest Large Language Model Attack Papers
-**update at 2024-06-22 15:57:58**
+**update at 2024-06-24 09:19:12**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_LLM_CN.md)
 
-## **1. Unmasking Database Vulnerabilities: Zero-Knowledge Schema Inference Attacks in Text-to-SQL Systems**
+## **1. Safely Learning with Private Data: A Federated Learning Framework for Large Language Model**
+
+cs.CR
+
+**SubmitDate**: 2024-06-21    [abs](http://arxiv.org/abs/2406.14898v1) [paper-pdf](http://arxiv.org/pdf/2406.14898v1)
+
+**Authors**: JiaYing Zheng, HaiNan Zhang, LingXiang Wang, WangJie Qiu, HongWei Zheng, ZhiMing Zheng
+
+**Abstract**: Private data, being larger and quality-higher than public data, can greatly improve large language models (LLM). However, due to privacy concerns, this data is often dispersed in multiple silos, making its secure utilization for LLM training a challenge. Federated learning (FL) is an ideal solution for training models with distributed private data, but traditional frameworks like FedAvg are unsuitable for LLM due to their high computational demands on clients. An alternative, split learning, offloads most training parameters to the server while training embedding and output layers locally, making it more suitable for LLM. Nonetheless, it faces significant challenges in security and efficiency. Firstly, the gradients of embeddings are prone to attacks, leading to potential reverse engineering of private data. Furthermore, the server's limitation of handle only one client's training request at a time hinders parallel training, severely impacting training efficiency. In this paper, we propose a Federated Learning framework for LLM, named FL-GLM, which prevents data leakage caused by both server-side and peer-client attacks while improving training efficiency. Specifically, we first place the input block and output block on local client to prevent embedding gradient attacks from server. Secondly, we employ key-encryption during client-server communication to prevent reverse engineering attacks from peer-clients. Lastly, we employ optimization methods like client-batching or server-hierarchical, adopting different acceleration methods based on the actual computational capabilities of the server. Experimental results on NLU and generation tasks demonstrate that FL-GLM achieves comparable metrics to centralized chatGLM model, validating the effectiveness of our federated learning framework.
+
+
+
+## **2. From LLMs to MLLMs: Exploring the Landscape of Multimodal Jailbreaking**
+
+cs.CL
+
+**SubmitDate**: 2024-06-21    [abs](http://arxiv.org/abs/2406.14859v1) [paper-pdf](http://arxiv.org/pdf/2406.14859v1)
+
+**Authors**: Siyuan Wang, Zhuohan Long, Zhihao Fan, Zhongyu Wei
+
+**Abstract**: The rapid development of Large Language Models (LLMs) and Multimodal Large Language Models (MLLMs) has exposed vulnerabilities to various adversarial attacks. This paper provides a comprehensive overview of jailbreaking research targeting both LLMs and MLLMs, highlighting recent advancements in evaluation benchmarks, attack techniques and defense strategies. Compared to the more advanced state of unimodal jailbreaking, multimodal domain remains underexplored. We summarize the limitations and potential research directions of multimodal jailbreaking, aiming to inspire future research and further enhance the robustness and security of MLLMs.
+
+
+
+## **3. Uncovering Safety Risks of Large Language Models through Concept Activation Vector**
+
+cs.CL
+
+**SubmitDate**: 2024-06-21    [abs](http://arxiv.org/abs/2404.12038v2) [paper-pdf](http://arxiv.org/pdf/2404.12038v2)
+
+**Authors**: Zhihao Xu, Ruixuan Huang, Shuai Wang, Xiting Wang
+
+**Abstract**: Despite careful safety alignment, current large language models (LLMs) remain vulnerable to various attacks. To further unveil the safety risks of LLMs, we introduce a Safety Concept Activation Vector (SCAV) framework, which effectively guides the attacks by accurately interpreting LLMs' safety mechanisms. We then develop an SCAV-guided attack method that can generate both attack prompts and embedding-level attacks with automatically selected perturbation hyperparameters. Both automatic and human evaluations demonstrate that our attack method significantly improves the attack success rate and response quality while requiring less training data. Additionally, we find that our generated attack prompts may be transferable to GPT-4, and the embedding-level attacks may also be transferred to other white-box LLMs whose parameters are known. Our experiments further uncover the safety risks present in current LLMs. For example, we find that six out of seven open-source LLMs that we attack consistently provide relevant answers to more than 85\% malicious instructions. Finally, we provide insights into the safety mechanism of LLMs.
+
+
+
+## **4. FedSecurity: Benchmarking Attacks and Defenses in Federated Learning and Federated LLMs**
+
+cs.CR
+
+**SubmitDate**: 2024-06-21    [abs](http://arxiv.org/abs/2306.04959v5) [paper-pdf](http://arxiv.org/pdf/2306.04959v5)
+
+**Authors**: Shanshan Han, Baturalp Buyukates, Zijian Hu, Han Jin, Weizhao Jin, Lichao Sun, Xiaoyang Wang, Wenxuan Wu, Chulin Xie, Yuhang Yao, Kai Zhang, Qifan Zhang, Yuhui Zhang, Carlee Joe-Wong, Salman Avestimehr, Chaoyang He
+
+**Abstract**: This paper introduces FedSecurity, an end-to-end benchmark that serves as a supplementary component of the FedML library for simulating adversarial attacks and corresponding defense mechanisms in Federated Learning (FL). FedSecurity eliminates the need for implementing the fundamental FL procedures, e.g., FL training and data loading, from scratch, thus enables users to focus on developing their own attack and defense strategies. It contains two key components, including FedAttacker that conducts a variety of attacks during FL training, and FedDefender that implements defensive mechanisms to counteract these attacks. FedSecurity has the following features: i) It offers extensive customization options to accommodate a broad range of machine learning models (e.g., Logistic Regression, ResNet, and GAN) and FL optimizers (e.g., FedAVG, FedOPT, and FedNOVA); ii) it enables exploring the effectiveness of attacks and defenses across different datasets and models; and iii) it supports flexible configuration and customization through a configuration file and some APIs. We further demonstrate FedSecurity's utility and adaptability through federated training of Large Language Models (LLMs) to showcase its potential on a wide range of complex applications.
+
+
+
+## **5. MultiAgent Collaboration Attack: Investigating Adversarial Attacks in Large Language Model Collaborations via Debate**
+
+cs.CL
+
+**SubmitDate**: 2024-06-20    [abs](http://arxiv.org/abs/2406.14711v1) [paper-pdf](http://arxiv.org/pdf/2406.14711v1)
+
+**Authors**: Alfonso Amayuelas, Xianjun Yang, Antonis Antoniades, Wenyue Hua, Liangming Pan, William Wang
+
+**Abstract**: Large Language Models (LLMs) have shown exceptional results on current benchmarks when working individually. The advancement in their capabilities, along with a reduction in parameter size and inference times, has facilitated the use of these models as agents, enabling interactions among multiple models to execute complex tasks. Such collaborations offer several advantages, including the use of specialized models (e.g. coding), improved confidence through multiple computations, and enhanced divergent thinking, leading to more diverse outputs. Thus, the collaborative use of language models is expected to grow significantly in the coming years. In this work, we evaluate the behavior of a network of models collaborating through debate under the influence of an adversary. We introduce pertinent metrics to assess the adversary's effectiveness, focusing on system accuracy and model agreement. Our findings highlight the importance of a model's persuasive ability in influencing others. Additionally, we explore inference-time methods to generate more compelling arguments and evaluate the potential of prompt-based mitigation as a defensive strategy.
+
+
+
+## **6. Unmasking Database Vulnerabilities: Zero-Knowledge Schema Inference Attacks in Text-to-SQL Systems**
 
 cs.CL
 
@@ -15,7 +75,7 @@ cs.CL
 
 
 
-## **2. Jailbreaking as a Reward Misspecification Problem**
+## **7. Jailbreaking as a Reward Misspecification Problem**
 
 cs.LG
 
@@ -27,7 +87,7 @@ cs.LG
 
 
 
-## **3. Safety of Multimodal Large Language Models on Images and Texts**
+## **8. Safety of Multimodal Large Language Models on Images and Texts**
 
 cs.CV
 
@@ -41,7 +101,7 @@ Accepted at IJCAI2024
 
 
 
-## **4. Are you still on track!? Catching LLM Task Drift with Activations**
+## **9. Are you still on track!? Catching LLM Task Drift with Activations**
 
 cs.CR
 
@@ -53,7 +113,7 @@ cs.CR
 
 
 
-## **5. FewFedPIT: Towards Privacy-preserving and Few-shot Federated Instruction Tuning**
+## **10. FewFedPIT: Towards Privacy-preserving and Few-shot Federated Instruction Tuning**
 
 cs.CR
 
@@ -67,7 +127,7 @@ Work in progress
 
 
 
-## **6. Protecting Privacy Through Approximating Optimal Parameters for Sequence Unlearning in Language Models**
+## **11. Protecting Privacy Through Approximating Optimal Parameters for Sequence Unlearning in Language Models**
 
 cs.CL
 
@@ -81,7 +141,7 @@ Accepted to ACL2024 findings
 
 
 
-## **7. Prompt Injection Attacks in Defended Systems**
+## **12. Prompt Injection Attacks in Defended Systems**
 
 cs.CL
 
@@ -93,7 +153,7 @@ cs.CL
 
 
 
-## **8. Evaluating Implicit Bias in Large Language Models by Attacking From a Psychometric Perspective**
+## **13. Evaluating Implicit Bias in Large Language Models by Attacking From a Psychometric Perspective**
 
 cs.CL
 
@@ -107,7 +167,7 @@ Code and datasets are available at  https://github.com/wen112358/ImplicitBiasPsy
 
 
 
-## **9. Mitigating Fine-tuning based Jailbreak Attack with Backdoor Enhanced Safety Alignment**
+## **14. Mitigating Fine-tuning based Jailbreak Attack with Backdoor Enhanced Safety Alignment**
 
 cs.CR
 
@@ -119,7 +179,7 @@ cs.CR
 
 
 
-## **10. RLHFPoison: Reward Poisoning Attack for Reinforcement Learning with Human Feedback in Large Language Models**
+## **15. RLHFPoison: Reward Poisoning Attack for Reinforcement Learning with Human Feedback in Large Language Models**
 
 cs.AI
 
@@ -131,7 +191,7 @@ cs.AI
 
 
 
-## **11. Is poisoning a real threat to LLM alignment? Maybe more so than you think**
+## **16. Is poisoning a real threat to LLM alignment? Maybe more so than you think**
 
 cs.LG
 
@@ -143,7 +203,7 @@ cs.LG
 
 
 
-## **12. ObscurePrompt: Jailbreaking Large Language Models via Obscure Input**
+## **17. ObscurePrompt: Jailbreaking Large Language Models via Obscure Input**
 
 cs.CL
 
@@ -155,7 +215,7 @@ cs.CL
 
 
 
-## **13. Lockpicking LLMs: A Logit-Based Jailbreak Using Token-level Manipulation**
+## **18. Lockpicking LLMs: A Logit-Based Jailbreak Using Token-level Manipulation**
 
 cs.CR
 
@@ -167,7 +227,7 @@ cs.CR
 
 
 
-## **14. Textual Unlearning Gives a False Sense of Unlearning**
+## **19. Textual Unlearning Gives a False Sense of Unlearning**
 
 cs.CR
 
@@ -179,7 +239,7 @@ cs.CR
 
 
 
-## **15. MM-SafetyBench: A Benchmark for Safety Evaluation of Multimodal Large Language Models**
+## **20. MM-SafetyBench: A Benchmark for Safety Evaluation of Multimodal Large Language Models**
 
 cs.CV
 
@@ -191,7 +251,7 @@ cs.CV
 
 
 
-## **16. Assessing AI vs Human-Authored Spear Phishing SMS Attacks: An Empirical Study Using the TRAPD Method**
+## **21. Assessing AI vs Human-Authored Spear Phishing SMS Attacks: An Empirical Study Using the TRAPD Method**
 
 cs.CY
 
@@ -205,7 +265,7 @@ cs.CY
 
 
 
-## **17. SHIELD: Evaluation and Defense Strategies for Copyright Compliance in LLM Text Generation**
+## **22. SHIELD: Evaluation and Defense Strategies for Copyright Compliance in LLM Text Generation**
 
 cs.CL
 
@@ -217,7 +277,7 @@ cs.CL
 
 
 
-## **18. Stealth edits for provably fixing or attacking large language models**
+## **23. Stealth edits for provably fixing or attacking large language models**
 
 cs.AI
 
@@ -231,7 +291,7 @@ cs.AI
 
 
 
-## **19. Authorship Obfuscation in Multilingual Machine-Generated Text Detection**
+## **24. Authorship Obfuscation in Multilingual Machine-Generated Text Detection**
 
 cs.CL
 
@@ -243,7 +303,7 @@ cs.CL
 
 
 
-## **20. Can We Trust Large Language Models Generated Code? A Framework for In-Context Learning, Security Patterns, and Code Evaluations Across Diverse LLMs**
+## **25. Can We Trust Large Language Models Generated Code? A Framework for In-Context Learning, Security Patterns, and Code Evaluations Across Diverse LLMs**
 
 cs.CR
 
@@ -257,7 +317,7 @@ cs.CR
 
 
 
-## **21. Identifying and Mitigating Privacy Risks Stemming from Language Models: A Survey**
+## **26. Identifying and Mitigating Privacy Risks Stemming from Language Models: A Survey**
 
 cs.CL
 
@@ -271,7 +331,7 @@ cs.CL
 
 
 
-## **22. Unique Security and Privacy Threats of Large Language Model: A Comprehensive Survey**
+## **27. Unique Security and Privacy Threats of Large Language Model: A Comprehensive Survey**
 
 cs.CR
 
@@ -283,7 +343,7 @@ cs.CR
 
 
 
-## **23. Defending Against Social Engineering Attacks in the Age of LLMs**
+## **28. Defending Against Social Engineering Attacks in the Age of LLMs**
 
 cs.CL
 
@@ -295,7 +355,7 @@ cs.CL
 
 
 
-## **24. Adversarial Attacks on Large Language Models in Medicine**
+## **29. Adversarial Attacks on Large Language Models in Medicine**
 
 cs.AI
 
@@ -307,7 +367,7 @@ cs.AI
 
 
 
-## **25. CleanGen: Mitigating Backdoor Attacks for Generation Tasks in Large Language Models**
+## **30. CleanGen: Mitigating Backdoor Attacks for Generation Tasks in Large Language Models**
 
 cs.AI
 
@@ -319,7 +379,7 @@ cs.AI
 
 
 
-## **26. Privacy-Preserved Neural Graph Databases**
+## **31. Privacy-Preserved Neural Graph Databases**
 
 cs.DB
 
@@ -331,7 +391,7 @@ cs.DB
 
 
 
-## **27. JailGuard: A Universal Detection Framework for LLM Prompt-based Attacks**
+## **32. JailGuard: A Universal Detection Framework for LLM Prompt-based Attacks**
 
 cs.CR
 
@@ -345,7 +405,7 @@ cs.CR
 
 
 
-## **28. Safety Fine-Tuning at (Almost) No Cost: A Baseline for Vision Large Language Models**
+## **33. Safety Fine-Tuning at (Almost) No Cost: A Baseline for Vision Large Language Models**
 
 cs.LG
 
@@ -359,7 +419,7 @@ ICML 2024
 
 
 
-## **29. MLLM-Protector: Ensuring MLLM's Safety without Hurting Performance**
+## **34. MLLM-Protector: Ensuring MLLM's Safety without Hurting Performance**
 
 cs.CR
 
@@ -371,7 +431,7 @@ cs.CR
 
 
 
-## **30. Knowledge-to-Jailbreak: One Knowledge Point Worth One Attack**
+## **35. Knowledge-to-Jailbreak: One Knowledge Point Worth One Attack**
 
 cs.CL
 
@@ -385,7 +445,7 @@ cs.CL
 
 
 
-## **31. Bileve: Securing Text Provenance in Large Language Models Against Spoofing with Bi-level Signature**
+## **36. Bileve: Securing Text Provenance in Large Language Models Against Spoofing with Bi-level Signature**
 
 cs.CR
 
@@ -397,7 +457,7 @@ cs.CR
 
 
 
-## **32. ART: Automatic Red-teaming for Text-to-Image Models to Protect Benign Users**
+## **37. ART: Automatic Red-teaming for Text-to-Image Models to Protect Benign Users**
 
 cs.CR
 
@@ -409,7 +469,7 @@ cs.CR
 
 
 
-## **33. $\texttt{MoE-RBench}$: Towards Building Reliable Language Models with Sparse Mixture-of-Experts**
+## **38. $\texttt{MoE-RBench}$: Towards Building Reliable Language Models with Sparse Mixture-of-Experts**
 
 cs.LG
 
@@ -423,7 +483,7 @@ cs.LG
 
 
 
-## **34. Adversarial Style Augmentation via Large Language Model for Robust Fake News Detection**
+## **39. Adversarial Style Augmentation via Large Language Model for Robust Fake News Detection**
 
 cs.CL
 
@@ -437,7 +497,7 @@ cs.CL
 
 
 
-## **35. Evading AI-Generated Content Detectors using Homoglyphs**
+## **40. Evading AI-Generated Content Detectors using Homoglyphs**
 
 cs.CL
 
@@ -449,7 +509,7 @@ cs.CL
 
 
 
-## **36. ChatBug: A Common Vulnerability of Aligned LLMs Induced by Chat Templates**
+## **41. ChatBug: A Common Vulnerability of Aligned LLMs Induced by Chat Templates**
 
 cs.CR
 
@@ -461,7 +521,7 @@ cs.CR
 
 
 
-## **37. GoldCoin: Grounding Large Language Models in Privacy Laws via Contextual Integrity Theory**
+## **42. GoldCoin: Grounding Large Language Models in Privacy Laws via Contextual Integrity Theory**
 
 cs.CL
 
@@ -473,7 +533,7 @@ cs.CL
 
 
 
-## **38. Highlighting the Safety Concerns of Deploying LLMs/VLMs in Robotics**
+## **43. Highlighting the Safety Concerns of Deploying LLMs/VLMs in Robotics**
 
 cs.RO
 
@@ -485,7 +545,7 @@ cs.RO
 
 
 
-## **39. garak: A Framework for Security Probing Large Language Models**
+## **44. garak: A Framework for Security Probing Large Language Models**
 
 cs.CL
 
@@ -499,7 +559,7 @@ https://garak.ai
 
 
 
-## **40. Threat Modelling and Risk Analysis for Large Language Model (LLM)-Powered Applications**
+## **45. Threat Modelling and Risk Analysis for Large Language Model (LLM)-Powered Applications**
 
 cs.CR
 
@@ -511,7 +571,7 @@ cs.CR
 
 
 
-## **41. JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models**
+## **46. JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models**
 
 cs.CR
 
@@ -525,7 +585,7 @@ JailbreakBench v1.0: more attack artifacts, more test-time defenses,  a more acc
 
 
 
-## **42. ATM: Adversarial Tuning Multi-agent System Makes a Robust Retrieval-Augmented Generator**
+## **47. ATM: Adversarial Tuning Multi-agent System Makes a Robust Retrieval-Augmented Generator**
 
 cs.CL
 
@@ -539,7 +599,7 @@ cs.CL
 
 
 
-## **43. RWKU: Benchmarking Real-World Knowledge Unlearning for Large Language Models**
+## **48. RWKU: Benchmarking Real-World Knowledge Unlearning for Large Language Models**
 
 cs.CL
 
@@ -553,7 +613,7 @@ cs.CL
 
 
 
-## **44. KGPA: Robustness Evaluation for Large Language Models via Cross-Domain Knowledge Graphs**
+## **49. KGPA: Robustness Evaluation for Large Language Models via Cross-Domain Knowledge Graphs**
 
 cs.CL
 
@@ -565,7 +625,7 @@ cs.CL
 
 
 
-## **45. Towards Understanding Jailbreak Attacks in LLMs: A Representation Space Analysis**
+## **50. Towards Understanding Jailbreak Attacks in LLMs: A Representation Space Analysis**
 
 cs.CL
 
@@ -574,72 +634,6 @@ cs.CL
 **Authors**: Yuping Lin, Pengfei He, Han Xu, Yue Xing, Makoto Yamada, Hui Liu, Jiliang Tang
 
 **Abstract**: Large language models (LLMs) are susceptible to a type of attack known as jailbreaking, which misleads LLMs to output harmful contents. Although there are diverse jailbreak attack strategies, there is no unified understanding on why some methods succeed and others fail. This paper explores the behavior of harmful and harmless prompts in the LLM's representation space to investigate the intrinsic properties of successful jailbreak attacks. We hypothesize that successful attacks share some similar properties: They are effective in moving the representation of the harmful prompt towards the direction to the harmless prompts. We leverage hidden representations into the objective of existing jailbreak attacks to move the attacks along the acceptance direction, and conduct experiments to validate the above hypothesis using the proposed objective. We hope this study provides new insights into understanding how LLMs understand harmfulness information.
-
-
-
-## **46. Adversarial Math Word Problem Generation**
-
-cs.CL
-
-Code/data: https://github.com/ruoyuxie/adversarial_mwps_generation
-
-**SubmitDate**: 2024-06-15    [abs](http://arxiv.org/abs/2402.17916v3) [paper-pdf](http://arxiv.org/pdf/2402.17916v3)
-
-**Authors**: Roy Xie, Chengxuan Huang, Junlin Wang, Bhuwan Dhingra
-
-**Abstract**: Large language models (LLMs) have significantly transformed the educational landscape. As current plagiarism detection tools struggle to keep pace with LLMs' rapid advancements, the educational community faces the challenge of assessing students' true problem-solving abilities in the presence of LLMs. In this work, we explore a new paradigm for ensuring fair evaluation -- generating adversarial examples which preserve the structure and difficulty of the original questions aimed for assessment, but are unsolvable by LLMs. Focusing on the domain of math word problems, we leverage abstract syntax trees to structurally generate adversarial examples that cause LLMs to produce incorrect answers by simply editing the numeric values in the problems. We conduct experiments on various open- and closed-source LLMs, quantitatively and qualitatively demonstrating that our method significantly degrades their math problem-solving ability. We identify shared vulnerabilities among LLMs and propose a cost-effective approach to attack high-cost models. Additionally, we conduct automatic analysis to investigate the cause of failure, providing further insights into the limitations of LLMs.
-
-
-
-## **47. Emerging Safety Attack and Defense in Federated Instruction Tuning of Large Language Models**
-
-cs.CL
-
-18 pages
-
-**SubmitDate**: 2024-06-15    [abs](http://arxiv.org/abs/2406.10630v1) [paper-pdf](http://arxiv.org/pdf/2406.10630v1)
-
-**Authors**: Rui Ye, Jingyi Chai, Xiangrui Liu, Yaodong Yang, Yanfeng Wang, Siheng Chen
-
-**Abstract**: Federated learning (FL) enables multiple parties to collaboratively fine-tune an large language model (LLM) without the need of direct data sharing. Ideally, by training on decentralized data that is aligned with human preferences and safety principles, federated instruction tuning can result in an LLM that could behave in a helpful and safe manner. In this paper, we for the first time reveal the vulnerability of safety alignment in FedIT by proposing a simple, stealthy, yet effective safety attack method. Specifically, the malicious clients could automatically generate attack data without involving manual efforts and attack the FedIT system by training their local LLMs on such attack data. Unfortunately, this proposed safety attack not only can compromise the safety alignment of LLM trained via FedIT, but also can not be effectively defended against by many existing FL defense methods. Targeting this, we further propose a post-hoc defense method, which could rely on a fully automated pipeline: generation of defense data and further fine-tuning of the LLM. Extensive experiments show that our safety attack method can significantly compromise the LLM's safety alignment (e.g., reduce safety rate by 70\%), which can not be effectively defended by existing defense methods (at most 4\% absolute improvement), while our safety defense method can significantly enhance the attacked LLM's safety alignment (at most 69\% absolute improvement).
-
-
-
-## **48. KnowPhish: Large Language Models Meet Multimodal Knowledge Graphs for Enhancing Reference-Based Phishing Detection**
-
-cs.CR
-
-Accepted by USENIX Security 2024
-
-**SubmitDate**: 2024-06-15    [abs](http://arxiv.org/abs/2403.02253v2) [paper-pdf](http://arxiv.org/pdf/2403.02253v2)
-
-**Authors**: Yuexin Li, Chengyu Huang, Shumin Deng, Mei Lin Lock, Tri Cao, Nay Oo, Hoon Wei Lim, Bryan Hooi
-
-**Abstract**: Phishing attacks have inflicted substantial losses on individuals and businesses alike, necessitating the development of robust and efficient automated phishing detection approaches. Reference-based phishing detectors (RBPDs), which compare the logos on a target webpage to a known set of logos, have emerged as the state-of-the-art approach. However, a major limitation of existing RBPDs is that they rely on a manually constructed brand knowledge base, making it infeasible to scale to a large number of brands, which results in false negative errors due to the insufficient brand coverage of the knowledge base. To address this issue, we propose an automated knowledge collection pipeline, using which we collect a large-scale multimodal brand knowledge base, KnowPhish, containing 20k brands with rich information about each brand. KnowPhish can be used to boost the performance of existing RBPDs in a plug-and-play manner. A second limitation of existing RBPDs is that they solely rely on the image modality, ignoring useful textual information present in the webpage HTML. To utilize this textual information, we propose a Large Language Model (LLM)-based approach to extract brand information of webpages from text. Our resulting multimodal phishing detection approach, KnowPhish Detector (KPD), can detect phishing webpages with or without logos. We evaluate KnowPhish and KPD on a manually validated dataset, and a field study under Singapore's local context, showing substantial improvements in effectiveness and efficiency compared to state-of-the-art baselines.
-
-
-
-## **49. Semantic Membership Inference Attack against Large Language Models**
-
-cs.LG
-
-**SubmitDate**: 2024-06-14    [abs](http://arxiv.org/abs/2406.10218v1) [paper-pdf](http://arxiv.org/pdf/2406.10218v1)
-
-**Authors**: Hamid Mozaffari, Virendra J. Marathe
-
-**Abstract**: Membership Inference Attacks (MIAs) determine whether a specific data point was included in the training set of a target model. In this paper, we introduce the Semantic Membership Inference Attack (SMIA), a novel approach that enhances MIA performance by leveraging the semantic content of inputs and their perturbations. SMIA trains a neural network to analyze the target model's behavior on perturbed inputs, effectively capturing variations in output probability distributions between members and non-members. We conduct comprehensive evaluations on the Pythia and GPT-Neo model families using the Wikipedia dataset. Our results show that SMIA significantly outperforms existing MIAs; for instance, SMIA achieves an AUC-ROC of 67.39% on Pythia-12B, compared to 58.90% by the second-best attack.
-
-
-
-## **50. Defending Large Language Models Against Jailbreak Attacks via Layer-specific Editing**
-
-cs.AI
-
-**SubmitDate**: 2024-06-14    [abs](http://arxiv.org/abs/2405.18166v2) [paper-pdf](http://arxiv.org/pdf/2405.18166v2)
-
-**Authors**: Wei Zhao, Zhe Li, Yige Li, Ye Zhang, Jun Sun
-
-**Abstract**: Large language models (LLMs) are increasingly being adopted in a wide range of real-world applications. Despite their impressive performance, recent studies have shown that LLMs are vulnerable to deliberately crafted adversarial prompts even when aligned via Reinforcement Learning from Human Feedback or supervised fine-tuning. While existing defense methods focus on either detecting harmful prompts or reducing the likelihood of harmful responses through various means, defending LLMs against jailbreak attacks based on the inner mechanisms of LLMs remains largely unexplored. In this work, we investigate how LLMs response to harmful prompts and propose a novel defense method termed \textbf{L}ayer-specific \textbf{Ed}iting (LED) to enhance the resilience of LLMs against jailbreak attacks. Through LED, we reveal that several critical \textit{safety layers} exist among the early layers of LLMs. We then show that realigning these safety layers (and some selected additional layers) with the decoded safe response from selected target layers can significantly improve the alignment of LLMs against jailbreak attacks. Extensive experiments across various LLMs (e.g., Llama2, Mistral) show the effectiveness of LED, which effectively defends against jailbreak attacks while maintaining performance on benign prompts. Our code is available at \url{https://github.com/ledllm/ledllm}.
 
 
 

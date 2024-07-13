@@ -1,9 +1,47 @@
 # Latest Large Language Model Attack Papers
-**update at 2024-07-11 16:20:27**
+**update at 2024-07-13 10:43:34**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_LLM_CN.md)
 
-## **1. Flooding Spread of Manipulated Knowledge in LLM-Based Multi-Agent Communities**
+## **1. Tactics, Techniques, and Procedures (TTPs) in Interpreted Malware: A Zero-Shot Generation with Large Language Models**
+
+cs.CR
+
+19 pages, 11 figures
+
+**SubmitDate**: 2024-07-11    [abs](http://arxiv.org/abs/2407.08532v1) [paper-pdf](http://arxiv.org/pdf/2407.08532v1)
+
+**Authors**: Ying Zhang, Xiaoyan Zhou, Hui Wen, Wenjia Niu, Jiqiang Liu, Haining Wang, Qiang Li
+
+**Abstract**: Nowadays, the open-source software (OSS) ecosystem suffers from security threats of software supply chain (SSC) attacks. Interpreted OSS malware plays a vital role in SSC attacks, as criminals have an arsenal of attack vectors to deceive users into installing malware and executing malicious activities. In this paper, we introduce tactics, techniques, and procedures (TTPs) proposed by MITRE ATT\&CK into the interpreted malware analysis to characterize different phases of an attack lifecycle. Specifically, we propose GENTTP, a zero-shot approach to extracting a TTP of an interpreted malware package. GENTTP leverages large language models (LLMs) to automatically generate a TTP, where the input is a malicious package, and the output is a deceptive tactic and an execution tactic of attack vectors. To validate the effectiveness of GENTTP, we collect two datasets for evaluation: a dataset with ground truth labels and a large dataset in the wild. Experimental results show that GENTTP can generate TTPs with high accuracy and efficiency. To demonstrate GENTTP's benefits, we build an LLM-based Chatbot from 3,700+ PyPI malware's TTPs. We further conduct a quantitative analysis of malware's TTPs at a large scale. Our main findings include: (1) many OSS malicious packages share a relatively stable TTP, even with the increasing emergence of malware and attack campaigns, (2) a TTP reflects characteristics of a malware-based attack, and (3) an attacker's intent behind the malware is linked to a TTP.
+
+
+
+## **2. Virtual Context: Enhancing Jailbreak Attacks with Special Token Injection**
+
+cs.CR
+
+**SubmitDate**: 2024-07-11    [abs](http://arxiv.org/abs/2406.19845v2) [paper-pdf](http://arxiv.org/pdf/2406.19845v2)
+
+**Authors**: Yuqi Zhou, Lin Lu, Hanchi Sun, Pan Zhou, Lichao Sun
+
+**Abstract**: Jailbreak attacks on large language models (LLMs) involve inducing these models to generate harmful content that violates ethics or laws, posing a significant threat to LLM security. Current jailbreak attacks face two main challenges: low success rates due to defensive measures and high resource requirements for crafting specific prompts. This paper introduces Virtual Context, which leverages special tokens, previously overlooked in LLM security, to improve jailbreak attacks. Virtual Context addresses these challenges by significantly increasing the success rates of existing jailbreak methods and requiring minimal background knowledge about the target model, thus enhancing effectiveness in black-box settings without additional overhead. Comprehensive evaluations show that Virtual Context-assisted jailbreak attacks can improve the success rates of four widely used jailbreak methods by approximately 40% across various LLMs. Additionally, applying Virtual Context to original malicious behaviors still achieves a notable jailbreak effect. In summary, our research highlights the potential of special tokens in jailbreak attacks and recommends including this threat in red-teaming testing to comprehensively enhance LLM security.
+
+
+
+## **3. A Comprehensive Survey on the Security of Smart Grid: Challenges, Mitigations, and Future Research Opportunities**
+
+cs.CR
+
+**SubmitDate**: 2024-07-10    [abs](http://arxiv.org/abs/2407.07966v1) [paper-pdf](http://arxiv.org/pdf/2407.07966v1)
+
+**Authors**: Arastoo Zibaeirad, Farnoosh Koleini, Shengping Bi, Tao Hou, Tao Wang
+
+**Abstract**: In this study, we conduct a comprehensive review of smart grid security, exploring system architectures, attack methodologies, defense strategies, and future research opportunities. We provide an in-depth analysis of various attack vectors, focusing on new attack surfaces introduced by advanced components in smart grids. The review particularly includes an extensive analysis of coordinated attacks that incorporate multiple attack strategies and exploit vulnerabilities across various smart grid components to increase their adverse impact, demonstrating the complexity and potential severity of these threats. Following this, we examine innovative detection and mitigation strategies, including game theory, graph theory, blockchain, and machine learning, discussing their advancements in counteracting evolving threats and associated research challenges. In particular, our review covers a thorough examination of widely used machine learning-based mitigation strategies, analyzing their applications and research challenges spanning across supervised, unsupervised, semi-supervised, ensemble, and reinforcement learning. Further, we outline future research directions and explore new techniques and concerns. We first discuss the research opportunities for existing and emerging strategies, and then explore the potential role of new techniques, such as large language models (LLMs), and the emerging threat of adversarial machine learning in the future of smart grid security.
+
+
+
+## **4. Flooding Spread of Manipulated Knowledge in LLM-Based Multi-Agent Communities**
 
 cs.CL
 
@@ -17,7 +55,7 @@ cs.CL
 
 
 
-## **2. SecureReg: Combining NLP and MLP for Enhanced Detection of Malicious Domain Name Registrations**
+## **5. SecureReg: Combining NLP and MLP for Enhanced Detection of Malicious Domain Name Registrations**
 
 cs.CR
 
@@ -29,7 +67,7 @@ cs.CR
 
 
 
-## **3. Evaluating the Adversarial Robustness of Retrieval-Based In-Context Learning for Large Language Models**
+## **6. Evaluating the Adversarial Robustness of Retrieval-Based In-Context Learning for Large Language Models**
 
 cs.CL
 
@@ -43,7 +81,7 @@ COLM 2024, 29 pages, 6 figures
 
 
 
-## **4. The Ethics of Interaction: Mitigating Security Threats in LLMs**
+## **7. The Ethics of Interaction: Mitigating Security Threats in LLMs**
 
 cs.CR
 
@@ -55,7 +93,7 @@ cs.CR
 
 
 
-## **5. A Survey of Attacks on Large Vision-Language Models: Resources, Advances, and Future Trends**
+## **8. A Survey of Attacks on Large Vision-Language Models: Resources, Advances, and Future Trends**
 
 cs.CV
 
@@ -67,7 +105,7 @@ cs.CV
 
 
 
-## **6. Robust Neural Information Retrieval: An Adversarial and Out-of-distribution Perspective**
+## **9. Robust Neural Information Retrieval: An Adversarial and Out-of-distribution Perspective**
 
 cs.IR
 
@@ -81,7 +119,7 @@ Survey paper
 
 
 
-## **7. A hybrid LLM workflow can help identify user privilege related variables in programs of any size**
+## **10. A hybrid LLM workflow can help identify user privilege related variables in programs of any size**
 
 cs.CR
 
@@ -93,7 +131,7 @@ cs.CR
 
 
 
-## **8. Does CLIP Know My Face?**
+## **11. Does CLIP Know My Face?**
 
 cs.LG
 
@@ -107,7 +145,7 @@ Published in the Journal of Artificial Intelligence Research (JAIR)
 
 
 
-## **9. Defending Large Language Models Against Attacks With Residual Stream Activation Analysis**
+## **12. Defending Large Language Models Against Attacks With Residual Stream Activation Analysis**
 
 cs.CR
 
@@ -119,7 +157,7 @@ cs.CR
 
 
 
-## **10. Exposing Privacy Gaps: Membership Inference Attack on Preference Data for LLM Alignment**
+## **13. Exposing Privacy Gaps: Membership Inference Attack on Preference Data for LLM Alignment**
 
 cs.AI
 
@@ -131,7 +169,7 @@ cs.AI
 
 
 
-## **11. If You Don't Understand It, Don't Use It: Eliminating Trojans with Filters Between Layers**
+## **14. If You Don't Understand It, Don't Use It: Eliminating Trojans with Filters Between Layers**
 
 cs.LG
 
@@ -145,7 +183,7 @@ cs.LG
 
 
 
-## **12. Robust Prompt Optimization for Defending Language Models Against Jailbreaking Attacks**
+## **15. Robust Prompt Optimization for Defending Language Models Against Jailbreaking Attacks**
 
 cs.LG
 
@@ -159,7 +197,7 @@ Code available at https://github.com/lapisrocks/rpo
 
 
 
-## **13. Adaptive and robust watermark against model extraction attack**
+## **16. Adaptive and robust watermark against model extraction attack**
 
 cs.CR
 
@@ -171,7 +209,7 @@ cs.CR
 
 
 
-## **14. Exploring the Adversarial Capabilities of Large Language Models**
+## **17. Exploring the Adversarial Capabilities of Large Language Models**
 
 cs.AI
 
@@ -183,7 +221,7 @@ cs.AI
 
 
 
-## **15. TrojanRAG: Retrieval-Augmented Generation Can Be Backdoor Driver in Large Language Models**
+## **18. TrojanRAG: Retrieval-Augmented Generation Can Be Backdoor Driver in Large Language Models**
 
 cs.CR
 
@@ -197,7 +235,7 @@ cs.CR
 
 
 
-## **16. BadCLM: Backdoor Attack in Clinical Language Models for Electronic Health Records**
+## **19. BadCLM: Backdoor Attack in Clinical Language Models for Electronic Health Records**
 
 cs.CL
 
@@ -211,7 +249,7 @@ AMIA 2024
 
 
 
-## **17. LLMCloudHunter: Harnessing LLMs for Automated Extraction of Detection Rules from Cloud-Based CTI**
+## **20. LLMCloudHunter: Harnessing LLMs for Automated Extraction of Detection Rules from Cloud-Based CTI**
 
 cs.CR
 
@@ -223,7 +261,7 @@ cs.CR
 
 
 
-## **18. On Evaluating The Performance of Watermarked Machine-Generated Texts Under Adversarial Attacks**
+## **21. On Evaluating The Performance of Watermarked Machine-Generated Texts Under Adversarial Attacks**
 
 cs.CR
 
@@ -235,7 +273,7 @@ cs.CR
 
 
 
-## **19. Controlling Whisper: Universal Acoustic Adversarial Attacks to Control Speech Foundation Models**
+## **22. Controlling Whisper: Universal Acoustic Adversarial Attacks to Control Speech Foundation Models**
 
 cs.SD
 
@@ -247,7 +285,7 @@ cs.SD
 
 
 
-## **20. Waterfall: Framework for Robust and Scalable Text Watermarking**
+## **23. Waterfall: Framework for Robust and Scalable Text Watermarking**
 
 cs.CR
 
@@ -259,7 +297,7 @@ cs.CR
 
 
 
-## **21. Jailbreak Attacks and Defenses Against Large Language Models: A Survey**
+## **24. Jailbreak Attacks and Defenses Against Large Language Models: A Survey**
 
 cs.CR
 
@@ -271,7 +309,7 @@ cs.CR
 
 
 
-## **22. Defending Jailbreak Prompts via In-Context Adversarial Game**
+## **25. Defending Jailbreak Prompts via In-Context Adversarial Game**
 
 cs.LG
 
@@ -283,7 +321,7 @@ cs.LG
 
 
 
-## **23. Defense Against Syntactic Textual Backdoor Attacks with Token Substitution**
+## **26. Defense Against Syntactic Textual Backdoor Attacks with Token Substitution**
 
 cs.CL
 
@@ -295,7 +333,7 @@ cs.CL
 
 
 
-## **24. Securing Multi-turn Conversational Language Models Against Distributed Backdoor Triggers**
+## **27. Securing Multi-turn Conversational Language Models Against Distributed Backdoor Triggers**
 
 cs.CL
 
@@ -309,7 +347,7 @@ Submitted to EMNLP 2024
 
 
 
-## **25. Is LLM-as-a-Judge Robust? Investigating Universal Adversarial Attacks on Zero-shot LLM Assessment**
+## **28. Is LLM-as-a-Judge Robust? Investigating Universal Adversarial Attacks on Zero-shot LLM Assessment**
 
 cs.CL
 
@@ -321,7 +359,7 @@ cs.CL
 
 
 
-## **26. DART: Deep Adversarial Automated Red Teaming for LLM Safety**
+## **29. DART: Deep Adversarial Automated Red Teaming for LLM Safety**
 
 cs.CR
 
@@ -333,7 +371,7 @@ cs.CR
 
 
 
-## **27. Jailbreaking Black Box Large Language Models in Twenty Queries**
+## **30. Jailbreaking Black Box Large Language Models in Twenty Queries**
 
 cs.LG
 
@@ -345,7 +383,7 @@ cs.LG
 
 
 
-## **28. JailBreakV-28K: A Benchmark for Assessing the Robustness of MultiModal Large Language Models against Jailbreak Attacks**
+## **31. JailBreakV-28K: A Benchmark for Assessing the Robustness of MultiModal Large Language Models against Jailbreak Attacks**
 
 cs.CR
 
@@ -357,7 +395,7 @@ cs.CR
 
 
 
-## **29. On Large Language Models in National Security Applications**
+## **32. On Large Language Models in National Security Applications**
 
 cs.CR
 
@@ -371,7 +409,7 @@ cs.CR
 
 
 
-## **30. Eraser: Jailbreaking Defense in Large Language Models via Unlearning Harmful Knowledge**
+## **33. Eraser: Jailbreaking Defense in Large Language Models via Unlearning Harmful Knowledge**
 
 cs.CL
 
@@ -383,7 +421,7 @@ cs.CL
 
 
 
-## **31. Soft Begging: Modular and Efficient Shielding of LLMs against Prompt Injection and Jailbreaking based on Prompt Tuning**
+## **34. Soft Begging: Modular and Efficient Shielding of LLMs against Prompt Injection and Jailbreaking based on Prompt Tuning**
 
 cs.CR
 
@@ -395,7 +433,7 @@ cs.CR
 
 
 
-## **32. SOS! Soft Prompt Attack Against Open-Source Large Language Models**
+## **35. SOS! Soft Prompt Attack Against Open-Source Large Language Models**
 
 cs.CR
 
@@ -407,7 +445,7 @@ cs.CR
 
 
 
-## **33. JailbreakHunter: A Visual Analytics Approach for Jailbreak Prompts Discovery from Large-Scale Human-LLM Conversational Datasets**
+## **36. JailbreakHunter: A Visual Analytics Approach for Jailbreak Prompts Discovery from Large-Scale Human-LLM Conversational Datasets**
 
 cs.HC
 
@@ -421,7 +459,7 @@ cs.HC
 
 
 
-## **34. Towards More Realistic Extraction Attacks: An Adversarial Perspective**
+## **37. Towards More Realistic Extraction Attacks: An Adversarial Perspective**
 
 cs.CR
 
@@ -435,7 +473,7 @@ To be presented at PrivateNLP@ACL2024
 
 
 
-## **35. A False Sense of Safety: Unsafe Information Leakage in 'Safe' AI Responses**
+## **38. A False Sense of Safety: Unsafe Information Leakage in 'Safe' AI Responses**
 
 cs.CR
 
@@ -447,7 +485,7 @@ cs.CR
 
 
 
-## **36. Uncovering Safety Risks of Large Language Models through Concept Activation Vector**
+## **39. Uncovering Safety Risks of Large Language Models through Concept Activation Vector**
 
 cs.CL
 
@@ -459,7 +497,7 @@ cs.CL
 
 
 
-## **37. Adversarial Search Engine Optimization for Large Language Models**
+## **40. Adversarial Search Engine Optimization for Large Language Models**
 
 cs.CR
 
@@ -471,7 +509,7 @@ cs.CR
 
 
 
-## **38. SoP: Unlock the Power of Social Facilitation for Automatic Jailbreak Attack**
+## **41. SoP: Unlock the Power of Social Facilitation for Automatic Jailbreak Attack**
 
 cs.CR
 
@@ -483,7 +521,7 @@ cs.CR
 
 
 
-## **39. Revisiting Backdoor Attacks against Large Vision-Language Models**
+## **42. Revisiting Backdoor Attacks against Large Vision-Language Models**
 
 cs.CV
 
@@ -497,7 +535,7 @@ cs.CV
 
 
 
-## **40. Image-to-Text Logic Jailbreak: Your Imagination can Help You Do Anything**
+## **43. Image-to-Text Logic Jailbreak: Your Imagination can Help You Do Anything**
 
 cs.CR
 
@@ -509,7 +547,7 @@ cs.CR
 
 
 
-## **41. Enhancing the Capability and Robustness of Large Language Models through Reinforcement Learning-Driven Query Refinement**
+## **44. Enhancing the Capability and Robustness of Large Language Models through Reinforcement Learning-Driven Query Refinement**
 
 cs.CL
 
@@ -521,7 +559,7 @@ cs.CL
 
 
 
-## **42. Jailbreak Vision Language Models via Bi-Modal Adversarial Prompt**
+## **45. Jailbreak Vision Language Models via Bi-Modal Adversarial Prompt**
 
 cs.CV
 
@@ -533,7 +571,7 @@ cs.CV
 
 
 
-## **43. A Fingerprint for Large Language Models**
+## **46. A Fingerprint for Large Language Models**
 
 cs.CR
 
@@ -547,7 +585,7 @@ https://scholar.google.com/citations?user=IdiF7M0AAAAJ&hl=en
 
 
 
-## **44. Assessing the Brittleness of Safety Alignment via Pruning and Low-Rank Modifications**
+## **47. Assessing the Brittleness of Safety Alignment via Pruning and Low-Rank Modifications**
 
 cs.LG
 
@@ -561,7 +599,7 @@ cs.LG
 
 
 
-## **45. Large Language Models Are Involuntary Truth-Tellers: Exploiting Fallacy Failure for Jailbreak Attacks**
+## **48. Large Language Models Are Involuntary Truth-Tellers: Exploiting Fallacy Failure for Jailbreak Attacks**
 
 cs.CL
 
@@ -573,21 +611,7 @@ cs.CL
 
 
 
-## **46. Virtual Context: Enhancing Jailbreak Attacks with Special Token Injection**
-
-cs.CR
-
-14 pages, 4 figures
-
-**SubmitDate**: 2024-06-28    [abs](http://arxiv.org/abs/2406.19845v1) [paper-pdf](http://arxiv.org/pdf/2406.19845v1)
-
-**Authors**: Yuqi Zhou, Lin Lu, Hanchi Sun, Pan Zhou, Lichao Sun
-
-**Abstract**: Jailbreak attacks on large language models (LLMs) involve inducing these models to generate harmful content that violates ethics or laws, posing a significant threat to LLM security. Current jailbreak attacks face two main challenges: low success rates due to defensive measures and high resource requirements for crafting specific prompts. This paper introduces Virtual Context, which leverages special tokens, previously overlooked in LLM security, to improve jailbreak attacks. Virtual Context addresses these challenges by significantly increasing the success rates of existing jailbreak methods and requiring minimal background knowledge about the target model, thus enhancing effectiveness in black-box settings without additional overhead. Comprehensive evaluations show that Virtual Context-assisted jailbreak attacks can improve the success rates of four widely used jailbreak methods by approximately 40% across various LLMs. Additionally, applying Virtual Context to original malicious behaviors still achieves a notable jailbreak effect. In summary, our research highlights the potential of special tokens in jailbreak attacks and recommends including this threat in red-teaming testing to comprehensively enhance LLM security.
-
-
-
-## **47. SafeAligner: Safety Alignment against Jailbreak Attacks via Response Disparity Guidance**
+## **49. SafeAligner: Safety Alignment against Jailbreak Attacks via Response Disparity Guidance**
 
 cs.CR
 
@@ -599,7 +623,7 @@ cs.CR
 
 
 
-## **48. GPTFUZZER: Red Teaming Large Language Models with Auto-Generated Jailbreak Prompts**
+## **50. GPTFUZZER: Red Teaming Large Language Models with Auto-Generated Jailbreak Prompts**
 
 cs.AI
 
@@ -608,32 +632,6 @@ cs.AI
 **Authors**: Jiahao Yu, Xingwei Lin, Zheng Yu, Xinyu Xing
 
 **Abstract**: Large language models (LLMs) have recently experienced tremendous popularity and are widely used from casual conversations to AI-driven programming. However, despite their considerable success, LLMs are not entirely reliable and can give detailed guidance on how to conduct harmful or illegal activities. While safety measures can reduce the risk of such outputs, adversarial jailbreak attacks can still exploit LLMs to produce harmful content. These jailbreak templates are typically manually crafted, making large-scale testing challenging.   In this paper, we introduce GPTFuzz, a novel black-box jailbreak fuzzing framework inspired by the AFL fuzzing framework. Instead of manual engineering, GPTFuzz automates the generation of jailbreak templates for red-teaming LLMs. At its core, GPTFuzz starts with human-written templates as initial seeds, then mutates them to produce new templates. We detail three key components of GPTFuzz: a seed selection strategy for balancing efficiency and variability, mutate operators for creating semantically equivalent or similar sentences, and a judgment model to assess the success of a jailbreak attack.   We evaluate GPTFuzz against various commercial and open-source LLMs, including ChatGPT, LLaMa-2, and Vicuna, under diverse attack scenarios. Our results indicate that GPTFuzz consistently produces jailbreak templates with a high success rate, surpassing human-crafted templates. Remarkably, GPTFuzz achieves over 90% attack success rates against ChatGPT and Llama-2 models, even with suboptimal initial seed templates. We anticipate that GPTFuzz will be instrumental for researchers and practitioners in examining LLM robustness and will encourage further exploration into enhancing LLM safety.
-
-
-
-## **49. Seeing Is Believing: Black-Box Membership Inference Attacks Against Retrieval Augmented Generation**
-
-cs.CR
-
-**SubmitDate**: 2024-06-27    [abs](http://arxiv.org/abs/2406.19234v1) [paper-pdf](http://arxiv.org/pdf/2406.19234v1)
-
-**Authors**: Yuying Li, Gaoyang Liu, Yang Yang, Chen Wang
-
-**Abstract**: Retrieval-Augmented Generation (RAG) is a state-of-the-art technique that enhances Large Language Models (LLMs) by retrieving relevant knowledge from an external, non-parametric database. This approach aims to mitigate common LLM issues such as hallucinations and outdated knowledge. Although existing research has demonstrated security and privacy vulnerabilities within RAG systems, making them susceptible to attacks like jailbreaks and prompt injections, the security of the RAG system's external databases remains largely underexplored. In this paper, we employ Membership Inference Attacks (MIA) to determine whether a sample is part of the knowledge database of a RAG system, using only black-box API access. Our core hypothesis posits that if a sample is a member, it will exhibit significant similarity to the text generated by the RAG system. To test this, we compute the cosine similarity and the model's perplexity to establish a membership score, thereby building robust features. We then introduce two novel attack strategies: a Threshold-based Attack and a Machine Learning-based Attack, designed to accurately identify membership. Experimental validation of our methods has achieved a ROC AUC of 82%.
-
-
-
-## **50. Chat AI: A Seamless Slurm-Native Solution for HPC-Based Services**
-
-cs.DC
-
-27 pages, 5 figures, 2 tables
-
-**SubmitDate**: 2024-06-27    [abs](http://arxiv.org/abs/2407.00110v1) [paper-pdf](http://arxiv.org/pdf/2407.00110v1)
-
-**Authors**: Ali Doosthosseini, Jonathan Decker, Hendrik Nolte, Julian M. Kunkel
-
-**Abstract**: The increasing adoption of large language models (LLMs) has created a pressing need for an efficient, secure and private serving infrastructure, which allows researchers to run open-source or custom fine-tuned LLMs and ensures users that their data remains private and is not stored without their consent. While high-performance computing (HPC) systems equipped with state-of-the-art GPUs are well-suited for training LLMs, their batch scheduling paradigm is not designed to support real-time serving of AI applications. Cloud systems, on the other hand, are well suited for web services but commonly lack access to the computational power of clusters, especially expensive and scarce high-end GPUs, which are required for optimal inference speed. We propose an architecture with an implementation consisting of a web service that runs on a cloud VM with secure access to a scalable backend running a multitude of AI models on HPC systems. By offering a web service using our HPC infrastructure to host LLMs, we leverage the trusted environment of local universities and research centers to offer a private and secure alternative to commercial LLM services. Our solution natively integrates with Slurm, enabling seamless deployment on HPC clusters and is able to run side by side with regular Slurm workloads, while utilizing gaps in the schedule created by Slurm. In order to ensure the security of the HPC system, we use the SSH ForceCommand directive to construct a robust circuit breaker, which prevents successful attacks on the web-facing server from affecting the cluster. We have successfully deployed our system as a production service, and made the source code available at https://github.com/gwdg/chat-ai
 
 
 

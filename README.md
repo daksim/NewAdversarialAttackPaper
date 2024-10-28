@@ -1,9 +1,75 @@
 # Latest Adversarial Attack Papers
-**update at 2024-10-26 11:52:44**
+**update at 2024-10-28 09:35:44**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
-## **1. Provably Robust Watermarks for Open-Source Language Models**
+## **1. Robust Thompson Sampling Algorithms Against Reward Poisoning Attacks**
+
+cs.LG
+
+**SubmitDate**: 2024-10-25    [abs](http://arxiv.org/abs/2410.19705v1) [paper-pdf](http://arxiv.org/pdf/2410.19705v1)
+
+**Authors**: Yinglun Xu, Zhiwei Wang, Gagandeep Singh
+
+**Abstract**: Thompson sampling is one of the most popular learning algorithms for online sequential decision-making problems and has rich real-world applications. However, current Thompson sampling algorithms are limited by the assumption that the rewards received are uncorrupted, which may not be true in real-world applications where adversarial reward poisoning exists. To make Thompson sampling more reliable, we want to make it robust against adversarial reward poisoning. The main challenge is that one can no longer compute the actual posteriors for the true reward, as the agent can only observe the rewards after corruption. In this work, we solve this problem by computing pseudo-posteriors that are less likely to be manipulated by the attack. We propose robust algorithms based on Thompson sampling for the popular stochastic and contextual linear bandit settings in both cases where the agent is aware or unaware of the budget of the attacker. We theoretically show that our algorithms guarantee near-optimal regret under any attack strategy.
+
+
+
+## **2. A constrained optimization approach to improve robustness of neural networks**
+
+cs.LG
+
+29 pages, 4 figures, 5 tables
+
+**SubmitDate**: 2024-10-25    [abs](http://arxiv.org/abs/2409.13770v2) [paper-pdf](http://arxiv.org/pdf/2409.13770v2)
+
+**Authors**: Shudian Zhao, Jan Kronqvist
+
+**Abstract**: In this paper, we present a novel nonlinear programming-based approach to fine-tune pre-trained neural networks to improve robustness against adversarial attacks while maintaining high accuracy on clean data. Our method introduces adversary-correction constraints to ensure correct classification of adversarial data and minimizes changes to the model parameters. We propose an efficient cutting-plane-based algorithm to iteratively solve the large-scale nonconvex optimization problem by approximating the feasible region through polyhedral cuts and balancing between robustness and accuracy. Computational experiments on standard datasets such as MNIST and CIFAR10 demonstrate that the proposed approach significantly improves robustness, even with a very small set of adversarial data, while maintaining minimal impact on accuracy.
+
+
+
+## **3. Detecting adversarial attacks on random samples**
+
+math.PR
+
+title changed; introduction expanded; new results about spherical  attacks
+
+**SubmitDate**: 2024-10-25    [abs](http://arxiv.org/abs/2408.06166v2) [paper-pdf](http://arxiv.org/pdf/2408.06166v2)
+
+**Authors**: Gleb Smirnov
+
+**Abstract**: This paper studies the problem of detecting adversarial perturbations in a sequence of observations. Given a data sample $X_1, \ldots, X_n$ drawn from a standard normal distribution, an adversary, after observing the sample, can perturb each observation by a fixed magnitude or leave it unchanged. We explore the relationship between the perturbation magnitude, the sparsity of the perturbation, and the detectability of the adversary's actions, establishing precise thresholds for when detection becomes impossible.
+
+
+
+## **4. Corpus Poisoning via Approximate Greedy Gradient Descent**
+
+cs.IR
+
+**SubmitDate**: 2024-10-25    [abs](http://arxiv.org/abs/2406.05087v2) [paper-pdf](http://arxiv.org/pdf/2406.05087v2)
+
+**Authors**: Jinyan Su, Preslav Nakov, Claire Cardie
+
+**Abstract**: Dense retrievers are widely used in information retrieval and have also been successfully extended to other knowledge intensive areas such as language models, e.g., Retrieval-Augmented Generation (RAG) systems. Unfortunately, they have recently been shown to be vulnerable to corpus poisoning attacks in which a malicious user injects a small fraction of adversarial passages into the retrieval corpus to trick the system into returning these passages among the top-ranked results for a broad set of user queries. Further study is needed to understand the extent to which these attacks could limit the deployment of dense retrievers in real-world applications. In this work, we propose Approximate Greedy Gradient Descent (AGGD), a new attack on dense retrieval systems based on the widely used HotFlip method for efficiently generating adversarial passages. We demonstrate that AGGD can select a higher quality set of token-level perturbations than HotFlip by replacing its random token sampling with a more structured search. Experimentally, we show that our method achieves a high attack success rate on several datasets and using several retrievers, and can generalize to unseen queries and new domains. Notably, our method is extremely effective in attacking the ANCE retrieval model, achieving attack success rates that are 15.24\% and 17.44\% higher on the NQ and MS MARCO datasets, respectively, compared to HotFlip. Additionally, we demonstrate AGGD's potential to replace HotFlip in other adversarial attacks, such as knowledge poisoning of RAG systems.
+
+
+
+## **5. Adversarial Attacks on Large Language Models Using Regularized Relaxation**
+
+cs.LG
+
+8 pages, 6 figures
+
+**SubmitDate**: 2024-10-24    [abs](http://arxiv.org/abs/2410.19160v1) [paper-pdf](http://arxiv.org/pdf/2410.19160v1)
+
+**Authors**: Samuel Jacob Chacko, Sajib Biswas, Chashi Mahiul Islam, Fatema Tabassum Liza, Xiuwen Liu
+
+**Abstract**: As powerful Large Language Models (LLMs) are now widely used for numerous practical applications, their safety is of critical importance. While alignment techniques have significantly improved overall safety, LLMs remain vulnerable to carefully crafted adversarial inputs. Consequently, adversarial attack methods are extensively used to study and understand these vulnerabilities. However, current attack methods face significant limitations. Those relying on optimizing discrete tokens suffer from limited efficiency, while continuous optimization techniques fail to generate valid tokens from the model's vocabulary, rendering them impractical for real-world applications. In this paper, we propose a novel technique for adversarial attacks that overcomes these limitations by leveraging regularized gradients with continuous optimization methods. Our approach is two orders of magnitude faster than the state-of-the-art greedy coordinate gradient-based method, significantly improving the attack success rate on aligned language models. Moreover, it generates valid tokens, addressing a fundamental limitation of existing continuous optimization methods. We demonstrate the effectiveness of our attack on five state-of-the-art LLMs using four datasets.
+
+
+
+## **6. Provably Robust Watermarks for Open-Source Language Models**
 
 cs.CR
 
@@ -15,7 +81,7 @@ cs.CR
 
 
 
-## **2. Rethinking Randomized Smoothing from the Perspective of Scalability**
+## **7. Rethinking Randomized Smoothing from the Perspective of Scalability**
 
 cs.LG
 
@@ -27,7 +93,7 @@ cs.LG
 
 
 
-## **3. GADT: Enhancing Transferable Adversarial Attacks through Gradient-guided Adversarial Data Transformation**
+## **8. GADT: Enhancing Transferable Adversarial Attacks through Gradient-guided Adversarial Data Transformation**
 
 cs.AI
 
@@ -39,7 +105,7 @@ cs.AI
 
 
 
-## **4. Iterative Self-Tuning LLMs for Enhanced Jailbreaking Capabilities**
+## **9. Iterative Self-Tuning LLMs for Enhanced Jailbreaking Capabilities**
 
 cs.CL
 
@@ -53,7 +119,7 @@ cs.CL
 
 
 
-## **5. Effects of Scale on Language Model Robustness**
+## **10. Effects of Scale on Language Model Robustness**
 
 cs.LG
 
@@ -67,7 +133,7 @@ cs.LG
 
 
 
-## **6. Backdoor in Seconds: Unlocking Vulnerabilities in Large Pre-trained Models via Model Editing**
+## **11. Backdoor in Seconds: Unlocking Vulnerabilities in Large Pre-trained Models via Model Editing**
 
 cs.AI
 
@@ -79,7 +145,7 @@ cs.AI
 
 
 
-## **7. Advancing NLP Security by Leveraging LLMs as Adversarial Engines**
+## **12. Advancing NLP Security by Leveraging LLMs as Adversarial Engines**
 
 cs.AI
 
@@ -93,7 +159,7 @@ cs.AI
 
 
 
-## **8. Towards Understanding the Fragility of Multilingual LLMs against Fine-Tuning Attacks**
+## **13. Towards Understanding the Fragility of Multilingual LLMs against Fine-Tuning Attacks**
 
 cs.CL
 
@@ -107,7 +173,7 @@ cs.CL
 
 
 
-## **9. Safeguard is a Double-edged Sword: Denial-of-service Attack on Large Language Models**
+## **14. Safeguard is a Double-edged Sword: Denial-of-service Attack on Large Language Models**
 
 cs.CR
 
@@ -119,7 +185,7 @@ cs.CR
 
 
 
-## **10. Exploring the Adversarial Robustness of CLIP for AI-generated Image Detection**
+## **15. Exploring the Adversarial Robustness of CLIP for AI-generated Image Detection**
 
 cs.CV
 
@@ -131,7 +197,7 @@ cs.CV
 
 
 
-## **11. SCA: Highly Efficient Semantic-Consistent Unrestricted Adversarial Attack**
+## **16. SCA: Highly Efficient Semantic-Consistent Unrestricted Adversarial Attack**
 
 cs.CV
 
@@ -143,7 +209,7 @@ cs.CV
 
 
 
-## **12. Slot: Provenance-Driven APT Detection through Graph Reinforcement Learning**
+## **17. Slot: Provenance-Driven APT Detection through Graph Reinforcement Learning**
 
 cs.CR
 
@@ -155,7 +221,7 @@ cs.CR
 
 
 
-## **13. Gradient-based Jailbreak Images for Multimodal Fusion Models**
+## **18. Gradient-based Jailbreak Images for Multimodal Fusion Models**
 
 cs.CR
 
@@ -167,7 +233,7 @@ cs.CR
 
 
 
-## **14. STBA: Towards Evaluating the Robustness of DNNs for Query-Limited Black-box Scenario**
+## **19. STBA: Towards Evaluating the Robustness of DNNs for Query-Limited Black-box Scenario**
 
 cs.CV
 
@@ -181,7 +247,7 @@ Accepted by T-MM
 
 
 
-## **15. DIP-Watermark: A Double Identity Protection Method Based on Robust Adversarial Watermark**
+## **20. DIP-Watermark: A Double Identity Protection Method Based on Robust Adversarial Watermark**
 
 cs.CR
 
@@ -193,7 +259,7 @@ cs.CR
 
 
 
-## **16. IBGP: Imperfect Byzantine Generals Problem for Zero-Shot Robustness in Communicative Multi-Agent Systems**
+## **21. IBGP: Imperfect Byzantine Generals Problem for Zero-Shot Robustness in Communicative Multi-Agent Systems**
 
 cs.MA
 
@@ -205,7 +271,7 @@ cs.MA
 
 
 
-## **17. The Ultimate Combo: Boosting Adversarial Example Transferability by Composing Data Augmentations**
+## **22. The Ultimate Combo: Boosting Adversarial Example Transferability by Composing Data Augmentations**
 
 cs.CV
 
@@ -219,7 +285,7 @@ Accepted by AISec'24
 
 
 
-## **18. Diffusion Models are Certifiably Robust Classifiers**
+## **23. Diffusion Models are Certifiably Robust Classifiers**
 
 cs.LG
 
@@ -233,7 +299,7 @@ Accepted by NeurIPS 2024
 
 
 
-## **19. A provable initialization and robust clustering method for general mixture models**
+## **24. A provable initialization and robust clustering method for general mixture models**
 
 math.ST
 
@@ -247,7 +313,7 @@ math.ST
 
 
 
-## **20. Detecting Adversarial Examples**
+## **25. Detecting Adversarial Examples**
 
 cs.LG
 
@@ -259,7 +325,7 @@ cs.LG
 
 
 
-## **21. Meta Stackelberg Game: Robust Federated Learning against Adaptive and Mixed Poisoning Attacks**
+## **26. Meta Stackelberg Game: Robust Federated Learning against Adaptive and Mixed Poisoning Attacks**
 
 cs.LG
 
@@ -273,7 +339,7 @@ This work has been submitted to the IEEE for possible publication
 
 
 
-## **22. AdvWeb: Controllable Black-box Attacks on VLM-powered Web Agents**
+## **27. AdvWeb: Controllable Black-box Attacks on VLM-powered Web Agents**
 
 cs.CR
 
@@ -287,7 +353,7 @@ cs.CR
 
 
 
-## **23. Learning to Poison Large Language Models During Instruction Tuning**
+## **28. Learning to Poison Large Language Models During Instruction Tuning**
 
 cs.LG
 
@@ -299,7 +365,7 @@ cs.LG
 
 
 
-## **24. Context-aware Prompt Tuning: Advancing In-Context Learning with Adversarial Methods**
+## **29. Context-aware Prompt Tuning: Advancing In-Context Learning with Adversarial Methods**
 
 cs.CL
 
@@ -311,7 +377,7 @@ cs.CL
 
 
 
-## **25. Remote Timing Attacks on Efficient Language Model Inference**
+## **30. Remote Timing Attacks on Efficient Language Model Inference**
 
 cs.CR
 
@@ -323,7 +389,7 @@ cs.CR
 
 
 
-## **26. FDINet: Protecting against DNN Model Extraction via Feature Distortion Index**
+## **31. FDINet: Protecting against DNN Model Extraction via Feature Distortion Index**
 
 cs.CR
 
@@ -337,7 +403,7 @@ Accepted to IEEE Transactions on Dependable and Secure Computing
 
 
 
-## **27. Adversarial Challenges in Network Intrusion Detection Systems: Research Insights and Future Prospects**
+## **32. Adversarial Challenges in Network Intrusion Detection Systems: Research Insights and Future Prospects**
 
 cs.CR
 
@@ -351,7 +417,7 @@ cs.CR
 
 
 
-## **28. A Self-Organizing Clustering System for Unsupervised Distribution Shift Detection**
+## **33. A Self-Organizing Clustering System for Unsupervised Distribution Shift Detection**
 
 cs.LG
 
@@ -365,7 +431,7 @@ Revised version of the accepted manuscript to IJCNN'2024. Main  corrections were
 
 
 
-## **29. Test-time Adversarial Defense with Opposite Adversarial Path and High Attack Time Cost**
+## **34. Test-time Adversarial Defense with Opposite Adversarial Path and High Attack Time Cost**
 
 cs.LG
 
@@ -377,7 +443,7 @@ cs.LG
 
 
 
-## **30. Evaluating the Effectiveness of Attack-Agnostic Features for Morphing Attack Detection**
+## **35. Evaluating the Effectiveness of Attack-Agnostic Features for Morphing Attack Detection**
 
 cs.CV
 
@@ -391,7 +457,7 @@ Published in the 2024 IEEE International Joint Conference on  Biometrics (IJCB)
 
 
 
-## **31. Imprompter: Tricking LLM Agents into Improper Tool Use**
+## **36. Imprompter: Tricking LLM Agents into Improper Tool Use**
 
 cs.CR
 
@@ -405,7 +471,7 @@ website: https://imprompter.ai code:  https://github.com/Reapor-Yurnero/imprompt
 
 
 
-## **32. (Quantum) Indifferentiability and Pre-Computation**
+## **37. (Quantum) Indifferentiability and Pre-Computation**
 
 quant-ph
 
@@ -419,7 +485,7 @@ quant-ph
 
 
 
-## **33. Conflict-Aware Adversarial Training**
+## **38. Conflict-Aware Adversarial Training**
 
 cs.LG
 
@@ -431,7 +497,7 @@ cs.LG
 
 
 
-## **34. SleeperNets: Universal Backdoor Poisoning Attacks Against Reinforcement Learning Agents**
+## **39. SleeperNets: Universal Backdoor Poisoning Attacks Against Reinforcement Learning Agents**
 
 cs.LG
 
@@ -445,7 +511,7 @@ cs.LG
 
 
 
-## **35. Adversarial Inception for Bounded Backdoor Poisoning in Deep Reinforcement Learning**
+## **40. Adversarial Inception for Bounded Backdoor Poisoning in Deep Reinforcement Learning**
 
 cs.LG
 
@@ -459,7 +525,7 @@ cs.LG
 
 
 
-## **36. A Troublemaker with Contagious Jailbreak Makes Chaos in Honest Towns**
+## **41. A Troublemaker with Contagious Jailbreak Makes Chaos in Honest Towns**
 
 cs.CL
 
@@ -471,7 +537,7 @@ cs.CL
 
 
 
-## **37. On the Geometry of Regularization in Adversarial Training: High-Dimensional Asymptotics and Generalization Bounds**
+## **42. On the Geometry of Regularization in Adversarial Training: High-Dimensional Asymptotics and Generalization Bounds**
 
 stat.ML
 
@@ -483,7 +549,7 @@ stat.ML
 
 
 
-## **38. A Differentially Private Energy Trading Mechanism Approaching Social Optimum**
+## **43. A Differentially Private Energy Trading Mechanism Approaching Social Optimum**
 
 cs.GT
 
@@ -497,7 +563,7 @@ cs.GT
 
 
 
-## **39. Model Mimic Attack: Knowledge Distillation for Provably Transferable Adversarial Examples**
+## **44. Model Mimic Attack: Knowledge Distillation for Provably Transferable Adversarial Examples**
 
 cs.LG
 
@@ -509,7 +575,7 @@ cs.LG
 
 
 
-## **40. Vulnerabilities in Machine Learning-Based Voice Disorder Detection Systems**
+## **45. Vulnerabilities in Machine Learning-Based Voice Disorder Detection Systems**
 
 cs.CR
 
@@ -523,7 +589,7 @@ cs.CR
 
 
 
-## **41. NetSafe: Exploring the Topological Safety of Multi-agent Networks**
+## **46. NetSafe: Exploring the Topological Safety of Multi-agent Networks**
 
 cs.MA
 
@@ -535,7 +601,7 @@ cs.MA
 
 
 
-## **42. Patrol Security Game: Defending Against Adversary with Freedom in Attack Timing, Location, and Duration**
+## **47. Patrol Security Game: Defending Against Adversary with Freedom in Attack Timing, Location, and Duration**
 
 cs.AI
 
@@ -549,7 +615,7 @@ Under review of TCPS
 
 
 
-## **43. TrojanForge: Generating Adversarial Hardware Trojan Examples with Reinforcement Learning**
+## **48. TrojanForge: Generating Adversarial Hardware Trojan Examples with Reinforcement Learning**
 
 cs.CR
 
@@ -561,7 +627,7 @@ cs.CR
 
 
 
-## **44. BRC20 Pinning Attack**
+## **49. BRC20 Pinning Attack**
 
 cs.CR
 
@@ -573,7 +639,7 @@ cs.CR
 
 
 
-## **45. Revisit, Extend, and Enhance Hessian-Free Influence Functions**
+## **50. Revisit, Extend, and Enhance Hessian-Free Influence Functions**
 
 cs.LG
 
@@ -582,66 +648,6 @@ cs.LG
 **Authors**: Ziao Yang, Han Yue, Jian Chen, Hongfu Liu
 
 **Abstract**: Influence functions serve as crucial tools for assessing sample influence in model interpretation, subset training set selection, noisy label detection, and more. By employing the first-order Taylor extension, influence functions can estimate sample influence without the need for expensive model retraining. However, applying influence functions directly to deep models presents challenges, primarily due to the non-convex nature of the loss function and the large size of model parameters. This difficulty not only makes computing the inverse of the Hessian matrix costly but also renders it non-existent in some cases. Various approaches, including matrix decomposition, have been explored to expedite and approximate the inversion of the Hessian matrix, with the aim of making influence functions applicable to deep models. In this paper, we revisit a specific, albeit naive, yet effective approximation method known as TracIn. This method substitutes the inverse of the Hessian matrix with an identity matrix. We provide deeper insights into why this simple approximation method performs well. Furthermore, we extend its applications beyond measuring model utility to include considerations of fairness and robustness. Finally, we enhance TracIn through an ensemble strategy. To validate its effectiveness, we conduct experiments on synthetic data and extensive evaluations on noisy label detection, sample selection for large language model fine-tuning, and defense against adversarial attacks.
-
-
-
-## **46. Watermarking Counterfactual Explanations**
-
-cs.LG
-
-**SubmitDate**: 2024-10-20    [abs](http://arxiv.org/abs/2405.18671v2) [paper-pdf](http://arxiv.org/pdf/2405.18671v2)
-
-**Authors**: Hangzhi Guo, Firdaus Ahmed Choudhury, Tinghua Chen, Amulya Yadav
-
-**Abstract**: Counterfactual (CF) explanations for ML model predictions provide actionable recourse recommendations to individuals adversely impacted by predicted outcomes. However, despite being preferred by end-users, CF explanations have been shown to pose significant security risks in real-world applications; in particular, malicious adversaries can exploit CF explanations to perform query-efficient model extraction attacks on the underlying proprietary ML model. To address this security challenge, we propose CFMark, a novel model-agnostic watermarking framework for detecting unauthorized model extraction attacks relying on CF explanations. CFMark involves a novel bi-level optimization problem to embed an indistinguishable watermark into the generated CF explanation such that any future model extraction attacks using these watermarked CF explanations can be detected using a null hypothesis significance testing (NHST) scheme. At the same time, the embedded watermark does not compromise the quality of the CF explanations. We evaluate CFMark across diverse real-world datasets, CF explanation methods, and model extraction techniques. Our empirical results demonstrate CFMark's effectiveness, achieving an F-1 score of ~0.89 in identifying unauthorized model extraction attacks using watermarked CF explanations. Importantly, this watermarking incurs only a negligible degradation in the quality of generated CF explanations (i.e., ~1.3% degradation in validity and ~1.6% in proximity). Our work establishes a critical foundation for the secure deployment of CF explanations in real-world applications.
-
-
-
-## **47. Efficient Model Extraction via Boundary Sampling**
-
-cs.CR
-
-**SubmitDate**: 2024-10-20    [abs](http://arxiv.org/abs/2410.15429v1) [paper-pdf](http://arxiv.org/pdf/2410.15429v1)
-
-**Authors**: Maor Biton Dor, Yisroel Mirsky
-
-**Abstract**: This paper introduces a novel data-free model extraction attack that significantly advances the current state-of-the-art in terms of efficiency, accuracy, and effectiveness. Traditional black-box methods rely on using the victim's model as an oracle to label a vast number of samples within high-confidence areas. This approach not only requires an extensive number of queries but also results in a less accurate and less transferable model. In contrast, our method innovates by focusing on sampling low-confidence areas (along the decision boundaries) and employing an evolutionary algorithm to optimize the sampling process. These novel contributions allow for a dramatic reduction in the number of queries needed by the attacker by a factor of 10x to 600x while simultaneously improving the accuracy of the stolen model. Moreover, our approach improves boundary alignment, resulting in better transferability of adversarial examples from the stolen model to the victim's model (increasing the attack success rate from 60\% to 82\% on average). Finally, we accomplish all of this with a strict black-box assumption on the victim, with no knowledge of the target's architecture or dataset.   We demonstrate our attack on three datasets with increasingly larger resolutions and compare our performance to four state-of-the-art model extraction attacks.
-
-
-
-## **48. PEAS: A Strategy for Crafting Transferable Adversarial Examples**
-
-cs.LG
-
-**SubmitDate**: 2024-10-20    [abs](http://arxiv.org/abs/2410.15409v1) [paper-pdf](http://arxiv.org/pdf/2410.15409v1)
-
-**Authors**: Bar Avraham, Yisroel Mirsky
-
-**Abstract**: Black box attacks, where adversaries have limited knowledge of the target model, pose a significant threat to machine learning systems. Adversarial examples generated with a substitute model often suffer from limited transferability to the target model. While recent work explores ranking perturbations for improved success rates, these methods see only modest gains. We propose a novel strategy called PEAS that can boost the transferability of existing black box attacks. PEAS leverages the insight that samples which are perceptually equivalent exhibit significant variability in their adversarial transferability. Our approach first generates a set of images from an initial sample via subtle augmentations. We then evaluate the transferability of adversarial perturbations on these images using a set of substitute models. Finally, the most transferable adversarial example is selected and used for the attack. Our experiments show that PEAS can double the performance of existing attacks, achieving a 2.5x improvement in attack success rates on average over current ranking methods. We thoroughly evaluate PEAS on ImageNet and CIFAR-10, analyze hyperparameter impacts, and provide an ablation study to isolate each component's importance.
-
-
-
-## **49. Faster-GCG: Efficient Discrete Optimization Jailbreak Attacks against Aligned Large Language Models**
-
-cs.LG
-
-**SubmitDate**: 2024-10-20    [abs](http://arxiv.org/abs/2410.15362v1) [paper-pdf](http://arxiv.org/pdf/2410.15362v1)
-
-**Authors**: Xiao Li, Zhuhong Li, Qiongxiu Li, Bingze Lee, Jinghao Cui, Xiaolin Hu
-
-**Abstract**: Aligned Large Language Models (LLMs) have demonstrated remarkable performance across various tasks. However, LLMs remain susceptible to jailbreak adversarial attacks, where adversaries manipulate prompts to elicit malicious responses that aligned LLMs should have avoided. Identifying these vulnerabilities is crucial for understanding the inherent weaknesses of LLMs and preventing their potential misuse. One pioneering work in jailbreaking is the GCG attack, a discrete token optimization algorithm that seeks to find a suffix capable of jailbreaking aligned LLMs. Despite the success of GCG, we find it suboptimal, requiring significantly large computational costs, and the achieved jailbreaking performance is limited. In this work, we propose Faster-GCG, an efficient adversarial jailbreak method by delving deep into the design of GCG. Experiments demonstrate that Faster-GCG can surpass the original GCG with only 1/10 of the computational cost, achieving significantly higher attack success rates on various open-source aligned LLMs. In addition, We demonstrate that Faster-GCG exhibits improved attack transferability when testing on closed-sourced LLMs such as ChatGPT.
-
-
-
-## **50. Jailbreaking and Mitigation of Vulnerabilities in Large Language Models**
-
-cs.CR
-
-**SubmitDate**: 2024-10-20    [abs](http://arxiv.org/abs/2410.15236v1) [paper-pdf](http://arxiv.org/pdf/2410.15236v1)
-
-**Authors**: Benji Peng, Ziqian Bi, Qian Niu, Ming Liu, Pohsun Feng, Tianyang Wang, Lawrence K. Q. Yan, Yizhu Wen, Yichao Zhang, Caitlyn Heqi Yin
-
-**Abstract**: Large Language Models (LLMs) have transformed artificial intelligence by advancing natural language understanding and generation, enabling applications across fields beyond healthcare, software engineering, and conversational systems. Despite these advancements in the past few years, LLMs have shown considerable vulnerabilities, particularly to prompt injection and jailbreaking attacks. This review analyzes the state of research on these vulnerabilities and presents available defense strategies. We roughly categorize attack approaches into prompt-based, model-based, multimodal, and multilingual, covering techniques such as adversarial prompting, backdoor injections, and cross-modality exploits. We also review various defense mechanisms, including prompt filtering, transformation, alignment techniques, multi-agent defenses, and self-regulation, evaluating their strengths and shortcomings. We also discuss key metrics and benchmarks used to assess LLM safety and robustness, noting challenges like the quantification of attack success in interactive contexts and biases in existing datasets. Identifying current research gaps, we suggest future directions for resilient alignment strategies, advanced defenses against evolving attacks, automation of jailbreak detection, and consideration of ethical and societal impacts. This review emphasizes the need for continued research and cooperation within the AI community to enhance LLM security and ensure their safe deployment.
 
 
 

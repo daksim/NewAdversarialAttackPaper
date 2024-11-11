@@ -1,5 +1,5 @@
 # Latest Adversarial Attack Papers
-**update at 2024-11-08 16:09:02**
+**update at 2024-11-11 09:21:10**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
@@ -103,7 +103,7 @@ cs.NI
 
 30 pages, 21 figures, 5 tables, accepted to appear in IEEE COMST
 
-**SubmitDate**: 2024-11-07    [abs](http://arxiv.org/abs/2411.04365v1) [paper-pdf](http://arxiv.org/pdf/2411.04365v1)
+**SubmitDate**: 2024-11-08    [abs](http://arxiv.org/abs/2411.04365v2) [paper-pdf](http://arxiv.org/pdf/2411.04365v2)
 
 **Authors**: Lan-Huong Nguyen, Van-Linh Nguyen, Ren-Hung Hwang, Jian-Jhih Kuo, Yu-Wen Chen, Chien-Chung Huang, Ping-I Pan
 

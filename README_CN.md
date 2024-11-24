@@ -1,9 +1,37 @@
 # Latest Adversarial Attack Papers
-**update at 2024-11-22 10:20:01**
+**update at 2024-11-24 12:16:03**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. Indiscriminate Disruption of Conditional Inference on Multivariate Gaussians**
+## **1. Learning Fair Robustness via Domain Mixup**
+
+通过域名混淆学习公平稳健性 cs.LG
+
+**SubmitDate**: 2024-11-21    [abs](http://arxiv.org/abs/2411.14424v1) [paper-pdf](http://arxiv.org/pdf/2411.14424v1)
+
+**Authors**: Meiyu Zhong, Ravi Tandon
+
+**Abstract**: Adversarial training is one of the predominant techniques for training classifiers that are robust to adversarial attacks. Recent work, however has found that adversarial training, which makes the overall classifier robust, it does not necessarily provide equal amount of robustness for all classes. In this paper, we propose the use of mixup for the problem of learning fair robust classifiers, which can provide similar robustness across all classes. Specifically, the idea is to mix inputs from the same classes and perform adversarial training on mixed up inputs. We present a theoretical analysis of this idea for the case of linear classifiers and show that mixup combined with adversarial training can provably reduce the class-wise robustness disparity. This method not only contributes to reducing the disparity in class-wise adversarial risk, but also the class-wise natural risk. Complementing our theoretical analysis, we also provide experimental results on both synthetic data and the real world dataset (CIFAR-10), which shows improvement in class wise disparities for both natural and adversarial risks.
+
+摘要: 对抗性训练是训练对敌方攻击具有较强鲁棒性的分类器的主要技术之一。然而，最近的工作发现，使整体分类器稳健的对抗性训练，并不一定为所有类别提供等量的稳健性。在本文中，我们提出使用混合算法来解决公平稳健分类器的学习问题，它可以在所有类别上提供相似的稳健性。具体地说，这个想法是混合来自相同班级的输入，并对混合输入进行对抗性训练。对于线性分类器的情况，我们给出了这一思想的理论分析，并证明了混合和对抗性训练相结合可以有效地减少类之间的健壮性差异。这种方法不仅有助于缩小类别对抗风险的差异，而且有助于缩小类别自然风险的差异。作为理论分析的补充，我们还提供了在合成数据和真实世界数据集(CIFAR-10)上的实验结果，这表明自然风险和对抗风险的类别差异都有所改善。
+
+
+
+## **2. Adversarial Poisoning Attack on Quantum Machine Learning Models**
+
+量子机器学习模型的对抗中毒攻击 quant-ph
+
+**SubmitDate**: 2024-11-21    [abs](http://arxiv.org/abs/2411.14412v1) [paper-pdf](http://arxiv.org/pdf/2411.14412v1)
+
+**Authors**: Satwik Kundu, Swaroop Ghosh
+
+**Abstract**: With the growing interest in Quantum Machine Learning (QML) and the increasing availability of quantum computers through cloud providers, addressing the potential security risks associated with QML has become an urgent priority. One key concern in the QML domain is the threat of data poisoning attacks in the current quantum cloud setting. Adversarial access to training data could severely compromise the integrity and availability of QML models. Classical data poisoning techniques require significant knowledge and training to generate poisoned data, and lack noise resilience, making them ineffective for QML models in the Noisy Intermediate Scale Quantum (NISQ) era. In this work, we first propose a simple yet effective technique to measure intra-class encoder state similarity (ESS) by analyzing the outputs of encoding circuits. Leveraging this approach, we introduce a quantum indiscriminate data poisoning attack, QUID. Through extensive experiments conducted in both noiseless and noisy environments (e.g., IBM\_Brisbane's noise), across various architectures and datasets, QUID achieves up to $92\%$ accuracy degradation in model performance compared to baseline models and up to $75\%$ accuracy degradation compared to random label-flipping. We also tested QUID against state-of-the-art classical defenses, with accuracy degradation still exceeding $50\%$, demonstrating its effectiveness. This work represents the first attempt to reevaluate data poisoning attacks in the context of QML.
+
+摘要: 随着人们对量子机器学习(QML)的兴趣与日俱增，以及通过云提供商获得越来越多的量子计算机，解决与QML相关的潜在安全风险已成为当务之急。QML领域的一个关键问题是当前量子云环境下的数据中毒攻击威胁。对训练数据的恶意访问可能会严重损害QML模型的完整性和可用性。经典的数据中毒技术需要大量的知识和训练来生成有毒数据，并且缺乏抗噪能力，使得它们在噪声中尺度量子(NISQ)时代对QML模型无效。在这项工作中，我们首先提出了一种简单而有效的技术，通过分析编码电路的输出来度量类内编码器状态相似性(ESS)。利用这种方法，我们引入了一种量子不分青红皂白的数据中毒攻击，Quid。通过在无噪声和有噪声的环境(例如，IBM布里斯班的噪声)中进行的广泛实验，在不同的架构和数据集上，QUID实现了与基准模型相比模型性能的高达92美元的精度下降，与随机标签翻转相比的高达75美元的精度下降。我们还测试了QUID与最先进的经典防御系统的对比，精确度下降仍超过50美元，证明了其有效性。这项工作是在QML环境下重新评估数据中毒攻击的第一次尝试。
+
+
+
+## **3. Indiscriminate Disruption of Conditional Inference on Multivariate Gaussians**
 
 不加区别地破坏多元高斯的条件推理 stat.ML
 
@@ -19,7 +47,7 @@
 
 
 
-## **2. Layer Pruning with Consensus: A Triple-Win Solution**
+## **4. Layer Pruning with Consensus: A Triple-Win Solution**
 
 达成共识的分层修剪：三赢解决方案 cs.LG
 
@@ -33,7 +61,7 @@
 
 
 
-## **3. Generating Realistic Adversarial Examples for Business Processes using Variational Autoencoders**
+## **5. Generating Realistic Adversarial Examples for Business Processes using Variational Autoencoders**
 
 使用变分自动编码器生成业务流程的现实对抗示例 cs.LG
 
@@ -47,7 +75,7 @@
 
 
 
-## **4. AnywhereDoor: Multi-Target Backdoor Attacks on Object Detection**
+## **6. AnywhereDoor: Multi-Target Backdoor Attacks on Object Detection**
 
 AnywhereDoor：对象检测的多目标后门攻击 cs.CR
 
@@ -61,7 +89,7 @@ AnywhereDoor：对象检测的多目标后门攻击 cs.CR
 
 
 
-## **5. GASP: Efficient Black-Box Generation of Adversarial Suffixes for Jailbreaking LLMs**
+## **7. GASP: Efficient Black-Box Generation of Adversarial Suffixes for Jailbreaking LLMs**
 
 GISP：针对越狱LLM的对抗性后缀的高效黑匣子生成 cs.LG
 
@@ -77,7 +105,7 @@ GISP：针对越狱LLM的对抗性后缀的高效黑匣子生成 cs.LG
 
 
 
-## **6. RAG-Thief: Scalable Extraction of Private Data from Retrieval-Augmented Generation Applications with Agent-based Attacks**
+## **8. RAG-Thief: Scalable Extraction of Private Data from Retrieval-Augmented Generation Applications with Agent-based Attacks**
 
 RAG-Thief：利用基于代理的攻击从检索增强生成应用程序中可扩展地提取私人数据 cs.CR
 
@@ -91,7 +119,7 @@ RAG-Thief：利用基于代理的攻击从检索增强生成应用程序中可�
 
 
 
-## **7. AdaNCA: Neural Cellular Automata As Adaptors For More Robust Vision Transformer**
+## **9. AdaNCA: Neural Cellular Automata As Adaptors For More Robust Vision Transformer**
 
 AdaNCA：神经元胞自动机作为更稳健的视觉Transformer的适配器 cs.CV
 
@@ -107,7 +135,7 @@ AdaNCA：神经元胞自动机作为更稳健的视觉Transformer的适配器 cs
 
 
 
-## **8. Verifying the Robustness of Automatic Credibility Assessment**
+## **10. Verifying the Robustness of Automatic Credibility Assessment**
 
 验证自动可信度评估的稳健性 cs.CL
 
@@ -121,7 +149,7 @@ AdaNCA：神经元胞自动机作为更稳健的视觉Transformer的适配器 cs
 
 
 
-## **9. Robust Data-Driven Predictive Control for Mixed Platoons under Noise and Attacks**
+## **11. Robust Data-Driven Predictive Control for Mixed Platoons under Noise and Attacks**
 
 噪音和攻击下混合排的鲁棒数据驱动预测控制 eess.SY
 
@@ -137,7 +165,7 @@ AdaNCA：神经元胞自动机作为更稳健的视觉Transformer的适配器 cs
 
 
 
-## **10. Magmaw: Modality-Agnostic Adversarial Attacks on Machine Learning-Based Wireless Communication Systems**
+## **12. Magmaw: Modality-Agnostic Adversarial Attacks on Machine Learning-Based Wireless Communication Systems**
 
 Magmaw：对基于机器学习的无线通信系统的模式不可知的对抗攻击 cs.CR
 
@@ -153,7 +181,7 @@ Accepted at NDSS 2025
 
 
 
-## **11. Towards Understanding Adversarial Transferability in Federated Learning**
+## **13. Towards Understanding Adversarial Transferability in Federated Learning**
 
 了解联邦学习中的对抗可移植性 cs.LG
 
@@ -169,7 +197,7 @@ Published in Transactions on Machine Learning Research (TMLR)  (11/2024)
 
 
 
-## **12. TransLinkGuard: Safeguarding Transformer Models Against Model Stealing in Edge Deployment**
+## **14. TransLinkGuard: Safeguarding Transformer Models Against Model Stealing in Edge Deployment**
 
 TransLinkGuard：保护Transformer模型，防止边缘部署中的模型窃取 cs.CR
 
@@ -185,7 +213,7 @@ Accepted by ACM MM24 Conference
 
 
 
-## **13. Physical Adversarial Attack meets Computer Vision: A Decade Survey**
+## **15. Physical Adversarial Attack meets Computer Vision: A Decade Survey**
 
 物理对抗攻击与计算机视觉：十年调查 cs.CV
 
@@ -201,7 +229,7 @@ Published at IEEE TPAMI. GitHub:https://github.com/weihui1308/PAA
 
 
 
-## **14. A Survey on Adversarial Robustness of LiDAR-based Machine Learning Perception in Autonomous Vehicles**
+## **16. A Survey on Adversarial Robustness of LiDAR-based Machine Learning Perception in Autonomous Vehicles**
 
 自动驾驶车辆中基于LiDART的机器学习感知的对抗鲁棒性调查 cs.LG
 
@@ -217,7 +245,7 @@ Published at IEEE TPAMI. GitHub:https://github.com/weihui1308/PAA
 
 
 
-## **15. WaterPark: A Robustness Assessment of Language Model Watermarking**
+## **17. WaterPark: A Robustness Assessment of Language Model Watermarking**
 
 WaterPark：语言模型水印的稳健性评估 cs.CR
 
@@ -233,7 +261,7 @@ WaterPark：语言模型水印的稳健性评估 cs.CR
 
 
 
-## **16. CopyrightMeter: Revisiting Copyright Protection in Text-to-image Models**
+## **18. CopyrightMeter: Revisiting Copyright Protection in Text-to-image Models**
 
 CopyrightMeter：重新审视文本到图像模型中的版权保护 cs.CR
 
@@ -247,7 +275,7 @@ CopyrightMeter：重新审视文本到图像模型中的版权保护 cs.CR
 
 
 
-## **17. TAPT: Test-Time Adversarial Prompt Tuning for Robust Inference in Vision-Language Models**
+## **19. TAPT: Test-Time Adversarial Prompt Tuning for Robust Inference in Vision-Language Models**
 
 TAPT：测试时对抗快速调整视觉语言模型中的鲁棒推理 cs.CV
 
@@ -261,7 +289,7 @@ TAPT：测试时对抗快速调整视觉语言模型中的鲁棒推理 cs.CV
 
 
 
-## **18. Disco Intelligent Omni-Surfaces: 360-degree Fully-Passive Jamming Attacks**
+## **20. Disco Intelligent Omni-Surfaces: 360-degree Fully-Passive Jamming Attacks**
 
 迪斯科智能全方位：360度全被动干扰攻击 eess.SP
 
@@ -277,7 +305,7 @@ This paper has been submitted to IEEE TWC for possible publication
 
 
 
-## **19. Efficient Model-Stealing Attacks Against Inductive Graph Neural Networks**
+## **21. Efficient Model-Stealing Attacks Against Inductive Graph Neural Networks**
 
 针对归纳图神经网络的有效模型窃取攻击 cs.LG
 
@@ -293,7 +321,7 @@ Accepted at ECAI - 27th European Conference on Artificial  Intelligence
 
 
 
-## **20. Attribute Inference Attacks for Federated Regression Tasks**
+## **22. Attribute Inference Attacks for Federated Regression Tasks**
 
 针对联邦回归任务的属性推理攻击 cs.LG
 
@@ -307,7 +335,7 @@ Accepted at ECAI - 27th European Conference on Artificial  Intelligence
 
 
 
-## **21. Stochastic BIQA: Median Randomized Smoothing for Certified Blind Image Quality Assessment**
+## **23. Stochastic BIQA: Median Randomized Smoothing for Certified Blind Image Quality Assessment**
 
 随机BIQA：用于认证盲图像质量评估的随机中位数平滑 eess.IV
 
@@ -321,7 +349,7 @@ Accepted at ECAI - 27th European Conference on Artificial  Intelligence
 
 
 
-## **22. Variational Bayesian Bow tie Neural Networks with Shrinkage**
+## **24. Variational Bayesian Bow tie Neural Networks with Shrinkage**
 
 具有收缩性的变分Bayesian领结神经网络 stat.ML
 
@@ -335,7 +363,7 @@ Accepted at ECAI - 27th European Conference on Artificial  Intelligence
 
 
 
-## **23. NMT-Obfuscator Attack: Ignore a sentence in translation with only one word**
+## **25. NMT-Obfuscator Attack: Ignore a sentence in translation with only one word**
 
 NMT-Obfuscator攻击：忽略翻译中只有一个单词的句子 cs.CL
 
@@ -349,7 +377,7 @@ NMT-Obfuscator攻击：忽略翻译中只有一个单词的句子 cs.CL
 
 
 
-## **24. Efficient Verifiable Differential Privacy with Input Authenticity in the Local and Shuffle Model**
+## **26. Efficient Verifiable Differential Privacy with Input Authenticity in the Local and Shuffle Model**
 
 本地和洗牌模型中具有输入真实性的高效可验证差异隐私 cs.CR
 
@@ -365,7 +393,7 @@ NMT-Obfuscator攻击：忽略翻译中只有一个单词的句子 cs.CL
 
 
 
-## **25. DeTrigger: A Gradient-Centric Approach to Backdoor Attack Mitigation in Federated Learning**
+## **27. DeTrigger: A Gradient-Centric Approach to Backdoor Attack Mitigation in Federated Learning**
 
 DeTrigger：联邦学习中以用户为中心的后门攻击缓解方法 cs.LG
 
@@ -381,7 +409,7 @@ DeTrigger：联邦学习中以用户为中心的后门攻击缓解方法 cs.LG
 
 
 
-## **26. Architectural Patterns for Designing Quantum Artificial Intelligence Systems**
+## **28. Architectural Patterns for Designing Quantum Artificial Intelligence Systems**
 
 设计量子人工智能系统的架构模式 cs.SE
 
@@ -395,7 +423,7 @@ DeTrigger：联邦学习中以用户为中心的后门攻击缓解方法 cs.LG
 
 
 
-## **27. Adversarial Multi-Agent Reinforcement Learning for Proactive False Data Injection Detection**
+## **29. Adversarial Multi-Agent Reinforcement Learning for Proactive False Data Injection Detection**
 
 用于主动错误数据注入检测的对抗性多智能体强化学习 eess.SY
 
@@ -409,7 +437,7 @@ DeTrigger：联邦学习中以用户为中心的后门攻击缓解方法 cs.LG
 
 
 
-## **28. Theoretical Corrections and the Leveraging of Reinforcement Learning to Enhance Triangle Attack**
+## **30. Theoretical Corrections and the Leveraging of Reinforcement Learning to Enhance Triangle Attack**
 
 理论修正和利用强化学习增强三角攻击 cs.LG
 
@@ -423,7 +451,7 @@ DeTrigger：联邦学习中以用户为中心的后门攻击缓解方法 cs.LG
 
 
 
-## **29. Exploring adversarial robustness of JPEG AI: methodology, comparison and new methods**
+## **31. Exploring adversarial robustness of JPEG AI: methodology, comparison and new methods**
 
 探索JPEG AI的对抗鲁棒性：方法论、比较和新方法 eess.IV
 
@@ -437,7 +465,7 @@ DeTrigger：联邦学习中以用户为中心的后门攻击缓解方法 cs.LG
 
 
 
-## **30. Robust Subgraph Learning by Monitoring Early Training Representations**
+## **32. Robust Subgraph Learning by Monitoring Early Training Representations**
 
 通过监控早期训练表示进行稳健的子图学习 cs.LG
 
@@ -451,7 +479,7 @@ DeTrigger：联邦学习中以用户为中心的后门攻击缓解方法 cs.LG
 
 
 
-## **31. Eidos: Efficient, Imperceptible Adversarial 3D Point Clouds**
+## **33. Eidos: Efficient, Imperceptible Adversarial 3D Point Clouds**
 
 Eidos：高效、不可感知的对抗性3D点云 cs.CV
 
@@ -467,7 +495,7 @@ Preprint
 
 
 
-## **32. Bitcoin Under Volatile Block Rewards: How Mempool Statistics Can Influence Bitcoin Mining**
+## **34. Bitcoin Under Volatile Block Rewards: How Mempool Statistics Can Influence Bitcoin Mining**
 
 波动性区块奖励下的比特币：Mempool统计数据如何影响比特币采矿 cs.CR
 
@@ -481,7 +509,7 @@ Preprint
 
 
 
-## **33. TrojanRobot: Backdoor Attacks Against Robotic Manipulation in the Physical World**
+## **35. TrojanRobot: Backdoor Attacks Against Robotic Manipulation in the Physical World**
 
 特洛伊机器人：针对物理世界中机器人操纵的后门攻击 cs.RO
 
@@ -497,7 +525,7 @@ Initial version with preliminary results. We welcome any feedback or  suggestion
 
 
 
-## **34. Few-shot Model Extraction Attacks against Sequential Recommender Systems**
+## **36. Few-shot Model Extraction Attacks against Sequential Recommender Systems**
 
 针对顺序推荐系统的少镜头模型提取攻击 cs.LG
 
@@ -511,7 +539,7 @@ Initial version with preliminary results. We welcome any feedback or  suggestion
 
 
 
-## **35. Formal Verification of Deep Neural Networks for Object Detection**
+## **37. Formal Verification of Deep Neural Networks for Object Detection**
 
 用于对象检测的深度神经网络的形式化验证 cs.CV
 
@@ -525,7 +553,7 @@ Initial version with preliminary results. We welcome any feedback or  suggestion
 
 
 
-## **36. The Dark Side of Trust: Authority Citation-Driven Jailbreak Attacks on Large Language Models**
+## **38. The Dark Side of Trust: Authority Citation-Driven Jailbreak Attacks on Large Language Models**
 
 信任的阴暗面：权威引用驱动的对大型语言模型的越狱攻击 cs.LG
 
@@ -539,7 +567,7 @@ Initial version with preliminary results. We welcome any feedback or  suggestion
 
 
 
-## **37. Hacking Back the AI-Hacker: Prompt Injection as a Defense Against LLM-driven Cyberattacks**
+## **39. Hacking Back the AI-Hacker: Prompt Injection as a Defense Against LLM-driven Cyberattacks**
 
 黑客攻击人工智能黑客：即时注入作为抵御LLM驱动的网络攻击的防御 cs.CR
 
@@ -555,7 +583,7 @@ v0.2 (evaluated on more agents)
 
 
 
-## **38. Adapting to Cyber Threats: A Phishing Evolution Network (PEN) Framework for Phishing Generation and Analyzing Evolution Patterns using Large Language Models**
+## **40. Adapting to Cyber Threats: A Phishing Evolution Network (PEN) Framework for Phishing Generation and Analyzing Evolution Patterns using Large Language Models**
 
 适应网络威胁：用于使用大型语言模型进行网络钓鱼生成和分析进化模式的网络钓鱼进化网络（PEN）框架 cs.CR
 
@@ -569,7 +597,7 @@ v0.2 (evaluated on more agents)
 
 
 
-## **39. CROW: Eliminating Backdoors from Large Language Models via Internal Consistency Regularization**
+## **41. CROW: Eliminating Backdoors from Large Language Models via Internal Consistency Regularization**
 
 CROW：通过内部一致性规范化消除大型语言模型的后门 cs.CL
 
@@ -583,7 +611,7 @@ CROW：通过内部一致性规范化消除大型语言模型的后门 cs.CL
 
 
 
-## **40. CausalDiff: Causality-Inspired Disentanglement via Diffusion Model for Adversarial Defense**
+## **42. CausalDiff: Causality-Inspired Disentanglement via Diffusion Model for Adversarial Defense**
 
 卡西姆·分歧：通过对抗性防御的扩散模型来启发性解纠缠 cs.CV
 
@@ -599,7 +627,7 @@ accepted by NeurIPS 2024
 
 
 
-## **41. Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics**
+## **43. Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics**
 
 探索机器人学中视觉-语言-动作模型的对抗脆弱性 cs.RO
 
@@ -613,7 +641,7 @@ accepted by NeurIPS 2024
 
 
 
-## **42. Countering Backdoor Attacks in Image Recognition: A Survey and Evaluation of Mitigation Strategies**
+## **44. Countering Backdoor Attacks in Image Recognition: A Survey and Evaluation of Mitigation Strategies**
 
 对抗图像识别中的后门攻击：缓解策略的调查和评估 cs.CR
 
@@ -627,7 +655,7 @@ accepted by NeurIPS 2024
 
 
 
-## **43. Exploiting the Uncoordinated Privacy Protections of Eye Tracking and VR Motion Data for Unauthorized User Identification**
+## **45. Exploiting the Uncoordinated Privacy Protections of Eye Tracking and VR Motion Data for Unauthorized User Identification**
 
 利用眼动追踪和VR运动数据的不协调隐私保护来识别未经授权的用户 cs.HC
 
@@ -641,7 +669,7 @@ accepted by NeurIPS 2024
 
 
 
-## **44. Optimal Denial-of-Service Attacks Against Partially-Observable Real-Time Monitoring Systems**
+## **46. Optimal Denial-of-Service Attacks Against Partially-Observable Real-Time Monitoring Systems**
 
 针对部分可观察实时监控系统的最佳拒绝服务攻击 cs.IT
 
@@ -657,7 +685,7 @@ arXiv admin note: text overlap with arXiv:2403.04489
 
 
 
-## **45. CLMIA: Membership Inference Attacks via Unsupervised Contrastive Learning**
+## **47. CLMIA: Membership Inference Attacks via Unsupervised Contrastive Learning**
 
 CLMIA：通过无监督对比学习的成员推断攻击 cs.LG
 
@@ -671,7 +699,7 @@ CLMIA：通过无监督对比学习的成员推断攻击 cs.LG
 
 
 
-## **46. JailbreakLens: Interpreting Jailbreak Mechanism in the Lens of Representation and Circuit**
+## **48. JailbreakLens: Interpreting Jailbreak Mechanism in the Lens of Representation and Circuit**
 
 越狱镜头：以表象和电路的视角解读越狱机制 cs.CR
 
@@ -687,7 +715,7 @@ CLMIA：通过无监督对比学习的成员推断攻击 cs.LG
 
 
 
-## **47. Exploring the Adversarial Frontier: Quantifying Robustness via Adversarial Hypervolume**
+## **49. Exploring the Adversarial Frontier: Quantifying Robustness via Adversarial Hypervolume**
 
 探索对抗前沿：通过对抗超容量量化稳健性 cs.CR
 
@@ -701,7 +729,7 @@ CLMIA：通过无监督对比学习的成员推断攻击 cs.LG
 
 
 
-## **48. Game-Theoretic Neyman-Pearson Detection to Combat Strategic Evasion**
+## **50. Game-Theoretic Neyman-Pearson Detection to Combat Strategic Evasion**
 
 游戏理论的内曼-皮尔森检测对抗战略规避 cs.CR
 
@@ -712,38 +740,6 @@ CLMIA：通过无监督对比学习的成员推断攻击 cs.LG
 **Abstract**: The security in networked systems depends greatly on recognizing and identifying adversarial behaviors. Traditional detection methods focus on specific categories of attacks and have become inadequate for increasingly stealthy and deceptive attacks that are designed to bypass detection strategically. This work aims to develop a holistic theory to countermeasure such evasive attacks. We focus on extending a fundamental class of statistical-based detection methods based on Neyman-Pearson's (NP) hypothesis testing formulation. We propose game-theoretic frameworks to capture the conflicting relationship between a strategic evasive attacker and an evasion-aware NP detector. By analyzing both the equilibrium behaviors of the attacker and the NP detector, we characterize their performance using Equilibrium Receiver-Operational-Characteristic (EROC) curves. We show that the evasion-aware NP detectors outperform the passive ones in the way that the former can act strategically against the attacker's behavior and adaptively modify their decision rules based on the received messages. In addition, we extend our framework to a sequential setting where the user sends out identically distributed messages. We corroborate the analytical results with a case study of anomaly detection.
 
 摘要: 网络系统的安全性在很大程度上取决于对敌方行为的识别和识别。传统的检测方法侧重于特定类别的攻击，已不适用于日益隐蔽和欺骗性的攻击，这些攻击旨在从战略上绕过检测。这项工作旨在开发一种整体理论来对抗这种规避攻击。基于Neyman-Pearson(NP)假设检验公式，我们重点扩展了一类基本的基于统计的检测方法。我们提出了博弈论框架来捕捉战略规避攻击者和规避感知NP检测器之间的冲突关系。通过分析攻击者和NP检测器的均衡行为，我们用均衡接收-操作-特征(EROC)曲线来表征它们的性能。我们证明了逃避感知NP检测器的性能优于被动NP检测器，前者可以针对攻击者的行为采取策略性行动，并根据收到的消息自适应地修改其决策规则。此外，我们将我们的框架扩展到顺序设置，在该设置中，用户发送相同分布的消息。我们通过一个异常检测的案例验证了分析结果。
-
-
-
-## **49. A Survey of Graph Unlearning**
-
-图形遗忘研究综述 cs.LG
-
-22 page review paper on graph unlearning
-
-**SubmitDate**: 2024-11-16    [abs](http://arxiv.org/abs/2310.02164v3) [paper-pdf](http://arxiv.org/pdf/2310.02164v3)
-
-**Authors**: Anwar Said, Yuying Zhao, Tyler Derr, Mudassir Shabbir, Waseem Abbas, Xenofon Koutsoukos
-
-**Abstract**: Graph unlearning emerges as a crucial advancement in the pursuit of responsible AI, providing the means to remove sensitive data traces from trained models, thereby upholding the right to be forgotten. It is evident that graph machine learning exhibits sensitivity to data privacy and adversarial attacks, necessitating the application of graph unlearning techniques to address these concerns effectively. In this comprehensive survey paper, we present the first systematic review of graph unlearning approaches, encompassing a diverse array of methodologies and offering a detailed taxonomy and up-to-date literature overview to facilitate the understanding of researchers new to this field. To ensure clarity, we provide lucid explanations of the fundamental concepts and evaluation measures used in graph unlearning, catering to a broader audience with varying levels of expertise. Delving into potential applications, we explore the versatility of graph unlearning across various domains, including but not limited to social networks, adversarial settings, recommender systems, and resource-constrained environments like the Internet of Things, illustrating its potential impact in safeguarding data privacy and enhancing AI systems' robustness. Finally, we shed light on promising research directions, encouraging further progress and innovation within the domain of graph unlearning. By laying a solid foundation and fostering continued progress, this survey seeks to inspire researchers to further advance the field of graph unlearning, thereby instilling confidence in the ethical growth of AI systems and reinforcing the responsible application of machine learning techniques in various domains.
-
-摘要: 在追求负责任的人工智能方面，图形遗忘成为一个关键的进步，提供了从训练的模型中移除敏感数据痕迹的手段，从而维护了被遗忘的权利。显然，图机器学习表现出对数据隐私和敌意攻击的敏感性，因此有必要应用图遗忘技术来有效地解决这些问题。在这篇全面的调查论文中，我们提出了第一次系统地回顾图形遗忘方法，包括一系列不同的方法，并提供了详细的分类和最新的文献综述，以促进新进入该领域的研究人员的理解。为了确保清晰，我们对图形遗忘中使用的基本概念和评估措施进行了清晰的解释，以迎合具有不同专业水平的更广泛的受众。深入挖掘潜在的应用，我们探索了图遗忘在不同领域的多功能性，包括但不限于社交网络、对手环境、推荐系统和物联网等资源受限环境，说明了它在保护数据隐私和增强AI系统健壮性方面的潜在影响。最后，我们阐明了有前途的研究方向，鼓励在图忘却学习领域内的进一步进步和创新。通过奠定坚实的基础和促进持续进步，这项调查旨在激励研究人员进一步推进图形遗忘领域，从而灌输对人工智能系统伦理增长的信心，并加强机器学习技术在各个领域的负责任应用。
-
-
-
-## **50. Verifiably Robust Conformal Prediction**
-
-可验证鲁棒性保形预测 cs.LO
-
-Accepted at NeurIPS 2024
-
-**SubmitDate**: 2024-11-16    [abs](http://arxiv.org/abs/2405.18942v3) [paper-pdf](http://arxiv.org/pdf/2405.18942v3)
-
-**Authors**: Linus Jeary, Tom Kuipers, Mehran Hosseini, Nicola Paoletti
-
-**Abstract**: Conformal Prediction (CP) is a popular uncertainty quantification method that provides distribution-free, statistically valid prediction sets, assuming that training and test data are exchangeable. In such a case, CP's prediction sets are guaranteed to cover the (unknown) true test output with a user-specified probability. Nevertheless, this guarantee is violated when the data is subjected to adversarial attacks, which often result in a significant loss of coverage. Recently, several approaches have been put forward to recover CP guarantees in this setting. These approaches leverage variations of randomised smoothing to produce conservative sets which account for the effect of the adversarial perturbations. They are, however, limited in that they only support $\ell^2$-bounded perturbations and classification tasks. This paper introduces VRCP (Verifiably Robust Conformal Prediction), a new framework that leverages recent neural network verification methods to recover coverage guarantees under adversarial attacks. Our VRCP method is the first to support perturbations bounded by arbitrary norms including $\ell^1$, $\ell^2$, and $\ell^\infty$, as well as regression tasks. We evaluate and compare our approach on image classification tasks (CIFAR10, CIFAR100, and TinyImageNet) and regression tasks for deep reinforcement learning environments. In every case, VRCP achieves above nominal coverage and yields significantly more efficient and informative prediction regions than the SotA.
-
-摘要: 保角预测是一种流行的不确定性量化方法，它假设训练和测试数据是可交换的，提供了无分布的、统计上有效的预测集。在这种情况下，CP的预测集保证以用户指定的概率覆盖(未知)真实测试输出。然而，当数据受到对抗性攻击时，这一保证就会被违反，这往往会导致覆盖范围的重大损失。最近，已经提出了几种在这种情况下恢复CP担保的方法。这些方法利用随机平滑的变化来产生保守集合，这些保守集合考虑了对抗性扰动的影响。然而，它们的局限性在于它们只支持$^2$有界的扰动和分类任务。本文介绍了一种新的框架VRCP，它利用最新的神经网络验证方法来恢复对抗性攻击下的覆盖保证。我们的VRCP方法是第一个支持以任意范数为界的扰动，包括$^1$，$^2$，$^inty$，以及回归任务。我们在深度强化学习环境下的图像分类任务(CIFAR10、CIFAR100和TinyImageNet)和回归任务上对我们的方法进行了评估和比较。在任何情况下，VRCP都达到了名义覆盖率以上，并产生了比SOTA更有效和更有信息量的预测区域。
 
 
 

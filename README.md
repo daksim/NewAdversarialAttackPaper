@@ -1,11 +1,35 @@
 # Latest Adversarial Attack Papers
-**update at 2024-11-22 10:20:01**
+**update at 2024-11-24 12:16:03**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
 [Attacks and Defenses in Large language Models](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_LLM.md)
 
-## **1. Indiscriminate Disruption of Conditional Inference on Multivariate Gaussians**
+## **1. Learning Fair Robustness via Domain Mixup**
+
+cs.LG
+
+**SubmitDate**: 2024-11-21    [abs](http://arxiv.org/abs/2411.14424v1) [paper-pdf](http://arxiv.org/pdf/2411.14424v1)
+
+**Authors**: Meiyu Zhong, Ravi Tandon
+
+**Abstract**: Adversarial training is one of the predominant techniques for training classifiers that are robust to adversarial attacks. Recent work, however has found that adversarial training, which makes the overall classifier robust, it does not necessarily provide equal amount of robustness for all classes. In this paper, we propose the use of mixup for the problem of learning fair robust classifiers, which can provide similar robustness across all classes. Specifically, the idea is to mix inputs from the same classes and perform adversarial training on mixed up inputs. We present a theoretical analysis of this idea for the case of linear classifiers and show that mixup combined with adversarial training can provably reduce the class-wise robustness disparity. This method not only contributes to reducing the disparity in class-wise adversarial risk, but also the class-wise natural risk. Complementing our theoretical analysis, we also provide experimental results on both synthetic data and the real world dataset (CIFAR-10), which shows improvement in class wise disparities for both natural and adversarial risks.
+
+
+
+## **2. Adversarial Poisoning Attack on Quantum Machine Learning Models**
+
+quant-ph
+
+**SubmitDate**: 2024-11-21    [abs](http://arxiv.org/abs/2411.14412v1) [paper-pdf](http://arxiv.org/pdf/2411.14412v1)
+
+**Authors**: Satwik Kundu, Swaroop Ghosh
+
+**Abstract**: With the growing interest in Quantum Machine Learning (QML) and the increasing availability of quantum computers through cloud providers, addressing the potential security risks associated with QML has become an urgent priority. One key concern in the QML domain is the threat of data poisoning attacks in the current quantum cloud setting. Adversarial access to training data could severely compromise the integrity and availability of QML models. Classical data poisoning techniques require significant knowledge and training to generate poisoned data, and lack noise resilience, making them ineffective for QML models in the Noisy Intermediate Scale Quantum (NISQ) era. In this work, we first propose a simple yet effective technique to measure intra-class encoder state similarity (ESS) by analyzing the outputs of encoding circuits. Leveraging this approach, we introduce a quantum indiscriminate data poisoning attack, QUID. Through extensive experiments conducted in both noiseless and noisy environments (e.g., IBM\_Brisbane's noise), across various architectures and datasets, QUID achieves up to $92\%$ accuracy degradation in model performance compared to baseline models and up to $75\%$ accuracy degradation compared to random label-flipping. We also tested QUID against state-of-the-art classical defenses, with accuracy degradation still exceeding $50\%$, demonstrating its effectiveness. This work represents the first attempt to reevaluate data poisoning attacks in the context of QML.
+
+
+
+## **3. Indiscriminate Disruption of Conditional Inference on Multivariate Gaussians**
 
 stat.ML
 
@@ -19,7 +43,7 @@ stat.ML
 
 
 
-## **2. Layer Pruning with Consensus: A Triple-Win Solution**
+## **4. Layer Pruning with Consensus: A Triple-Win Solution**
 
 cs.LG
 
@@ -31,7 +55,7 @@ cs.LG
 
 
 
-## **3. Generating Realistic Adversarial Examples for Business Processes using Variational Autoencoders**
+## **5. Generating Realistic Adversarial Examples for Business Processes using Variational Autoencoders**
 
 cs.LG
 
@@ -43,7 +67,7 @@ cs.LG
 
 
 
-## **4. AnywhereDoor: Multi-Target Backdoor Attacks on Object Detection**
+## **6. AnywhereDoor: Multi-Target Backdoor Attacks on Object Detection**
 
 cs.CR
 
@@ -55,7 +79,7 @@ cs.CR
 
 
 
-## **5. GASP: Efficient Black-Box Generation of Adversarial Suffixes for Jailbreaking LLMs**
+## **7. GASP: Efficient Black-Box Generation of Adversarial Suffixes for Jailbreaking LLMs**
 
 cs.LG
 
@@ -69,7 +93,7 @@ cs.LG
 
 
 
-## **6. RAG-Thief: Scalable Extraction of Private Data from Retrieval-Augmented Generation Applications with Agent-based Attacks**
+## **8. RAG-Thief: Scalable Extraction of Private Data from Retrieval-Augmented Generation Applications with Agent-based Attacks**
 
 cs.CR
 
@@ -81,7 +105,7 @@ cs.CR
 
 
 
-## **7. AdaNCA: Neural Cellular Automata As Adaptors For More Robust Vision Transformer**
+## **9. AdaNCA: Neural Cellular Automata As Adaptors For More Robust Vision Transformer**
 
 cs.CV
 
@@ -95,7 +119,7 @@ cs.CV
 
 
 
-## **8. Verifying the Robustness of Automatic Credibility Assessment**
+## **10. Verifying the Robustness of Automatic Credibility Assessment**
 
 cs.CL
 
@@ -107,7 +131,7 @@ cs.CL
 
 
 
-## **9. Robust Data-Driven Predictive Control for Mixed Platoons under Noise and Attacks**
+## **11. Robust Data-Driven Predictive Control for Mixed Platoons under Noise and Attacks**
 
 eess.SY
 
@@ -121,7 +145,7 @@ eess.SY
 
 
 
-## **10. Magmaw: Modality-Agnostic Adversarial Attacks on Machine Learning-Based Wireless Communication Systems**
+## **12. Magmaw: Modality-Agnostic Adversarial Attacks on Machine Learning-Based Wireless Communication Systems**
 
 cs.CR
 
@@ -135,7 +159,7 @@ Accepted at NDSS 2025
 
 
 
-## **11. Towards Understanding Adversarial Transferability in Federated Learning**
+## **13. Towards Understanding Adversarial Transferability in Federated Learning**
 
 cs.LG
 
@@ -149,7 +173,7 @@ Published in Transactions on Machine Learning Research (TMLR)  (11/2024)
 
 
 
-## **12. TransLinkGuard: Safeguarding Transformer Models Against Model Stealing in Edge Deployment**
+## **14. TransLinkGuard: Safeguarding Transformer Models Against Model Stealing in Edge Deployment**
 
 cs.CR
 
@@ -163,7 +187,7 @@ Accepted by ACM MM24 Conference
 
 
 
-## **13. Physical Adversarial Attack meets Computer Vision: A Decade Survey**
+## **15. Physical Adversarial Attack meets Computer Vision: A Decade Survey**
 
 cs.CV
 
@@ -177,7 +201,7 @@ Published at IEEE TPAMI. GitHub:https://github.com/weihui1308/PAA
 
 
 
-## **14. A Survey on Adversarial Robustness of LiDAR-based Machine Learning Perception in Autonomous Vehicles**
+## **16. A Survey on Adversarial Robustness of LiDAR-based Machine Learning Perception in Autonomous Vehicles**
 
 cs.LG
 
@@ -191,7 +215,7 @@ cs.LG
 
 
 
-## **15. WaterPark: A Robustness Assessment of Language Model Watermarking**
+## **17. WaterPark: A Robustness Assessment of Language Model Watermarking**
 
 cs.CR
 
@@ -205,7 +229,7 @@ cs.CR
 
 
 
-## **16. CopyrightMeter: Revisiting Copyright Protection in Text-to-image Models**
+## **18. CopyrightMeter: Revisiting Copyright Protection in Text-to-image Models**
 
 cs.CR
 
@@ -217,7 +241,7 @@ cs.CR
 
 
 
-## **17. TAPT: Test-Time Adversarial Prompt Tuning for Robust Inference in Vision-Language Models**
+## **19. TAPT: Test-Time Adversarial Prompt Tuning for Robust Inference in Vision-Language Models**
 
 cs.CV
 
@@ -229,7 +253,7 @@ cs.CV
 
 
 
-## **18. Disco Intelligent Omni-Surfaces: 360-degree Fully-Passive Jamming Attacks**
+## **20. Disco Intelligent Omni-Surfaces: 360-degree Fully-Passive Jamming Attacks**
 
 eess.SP
 
@@ -243,7 +267,7 @@ This paper has been submitted to IEEE TWC for possible publication
 
 
 
-## **19. Efficient Model-Stealing Attacks Against Inductive Graph Neural Networks**
+## **21. Efficient Model-Stealing Attacks Against Inductive Graph Neural Networks**
 
 cs.LG
 
@@ -257,7 +281,7 @@ Accepted at ECAI - 27th European Conference on Artificial  Intelligence
 
 
 
-## **20. Attribute Inference Attacks for Federated Regression Tasks**
+## **22. Attribute Inference Attacks for Federated Regression Tasks**
 
 cs.LG
 
@@ -269,7 +293,7 @@ cs.LG
 
 
 
-## **21. Stochastic BIQA: Median Randomized Smoothing for Certified Blind Image Quality Assessment**
+## **23. Stochastic BIQA: Median Randomized Smoothing for Certified Blind Image Quality Assessment**
 
 eess.IV
 
@@ -281,7 +305,7 @@ eess.IV
 
 
 
-## **22. Variational Bayesian Bow tie Neural Networks with Shrinkage**
+## **24. Variational Bayesian Bow tie Neural Networks with Shrinkage**
 
 stat.ML
 
@@ -293,7 +317,7 @@ stat.ML
 
 
 
-## **23. NMT-Obfuscator Attack: Ignore a sentence in translation with only one word**
+## **25. NMT-Obfuscator Attack: Ignore a sentence in translation with only one word**
 
 cs.CL
 
@@ -305,7 +329,7 @@ cs.CL
 
 
 
-## **24. Efficient Verifiable Differential Privacy with Input Authenticity in the Local and Shuffle Model**
+## **26. Efficient Verifiable Differential Privacy with Input Authenticity in the Local and Shuffle Model**
 
 cs.CR
 
@@ -319,7 +343,7 @@ cs.CR
 
 
 
-## **25. DeTrigger: A Gradient-Centric Approach to Backdoor Attack Mitigation in Federated Learning**
+## **27. DeTrigger: A Gradient-Centric Approach to Backdoor Attack Mitigation in Federated Learning**
 
 cs.LG
 
@@ -333,7 +357,7 @@ cs.LG
 
 
 
-## **26. Architectural Patterns for Designing Quantum Artificial Intelligence Systems**
+## **28. Architectural Patterns for Designing Quantum Artificial Intelligence Systems**
 
 cs.SE
 
@@ -345,7 +369,7 @@ cs.SE
 
 
 
-## **27. Adversarial Multi-Agent Reinforcement Learning for Proactive False Data Injection Detection**
+## **29. Adversarial Multi-Agent Reinforcement Learning for Proactive False Data Injection Detection**
 
 eess.SY
 
@@ -357,7 +381,7 @@ eess.SY
 
 
 
-## **28. Theoretical Corrections and the Leveraging of Reinforcement Learning to Enhance Triangle Attack**
+## **30. Theoretical Corrections and the Leveraging of Reinforcement Learning to Enhance Triangle Attack**
 
 cs.LG
 
@@ -369,7 +393,7 @@ cs.LG
 
 
 
-## **29. Exploring adversarial robustness of JPEG AI: methodology, comparison and new methods**
+## **31. Exploring adversarial robustness of JPEG AI: methodology, comparison and new methods**
 
 eess.IV
 
@@ -381,7 +405,7 @@ eess.IV
 
 
 
-## **30. Robust Subgraph Learning by Monitoring Early Training Representations**
+## **32. Robust Subgraph Learning by Monitoring Early Training Representations**
 
 cs.LG
 
@@ -393,7 +417,7 @@ cs.LG
 
 
 
-## **31. Eidos: Efficient, Imperceptible Adversarial 3D Point Clouds**
+## **33. Eidos: Efficient, Imperceptible Adversarial 3D Point Clouds**
 
 cs.CV
 
@@ -407,7 +431,7 @@ Preprint
 
 
 
-## **32. Bitcoin Under Volatile Block Rewards: How Mempool Statistics Can Influence Bitcoin Mining**
+## **34. Bitcoin Under Volatile Block Rewards: How Mempool Statistics Can Influence Bitcoin Mining**
 
 cs.CR
 
@@ -419,7 +443,7 @@ cs.CR
 
 
 
-## **33. TrojanRobot: Backdoor Attacks Against Robotic Manipulation in the Physical World**
+## **35. TrojanRobot: Backdoor Attacks Against Robotic Manipulation in the Physical World**
 
 cs.RO
 
@@ -433,7 +457,7 @@ Initial version with preliminary results. We welcome any feedback or  suggestion
 
 
 
-## **34. Few-shot Model Extraction Attacks against Sequential Recommender Systems**
+## **36. Few-shot Model Extraction Attacks against Sequential Recommender Systems**
 
 cs.LG
 
@@ -445,7 +469,7 @@ cs.LG
 
 
 
-## **35. Formal Verification of Deep Neural Networks for Object Detection**
+## **37. Formal Verification of Deep Neural Networks for Object Detection**
 
 cs.CV
 
@@ -457,7 +481,7 @@ cs.CV
 
 
 
-## **36. The Dark Side of Trust: Authority Citation-Driven Jailbreak Attacks on Large Language Models**
+## **38. The Dark Side of Trust: Authority Citation-Driven Jailbreak Attacks on Large Language Models**
 
 cs.LG
 
@@ -469,7 +493,7 @@ cs.LG
 
 
 
-## **37. Hacking Back the AI-Hacker: Prompt Injection as a Defense Against LLM-driven Cyberattacks**
+## **39. Hacking Back the AI-Hacker: Prompt Injection as a Defense Against LLM-driven Cyberattacks**
 
 cs.CR
 
@@ -483,7 +507,7 @@ v0.2 (evaluated on more agents)
 
 
 
-## **38. Adapting to Cyber Threats: A Phishing Evolution Network (PEN) Framework for Phishing Generation and Analyzing Evolution Patterns using Large Language Models**
+## **40. Adapting to Cyber Threats: A Phishing Evolution Network (PEN) Framework for Phishing Generation and Analyzing Evolution Patterns using Large Language Models**
 
 cs.CR
 
@@ -495,7 +519,7 @@ cs.CR
 
 
 
-## **39. CROW: Eliminating Backdoors from Large Language Models via Internal Consistency Regularization**
+## **41. CROW: Eliminating Backdoors from Large Language Models via Internal Consistency Regularization**
 
 cs.CL
 
@@ -507,7 +531,7 @@ cs.CL
 
 
 
-## **40. CausalDiff: Causality-Inspired Disentanglement via Diffusion Model for Adversarial Defense**
+## **42. CausalDiff: Causality-Inspired Disentanglement via Diffusion Model for Adversarial Defense**
 
 cs.CV
 
@@ -521,7 +545,7 @@ accepted by NeurIPS 2024
 
 
 
-## **41. Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics**
+## **43. Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics**
 
 cs.RO
 
@@ -533,7 +557,7 @@ cs.RO
 
 
 
-## **42. Countering Backdoor Attacks in Image Recognition: A Survey and Evaluation of Mitigation Strategies**
+## **44. Countering Backdoor Attacks in Image Recognition: A Survey and Evaluation of Mitigation Strategies**
 
 cs.CR
 
@@ -545,7 +569,7 @@ cs.CR
 
 
 
-## **43. Exploiting the Uncoordinated Privacy Protections of Eye Tracking and VR Motion Data for Unauthorized User Identification**
+## **45. Exploiting the Uncoordinated Privacy Protections of Eye Tracking and VR Motion Data for Unauthorized User Identification**
 
 cs.HC
 
@@ -557,7 +581,7 @@ cs.HC
 
 
 
-## **44. Optimal Denial-of-Service Attacks Against Partially-Observable Real-Time Monitoring Systems**
+## **46. Optimal Denial-of-Service Attacks Against Partially-Observable Real-Time Monitoring Systems**
 
 cs.IT
 
@@ -571,7 +595,7 @@ arXiv admin note: text overlap with arXiv:2403.04489
 
 
 
-## **45. CLMIA: Membership Inference Attacks via Unsupervised Contrastive Learning**
+## **47. CLMIA: Membership Inference Attacks via Unsupervised Contrastive Learning**
 
 cs.LG
 
@@ -583,7 +607,7 @@ cs.LG
 
 
 
-## **46. JailbreakLens: Interpreting Jailbreak Mechanism in the Lens of Representation and Circuit**
+## **48. JailbreakLens: Interpreting Jailbreak Mechanism in the Lens of Representation and Circuit**
 
 cs.CR
 
@@ -597,7 +621,7 @@ cs.CR
 
 
 
-## **47. Exploring the Adversarial Frontier: Quantifying Robustness via Adversarial Hypervolume**
+## **49. Exploring the Adversarial Frontier: Quantifying Robustness via Adversarial Hypervolume**
 
 cs.CR
 
@@ -609,7 +633,7 @@ cs.CR
 
 
 
-## **48. Game-Theoretic Neyman-Pearson Detection to Combat Strategic Evasion**
+## **50. Game-Theoretic Neyman-Pearson Detection to Combat Strategic Evasion**
 
 cs.CR
 
@@ -618,34 +642,6 @@ cs.CR
 **Authors**: Yinan Hu, Quanyan Zhu
 
 **Abstract**: The security in networked systems depends greatly on recognizing and identifying adversarial behaviors. Traditional detection methods focus on specific categories of attacks and have become inadequate for increasingly stealthy and deceptive attacks that are designed to bypass detection strategically. This work aims to develop a holistic theory to countermeasure such evasive attacks. We focus on extending a fundamental class of statistical-based detection methods based on Neyman-Pearson's (NP) hypothesis testing formulation. We propose game-theoretic frameworks to capture the conflicting relationship between a strategic evasive attacker and an evasion-aware NP detector. By analyzing both the equilibrium behaviors of the attacker and the NP detector, we characterize their performance using Equilibrium Receiver-Operational-Characteristic (EROC) curves. We show that the evasion-aware NP detectors outperform the passive ones in the way that the former can act strategically against the attacker's behavior and adaptively modify their decision rules based on the received messages. In addition, we extend our framework to a sequential setting where the user sends out identically distributed messages. We corroborate the analytical results with a case study of anomaly detection.
-
-
-
-## **49. A Survey of Graph Unlearning**
-
-cs.LG
-
-22 page review paper on graph unlearning
-
-**SubmitDate**: 2024-11-16    [abs](http://arxiv.org/abs/2310.02164v3) [paper-pdf](http://arxiv.org/pdf/2310.02164v3)
-
-**Authors**: Anwar Said, Yuying Zhao, Tyler Derr, Mudassir Shabbir, Waseem Abbas, Xenofon Koutsoukos
-
-**Abstract**: Graph unlearning emerges as a crucial advancement in the pursuit of responsible AI, providing the means to remove sensitive data traces from trained models, thereby upholding the right to be forgotten. It is evident that graph machine learning exhibits sensitivity to data privacy and adversarial attacks, necessitating the application of graph unlearning techniques to address these concerns effectively. In this comprehensive survey paper, we present the first systematic review of graph unlearning approaches, encompassing a diverse array of methodologies and offering a detailed taxonomy and up-to-date literature overview to facilitate the understanding of researchers new to this field. To ensure clarity, we provide lucid explanations of the fundamental concepts and evaluation measures used in graph unlearning, catering to a broader audience with varying levels of expertise. Delving into potential applications, we explore the versatility of graph unlearning across various domains, including but not limited to social networks, adversarial settings, recommender systems, and resource-constrained environments like the Internet of Things, illustrating its potential impact in safeguarding data privacy and enhancing AI systems' robustness. Finally, we shed light on promising research directions, encouraging further progress and innovation within the domain of graph unlearning. By laying a solid foundation and fostering continued progress, this survey seeks to inspire researchers to further advance the field of graph unlearning, thereby instilling confidence in the ethical growth of AI systems and reinforcing the responsible application of machine learning techniques in various domains.
-
-
-
-## **50. Verifiably Robust Conformal Prediction**
-
-cs.LO
-
-Accepted at NeurIPS 2024
-
-**SubmitDate**: 2024-11-16    [abs](http://arxiv.org/abs/2405.18942v3) [paper-pdf](http://arxiv.org/pdf/2405.18942v3)
-
-**Authors**: Linus Jeary, Tom Kuipers, Mehran Hosseini, Nicola Paoletti
-
-**Abstract**: Conformal Prediction (CP) is a popular uncertainty quantification method that provides distribution-free, statistically valid prediction sets, assuming that training and test data are exchangeable. In such a case, CP's prediction sets are guaranteed to cover the (unknown) true test output with a user-specified probability. Nevertheless, this guarantee is violated when the data is subjected to adversarial attacks, which often result in a significant loss of coverage. Recently, several approaches have been put forward to recover CP guarantees in this setting. These approaches leverage variations of randomised smoothing to produce conservative sets which account for the effect of the adversarial perturbations. They are, however, limited in that they only support $\ell^2$-bounded perturbations and classification tasks. This paper introduces VRCP (Verifiably Robust Conformal Prediction), a new framework that leverages recent neural network verification methods to recover coverage guarantees under adversarial attacks. Our VRCP method is the first to support perturbations bounded by arbitrary norms including $\ell^1$, $\ell^2$, and $\ell^\infty$, as well as regression tasks. We evaluate and compare our approach on image classification tasks (CIFAR10, CIFAR100, and TinyImageNet) and regression tasks for deep reinforcement learning environments. In every case, VRCP achieves above nominal coverage and yields significantly more efficient and informative prediction regions than the SotA.
 
 
 

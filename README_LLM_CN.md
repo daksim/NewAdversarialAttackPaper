@@ -1,5 +1,5 @@
 # Latest Large Language Model Attack Papers
-**update at 2024-11-28 10:17:04**
+**update at 2024-11-30 10:56:42**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
@@ -215,7 +215,7 @@ FASH：基于身份验证的测试时防御间接提示注入攻击 cs.CR
 
 **Abstract**: Open-source code is pervasive. In this setting, embedded vulnerabilities are spreading to downstream software at an alarming rate. While such vulnerabilities are generally identified and addressed rapidly, inconsistent maintenance policies may lead security patches to go unnoticed. Indeed, security patches can be {\em silent}, i.e., they do not always come with comprehensive advisories such as CVEs. This lack of transparency leaves users oblivious to available security updates, providing ample opportunity for attackers to exploit unpatched vulnerabilities. Consequently, identifying silent security patches just in time when they are released is essential for preventing n-day attacks, and for ensuring robust and secure maintenance practices. With LLMDA we propose to (1) leverage large language models (LLMs) to augment patch information with generated code change explanations, (2) design a representation learning approach that explores code-text alignment methodologies for feature combination, (3) implement a label-wise training with labelled instructions for guiding the embedding based on security relevance, and (4) rely on a probabilistic batch contrastive learning mechanism for building a high-precision identifier of security patches. We evaluate LLMDA on the PatchDB and SPI-DB literature datasets and show that our approach substantially improves over the state-of-the-art, notably GraphSPD by 20% in terms of F-Measure on the SPI-DB benchmark.
 
-摘要: 开源代码无处不在。在这种情况下，嵌入的漏洞正以惊人的速度蔓延到下游软件。虽然此类漏洞通常可以快速识别和解决，但不一致的维护策略可能会导致安全补丁不被注意到。事实上，安全补丁可以是静默的，也就是说，它们并不总是附带全面的建议，如CVE。这种透明度的缺乏让用户对可用的安全更新视而不见，为攻击者提供了充分的机会来利用未打补丁的漏洞。因此，在发布静默安全补丁时及时识别它们，对于防止n天攻击和确保强大而安全的维护做法至关重要。对于LLMDA，我们提出：(1)利用大语言模型(LLMS)通过生成代码变化解释来增强补丁信息；(2)设计一种表示学习方法，探索用于特征组合的代码-文本对齐方法；(3)利用标记指令实现基于标签的训练来指导基于安全相关性的嵌入；(4)依靠概率批量对比学习机制来构建高精度的安全补丁识别器。我们在PatchDB和SPI-DB文献数据集上评估了LLMDA，并表明我们的方法比最先进的方法有很大的改进，特别是在SPI-DB基准上的F-MEASURE方面，GraphSPD提高了20%。
+摘要: 开源代码无处不在。在这种情况下，嵌入的漏洞正以惊人的速度蔓延到下游软件。虽然此类漏洞通常可以快速识别和解决，但不一致的维护策略可能会导致安全补丁不被注意到。事实上，安全补丁可以是静默的，也就是说，它们并不总是附带全面的建议，如CVE。这种透明度的缺乏让用户对可用的安全更新视而不见，为攻击者提供了充分的机会来利用未打补丁的漏洞。因此，在发布静默安全补丁时及时识别它们，对于防止n天攻击和确保强大而安全的维护做法至关重要。对于LLMDA，我们提出：(1)利用大语言模型(LLMS)通过生成代码变化解释来增强补丁信息；(2)设计一种表示学习方法，探索用于特征组合的代码-文本对齐方法；(3)利用标记指令实现标签式训练以指导基于安全相关性的嵌入；(4)依赖概率批量对比学习机制来构建高精度的安全补丁识别器。我们在PatchDB和SPI-DB文献数据集上评估了LLMDA，并表明我们的方法比最先进的方法有很大的改进，特别是在SPI-DB基准上的F-MEASURE方面，GraphSPD提高了20%。
 
 
 

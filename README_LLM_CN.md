@@ -1,5 +1,5 @@
 # Latest Large Language Model Attack Papers
-**update at 2024-11-30 10:56:42**
+**update at 2024-12-02 09:43:53**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
@@ -343,15 +343,15 @@ CVPR 2024
 
 “道德化”多步骤越狱预言：对大型语言模型中护栏进行黑匣子测试以进行言语攻击 cs.CR
 
-This paper has been submitted to ICLR 2025 BlogPosts and OpenReview  preprints. It has 9 pages of text, 4 figures, and 3 tables
+This paper has been submitted to Nature Machine Intelligence and  OpenReview preprints. It has 9 pages of text, 3 figures, and 3 tables
 
-**SubmitDate**: 2024-11-23    [abs](http://arxiv.org/abs/2411.16730v1) [paper-pdf](http://arxiv.org/pdf/2411.16730v1)
+**SubmitDate**: 2024-11-27    [abs](http://arxiv.org/abs/2411.16730v2) [paper-pdf](http://arxiv.org/pdf/2411.16730v2)
 
 **Authors**: Libo Wang
 
-**Abstract**: As the application of large language models continues to expand in various fields, it poses higher challenges to the effectiveness of identifying harmful content generation and guardrail mechanisms. This research aims to evaluate the effectiveness of guardrails in the face of multi-step jailbreak prompt-generated verbal attacks, through black-box testing of seemingly ethical prompt simulations. The experimental subjects were selected GPT-4o, Grok-2 Beta, Llama 3.1 (405B), Gemini 1.5 and Claude 3.5 Sonnet. The researcher used the same multi-step prompt to simulate moral attacks by designing a scenario of "enterprise middle managers competing for promotion" and observed the model's response at each step. During the experiment, the guardrails of the above model were all bypassed in this experiment and the content of verbal attacks was generated. The data results show that Claude 3.5 Sonnet performs better than other models in terms of its tendency to identify jailbreak prompts. The researcher hopes to use this to remind developers and future research that guardrails not only inappropriately play the role of content filters, but should also have a preventive function. In order to ensure the objectivity and generalizability of the experiment, the researcher has uploaded the experimental process, black box test code, and enhanced guardrail code to GitHub to promote cooperation in the development community: https://github.com/brucewang123456789/GeniusTrail.git.
+**Abstract**: As the application of large language models continues to expand in various fields, it poses higher challenges to the effectiveness of identifying harmful content generation and guardrail mechanisms. This research aims to evaluate the guardrail effectiveness of GPT-4o, Grok-2 Beta, Llama 3.1 (405B), Gemini 1.5, and Claude 3.5 Sonnet through black-box testing of seemingly ethical multi-step jailbreak prompts. It conducts ethical attacks by designing an identical multi-step prompts that simulates the scenario of "corporate middle managers competing for promotions." The data results show that the guardrails of the above-mentioned LLMs were bypassed and the content of verbal attacks was generated. Claude 3.5 Sonnet's resistance to multi-step jailbreak prompts is more obvious. To ensure objectivity, the experimental process, black box test code, and enhanced guardrail code are uploaded to the GitHub repository: https://github.com/brucewang123456789/GeniusTrail.git.
 
-摘要: 随着大型语言模型在各个领域的应用不断扩大，对识别有害内容生成和防护机制的有效性提出了更高的挑战。本研究旨在通过对看似符合伦理道德的提示模拟进行黑盒测试，评估护栏在面对多步骤越狱提示生成的言语攻击时的有效性。实验对象为GPT-40、Grok-2 Beta、Llama 3.1(405B)、Gemini 1.5和Claude 3.5十四行诗。研究人员使用相同的多步骤提示模拟道德攻击，设计了一个“企业中层管理者竞相晋升”的场景，并观察了模型在每一步的反应。在实验过程中，上述模型的护栏在实验中都被绕过，生成了言语攻击的内容。数据结果表明，克劳德3.5十四行诗在识别越狱提示方面比其他模型表现得更好。研究人员希望借此提醒开发者和未来的研究，护栏不仅要不当地扮演内容过滤器的角色，还应该具有预防功能。为了确保实验的客观性和通用性，研究人员将实验流程、黑盒测试代码、增强护栏代码上传到GitHub，以促进开发社区的合作：https://github.com/brucewang123456789/GeniusTrail.git.
+摘要: 随着大型语言模型在各个领域的应用不断扩展，对识别有害内容生成和护栏机制的有效性提出了更高的挑战。这项研究旨在通过对看似合乎道德的多步越狱提示进行黑匣子测试来评估GPT-4 o、Grok-2 Beta、Llama 3.1（405 B）、Gemini 1.5和Claude 3.5十四行诗的护栏有效性。它通过设计相同的多步骤提示来进行道德攻击，模拟“企业中层管理人员竞争晋升”的场景。“数据结果显示，上述LLM的护栏被绕过，产生了言语攻击的内容。克劳德3.5十四行诗对多步越狱提示的抵制更加明显。为了确保客观性，实验过程、黑匣子测试代码和增强型护栏代码被上传到GitHub存储库：https://github.com/brucewang123456789/GeniusTrail.git。
 
 
 

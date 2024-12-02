@@ -1,5 +1,5 @@
 # Latest Large Language Model Attack Papers
-**update at 2024-11-30 10:56:42**
+**update at 2024-12-02 09:43:53**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_LLM_CN.md)
 
@@ -297,13 +297,13 @@ CVPR 2024
 
 cs.CR
 
-This paper has been submitted to ICLR 2025 BlogPosts and OpenReview  preprints. It has 9 pages of text, 4 figures, and 3 tables
+This paper has been submitted to Nature Machine Intelligence and  OpenReview preprints. It has 9 pages of text, 3 figures, and 3 tables
 
-**SubmitDate**: 2024-11-23    [abs](http://arxiv.org/abs/2411.16730v1) [paper-pdf](http://arxiv.org/pdf/2411.16730v1)
+**SubmitDate**: 2024-11-27    [abs](http://arxiv.org/abs/2411.16730v2) [paper-pdf](http://arxiv.org/pdf/2411.16730v2)
 
 **Authors**: Libo Wang
 
-**Abstract**: As the application of large language models continues to expand in various fields, it poses higher challenges to the effectiveness of identifying harmful content generation and guardrail mechanisms. This research aims to evaluate the effectiveness of guardrails in the face of multi-step jailbreak prompt-generated verbal attacks, through black-box testing of seemingly ethical prompt simulations. The experimental subjects were selected GPT-4o, Grok-2 Beta, Llama 3.1 (405B), Gemini 1.5 and Claude 3.5 Sonnet. The researcher used the same multi-step prompt to simulate moral attacks by designing a scenario of "enterprise middle managers competing for promotion" and observed the model's response at each step. During the experiment, the guardrails of the above model were all bypassed in this experiment and the content of verbal attacks was generated. The data results show that Claude 3.5 Sonnet performs better than other models in terms of its tendency to identify jailbreak prompts. The researcher hopes to use this to remind developers and future research that guardrails not only inappropriately play the role of content filters, but should also have a preventive function. In order to ensure the objectivity and generalizability of the experiment, the researcher has uploaded the experimental process, black box test code, and enhanced guardrail code to GitHub to promote cooperation in the development community: https://github.com/brucewang123456789/GeniusTrail.git.
+**Abstract**: As the application of large language models continues to expand in various fields, it poses higher challenges to the effectiveness of identifying harmful content generation and guardrail mechanisms. This research aims to evaluate the guardrail effectiveness of GPT-4o, Grok-2 Beta, Llama 3.1 (405B), Gemini 1.5, and Claude 3.5 Sonnet through black-box testing of seemingly ethical multi-step jailbreak prompts. It conducts ethical attacks by designing an identical multi-step prompts that simulates the scenario of "corporate middle managers competing for promotions." The data results show that the guardrails of the above-mentioned LLMs were bypassed and the content of verbal attacks was generated. Claude 3.5 Sonnet's resistance to multi-step jailbreak prompts is more obvious. To ensure objectivity, the experimental process, black box test code, and enhanced guardrail code are uploaded to the GitHub repository: https://github.com/brucewang123456789/GeniusTrail.git.
 
 
 

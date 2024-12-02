@@ -1,5 +1,5 @@
 # Latest Adversarial Attack Papers
-**update at 2024-11-30 10:58:14**
+**update at 2024-12-02 09:45:26**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
@@ -23,7 +23,7 @@ GSE：分组稀疏和可解释的对抗性攻击 cs.CV
 
 Preprint version, more results will be updated
 
-**SubmitDate**: 2024-11-27    [abs](http://arxiv.org/abs/2411.17075v2) [paper-pdf](http://arxiv.org/pdf/2411.17075v2)
+**SubmitDate**: 2024-11-28    [abs](http://arxiv.org/abs/2411.17075v3) [paper-pdf](http://arxiv.org/pdf/2411.17075v3)
 
 **Authors**: Yuhang Wang, Jitao Sang
 
@@ -107,7 +107,7 @@ R-MTLLMF：无线边缘的弹性多任务大型语言模型融合 eess.SP
 
 通过越狱视觉语言模型的多重损失对抗搜索探索视觉漏洞 cs.CV
 
-**SubmitDate**: 2024-11-27    [abs](http://arxiv.org/abs/2411.18000v1) [paper-pdf](http://arxiv.org/pdf/2411.18000v1)
+**SubmitDate**: 2024-11-28    [abs](http://arxiv.org/abs/2411.18000v2) [paper-pdf](http://arxiv.org/pdf/2411.18000v2)
 
 **Authors**: Shuyang Hao, Bryan Hooi, Jun Liu, Kai-Wei Chang, Zi Huang, Yujun Cai
 
@@ -655,7 +655,7 @@ MUNba：通过纳什讨价还价的机器学习 cs.CV
 
 **Abstract**: To prevent Text-to-Image (T2I) models from generating unethical images, people deploy safety filters to block inappropriate drawing prompts. Previous works have employed token replacement to search adversarial prompts that attempt to bypass these filters, but they have become ineffective as nonsensical tokens fail semantic logic checks. In this paper, we approach adversarial prompts from a different perspective. We demonstrate that rephrasing a drawing intent into multiple benign descriptions of individual visual components can obtain an effective adversarial prompt. We propose a LLM-piloted multi-agent method named DACA to automatically complete intended rephrasing. Our method successfully bypasses the safety filters of DALL-E 3 and Midjourney to generate the intended images, achieving success rates of up to 76.7% and 64% in the one-time attack, and 98% and 84% in the re-use attack, respectively. We open-source our code and dataset on [this link](https://github.com/researchcode003/DACA).
 
-摘要: 为了防止文本到图像(T2I)模型生成不道德的图像，人们部署了安全过滤器来阻止不适当的绘图提示。以前的工作使用令牌替换来搜索试图绕过这些过滤器的敌意提示，但由于无意义的令牌未通过语义逻辑检查，这些提示变得无效。在这篇文章中，我们从一个不同的角度来研究对抗性提示。我们证明，将一个绘图意图重新表述为对单个视觉组件的多个良性描述可以获得有效的对抗性提示。我们提出了一种LLM引导的多智能体方法DACA来自动完成意图重述。我们的方法成功地绕过了DAL-E3和中途的安全过滤器，生成了预期的图像，在一次性攻击和重用攻击中分别获得了高达76.7%和%的成功率和98%和84%的成功率。我们在[This link](https://github.com/researchcode003/DACA).]上开源了我们的代码和数据集
+摘要: 为了防止文本到图像(T2I)模型生成不道德的图像，人们部署了安全过滤器来阻止不适当的绘图提示。以前的工作使用令牌替换来搜索试图绕过这些过滤器的敌意提示，但由于无意义的令牌未通过语义逻辑检查，这些提示变得无效。在这篇文章中，我们从一个不同的角度来研究对抗性提示。我们证明，将一个绘图意图重新表述为对单个视觉组件的多个良性描述可以获得有效的对抗性提示。我们提出了一种LLM引导的多智能体方法DACA来自动完成意图重述。我们的方法成功地绕过了DAL-E 3和中途的安全过滤器，生成了预期的图像，在一次性攻击和重用攻击中分别达到了76.7%和%的成功率和98%和84%的成功率。我们在[This link](https://github.com/researchcode003/DACA).]上开源了我们的代码和数据集
 
 
 

@@ -1,5 +1,5 @@
 # Latest Adversarial Attack Papers
-**update at 2024-11-30 10:58:14**
+**update at 2024-12-02 09:45:26**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
@@ -23,7 +23,7 @@ cs.CL
 
 Preprint version, more results will be updated
 
-**SubmitDate**: 2024-11-27    [abs](http://arxiv.org/abs/2411.17075v2) [paper-pdf](http://arxiv.org/pdf/2411.17075v2)
+**SubmitDate**: 2024-11-28    [abs](http://arxiv.org/abs/2411.17075v3) [paper-pdf](http://arxiv.org/pdf/2411.17075v3)
 
 **Authors**: Yuhang Wang, Jitao Sang
 
@@ -95,7 +95,7 @@ cs.CR
 
 cs.CV
 
-**SubmitDate**: 2024-11-27    [abs](http://arxiv.org/abs/2411.18000v1) [paper-pdf](http://arxiv.org/pdf/2411.18000v1)
+**SubmitDate**: 2024-11-28    [abs](http://arxiv.org/abs/2411.18000v2) [paper-pdf](http://arxiv.org/pdf/2411.18000v2)
 
 **Authors**: Shuyang Hao, Bryan Hooi, Jun Liu, Kai-Wei Chang, Zi Huang, Yujun Cai
 

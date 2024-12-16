@@ -1,5 +1,5 @@
 # Latest Adversarial Attack Papers
-**update at 2024-12-13 15:00:44**
+**update at 2024-12-16 09:59:59**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
@@ -277,7 +277,7 @@ DG-Mamba：使用选择性状态空间模型稳健高效的动态图结构学习
 
 Accepted by the Main Technical Track of the 39th Annual AAAI  Conference on Artificial Intelligence (AAAI-2025)
 
-**SubmitDate**: 2024-12-11    [abs](http://arxiv.org/abs/2412.08160v1) [paper-pdf](http://arxiv.org/pdf/2412.08160v1)
+**SubmitDate**: 2024-12-13    [abs](http://arxiv.org/abs/2412.08160v2) [paper-pdf](http://arxiv.org/pdf/2412.08160v2)
 
 **Authors**: Haonan Yuan, Qingyun Sun, Zhaonan Wang, Xingcheng Fu, Cheng Ji, Yongjian Wang, Bo Jin, Jianxin Li
 

@@ -1,5 +1,5 @@
 # Latest Large Language Model Attack Papers
-**update at 2024-12-13 14:59:04**
+**update at 2024-12-16 09:58:22**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_LLM_CN.md)
 

@@ -1,9 +1,87 @@
 # Latest Large Language Model Attack Papers
-**update at 2024-12-26 10:01:33**
+**update at 2024-12-30 10:05:32**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_LLM_CN.md)
 
-## **1. Can LLMs Obfuscate Code? A Systematic Analysis of Large Language Models into Assembly Code Obfuscation**
+## **1. An Engorgio Prompt Makes Large Language Model Babble on**
+
+cs.CR
+
+**SubmitDate**: 2024-12-27    [abs](http://arxiv.org/abs/2412.19394v1) [paper-pdf](http://arxiv.org/pdf/2412.19394v1)
+
+**Authors**: Jianshuo Dong, Ziyuan Zhang, Qingjie Zhang, Han Qiu, Tianwei Zhang, Hao Wang, Hewu Li, Qi Li, Chao Zhang, Ke Xu
+
+**Abstract**: Auto-regressive large language models (LLMs) have yielded impressive performance in many real-world tasks. However, the new paradigm of these LLMs also exposes novel threats. In this paper, we explore their vulnerability to inference cost attacks, where a malicious user crafts Engorgio prompts to intentionally increase the computation cost and latency of the inference process. We design Engorgio, a novel methodology, to efficiently generate adversarial Engorgio prompts to affect the target LLM's service availability. Engorgio has the following two technical contributions. (1) We employ a parameterized distribution to track LLMs' prediction trajectory. (2) Targeting the auto-regressive nature of LLMs' inference process, we propose novel loss functions to stably suppress the appearance of the <EOS> token, whose occurrence will interrupt the LLM's generation process. We conduct extensive experiments on 13 open-sourced LLMs with parameters ranging from 125M to 30B. The results show that Engorgio prompts can successfully induce LLMs to generate abnormally long outputs (i.e., roughly 2-13$\times$ longer to reach 90%+ of the output length limit) in a white-box scenario and our real-world experiment demonstrates Engergio's threat to LLM service with limited computing resources. The code is accessible at https://github.com/jianshuod/Engorgio-prompt.
+
+
+
+## **2. Differential privacy enables fair and accurate AI-based analysis of speech disorders while protecting patient data**
+
+cs.LG
+
+**SubmitDate**: 2024-12-26    [abs](http://arxiv.org/abs/2409.19078v2) [paper-pdf](http://arxiv.org/pdf/2409.19078v2)
+
+**Authors**: Soroosh Tayebi Arasteh, Mahshad Lotfinia, Paula Andrea Perez-Toro, Tomas Arias-Vergara, Mahtab Ranji, Juan Rafael Orozco-Arroyave, Maria Schuster, Andreas Maier, Seung Hee Yang
+
+**Abstract**: Speech pathology has impacts on communication abilities and quality of life. While deep learning-based models have shown potential in diagnosing these disorders, the use of sensitive data raises critical privacy concerns. Although differential privacy (DP) has been explored in the medical imaging domain, its application in pathological speech analysis remains largely unexplored despite the equally critical privacy concerns. This study is the first to investigate DP's impact on pathological speech data, focusing on the trade-offs between privacy, diagnostic accuracy, and fairness. Using a large, real-world dataset of 200 hours of recordings from 2,839 German-speaking participants, we observed a maximum accuracy reduction of 3.85% when training with DP with high privacy levels. To highlight real-world privacy risks, we demonstrated the vulnerability of non-private models to explicit gradient inversion attacks, reconstructing identifiable speech samples and showcasing DP's effectiveness in mitigating these risks. To generalize our findings across languages and disorders, we validated our approach on a dataset of Spanish-speaking Parkinson's disease patients, leveraging pretrained models from healthy English-speaking datasets, and demonstrated that careful pretraining on large-scale task-specific datasets can maintain favorable accuracy under DP constraints. A comprehensive fairness analysis revealed minimal gender bias at reasonable privacy levels but underscored the need for addressing age-related disparities. Our results establish that DP can balance privacy and utility in speech disorder detection, while highlighting unique challenges in privacy-fairness trade-offs for speech data. This provides a foundation for refining DP methodologies and improving fairness across diverse patient groups in real-world deployments.
+
+
+
+## **3. CL-attack: Textual Backdoor Attacks via Cross-Lingual Triggers**
+
+cs.CR
+
+The paper has been accepted to AAAI 2025
+
+**SubmitDate**: 2024-12-26    [abs](http://arxiv.org/abs/2412.19037v1) [paper-pdf](http://arxiv.org/pdf/2412.19037v1)
+
+**Authors**: Jingyi Zheng, Tianyi Hu, Tianshuo Cong, Xinlei He
+
+**Abstract**: Backdoor attacks significantly compromise the security of large language models by triggering them to output specific and controlled content. Currently, triggers for textual backdoor attacks fall into two categories: fixed-token triggers and sentence-pattern triggers. However, the former are typically easy to identify and filter, while the latter, such as syntax and style, do not apply to all original samples and may lead to semantic shifts. In this paper, inspired by cross-lingual (CL) prompts of LLMs in real-world scenarios, we propose a higher-dimensional trigger method at the paragraph level, namely CL-attack. CL-attack injects the backdoor by using texts with specific structures that incorporate multiple languages, thereby offering greater stealthiness and universality compared to existing backdoor attack techniques. Extensive experiments on different tasks and model architectures demonstrate that CL-attack can achieve nearly 100% attack success rate with a low poisoning rate in both classification and generation tasks. We also empirically show that the CL-attack is more robust against current major defense methods compared to baseline backdoor attacks. Additionally, to mitigate CL-attack, we further develop a new defense called TranslateDefense, which can partially mitigate the impact of CL-attack.
+
+
+
+## **4. Attack-in-the-Chain: Bootstrapping Large Language Models for Attacks Against Black-box Neural Ranking Models**
+
+cs.IR
+
+Accepted by AAAI25
+
+**SubmitDate**: 2024-12-25    [abs](http://arxiv.org/abs/2412.18770v1) [paper-pdf](http://arxiv.org/pdf/2412.18770v1)
+
+**Authors**: Yu-An Liu, Ruqing Zhang, Jiafeng Guo, Maarten de Rijke, Yixing Fan, Xueqi Cheng
+
+**Abstract**: Neural ranking models (NRMs) have been shown to be highly effective in terms of retrieval performance. Unfortunately, they have also displayed a higher degree of sensitivity to attacks than previous generation models. To help expose and address this lack of robustness, we introduce a novel ranking attack framework named Attack-in-the-Chain, which tracks interactions between large language models (LLMs) and NRMs based on chain-of-thought (CoT) prompting to generate adversarial examples under black-box settings. Our approach starts by identifying anchor documents with higher ranking positions than the target document as nodes in the reasoning chain. We then dynamically assign the number of perturbation words to each node and prompt LLMs to execute attacks. Finally, we verify the attack performance of all nodes at each reasoning step and proceed to generate the next reasoning step. Empirical results on two web search benchmarks show the effectiveness of our method.
+
+
+
+## **5. Token Highlighter: Inspecting and Mitigating Jailbreak Prompts for Large Language Models**
+
+cs.CR
+
+Accepted by AAAI 2025. Project page:  https://huggingface.co/spaces/TrustSafeAI/Token-Highlighter
+
+**SubmitDate**: 2024-12-25    [abs](http://arxiv.org/abs/2412.18171v2) [paper-pdf](http://arxiv.org/pdf/2412.18171v2)
+
+**Authors**: Xiaomeng Hu, Pin-Yu Chen, Tsung-Yi Ho
+
+**Abstract**: Large Language Models (LLMs) are increasingly being integrated into services such as ChatGPT to provide responses to user queries. To mitigate potential harm and prevent misuse, there have been concerted efforts to align the LLMs with human values and legal compliance by incorporating various techniques, such as Reinforcement Learning from Human Feedback (RLHF), into the training of the LLMs. However, recent research has exposed that even aligned LLMs are susceptible to adversarial manipulations known as Jailbreak Attacks. To address this challenge, this paper proposes a method called Token Highlighter to inspect and mitigate the potential jailbreak threats in the user query. Token Highlighter introduced a concept called Affirmation Loss to measure the LLM's willingness to answer the user query. It then uses the gradient of Affirmation Loss for each token in the user query to locate the jailbreak-critical tokens. Further, Token Highlighter exploits our proposed Soft Removal technique to mitigate the jailbreak effects of critical tokens via shrinking their token embeddings. Experimental results on two aligned LLMs (LLaMA-2 and Vicuna-V1.5) demonstrate that the proposed method can effectively defend against a variety of Jailbreak Attacks while maintaining competent performance on benign questions of the AlpacaEval benchmark. In addition, Token Highlighter is a cost-effective and interpretable defense because it only needs to query the protected LLM once to compute the Affirmation Loss and can highlight the critical tokens upon refusal.
+
+
+
+## **6. Diverse and Effective Red Teaming with Auto-generated Rewards and Multi-step Reinforcement Learning**
+
+cs.LG
+
+**SubmitDate**: 2024-12-24    [abs](http://arxiv.org/abs/2412.18693v1) [paper-pdf](http://arxiv.org/pdf/2412.18693v1)
+
+**Authors**: Alex Beutel, Kai Xiao, Johannes Heidecke, Lilian Weng
+
+**Abstract**: Automated red teaming can discover rare model failures and generate challenging examples that can be used for training or evaluation. However, a core challenge in automated red teaming is ensuring that the attacks are both diverse and effective. Prior methods typically succeed in optimizing either for diversity or for effectiveness, but rarely both. In this paper, we provide methods that enable automated red teaming to generate a large number of diverse and successful attacks.   Our approach decomposes the task into two steps: (1) automated methods for generating diverse attack goals and (2) generating effective attacks for those goals. While we provide multiple straightforward methods for generating diverse goals, our key contributions are to train an RL attacker that both follows those goals and generates diverse attacks for those goals. First, we demonstrate that it is easy to use a large language model (LLM) to generate diverse attacker goals with per-goal prompts and rewards, including rule-based rewards (RBRs) to grade whether the attacks are successful for the particular goal. Second, we demonstrate how training the attacker model with multi-step RL, where the model is rewarded for generating attacks that are different from past attempts further increases diversity while remaining effective. We use our approach to generate both prompt injection attacks and prompts that elicit unsafe responses. In both cases, we find that our approach is able to generate highly-effective and considerably more diverse attacks than past general red-teaming approaches.
+
+
+
+## **7. Can LLMs Obfuscate Code? A Systematic Analysis of Large Language Models into Assembly Code Obfuscation**
 
 cs.CR
 
@@ -17,7 +95,7 @@ To appear in AAAI 2025, Main Track
 
 
 
-## **2. Security Attacks on LLM-based Code Completion Tools**
+## **8. Security Attacks on LLM-based Code Completion Tools**
 
 cs.CL
 
@@ -31,7 +109,7 @@ Paper accepted at AAAI 2025
 
 
 
-## **3. SafeAligner: Safety Alignment against Jailbreak Attacks via Response Disparity Guidance**
+## **9. SafeAligner: Safety Alignment against Jailbreak Attacks via Response Disparity Guidance**
 
 cs.CR
 
@@ -43,7 +121,7 @@ cs.CR
 
 
 
-## **4. Prompted Contextual Vectors for Spear-Phishing Detection**
+## **10. Prompted Contextual Vectors for Spear-Phishing Detection**
 
 cs.LG
 
@@ -55,7 +133,7 @@ cs.LG
 
 
 
-## **5. The Dark Side of Function Calling: Pathways to Jailbreaking Large Language Models**
+## **11. The Dark Side of Function Calling: Pathways to Jailbreaking Large Language Models**
 
 cs.CR
 
@@ -67,7 +145,7 @@ cs.CR
 
 
 
-## **6. Pirates of the RAG: Adaptively Attacking LLMs to Leak Knowledge Bases**
+## **12. Pirates of the RAG: Adaptively Attacking LLMs to Leak Knowledge Bases**
 
 cs.AI
 
@@ -79,7 +157,7 @@ cs.AI
 
 
 
-## **7. Can Large Language Models Improve the Adversarial Robustness of Graph Neural Networks?**
+## **13. Can Large Language Models Improve the Adversarial Robustness of Graph Neural Networks?**
 
 cs.LG
 
@@ -93,7 +171,7 @@ accepted by KDD 2025
 
 
 
-## **8. Robustness-aware Automatic Prompt Optimization**
+## **14. Robustness-aware Automatic Prompt Optimization**
 
 cs.CL
 
@@ -105,21 +183,7 @@ cs.CL
 
 
 
-## **9. Token Highlighter: Inspecting and Mitigating Jailbreak Prompts for Large Language Models**
-
-cs.CR
-
-Accepted by AAAI 2025. Project page:  https://huggingface.co/spaces/TrustSafeAI/Token-Highlighter
-
-**SubmitDate**: 2024-12-24    [abs](http://arxiv.org/abs/2412.18171v1) [paper-pdf](http://arxiv.org/pdf/2412.18171v1)
-
-**Authors**: Xiaomeng Hu, Pin-Yu Chen, Tsung-Yi Ho
-
-**Abstract**: Large Language Models (LLMs) are increasingly being integrated into services such as ChatGPT to provide responses to user queries. To mitigate potential harm and prevent misuse, there have been concerted efforts to align the LLMs with human values and legal compliance by incorporating various techniques, such as Reinforcement Learning from Human Feedback (RLHF), into the training of the LLMs. However, recent research has exposed that even aligned LLMs are susceptible to adversarial manipulations known as Jailbreak Attacks. To address this challenge, this paper proposes a method called Token Highlighter to inspect and mitigate the potential jailbreak threats in the user query. Token Highlighter introduced a concept called Affirmation Loss to measure the LLM's willingness to answer the user query. It then uses the gradient of Affirmation Loss for each token in the user query to locate the jailbreak-critical tokens. Further, Token Highlighter exploits our proposed Soft Removal technique to mitigate the jailbreak effects of critical tokens via shrinking their token embeddings. Experimental results on two aligned LLMs (LLaMA-2 and Vicuna-V1.5) demonstrate that the proposed method can effectively defend against a variety of Jailbreak Attacks while maintaining competent performance on benign questions of the AlpacaEval benchmark. In addition, Token Highlighter is a cost-effective and interpretable defense because it only needs to query the protected LLM once to compute the Affirmation Loss and can highlight the critical tokens upon refusal.
-
-
-
-## **10. Revisiting Jailbreaking for Large Language Models: A Representation Engineering Perspective**
+## **15. Revisiting Jailbreaking for Large Language Models: A Representation Engineering Perspective**
 
 cs.CL
 
@@ -133,7 +197,7 @@ Accepted by COLING 2025
 
 
 
-## **11. Stepwise Reasoning Error Disruption Attack of LLMs**
+## **16. Stepwise Reasoning Error Disruption Attack of LLMs**
 
 cs.AI
 
@@ -145,7 +209,7 @@ cs.AI
 
 
 
-## **12. Trading Devil RL: Backdoor attack via Stock market, Bayesian Optimization and Reinforcement Learning**
+## **17. Trading Devil RL: Backdoor attack via Stock market, Bayesian Optimization and Reinforcement Learning**
 
 cs.LG
 
@@ -159,7 +223,7 @@ End of data poisoning research!: Navier-stokes equations (3D);  Reinforcement Le
 
 
 
-## **13. Large Language Model Safety: A Holistic Survey**
+## **18. Large Language Model Safety: A Holistic Survey**
 
 cs.AI
 
@@ -173,7 +237,7 @@ cs.AI
 
 
 
-## **14. Emerging Security Challenges of Large Language Models**
+## **19. Emerging Security Challenges of Large Language Models**
 
 cs.CR
 
@@ -187,7 +251,7 @@ A version of this appeared in the larger Dagstuhl seminar 23431  report (https:/
 
 
 
-## **15. Retention Score: Quantifying Jailbreak Risks for Vision Language Models**
+## **20. Retention Score: Quantifying Jailbreak Risks for Vision Language Models**
 
 cs.AI
 
@@ -201,7 +265,7 @@ cs.AI
 
 
 
-## **16. DiffusionAttacker: Diffusion-Driven Prompt Manipulation for LLM Jailbreak**
+## **21. DiffusionAttacker: Diffusion-Driven Prompt Manipulation for LLM Jailbreak**
 
 cs.CL
 
@@ -213,7 +277,7 @@ cs.CL
 
 
 
-## **17. Chinese SafetyQA: A Safety Short-form Factuality Benchmark for Large Language Models**
+## **22. Chinese SafetyQA: A Safety Short-form Factuality Benchmark for Large Language Models**
 
 cs.CL
 
@@ -225,7 +289,7 @@ cs.CL
 
 
 
-## **18. Defense Against Prompt Injection Attack by Leveraging Attack Techniques**
+## **23. Defense Against Prompt Injection Attack by Leveraging Attack Techniques**
 
 cs.CR
 
@@ -239,7 +303,7 @@ cs.CR
 
 
 
-## **19. SEAS: Self-Evolving Adversarial Safety Optimization for Large Language Models**
+## **24. SEAS: Self-Evolving Adversarial Safety Optimization for Large Language Models**
 
 cs.CL
 
@@ -251,7 +315,7 @@ cs.CL
 
 
 
-## **20. The Superalignment of Superhuman Intelligence with Large Language Models**
+## **25. The Superalignment of Superhuman Intelligence with Large Language Models**
 
 cs.CL
 
@@ -265,7 +329,7 @@ Under review of Science China
 
 
 
-## **21. EM-MIAs: Enhancing Membership Inference Attacks in Large Language Models through Ensemble Modeling**
+## **26. EM-MIAs: Enhancing Membership Inference Attacks in Large Language Models through Ensemble Modeling**
 
 cs.RO
 
@@ -279,7 +343,7 @@ Accepted by ICASSP 2025 Main
 
 
 
-## **22. Shaping the Safety Boundaries: Understanding and Defending Against Jailbreaks in Large Language Models**
+## **27. Shaping the Safety Boundaries: Understanding and Defending Against Jailbreaks in Large Language Models**
 
 cs.CL
 
@@ -293,7 +357,7 @@ cs.CL
 
 
 
-## **23. Robustness of Large Language Models Against Adversarial Attacks**
+## **28. Robustness of Large Language Models Against Adversarial Attacks**
 
 cs.CL
 
@@ -305,7 +369,7 @@ cs.CL
 
 
 
-## **24. Breaking Barriers in Physical-World Adversarial Examples: Improving Robustness and Transferability via Robust Feature**
+## **29. Breaking Barriers in Physical-World Adversarial Examples: Improving Robustness and Transferability via Robust Feature**
 
 cs.CV
 
@@ -319,7 +383,7 @@ Accepted by AAAI2025
 
 
 
-## **25. Safely Learning with Private Data: A Federated Learning Framework for Large Language Model**
+## **30. Safely Learning with Private Data: A Federated Learning Framework for Large Language Model**
 
 cs.CR
 
@@ -333,7 +397,7 @@ EMNLP 2024
 
 
 
-## **26. The Task Shield: Enforcing Task Alignment to Defend Against Indirect Prompt Injection in LLM Agents**
+## **31. The Task Shield: Enforcing Task Alignment to Defend Against Indirect Prompt Injection in LLM Agents**
 
 cs.CR
 
@@ -345,7 +409,7 @@ cs.CR
 
 
 
-## **27. POEX: Policy Executable Embodied AI Jailbreak Attacks**
+## **32. POEX: Policy Executable Embodied AI Jailbreak Attacks**
 
 cs.RO
 
@@ -359,7 +423,7 @@ Homepage: https://poex-eai-jailbreak.github.io/
 
 
 
-## **28. Automated Progressive Red Teaming**
+## **33. Automated Progressive Red Teaming**
 
 cs.CR
 
@@ -373,7 +437,7 @@ Accepted by COLING 2025
 
 
 
-## **29. Divide and Conquer: A Hybrid Strategy Defeats Multimodal Large Language Models**
+## **34. Divide and Conquer: A Hybrid Strategy Defeats Multimodal Large Language Models**
 
 cs.CL
 
@@ -385,7 +449,7 @@ cs.CL
 
 
 
-## **30. Privacy in Fine-tuning Large Language Models: Attacks, Defenses, and Future Directions**
+## **35. Privacy in Fine-tuning Large Language Models: Attacks, Defenses, and Future Directions**
 
 cs.AI
 
@@ -397,7 +461,7 @@ cs.AI
 
 
 
-## **31. Automated CVE Analysis: Harnessing Machine Learning In Designing Question-Answering Models For Cybersecurity Information Extraction**
+## **36. Automated CVE Analysis: Harnessing Machine Learning In Designing Question-Answering Models For Cybersecurity Information Extraction**
 
 cs.CR
 
@@ -409,7 +473,7 @@ cs.CR
 
 
 
-## **32. Chain-of-Scrutiny: Detecting Backdoor Attacks for Large Language Models**
+## **37. Chain-of-Scrutiny: Detecting Backdoor Attacks for Large Language Models**
 
 cs.CR
 
@@ -421,7 +485,7 @@ cs.CR
 
 
 
-## **33. Competence-Based Analysis of Language Models**
+## **38. Competence-Based Analysis of Language Models**
 
 cs.CL
 
@@ -433,7 +497,7 @@ cs.CL
 
 
 
-## **34. Immune: Improving Safety Against Jailbreaks in Multi-modal LLMs via Inference-Time Alignment**
+## **39. Immune: Improving Safety Against Jailbreaks in Multi-modal LLMs via Inference-Time Alignment**
 
 cs.CR
 
@@ -445,7 +509,7 @@ cs.CR
 
 
 
-## **35. DiveR-CT: Diversity-enhanced Red Teaming Large Language Model Assistants with Relaxing Constraints**
+## **40. DiveR-CT: Diversity-enhanced Red Teaming Large Language Model Assistants with Relaxing Constraints**
 
 cs.LG
 
@@ -459,7 +523,7 @@ Accepted by the 39th Annual AAAI Conference on Artificial  Intelligence (AAAI-25
 
 
 
-## **36. JailPO: A Novel Black-box Jailbreak Framework via Preference Optimization against Aligned LLMs**
+## **41. JailPO: A Novel Black-box Jailbreak Framework via Preference Optimization against Aligned LLMs**
 
 cs.CR
 
@@ -473,7 +537,7 @@ Accepted by AAAI 2025
 
 
 
-## **37. Trustful LLMs: Customizing and Grounding Text Generation with Knowledge Bases and Dual Decoders**
+## **42. Trustful LLMs: Customizing and Grounding Text Generation with Knowledge Bases and Dual Decoders**
 
 cs.CL
 
@@ -485,7 +549,7 @@ cs.CL
 
 
 
-## **38. Time Will Tell: Timing Side Channels via Output Token Count in Large Language Models**
+## **43. Time Will Tell: Timing Side Channels via Output Token Count in Large Language Models**
 
 cs.LG
 
@@ -497,7 +561,7 @@ cs.LG
 
 
 
-## **39. AutoTrust: Benchmarking Trustworthiness in Large Vision Language Models for Autonomous Driving**
+## **44. AutoTrust: Benchmarking Trustworthiness in Large Vision Language Models for Autonomous Driving**
 
 cs.CV
 
@@ -511,7 +575,7 @@ cs.CV
 
 
 
-## **40. Large Language Models and Code Security: A Systematic Literature Review**
+## **45. Large Language Models and Code Security: A Systematic Literature Review**
 
 cs.CR
 
@@ -523,7 +587,7 @@ cs.CR
 
 
 
-## **41. Alignment-Enhanced Decoding:Defending via Token-Level Adaptive Refining of Probability Distributions**
+## **46. Alignment-Enhanced Decoding:Defending via Token-Level Adaptive Refining of Probability Distributions**
 
 cs.CL
 
@@ -537,7 +601,7 @@ Accepted by EMNLP 2024, 15 pages, 5 figures
 
 
 
-## **42. SATA: A Paradigm for LLM Jailbreak via Simple Assistive Task Linkage**
+## **47. SATA: A Paradigm for LLM Jailbreak via Simple Assistive Task Linkage**
 
 cs.CR
 
@@ -549,7 +613,7 @@ cs.CR
 
 
 
-## **43. Unleashing the Unseen: Harnessing Benign Datasets for Jailbreaking Large Language Models**
+## **48. Unleashing the Unseen: Harnessing Benign Datasets for Jailbreaking Large Language Models**
 
 cs.CR
 
@@ -561,7 +625,7 @@ cs.CR
 
 
 
-## **44. Doubly-Universal Adversarial Perturbations: Deceiving Vision-Language Models Across Both Images and Text with a Single Perturbation**
+## **49. Doubly-Universal Adversarial Perturbations: Deceiving Vision-Language Models Across Both Images and Text with a Single Perturbation**
 
 cs.CV
 
@@ -573,7 +637,7 @@ cs.CV
 
 
 
-## **45. Crabs: Consuming Resrouce via Auto-generation for LLM-DoS Attack under Black-box Settings**
+## **50. Crabs: Consuming Resrouce via Auto-generation for LLM-DoS Attack under Black-box Settings**
 
 cs.CL
 
@@ -584,72 +648,6 @@ cs.CL
 **Authors**: Yuanhe Zhang, Zhenhong Zhou, Wei Zhang, Xinyue Wang, Xiaojun Jia, Yang Liu, Sen Su
 
 **Abstract**: Large Language Models (LLMs) have demonstrated remarkable performance across diverse tasks. LLMs continue to be vulnerable to external threats, particularly Denial-of-Service (DoS) attacks. Specifically, LLM-DoS attacks aim to exhaust computational resources and block services. However, prior works tend to focus on performing white-box attacks, overlooking black-box settings. In this work, we propose an automated algorithm designed for black-box LLMs, called Auto-Generation for LLM-DoS Attack (AutoDoS). AutoDoS introduces DoS Attack Tree and optimizes the prompt node coverage to enhance effectiveness under black-box conditions. Our method can bypass existing defense with enhanced stealthiness via semantic improvement of prompt nodes. Furthermore, we reveal that implanting Length Trojan in Basic DoS Prompt aids in achieving higher attack efficacy. Experimental results show that AutoDoS amplifies service response latency by over 250 $\times \uparrow$, leading to severe resource consumption in terms of GPU utilization and memory usage. Our code is available at \url{https://github.com/shuita2333/AutoDoS}.
-
-
-
-## **46. Mitigating Adversarial Attacks in LLMs through Defensive Suffix Generation**
-
-cs.CV
-
-9 pages, 2 figures
-
-**SubmitDate**: 2024-12-18    [abs](http://arxiv.org/abs/2412.13705v1) [paper-pdf](http://arxiv.org/pdf/2412.13705v1)
-
-**Authors**: Minkyoung Kim, Yunha Kim, Hyeram Seo, Heejung Choi, Jiye Han, Gaeun Kee, Soyoung Ko, HyoJe Jung, Byeolhee Kim, Young-Hak Kim, Sanghyun Park, Tae Joon Jun
-
-**Abstract**: Large language models (LLMs) have exhibited outstanding performance in natural language processing tasks. However, these models remain susceptible to adversarial attacks in which slight input perturbations can lead to harmful or misleading outputs. A gradient-based defensive suffix generation algorithm is designed to bolster the robustness of LLMs. By appending carefully optimized defensive suffixes to input prompts, the algorithm mitigates adversarial influences while preserving the models' utility. To enhance adversarial understanding, a novel total loss function ($L_{\text{total}}$) combining defensive loss ($L_{\text{def}}$) and adversarial loss ($L_{\text{adv}}$) generates defensive suffixes more effectively. Experimental evaluations conducted on open-source LLMs such as Gemma-7B, mistral-7B, Llama2-7B, and Llama2-13B show that the proposed method reduces attack success rates (ASR) by an average of 11\% compared to models without defensive suffixes. Additionally, the perplexity score of Gemma-7B decreased from 6.57 to 3.93 when applying the defensive suffix generated by openELM-270M. Furthermore, TruthfulQA evaluations demonstrate consistent improvements with Truthfulness scores increasing by up to 10\% across tested configurations. This approach significantly enhances the security of LLMs in critical applications without requiring extensive retraining.
-
-
-
-## **47. A Statistical and Multi-Perspective Revisiting of the Membership Inference Attack in Large Language Models**
-
-cs.CL
-
-main content 8 pages, 6 figures
-
-**SubmitDate**: 2024-12-18    [abs](http://arxiv.org/abs/2412.13475v1) [paper-pdf](http://arxiv.org/pdf/2412.13475v1)
-
-**Authors**: Bowen Chen, Namgi Han, Yusuke Miyao
-
-**Abstract**: The lack of data transparency in Large Language Models (LLMs) has highlighted the importance of Membership Inference Attack (MIA), which differentiates trained (member) and untrained (non-member) data. Though it shows success in previous studies, recent research reported a near-random performance in different settings, highlighting a significant performance inconsistency. We assume that a single setting doesn't represent the distribution of the vast corpora, causing members and non-members with different distributions to be sampled and causing inconsistency. In this study, instead of a single setting, we statistically revisit MIA methods from various settings with thousands of experiments for each MIA method, along with study in text feature, embedding, threshold decision, and decoding dynamics of members and non-members. We found that (1) MIA performance improves with model size and varies with domains, while most methods do not statistically outperform baselines, (2) Though MIA performance is generally low, a notable amount of differentiable member and non-member outliers exists and vary across MIA methods, (3) Deciding a threshold to separate members and non-members is an overlooked challenge, (4) Text dissimilarity and long text benefit MIA performance, (5) Differentiable or not is reflected in the LLM embedding, (6) Member and non-members show different decoding dynamics.
-
-
-
-## **48. Data to Defense: The Role of Curation in Customizing LLMs Against Jailbreaking Attacks**
-
-cs.CR
-
-**SubmitDate**: 2024-12-18    [abs](http://arxiv.org/abs/2410.02220v3) [paper-pdf](http://arxiv.org/pdf/2410.02220v3)
-
-**Authors**: Xiaoqun Liu, Jiacheng Liang, Luoxi Tang, Muchao Ye, Weichang Ma, Zhaohan Xi
-
-**Abstract**: Large language models (LLMs) are widely adapted for downstream applications through fine-tuning, a process named customization. However, recent studies have identified a vulnerability during this process, where malicious samples can compromise the robustness of LLMs and amplify harmful behaviors-an attack commonly referred to as jailbreaking. To address this challenge, we propose an adaptive data curation approach allowing any text to be curated to enhance its effectiveness in counteracting harmful samples during customization. To avoid the need for additional defensive modules, we further introduce a comprehensive mitigation framework spanning the lifecycle of the customization process: before customization to immunize LLMs against future jailbreak attempts, during customization to neutralize risks, and after customization to restore compromised models. Experimental results demonstrate a significant reduction in jailbreaking effects, achieving up to a 100% success rate in generating safe responses. By combining adaptive data curation with lifecycle-based mitigation strategies, this work represents a solid step forward in mitigating jailbreaking risks and ensuring the secure adaptation of LLMs.
-
-
-
-## **49. Safeguarding System Prompts for LLMs**
-
-cs.CR
-
-20 pages, 7 figures, 6 tables
-
-**SubmitDate**: 2024-12-18    [abs](http://arxiv.org/abs/2412.13426v1) [paper-pdf](http://arxiv.org/pdf/2412.13426v1)
-
-**Authors**: Zhifeng Jiang, Zhihua Jin, Guoliang He
-
-**Abstract**: Large language models (LLMs) are increasingly utilized in applications where system prompts, which guide model outputs, play a crucial role. These prompts often contain business logic and sensitive information, making their protection essential. However, adversarial and even regular user queries can exploit LLM vulnerabilities to expose these hidden prompts. To address this issue, we present PromptKeeper, a novel defense mechanism for system prompt privacy. By reliably detecting worst-case leakage and regenerating outputs without the system prompt when necessary, PromptKeeper ensures robust protection against prompt extraction attacks via either adversarial or regular queries, while preserving conversational capability and runtime efficiency during benign user interactions.
-
-
-
-## **50. Concept-ROT: Poisoning Concepts in Large Language Models with Model Editing**
-
-cs.LG
-
-**SubmitDate**: 2024-12-17    [abs](http://arxiv.org/abs/2412.13341v1) [paper-pdf](http://arxiv.org/pdf/2412.13341v1)
-
-**Authors**: Keltin Grimes, Marco Christiani, David Shriver, Marissa Connor
-
-**Abstract**: Model editing methods modify specific behaviors of Large Language Models by altering a small, targeted set of network weights and require very little data and compute. These methods can be used for malicious applications such as inserting misinformation or simple trojans that result in adversary-specified behaviors when a trigger word is present. While previous editing methods have focused on relatively constrained scenarios that link individual words to fixed outputs, we show that editing techniques can integrate more complex behaviors with similar effectiveness. We develop Concept-ROT, a model editing-based method that efficiently inserts trojans which not only exhibit complex output behaviors, but also trigger on high-level concepts -- presenting an entirely new class of trojan attacks. Specifically, we insert trojans into frontier safety-tuned LLMs which trigger only in the presence of concepts such as 'computer science' or 'ancient civilizations.' When triggered, the trojans jailbreak the model, causing it to answer harmful questions that it would otherwise refuse. Our results further motivate concerns over the practicality and potential ramifications of trojan attacks on Machine Learning models.
 
 
 

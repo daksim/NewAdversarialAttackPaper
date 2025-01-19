@@ -1,9 +1,33 @@
 # Latest Large Language Model Attack Papers
-**update at 2025-01-15 23:30:30**
+**update at 2025-01-19 10:26:03**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_LLM_CN.md)
 
-## **1. Exploring Robustness of LLMs to Sociodemographically-Conditioned Paraphrasing**
+## **1. TPIA: Towards Target-specific Prompt Injection Attack against Code-oriented Large Language Models**
+
+cs.CR
+
+**SubmitDate**: 2025-01-16    [abs](http://arxiv.org/abs/2407.09164v4) [paper-pdf](http://arxiv.org/pdf/2407.09164v4)
+
+**Authors**: Yuchen Yang, Hongwei Yao, Bingrun Yang, Yiling He, Yiming Li, Tianwei Zhang, Zhan Qin, Kui Ren, Chun Chen
+
+**Abstract**: Recently, code-oriented large language models (Code LLMs) have been widely exploited to simplify and facilitate programming. With these tools, developers can easily generate the desired complete functional code based on incomplete code snippets and natural language prompts. Unfortunately, a few pioneering works revealed that these Code LLMs are vulnerable to backdoor and adversarial attacks. The former poisons the training data or model parameters, hijacking the LLMs to generate malicious code snippets when encountering the trigger. The latter crafts malicious adversarial input codes to reduce the quality of the generated codes. However, both attacks have some inherent limitations: backdoor attacks rely on the adversary's capability of controlling the model training process; adversarial attacks struggle with fulfilling specific malicious purposes. This paper presents a novel attack paradigm against Code LLMs, namely target-specific prompt injection attack (TPIA). TPIA generates non-functional perturbations containing the information of malicious instructions and inserts them into the victim's code context by spreading them into potentially used dependencies (e.g., packages or RAG's knowledge base). It induces the Code LLMs to generate attacker-specified malicious code snippets at the target location. In general, we compress the attacker-specified malicious objective into the perturbation by adversarial optimization based on greedy token search. We collect 13 representative malicious objectives to design 31 threat cases for three popular programming languages. We show that our TPIA can successfully attack three representative open-source Code LLMs (with an ASR of up to 97.9%) and two mainstream commercial Code LLM-integrated applications (with an ASR of over 90%) in all threat cases, using only a 12-token perturbation. Our work alerts a new practical threat of using Code LLMs.
+
+
+
+## **2. Tag&Tab: Pretraining Data Detection in Large Language Models Using Keyword-Based Membership Inference Attack**
+
+cs.CR
+
+**SubmitDate**: 2025-01-14    [abs](http://arxiv.org/abs/2501.08454v1) [paper-pdf](http://arxiv.org/pdf/2501.08454v1)
+
+**Authors**: Sagiv Antebi, Edan Habler, Asaf Shabtai, Yuval Elovici
+
+**Abstract**: Large language models (LLMs) have become essential digital task assistance tools. Their training relies heavily on the collection of vast amounts of data, which may include copyright-protected or sensitive information. Recent studies on the detection of pretraining data in LLMs have primarily focused on sentence-level or paragraph-level membership inference attacks (MIAs), usually involving probability analysis of the target model prediction tokens. However, the proposed methods often demonstrate poor performance, specifically in terms of accuracy, failing to account for the semantic importance of textual content and word significance. To address these shortcomings, we propose Tag&Tab, a novel approach for detecting data that has been used as part of the LLM pretraining. Our method leverages advanced natural language processing (NLP) techniques to tag keywords in the input text - a process we term Tagging. Then, the LLM is used to obtain the probabilities of these keywords and calculate their average log-likelihood to determine input text membership, a process we refer to as Tabbing. Our experiments on three benchmark datasets (BookMIA, MIMIR, and the Pile) and several open-source LLMs of varying sizes demonstrate an average increase in the AUC scores ranging from 4.1% to 12.1% over state-of-the-art methods. Tag&Tab not only sets a new standard for data leakage detection in LLMs, but its outstanding performance is a testament to the importance of words in MIAs on LLMs.
+
+
+
+## **3. Exploring Robustness of LLMs to Sociodemographically-Conditioned Paraphrasing**
 
 cs.CL
 
@@ -15,7 +39,7 @@ cs.CL
 
 
 
-## **2. I Can Find You in Seconds! Leveraging Large Language Models for Code Authorship Attribution**
+## **4. I Can Find You in Seconds! Leveraging Large Language Models for Code Authorship Attribution**
 
 cs.SE
 
@@ -29,7 +53,7 @@ cs.SE
 
 
 
-## **3. Self-Instruct Few-Shot Jailbreaking: Decompose the Attack into Pattern and Behavior Learning**
+## **5. Self-Instruct Few-Shot Jailbreaking: Decompose the Attack into Pattern and Behavior Learning**
 
 cs.AI
 
@@ -41,7 +65,7 @@ cs.AI
 
 
 
-## **4. Gandalf the Red: Adaptive Security for LLMs**
+## **6. Gandalf the Red: Adaptive Security for LLMs**
 
 cs.LG
 
@@ -55,7 +79,7 @@ Niklas Pfister, V\'aclav Volhejn and Manuel Knott contributed equally
 
 
 
-## **5. SecAlign: Defending Against Prompt Injection with Preference Optimization**
+## **7. SecAlign: Defending Against Prompt Injection with Preference Optimization**
 
 cs.CR
 
@@ -69,7 +93,7 @@ Key words: prompt injection defense, LLM security, LLM-integrated  applications
 
 
 
-## **6. Exploring and Mitigating Adversarial Manipulation of Voting-Based Leaderboards**
+## **8. Exploring and Mitigating Adversarial Manipulation of Voting-Based Leaderboards**
 
 cs.LG
 
@@ -81,7 +105,7 @@ cs.LG
 
 
 
-## **7. DrLLM: Prompt-Enhanced Distributed Denial-of-Service Resistance Method with Large Language Models**
+## **9. DrLLM: Prompt-Enhanced Distributed Denial-of-Service Resistance Method with Large Language Models**
 
 cs.CR
 
@@ -95,7 +119,7 @@ Accepted by ICASSP2025
 
 
 
-## **8. PSA-VLM: Enhancing Vision-Language Model Safety through Progressive Concept-Bottleneck-Driven Alignment**
+## **10. PSA-VLM: Enhancing Vision-Language Model Safety through Progressive Concept-Bottleneck-Driven Alignment**
 
 cs.CV
 
@@ -109,7 +133,7 @@ arXiv admin note: substantial text overlap with arXiv:2405.13581
 
 
 
-## **9. Images are Achilles' Heel of Alignment: Exploiting Visual Vulnerabilities for Jailbreaking Multimodal Large Language Models**
+## **11. Images are Achilles' Heel of Alignment: Exploiting Visual Vulnerabilities for Jailbreaking Multimodal Large Language Models**
 
 cs.CV
 
@@ -123,7 +147,7 @@ ECCV 2024 Oral
 
 
 
-## **10. TrustRAG: Enhancing Robustness and Trustworthiness in RAG**
+## **12. TrustRAG: Enhancing Robustness and Trustworthiness in RAG**
 
 cs.CL
 
@@ -135,7 +159,7 @@ cs.CL
 
 
 
-## **11. ModelShield: Adaptive and Robust Watermark against Model Extraction Attack**
+## **13. ModelShield: Adaptive and Robust Watermark against Model Extraction Attack**
 
 cs.CR
 
@@ -147,7 +171,7 @@ cs.CR
 
 
 
-## **12. ZOQO: Zero-Order Quantized Optimization**
+## **14. ZOQO: Zero-Order Quantized Optimization**
 
 cs.LG
 
@@ -161,7 +185,7 @@ Accepted to ICASSP 2025
 
 
 
-## **13. Measuring the Robustness of Reference-Free Dialogue Evaluation Systems**
+## **15. Measuring the Robustness of Reference-Free Dialogue Evaluation Systems**
 
 cs.CL
 
@@ -173,7 +197,7 @@ cs.CL
 
 
 
-## **14. LUMIA: Linear probing for Unimodal and MultiModal Membership Inference Attacks leveraging internal LLM states**
+## **16. LUMIA: Linear probing for Unimodal and MultiModal Membership Inference Attacks leveraging internal LLM states**
 
 cs.CR
 
@@ -185,7 +209,7 @@ cs.CR
 
 
 
-## **15. Model Inversion in Split Learning for Personalized LLMs: New Insights from Information Bottleneck Theory**
+## **17. Model Inversion in Split Learning for Personalized LLMs: New Insights from Information Bottleneck Theory**
 
 cs.LG
 
@@ -199,7 +223,7 @@ cs.LG
 
 
 
-## **16. Effective faking of verbal deception detection with target-aligned adversarial attacks**
+## **18. Effective faking of verbal deception detection with target-aligned adversarial attacks**
 
 cs.CL
 
@@ -213,7 +237,7 @@ preprint
 
 
 
-## **17. Image-based Multimodal Models as Intruders: Transferable Multimodal Attacks on Video-based MLLMs**
+## **19. Image-based Multimodal Models as Intruders: Transferable Multimodal Attacks on Video-based MLLMs**
 
 cs.CV
 
@@ -225,7 +249,7 @@ cs.CV
 
 
 
-## **18. BaThe: Defense against the Jailbreak Attack in Multimodal Large Language Models by Treating Harmful Instruction as Backdoor Trigger**
+## **20. BaThe: Defense against the Jailbreak Attack in Multimodal Large Language Models by Treating Harmful Instruction as Backdoor Trigger**
 
 cs.CR
 
@@ -237,7 +261,7 @@ cs.CR
 
 
 
-## **19. Safeguarding System Prompts for LLMs**
+## **21. Safeguarding System Prompts for LLMs**
 
 cs.CR
 
@@ -251,7 +275,7 @@ cs.CR
 
 
 
-## **20. RAG-WM: An Efficient Black-Box Watermarking Approach for Retrieval-Augmented Generation of Large Language Models**
+## **22. RAG-WM: An Efficient Black-Box Watermarking Approach for Retrieval-Augmented Generation of Large Language Models**
 
 cs.CR
 
@@ -263,7 +287,7 @@ cs.CR
 
 
 
-## **21. Turning Logic Against Itself : Probing Model Defenses Through Contrastive Questions**
+## **23. Turning Logic Against Itself : Probing Model Defenses Through Contrastive Questions**
 
 cs.CL
 
@@ -277,7 +301,7 @@ Our code is publicly available at  https://github.com/UKPLab/POATE-attack
 
 
 
-## **22. Trading Devil RL: Backdoor attack via Stock market, Bayesian Optimization and Reinforcement Learning**
+## **24. Trading Devil RL: Backdoor attack via Stock market, Bayesian Optimization and Reinforcement Learning**
 
 cs.LG
 
@@ -291,7 +315,7 @@ End of data poisoning research!: Navier-stokes equations (3D;  update); Reinforc
 
 
 
-## **23. SpaLLM-Guard: Pairing SMS Spam Detection Using Open-source and Commercial LLMs**
+## **25. SpaLLM-Guard: Pairing SMS Spam Detection Using Open-source and Commercial LLMs**
 
 cs.CR
 
@@ -305,7 +329,7 @@ cs.CR
 
 
 
-## **24. Jailbreaking Multimodal Large Language Models via Shuffle Inconsistency**
+## **26. Jailbreaking Multimodal Large Language Models via Shuffle Inconsistency**
 
 cs.CR
 
@@ -317,7 +341,7 @@ cs.CR
 
 
 
-## **25. Navigating the Designs of Privacy-Preserving Fine-tuning for Large Language Models**
+## **27. Navigating the Designs of Privacy-Preserving Fine-tuning for Large Language Models**
 
 cs.LG
 
@@ -331,7 +355,7 @@ cs.LG
 
 
 
-## **26. Watch Out for Your Guidance on Generation! Exploring Conditional Backdoor Attacks against Large Language Models**
+## **28. Watch Out for Your Guidance on Generation! Exploring Conditional Backdoor Attacks against Large Language Models**
 
 cs.CL
 
@@ -345,7 +369,7 @@ The paper has been accepted to AAAI 2025
 
 
 
-## **27. Not all tokens are created equal: Perplexity Attention Weighted Networks for AI generated text detection**
+## **29. Not all tokens are created equal: Perplexity Attention Weighted Networks for AI generated text detection**
 
 cs.CL
 
@@ -357,7 +381,7 @@ cs.CL
 
 
 
-## **28. PhishAgent: A Robust Multimodal Agent for Phishing Webpage Detection**
+## **30. PhishAgent: A Robust Multimodal Agent for Phishing Webpage Detection**
 
 cs.CR
 
@@ -371,7 +395,7 @@ Accepted at AAAI 2025
 
 
 
-## **29. MRJ-Agent: An Effective Jailbreak Agent for Multi-Round Dialogue**
+## **31. MRJ-Agent: An Effective Jailbreak Agent for Multi-Round Dialogue**
 
 cs.AI
 
@@ -383,7 +407,7 @@ cs.AI
 
 
 
-## **30. Practical Secure Inference Algorithm for Fine-tuned Large Language Model Based on Fully Homomorphic Encryption**
+## **32. Practical Secure Inference Algorithm for Fine-tuned Large Language Model Based on Fully Homomorphic Encryption**
 
 cs.CR
 
@@ -395,7 +419,7 @@ cs.CR
 
 
 
-## **31. ChatBug: A Common Vulnerability of Aligned LLMs Induced by Chat Templates**
+## **33. ChatBug: A Common Vulnerability of Aligned LLMs Induced by Chat Templates**
 
 cs.CR
 
@@ -409,7 +433,7 @@ This paper is accepted to AAAI 2025
 
 
 
-## **32. HuRef: HUman-REadable Fingerprint for Large Language Models**
+## **34. HuRef: HUman-REadable Fingerprint for Large Language Models**
 
 cs.CL
 
@@ -423,7 +447,7 @@ NeurIPS 2024
 
 
 
-## **33. Adversarial Vulnerabilities in Large Language Models for Time Series Forecasting**
+## **35. Adversarial Vulnerabilities in Large Language Models for Time Series Forecasting**
 
 cs.LG
 
@@ -437,7 +461,7 @@ cs.LG
 
 
 
-## **34. Pathway to Secure and Trustworthy ZSM for LLMs: Attacks, Defense, and Opportunities**
+## **36. Pathway to Secure and Trustworthy ZSM for LLMs: Attacks, Defense, and Opportunities**
 
 cs.CR
 
@@ -451,7 +475,7 @@ cs.CR
 
 
 
-## **35. FlipedRAG: Black-Box Opinion Manipulation Attacks to Retrieval-Augmented Generation of Large Language Models**
+## **37. FlipedRAG: Black-Box Opinion Manipulation Attacks to Retrieval-Augmented Generation of Large Language Models**
 
 cs.IR
 
@@ -465,7 +489,7 @@ arXiv admin note: text overlap with arXiv:2407.13757
 
 
 
-## **36. LlamaPartialSpoof: An LLM-Driven Fake Speech Dataset Simulating Disinformation Generation**
+## **38. LlamaPartialSpoof: An LLM-Driven Fake Speech Dataset Simulating Disinformation Generation**
 
 eess.AS
 
@@ -479,7 +503,7 @@ eess.AS
 
 
 
-## **37. Layer-Level Self-Exposure and Patch: Affirmative Token Mitigation for Jailbreak Attack Defense**
+## **39. Layer-Level Self-Exposure and Patch: Affirmative Token Mitigation for Jailbreak Attack Defense**
 
 cs.CR
 
@@ -491,7 +515,7 @@ cs.CR
 
 
 
-## **38. DiffusionAttacker: Diffusion-Driven Prompt Manipulation for LLM Jailbreak**
+## **40. DiffusionAttacker: Diffusion-Driven Prompt Manipulation for LLM Jailbreak**
 
 cs.CL
 
@@ -503,7 +527,7 @@ cs.CL
 
 
 
-## **39. A Practical Examination of AI-Generated Text Detectors for Large Language Models**
+## **41. A Practical Examination of AI-Generated Text Detectors for Large Language Models**
 
 cs.CL
 
@@ -517,7 +541,7 @@ cs.CL
 
 
 
-## **40. A Survey of Recent Backdoor Attacks and Defenses in Large Language Models**
+## **42. A Survey of Recent Backdoor Attacks and Defenses in Large Language Models**
 
 cs.CR
 
@@ -531,7 +555,7 @@ Accepted in TMLR
 
 
 
-## **41. AVTrustBench: Assessing and Enhancing Reliability and Robustness in Audio-Visual LLMs**
+## **43. AVTrustBench: Assessing and Enhancing Reliability and Robustness in Audio-Visual LLMs**
 
 cs.CV
 
@@ -543,7 +567,7 @@ cs.CV
 
 
 
-## **42. Auto-RT: Automatic Jailbreak Strategy Exploration for Red-Teaming Large Language Models**
+## **44. Auto-RT: Automatic Jailbreak Strategy Exploration for Red-Teaming Large Language Models**
 
 cs.CR
 
@@ -555,7 +579,7 @@ cs.CR
 
 
 
-## **43. How Toxic Can You Get? Search-based Toxicity Testing for Large Language Models**
+## **45. How Toxic Can You Get? Search-based Toxicity Testing for Large Language Models**
 
 cs.SE
 
@@ -567,7 +591,7 @@ cs.SE
 
 
 
-## **44. Heuristic-Induced Multimodal Risk Distribution Jailbreak Attack for Multimodal Large Language Models**
+## **46. Heuristic-Induced Multimodal Risk Distribution Jailbreak Attack for Multimodal Large Language Models**
 
 cs.CR
 
@@ -579,7 +603,7 @@ cs.CR
 
 
 
-## **45. Spot Risks Before Speaking! Unraveling Safety Attention Heads in Large Vision-Language Models**
+## **47. Spot Risks Before Speaking! Unraveling Safety Attention Heads in Large Vision-Language Models**
 
 cs.LG
 
@@ -591,7 +615,7 @@ cs.LG
 
 
 
-## **46. BARTPredict: Empowering IoT Security with LLM-Driven Cyber Threat Prediction**
+## **48. BARTPredict: Empowering IoT Security with LLM-Driven Cyber Threat Prediction**
 
 cs.CR
 
@@ -603,7 +627,7 @@ cs.CR
 
 
 
-## **47. CySecBench: Generative AI-based CyberSecurity-focused Prompt Dataset for Benchmarking Large Language Models**
+## **49. CySecBench: Generative AI-based CyberSecurity-focused Prompt Dataset for Benchmarking Large Language Models**
 
 cs.CR
 
@@ -615,7 +639,7 @@ cs.CR
 
 
 
-## **48. Safeguarding Large Language Models in Real-time with Tunable Safety-Performance Trade-offs**
+## **50. Safeguarding Large Language Models in Real-time with Tunable Safety-Performance Trade-offs**
 
 cs.CL
 
@@ -624,32 +648,6 @@ cs.CL
 **Authors**: Joao Fonseca, Andrew Bell, Julia Stoyanovich
 
 **Abstract**: Large Language Models (LLMs) have been shown to be susceptible to jailbreak attacks, or adversarial attacks used to illicit high risk behavior from a model. Jailbreaks have been exploited by cybercriminals and blackhat actors to cause significant harm, highlighting the critical need to safeguard widely-deployed models. Safeguarding approaches, which include fine-tuning models or having LLMs "self-reflect", may lengthen the inference time of a model, incur a computational penalty, reduce the semantic fluency of an output, and restrict ``normal'' model behavior. Importantly, these Safety-Performance Trade-offs (SPTs) remain an understudied area. In this work, we introduce a novel safeguard, called SafeNudge, that combines Controlled Text Generation with "nudging", or using text interventions to change the behavior of a model. SafeNudge triggers during text-generation while a jailbreak attack is being executed, and can reduce successful jailbreak attempts by 30% by guiding the LLM towards a safe responses. It adds minimal latency to inference and has a negligible impact on the semantic fluency of outputs. Further, we allow for tunable SPTs. SafeNudge is open-source and available through https://pypi.org/, and is compatible with models loaded with the Hugging Face "transformers" library.
-
-
-
-## **49. Security Attacks on LLM-based Code Completion Tools**
-
-cs.CL
-
-Paper accepted at AAAI 2025
-
-**SubmitDate**: 2025-01-02    [abs](http://arxiv.org/abs/2408.11006v4) [paper-pdf](http://arxiv.org/pdf/2408.11006v4)
-
-**Authors**: Wen Cheng, Ke Sun, Xinyu Zhang, Wei Wang
-
-**Abstract**: The rapid development of large language models (LLMs) has significantly advanced code completion capabilities, giving rise to a new generation of LLM-based Code Completion Tools (LCCTs). Unlike general-purpose LLMs, these tools possess unique workflows, integrating multiple information sources as input and prioritizing code suggestions over natural language interaction, which introduces distinct security challenges. Additionally, LCCTs often rely on proprietary code datasets for training, raising concerns about the potential exposure of sensitive data. This paper exploits these distinct characteristics of LCCTs to develop targeted attack methodologies on two critical security risks: jailbreaking and training data extraction attacks. Our experimental results expose significant vulnerabilities within LCCTs, including a 99.4% success rate in jailbreaking attacks on GitHub Copilot and a 46.3% success rate on Amazon Q. Furthermore, We successfully extracted sensitive user data from GitHub Copilot, including 54 real email addresses and 314 physical addresses associated with GitHub usernames. Our study also demonstrates that these code-based attack methods are effective against general-purpose LLMs, such as the GPT series, highlighting a broader security misalignment in the handling of code by modern LLMs. These findings underscore critical security challenges associated with LCCTs and suggest essential directions for strengthening their security frameworks. The example code and attack samples from our research are provided at https://github.com/Sensente/Security-Attacks-on-LCCTs.
-
-
-
-## **50. Dynamics of Adversarial Attacks on Large Language Model-Based Search Engines**
-
-cs.CL
-
-**SubmitDate**: 2025-01-01    [abs](http://arxiv.org/abs/2501.00745v1) [paper-pdf](http://arxiv.org/pdf/2501.00745v1)
-
-**Authors**: Xiyang Hu
-
-**Abstract**: The increasing integration of Large Language Model (LLM) based search engines has transformed the landscape of information retrieval. However, these systems are vulnerable to adversarial attacks, especially ranking manipulation attacks, where attackers craft webpage content to manipulate the LLM's ranking and promote specific content, gaining an unfair advantage over competitors. In this paper, we study the dynamics of ranking manipulation attacks. We frame this problem as an Infinitely Repeated Prisoners' Dilemma, where multiple players strategically decide whether to cooperate or attack. We analyze the conditions under which cooperation can be sustained, identifying key factors such as attack costs, discount rates, attack success rates, and trigger strategies that influence player behavior. We identify tipping points in the system dynamics, demonstrating that cooperation is more likely to be sustained when players are forward-looking. However, from a defense perspective, we find that simply reducing attack success probabilities can, paradoxically, incentivize attacks under certain conditions. Furthermore, defensive measures to cap the upper bound of attack success rates may prove futile in some scenarios. These insights highlight the complexity of securing LLM-based systems. Our work provides a theoretical foundation and practical insights for understanding and mitigating their vulnerabilities, while emphasizing the importance of adaptive security strategies and thoughtful ecosystem design.
 
 
 

@@ -1,5 +1,5 @@
 # Latest Large Language Model Attack Papers
-**update at 2025-02-21 11:07:47**
+**update at 2025-02-24 09:51:45**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
@@ -21,7 +21,7 @@
 
 HiddenDetect：通过监视隐藏状态检测针对大型视觉语言模型的越狱攻击 cs.CL
 
-**SubmitDate**: 2025-02-20    [abs](http://arxiv.org/abs/2502.14744v1) [paper-pdf](http://arxiv.org/pdf/2502.14744v1)
+**SubmitDate**: 2025-02-21    [abs](http://arxiv.org/abs/2502.14744v2) [paper-pdf](http://arxiv.org/pdf/2502.14744v2)
 
 **Authors**: Yilei Jiang, Xinyan Gao, Tianshuo Peng, Yingshui Tan, Xiaoyong Zhu, Bo Zheng, Xiangyu Yue
 
